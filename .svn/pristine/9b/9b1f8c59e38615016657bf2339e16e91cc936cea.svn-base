@@ -1,0 +1,300 @@
+package com.avaya.smgr.pem;
+
+/*
+ Contains tests for SMGR backup functionality.
+ */
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class BackupTests {
+	boolean b,d;
+	static UserAction action = null;
+	Properties locator = null;
+	Properties input = null;
+	public WebDriver driver;
+	String tr="/tr",td="/td";
+
+	@BeforeClass(alwaysRun=true)
+	public void setup() throws IOException, InterruptedException {
+		
+	}
+
+	@BeforeMethod(alwaysRun=true)
+	public void ScreenshptSetup() throws IOException, InterruptedException {
+		action = new UserAction();
+		locator = new Properties();
+		input = new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir")
+				+ "\\Third Party\\objectRepository\\OR.properties"));
+		input.load(new FileInputStream(System.getProperty("user.dir")
+				+ "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),
+				input.getProperty("Password"), action);
+	}
+
+	@Test(description = "Verification for the Back up title is showing correctly.")
+	public void BackTitle() throws Exception {
+		action.RefreshPage();
+		// Navigate to configuration, PEM
+		action.ClickLink(locator.getProperty("Backup_and_Restore"));
+		action.SwithchFrame("iframe0");
+		// Verification for the Back up title is showing correctly.
+		action.VerifyTitle(locator.getProperty("Backup_and_Restore"));
+		Thread.sleep(1000);
+	}
+	@Test(description="Verify that user is created by using Role successfully",priority=1)
+	public void GLSBUserCreate() throws Exception{
+		action.RefreshPage();
+		action.ClickLink(locator.getProperty("User_Management"));
+		Thread.sleep(2000);
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		Thread.sleep(2000);
+		String RoleName=input.getProperty("UpdatedName");
+		action.SwithchFrame("iframe0");
+		//Click on New button
+		action.ClickButton(locator.getProperty("Users.New"));
+		Thread.sleep(3000);
+		action.EntertextUsingKey(locator.getProperty("Lastname"),input.getProperty("UsersLastname"),Keys.TAB);
+		WebDriverWait wait=new WebDriverWait(action.driver,20);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Lastnameascii")),input.getProperty("UsersLastname")));
+		action.EntertextUsingKey(locator.getProperty("Firstname"),input.getProperty("UsersFirstname"),Keys.TAB);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Firstnameascii")),input.getProperty("UsersFirstname")));
+
+		action.entertext(locator.getProperty("Loginname"),input.getProperty("PEM.Loginname"));
+		Thread.sleep(3000);
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+
+		
+	}
+	
+	@Test(description = "Verification for the Local Back up is performed successfully",groups="Sanity",priority=2)
+	public void LocalBackUpNow() throws Exception {
+		action.RefreshPage();
+		// Navigate to configuration, PEM
+		action.ClickLink(locator.getProperty("Backup_and_Restore"));
+		action.SwithchFrame("iframe0");
+		// Click on the Back up button
+		action.ClickButton(locator.getProperty("PEM.Backup"));
+		action.WaitForObj(locator.getProperty("PEM.FileName"));
+		// Enter Back up file name
+		action.entertext(locator.getProperty("PEM.FileName"),input.getProperty("LocakBackup"));
+		// Click on the now button
+		action.ClickButton(locator.getProperty("PEM.Now"));
+		action.WaitForTitle(locator.getProperty("Backup_and_Restore"));
+		Thread.sleep(70000);
+		BackupStatus();
+
+	}
+	
+	@Test(description="Verification for the Scheduled Local Back up is performed successfully")
+	public void ScheduledLocalBackUpcANCEL() throws Exception{
+		action.RefreshPage();
+		//Navigate to configuration, PEM
+		action.ClickLink(locator.getProperty("Backup_and_Restore"));
+		action.SwithchFrame("iframe0");
+		action.ClickButton(locator.getProperty("PEM.Backup"));
+		action.WaitForObj(locator.getProperty("PEM.FileName"));
+		// Enter Back up file name
+		action.entertext(locator.getProperty("PEM.FileName"),input.getProperty("ScheduledBackup"));
+		//Click on the Schedule button
+		action.ClickButton(locator.getProperty("PEM.Scheduled"));
+		action.WaitForTitle(locator.getProperty("Schedule_Backup"));
+		//Enter job name
+		action.entertext(locator.getProperty("PEM.ScheduleJobName"),input.getProperty("PEM.jobname"));
+        Calendar cal = Calendar.getInstance();
+        int c=cal.get(Calendar.YEAR)+1;  
+		action.ClearText(locator.getProperty("PEM.StartDateYear"));
+        //Enter calendar year as next year
+		action.entertext(locator.getProperty("PEM.StartDateYear"),""+c);
+		//Click on the commit button
+		action.ClickButton(locator.getProperty("Commit"));
+		
+		action.WaitForTitle(locator.getProperty("Backup_and_Restore"));
+		//action.Verify_Third_Fifth_Column(input.getProperty("BackupName"), "PLANNED");
+		Planned_BackupStatus();
+	}
+
+@Test(description="Verification for the Home page is displaying when click on the cancel")
+public void ScheduledLocalBackUpCancel() throws Exception{
+	action.RefreshPage();
+	//Navigate to configuration, PEM
+	action.ClickLink(locator.getProperty("Backup_and_Restore"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("PEM.Backup"));
+	action.WaitForObj(locator.getProperty("PEM.FileName"));
+	// Enter Back up file name
+	action.entertext(locator.getProperty("PEM.FileName"),input.getProperty("BackupName"));
+	//Click on the Cancel button
+	action.ClickButton(locator.getProperty("PEM.Cancel"));
+	action.WaitForTitle(locator.getProperty("Backup_and_Restore"));
+	//Verification for the Home page is displaying when click on the cancel
+	action.VerifyTitle(locator.getProperty("Backup_Title"));
+	}
+
+@Test(description="Verification for the Remote Back up is performed successfully")
+public void RemoteBackUpNow() throws Exception{
+	action.RefreshPage();
+	//Navigate to configuration, PEM
+	action.ClickLink(locator.getProperty("Backup_and_Restore"));
+	action.SwithchFrame("iframe0");
+	
+	//Click on the Back up button
+	action.ClickButton(locator.getProperty("PEM.Backup"));
+	action.WaitForObj(locator.getProperty("PEM.FileName"));
+	//Click on the Remote Radio button
+	action.ClickButton(locator.getProperty("PEM.Remote"));
+	//Fill the Required details
+	action.entertext(locator.getProperty("PEM.Remote.ip"),input.getProperty("IPadd"));
+	action.entertext(locator.getProperty("PEM.Remote.UserName"),input.getProperty("Uname"));
+	action.entertext(locator.getProperty("PEM.Remote.Password"),input.getProperty("Password"));
+	action.entertext(locator.getProperty("PEM.FileName"),input.getProperty("RemoteBackup"));
+	//Click on the Commit button
+	action.ClickButton(locator.getProperty("PEM.Now"));
+	action.WaitForTitle(locator.getProperty("Backup_and_Restore"));
+	
+	Remote_BackupStatus();
+
+}
+@Test(description="Verification for the Scheduled Remote Back up is performed successfully")
+public void RemoteScheduleBackUp() throws Exception{
+	action.RefreshPage();
+	//Navigate to configuration, PEM
+	action.ClickLink(locator.getProperty("Backup_and_Restore"));
+	action.SwithchFrame("iframe0");
+	//Click on the Back up button
+	action.ClickButton(locator.getProperty("PEM.Backup"));
+	Thread.sleep(1000);
+	action.WaitForObj(locator.getProperty("PEM.FileName"));
+	//Click on the Remote Radio button
+	action.ClickButton(locator.getProperty("PEM.Remote"));
+	//Fill the Required details
+	action.entertext(locator.getProperty("PEM.Remote.ip"),input.getProperty("Ip"));
+	action.entertext(locator.getProperty("PEM.Remote.UserName"),input.getProperty("Uname"));
+	action.entertext(locator.getProperty("PEM.Remote.Password"),input.getProperty("Password"));
+	action.entertext(locator.getProperty("PEM.FileName"),input.getProperty("BackupName"));
+	//Click on the Schedule button
+	action.ClickButton(locator.getProperty("PEM.Scheduled"));
+	action.WaitForTitle(locator.getProperty("Schedule_Backup"));
+	//Enter job name
+	action.entertext(locator.getProperty("PEM.ScheduleJobName"),input.getProperty("PEM.jobname1"));
+    Calendar cal = Calendar.getInstance();
+    int c=cal.get(Calendar.YEAR)+1;  
+	action.ClearText(locator.getProperty("PEM.StartDateYear"));
+	Thread.sleep(1000);
+    //Enter calendar year as next year
+	action.entertext(locator.getProperty("PEM.StartDateYear"),""+c);
+	//Click on the commit button
+	action.ClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("Backup_and_Restore"));
+	Planned_BackupStatus();
+	Thread.sleep(1000);
+}
+
+private void BackupStatus() throws InterruptedException, FileNotFoundException, IOException {
+	// TODO Auto-generated method stub
+	List<WebElement> totalRows = action.driver.findElements(By.xpath(locator.getProperty("Table.Row")));
+	for (int i=2;i<=totalRows.size();i++){
+		String Filename1= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[3]")).getText();
+		String StatusCol= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[5]")).getText();
+		int length=input.getProperty("LocakBackup").length();
+		if(input.getProperty("LocakBackup").equalsIgnoreCase(Filename1.substring(0, length))){
+			
+			action.SwithchFrame("iframe0");
+			//WebElement PemError=action.driver.findElement(By.xpath(locator.getProperty("PEM.Error")));
+			while(Filename1.contains(input.getProperty("LocakBackup"))&&StatusCol.contains("RUNNING")){
+				action.ClickButton(locator.getProperty("Upr.refresh"));
+				Thread.sleep(2000);	
+				StatusCol= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[5]")).getText();
+			}
+			if( StatusCol.contains("SUCCESS")){
+				Assert.assertTrue(input.getProperty("LocakBackup").equalsIgnoreCase(Filename1.substring(0, length)));
+				Assert.assertTrue(StatusCol.contains("SUCCESS"));
+
+					
+			}
+				Assert.assertTrue(input.getProperty("LocakBackup").equalsIgnoreCase(Filename1.substring(0, length)));
+				Assert.assertTrue(StatusCol.contains("SUCCESS"));
+
+			}
+			
+		}	
+	}
+private void Planned_BackupStatus() throws InterruptedException, FileNotFoundException, IOException {
+	// TODO Auto-generated method stub
+	List<WebElement> totalRows = action.driver.findElements(By.xpath(locator.getProperty("Table.Row")));
+	for (int i=2;i<=totalRows.size();i++){
+		String Filename1= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[3]")).getText();
+		String StatusCol= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[5]")).getText();
+		int length=input.getProperty("LocakBackup").length();
+		if(input.getProperty("ScheduledBackup").equalsIgnoreCase(Filename1.substring(0, length))){
+			
+			action.SwithchFrame("iframe0");
+			//WebElement PemError=action.driver.findElement(By.xpath(locator.getProperty("PEM.Error")));
+			while(Filename1.contains(input.getProperty("ScheduledBackup"))&&StatusCol.contains("RUNNING")){
+				action.ClickButton(locator.getProperty("Upr.refresh"));
+				Thread.sleep(2000);	
+				StatusCol= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[5]")).getText();
+			}
+			if( StatusCol.contains("PLANNED")){
+				Assert.assertTrue(input.getProperty("ScheduledBackup").equalsIgnoreCase(Filename1.substring(0, length)));
+				Assert.assertTrue(StatusCol.contains("PLANNED"));
+
+					
+			}
+				Assert.assertTrue(input.getProperty("ScheduledBackup").equalsIgnoreCase(Filename1.substring(0, length)));
+				Assert.assertTrue(StatusCol.contains("PLANNED"));
+
+			}
+			
+		}	
+	}
+private void Remote_BackupStatus() throws InterruptedException, FileNotFoundException, IOException {
+	// TODO Auto-generated method stub
+	List<WebElement> totalRows = action.driver.findElements(By.xpath(locator.getProperty("Table.Row")));
+	for (int i=2;i<=totalRows.size();i++){
+		String Filename1= action.driver.findElement(By.xpath(locator.getProperty("Table.Row")+"["+i+"]"+td+"[3]")).getText();
+		int length=input.getProperty("LocakBackup").length();
+		if(input.getProperty("LocakBackup").equalsIgnoreCase(Filename1.substring(0, length))){
+			
+				Assert.assertTrue(input.getProperty("LocakBackup").equalsIgnoreCase(Filename1.substring(0, length)));
+
+			}
+			
+		}	
+	}
+	@AfterMethod(alwaysRun=true)
+	public void Screenshots(ITestResult result) throws IOException,
+			InterruptedException {
+
+		action.Screenshot(result, action);
+		action.logout(action);
+	}
+
+	@AfterClass(alwaysRun=true)
+	public void Close() throws IOException, InterruptedException {
+		// action logout=new action();
+		
+	}
+}

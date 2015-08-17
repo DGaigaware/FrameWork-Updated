@@ -1,0 +1,213 @@
+package com.avaya.smgr.spm.settings.smgr;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class LoggingService{
+	boolean b;
+	static UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+@BeforeClass(alwaysRun=true)
+public void setup() throws IOException, InterruptedException{
+	
+   }
+@BeforeMethod(alwaysRun=true)
+public void ScreenshptSetup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+}	
+
+@Test(description="Eanable of Edit and Done buttons",groups={"Sanity"})
+ public void LoggingServiceEditDoneEnableBtn() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Logging Service
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	//action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Edit and Done buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+}
+@Test(description="Eanable of commit and cancel buttons")
+public void LoggingServiceCommitCancelEnableBtn() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Logging Service
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	//action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Click on the Edit button
+	action.ClickButton(locator.getProperty("Edit"));
+	//Verification of Commit and Cancel buttons should be enable
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+}
+@Test(description="Verifify the the title value")
+public void LoggingServiceTitle() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Logging Service
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	//action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Click on the Edit button
+	action.ClickButton(locator.getProperty("Edit"));
+	//Verification of Commit and Cancel buttons should be enable
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//Verification of title "Logging Service"
+	action.VerifyStringValue(locator.getProperty("Logging_Service"));
+
+}
+@Test(description="Verify that the values are successfully change/override by an administrator and attribute successfully saved",groups={"Sanity"})
+public void LoggingServiceUpdate() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Logging.MaxAllowed"));
+	action.entertext(locator.getProperty("Logging.MaxAllowed"), input.getProperty("SingleDigitValue"));
+	//Verify that the values are successfully change/override by an administrator and attribute successfully saved
+	action.ClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.VerifyElementValue(locator.getProperty("Logging.MaxAllowed"), input.getProperty("SingleDigitValue"));
+	action.ClickButton(locator.getProperty("Done"));
+	action.WaitForTitle(locator.getProperty("SPMHome_Screen"));
+}
+
+@Test(description="Verify that the errror message should display when Max. Time interval to wait field is empty")
+public void LoggingServiceTimeInterval() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClearText(locator.getProperty("Loggserv.Maxtime"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue(locator.getProperty("Integer_value_is_out_of_range"));
+	Thread.sleep(2000);
+}@Test(description="Verify that the errror message should display when Directory path for harvested files is empty")
+public void LoggingServiceDirPathEmpty() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClearText(locator.getProperty("Loggserv.Dir"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue(locator.getProperty("You_must_enter_a_value"));
+	Thread.sleep(1000);
+}
+@Test(description="Verify that the errror message should display when No. of lines is empty")
+public void LoggingServiceNoOfLines() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClearText(locator.getProperty("Loggserv.NoLines"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Thread.sleep(3000);
+	action.VerifyStringValue(locator.getProperty("Integer_value_is_out_of_range"));
+	Thread.sleep(1000);
+}
+@Test(description="Verify that the errror message should display when Logging.MaxAllowed field is empty")
+public void LoggingServiceMaxAllowed() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClearText(locator.getProperty("Logging.MaxAllowed"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue(locator.getProperty("Integer_value_is_out_of_range"));
+	Thread.sleep(1000);
+}
+@Test(description="Verify that the errror message should display when Max. Time interval to wait field is empty")
+public void LoggingServiceNoFiles() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Logging_Service"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClearText(locator.getProperty("Loggserv.NoFiles"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue(locator.getProperty("Integer_value_is_out_of_range"));
+	Thread.sleep(1000);
+}
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+	action.logout(action);
+
+}
+@AfterClass(alwaysRun=true)
+	public void Close() throws IOException, InterruptedException{
+		//action logout=new action();
+	}
+}

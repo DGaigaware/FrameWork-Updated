@@ -1,0 +1,311 @@
+package com.avaya.smgr.upmtest;
+
+import java.io.FileInputStream;
+import com.avaya.smgr.upmsetup.Upmsetup;
+import java.io.IOException;
+import java.util.List;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class SharedAddress {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Upmsetup setup=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		setup=new com.avaya.smgr.upmsetup.Upmsetup();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+	
+@Test(description="Verify the different elements on Shared Address page",priority=1)
+public void Verify_Elements() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	//Verify the Edit,Delete buttons are disabled
+	action.VerifyDisableButton(locator.getProperty("EditContAdd"));
+	action.VerifyDisableButton(locator.getProperty("DeleteContAdd"));
+	//Verify the New,Refresh buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("NewContAdd"));
+	action.VerifyEnableButton(locator.getProperty("Shared_Refresh"));
+	
+}
+	
+@Test(description="Verify the Error message on required field is empty",priority=2)
+public void Verify_Errormsg() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	//Click on new button
+	action.ClickButton(locator.getProperty("NewContAdd"));
+	action.WaitForTitle(locator.getProperty("Add_Address"));
+	action.VerifyTitle(locator.getProperty("Add_Address"));
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Commit"));
+	//Verify following error message
+	action.VerifyStringValue("Name should not be left blank.");
+}
+
+
+@Test(description="Verify New Shared Address creation",priority=3)
+public void New_Shared_Address()throws Exception
+{
+action.driver.navigate().refresh();
+//Click on User Management,Shared Address
+action.ClickLink(locator.getProperty("User_Management"));
+action.WaitForTitle(locator.getProperty("User_Management"));
+action.VerifyTitle(locator.getProperty("User_Management"));
+action.ClickLink(locator.getProperty("Shared_Addresses"));
+action.WaitForTitle(locator.getProperty("Shared_Address"));
+action.VerifyTitle(locator.getProperty("Shared_Address"));
+action.SwithchFrame("iframe0");
+//Click on new button
+action.ClickButton(locator.getProperty("NewContAdd"));
+action.WaitForTitle(locator.getProperty("Add_Address"));
+action.VerifyTitle(locator.getProperty("Add_Address"));
+//Fill the required details
+action.entertext(locator.getProperty("Addressname"), input.getProperty("Addname1"));
+action.SelectFromdropDown(locator.getProperty("AddressType"), "Home");
+action.entertext(locator.getProperty("Locality"), "panaji");	
+action.ClickButton(locator.getProperty("Contactdetailbtn"));
+action.entertext(locator.getProperty("businessphone"), "555555");
+//Click on Commit button
+action.ClickButton(locator.getProperty("Commit"));
+action.WaitForTitle(locator.getProperty("Shared_Address"));
+action.VerifyTitle(locator.getProperty("Shared_Address"));
+//Click on new button
+action.ClickButton(locator.getProperty("NewContAdd"));
+action.WaitForTitle(locator.getProperty("Add_Address"));
+action.VerifyTitle(locator.getProperty("Add_Address"));
+//Fill the required details
+action.entertext(locator.getProperty("Addressname"), input.getProperty("Addname2"));
+action.SelectFromdropDown(locator.getProperty("AddressType"), "Office");
+action.entertext(locator.getProperty("Locality"), "panaji");	
+action.ClickButton(locator.getProperty("Contactdetailbtn"));
+action.entertext(locator.getProperty("businessphone"), "5555");
+//Click on Commit button
+action.ClickButton(locator.getProperty("Commit"));
+action.WaitForTitle(locator.getProperty("Shared_Address"));
+action.VerifyTitle(locator.getProperty("Shared_Address"));
+}
+
+@Test(priority=4)
+public void Verify_Added_Share_dAddress() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	//Find the number of rows
+	List<WebElement> rows1 = action.driver.findElements(By.name(locator.getProperty("Sharedtablebyname")));
+	int n = rows1.size();
+	int flag=0;
+	//Assert.assertEquals(noofrows, 1);
+	for(int i=0;i<n;i++)
+	{
+		//Verify the address added to the table
+		String str=action.driver.findElement(By.xpath(".//*[@id='tableSharedAddress:"+i+":tbl_inputText_addressName']")).getText();
+	   boolean b=str.equals(input.getProperty("Addname1"));
+		if(b)
+	   {
+		   Assert.assertTrue(b);
+		    flag=1;
+		   break;
+	   }
+	}
+		
+	if(flag==0)
+	{
+		Assert.assertTrue(b);
+	}
+	
+}
+
+@Test(description="Verify Edit operation of shared Address",priority=5)
+public void Edit_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	Thread.sleep(1000);
+	//Select Address to edit
+	setup.AccessSharedaddressname(action,input.getProperty("Addname1"));
+	Thread.sleep(2000);	
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditContAdd"))));
+	action.DoubleClickButton(locator.getProperty("EditContAdd"));
+	action.WaitForTitle(locator.getProperty("Edit_Address"));
+	action.VerifyTitle(locator.getProperty("Edit_Address"));
+	//Edit Address type
+	action.SelectFromdropDown(locator.getProperty("AddressType"), "Office");
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+}
+
+
+@Test(description="Verify the Edited Shared address",priority=6)
+public void Verify_Edit_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	
+	//Select Edited Address
+	setup.AccessSharedaddressname(action,input.getProperty("Addname1"));
+	Thread.sleep(1500);	
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditContAdd"))));
+	action.DoubleClickButton(locator.getProperty("EditContAdd"));
+	action.WaitForTitle(locator.getProperty("Edit_Address"));
+	action.VerifyTitle(locator.getProperty("Edit_Address"));
+	//Verify Edited part
+	String str1=new Select(action.driver.findElement(By.xpath(locator.getProperty("AddressType")))).getFirstSelectedOption().getText();
+    Assert.assertEquals(str1, "Office");
+    action.ClickButton(locator.getProperty("Cancel"));
+}
+
+@Test(description="Verify the Dletion of shared address",priority=7)
+public void Delete_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	//Select Address
+	setup.AccessSharedaddressname(action,input.getProperty("Addname1")); 
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("DeleteContAdd"))));
+	//Click on Delete button
+	action.DoubleClickButton(locator.getProperty("DeleteContAdd"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	
+}
+
+@Test(description="Verify the deleted shared address",priority=8)
+public void Verify_Deleted_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Shared Address
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Shared_Addresses"));
+	action.WaitForTitle(locator.getProperty("Shared_Address"));
+	action.VerifyTitle(locator.getProperty("Shared_Address"));
+	action.SwithchFrame("iframe0");
+	Thread.sleep(1000);
+	String str1=action.driver.findElement(By.xpath(".//*[@id='tableSharedAddress_core_table_content']/tbody/tr[2]/td[2]")).getText();
+	if(str1.equals("No Records found"))            
+	{
+		Assert.assertTrue(true);
+	
+	}
+	else
+	{
+	//Find the number of rows
+	List<WebElement> rows1 = action.driver.findElements(By.name(locator.getProperty("Sharedtablebyname")));
+	int n = rows1.size();
+	int flag=0;
+	
+	for(int i=0;i<n;i++)
+	{
+		//Verify the address deleted from table
+		String str=action.driver.findElement(By.xpath(".//*[@id='tableSharedAddress:"+i+":tbl_inputText_addressName']")).getText();
+	   boolean b=str.equals(input.getProperty("Addname1"));
+		if(b)
+	   {
+		   Assert.assertFalse(b);
+		    flag=1;
+		   break;
+	   }
+	}
+		
+	if(flag==0)
+	{
+		Assert.assertFalse(b);
+	}
+   }
+	
+}
+
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+	}
+	
+	@AfterClass
+	  public void Close() throws IOException, InterruptedException
+    {
+		action.logout(action);
+	}
+
+}

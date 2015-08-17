@@ -1,0 +1,265 @@
+package com.avaya.smgr.geo.primary;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+import com.avaya.smgr.upmsetup.Upmsetup;
+
+public class Replicationofuser {
+	boolean b;
+	UserAction action =null;
+	Upmsetup setup=null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeMethod
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		setup=new com.avaya.smgr.upmsetup.Upmsetup();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+	@Test(description="Verify Enable replication completed suceesfully",priority=1)
+	public void Enable_Replication() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Click on Enable button
+		action.ClickButton(locator.getProperty("Geoenable"));
+		//Wait until Disable button get Enabled
+		WebDriverWait wait = new WebDriverWait(action.driver, 180000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Geodisable"))));
+		//verify status is Enabled
+		action.VerifyElementValue(locator.getProperty("Replstatuscolumn"), "Enabled");
+		Thread.sleep(1000);
+	}
+	
+	@Test(description="Verify creation of user in primary to verify replication",priority=2)
+	public void New_User() throws Exception
+	{
+		
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		Thread.sleep(2000);
+		//Click on New Button
+		action.DoubleClickButton(locator.getProperty("Users.New"));
+		//Enter the last name,First name,Login name
+		action.EntertextUsingKey(locator.getProperty("Lastname"),input.getProperty("UsersLastname"),Keys.TAB);
+		Thread.sleep(500);
+		WebDriverWait wait=new WebDriverWait(action.driver,20);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Lastnameascii")),input.getProperty("UsersLastname")));
+		action.EntertextUsingKey(locator.getProperty("Firstname"),input.getProperty("UsersFirstname"),Keys.TAB);
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Firstnameascii")),input.getProperty("UsersFirstname")));
+		Thread.sleep(1000);
+		action.EntertextUsingKey(locator.getProperty("Loginname"),input.getProperty("ReplicationLoginname"),Keys.TAB);
+		Thread.sleep(1000);
+		//Click on the Commit Button
+		//action.DoubleClickButton(locator.getProperty("Commit"));
+		//action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+		//action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+		//Click on Commit button
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		Thread.sleep(1000);
+		action.Verify_Add_Fifthcolumn(input.getProperty("ReplicationLoginname"));
+	}
+	
+	@Test(description="Verify the Activation of secondary server successfully",priority=3)
+	public void Activate_Secondary() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Click on Geographic Redundancy,GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		//Click on Activate secondary button
+		action.ClickButton(locator.getProperty("ActivateSecbtn"));
+		Thread.sleep(1000);
+		action.driver.switchTo().frame("activateUIpopup");
+		Thread.sleep(1000);
+		//WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Activationcnfrm"))));
+		//Click on Ok button
+		action.DoubleClickButton(locator.getProperty("Activationcnfrm"));
+		//Wait for 15 minutes
+		Thread.sleep(600000);
+		action.RefreshPage();
+		Thread.sleep(75000);
+		action.RefreshPage();
+		 WebDriverWait wait = new WebDriverWait(action.driver,240000);
+		 wait.until(ExpectedConditions.titleContains(locator.getProperty("System_Manager")));
+		action.RefreshPage();
+		Thread.sleep(3000);
+		WebElement ele=action.driver.findElement(By.xpath(locator.getProperty("ErrorBox")));
+		while(ele.isDisplayed())
+		{
+			action.RefreshPage();
+			Thread.sleep(60000);
+		}
+		
+		action.driver.quit();
+		//Login
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		Thread.sleep(1000);
+	}
+	
+	@Test(description="Verify the Staus after Activation of secondary server ",priority=4)
+	public void Verify_Status() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Verify status is active
+		action.VerifyElementValue(locator.getProperty("GeoSecondaryserverstatus"), "Active");
+		//navigate to Geographic_Redundancy, GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		Thread.sleep(1000);
+		//Verify Deactivate button enabled
+		action.VerifyEnableButton(locator.getProperty("Geodeactivate"));
+		Thread.sleep(1000);
+	}
+	
+	@Test(description="Verify the Alarm of activation",priority=5)
+	public void Verify_Alarmon_Secondary() throws Exception
+	{ int flag=0;
+		action.RefreshPage();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Click on Events,Alarming
+		action.ClickLink(locator.getProperty("Events"));
+		action.WaitForTitle(locator.getProperty("Events"));
+		action.ClickLink(locator.getProperty("Alarms"));
+		action.WaitForTitle(locator.getProperty("Alarming"));
+		action.SwithchFrame("iframe0");
+		for(int i=2;i<=7;i++)
+		{
+		   String str=action.driver.findElement(By.xpath(".//*[@id='table_core_table_content']/tbody/tr["+i+"]/td[7]")).getText();
+		   boolean b=str.equals("Both Primary and Secondary Servers are in Active-Active state");
+		   if(b)
+		   {
+			   Assert.assertTrue(b);
+			   flag=1;
+			   break;
+		   }
+		}
+		if(flag==0)
+		{
+			Assert.assertTrue(b);
+		}
+		
+	}
+	
+	@Test(description="Verify the Alarm of activation",priority=6)
+	public void Verify_Alarmon_Primary() throws Exception
+	{ int flag=0;
+	    action.RefreshPage();
+		//Click on Events,Alarming
+		action.ClickLink(locator.getProperty("Events"));
+		action.WaitForTitle(locator.getProperty("Events"));
+		action.ClickLink(locator.getProperty("Alarms"));
+		action.WaitForTitle(locator.getProperty("Alarming"));
+		action.SwithchFrame("iframe0");
+		for(int i=2;i<=10;i++)
+		{
+			String str=action.driver.findElement(By.xpath(".//*[@id='table_core_table_content']/tbody/tr["+i+"]/td[7]")).getText();
+		   boolean b=str.equals("Both Primary and Secondary Servers are in Active-Active state");
+		   if(b)
+		   {
+			   Assert.assertTrue(b);
+			   flag=1;
+			   break;
+		   }
+		}
+		if(flag==0)
+		{
+			Assert.assertTrue(b);
+		}
+		
+		
+	}
+	
+	@Test(description="Verify the user replicated in secondary server",priority=7)
+	public void Verify_Replication() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		//Click on refresh button
+		action.ClickButton(locator.getProperty("Upr.refresh"));
+		//Verify the user replicated in secondary
+		action.Verify_Add_Fifthcolumn(input.getProperty("ReplicationLoginname"));
+		
+	}
+	
+	
+	@Test(description="Verify the Geo page after secondary activated",priority=8)
+	public void Verify_Primary_GeoPage() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Verify Warning
+		action.VerifyElementValue(locator.getProperty("Geowarning"), "You may not be able to perform GR operations like Enable or Disable as the secondary System Manager is active or unreachable.");
+		//verify Buttons
+		action.VerifyEnableButton(locator.getProperty("Convertostandalonebtn"));
+		action.VerifyDisableButton(locator.getProperty("Geoenable"));
+		action.VerifyDisableButton(locator.getProperty("Geodisable"));
+		action.VerifyEnableButton(locator.getProperty("GeoRestore"));
+		//Verify the replication status is disabled
+		action.VerifyElementValue(locator.getProperty("Replstatuscolumn"), "Disabled");
+	}
+
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+		  
+		action.Screenshot(result, action);
+		action.logout(action);
+	}
+
+	
+}

@@ -1,0 +1,143 @@
+package com.avaya.smgr.sdm;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class VMManagement {
+	
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeClass(alwaysRun=true)
+public void setup() throws IOException, InterruptedException
+	{
+	action = new UserAction();
+	locator=new Properties();
+	locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+	input=new Properties();
+	input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+@Test(description="Verify the VM Management location is created successfully",priority=1)
+public void VMNameCreation() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("VM_Management"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.SwithchFrame("iframe0");
+	//Verify Show Files button is enabled
+	action.VerifyEnableButton(locator.getProperty("VM.Loc.New"));
+	//click on the new button
+	action.ClickButton(locator.getProperty("VM.Loc.New"));
+	action.WaitForObj(locator.getProperty("VM.Loc.Name"));
+	action.entertext(locator.getProperty("VM.Loc.Name"), input.getProperty("UpdateSite"));
+	action.entertext(locator.getProperty("VM.Loc.address"), input.getProperty("UpdateSite"));
+	action.entertext(locator.getProperty("VM.Loc.city"), input.getProperty("UpdateSite"));
+	action.entertext(locator.getProperty("VM.Loc.State"), input.getProperty("UpdateSite"));
+	action.entertext(locator.getProperty("VM.Loc.Zip"), input.getProperty("port"));
+	action.entertext(locator.getProperty("VM.Loc.Country"), input.getProperty("UpdateSite"));
+	action.ClickButton(locator.getProperty("VM.Loc.Time"));
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("VM.Loc.TimeZone"));
+	Thread.sleep(2000);
+	action.ClickButton(locator.getProperty("VM.Loc.Save"));
+	Thread.sleep(2000);
+	action.driver.switchTo().defaultContent();
+	action.ClickLink(locator.getProperty("VM_Management"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.SwithchFrame("iframe0");
+	boolean b=action.driver.findElement(By.xpath(locator.getProperty("VM.Loc.City.Locname"))).getText().equals( input.getProperty("UpdateSite"));
+	Assert.assertTrue(b);
+	Thread.sleep(1000);
+
+}
+
+@Test(description="Verify the VM Management location is Edit successfully",priority=2)
+public void VMNameEdit() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("VM_Management"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.SwithchFrame("iframe0");
+	//Click on the First Check box
+	action.ClickButton(locator.getProperty("VM.Loc.FirstCheckBox"));
+	action.WaitForObj(locator.getProperty("VM.Loc.Edit"));
+	//click on the new button
+	action.ClickButton(locator.getProperty("VM.Loc.Edit"));
+	action.WaitForObj(locator.getProperty("VM.Loc.Edit"));
+	//Verify file button is enabled
+	action.VerifyEnableButton(locator.getProperty("VM.Loc.Edit"));
+	action.ClearText(locator.getProperty("VM.Loc.City.Edit"));
+	action.entertext(locator.getProperty("VM.Loc.City.Edit"), input.getProperty("UpdatTeam"));
+	action.ClickButton(locator.getProperty("VM.Loc.Save.Edit"));
+	action.WaitForObj(locator.getProperty("VM.Loc.Save.Edit.OK"));
+	action.ClickButton(locator.getProperty("VM.Loc.Save.Edit.OK"));
+	Thread.sleep(1000);
+	boolean b=action.driver.findElement(By.xpath(locator.getProperty("VM.Loc.City.Summary"))).getText().equals( input.getProperty("UpdatTeam"));
+	Assert.assertTrue(b);
+	Thread.sleep(1000);
+}
+
+
+@Test(description="Verify the VM Management location is Delete successfully",priority=3)
+public void VMNameDelete() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("VM_Management"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.SwithchFrame("iframe0");
+	
+	//Click on the First Check box
+	action.ClickButton(locator.getProperty("VM.Loc.FirstCheckBox"));
+	action.WaitForObj(locator.getProperty("VM.Loc.Delete"));
+	//click on the new button
+	action.ClickButton(locator.getProperty("VM.Loc.Delete"));
+	Thread.sleep(2000);
+	action.DoubleClickButton(locator.getProperty("VM.Loc.Save.Delete.Yes"));
+	action.WaitForObj(locator.getProperty("VM.LOC.Save.Delete.OK"));
+	action.DoubleClickButton(locator.getProperty("VM.LOC.Save.Delete.OK"));
+	action.WaitForObj(locator.getProperty("VM.LOC.entry"));
+	
+	action.VerifyDeleteEntry(locator.getProperty("VM.LOC.entry"), (input.getProperty("UpdateSite")));
+	Thread.sleep(1000);
+}
+
+
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass(alwaysRun=true)
+public void Close() throws IOException, InterruptedException
+{
+	action.logout(action);
+}
+
+
+
+
+}

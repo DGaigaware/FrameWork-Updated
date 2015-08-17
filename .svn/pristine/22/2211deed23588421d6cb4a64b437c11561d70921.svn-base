@@ -1,0 +1,2148 @@
+UserId=.//*[@id='IDToken1']
+Password=.//*[@id='IDToken2']
+LogOn=.//*[@id='SubmitButton']
+Password.change=.//*[@id='Defaultbutton']
+LoginUser=.//*[@id='logged_user_name']/span
+URL=https://sidtsmgr5.smgrdev.avaya.com
+SecondarygeoURL=https://sit4vm2.smgrdev.avaya.com
+SMGR.Error=.//*[@id='errorTryAgain']
+SMGR.Error1=.//*[@id='errorDiv']
+ErrorBox=.//*[@id='errorDiv']
+LogOff=.//*[@id='logoff']
+System_Manager=System Manager
+Configurations=.//*[@id='Services_Configurations']/a
+Closebar=.//*[@id='naviframe_close_bar_span']
+CloseTab=.//*[@id='home_tab']
+FirstItem=.//*[@id='table_1:0']
+Edit=.//*[@id='btn_top0']
+Done=.//*[@id='btn_top1']
+Commit=.//*[@id='btn_top0']
+Cancel=.//*[@id='btn_top1']
+EditBtn=.//*[@id='edit']
+Delete_Cnf=.//*[@id='deleteButtonTop']
+Cancel_Cnf=.//*[@id='cancelButtonTop']
+Continue_Cnf=.//*[@id='continueButtonTop']
+BuildNo=.//*[@id='SMGR']/div/p[2]
+#################################SPM##############################################################	
+######Data Retention UI##
+Update=.//*[@id='update']
+AgedAlarmCleared=.//*[@id='table_1:0:j_id46']
+AgedAlarm=.//*[@id='table_1:0']
+AgedAlarmValue=.//*[@id='table_1:0:j_id46']/div
+######SPM,Common buttons#######
+New=.//*[@id='btn_new']
+Update=.//*[@id='btn_edit']
+Delete=.//*[@id='btn_delete']
+Edit=.//*[@id='btn_top0']
+Done=.//*[@id='btn_top1']
+Commit=.//*[@id='btn_top0']
+View=.//*[@id='btn_view']
+Filter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[1]/div[2]/table[1]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+
+//Filter=.//*[@id='table_1_enableFiltering']
+Disablefilter=.//*[@id='table_1_disableFiltering']
+ClearFilter=.//*[@id='table_1_ClearFilter']
+Filter.Name=.//*[@id='gName_filter']
+Filter.Apply=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/table[1]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr/td[3]/a
+//Filter.Apply=.//*[@id='table_1_filterColumns']
+Loginnamefilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[5]/input
+Secondcolfilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[1]/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input
+Thirdcolfilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/input
+ThirdColumnFilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/input
+Fourthcolfilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[4]/input
+AdvanceSearchBtn=.//*[@id='table_1_control_bar_advancedSearch']
+AdvanceSearchInput=.//*[@id='Advtable:0:inputOperand']
+AdvanceSearch=.//*[@id='btn_search']
+AdvanceOccurances=.//*[@id='Advtable:0:d2']
+Search.Text=.//*[@id='j_id65_filter']
+LoacalTab=html/body/div[5]/div/form/table/tbody/tr[2]/td/div[2]/div[1]/div/span/span/fieldset[5]/legend/a/img
+LocalNameNew=.//*[@id='btn_addLN']
+LocalEdit=.//*[@id='btn_editLN']
+LocalDelete=.//*[@id='btn_removeLN']
+LocalLanglist=.//*[@id='localizedName_selectOneChoice']
+LocalDisplayNM=.//*[@id='locName_Value_Id']
+AddlocalNL=.//*[@id='btn_CreateLN']
+CancelLocalNM=.//*[@id='btn_CancelCreateLN']
+AddressTab=html/body/div[5]/div/form/table/tbody/tr[2]/td/div[2]/div[1]/div/span/span/fieldset[4]/legend/a/img
+Globalmesbox=.//*[@id='globalMessages']/tbody/tr[2]/td[2]/div
+Loginerrmsgbox=.//*[@id='textLogin::msg']
+StatusMsgbox=.//*[@id='statusmessage']
+CMErrmsg=.//*[@id='cmList::msg']
+
+SIPErrmsg=.//*[@id='asm_errorSection::msg']
+SMErrmsg=.//*[@id='asm_inputAsm1::msg']
+LocationErrmsg=.//*[@id='asm_inputLocation::msg']
+LocalnameErrmsg=.//*[@id='locName_Value_Id::msg']
+UsernameErrmsg=.//*[@id='locName_Value_Id::msg']
+LastnameErrmsg=.//*[@id='lastNameInlineError']
+FirstnameErrmsg=.//*[@id='firstNameInlineError']
+LoginnameErrmsg=.//*[@id='loginNameInlineError']
+#################################SPM#############################################################	
+######SPM,Common buttons#######
+Edit_Profile=Edit Profile
+View_Profile=View Profile
+SPMHome_Screen=SPMHome Screen
+Data_Retention= Data Retention
+Configurations=Configurations
+Configuration=Configuration
+Settings=Settings
+ExpandAll=.//*[@id='expandAll']
+CollapseAll=.//*[@id='collapseAll']
+GeneralProp=.//*[@id='link0']/img
+IPOfficeProp=.//*[@id='link1']/img
+LinkBtn3=.//*[@id='link2']/img
+Delete_Cnf=.//*[@id='deleteButtonTop']
+Cancel_Cnf=.//*[@id='cancelButtonTop']
+EditBtn_Tab=.//*[@id='btn_edit']
+########SPM,Settings,Agent Management#######
+Agent_Management_Service=Agent Management Service
+Agent_Management=Agent Management
+Agent.EnterpriseHrtThrshold=.//*[@id='enterpriseheartbeatthresholdAgentMgmt']
+########SPM,Settings, Alarm Mgmt#######
+Alarm_Management_Service=Alarm Management Service
+Alarm_Management=Alarm Management
+Alrm.EmailFrwd=.//*[@id='emailforwardAlarmMgmt']
+Alarm.IntermRed=.//*[@id='IndeterminateAlarmSeverityLevelsred']
+Alarm.IntermGreen=.//*[@id='IndeterminateAlarmSeverityLevelsgreen']
+alarm.IntermBlue=.//*[@id='IndeterminateAlarmSeverityLevelsblue']
+alarm.MinorRed=.//*[@id='MinorAlarmSeverityLevelsred']
+alarm.minorGreen=.//*[@id='MinorAlarmSeverityLevelsgreen']
+alarm.minorBlue=.//*[@id='MinorAlarmSeverityLevelsblue']
+alarm.warningRed=.//*[@id='WarningAlarmSeverityLevelsred']
+alarm.warningGreen=.//*[@id='WarningAlarmSeverityLevelsgreen']
+alarm.warningBlue=.//*[@id='WarningAlarmSeverityLevelsblue']
+alarm.time=.//*[@id='auto_refresh_time_intervalAlarmautorefresh']
+########SPM,IPOffice#####
+IPOffice=IP Office
+IP.Gen.Pref=.//*[@id='application_prefix_abgGeneralProperties']
+Ip.IPO.MaxRec1=.//*[@id='table_selectAll_maxRecords_ABGIPOfficetableProperties']
+IP.IPO.MaxRec2=.//*[@id='table_showAll_maxRecords_ABGIPOfficetableProperties']
+IPOfficeLink=.//*[@id='tabs-0navTree']/div[2]/div/div[3]/div/div[3]/div/div[3]/h3/a[2]
+#######SPM,CSM,##########
+Communication_System_Management=Communication System Management
+GP.Applicn=.//*[@id='application_prefixGeneralProperties']
+TP.Clean=.//*[@id='cleanup_backedup_interval_in_daysTelephonyProperties']
+TP.Prepopulate=.//*[@id='enable_pre_populated_extension_values_UPMTelephonyProperties']
+TP.Incremental=.//*[@id='incremental_sync_interval_in_hoursTelephonyProperties']
+TP.MaxforTab=.//*[@id='table_selectAll_maxRecordsTelephonyProperties']
+TP.Maxforsingle=.//*[@id='table_showAll_maxRecordsTelephonyProperties']
+######SPM,Inventory######
+Inv.Record1=.//*[@id='max_threads_collecting_inventory_informationGeneralProperties']
+Inv.Record2=.//*[@id='max_threads_probing_network_elementsGeneralProperties']
+Inv.Record3=.//*[@id='table_page_sizeGeneralProperties']
+######SPM,Messaging######
+Messaging=Messaging
+Mesg.Gen.Record1=.//*[@id='application_prefix_mmGeneralProperties']
+Mesg.Record2=.//*[@id='table_selectAll_maxRecordsTelephonyProperties']
+Mesg.Record3=.//*[@id='table_showAll_maxRecordsTelephonyProperties']
+#####SPM,Reports#########
+Reports=Reports
+Reports.Periodic=.//*[@id='report_cleanup_intervalReportsCleanupProperties']
+Reports.Output1=.//*[@id='report_output_directoryReportsOutputDirectoryProperties']
+Reports.Output2=.//*[@id='report_output_directory_sizeReportsOutputDirectoryProperties']
+Reports.Alarm1=.//*[@id='report_dir_size_execced_critical_alarmReportsAlarmProperties']
+Reports.Alarm2=.//*[@id='report_dir_size_execced_major_alarmReportsAlarmProperties']
+Reports.Alarm3=.//*[@id='report_dir_size_execced_minor_alarmReportsAlarmProperties']
+#####SPM,Software Management#########
+
+SoftMgmt.DeleteFiles=.//*[@id='days_specified_for_old_files_deletionGeneralProperties']
+#####SPM,Spirit,data Transportconfig########
+DataTransport=html/body/div[5]/div/form/table/tbody/tr[1]/td/div/table/tbody/tr/td[1]/span[2]
+DataTransport.proxyport=.//*[@id='ProxyPortDataTransport']
+#####SPM,Settings,SMGR,Alarming UI#####
+Alarming.Cleared=.//*[@id='sectionTable0']/tbody/tr[1]/td[1]/div/span[2]/label
+Alarming.AutoFresh=.//*[@id='auto_refresh_time_intervalAlarmautorefresh']
+#####SPM,Settings,SMGR,SNMP Glogal Configuration#########
+Global_SNMP_Configuration=Global SNMP Configuration
+SNMP_Access_Profiles_Details=SNMP Access Profile Details
+SNMP_Access_Profiles=SNMP Access Profiles
+User_is_null=User  is null.
+Confirm_Pass_Null=Confirm Authentication Password is null.
+GSNMP.Profile=.//*[@id='profileName']
+GSNMP.User=.//*[@id='user_name']
+GSNMP.AuthPwd=.//*[@id='auth_pass']
+GSNMP.CnfAuthPwd=.//*[@id='confirm_auth_pass']
+GSNMP.PrivPwd=.//*[@id='priv_pass']
+GSNMP.CnfPrivPwd=.//*[@id='confirm_priv_pass']
+GSNMP.Time=.//*[@id='timeout']
+GSNMP.Retries=.//*[@id='retries']
+GSNMP.Type=.//*[@id='snmptype']
+GSNMP.Auth=.//*[@id='authPro']
+GSNMP.Priv=.//*[@id='previleges']
+GSNMP.Privacy=.//*[@id='privPro']
+GSNMP.Table=.//*[@id='PageTable']/td/table/tbody/tr/td[2]/div
+###SPM,Settings,Logging UI#########################
+Logging_UI=Logging UI
+Logging_Service=Logging Service
+Logging.Alert=.//*[@id='sectionTable0']/tbody/tr[1]/td[1]/div/span[2]/label
+Logging.Autofresh=.//*[@id='sectionTable1']/tbody/tr/td[1]/span/label
+Logging.TimeInterval=.//*[@id='auto_refresh_time_intervalLogautorefresh']
+Logging.TimeInterval.msg=.//*[@id='auto_refresh_time_intervalLogautorefresh::msg']
+Logging.ErrorRed=.//*[@id='ErrorLogSeverityLevelsred']
+Logging.ErrorRed.msg=.//*[@id='ErrorLogSeverityLevelsred::msg']
+Logging.ErrorGreen=.//*[@id='ErrorLogSeverityLevelsgreen']
+Logging.ErrorGreen.msg=.//*[@id='ErrorLogSeverityLevelsgreen::msg']
+Logging.ErrorBlue=.//*[@id='ErrorLogSeverityLevelsblue']
+Logging.ErrorBlue.msg=.//*[@id='ErrorLogSeverityLevelsblue::msg']
+Logging.NoticeRed=.//*[@id='NoticeLogSeverityLevelsred']
+Logging.NoticeRed.msg=.//*[@id='NoticeLogSeverityLevelsred::msg']
+Logging.NoticeGreen=.//*[@id='NoticeLogSeverityLevelsgreen']
+Logging.NoticeGreen.msg=.//*[@id='NoticeLogSeverityLevelsgreen::msg']
+Logging.NoticeBlue=.//*[@id='NoticeLogSeverityLevelsblue']
+Logging.NoticeBlue.msg=.//*[@id='NoticeLogSeverityLevelsblue::msg']
+Logging.WarnRed=.//*[@id='WarningLogSeverityLevelsred']
+Logging.WarnRed.msg=.//*[@id='WarningLogSeverityLevelsred::msg']
+Logging.WarnGreen=.//*[@id='WarningLogSeverityLevelsgreen']
+Logging.WarnGreen.msg=.//*[@id='WarningLogSeverityLevelsgreen::msg']
+Logging.WarnBlue=.//*[@id='WarningLogSeverityLevelsblue']
+Logging.WarnBlue.msg=.//*[@id='WarningLogSeverityLevelsblue::msg']
+red_component=Provide a value for the red component.
+green_component=Provide a value for the green component.
+blue_component=Provide a value for the blue component.
+#######Bulk import and export########
+import.Browse=.//*[@id='userFileUploader_ay__multi_file_upload_0']
+import.done=.//*[@id='cancel']
+Export=.//*[@id='btnExportTop']
+###SPM,Setteings and Remaining Repository#########################
+HealthMonitor=HealthMonitor
+Health.Interval=.//*[@id='MonitorIntervalHealthMonitorConfigurationParameters']
+Health.Interval.msg=.//*[@id='MonitorIntervalHealthMonitorConfigurationParameters::msg']
+Health.Retention=.//*[@id='MonitorRetentionDaysHealthMonitorConfigurationParameters']
+Health.Retention.msg=.//*[@id='MonitorRetentionDaysHealthMonitorConfigurationParameters::msg']
+Healt.Retries=.//*[@id='MonitorRetriesHealthMonitorConfigurationParameters']
+Healt.Retries.msg=.//*[@id='MonitorRetriesHealthMonitorConfigurationParameters::msg']
+Shutdown.GracePer=.//*[@id='GRACE_PERIODShutdown']
+Shutdown.GracePer.msg=.//*[@id='GRACE_PERIODShutdown::msg']
+Shutdown.Port=.//*[@id='portdatabase']
+Shutdown.Port.msg=.//*[@id='portdatabase::msg']
+Shutdown.Email=.//*[@id='spm_email_host_portcommmonEmailConfig']
+SMGRElmtMgr.DiskAllocated=.//*[@id='diskSpaceAllocatedPEM-Container']
+Trap.Communinity=.//*[@id='CommunityTrapListenerConfigurationParameters']
+TrustMgmt.Threshold=.//*[@id='AUTO_RENEWAL_THRESHOLDTrustManagementAgent']
+Bulk.MaxErrors=.//*[@id='NoOfErrRecordsBulkImportPropertyContainer']
+Bulk.MaxErrors.msg=.//*[@id='NoOfErrRecordsBulkImportPropertyContainer::msg']
+
+License.Allocation=.//*[@id='WebLMLicenseAllocationBackupFileSizeWebLMServer_PropertyContainer']
+Licences.Usage=.//*[@id='WebLMUsagesUsageCountLicenseUsage_PropertyContainer']
+Licences.Usage.msg=.//*[@id='WebLMUsagesUsageCountLicenseUsage_PropertyContainer::msg']
+License.Allocation=.//*[@id='WebLMLicenseAllocationBackupFileSizeWebLMServer_PropertyContainer']
+License.Allocation.msg=.//*[@id='WebLMLicenseAllocationBackupFileSizeWebLMServer_PropertyContainer::msg']
+Event_Processor_Service=Event Processor Service
+Event_Processor=Event Processor
+SPIRIT=SPIRIT
+Data_Transport_Config=Data Transport Config
+Data_Transport_Static_Config=Data Transport Static Config
+SMGR=SMGR
+Alarming_UI=Alarming UI
+Licenses=Licenses
+LicensesLink=.//*[@id='Services_Licenses']/a
+Scheduler=Scheduler
+
+SNMP=SNMP
+Trust_Management=Trust Management
+User_BulkImport_Profile=User BulkImport Profile
+Shutdown.auto=.//*[@id='transliterationFlagautoTransliteration']
+Shutdown.auto.msg=.//*[@id='transliterationFlagautoTransliteration::msg']
+
+Shutdown.self=.//*[@id='status_selfprovisioningFlagstatus_selfprovisioning']
+Shutdown.self.msg=.//*[@id='status_selfprovisioningFlagstatus_selfprovisioning::msg']
+
+########################Bulk Import######################################
+Bulk.MaxErrors=.//*[@id='NoOfErrRecordsBulkImportPropertyContainer']
+Bulk.MaxErrors.msg=.//*[@id='NoOfErrRecordsBulkImportPropertyContainer::msg']
+
+Bulk.Default=.//*[@id='ErrConfigOptionBulkImportPropertyContainer']
+Bulk.Default.msg=.//*[@id='ErrConfigOptionBulkImportPropertyContainer::msg']
+
+Bulk.MaxJobs=.//*[@id='NoOfJobRecordsBulkImportPropertyContainer']
+Bulk.MaxJobs.msg=.//*[@id='NoOfJobRecordsBulkImportPropertyContainer::msg']
+
+Bulk.EnableError=.//*[@id='ErrFileGenerationBulkImportPropertyContainer']
+Bulk.EnableError.msg=.//*[@id='ErrFileGenerationBulkImportPropertyContainer::msg']
+
+Bulk.DefaultAction=.//*[@id='UpdateGranularityBulkImportPropertyContainer']
+Bulk.DefaultAction.msg=.//*[@id='UpdateGranularityBulkImportPropertyContainer::msg']
+
+########################Trust Management#################################
+TrustMgmt.Threshold=.//*[@id='AUTO_RENEWAL_THRESHOLDTrustManagementAgent']
+TrustMgmt.Threshold.msg=.//*[@id='AUTO_RENEWAL_THRESHOLDTrustManagementAgent::msg']
+
+TrustMgmt.Alarm=.//*[@id='AUTO_RENEWAL_ALARM_THRESHOLDTrustManagementAgent']
+TrustMgmt.Alarm.msg=.//*[@id='AUTO_RENEWAL_ALARM_THRESHOLDTrustManagementAgent']
+
+TrustMgmt.Alarm.msg=.//*[@id='AUTO_RENEWAL_ALARM_THRESHOLDTrustManagementAgent::msg']
+
+TrustMgmt.AutoRenew=.//*[@id='AUTO_RENEWAL_STATUSTrustManagementAgent']
+TrustMgmt.AutoRenew.msg=.//*[@id='AUTO_RENEWAL_STATUSTrustManagementAgent::msg']
+
+TrustMgmt.Pref=.//*[@id='CERTIFICATE_SIGNING_ALGORITHM_PREFERENCETrustManagementAgent']
+TrustMgmt.Pref.msg=.//*[@id='CERTIFICATE_SIGNING_ALGORITHM_PREFERENCETrustManagementAgent::msg']
+
+########################Trap Listner######################################
+TrapListener=TrapListener
+Trap.Communinity=.//*[@id='CommunityTrapListenerConfigurationParameters']
+Trap.Communinity.msg=.//*[@id='CommunityTrapListenerConfigurationParameters::msg']
+
+Trap.password=.//*[@id='AuthPasswordTrapListenerConfigurationParameters']
+Trap.password.msg=.//*[@id='AuthPasswordTrapListenerConfigurationParameters::msg']
+
+Trap.CnfPassword=.//*[@id='ConfirmAuthPasswordTrapListenerConfigurationParameters']
+Trap.CnfPassword.msg=.//*[@id='ConfirmAuthPasswordTrapListenerConfigurationParameters::msg']
+Trap.protocol=.//*[@id='AuthProtocolTrapListenerConfigurationParameters']
+Trap.protocol.msg=.//*[@id='AuthProtocolTrapListenerConfigurationParameters::msg']
+
+Trap.PrivPassword=.//*[@id='PrivPasswordTrapListenerConfigurationParameters']
+Trap.PrivPassword.msg=.//*[@id='PrivPasswordTrapListenerConfigurationParameters::msg']
+
+Trap.CnfPrivPassword=.//*[@id='ConfirmPrivPasswordTrapListenerConfigurationParameters']
+Trap.CnfPrivPassword.msg=.//*[@id='ConfirmPrivPasswordTrapListenerConfigurationParameters::msg']
+
+Trap.PrivProtocol=.//*[@id='PrivProtocolTrapListenerConfigurationParameters']
+Trap.PrivProtocol.msg=.//*[@id='PrivProtocolTrapListenerConfigurationParameters::msg']
+
+Trap.Interval=.//*[@id='TrapListenCompareAlarmIntervalTrapListenerConfigurationParameters']
+Trap.Interval.msg=.//*[@id='TrapListenCompareAlarmIntervalTrapListenerConfigurationParameters::msg']
+
+Trap.UserName=.//*[@id='V3UsernameTrapListenerConfigurationParameters']
+Trap.UserName.msg=.//*[@id='V3UsernameTrapListenerConfigurationParameters::msg']
+
+########################Scheduler##########################################
+Scheduler.Retry=.//*[@id='pe_noof_retryPropertyContainer']
+Scheduler.Retry.msg=.//*[@id='pe_noof_retryPropertyContainer::msg']
+Scheduler.RetryDelay=.//*[@id='pe_retry_delayPropertyContainer']
+Scheduler.RetryDelay.msg=.//*[@id='pe_retry_delayPropertyContainer::msg']
+
+Scheduler.Initila=.//*[@id='smm_context_strContainer']
+Scheduler.Initila.msg=.//*[@id='smm_context_strContainer::msg']
+
+Scheduler.Naming=.//*[@id='smm_prinicialContainer']
+Scheduler.Naming.msg=.//*[@id='smm_prinicialContainer::msg']
+Scheduler.URL=.//*[@id='smm_urlContainer']
+Scheduler.URL.msg=.//*[@id='smm_urlContainer::msg']
+
+
+#########################SMGR_Element_Manager##############################
+SMGR_Element_Manager=SMGR Element Manager
+SMGRElmtMgr.DiskAllocated=.//*[@id='diskSpaceAllocatedPEM-Container']
+SMGRElmtMgr.DiskAllocated.msg=.//*[@id='diskSpaceAllocatedPEM-Container::msg']
+
+SMGRElmtMgr.Backup=.//*[@id='backupDirectoryPEM-Container']
+SMGRElmtMgr.Backup.Msg=.//*[@id='backupDirectoryPEM-Container::msg']
+SMGRElmtMgr.DatabaseUtil=.//*[@id='databaseDirectoryPEM-Container']
+SMGRElmtMgr.DatabaseUtil.Msg=.//*[@id='databaseDirectoryPEM-Container::msg']
+
+SMGRElmtMgr.DatabaseSuper=.//*[@id='dbPasswordPEM-Container']
+SMGRElmtMgr.DatabaseSuper.Msg=.//*[@id='dbPasswordPEM-Container::msg']
+SMGRElmtMgr.CnfDatabaseSuper=.//*[@id='ConfirmdbPasswordPEM-Container']
+SMGRElmtMgr.CnfDatabaseSuper.msg=.//*[@id='ConfirmdbPasswordPEM-Container::msg']
+
+SMGRElmtMgr.DbPort=.//*[@id='dbPortPEM-Container']
+SMGRElmtMgr.DbPort.msg=.//*[@id='dbPortPEM-Container::msg']
+
+SMGRElmtMgr.DbScpPort=.//*[@id='dbScpPortPEM-Container']
+SMGRElmtMgr.DbScpPort.msg=.//*[@id='dbScpPortPEM-Container::msg']
+
+SMGRElmtMgr.DbSuper=.//*[@id='dbUserPEM-Container']
+SMGRElmtMgr.DbSuper.msg=.//*[@id='dbUserPEM-Container::msg']
+SMGRElmtMgr.DiskSpaceThreshold=.//*[@id='diskSpaceThresholdPEM-Container']
+SMGRElmtMgr.DiskSpaceThreshold.msg=.//*[@id='diskSpaceThresholdPEM-Container::msg']
+
+SMGRElmtMgr.JobInterface=.//*[@id='jobInterfaceURLPEM-Container']
+SMGRElmtMgr.JobInterface.msg=.//*[@id='jobInterfaceURLPEM-Container::msg']
+
+SMGRElmtMgr.MaxBackup=.//*[@id='maxBackupFilesPEM-Container']
+SMGRElmtMgr.MaxBackup.msg=.//*[@id='maxBackupFilesPEM-Container::msg']
+
+SMGRElmtMgr.MaxDataRetention=.//*[@id='maxDataRetentionLimitPEM-Container']
+SMGRElmtMgr.MaxDataRetention.msg=.//*[@id='maxDataRetentionLimitPEM-Container::msg']
+
+SMGRElmtMgr.MaxSize=.//*[@id='maxLogDataSizePEM-Container']
+SMGRElmtMgr.MaxSize.msg=.//*[@id='maxLogDataSizePEM-Container::msg']
+
+SMGRElmtMgr.MaxTrans=.//*[@id='maxTransactionTimeoutLimitPEM-Container']
+SMGRElmtMgr.MaxTrans.msg=.//*[@id='maxTransactionTimeoutLimitPEM-Container::msg']
+
+SMGRElmtMgr.RemoteUtil=.//*[@id='remoteUtilityDirectoryPEM-Container']
+SMGRElmtMgr.RemoteUtil.Msg=.//*[@id='remoteUtilityDirectoryPEM-Container::msg']
+
+SMGRElmtMgr.SchedulerURL=.//*[@id='schedulerURLPEM-Container']
+SMGRElmtMgr.SchedulerURL.msg=.//*[@id='schedulerURLPEM-Container::msg']
+
+#########################Logging Service####################################
+Logging.MaxAllowed=.//*[@id='MaximumFileSizeAllowedHarvestConfigurationParameters']
+Logging.MaxAllowed.msg=.//*[@id='MaximumFileSizeAllowedHarvestConfigurationParameters::msg']
+Loggserv.Maxtime.msg=.//*[@id='ArchiveTimerIntervalHarvestConfigurationParameters::msg']
+Loggserv.Maxtime=.//*[@id='ArchiveTimerIntervalHarvestConfigurationParameters']
+Loggserv.Dir=.//*[@id='HarvestDirectoryHarvestConfigurationParameters']
+Loggserv.Dir.msg=.//*[@id='HarvestDirectoryHarvestConfigurationParameters::msg']
+Loggserv.NoLines=.//*[@id='LinesPerPageHarvestConfigurationParameters']
+Loggserv.NoLines.msg=.//*[@id='LinesPerPageHarvestConfigurationParameters::msg']
+Loggserv.NoFiles=.//*[@id='NoOfFilesHarvestConfigurationParameters']
+Loggserv.NoFiles.msg=.//*[@id='NoOfFilesHarvestConfigurationParameters::msg']
+Integer_value_is_out_of_range=Integer value is out of range.
+You_must_enter_a_value=You must enter a value.
+###############################RTS############################################################
+###########RTS,Common#######################
+Inventory=Inventory
+RTS.New=.//*[@id='add2']
+RTS.Edit=.//*[@id='edit']
+RTS.View=.//*[@id='view']
+RTS.View.Edit=.//*[@id='rtseditTopButton']
+RTS.View.Done=.//*[@id='rtsDoneTopButton']
+RTS.Delete=.//*[@id='delete2']
+RTS.Typedropdown=.//*[@id='applicationsubform:appsysTypes']
+RTS.Commit=.//*[@id='rtsCommitTopButton']
+Inventory=Inventory
+Element_Type_Access=Element Type Access
+############RTS,Manage Elements#############
+Manage_Elements=Manage Elements
+ManageEmts.New=.//*[@id='btnElementTypeConfigAdd']
+Manage.Name=.//*[@id='cmName']
+Manage.NameError=.//*[@id='cmName::msg']
+Manage.Ip=.//*[@id='nodeIP']
+Manage.IpError=.//*[@id='nodeIP::msg']
+Manage.Password=.//*[@id='passwordInputCM']
+Manage.CnfPassword=.//*[@id='confirmPasswordCM']
+Manage.table=.//*[@id='PageTable']/td/table/tbody/tr/td[2]/div[1]
+Manage.login=.//*[@id='loginInputCM']
+Manage.SelectFirst=.//*[@id='table_2:0']
+Manage.loginError=.//*[@id='errorMsg__LIST__']/li[2]
+############RTS,Element Type access########
+Element_Type_Access=Element Type Access
+ElementTypeAcess.TypeDrpdwn=.//*[@id='elementTypeSelectionDropDown']
+ElementTypeAcess.ProtDrpdown=.//*[@id='elementTypeAccessProtocolDropDown_Id']
+ElementTypeAcess.New=.//*[@id='btnElementTypeConfigAdd']
+ElementTypeAcess.View=.//*[@id='btnElementTypeConfigView']
+ElementTypeAcess.Edit=.//*[@id='btnElementTypeConfigEdit']
+ElementTypeAcess.Delete=.//*[@id='btnElementTypeConfigDelete']
+ElementTypeAcess.Name=.//*[@id='elementTypeAccessName_Id']
+ElementTypeAcess.Log=.//*[@id='elementTypeAccessLoginUserName_Id']
+ElementTypeAcess.Password=.//*[@id='elementTypeAccessPassword_Id']
+ElementTypeAcess.CnfPassword=.//*[@id='elementTypeAccessConfirmPassword_Id']
+ElementTypeAcess.Table=.//*[@id='PageTable']/td/table/tbody/tr/td[2]/div
+ElementTypeAcess.Commit=.//*[@id='btn_commit_top']
+ElementTypeAcess.SelectSecond=.//*[@id='viewElementTypeConfigurationTable:2']
+Element_Type_Access_Profile_Management.title=Element Type Access Profile Management
+Element_Type_Access=Element Type Access
+Add_Access_Profile_Entry=Add Access Profile Entry
+View_Access_Profile_Entry=View Access Profile Entry
+Delete_Access_Profile_Entry=Delete Access Profile Entry
+Modify_Access_Profile_Entry=Modify Access Profile Entry
+#####################################################
+Subnet_Configuration=Subnet Configuration
+Subnet.New=.//*[@id='btnSubnetConfigAdd']
+Subnet.Delete=.//*[@id='btnSubnetConfigDelete']
+Subnet.DeleteCnf=.//*[@id='btnSubnetConfigDeleteOk']
+Subnet.Name=.//*[@id='viewSubnetConfigurationsTable:0:columnName']
+Subnet.Ip=.//*[@id='viewSubnetConfigurationsTable:0:columnIP']
+Subnet.Mask=.//*[@id='viewSubnetConfigurationsTable:0:columnMask']
+Subnet.Save=.//*[@id='viewSubnetConfigurationsTable:0:columnSave']
+Subnet.SelectFirst=.//*[@id='viewSubnetConfigurationsTable:0']
+Subnet.
+#####################Manage Servicabilit Agents#######
+Manage_Serviceability_Agents=Manage Serviceability Agents
+SNMPv3_User_Profiles=SNMPv3 User Profiles
+SNMP_Access_Profiles=User Details
+User_Details=User Details
+
+SNMP_Target_Profiles=SNMP Target Profiles
+Taget.Name=.//*[@id='inputName1']
+Target.IP=.//*[@id='ip']
+Target.Port=.//*[@id='port']
+New_Target_Profile=New Target Profile
+Attach/Detach_User_Profile=Attach/Detach User Profile
+Target.Refresh=.//*[@id='table_4_refresh']
+Target.profile=.//*[@id='table_4:0']
+Target.Assign=.//*[@id='btnAttachTUser']
+Target_Profile_Delete_Confirmation=Target Profile Delete Confirmation
+Edit_Target_Profile=Edit Target Profile
+#######################Synchronization################
+Synchronization=Synchronization
+Communication_system=Communication System
+Create_Profiles_and_Discover_SRS/SCS=Create Profiles and Discover SRS/SCS
+##############################################################################################
+
+
+//SNMP Target profiles
+Name=.//*[@id='inputName1']
+IP=.//*[@id='ip']
+Port=.//*[@id='port']
+Commit=.//*[@id='btn_top0']
+
+//SNMPV3 User Profiles
+UserName=.//*[@id='user_name']
+AuthPassword=.//*[@id='auth_pass']
+CnfAuthPassword=.//*[@id='confirm_auth_pass']
+PrivacyPwd=.//*[@id='priv_pass']
+CnfPrivacyPwd=.//*[@id='confirm_priv_pass']
+
+IP_Office=IP Office
+Messaging_System=Messaging System
+UCM_and_Application_Server=UCM and Application Server
+UCM_and_Application_Server_Backup=UCM and Application Server Backup
+
+VMPro=VMPro
+CS_1000_and_CallPilot_Synchronization=CS 1000 and CallPilot Synchronization
+#######################PEM(Back up and Restore)#######################################
+Backup_and_Restore=Backup and Restore
+Backup_Title=Backup
+PEM.Backup=.//*[@id='backupDB']
+PEM.FileName=.//*[@id='fileName']
+PEM.FileName.Error=.//*[@id='fileName::msg']
+PEM.Now=.//*[@id='btn_new_down']
+PEM.Scedule=.//*[@id='btn_schedule_top']
+PEM.Cancel=.//*[@id='btn_cancel_top']
+PEM.Table=.//*[@id='PageTable']/td/table/tbody/tr/td[2]/div[2]
+PEM.Scheduled=.//*[@id='btn_schedule_top']
+Schedule_Backup=Schedule Backup
+PEM.ScheduleJobName=.//*[@id='nameId']
+PEM.ScheduleJobName.Error=.//*[@id='nameId::msg']
+PEM.StartDateYear=.//*[@id='startDate.year']
+PEM.Remote.ip=.//*[@id='serverIP']
+PEM.Remote.ipError=.//*[@id='serverIP::msg']
+
+PEM.Remote.Port=.//*[@id='serverIP']
+PEM.Remote.UserName=.//*[@id='userName']
+PEM.Remote.UserNameError=.//*[@id='userName::msg']
+
+PEM.Remote=.//*[@id='locationType:_1']
+PEM.Remote.Password=.//*[@id='password']
+PEM.Remote.PasswordError=.//*[@id='password::msg']
+
+Restore_title=Restore
+PEM.Restore=.//*[@id='restoreDB']
+PEM.Restore.SelectFile=.//*[@id='availableFilesListId']
+Restore_Confirmation=Restore Confirmation
+PEM.Restore.Continue=.//*[@id='restoreContinueTop']
+PEM.Parm.First=.//*[@id='table_2:0']
+Parameterized_Restore=Parameterized Restore
+PEM.Restore.File=.//*[@id='fileName_1']
+PEM.Schedule.Rec=.//*[@id='recurrenceDisplayTxt']
+PEM.Schedule.Occurance=.//*[@id='occurrences_']
+PEM.Remote.port=.//*[@id='serverPort']
+PEM.Remote.portError=.//*[@id='serverPort::msg']
+
+NoofPages=.//*[@id='table_1']/table[4]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr/td[5]
+Nextpage=.//*[@id='table_1_nextRecord']
+Pagesizelist=.//*[@id='table_1_pageSizeSelect']
+Pagesizelist2=.//*[@id='table_2_pageSizeSelect']
+PEM.Error=.//*[@id='login:globalMessages']/tbody/tr[2]/td[2]/div/table/tbody/tr/td[1]/div/img
+PEM.Remote.Default=.//*[@id='chkBox1']
+Mandatory_values_cannot_be_empty.=Mandatory values cannot be empty.
+PEM.Invalid=.//*[@id='globalMessages__LIST__']/li[2]
+########################Alarms##########################
+Events=Events
+Alarms=Alarms
+Alarming=Alarming
+Alarm.MoreActions=.//*[@id='moreDropDownButton_button']
+Alarms.ChgStatus=.//*[@id='dropDownButton_button']
+Serviceability_Agents=Serviceability Agents
+Table.Row=.//*[@id='table_1_core_table_content']/tbody/tr
+Alarm.Table.Row=.//*[@id='table_core_table_content']/tbody/tr
+Alarm.Generate=.//*[@id='btn_generateAlarm']
+Alarm.Table.Row=.//*[@id='table_core_table_content']/tbody/tr
+Events=Events
+Logs=Logs
+Log_Harvester=Log Harvester
+Log_Settings=Log Settings
+Log_Viewer=Log Viewer
+Alarms=Alarms
+Logs.New=.//*[@id='btnNew']
+Create_New_Profile =New profile creation
+Logs.Profile=.//*[@id='profileName']
+Logs.Dir=.//*[@id='FileTable:0:listDirOptions']/option[1]
+Logs.Files=.//*[@id='FileTable:0:listFileOptions']/option[1]
+Logs.Filter=.//*[@id='FileTable:0:searchText']
+Logs.Commit=.//*[@id='FileTable:0:btnCommitText']
+Logs.Saveprofile=.//*[@id='btnHarvestLogs']
+Logs.view=.//*[@id='btnView']
+Logs.ViewTitle=Profile criteria view
+Logs.ViewProfilename=.//*[@id='zipFileName']
+Logs.Request=.//*[@id='btnShowRequests']
+Logs.Delete=.//*[@id='btnDelete']
+Profile_Delete_Confirmation=Profile Delete Confirmation
+Logs.DeleteCnf=.//*[@id='btnTopDelete']
+Log_List=Log List
+LogSettings.logger=.//*[@id='log_table_1:0']
+Logsettings.Editbtn=.//*[@id='edit_log']
+Edit_Logger=Edit Logger
+Logsettings.Edit=.//*[@id='editlog_appender']
+Logsettings.Attach=.//*[@id='attach_appender']
+Logsettings.Dettach=.//*[@id='deletelog_appender']
+Logsettings.selectAtach=.//*[@id='select_log_appender']
+Attach_Appender=Attach Appender
+Edit_Appender=Edit Appender
+Alarms.total=.//*[@id='table']/table[1]/tbody/tr/td/table/tbody/tr/td[1]/table/tbody/tr/td[1]
+Alarms.Refresh=.//*[@id='table_refresh']
+Alarm.First=.//*[@id='table:0']
+Alarm.View.Mesg=.//*[@id='messagesFormatId0']
+Alarm.dropdown=.//*[@id='dropDownButton_button']
+alarm.Ack=.//*[@id='ackStatus']
+alarm.Cleard=.//*[@id='clearStatus']
+alarm.more=.//*[@id='moreDropDownButton_button']
+alarm.delete=.//*[@id='deleteSelectedAlarms']
+######################Groups and Roles#################
+Groups_Roles=Groups & Roles
+Groups_and_Roles=Groups and Roles
+Groups=Groups
+Group_Management=Group Management
+GLS.View=.//*[@id='viewBtn']
+GLS.add=.//*[@id='add']
+GLS.Duplicate=.//*[@id='duplicateItem']
+GLS.Delete=.//*[@id='delete']
+GLS.GroupName=.//*[@id='groupName']
+GLS.Root=.//*[@id='rootButton']
+Group.viewmode=.//*[@id='j_id37']/table[1]/tbody/tr[1]/td[1]/div/span[1]
+GLS.View.Name=.//*[@id='groupName']
+GLS.Drp=.//*[@id='dropDownButton_button']
+GLS.Drp.Mov=.//*[@id='moveItem']
+GLS.Error.name=.//*[@id='groupName::msg']
+Gls.Filter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[2]/table[1]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+GlS.Filter.Apply=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[2]/table[1]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr/td[3]/a
+Gls.Filer.Name=.//*[@id='table_1_filterColumns']
+Gls.table=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[2]/div/table/tbody/tr/td/table/tbody/
+Roles=Roles
+Roles.New=.//*[@id='btnAdd']
+Roles.Delete=.//*[@id='remove']
+Roles.Delete.Cnf=.//*[@id='delteRolesForm:submit']
+System_Administrator=.//*[@id='node_System_white-space_Administrator']/a
+System_admin_Btn=.//*[@id='tabs-1navTree']/div[3]/div/div[2]/div/div[3]/h3/a
+Roles.Name=.//*[@id='roleNameStringForUi']
+Roles.Desc=.//*[@id='roleNameDescriptionForUi']
+Roles.CommitContinue=.//*[@id='saveAndContinue']
+Roles.Addmap=.//*[@id='editRoleDetailsForm:elementPermissionsTab:addMappingBtn']
+Roles.ElementType=.//*[@id='elementTypeSelectList']
+Roles.Instance=.//*[@id='elementSelectList']
+Roles.Template=.//*[@id='roleForm:templates']
+Roles.commit=.//*[@id='roleForm:submit2']
+Roles.commit1=.//*[@id='editRoleDetailsForm:submit']
+Roles.Next=.//*[@id='submit']
+Roles.SysIcon=.//*[@id='node_System_white-space_Administrator']/ins
+Role.Edit=.//*[@id='btnEdit']
+Role.Edit.Name=.//*[@id='editRoleDetailsForm:roleDisplayName']
+Role.Edit.Commit=.//*[@id='editRoleDetailsForm:submit']
+Role.Permission.select=.//*[@id='roleForm:headerCheckbox']
+Pagesizelist=.//*[@id='table_1_pageSizeSelect']
+Role.assign=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[1]/table/tbody/tr[2]/td[1]/table/tbody/tr/td[1]/table/tbody/tr/td[6]/table/tbody/tr/td/div/table/tbody/tr[1]/td[2]/a
+Role.roleheader=.//*[@id='tblAdditionalRoles_core_table_content']/tbody/tr[1]/th[2]/table/tbody/tr/td[1]
+############################# Scheduler #################################
+Completed_Jobs=Completed Jobs
+Pending_Jobs=Pending Jobs
+Scheduler=Scheduler
+Job_Scheduling-View_Job=View Completed Job
+Sched.filterText=.//*[@id='j_id66_filter']
+Job_Scheduling-Edit=Job Scheduling-Edit Job: 
+Delete_Confirmation=Delete Confirmation
+Sched.enable=.//*[@id='enableItem']
+Sched.disable=.//*[@id='disableItem']
+View_Pending_Job=View Pending Job
+Disable_Confirmation=Confirmation
+Edit_Completed_Job=Edit Completed Job
+Edit_Pending_Job=Edit Pending Job
+ThirdColumnFilter=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/input
+Compted.filter.jobname=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/input
+#############################Import/Export###############################
+ImportBtn=.//*[@id='tableLayoutScheduler']/tbody/tr[3]/td/button
+Import.done=.//*[@id='cancelBottom']
+Import.Cancel=.//*[@id='cancelJobButtonTop']
+
+UPM.moreAcns=.//*[@id='dropDownButton_button']
+UPM.importUsers=.//*[@id='j_id84_menuAnchor']/td[2]/a
+UPM.ShowDelete=Show Deleted Users
+
+Import_Users=Import Users
+Import_Users_title=Import users
+import.Browse=.//*[@id='userFileUploader_ay__multi_file_upload_0']
+import.doneTop=.//*[@id='cancel']
+Import.skipExcel=.//*[@id='skipXlsx']
+Import.skip=.//*[@id='skip']
+Import.table=.//*[@id='panelGroup0_0_3']/div
+Coolapse=.//*[@id='collapseAll0']
+Import.Collapse1=.//*[@id='link000']/img
+Import.Collapse2=.//*[@id='link001']/img
+Import.Collapse3=.//*[@id='link002']/img
+Import.Collapse4=.//*[@id='link003']/img
+Import.Expand=.//*[@id='expandAll0']
+Import.Excel=//*[@id='fileType:_1']
+Import.Refresh=.//*[@id='tableImportJobs_refresh']
+Import.Status.Process=.//*[@id='tableImportJobs_core_table_content']/tbody/tr[2]/td[3]
+Import.Status=.//*[@id='tableImportJobs_core_table_content']/tbody/tr[2]/td[3]
+Import.PercCompleted=.//*[@id='tableImportJobs_core_table_content']/tbody/tr[2]/td[5]
+Import.All=.//*[@id='tableImportJobs_pageSizeSelect']
+Import.Row=tableImportJobs:_s
+Import.skip=.//*[@id='skip']
+Import.merge=.//*[@id='mergeXlsx']
+Import.merge.xml=.//*[@id='merge']
+Import.Delete=.//*[@id='deleteXlsx']
+Import.Delete.xml=.//*[@id='delete']
+Import.Status=.//*[@id='statusIcon']/a[2]/span
+Import.Status.Result=.//*[@id='j_id25']/table/tbody/tr[2]/td/span
+Import.Replace=.//*[@id='replace']
+Import.Partial=.//*[@id='partial']
+Export=.//*[@id='btnExportTop']
+Export=.//*[@id='btnExportTop']
+Import.FileUpload=.//*[@id='globalMessages__LIST__']/li[2]
+############################# User Management-Manage Users ##############
+Tablerow=.//*[@id='table_1_core_table_content']/tbody/tr
+User.ChgPassword=.//*[@id='btnChangePassword']
+Identity_Tab=Identity
+Identity=.//*[@id='avTabs0']/ul/li[1]/a
+Users.Password=.//*[@id='newPassword']
+Users.CnfPassword=.//*[@id='confrmPassword']
+Membership_Tab=Membership
+UPM_Success=.//*[@id='statusIcon']/a[2]/span
+Users.New=.//*[@id='btn01']
+Users.View=.//*[@id='btn02']
+Users.Edit=.//*[@id='btn03']
+Users.Duplicate=.//*[@id='btn05']
+Users.Delete=.//*[@id='btn04']
+Users.More=.//*[@id='dropDownButton_button']
+Importglobalsettings=Import Global Settings
+
+Last_Name=Last Name
+Login_Name=Login Name
+Checkbox0=.//*[@id='table_1:0']
+Checkbox2=.//*[@id='table_1:1']
+Checkbox3=.//*[@id='table_1:2']
+Checkbox4=.//*[@id='table_1:4']
+Checkbox5=.//*[@id='table_1:5']
+Checkbox6=.//*[@id='table_1:6']
+Checkbox7=.//*[@id='table_1:7']
+Selectallcheckbox=//*[@id='table_1_selectAllCheckbox']
+All=.//*[@id='table_1']/table[4]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[2]/a
+None=.//*[@id='table_1']/table[4]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/a
+Bulk_Edit_Users=Bulk Edit Users
+User_Bulk_Editor=User Bulk Editor
+Helplink=.//*[@id='domain_help_text']
+Help=Help
+Quicknavigetorbox=.//*[@id='search_input']
+Quickfirstoption=.//*[@id='innerdiv_0']
+Quickeditbtn=.//*[@id='details_actions']/button[1]
+Quickviewbtn=.//*[@id='details_actions']/button[2]
+Quickdeletebtn=.//*[@id='details_actions']/button[3]
+User_Profile_Edit=User Profile Edit
+User_Profile_View=User Profile View
+User_Profile_Duplicate=User Profile Duplicate
+User_Delete_Confirmation=User Delete Confirmation
+Users.loginname=.//*[@id='table_1:user_login_name']/table/tbody/tr/td[2]
+rowpoint=//*[@id='table_1_core_table_content']/tbody/tr
+columnpoint=//tr/td[5]
+Users.Commit=.//*[@id='btn_top1']
+Users.Enablerefresh=.//*[@id='chk_autoRefresh']
+Tenant.totalele=.//*[@id='all_elements_table_core_table_content']/tbody/tr
+Tenant.total=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li
+Tenantchk1=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/a/ins[1]
+Tenantchk2=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li/ul/li[2]/a/ins[1]
+
+Tenantchk11=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li/a/ins[1]
+Users.Tenantck=.//*[@id='150']/a/ins[1]
+users.Tenantck1=.//*[@id='54']/a/ins[1]
+users.Tenantck2=.//*[@id='55']/a/ins[1]
+users.Tenantck3=//*[@id='56']/a/ins[1]
+users.Tenantck4=.//*[@id='50']/a/ins[1]
+users.Tenantck5=.//*[@id='51']/a/ins[1]
+users.Tenantck6=.//*[@id='52']/a/ins[1]
+users.Tenantck7=.//*[@id='53']/a/ins[1]
+Users.Refresh=.//*[@id='btn_refreshData']
+Users.Refreshtenant=.//*[@id='avx_orgtree_refreshbutton']
+Users.Treebtn=.//*[@id='100']/ins
+Users.Treebtn1=.//*[@id='54']/ins
+Users.Treebtn2=.//*[@id='55']/ins
+Users.Treebtn3=.//*[@id='50']/ins
+Users.Treebtn4=.//*[@id='51']/ins
+Users.smlist=.//*[@id='asm_inputAsm1']
+Users.all=.//*[@id='table_1_selectAllCheckbox']
+Users.smloc=.//*[@id='asm_inputLocation']
+Users.Deletecnf=.//*[@id='deleteButtonBottom']
+SelectAll=All
+SelectNone=None
+SelectAl=All
+Bulk_Edit_Users=Bulk Edit Users
+Bulkeditjobchkbox=.//*[@id='tableBulkEditorJobs_core_table_content']/tbody/tr[2]/td[2]
+Users.Runnow=.//*[@id='btn_top0']
+Users.Runnowbtm=.//*[@id='btn_bottom0']
+Users.Schedule=.//*[@id='btn_top1']
+Users.Schedulebtm=.//*[@id='btn_bottom1']
+EditLink=Edit
+CancelLink=Cancel
+AddContact=.//*[@id='btnAddContactMember']
+publicChk0=.//*[@id='publicContactsTable:0']
+publicChk1=.//*[@id='publicContactsTable:1']
+Selectpbliccont=.//*[@id='btn_select1']
+Attach_Contacts=Attach Contacts
+Contacts=.//*[@id='avTabs0']/ul/li[4]/a
+Contacttablechk0=.//*[@id='ContactsListMemberTable:0']
+AssContactchkbox=ContactsListMemberTable:_s
+EditAssocContact=.//*[@id='btnEditContactMember']
+Edit_Contact_List_Member=Edit Contact List Member
+Memberlable=.//*[@id='member_label']
+Memberaltlable=.//*[@id='member_alt_label']
+Presencebuddychk=.//*[@id='select_presence_buddy']
+Speeddialchk=.//*[@id='select_speed_dial']
+Contactdetailbtn=.//*[@id='link001']/img
+contactLastName=.//*[@id='contactLastName']
+contactFirstname=.//*[@id='contactFirstname']
+contactLastNameAscii=.//*[@id='contactLastNameASCII']
+contactFirstnameAscii=.//*[@id='contactFirstnameASCII']
+textLogin=.//*[@id='textLogin']
+contact_localDisName=.//*[@id='contact_localDisName']
+contact_endPointName=.//*[@id='contact_endPointName']
+updateTime=.//*[@id='updateTime']
+txtAuthSource_readonly=.//*[@id='txtAuthSource_readonly']
+Removecontact=.//*[@id='btnRemoveContactMember']
+NewContact=.//*[@id='btnNewContact']
+EditpvtContact=.//*[@id='btnEditContact']
+DeletepvtContact=.//*[@id='btnDeleteContact']
+New_Private_Contact=New Private Contact
+Privatecnttab=.//*[@id='link031']/img
+Pvtcontactchk0=.//*[@id='privateContactsTable:0']
+privatecontactchbox=privateContactsTable:_s
+Contactlanglist=.//*[@id='select_contactlanguagePreference']
+Edit_Private_Contact=Edit Private Contact
+Contact_Delete_Confirmation=Contact Delete Confirmation
+NewPostalAdd=.//*[@id='btnNewPostalAddress']
+SharedAddbtn=.//*[@id='btnSharedAddress']
+Choose_Address=Choose Address
+Add_Address=Add Address
+EditPostalAdd=.//*[@id='btnEditPostalAddress']
+DeletePostalAdd=.//*[@id='btnDeletePostalAddress']
+NewContAdd=.//*[@id='btnNewAddress']
+EditContAdd=.//*[@id='btnEditAddress']
+DeleteContAdd=.//*[@id='btnDeleteAddress']
+Addressname=.//*[@id='txt_name']
+AddressType=.//*[@id='select_Type']
+Locality=.//*[@id='txt_Locality']
+businessphone=.//*[@id='txt_bphone1']
+ContAddType=.//*[@id='contactAddressType']
+AddCatagory=.//*[@id='contactAddressCategory']
+ContAddress=.//*[@id='contactAddress']
+Contactaddchk0=.//*[@id='contactAddress:0']
+Postaladdchk0=.//*[@id='contactPostalAddress:0']
+Collapse_All=Collapse All
+Editcmf=.//*[@id='btnComProfileChangePassword']
+comprofpass=.//*[@id='exsisitingCommPassword']
+cnfcomprofpass=.//*[@id='confirmComprofilePassword']
+Contctaddbyname=contactPostalAddress:_s
+Displayname=.//*[@id='txt_localDisName']
+#######Public Contacts##############
+public_view=.//*[@id='btnViewContact']
+Public_Refresh=.//*[@id='publicContactsTable_refresh']
+Shared_Refresh=.//*[@id='tableSharedAddress_refresh']
+Sharedtablebyname=tableSharedAddress:_s
+Edit_Address=Edit Address
+New_Public_Contact=New Public Contact
+View_Public_Contact=View Public Contact
+Edit_Public_Contact=Edit Public Contact
+Publictbyname=publicContactsTable:_s
+#########Comm profile #########
+Savebtn=.//*[@id='saveButtonTop']
+Savebtnbtm=.//*[@id='saveButtonBottom']
+Cancelbtnbtm=.//*[@id='cancelButtonBottom']
+Historychk=.//*[@id='chkHistory']
+Strengthchk=.//*[@id='chkStrength']
+Prevpassbox=.//*[@id='previousPasswordsBlocked']
+Minlength=.//*[@id='minPasswordLength']
+lowercase=.//*[@id='lowerCase']
+UpperCase=.//*[@id='upperCase']
+NumericCase=.//*[@id='numericCase']
+SpecialCase=.//*[@id='specialCase']
+
+##########System presence ACL ##########
+EditACL=.//*[@id='btn_editSystemDefault']
+NewACL=.//*[@id='btn_addSystemDefault']
+DeleteACL=.//*[@id='btn_deleteSystemDefault']
+RefreshACL=.//*[@id='tableSysDefAccessPolicies_refresh']
+ACLChk0=.//*[@id='tableSysDefAccessPolicies:0']
+ACLChk1=.//*[@id='tableSysDefAccessPolicies:1']
+Accesslevel=.//*[@id='sysDefAccessLevel']
+Actionlist=.//*[@id='sysDefAction']
+SaveAcl=.//*[@id='btn_SaveSysDefAccessCtrl']
+CloseAcl=.//*[@id='btn_closeSysDefACLPanel']
+Aclchkboxname=tableSysDefAccessPolicies:_s
+##############Advance Search #################
+Clearbtn=.//*[@id='btn_clear']
+Minusbtn=.//*[@id='Advtable:0:btn_minus']
+Plusbtn=.//*[@id='Advtable:0:btn_plus']
+Columnnamelist=.//*[@id='Advtable:0:d1']
+Columnnamelist1=.//*[@id='Advtable:1:d1']
+Operatorlist=.//*[@id='Advtable:0:operatorListId']
+Seachvalue=.//*[@id='Advtable:0:searchValue']
+Seachvalue1=.//*[@id='Advtable:1:searchValue']
+Plusbtn1=.//*[@id='Advtable:1:btn_plus']
+Minusbtn1=.//*[@id='Advtable:1:btn_minus']
+Resettable=.//*[@id='table_1_clearSearch']
+Secondrow=.//*[@id='table_1_core_table_content']/tbody/tr[2]/td[2]
+Display_Name=Display Name
+First_Name=First Name
+AndOrlist=.//*[@id='Advtable:1:one_choice1']
+
+################### New User #############
+Users.Uprdropdown=.//*[@id='uprList']
+Users.Uprchangeok=html/body/div[12]/div[3]/div/button[2]
+Users.Cancel=.//*[@id='btn_top2']
+Users.Continue=.//*[@id='btn_bottom0']
+Users.Commitbtm=.//*[@id='btn_bottom1']
+Users.Cancelbtm=.//*[@id='btn_bottom2']
+Users.Cmendcheckbox=.//*[@id='subSectionBoolean0_1_0_3']
+Users.delonunassignck=.//*[@id='deleteOnUnassign']
+Users.overrideck=.//*[@id='overRideEndpoint']
+Users.tenantlist=.//*[@id='select_tenant']
+Users.sitelist=//*[@id='select_levelOne']
+Users.deptlist=.//*[@id='select_levelTwo']
+Users.teamlist=//*[@id='select_levelThree']
+Users.SMCheckBox=.//*[@id='subSectionBoolean0_1_0_1']
+TemplateErrbox=.//*[@id='templateList::msg']
+Lastname=.//*[@id='inputcommonName1']
+Lastnameascii=.//*[@id='inputcommonNameASCII']
+Firstname=.//*[@id='inputUserId']
+Firstnameascii=.//*[@id='inputUserIdASCII']
+Loginname=.//*[@id='textLogin']
+User.assignRole=.//*[@id='btn_assign_Role']
+Groupchkbox=tblGroups:_s
+Assign_Roles=Assign Roles
+Add_To_Group=Add To Group
+Assign_Groups=Assign Groups
+Users.Name=.//*[@id='tblAdditionalRoles_core_table_content']/tbody/tr[1]/th[2]/table
+Users.AssingRole.Select=.//*[@id='btn_select']
+Users.AssingRole.Commit=.//*[@id='commitButtonTop']
+Users.AssingRole.Cancel=.//*[@id='btn_cancel']
+Membership=.//*[@id='avTabs0']/ul/li[3]/a
+Users.AssingRole.Checkbox0=.//*[@id='tblAdditionalRoles:0']
+Users.AssingRole.Checkbox1=.//*[@id='tblAdditionalRoles:1']			
+Users.AssingRole.Checkbox9=.//*[@id='tblAdditionalRoles:9']
+RollCheckbox=tableAllRoles:_s
+Users.Roletableck1=.//*[@id='tableAllRoles:0']
+Users.Unassign=.//*[@id='btn_remove_Role']
+Users.Restore=.//*[@id='restoreButtonTop']
+Show_Deleted_Users=Show Deleted Users
+Deleted_Users=Deleted Users
+User_Restore_Confirmation=User Restore Confirmation
+Users.Grouplinkbtn=.//*[@id='link021']/img
+Users.Addtogroup=.//*[@id='btn_addGroup']
+Select_Groups=Select Groups
+Groupsecondrow=.//*[@id='tblGroups_core_table_content']/tbody/tr[2]/td[2]
+Groupchk0=.//*[@id='tblAvailableGroups:0']
+Groupchk1=.//*[@id='tblAvailableGroups:1']
+Users.Selectgrpbtn=.//*[@id='selGroupButton']
+Users.Grouptblck1=.//*[@id='tblGroups:0']
+Users.Removbtn=.//*[@id='btn_removeGroup']
+Schedule_Bulk_Edit_Job=Schedule Bulk Edit Job
+Status_of_Bulk_Edit_Users_Jobs=Status of Bulk Edit Users Jobs
+BulkEditorJobchk0=.//*[@id='tableBulkEditorJobs:0']
+ViewJob=.//*[@id='showDetailButtonTop']
+CancelJob=.//*[@id='stopJobButtonTop']
+DeleteJob=.//*[@id='deleteJobButtonTop']
+Bulk_Edit_Job_Details=Bulk Edit Job Details
+Imp.Browse=.//*[@id='presFileUploader_ay__multi_file_upload_0']
+Refreshbtn1=.//*[@id='btn_refresh1']
+Backbtn1=.//*[@id='btn_back1']
+Refreshbtn2=.//*[@id='btn_refresh2']
+Backbtn2=.//*[@id='btn_back2']
+TotalRecords=html/body/div[5]/div/form/span[1]/ul/li[3]/div[2]
+Successrecords=html/body/div[5]/div/form/span[1]/ul/li[1]/div[2]
+FailedRecord=html/body/div[5]/div/form/span[1]/ul/li[2]/div[2]
+Bulkeditstatus=.//*[@id='tableBulkEditorJobs_core_table_content']/tbody/tr[2]/td[3]
+TableRefresh=.//*[@id='tableBulkEditorJobs_refresh']
+Selectallchk=.//*[@id='tableBulkEditorJobs_selectAllCheckbox']
+Noofrecordbtn=.//*[@id='j_id36']/a
+###########################Groups and roles advance search ##########################
+inputtext=.//*[@id='Advtable:0:inputOperand']
+Searchbtn=.//*[@id='btn_search']
+Closebtn=//*[@id='btn_close']
+Firstrow=//*[@id='table_1_core_table_content']/tbody/tr[2]/td[2]
+############################## Common console links #################################
+Home=Home
+Hometab=.//*[@id='home_tab']
+
+######### User links ############
+Administrators=Administrators
+Directory_Synchronization=Directory Synchronization
+Groups_&Roles=Groups & Roles
+User_Management=User Management
+User_Provisioning_Rule=User Provisioning Rule
+
+######## Elements links #########
+Engagement_Development_Platform=Engagement Development Platform
+Collaboration_Environment=Collaboration Environment
+Communication_Manager=Communication Manager
+Communication_Server_1000=Communication Server 1000
+Conferencing=Conferencing
+IP_Office=IP Office
+Meeting_Exchange=Meeting Exchange
+Messaging=Messaging
+Presence=Presence
+Routing=Routing
+Session_Manager=Session Manager
+Rounting_Link=.//*[@id='tabs-1navTree']/div[2]/div/div[2]/div/div[1]/div/div[1]/h3/a
+Implicit_Users=Implicit Users
+Media_Server=Media Server
+########Services Links ##########
+Backup_and_Restore=Backup and Restore
+Bulk_Import_and_Export=Bulk Import and Export
+Bulk_Import_and_export=Bulk Import and export
+Configurations=Configurations
+Events=Events
+Geographic_Redundancy=Geographic Redundancy
+Inventory=Inventory
+Licenses=Licenses
+Replication=Replication
+Reports=Reports
+Scheduler=Scheduler
+Security=Security
+Shutdown=Shutdown
+Software_Management=Software Management
+Solution_Deployment_Manager=Solution Deployment Manager
+Templates=Templates
+Tenant_Management=Tenant Management
+
+############################ Directory Synchronization Links #########################
+Directory_Synchronization=Directory Synchronization
+Sync_Users=Sync Users
+
+############################ Groups and Roles links ####################
+Groups=Groups
+Resources=Resources
+Roles=Roles
+Advanced_Search=Advanced Search
+
+############################ User Management #########################
+Manage_Users=Manage Users
+Public_Contacts=Public Contacts
+New_Public_Contact=New Public Contact
+Shared_Addresses=Shared Addresses
+System_Presence_ACLs=System Presence ACLs
+Communication_Profile_Password_Policy=Communication Profile Password Policy
+
+########################### User Provisioning Rule Page Titles ######################
+View_User_Provisioning_Rule=View User Provisioning Rule
+Edit_User_Provisioning_Rule=Edit User Provisioning Rule
+User_Provisioning_Rule_Delete_Confirmation=User Provisioning Rule Delete Confirmation
+User_Delete_Confirmation=User Delete Confirmation
+Duplicate_User_Provisioning_Rule=Duplicate User Provisioning Rule
+New_User_Profile=New User Profile
+New_User_Provisioning_Rule=New User Provisioning Rule
+
+################# Media Server ##############
+Application_Assignment=Application Assignment
+###########################Collaboration Environment links ####################
+Server_Administration=Server Administration
+Cluster_Administration=Cluster Administration
+Service_Management=Service Management
+Configuration=Configuration
+Service_Profiles=Service Profiles
+Attributes=Attributes
+Logging=Logging
+Avaya_Media_Server=Avaya Media Server
+Event_Catalog=Event Catalog
+HTTP_Security=HTTP Security
+JDBC_Provider=JDBC Provider
+JDBC_Source=JDBC Source
+JDBC_Data_Source=JDBC Data Source
+Service_Ports=Service Ports
+System_Tools=System Tools
+SNMP_MIB=SNMP MIB
+Maintenance_Tests=Maintenance Tests
+C100.Search=.//*[@id='searchForm:searchSubmit']
+######################### Communication Manager links##############################
+Call_Center=Call Center
+Agents=Agents
+Announcements=Announcements
+Audio_Group=Audio Group
+Best_Service_Routing=Best Service Routing
+Holiday_Table=Holiday Table
+Media_Server=Media Server
+Variables=Variables
+Vector=Vector
+Vector_List=Vector List
+Vector_Directory_Number=Vector Directory Number
+Vector_Directory_Number_Title=Vector Directory Number(VDN)
+
+Vector_Routing_Table=Vector Routing Table
+Vector_Routing_Table_Title=Vector Routing Table (VRT)
+Service_Hours_Tables=Service Hours Tables
+Coverage=Coverage
+Coverage_Answer_Group=Coverage Answer Group
+Coverage_Path=Coverage Path
+Coverage_Remote=Coverage Remote
+Coverage_Time-of-day=Coverage Time-of-day
+Element_Cut-Through=Element Cut-Through
+Endpoints=Endpoints
+Alias_Endpoint=Alias Endpoint
+Intra_Switch_CDR=Intra Switch CDR
+Manage_Endpoints=Manage Endpoints
+Off_PBX_Telephone=Off PBX Telephone
+Off_PBX_Configuration_Set=Off PBX Configuration Set
+Off_PBX_Endpoint_Mapping=Off PBX Endpoint Mapping
+Site_Data=Site Data
+Building=Building
+Xmobile_Configuration=Xmobile Configuration
+Groups=Groups
+Group_Page=Group Page
+Hunt_Group=Hunt Group
+Intercom_Group=Intercom Group
+Pickup_Group=Pickup Group
+Terminating_Extension_Group=Terminating Extension Group
+Network=Network
+Automatic_Alternate_Routing_Analysis=Automatic Alternate Routing Analysis
+Automatic_Alternate_Routing_Digit_Conversion=Automatic Alternate Routing Digit Conversion
+Automatic_Route_Selection_Analysis=Automatic Route Selection Analysis
+Automatic_Route_Selection_Digit_Conversion=Automatic Route Selection Digit Conversion
+Automatic_Route_Selection_Toll=Automatic Route Selection Toll
+Data_Modules=Data Modules
+IP_Interfaces=IP Interfaces
+IP_Network_Maps=IP Network Maps
+IP_Network_Regions=IP Network Regions
+Node_Names=Node Names
+Route_Pattern=Route Pattern
+Signaling_Groups=Signaling Groups
+Trunk_Group=Trunk Group
+Parameters=Parameters
+System_Parameters-CDR_Options=System Parameters - CDR Options
+System_Parameters-Customer_Options=System Parameters - Customer Options
+System_Parameters-Features=System Parameters - Features
+System_Parameters-Security=System Parameters - Security
+System_Parameters-Special_Applications=System Parameters - Special Applications
+System=System
+Abbreviated_Dialing_Enhanced=Abbreviated Dialing Enhanced
+Abbreviated_Dialing-Group_or_System=Abbreviated Dialing - Group or System
+Abbreviated_Dialing_Personal=Abbreviated Dialing Personal
+Authorization_Code=Authorization Code
+Class_Of_Restriction=Class Of Restriction
+
+Class_Of_Service_Group=Class Of Service Group
+
+Dialplan_Analysis=Dialplan Analysis
+Dialplan_Parameters=Dialplan Parameters
+Feature_Access_Codes=Feature Access Codes
+UDP_Group_List=UDP Group List
+Locations=Locations
+Tenantlink=Tenant
+Uniform_Dial_Plan=Uniform Dial Plan
+Uniform_Dial_Plan_Groups=Uniform Dial Plan Groups
+Options=Options
+Usage_Options=Usage Options
+NRP_Group=NRP Group
+
+############################### Conferencing links #########################
+Dashboard=Dashboard
+Sync=Sync
+
+############################## IP Office links ############################
+Backup=Backup
+Backup_and_Restore=Backup and Restore
+Restore=Restore
+Security_Configuration=Security Configuration
+System_Configuration=System Configuration
+Initiate_FailBack=Initiate FailBack
+File_Transfer=File Transfer
+UCM/IP_Office_Application_Server=UCM / IP Office Application Server
+UCM.Backup=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[7]/div/div[1]/h3/a
+UCM.Restore=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[7]/div/div[2]/h3/a
+UCM.Security_Configuration=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[7]/div/div[3]/h3/a
+UCM.System_Configuration=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[7]/div/div[4]/h3/a
+Applications=Applications
+Call_Flow=Callflow
+System_Configuration=System Configuration
+UCM.FileTransfer=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[7]/div/div[5]/h3/a
+System_Configuration_Link=.//*[@id='tabs-0navTree']/div[1]/div/div[6]/div/div[8]/div/div[2]/h3/a
+############################### Meeting Exchange links ####################
+Client_Registration=Client Registration
+General=General
+Resellers=Resellers
+Time_zones=Time zones
+Users=Users
+Wholesalers=Wholesalers
+Audio_Conferencing=Audio Conferencing
+Bridge_Features=Bridge Features
+Conference_Features=Conference Features
+Call_Routing=Call Routing
+System_Config=System Config
+General_Config=General Config
+Data_Conferencing=Data Conferencing
+Media=Media
+Features=Features
+Configuration=Configuration
+Web_Applications=Web Applications
+Services=Services
+
+############################# Messaging links #######################
+Class_Of_Service=Class Of Service
+Storage_Destination=Storage Destination
+Subscriber=Subscriber
+Configuration=Configuration
+
+########################### Routing links #############################
+Domains=Domains
+Locations=Locations
+Adaptations=Adaptations
+SIP_Entities=SIP Entities
+Entity_Links=Entity Links
+Time_Ranges=Time Ranges
+Routing_Policies=Routing Policies
+Dial_Patterns=Dial Patterns
+Regular_Expressions=Regular Expressions
+Defaults=Defaults
+
+######################### Session Manager links ######################
+Dashboard=Dashboard
+Session_Manager_Administration=Session Manager Administration
+Communication_Profile_Editor=Communication Profile Editor
+Network_Configuration=Network Configuration
+Failover_Groups=Failover Groups
+Local_Host_Name_Resolution=Local Host Name Resolution
+Remote_Access=Remote Access
+SIP_Firewall=SIP Firewall
+Device_and_Location_Configuration=Device and Location Configuration
+Device_Settings_Groups=Device Settings Groups
+Location_Settings=Location Settings
+Application_Configuration=Application Configuration
+Applications=Applications
+Application_Sequences=Application Sequences
+Conference_Factories=Conference Factories
+Implicit_Users=Implicit Users
+NRS_Proxy_Users=NRS Proxy Users
+System_Status=System Status
+SIP_Entity_Monitoring=SIP Entity Monitoring
+Managed_Bandwidth_Usage=Managed Bandwidth Usage
+Security_Module_Status=Security Module Status
+SIP_Firewall_Status=SIP Firewall Status
+Registration_Summary=Registration  Summary
+User_Registrations=User Registrations
+Session_Counts=Session Counts
+User_Data_Storage=User Data Storage
+SIP_Tracer_Configuration=SIP Tracer Configuration
+SIP_Trace_Viewer=SIP Trace Viewer
+Call_Routing_Test=Call Routing Test
+Performance=Performance
+Call_Counts=Call Counts
+Location_Performance=Location Performance
+SIP_Performance=SIP Performance
+System_Performance=System Performance
+Data_Collection=Data Collection
+
+
+########################### Work Assignment Links #######################
+Work_Assignment=Work Assignment
+Assignment_Management=Assignment Management
+Attribute_Management=Attribute Management
+Property_Management=Property Management
+Assignment_Resource_Details=Assignment Resource Details
+Account_Assignment_Details=Account Assignment Details
+Source_Assignment_Details=Source Assignment Details
+
+
+######################## Bulk Import Export links ########################
+export=Export
+Routing=Routing
+Session_Manager=Session Manager
+Local_Host_Name_Resolution=Local Host Name Resolution
+Import=Import
+Import.Routing=.//*[@id='tabs-0navTree']/div[2]/div/div[2]/div/div[2]/div/div[2]/h3/a
+Import.Session_Manager=//*[@id='tabs-0navTree']/div[2]/div/div[2]/div/div[2]/div/div[3]/h3/a[2]
+Import.Local_Host_Name_Resolution=//*[@id='tabs-0navTree']/div[2]/div/div[2]/div/div[2]/div/div[3]/div/div/h3/a
+Inventory=Inventory
+Elements=Elements
+Subnets=Subnets
+
+Global_Settings=Global Settings
+Users=Users
+Local_Host_Name_Resolution=Local Host Name Resolution
+####################### Configuration Links #########################
+Data_Retention=Data Retention
+Extension_Packs=Extension Packs
+Settings=Settings
+Agent_Management_Service=Agent Management Service
+Alarm_Management_Service=Alarm Management Service
+Communication_System_Management=Communication System Management
+Event_Processor_Service=Event Processor Service
+SPIRIT=SPIRIT
+Data_Transport_Config=Data Transport Config
+Data_Transport_Static_Config=Data Transport Static Config
+SMGR=SMGR
+Alarming_UI=Alarming UI
+Common_Console=Common Console
+Global_SNMP_Configuration=Global SNMP Configuration
+HealthMonitor=HealthMonitor
+Logging_UI=Logging UI
+Logging_Service=Logging Service
+SMGR_Element_Manager=SMGR Element Manager
+SNMP=SNMP
+Scheduler=Scheduler
+TrapListener=TrapListener
+Trust_Management=Trust Management
+User_BulkImport_Profile=User BulkImport Profile
+
+####################### Events links ##############################
+Events=Events
+Logs=Logs
+Log_Harvester=Log Harvester
+Log_Settings=Log Settings
+Log_Viewer=Log Viewer
+Alarms=Alarms
+Noofrows=.//*[@id='log_table_1_pageSizeSelect']
+###################### Geographic Redundancy links ##################
+GR_Health=GR Health
+
+
+##################### Reports links #####################
+Generation=Generation
+History=History
+Remote_Server_Configuration=Remote Server Configuration
+
+
+##################### Scheduler links #####################
+Completed_Jobs=Completed Jobs
+Pending_Jobs=Pending Jobs
+
+##################### Security links #####################
+Certificates=Certificates
+Authority=Authority
+Enrollment_Password=Enrollment Password
+
+
+#################### Shutdown links #####################
+Shutdown_History=Shutdown History
+Shutdown_System_Manager=Shutdown System Manager
+
+
+
+#################### Software Management links #####################
+Software_Inventory=Software Inventory
+Download_Manager=Download Manager
+Manage_Software=Manage Software
+IP_Office=IP Office
+UCM_and_IPO_Application_Server=UCM and IPO Application Server
+Communication_Manager=Communication Manager
+Software_Library=Software Library
+User_Settings=User Settings
+
+
+#################### Template links #####################
+IP_Office_Endpoint=IP Office Endpoint
+UCM_and_Application_Server_Templates=UCM and Application Server Templates
+UCM_and_Application_Server_System_Configuration=UCM and Application Server System Configuration
+UCM_and_Application_Server_Configuration=UCM and Application Server Configuration
+VMPro_System_Configuration_Template=VMPro System Configuration Template
+VMPro_Callflow_Template=VMPro Callflow Template
+CM_Agent=CM Agent
+CM_Endpoint=CM Endpoint
+
+
+################### Titles for all pages ######################################
+
+###################Title for user section ##############
+Avaya_Aura®_System_Manager=Avaya Aura® System Manager
+User_Synchronization=User Synchronization
+Groups_and_Roles=Groups and Roles
+User_Provisioning_Rules=User Provisioning Rules
+################# Titles for element section ############
+Server_Administration=Server Administration
+Feature_Management=Feature Management
+Conferencing_Dashboard=Conferencing Dashboard
+Elements=Elements
+Presence_Configuration_Properties=Presence Configuration Properties
+Introduction_to_Network_Routing_Policy=Introduction to Network Routing Policy
+
+################# Titles for services  ############
+Home_Screen=Home Screen
+Web_License_Manager(WebLM)=Web License Manager (WebLM)
+Replica_Groups=Replica Groups
+Reports_Management=Reports Management
+Graceful_Shutdown=Graceful Shutdown
+
+################# Titles for Administrator,directory,usermanagement,provisionongrules links #################
+DEPLOYMENT_MANAGER=DEPLOYMENT MANAGER
+New_User_Profile=New User Profile
+Group_Management=Group Management
+Manage_Roles=Manage Roles
+Presence_ACL=Presence ACL
+Shared_Address=Shared Address
+User_Provisioning_Rules=User Provisioning Rules
+################# Titles for Collaboration , Communication, conferencing links ####################
+Cluster_Administration=Cluster Administration
+Service_Profile_Configuration=Service Profile Configuration
+Attributes_Configuration=Attributes Configuration
+Avaya_Media_Server_Configuration=Avaya Media Server Configuration
+Event_Catalog_Configuration=Event Catalog Configuration
+SNMP_MIB_Download=SNMP MIB Download
+Announcement_list=Announcement List
+Agents_list=Agents List
+Audio_Groups_list=Audio Groups List
+Best_Service_Routing_List=Best Service Routing List
+Holiday_Table_List=Holiday Table List	
+Variables_List=Variables list
+Vector_List=Vector List
+Vector_Routing_Table_List=Vector Routing Table List
+Service_Hours_Table_List=Service Hours Table List
+Coverage_Answer_Group_List=Coverage Answer Group List
+Coverage_Path_List=Coverage Path List
+Coverage_Remote_List=Coverage Remote List
+Coverage_Time-of-day_List=Coverage Time-of-day List
+Launch_Element_Cut_Through=Launch Element Cut Through
+Alias_Endpoint_List=Alias Endpoint List
+Intra_Switch_CDR_List=Intra Switch CDR List
+Endpoints_List=Endpoints List
+Off_PBX_Endpoint_Mapping_List=Off PBX Endpoint Mapping List
+Site_Data-Building_List=Site Data - Building List
+Floor=Floor
+Site_Data-Floor_List=Site Data - Floor List
+Site_Data-Set_Color_List=Site Data - Set Color List
+Xmobile_Configuration_List=Xmobile Configuration List
+Group_Page_List=Group Page List
+Hunt_Group_List=Hunt Group List
+Intercom_Group_List=Intercom Group List
+Pickup_Group_List=Pickup Group List
+Terminating_Extension_Group_List=Terminating Extension Group List
+Automatic_Alternate_Routing_Analysis_List=Automatic Alternate Routing Analysis List
+AAR_Digit_Conversion_List=AAR Digit Conversion
+Automatic_Route_Selection_Analysis_List=Automatic Route Selection Analysis List
+ARS_Digit_Conversion_List=ARS Digit Conversion List
+Automatic_Route_Selection_Toll_List=Automatic Route Selection Toll List
+Data_Modules_List=Data Modules List
+IP_Interface_List=IP Interface List
+IP_Network_Map=IP Network Map
+IP_Network_Region_List=IP Network Region List
+Node_Names_List=Node Names List
+Route_Pattern_List=Route Pattern List
+Signaling_Group_List=Signaling Group List
+Trunk_Group_List=Trunk Group List
+System_Parameters-CDR_Options_List=System Parameters - CDR Options List
+System_Parameters-Customer_Options_List=System Parameters - Customer Options List
+System_Parameters-Features_List=System Parameters - Features List
+System_Parameters-Security_List=System Parameters - Security List
+System_Parameters-Special_Applications_List=System Parameters - Special Applications List
+Abbreviated_Dialing_Enhanced_List=Abbreviated Dialing Enhanced List
+Abbreviated_Dialing_Group/System_List=Abbreviated Dialing Group/System List
+Abbreviated-Dialing_Personal_List=Abbreviated-Dialing Personal List
+Authorization_Code_List=Authorization Code List
+Class_Of_Restriction_(COR)_List=Class Of Restriction (COR) List
+Class_of_Service_List=Class of Service
+Class_of_Service_Group_List=Class of Service Group
+Dialplan_Analysis_List=Dialplan Analysis List
+Dialplan_Parameters_List=Dialplan Parameters List
+Feature_Access_Codes_List=Feature Access Codes List
+Locations_List=Locations List
+Uniform_Dial_Plan_List=Uniform Dial Plan List
+UDP_Groups_List=UDP Groups List
+Domains_Synchronization=Domains Synchronization
+
+########################### Titles for IP office,Meeting Exchange,Presence,Routing #######################
+IP_Office_Backup=IP Office Backup
+IP_Office_Restore=IP Office Restore
+IP_Office_Security_Configuration=IP Office Security Configuration
+IP_Office_System_Configuration=IP Office System Configuration
+IP_Office_Backup_and_Restore=IP Office Backup and Restore
+IP_Office_File_Transfer=IP Office File Transfer
+UCM_Or_Application_Server_Backup=UCM Or Application Server Backup
+UCM_Or_Application_Server_Restore=UCM and Application Server Restore
+VMPro_Call_Flow=VMPro Callflow
+VMPro_System_Configuration=VMPro System Configuration
+No_registered_servers=No registered servers 
+Meeting_Exchange=Meeting Exchange
+Presence_Configuration_Properties=Presence Configuration Properties
+Domain_Management=Domain Management
+Location=Location
+Personal_settings=Personal settings
+
+#########################Titles for Work Assighment ###################
+Document=Document
+Assignment_ManagementDocument=Assignment Management
+Avaya_Work_Assignment_Snap_in_online_help=Avaya Work Assignment Snap-in online help
+
+########################### titles for Bulk Import and Export ,Configurations, Events ,Inventory,Reports#####
+Export_Routing_Data=Export Routing Data
+Import_Elements=Import Elements
+Subnet_Bulk_Import=Subnet Bulk Import
+Import_Routing_Data=Import Routing Data
+Import_global_settings=Import global settings
+Import_users=Import users
+Plugin_framework=Plugin framework
+Edit_Profile=Edit Profile
+View_Profile=View Profile
+SPMHome_Screen=SPMHome Screen
+SNMP_Access_Profiles=SNMP Access Profiles
+Alarming=Alarming
+Log_List=Log List
+Create_Profiles_and_Discover_SRS/SCS=Create Profiles and Discover SRS/SCS
+Element_Type_Access_Profile_Management=Element Type Access Profile Management
+Title_WelcomeSubnet_Configurations=Title_WelcomeSubnet Configurations
+Serviceability_Agents=Serviceability Agents
+Filter_Profiles_List=Filter Profiles List
+Serviceability_Agent_List=Serviceability Agent List
+Synchronize_CM_Data_and_Configure_Options=Synchronize CM Data and Configure Options
+Synchronize_IP_Office_System_Configuration=Synchronize IP Office System Configuration
+Synchronize_Messaging_System_Data=Synchronize Messaging System Data
+Synchronize_IP_Office_System_Configuration=Synchronize IP Office System Configuration
+System_List=System List
+Reports_Generation=Reports Generation
+Reports_History=Reports History
+Remote_Server_Configuration=Remote Server Configuration
+
+####################### Titles for Scheduler,ShutDown,Software management,Templates  ################
+Completed_Jobs=Completed Jobs
+Pending_Jobs=Pending Jobs
+gracefulShutdown=gracefulShutdown
+Software_Inventory=Software Inventory
+File_Download_Manager=File Download Manager
+Software_Management_for_IP_Office=Software Management for IP Office
+Software_Management_for_UCM_and_IP_Office_Application_Server=Software Management for UCM and IP Office Application Server
+Software_Management_for_Communication_Manager=Software Management for Communication Manager
+IP_Office_Endpoint_Templates=IP Office Endpoint Templates
+IP_Office_System_Configuration_Templates=IP Office System Configuration Templates
+VMPro_System_Configuration_Templates=VMPro System Configuration Templates
+VMPro_Callflow_Templates=VMPro Callflow Templates
+Agent_Templates=Agent Templates
+Endpoint_Templates=Endpoint Templates
+Messaging_Templates=Messaging Templates
+Template_Link=.//*[@id='Services_Templates']/a
+###################Titles for Tenant Management #######################
+Multi-Tenancy_Management=Multi-Tenancy Management
+New_Tenant=.//*[@id='btnAdd']
+Searchtenant=.//*[@id='avx_orgtree_searchtext']
+Tsearchbtn=//*[@id='avx_orgtree_searchbutton']
+TClearsearch=.//*[@id='avx_orgtree_clearbutton']
+Tenantname=.//*[@id='orgUnitName']
+Maxusers=//*[@id='max_users']
+Maxusers.msg=//*[@id='max_users::msg']
+Tdescription=.//*[@id='description']
+Tenantnameabspath=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/a
+TSiteloc=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ul/li[2]/a
+Tdepartmentloc=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ul/li[2]/ul/li/a
+Tteamloc=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ul/li[2]/ul/li/ul/li/a
+Updatehierarchy=.//*[@id='updateTreeHierarchy']
+tenant.add=.//*[@id='btnOverlayAdd']
+tenantcancel=.//*[@id='topCancelBtn']
+tenantcommitbtm=.//*[@id='bottomCommitBtn']
+tenantcancelbtm=.//*[@id='bottomCancelBtn']
+sitename=.//*[@id='siteName']
+sitename.msg=.//*[@id='siteName::msg']
+
+siteaddress=.//*[@id='address']
+deptname=.//*[@id='deptName']
+deptname.msg=.//*[@id='deptName::msg']
+deptdesc=.//*[@id='dept_description']
+teamname=.//*[@id='teamName']
+teamname.msg=.//*[@id='teamName::msg']
+teamdesc=.//*[@id='team_description']
+TenantCommit=.//*[@id='topCommitBtn']
+Tenanttree2=.//*[@id='102']/ins
+Tenantadd=.//*[@id='btn_top0']
+Tenantcancelop=.//*[@id='cancelAdd']
+Tenantedit=.//*[@id='btn_top1']
+Tenanttree3=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ins
+Tenanttree4=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ul/li[2]/ins
+Tenanttree5=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[1]/ul/li[2]/ul/li/ins
+Tenanteltable=.//*[@id='all_elements_table:0:linkAssignElement']
+Tenantno=.//*[@id='selected_elements:0:j_id1129']
+Tenantloc=.//*[@id='selected_elements:0:j_id1130']
+Tenanteltablerow1=.//*[@id='all_elements_table:0:linkAssignElement']
+Tenanteltablerow2=.//*[@id='all_elements_table:2:linkAssignElement']
+Tenanteltablerow3=.//*[@id='all_elements_table:4:linkAssignElement']
+Tenantnumber=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[5]/input
+Tenantlocation=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[6]/input
+Tenantnumber1=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[3]/td[5]/input
+Tenantlocation1=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[3]/td[6]/input
+Tenant.Enable=Enable
+Tenant.Filter=.//*[@id='element_type_filter']
+Tenant.Apply=Apply
+Tenanttee1=.//*[@id='150']/ins
+Tenantadminuser=.//*[@id='addAdminUser']
+Tenantlastname=.//*[@id='createUserSubForm:lastName']
+Tenantfirstname=.//*[@id='createUserSubForm:firstName']
+Tenantlogin=.//*[@id='createUserSubForm:login']
+Tenantpass=.//*[@id='createUserSubForm:password']
+Tenantcnfpass=.//*[@id='createUserSubForm:confirmPassword']
+TenantDone=.//*[@id='createUserSubForm:saveUser']
+Tenantrefresh=.//*[@id='template_table_refresh']
+Tenantuprbtn0=.//*[@id='template_table:0:linkAssignTemplate']
+Tenantuprbtn=.//*[@id='template_table:1:linkAssignTemplate']
+Tenantuprbtn2=.//*[@id='template_table:2:linkAssignTemplate']
+Tenantuprbtn3=.//*[@id='template_table:3:linkAssignTemplate']
+TassignedUpr=.//*[@id='selected_templates_core_table_content']/tbody/tr[2]/td[2]
+TnoUPR=.//*[@id='selected_templates_core_table_content']/tbody/tr[2]/td
+Tenantclear=Clear
+Tenantselectedupr=.//*[@id='selected_templates:0:linkRemoveTemplate']
+Tenantselectedcm=.//*[@id='selected_elements:0:linkRemoveElement']
+Tenant.uprfilter=.//*[@id='template_name_filter']
+Organization_Unit_Delete_Confirmation=Organization Unit Delete Confirmation
+Tenant.Error=.//*[@id='globalMessages__LIST__']/li[2]/a
+###########Tenant Login ##################
+Tblock=.//*[@id='TENANT']
+TSiteblock=.//*[@id='Level1']
+TDeptblock=.//*[@id='Level2']
+TTeamblock=.//*[@id='Level3']
+UserDistribution=.//*[@id='wrapperGraphData']/h2
+TUserLink=.//*[@id='Users_UserManagement']/a
+Tenant.Total=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li
+Tent.AdminLink=.//*[@id='avTabs0']/ul/li[2]/a
+Tenant.site=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li[2]/ul/li/a
+TenantName.View=.//*[@id='orgUnitName']/div
+SiteName.View=.//*[@id='siteName']/div
+Dept.View=.//*[@id='deptName']/div
+Team.View=.//*[@id='teamName']/div
+TenantName.Edit=.//*[@id='orgUnitName']
+TenantName.Edit.msg=.//*[@id='orgUnitName::msg']
+TenantBtnLayout=.//*[@id='buttonLayout']/tbody/tr/td/div
+SiteName.Edit=.//*[@id='siteName']
+Dept.Edit=.//*[@id='deptName']
+Team.Edit=.//*[@id='teamName']
+Tenant.Org.Level1=.//*[@id='orgLevelOneName']
+Tenant.Org.Level1.msg=.//*[@id='orgLevelOneName::msg']
+
+Tenant.Org.Level2=.//*[@id='orgLevelTwoName']
+Tenant.Org.Level2.msg=.//*[@id='orgLevelTwoName::msg']
+
+Tenant.Org.Level3=.//*[@id='orgLevelThreeName']
+Tenant.Org.Level3.msg=.//*[@id='orgLevelThreeName::msg']
+
+Tenant.Role=.//*[@id='tableAllRoles_core_table_content']/tbody/tr
+UPR.SIP=.//*[@id='cp_domains']
+Communication_Profile=Communication Profile
+TenantNumber=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[5]/input
+TenantLoc=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[6]/input
+Tenant.cm.Number=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[5]/input
+Tenent.cm.loc=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/table/tbody/tr/td[2]/fieldset/table/tbody/tr/td/table/tbody/tr[2]/td/div[2]/div[2]/div/span/span/fieldset[1]/div[2]/div/span/table[1]/tbody/tr/td/div/div[3]/div/table/tbody/tr/td/table/tbody/tr[2]/td[6]/input
+CM=CM
+Tenant=.//*[@id='TENANT']
+Level1=.//*[@id='Level1']
+Level2=.//*[@id='Level2']
+Level3=.//*[@id='Level3']
+Graph=.//*[@id='wrapperGraphData']
+Navigation=.//*[@id='wrapper_links']
+Tenents.Checkbox=.//*[@id='smcbTenant:_0']
+Level.Site1=.//*[@id='smcbSite']/label[1]
+Level.Site2=.//*[@id='smcbSite']/label[2]
+Leve2.Dept1=.//*[@id='smcbDept']/label[1]
+Leve2.Dept2=.//*[@id='smcbDept']/label[2]
+Level3.Team1=.//*[@id='smcbTeam']/label[1]
+Level3.Team2=.//*[@id='smcbTeam']/label[2]
+Tenant.More=.//*[@id='dropDownButtonForTenantAdmin_button']
+Tenant.UpmTotal=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[1]/div[2]/div[2]/div[2]/ul/li
+#################### Close Tab ####################################
+closetab1=.//*[@id='navTabs']/ul/li[2]/span
+closetab2=.//*[@id='navTabs']/ul/li[3]/span
+closetab3=.//*[@id='navTabs']/ul/li[4]/span
+closetab4=.//*[@id='navTabs']/ul/li[5]/span
+
+
+
+#################### Setting link on dashboard ##################
+Settingtab=.//*[@id='dashboard-setting-link']
+closeaboutwindow=html/body/div[9]/div[1]/a/span
+closechangepasswindow=//div[10]/div[1]/a/span
+Searchbox=//*[@id='searchtext']
+
+################## configuration,settings,smgr,commonconsole#####################
+maxtabtextbox=//*[@id='max_tab_countcommon-console-properties']
+noofrowstextbox=.//*[@id='number_of_rowscommon-console-properties']
+maxpreftextbox=.//*[@id='max_userpreferances_countcommon-console-properties']
+maxnoofrecord=//*[@id='table_selectAll_maxRecordscommon-console-properties']
+
+#################### Events,Alarms ############
+rowdropdown=.//*[@id='table_pageSizeSelect']
+
+####################### Temporary User Preferences ##########################
+Agent_Management_Serviceprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Call_Centerprf=//*[@id='av_breadcrumb_bar']/span[5]/a
+Agentsprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Announcementsprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Audio_Groupprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Holiday_Tableprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Coverageprf=//*[@id='av_breadcrumb_bar']/span[5]/a
+Endpointsprf=//*[@id='av_breadcrumb_bar']/span[5]/a
+Site_Dataprf=//*[@id='av_breadcrumb_bar']/span[6]/a
+Groupsprf=//*[@id='av_breadcrumb_bar']/span[5]/a
+Networkprf=//*[@id='av_breadcrumb_bar']/span[5]/a
+previousprf=//*[@id='prev']
+firstprf=//*[@id='userpref_']/a[1]
+#######################Breadcrumbar ,Tab #################
+Endpointbar=//*[@id='av_breadcrumb_bar']/span[4]/a
+Homebar=//*[@id='av_breadcrumb_bar']/span[1]/a
+Administratortab=.//*[@id='Administrators']
+CommunicationServertab=//*[@id='Communication Server 1000']
+
+###################### User Provisioning rule New,view,delete,Dupliacate Button page #################
+Table1=.//*[@id='table_1:
+Bracket=']
+Uprname=.//*[@id='userProvName']
+LangDropdown=.//*[@id='select_langPref']
+TimeDropdown=.//*[@id='select_timeZone']
+Communication_Profile=Communication Profile
+Upr.checkbox1=//*[@id='subSectionBoolean0_1_0_0']
+Upr.checkbox2=.//*[@id='subSectionBoolean0_1_0_1']
+Upr.smcheckbox1=//*[@id='subSectionBoolean0_1_0_1']
+Upr.cmcheckbox2=.//*[@id='subSectionBoolean0_1_0_2']
+Upr.cmcheckbox3=.//*[@id='subSectionBoolean0_1_0_3']
+Upr.comprofilepass=.//*[@id='existingCommPassword']
+Upr.confirmpass=.//*[@id='confirmComprofilePassword']
+Upr.AvayaHandle=.//*[@id='startofHandle']
+Upr.SIPdomain=//*[@id='cp_domains']
+Upr.cmlist=.//*[@id='cmList']
+Extensiontextbox=.//*[@id='extn']
+Upr.smlist=.//*[@id='cp_psms']
+Upr.smlist1=.//*[@id='cp_ssms']
+Upr.smlisthl=.//*[@id='cp_smhl']
+Upr.templatelist=.//*[@id='templateList']
+Upr.securitytypelist=.//*[@id='securityCodeType']
+Upr.exttypecheckbox=.//*[@id='extnTypeList']
+Upr.exttextbox=.//*[@id='txtExtensionEntry']
+Users.exttypecheckbox=.//*[@id='assignedOrAvailExt']
+Upr.refresh=.//*[@id='table_1_refresh']
+tablebyname=table_1:_s
+UPR.sessionMgr=.//*[@id='subSectionBoolean0_1_0_0']
+NewCP=.//*[@id='btn_addCP']
+CPTypelist=.//*[@id='cp_Type']
+Avaya_SIP=Avaya SIP
+CPHandle=.//*[@id='cq_handle']
+CPAdd=.//*[@id='btn_CreateHandle']
+CP_Domainname=.//*[@id='cq_domainName']
+EWAchk1=.//*[@id='tableEWAComProfileAddr:0']
+EWASource=.//*[@id='tableEWAComProfileAddr_core_table_content']/tbody/tr[2]/td[5]/input
+
+Upr.NameErrmsg=.//*[@id='userProvName::msg']
+
+
+###########Tenantadmin Login ##########
+Tenantnamechk1=.//*[@id='smcbTenant:_0']
+Tenantsitechk1=.//*[@id='smcbSite:_0']
+Tenantsitechk2=.//*[@id='smcbSite:_1']
+Tenantdeptchk1=.//*[@id='smcbDept:_0']
+Tenantteamchk1=.//*[@id='smcbTeam:_0']
+Graphbtn=.//*[@id='cmdGenerateGraph']
+
+
+#############  Solution Deployment Manager #####################
+Solution_Deployment_Manager=Solution Deployment Manager
+Upgrade_Release_Setting=Upgrade Release Setting
+Upgrade_Management=Upgrade Management
+VM_Management=VM Management
+Download_Management=Download Management
+Software_Library_Management=Software Library Management
+UCM_and_IPO_Application_Server=UCM and IPO Application Server
+  ######## Titles #########
+Software_Upgrade_Manager=Software Upgrade Manager
+Software_Management_Communication_Manager=Software Management Communication Manager
+  ######## Elements #######
+VMs=VMs
+Upgrades=Upgrades
+Downloads=Downloads
+Software_Libraries=Software Libraries
+VMHeader=html/body/span/div/div/div[2]/div/div/div[1]/div[1]
+VMUpgrade=html/body/span/div/div/div[2]/div/div/div[2]/div[1]
+DownloadHeader=html/body/span/div/div/div[2]/div/div/div[3]/div[1]
+Softwarelibrary=html/body/span/div/div/div[2]/div/div/div[4]/div[1]
+Settingheader=html/body/span/div/div/div[2]/div/div/div[5]/div[1]
+###########Upgrade version ##########
+Upgrade.version=.//*[@id='versionSrc']
+Upgrade.Commit=.//*[@id='commitButton']
+Upgrade.Cancel=.//*[@id='cancelButton']
+SMGRVersion_3.8=SMGR 6.3.8
+SMGRVersion_7.0=SMGR 7.0
+Upgrade.OKbtn=.//*[@id='saveOkExitSummary']
+USetting.Edit=.//*[@id='tcommitButton']
+USetting.Webchk=.//*[@id='defaultWebSiteChkbox']
+USettings.proxychk=.//*[@id='useProxyChkbox']
+USettings.Resetbtn=.//*[@id='tresetButton']
+USettings.Canceltbtn=.//*[@id='tcancelButton']
+########### IP office ##########
+IP.Inventorylist=.//*[@id='getInventoryDropButtonGlobal_button']
+IP.Analyzelist=.//*[@id='dropButtonTopABG_button']
+IP.Download=.//*[@id='downloadTopButtonABG']
+IP.Upgrade=.//*[@id='upgradeTopButtonABG']
+IP.Status=.//*[@id='statusButtonABG']
+####### Communication manager ############
+CM.analyze=.//*[@id='dropButtonTopCM1_button']
+CM.Download=.//*[@id='downloadTopButtonCM']
+CM.Upgrade=.//*[@id='upgradeTopButtonCM']
+CM.Update=.//*[@id='updateTopButtonCM']
+CM.Morebtn=.//*[@id='dropButtonTopCM_button']
+CM.SelectClmbtn=.//*[@id='CMSelectButtonId']
+CM.analyzeGW=.//*[@id='dropButtonTopGW1_button']
+CM.DownloadGW=.//*[@id='downloadTopButtonGW']
+CM.UpgradeGW=.//*[@id='upgradeTopButtonGW']
+CM.MorebtnGW=.//*[@id='dropButtonTopGW_button']
+CM.SelectClmbtnGW=.//*[@id='GWSelectButtonId']
+CM.analyzeTN=.//*[@id='dropButtonTopTN_button']
+CM.DownloadTN=.//*[@id='downloadTopButtonTN']
+CM.UpgradeTN=.//*[@id='upgradeTopButtonTN']
+CM.SelectClmbtnTN=.//*[@id='TNSelectButtonId']
+CM.CMTab=.//*[@id='avTabscmManageSoftwareTemplate']/ul/li[1]/a
+CM.Gatewaytab=.//*[@id='avTabscmManageSoftwareTemplate']/ul/li[2]/a
+CM.TNTab=.//*[@id='avTabscmManageSoftwareTemplate']/ul/li[3]/a
+########## Download Management ###########
+Download.Showlist=.//*[@id='showList']
+Download.Listchanger=.//*[@id='treeVsListChanger']
+Download.Sourcelist=.//*[@id='fromlocid']
+Download.Delete=.//*[@id='deleteFDSGoButton']
+Download.Selectfile=.//*[@id='fileSelectionImg']
+Download.Status=.//*[@id='fileDownloadStatusImg']
+Download.Device=.//*[@id='deviceTypeImg']
+########## Library Management #########
+Lib.View=.//*[@id='viewLib']
+Lib.Edit=.//*[@id='t-editsubnt']
+Lib.New=.//*[@id='t-new_lib']
+Lib.Delete=.//*[@id='t-deletesubnt']
+Lib.Managefile=.//*[@id='fileLibLink']
+Lib.Commit=.//*[@id='commitButtonAddTop']
+Lib.Clear=.//*[@id='clearButtonTop']
+Lib.Cancel=.//*[@id='cancelButtonAddTop']
+Lib.Commitbtm=.//*[@id='commitButtonAddBottom']
+Lib.Clearbtm=.//*[@id='clearButtonBottom']
+Lib.Cancelbtm=//*[@id='cancelButtonAddBottom']
+Lib.Name=.//*[@id='name']
+Lib.Ip=.//*[@id='ip']
+Lib.Path=.//*[@id='securePath']
+Lib.Protocollist=.//*[@id='selectProtocol']
+Lib.Servertab=.//*[@id='avTabslibraryFormEditor']/ul/li[1]/a
+Lib.Scptab=.//*[@id='avTabslibraryFormEditor']/ul/li[2]/a
+Lib.Sftptab=.//*[@id='avTabslibraryFormEditor']/ul/li[3]/a
+Lib.Ftptab=.//*[@id='avTabslibraryFormEditor']/ul/li[4]/a
+Lib.Httptab=.//*[@id='avTabslibraryFormEditor']/ul/li[3]/a
+Lib.Scpusername=.//*[@id='scpUserName']
+Lib.Scppassword=.//*[@id='scpPassword']
+Lib.Scpcnfpass=.//*[@id='reTypeScpPassword']
+Lib.Sftpusername=.//*[@id='sftpUserName']
+Lib.Sftppassword=.//*[@id='sftpPwd']
+Lib.Sftpcnfpass=.//*[@id='reTypesftpPwd']
+Lib.ftpusername=.//*[@id='ftpUserName']
+Lib.ftppassword=.//*[@id='ftpPwd']
+Lib.ftpcnfpass=.//*[@id='reTypeFtpPwd']
+Lib.Url=.//*[@id='httpurl']
+Lib.lspchk=.//*[@id='lspLib']
+Lib.scpchk=.//*[@id='scpProtocol']
+Lib.Sftpchk=.//*[@id='sftpProtocol']
+Lib.Ftpchk=.//*[@id='ftpProtocol']
+Lib.Httpchk=.//*[@id='httpProtocol']
+Lib.Remotchk=.//*[@id='remoteLib']
+Lib.tbltname=table_1_subnet:_s
+Lib.Secondrow=.//*[@id='table_1_subnet_core_table_content']/tbody/tr[2]/td[2]
+Lib.View.Edit=.//*[@id='panelButtonBarViewEditTop']
+Lib.View.Done=.//*[@id='doneButtonViewTop']
+Lib.Edit.Commit=.//*[@id='commitButtonEditTop']
+Lib.Edit.Reset=.//*[@id='resetButtonTop']
+Lib.Edit.Cancel=.//*[@id='cancelButtonEditTop']
+Lib.Edit.Commitbtm=.//*[@id='commitButtonEditBottom']
+Lib.Edit.Resetbtm=.//*[@id='resetButtonBottom']
+Lib.Edit.Cancelbtm=.//*[@id='cancelButtonEditBottom']
+Lib.Delete.Now=.//*[@id='confirm_delete']
+Lib.Delete.Schedule=.//*[@id='schedule_delete']
+Lib.Delete.Cancel=.//*[@id='cancelButtonID1']
+Lib.Delete.Nowbtm=.//*[@id='confirm_delete_bottom']
+Lib.Delete.Schedulebtm=.//*[@id='schedule_delete_bottom']
+Lib.Delete.Cancelbtm=.//*[@id='cancelButtonID1_bottom']
+Lib.Refresh=.//*[@id='table_1_subnet_refresh']
+Lib.delete.first=.//*[@id='table_1_subnet_selectAllCheckbox']
+Lib.ScpUserError=.//*[@id='j_id31__LIST__']/li[2]
+Lib.tab=.//*[@id='table_1_subnet']
+Lib.Colname=.//*[@id='table_1_subnet_core_table_content']/tbody/tr
+Lib.item=.//*[@id='table_1_subnet:
+########## Upgrade Management ##########
+Upgr.Preupgradebtn=.//*[@id='preupgradeActionButton_button']
+Upgr.Upgradebtn=.//*[@id='upgradeActionButton_button']
+Upgr.VMMgtbtn=.//*[@id='vmMgmtActionButton_button']
+Upgr.Downloadbtn=.//*[@id='downloadButton']
+Upgr.Morebtn=.//*[@id='moreActionButton_button']
+
+######### VM Management ###############
+
+VM.Loc.New=.//*[@id='addnewlocation-btnIconEl']
+VM.Loc.Edit=.//*[@id='editlocation-btnIconEl']
+VM.Loc.Delete=.//*[@id='deletelocation-btnIconEl']
+VM.Loc.Name=.//*[@id='Name-inputEl']
+VM.Loc.address=.//*[@id='textareafield-1073-inputEl']
+VM.Loc.city=.//*[@id='textfield-1074-inputEl']
+VM.Loc.State=.//*[@id='textfield-1075-inputEl']
+VM.Loc.City.Edit=.//*[@id='textfield-1092-inputEl']
+VM.Loc.City.Locname=html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div[2]/div/div[1]/div[4]/div/table/tbody/tr[1]/td[2]/div
+VM.Loc.City.Summary=html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div[2]/div/div[1]/div[4]/div/table/tbody/tr/td[4]/div
+VM.Loc.Zip=.//*[@id='numberfield-1076-inputEl']
+VM.Loc.Country=.//*[@id='textfield-1077-inputEl']
+VM.Loc.Time=html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div[2]/div/div[2]/div[2]/span/div/fieldset[1]/div/span/div/table[8]/tbody/tr/td[2]/table/tbody/tr/td[1]/input
+VM.Loc.TimeZone=html/body/div[6]/div/ul/li[1]
+VM.Loc.Drpdown=.//*[@id='ext-gen1824']
+VM.Loc.Save=.//*[@id='savenewlocation-btnIconEl']
+VM.Loc.Save.Edit=.//*[@id='saveeditlocation-btnIconEl']
+VM.Loc.Save.Edit.OK=.//*[@id='button-1005-btnIconEl']
+VM.Loc.Save.Delete.Yes=html/body/div[7]/div[3]/div/div/div[2]/div/a/span[2]
+VM.LOC.Save.Delete.OK=html/body/div[7]/div[3]/div/div/div[1]/div/a/span[2]
+VM.LOC.entry=html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div[2]
+VM.Loc.AddName=.//*[@id='locationgridpanel-body']
+VM.Loc.FirstCheckBox=html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div[2]/div/div[1]/div[4]/div/table/tbody/tr/td[1]/div/div
+VM.VM=.//*[@id='tab-1215']
+VM.VM.Loc=.//*[@id='tab-1215-btnInnerEl']
+VM.vmDropList=.//*[@id='ext-gen1870']
+VM.VMNew=.//*[@id='button-1152-btnIconEl']
+VM.Locname=.//*[@id='boundlist-1345-listEl']/ul/li
+UserSet.SSO=.//*[@id='ssoUser']
+UserSet.SSOPassword=.//*[@id='ssoPassword']
+UserSet.SSOCnfPass=.//*[@id='ssoPasswordConfirm']
+UserSet.CompanyID=.//*[@id='companyId']
+Upgrade_Jobs_Status=Upgrade Jobs Status
+Upgrade_Jobs_Dropdown=.//*[@id='selectJobType']
+
+################ Work Assignment ##################
+Attribute.CatAdd=.//*[@id='addCategoryButton']
+Attribute.CatDelete=.//*[@id='deleteCategoryButton']
+Attribute.AttrAdd=.//*[@id='addAttributeButton']
+Attribute.AttrDelete=.//*[@id='deleteAttributeButton']
+Attribute.CatPrev=.//*[@id='categoryTable_previous']
+Attribute.CatNext=.//*[@id='categoryTable_next']
+Attribute.AttrPrev=.//*[@id='attributeTable_previous']
+Attribute.AttrNext=.//*[@id='attributeTable_next']
+Attribute.Nodata=html/body/div[2]/div[2]/div[2]/table/tbody/tr/td
+Attribute.CatChk1=html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]/input
+Attribute.CatChk2=html/body/div[2]/div[2]/div[2]/table/tbody/tr[2]/td[1]/input
+Attribute.AttrChk1=html/body/div[2]/div[3]/div[2]/table/tbody/tr[1]/td[1]/input
+Attribute.Newcat=.//*[@id='newCatRowValue']
+Attribute.NewAttr=.//*[@id='newAttrValue']
+Attribute.Cataddbtn=.//*[@id='categoryTable']/tbody/tr[1]/td[2]/img[1]
+Attribute.Attraddbtn=.//*[@id='attributeTable']/tbody/tr[1]/td[2]/img[1]
+Attribute.Attrcancelbtn=.//*[@id='attributeTable']/tbody/tr[1]/td[2]/img[2]
+Attribute.Catcancelbtn=.//*[@id='categoryTable']/tbody/tr[1]/td[2]/img[2]
+Attribute.CatChk=.//*[@id='catgChkbox
+WAT.Searchbox=.//*[@id='categoryTable_filter']/label/input
+WAT.SearchboxAttr=.//*[@id='attributeTable_filter']/label/input
+NomatchRowcat=.//*[@id='categoryTable']/tbody/tr/td
+NomatchRow=.//*[@id='attributeTable']/tbody/tr/td
+DeleteCnfrm=html/body/div[4]/div[3]/div/button[1]
+
+###################### Property Management #################
+WAT.Commitbtn=.//*[@id='saveButton']
+WAT.Cancelbtn=.//*[@id='backButton']
+defaultvalue1=.//*[@id='defaultVal1']
+defaultvalue2=.//*[@id='defaultVal3']
+defaultvalue3=.//*[@id='defaultVal4']
+propertySelRadio=propertySelRadio
+DeplomentRbtn=.//*[@id='propertyDeploymentType']
+EAHTRbtn=.//*[@id='propertyEAHT']
+MultiplicityRbtn=.//*[@id='propertyMultiplicity']
+ProficiencyRbtn=.//*[@id='propertyProficiency']
+ServiceExcludedRbtn=.//*[@id='propertyServiceExcluded']
+defaultlist=.//*[@id='defaultVal0']
+defaultservicelist=.//*[@id='defaultVal5']
+Aviallist=html/body/div[2]/div[3]/table/tbody/tr[2]/td[1]/select
+Selectcatlist=html/body/div[2]/div[3]/table/tbody/tr[2]/td[3]/select
+catagoryoption1=.//*[@id='availableCategories']/option[1]
+catagoryoption2=.//*[@id='availableCategories']/option[2]
+catagoryoption3=.//*[@id='availableCategories']/option[3]
+Selectedoption1=.//*[@id='selectedCategories']/option[1]
+Selectedoption2=.//*[@id='selectedCategories']/option[2]
+SelectedCatagories=.//*[@id='selectedCategories']
+Rightarrow=.//*[@id='right']
+Leftarrow=.//*[@id='left']
+Movedown=.//*[@id='moveDownButton']
+Moveup=.//*[@id='moveUpButton']
+
+#####EWA User management #########
+User.Resourcedetail=.//*[@id='resourceassign']
+User.AccDetail=.//*[@id='btn_assignProperties']
+User.SourceDetail=.//*[@id='btn_sourceProperties']
+
+#############  Assignment management ###########
+Resourcetablerow=.//*[@id='flexme3']/tbody/tr/td[3]
+Assign.resourcechk=.//*[@id='resourcechxbox']
+Assign.resourceAccount=.//*[@id='resourceAccountchxbox']
+Assign.resourceSource=.//*[@id='AccountSourcechxbox']
+Assign.resourceoverall=.//*[@id='overallbuisnesschxbox']
+RNext=.//*[@id='NextButton']
+Resourcechk1=.//*[@id='flexme3']/tbody/tr/td[1]/input
+AttrCommitcontbtn=.//*[@id='attributescommitcontbutton']
+AttrCommitbtn=.//*[@id='attributescommitbutton']
+Attrcancelbtn=.//*[@id='attributescancelbutton']
+Attributetab=.//*[@id='ui-id-1']
+Propertytab=.//*[@id='ui-id-2']
+Strategytab=.//*[@id='ui-id-3']
+Attributetree=html/body/div[1]/div[2]/div/div[1]/div[2]/div/div/div[1]/ul/li[2]/i
+Sportchk1=.//*[@id='Sport']/a/i[1]
+Crickchk=.//*[@id='SportCricket']/a/i[1]
+Footballchk=.//*[@id='SportFootball']/a/i[1]
+Selectedattrlist=.//*[@id='selectedattributes']/table/tbody/tr[2]/td
+Propertychk1=.//*[@id='AgentsProperties']/tbody/tr[1]/td[1]/input
+Defaultvaluetext=.//*[@id='AgentsProperties']/tbody/tr[1]/td[4]/input
+ViewChangebtn=.//*[@id='AgentsProperties']/tbody/tr[1]/td[5]/button
+PropCommitconbtn=.//*[@id='propertycommitcontbutton']
+PropCommitbtn=.//*[@id='propertycommitbutton']
+PropCancelbtn=.//*[@id='propertycancelbutton']
+StratCommitconbtn=.//*[@id='strategycommitcontbutton']
+StratCommitbtn=.//*[@id='strategycommitbutton']
+StratCancelbtn=.//*[@id='strategycancelbutton']
+Strategychk1=.//*[@id='strategieslist']/tbody/tr[1]/td[1]/input
+Strategychk2=.//*[@id='strategieslist']/tbody/tr[2]/td[1]/input
+
+ResourceChk=html/body/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[2]/div[2]/table/tbody/tr/td[1]/input
+ResourceAccChk=html/body/div[1]/div[2]/div[4]/div/div[2]/div[2]/table/tbody/tr/td[1]/input
+AccAttributelist=.//*[@id='accountAttributes']
+Acc.AttrCommitContbtn=.//*[@id='account_attr_commit_continue_button']
+Acc.AttrCommitbtn=.//*[@id='account_attr_commit_button']
+Acc.AttrCancelbtn=.//*[@id='account_attr_cancel_button']
+Acc.PropCommitContbtn=.//*[@id='account_property_commit_continue_button']
+Acc.PropCommitbtn=.//*[@id='account_property_commit_button']
+Acc.PropCancelbtn=.//*[@id='account_property_cancel_button']
+Acc.Propchk1=.//*[@id='AccountProperties']/tbody/tr/td[1]/input
+Acc.Defaulttext=.//*[@id='AccountProperties']/tbody/tr/td[4]/input
+Acc.Sourcechk=html/body/div[1]/div[2]/div[5]/div[2]/div/div[1]/table/tbody/tr/td[1]/input
+Acc.Sourcetable=.//*[@id='SourcesListTble']/tbody/tr/td[2]
+Acc.SourceCommitContbtn=.//*[@id='source_property_commit_continue_button']
+Acc.SourceCommitbtn=.//*[@id='source_property_commit_button']
+Acc.SourceCancel=.//*[@id='source_property_cancel_button']
+Acc.SoourcePropchk=.//*[@id='SourceProperties']/tbody/tr/td[1]/input
+Acc.Defaultlist=.//*[@id='SourceProperties']/tbody/tr/td[4]/select
+Acc.BusinessPropChk=.//*[@id='BuisnessProperties']/tbody/tr/td[1]/input
+Acc.Businessdefaultvalue=.//*[@id='BuisnessProperties']/tbody/tr/td[4]/input
+Acc.BusCommitContbtn=html/body/div[1]/div/div[2]/div/div/div[4]/button[1]
+Acc.BusCommitbtn=html/body/div[1]/div/div[2]/div/div/div[4]/button[2]
+Acc.BusCancelbtn=html/body/div[1]/div/div[2]/div/div/div[4]/button[3]
+Acc.ViewChangebtn=html/body/div[1]/div/div[2]/div/div/div[3]/div/div[1]/table/tbody/tr/td[5]/button
+
+############ WebLM ##################
+WebLM_Home=.//*[@id='weblmHome ']
+Install_license=.//*[@id='install_license ']
+SampleELF=.//*[@id='enterprise_product']
+Uninstall=.//*[@id='uninstall_license ']
+Helpweblm=.//*[@id='r1_shortcut_div']/div[2]/table/tbody/tr/td/a
+Exportbtn=.//*[@id='exportLicensesButton']
+OK=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table/tbody/tr[4]/td/input
+Web_License_Manager=Web License Manager (WebLM)
+Installbtn=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/table/tbody/tr[2]/td/form/table/tbody/tr/td[2]/table[3]/tbody/tr[2]/td[1]/input
+Acceptradiobtn=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/table/tbody/tr[2]/td/form/table/tbody/tr/td[2]/table[2]/tbody/tr[3]/td/input[1]
+Uninstalltblck1=.//*[@id='uninstallLicTable:0']
+Uninstallbtn=.//*[@id='uninstallBtn']
+########## Server properties #######
+ServerProp=.//*[@id='container']/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/table/tbody/tr[13]/td/a
+ServerPropwithoutexpnd=.//*[@id='server_properties ']
+Server_Properties=Server Properties
+Centrallogid=html/body/div[2]/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/div[3]/form/div/div/div/a
+Noofidtext=.//*[@id='numberOfIds']
+Generatebtn=.//*[@id='btnGenerate']
+
+############# Sample_ELF ###########
+Viewbyfeature=.//*[@id='product_view_by_feature ']
+Viewbylocalweblm=.//*[@id='product_view_by_local_weblm ']
+Enterpriseconf=.//*[@id='enterprise_configuration ']
+Localwebconf=.//*[@id='local_weblm_configuration ']
+Addlocalweblm=.//*[@id='add_local_weblm ']
+Deletelocalweblm=.//*[@id='delete_local_weblm ']
+Modifyweblm=.//*[@id='modify_local_weblm ']
+Usage=.//*[@id='usages ']
+Usagebylocalweblm=.//*[@id='usages_by_local_weblm ']
+Enterpriseusage=.//*[@id='enterprise_usage ']
+Queryusage=.//*[@id='query_usage ']
+Allocation=.//*[@id='allocations ']
+AllocByfeature=.//*[@id='allocation_view_by_feature ']
+AllocBylocalweblm=.//*[@id='allocation_view_by_local_weblm ']
+ChangeAllocation=.//*[@id='change_allocations ']
+PeriodicStatus=.//*[@id='periodic_status ']
+
+Validateconnbtnbottom=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[3]/tbody/tr[2]/td[3]/input
+Validateconnbtntop=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[1]/tbody/tr[1]/td[3]/input
+SelectallWeblm=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[2]/tbody/tr/td/table/tbody/tr[1]/th[5]/input
+Checkall=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[3]/tbody/tr[2]/td[2]/a[1]
+Clearall=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[3]/tbody/tr[2]/td[2]/a[2]
+Confandvalidatebtn=.//*[@id='addsystemId']/table/tbody/tr[7]/td/table/tbody/tr/td[1]/input[1]
+Backbtn=.//*[@id='addsystemId']/table/tbody/tr[7]/td/table/tbody/tr/td[1]/input[2]
+IP1=.//*[@id='addsystemId']/table/tbody/tr[1]/td/table/tbody/tr[5]/td[2]/table/tbody/tr/td[1]/input
+IP2=.//*[@id='addsystemId']/table/tbody/tr[1]/td/table/tbody/tr[5]/td[2]/table/tbody/tr/td[3]/input
+IP3=.//*[@id='addsystemId']/table/tbody/tr[1]/td/table/tbody/tr[5]/td[2]/table/tbody/tr/td[5]/input
+IP4=.//*[@id='addsystemId']/table/tbody/tr[1]/td/table/tbody/tr[5]/td[2]/table/tbody/tr/td[7]/input
+Portnumber=.//*[@id='addsystemId']/table/tbody/tr[1]/td/table/tbody/tr[10]/td[2]/input
+Deletechk1=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/input[1]
+Deleteweblmbtn=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[2]/tbody/tr[1]/td[2]/input
+Resetweblmbtn=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[2]/tbody/tr[1]/td[3]/input
+ModifyBtn=.//*[@id='modifysystemId']/table/tbody/tr[3]/td/table/tbody/tr[3]/td/table/tbody/tr[3]/td/table/tbody/tr/td[1]/input[1]
+QuerySystembtn=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[1]/tbody/tr[1]/td[3]/input
+QuerySystembtnbttom=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[4]/tbody/tr[2]/td[3]/input
+QueryUsagebtntop=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[1]/tbody/tr/td/input
+QueryUsagebtnbottom=html/body/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/form/table[3]/tbody/tr/td/input
+Submitallocation=.//*[@id='licenseAllocId']/table[2]/tbody/tr[2]/td[2]/input
+Resetallocation=.//*[@id='licenseAllocId']/table[2]/tbody/tr[2]/td[3]/input
+
+######################################### Geo Configuration #######################################
+Configure=.//*[@id='btnGeoConfigure']
+Helpicon=.//*[@id='field_level_help_iconconfigureHelpIcon']
+Closeicon=.//*[@id='field_level_help_close_icon']
+Iconbox=.//*[@id='field_level_help_wrapperconfigureHelpIcon']
+GR_Health=GR Health
+navigatetree=.//*[@id='naviframe_close_bar']
+GeoOk=html/body/div[5]/div/form/div[4]/button[1]
+GeoCancel=.//*[@id='btnGeoConfigureCancel']
+Fqdntextbox=.//*[@id='primaryFQDN']
+IPtextbox=.//*[@id='primaryIP']
+Primarypass=.//*[@id='primaryPassword']
+PrimaryUsername=.//*[@id='primaryUserName']
+Configform=html/body/div[12]
+###### after geo configured ######
+Convertostandalonebtn=.//*[@id='btnGeoDelete']
+Geoenable=.//*[@id='btnGeoEnable']
+Geodisable=.//*[@id='btnGeoDisable']
+GeoRestore=.//*[@id='btnGeoRecovery']
+Geoprimaryip=.//*[@id='primaryServerDetails']/tbody/tr[1]/td[3]
+Geoprimaryfqdn=.//*[@id='primaryServerDetails']/tbody/tr[2]/td[3]
+Geoprhelpicon=.//*[@id='field_level_help_icondeleteHelpIcon']
+primarytab=.//*[@id='close_primary_server']
+secondarytab=.//*[@id='close_configured_secondary_server']
+Geostatus=.//*[@id='geoStatusWrapper']
+GRhealthstatus=.//*[@id='overall_geo_health_icon']/span
+ActivateSecbtn=.//*[@id='btnGeoActivate']
+Replstatuscolumn=.//*[@id='viewConfiguredSecondaryServersTable_core_table_content']/tbody/tr[2]/td[3]
+Disablecnfrm=.//*[@id='btnGeoDisableConfirmOk']
+Georeconfigure=.//*[@id='btnGeoReConfigure']
+Activationcnfrm=.//*[@id='btnGeoActivateConfirmOk']
+Geosecondarystatus=.//*[@id='GeoServerStatusServerStatus']
+Georestoremsg=.//*[@id='GeoRecoveryCompletionMsg']
+Geodeactivate=.//*[@id='btnGeoDeactivate']
+Geowarning=.//*[@id='avWarnTextgeoUIWarningGEO']
+deactivationcnfrm=.//*[@id='btnGeoDeactivateConfirmOk']
+GeoSecondaryserverstatus=.//*[@id='spanGeoServerStatusServerMode']
+RecoverSecondary=.//*[@id='btnGeoRecoveryConfirmSecondary']
+RecoverPrimary=.//*[@id='btnGeoRecoveryConfirmPrimary']
+RecoveryWindow=.//*[@id='recoveryGeoDetailsDiv']
+RecoveryWindowcnfrm=.//*[@id='recoveryGeoConfirmDiv']
+Restorecnfrm=.//*[@id='btnGeoRecoveryConfirmYes']
+GeoDeletecnfm=.//*[@id='btnGeoDeleteConfirmOk']
+Geodeletecnfrmwindow=.//*[@id='deleteGeoConfirmDiv']
+FileReplication=.//*[@id='tblServiceStatus:0:linkFileReplicationGraph']
+DatabaseReplication=.//*[@id='tblServiceStatus:2:linkReplicationGraph']
+DirectoryReplication=.//*[@id='tblServiceStatus:3:linkReplicationGraph']
+FilerepStatus=.//*[@id='fileReplicationStatus']/table/tbody/tr[1]/td[2]
+Generategraph=.//*[@id='btnViewGraph']
+Editdatecancel=.//*[@id='btnEditDatesCancel']
+Editdate=.//*[@id='btnEditGraphDates']
+Refreshgraph=.//*[@id='btnRefreshGraph']
+Startday=.//*[@id='start_date.day']
+Startyear=.//*[@id='start_date.year']
+Endday=.//*[@id='end_date.day']
+Endyear=.//*[@id='end_date.year']
+Starthour=.//*[@id='start_date.hours']
+Startminute=.//*[@id='start_date.minutes']
+Startampm=.//*[@id='start_date.ampm']
+Endhour=.//*[@id='end_date.hours']
+Endminute=.//*[@id='end_date.minutes']
+Endampm=.//*[@id='end_date.ampm']
+Heartbeatstatus=.//*[@id='heartbeatStatus']
+GR_Heartbeat=GR Heartbeat
+Donestatus=.//*[@id='returnToGeoHealth']
+FileHeartbeat=.//*[@id='tblGeoHeartBeat:0:btnGeoGraph']
+AppHeartbeat=.//*[@id='tblGeoHeartBeat:4:btnGeoGraph']
+DatabaseHeartbeat=.//*[@id='tblGeoHeartBeat:3:btnGeoGraph']
+SystemHeartbeat=.//*[@id='tblGeoHeartBeat:1:btnGeoGraph']
+DirectoryHeartbeat=.//*[@id='tblGeoHeartBeat:2:btnGeoGraph']
+Servicename=.//*[@id='geoGrpahDetailsWithAutoRefreshDiv']/table/tbody/tr
+Autorefreshgraph=.//*[@id='btnStartPolling']
+
+########## Events,Alarm #########
+Alarmdescr=.//*[@id='table_core_table_content']/tbody/tr[2]/td[7]
+
+################## Inventory ######################
+Currentstatus=.//*[@id='currentStatus']
+Manage=Manage
+Unmanage=Unmanage
+Filterenable=.//*[@id='table_2_enableFiltering']
+Typeelementlist=html/body/div[5]/div/form/table/tbody/tr[5]/td/table/tbody/tr/td[2]/div[1]/div[2]/div/table/tbody/tr/td/table/tbody/tr[2]/td[4]/select
+Applyfilter=.//*[@id='table_2_filterColumns']
+Applyfilterbytitle=//a[@title = 'Filter Columns']
+Mangedby=.//*[@id='table_2_core_table_content']/tbody/tr[2]/td[7]
+Getcurrentstatus=.//*[@id='table_2_core_table_content']/tbody/tr[4]/td[7]
+Reachable=.//*[@id='table_2_core_table_content']/tbody/tr[2]/td[6]
+Disablefiltercm=.//*[@id='table_2_disableFiltering']
+Selectallcmchk=.//*[@id='table_2_selectAllCheckbox']
+Selectalllink=.//*[@id='table_2']/table[4]/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[2]/a

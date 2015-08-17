@@ -1,0 +1,198 @@
+package com.avaya.smgr.geo.primary;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+import com.avaya.smgr.upmsetup.Upmsetup;
+
+public class EnableReplication {
+	boolean b;
+	UserAction action =null;
+	Upmsetup setup=null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		setup=new com.avaya.smgr.upmsetup.Upmsetup();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+	
+	@Test(description="Verify the status and Primary Geo redundancy page",priority=1)
+	public void Verify_Page() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Verify the buttons
+		action.VerifyEnableButton(locator.getProperty("Convertostandalonebtn"));
+		action.VerifyEnableButton(locator.getProperty("Geoenable"));
+		action.VerifyDisableButton(locator.getProperty("Geodisable"));
+		action.VerifyDisableButton(locator.getProperty("GeoRestore"));
+		//verify IP address of primary
+		action.VerifyElementValue(locator.getProperty("Geoprimaryip"), input.getProperty("IPadd"));
+		Thread.sleep(1000);
+		action.VerifyElementValue(locator.getProperty("Geoprimaryfqdn"), input.getProperty("FQDN"));
+	}
+	
+	@Test(description="Verify the Primary Geo redundancy page",priority=2)
+	public void Verify_Expand_Collapse() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Verify primary tab
+		action.VerifyElementDisplay(locator.getProperty("Geoprimaryip"));
+		action.VerifyElementDisplay(locator.getProperty("Geoprimaryfqdn"));
+		action.ClickButton(locator.getProperty("primarytab"));
+		//Verify elements not displayed
+		action.VerifyNoElementdisplay(locator.getProperty("Geoprimaryip"));
+		action.VerifyNoElementdisplay(locator.getProperty("Geoprimaryfqdn"));
+		//Click on primary tab
+		action.ClickButton(locator.getProperty("primarytab"));
+		//Verify elements displayed
+		action.VerifyElementDisplay(locator.getProperty("Geoprimaryip"));
+		action.VerifyElementDisplay(locator.getProperty("Geoprimaryfqdn"));
+		//Verify secondary tab
+		action.VerifyElementDisplay(locator.getProperty("Geoenable"));
+		action.VerifyElementDisplay(locator.getProperty("Geodisable"));
+		action.ClickButton(locator.getProperty("secondarytab"));
+		//Verify elements not displayed
+		action.VerifyNoElementdisplay(locator.getProperty("Geoenable"));
+		action.VerifyNoElementdisplay(locator.getProperty("Geodisable"));
+		//Verify secondary tab
+		action.ClickButton(locator.getProperty("secondarytab"));
+		//Verify elements displayed
+		action.VerifyElementDisplay(locator.getProperty("Geoenable"));
+		action.VerifyElementDisplay(locator.getProperty("Geodisable"));
+		
+	}
+	
+	@Test(description="Verify Enable replication completed suceesfully",priority=3)
+	public void Enable_Replication() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Click on Enable button
+		action.ClickButton(locator.getProperty("Geoenable"));
+		WebDriverWait wait = new WebDriverWait(action.driver, 180000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Geodisable"))));
+		//Verify status is Enabled
+		action.VerifyDisableButton(locator.getProperty("Geoenable"));
+		action.VerifyEnableButton(locator.getProperty("Geodisable"));
+		action.VerifyDisableButton(locator.getProperty("Convertostandalonebtn"));
+		action.VerifyElementValue(locator.getProperty("Replstatuscolumn"), "Enabled");
+	}
+
+	
+	@Test(description="Verify Status afetr replication in GR health page of primary",priority=4)
+	public void Verify_GR_Health_on_Primary() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy, GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("navigatetree"))));
+		action.ClickButton(locator.getProperty("navigatetree"));
+		Thread.sleep(1000);
+		action.ClickButton(locator.getProperty("navigatetree"));
+		action.ClickLink(locator.getProperty("GR_Health"));
+		
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.VerifyTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		Thread.sleep(1000);
+	   // Verify the status is Running
+		String str=action.driver.findElement(By.xpath(locator.getProperty("GRhealthstatus"))).getAttribute("title");
+		Assert.assertEquals("Running", str);
+		for(int i=2;i<5;i+=2)
+		{
+			String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr["+i+"]/td[2]/span")).getAttribute("title");
+			Assert.assertEquals("Running", str1);
+		}
+            String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr[5]/td[2]/span")).getAttribute("title");
+		    Assert.assertEquals(str1,"Running");
+	}
+	
+	@Test(description="Verify Status after replication in GR health page of primary",priority=5)
+	public void Verify_GR_Healthon_Secondary() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Click on Geographic Redundancy, GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("navigatetree"))));
+		action.ClickButton(locator.getProperty("navigatetree"));
+		Thread.sleep(1000);
+		action.ClickLink(locator.getProperty("GR_Health"));
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.VerifyTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		Thread.sleep(1000);
+		//Verify Activate secondary button enabled
+		action.VerifyEnableButton(locator.getProperty("ActivateSecbtn"));
+	   // Verify the status is Running
+		String str=action.driver.findElement(By.xpath(locator.getProperty("GRhealthstatus"))).getAttribute("title");
+		Assert.assertEquals("Running", str);
+		//Verify status is Running
+		for(int i=2;i<5;i+=2)
+		{
+			String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr["+i+"]/td[2]/span")).getAttribute("title");
+			Assert.assertEquals("Running", str1);
+		}
+            String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr[5]/td[2]/span")).getAttribute("title");
+		    Assert.assertEquals(str1,"Running");
+	}
+	
+	
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+		  
+		action.Screenshot(result, action);
+	}
+
+	@AfterClass
+	  public void Close() throws IOException, InterruptedException
+	  {
+		action.logout(action);
+	  }
+
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="87493" started-at="2015-08-11T07:21:35Z" finished-at="2015-08-11T07:23:02Z">
+    <groups>
+      <group name="Sanity">
+        <method signature="Messaging.MessagingUpdate()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingUpdate" class="com.avaya.smgr.spm.settings.Messaging"/>
+      </group> <!-- Sanity -->
+    </groups>
+    <test name="Default test" duration-ms="87493" started-at="2015-08-11T07:21:35Z" finished-at="2015-08-11T07:23:02Z">
+      <class name="com.avaya.smgr.spm.settings.Messaging">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="setup" is-config="true" duration-ms="8422" started-at="2015-08-11T12:51:35Z" finished-at="2015-08-11T12:51:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="MessagingUpdate()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingUpdate" duration-ms="68181" started-at="2015-08-11T12:51:43Z" description="Verify that the values are successfully change/override by an administrator and attribute successfully saved" finished-at="2015-08-11T12:52:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingUpdate -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="0" started-at="2015-08-11T12:51:43Z" finished-at="2015-08-11T12:51:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:51Z" finished-at="2015-08-11T12:52:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingUpdate status=SUCCESS method=Messaging.MessagingUpdate()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:51Z" finished-at="2015-08-11T12:52:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="MessagingCommitCan()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingCommitCan" duration-ms="3775" started-at="2015-08-11T12:52:51Z" description="Verify that the commit and cancel buttons are enabled" finished-at="2015-08-11T12:52:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingCommitCan -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:55Z" finished-at="2015-08-11T12:52:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingCommitCan status=SUCCESS method=Messaging.MessagingCommitCan()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:55Z" finished-at="2015-08-11T12:52:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="MessagingEditDoneEnableBtn()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingEditDoneEnableBtn" duration-ms="3103" started-at="2015-08-11T12:52:55Z" description="Verify that the Edit and Done buttons are enabled" finished-at="2015-08-11T12:52:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingEditDoneEnableBtn -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:58Z" finished-at="2015-08-11T12:52:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingEditDoneEnableBtn status=SUCCESS method=Messaging.MessagingEditDoneEnableBtn()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:58Z" finished-at="2015-08-11T12:52:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="MessagingGeneralPropMessageUI()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingGeneralPropMessageUI" duration-ms="349" started-at="2015-08-11T12:52:58Z" description="Verify that the Showing/Hiding behaviour for the General Properties" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingGeneralPropMessageUI -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingGeneralPropMessageUI status=SUCCESS method=Messaging.MessagingGeneralPropMessageUI()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="MessagingTelephony()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingTelephony" duration-ms="344" started-at="2015-08-11T12:52:59Z" description="Verify that the Showing/Hiding behaviour for Telephony Properties" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingTelephony -->
+        <test-method status="PASS" signature="MessagingCollapseAll()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingCollapseAll" duration-ms="162" started-at="2015-08-11T12:52:59Z" description="Verify thate the Collapse functionality for the page" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingCollapseAll -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingTelephony status=SUCCESS method=Messaging.MessagingTelephony()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="0" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingCollapseAll status=SUCCESS method=Messaging.MessagingCollapseAll()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+        <test-method status="PASS" signature="ScreenshptSetup()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="ScreenshptSetup" is-config="true" duration-ms="1" started-at="2015-08-11T12:52:59Z" finished-at="2015-08-11T12:52:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenshptSetup -->
+        <test-method status="PASS" signature="MessagingExpandAll()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="MessagingExpandAll" duration-ms="490" started-at="2015-08-11T12:52:59Z" description="Verify thate the Expand functionality for the page" finished-at="2015-08-11T12:53:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessagingExpandAll -->
+        <test-method status="PASS" signature="Close()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Close" is-config="true" duration-ms="2629" started-at="2015-08-11T12:53:00Z" finished-at="2015-08-11T12:53:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method status="PASS" signature="Screenshots(org.testng.ITestResult)[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a]" name="Screenshots" is-config="true" duration-ms="0" started-at="2015-08-11T12:53:00Z" finished-at="2015-08-11T12:53:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MessagingExpandAll status=SUCCESS method=Messaging.MessagingExpandAll()[pri:0, instance:com.avaya.smgr.spm.settings.Messaging@2586d9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Screenshots -->
+      </class> <!-- com.avaya.smgr.spm.settings.Messaging -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

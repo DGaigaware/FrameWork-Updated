@@ -1,0 +1,466 @@
+package com.avaya.smgr.imprt;
+/*
+ * Imported XML User related functionality
+
+ */
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.apache.commons.io.FilenameUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import utility.UserAction;
+
+
+public class Import_UPM_XML{
+	boolean b;
+	static UserAction action =null;
+	Properties locator=null;
+	Properties input=null;
+	Properties export=null;
+	public WebDriver driver;
+	@BeforeClass(alwaysRun=true)
+	public void setup() throws IOException, InterruptedException{
+		action = new UserAction();
+		locator=new Properties();
+	   	input=new Properties();
+	    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+	    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	   }
+
+@Test(description="Verify that import of the User sucessfully and skip the user if already exists",priority=1,groups={"Sanity"})
+public void ImportXMLDefaults() throws Exception{
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Importfile_XML_Skip.xml");
+	ImportFile(imprt_XML,locator.getProperty("Import.skip"));
+}
+@Test(description="Verify that import Users is showing under Users table and skip the user if already exists",priority=2,groups={"Sanity"})
+public void ImportXMLVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Importfile_XML_Skip.xml");
+
+	String loginname=ReadExcel(imprt_XML);
+	//Verify that import Users is showing under UPM table
+	action.Verify_Add_Fifthcolumn(loginname);
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that Performed import XML of the User sucessfully Using Complete Merge",priority=3,groups={"Sanity"})
+public void ImportXMLCompleteMerge() throws Exception{
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Importfile_XML_Merge_Complete.xml");
+	ImportFile(imprt_XML,locator.getProperty("Import.merge.xml"));
+
+}
+
+@Test(description="Verify that Merge the existing Login Name to new login Name for the user Using Complete Merge",priority=4,groups={"Sanity"})
+public void ImportXMLCompleteMergeVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Importfile_XML_Merge_Complete.xml");
+	String loginname=ReadExcelMerge(imprt_XML);
+
+	//Verify that import Users is showing under UPM table
+	action.Verify_Add_Fifthcolumn(loginname);
+	Thread.sleep(1000);
+}
+
+
+@Test(description="Verify that import Users using Partial Merge option",priority=5)
+public void ImportXMLPartialMerge() throws Exception{
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_Merge_Partial.xml");
+	PartialImportFile(imprt_XML,locator.getProperty("Import.merge.xml"));
+}
+
+@Test(description="Verify that updated Users is showing under UPM table",priority=6)
+public void ImportXMLPartialMergeVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_Merge_Partial.xml");
+	String loginname=PartialReadExcel(imprt_XML);
+	//Verify that import Users is showing under UPM table
+	action.Verify_Add_Fifthcolumn(loginname);
+	Thread.sleep(1000);
+}
+
+
+@Test(description="Verify that import User using partial Replace option",priority=7)
+public void ImportXMLPartialReplace() throws Exception{
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_Replace_Partial.xml");
+	PartialImportFile(imprt_XML,locator.getProperty("Import.Replace"));
+}
+@Test(description="Verify that import Partial Replace Users is showing under UPM table",priority=8)
+public void ImportXMLPartialReplaceVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_Replace_Partial.xml");
+	String loginname=PartialReadExcel(imprt_XML);
+	//Verify that import Users is showing under UPM table
+	///action.Verify_Add_Thirdcolumn(input.getProperty("LName"));
+	//action.Verify_Add_Forthcolumn(input.getProperty("FName"));
+	action.Verify_Add_Fifthcolumn(loginname);
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that import User using Delete",priority=9,groups={"Sanity"})
+public void ImportXMLCompleteDelete() throws Exception{
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_Delete_Complete.xml");
+	ImportFile(imprt_XML,locator.getProperty("Import.Delete.xml"));
+
+}
+
+@Test(description="Verify that Deleted Users is not showing under UPM table",priority=10,groups={"Sanity"})
+public void ImportXMLCompleteDeleteVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_Delete_Complete.xml");
+	String loginname=DeleteReadExcel(imprt_XML);
+	//Verify that import Users is showing under UPM table
+	action.VerifyDeleteEntry(locator.getProperty("GSNMP.Table"), loginname);
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that Permanent delete user is not under Soft delete users",priority=12,groups={"Sanity"})
+public void ImportDeleteSoftUserVerify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Verify that import Users is showing under UPM table
+	action.ClickButton(locator.getProperty("UPM.moreAcns"));
+	Thread.sleep(2000);
+	action.ClickLink(locator.getProperty("UPM.ShowDelete"));
+	action.WaitForTitle("Deleted Users");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_Delete_Complete.xml");
+	String loginname=DeleteReadExcel(imprt_XML);
+	action.VerifyDeleteEntry(locator.getProperty("GSNMP.Table"), loginname);
+	Thread.sleep(1000);
+
+}
+
+
+@Test(description="Verify that import User with CM using Import skip",priority=13,groups={"Sanity"})
+public void Import_CM_XML() throws Exception{
+	File imprt_CM_Excel = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_CM_Skip_Complete.xml");
+	ImportFile(imprt_CM_Excel,locator.getProperty("Import.skip"));
+
+}
+
+@Test(description="Verify that import User with CM profile is showing",priority=14,groups={"Sanity"})
+public void Import_CM_XML_Verify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_CM_Skip_Complete.xml");
+	String loginname=ReadExcel(imprt_XML);
+
+	//select by login name
+	action.SelectElementByLoginname(loginname);
+	Thread.sleep(500);
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	//Click on the Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForObj(locator.getProperty("Upr.cmcheckbox2"));
+	//Verify that import Users with CM profile is showing under UPM table
+	action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that import User with existing CM and new SM using Complete Merge",priority=15,groups={"Sanity"})
+public void Import_CM_SM_XML() throws Exception{
+	File Import_CM_SM_Excel = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_SM_CM_Merge_Compelte.xml");
+	ImportFile(Import_CM_SM_Excel,locator.getProperty("Import.merge.xml"));
+
+}
+@Test(description="Verify that import Users with existing CM profile is showing for Complete merge",priority=16,groups={"Sanity"})
+public void Import_CM1_XML_Verify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_SM_CM_Merge_Compelte.xml");
+	String loginname=ReadExcel(imprt_XML);
+	//select by login name
+	action.SelectElementByLoginname(loginname);
+	Thread.sleep(500);
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForObj(locator.getProperty("Upr.cmcheckbox2"));
+	//Verify that import Users with CM profile is showing under UPM table
+	action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+	//Need implement by using .xlxs
+	//Verify that import Users is showing under UPM table
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that import Users with new SM profile is showing for Complete merge",priority=17,groups={"Sanity"})
+public void Import_SM_XML_Verify() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_SM_CM_Merge_Compelte.xml");
+	String loginname=ReadExcel(imprt_XML);
+	//select by login name
+	action.SelectElementByLoginname(loginname);
+	Thread.sleep(500);
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForObj(locator.getProperty("Users.SMCheckBox"));
+	//Verify that import Users with CM profile is showing under UPM table
+	action.VerifySelectcheckbox(locator.getProperty("Users.SMCheckBox"));
+	//Need implement by using .xlxs
+	//Verify that import Users is showing under UPM table
+	Thread.sleep(2000);
+}
+
+
+@Test(description="Verify that import User with CM using Complete Replace",priority=18,groups={"Sanity"})
+public void Import_CM_Replace() throws Exception{
+	File Import_CM_SM_Excel = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_CM_Skip_Complete.xml");
+	ImportFile(Import_CM_SM_Excel,locator.getProperty("Import.Replace"));
+
+}
+
+@Test(description="Verify that import Users with Replace the CM with existing data(SM+CM)",priority=19,groups={"Sanity"})
+public void Import_CM_Replace_Verify_CM_Select() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_CM_Skip_Complete.xml");
+	String loginname=ReadExcel(imprt_XML);
+	//select by login name
+	action.SelectElementByLoginname(loginname);
+	Thread.sleep(500);
+	//select by login name
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForObj(locator.getProperty("Upr.cmcheckbox2"));
+	//Verify that import Users with CM profile is showing under UPM table
+	action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+	//Need implement by using .xlxs
+	//Verify that import Users is showing under UPM table
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify that import Users with Replace the CM with existing data(SM+CM)",priority=19,groups={"Sanity"})
+public void Import_CM_Replace_Verify_SM_Deselect() throws Exception{
+	action.RefreshPage();
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	File imprt_XML = new File(System.getProperty("user.dir") + "\\Third Party\\imprt\\Import_XML_CM_Skip_Complete.xml");
+	String loginname=ReadExcel(imprt_XML);
+	//select by login name
+	action.SelectElementByLoginname(loginname);
+	Thread.sleep(500);
+	//select by login name
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForObj(locator.getProperty("Users.SMCheckBox"));
+	//Verify that import Users with CM profile is showing under UPM table
+	action.VerifydeSelectcheckbox(locator.getProperty("Users.SMCheckBox"));
+	//Need implement by using .xlxs
+	//Verify that import Users is showing under UPM table
+	Thread.sleep(2000);
+}
+
+private void ImportFile(File imprt_Excel,String Record) throws FileNotFoundException, IOException, Exception {
+	action.RefreshPage();
+	String Excel=String.valueOf(imprt_Excel);
+	String File_Name = FilenameUtils.getBaseName(Excel);
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Click on  the more drop down button
+	action.ClickButton(locator.getProperty("UPM.moreAcns"));
+	action.WaitForObj(locator.getProperty("UPM.importUsers"));
+	action.ClickButton(locator.getProperty("UPM.importUsers"));
+	action.WaitForTitle(locator.getProperty("Import_Users_title"));
+	action.ClickButton(Record);
+	action.WaitForObj(locator.getProperty("import.Browse"));
+	action.entertext(locator.getProperty("import.Browse"), Excel);
+	action.WaitForObj(locator.getProperty("ImportBtn"));
+	action.ClickButton(locator.getProperty("ImportBtn"));
+	action.WaitForObj(locator.getProperty("Import.Status"));
+	action.ClickButton(locator.getProperty("Import.Status"));
+	action.WaitForObj(locator.getProperty("Import.Status.Result"));
+	action.VerifyElementValue(locator.getProperty("Import.Status.Result"), "Import job"+" "+File_Name+".xml"+" "+"is"+" "+"scheduled");
+	Thread.sleep(1000);
+	while(action.driver.findElement(By.xpath(locator.getProperty("Import.Status.Process"))).getText().equals("RUNNING")||action.driver.findElement(By.xpath(locator.getProperty("Import.Status.Process"))).getText().equals("PENDING EXECUTION")){
+		action.ClickButton(locator.getProperty("Import.Refresh"));
+		Thread.sleep(2000);
+
+
+	}
+	action.VerifyElementValue(locator.getProperty("Import.Status.Process"), "SUCCESSFUL");
+	action.VerifyElementValue(locator.getProperty("Import.PercCompleted"), "100");
+	Thread.sleep(2000);
+}
+
+
+private void PartialImportFile(File imprt_Excel,String Record) throws FileNotFoundException, IOException, Exception {
+	action.RefreshPage();
+	String Excel=String.valueOf(imprt_Excel);
+	String File_Name = FilenameUtils.getBaseName(Excel);
+	//Navigate to UPM, Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Click on  the more drop down button
+	action.ClickButton(locator.getProperty("UPM.moreAcns"));
+	action.WaitForObj(locator.getProperty("UPM.importUsers"));
+	action.ClickButton(locator.getProperty("UPM.importUsers"));
+	action.WaitForTitle(locator.getProperty("Import_Users_title"));
+	action.ClickButton(locator.getProperty("Import.Partial"));
+	action.WaitForObj(Record);
+	action.ClickButton(Record);
+	action.WaitForObj(locator.getProperty("import.Browse"));
+	action.entertext(locator.getProperty("import.Browse"), Excel);
+	action.ClickButton(locator.getProperty("ImportBtn"));
+	action.WaitForObj(locator.getProperty("Import.Status"));
+	action.ClickButton(locator.getProperty("Import.Status"));
+	action.WaitForObj(locator.getProperty("Import.Status.Result"));
+	action.VerifyElementValue(locator.getProperty("Import.Status.Result"), "Import job"+" "+File_Name+".xml"+" "+"is"+" "+"scheduled");
+	Thread.sleep(1000);
+	while(action.driver.findElement(By.xpath(locator.getProperty("Import.Status.Process"))).getText().equals("RUNNING")||action.driver.findElement(By.xpath(locator.getProperty("Import.Status.Process"))).getText().equals("PENDING EXECUTION")){
+		action.ClickButton(locator.getProperty("Import.Refresh"));
+		Thread.sleep(2000);
+	}
+	action.VerifyElementValue(locator.getProperty("Import.Status.Process"), "SUCCESSFUL");
+	action.VerifyElementValue(locator.getProperty("Import.PercCompleted"), "100");
+	Thread.sleep(1000);
+}
+public String ReadExcel(File imprt_Excel) throws FileNotFoundException, IOException, Exception {
+//
+	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	Document doc = dBuilder.parse(imprt_Excel);
+    String login = "";
+	doc.getDocumentElement().normalize();
+ 
+	NodeList nList = doc.getElementsByTagName("tns:user");
+ 
+	for (int temp = 0; temp < nList.getLength(); temp++) {
+ 
+		Node nNode = nList.item(temp);
+ 
+			Element eElement = (Element) nNode;
+			login=eElement.getElementsByTagName("loginName").item(0).getTextContent();
+	}
+	return login;
+}
+public String ReadExcelMerge(File imprt_Excel) throws FileNotFoundException, IOException, Exception {
+//
+	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	Document doc = dBuilder.parse(imprt_Excel);
+    String login = "";
+	doc.getDocumentElement().normalize();
+ 
+	NodeList nList = doc.getElementsByTagName("tns:user");
+ 
+	for (int temp = 0; temp < nList.getLength(); temp++) {
+ 
+		Node nNode = nList.item(temp);
+ 
+			Element eElement = (Element) nNode;
+			login=eElement.getElementsByTagName("newLoginName").item(0).getTextContent();
+	}
+	return login;
+}
+public String PartialReadExcel(File imprt_Excel) throws FileNotFoundException, IOException, Exception {
+//
+	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	Document doc = dBuilder.parse(imprt_Excel);
+    String login = "";
+	doc.getDocumentElement().normalize();
+ 
+	NodeList nList = doc.getElementsByTagName("delta:userDelta");
+ 
+	for (int temp = 0; temp < nList.getLength(); temp++) {
+ 
+		Node nNode = nList.item(temp);
+ 
+			Element eElement = (Element) nNode;
+			login=eElement.getElementsByTagName("loginName").item(0).getTextContent();
+	}
+	return login;
+}
+public String DeleteReadExcel(File imprt_Excel) throws FileNotFoundException, IOException, Exception {
+//
+	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	Document doc = dBuilder.parse(imprt_Excel);
+    String login = "";
+	doc.getDocumentElement().normalize();
+ 
+	NodeList nList = doc.getElementsByTagName("tns:user");
+ 
+	for (int temp = 0; temp < nList.getLength(); temp++) {
+ 
+		Node nNode = nList.item(temp);
+ 
+			Element eElement = (Element) nNode;
+			login=eElement.getElementsByTagName("tns:loginName").item(0).getTextContent();
+	}
+	return login;
+}
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass(alwaysRun=true)
+	public void Close() throws IOException, InterruptedException{
+		action.logout(action);
+	}
+ }
+

@@ -1,0 +1,146 @@
+package com.avaya.smgr.geo.primary;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+import com.avaya.smgr.upmsetup.Upmsetup;
+
+public class PDisableReplication {
+	boolean b;
+	UserAction action =null;
+	Upmsetup setup=null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		setup=new com.avaya.smgr.upmsetup.Upmsetup();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+	
+	
+	
+	@Test(description="Verify Disable replication completed suceesfully",priority=1)
+	public void Disable_Replication() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy
+		action.logout(action);
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.SwithchFrame("iframe0");
+		//Click on Disable button
+		action.VerifyEnableButton(locator.getProperty("Geodisable"));
+		action.ClickButton(locator.getProperty("Geodisable"));
+		action.ClickButton(locator.getProperty("Disablecnfrm"));
+		//Wait until Enable button get enabled
+		WebDriverWait wait = new WebDriverWait(action.driver, 180000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Geoenable"))));
+		//Verify status is Enabled
+		action.VerifyDisableButton(locator.getProperty("Geodisable"));
+		action.VerifyEnableButton(locator.getProperty("Geoenable"));
+		action.VerifyEnableButton(locator.getProperty("Convertostandalonebtn"));
+		action.VerifyElementValue(locator.getProperty("Replstatuscolumn"), "Disabled");
+		Thread.sleep(300000);
+	}
+	
+	
+	@Test(description="Verify Status in GR health page after replication disabled",priority=2)
+	public void Verify_GR_Health_Primary() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on Geographic Redundancy, GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		//Click on navigation tree
+		action.ClickButton(locator.getProperty("navigatetree"));
+		
+		action.ClickLink(locator.getProperty("GR_Health"));
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.VerifyTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("GRhealthstatus"))));
+	   // Verify the status is Stopped
+		String str=action.driver.findElement(By.xpath(locator.getProperty("GRhealthstatus"))).getAttribute("title");
+		Assert.assertEquals("Stopped", str);
+		for(int i=2;i<5;i+=2)
+		{
+			String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr["+i+"]/td[2]/span")).getAttribute("title");
+			Assert.assertEquals(str1,"Stopped");
+		}
+		
+		    String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr[5]/td[2]/span")).getAttribute("title");
+		    Assert.assertEquals(str1,"Stopped");
+	}
+	
+	@Test(description="Verify Status afetr replication in GR health page of primary",priority=3)
+	public void Verify_GR_Healthon_Secondary() throws Exception
+	{
+		action.driver.navigate().refresh();
+		action.logout(action);
+		action.logintosecondary(input.getProperty("UserId"),input.getProperty("Password"),action);
+		//Click on Geographic Redundancy, GR Health
+		action.ClickLink(locator.getProperty("Geographic_Redundancy"));
+		action.WaitForTitle(locator.getProperty("Geographic_Redundancy"));
+		action.VerifyTitle(locator.getProperty("Geographic_Redundancy"));
+		action.ClickButton(locator.getProperty("navigatetree"));
+		Thread.sleep(1000);
+		action.ClickLink(locator.getProperty("GR_Health"));
+		action.WaitForTitle(locator.getProperty("GR_Health"));
+		action.VerifyTitle(locator.getProperty("GR_Health"));
+		action.SwithchFrame("iframe0");
+		Thread.sleep(1000);
+		//Verify Button enabled
+		action.VerifyEnableButton(locator.getProperty("ActivateSecbtn"));
+	   // Verify the status is stopped
+		String str=action.driver.findElement(By.xpath(locator.getProperty("GRhealthstatus"))).getAttribute("title");
+		Assert.assertEquals("Stopped", str);
+		//verify status is stopped
+		for(int i=2;i<5;i+=2)
+		{
+			String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr["+i+"]/td[2]/span")).getAttribute("title");
+			Assert.assertEquals("Stopped", str1);
+		}
+		String str1=action.driver.findElement(By.xpath(".//*[@id='tblServiceStatus_core_table_content']/tbody/tr[5]/td[2]/span")).getAttribute("title");
+	    Assert.assertEquals(str1,"Stopped");
+	}
+	
+	
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+		  
+		action.Screenshot(result, action);
+	}
+
+	@AfterClass
+	  public void Close() throws IOException, InterruptedException
+	  {
+		action.logout(action);
+	  }
+
+}

@@ -1,0 +1,125 @@
+package com.avaya.smgr.RTS.SubnetConfiguration;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class SubnetConfiguration{
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeClass(alwaysRun=true)
+public void setup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+   }
+@BeforeMethod(alwaysRun=true)
+public void Beforemethodsetup() throws IOException, InterruptedException{
+}
+
+@Test(description="Verification of title SubnetConfiguration is showing correctly")
+public void SubnetConfigTitle() throws Exception{
+	action.RefreshPage();
+	//Navigate to SMGR,RTS,SubnetConfiguration
+	action.ClickLink(locator.getProperty("Inventory"));
+	action.ClickLink(locator.getProperty("Subnet_Configuration"));
+	//Verify that the title name is showing correctly
+	action.VerifyTitle(locator.getProperty("Subnet_Configuration"));
+}
+@Test(description="Verification for new button is enabled and Delete button is disabled by default")
+public void SubnetConfigBtnsStates() throws Exception{
+	action.RefreshPage();
+	//Navigate to SMGR,RTS,SubnetConfiguration
+	action.ClickLink(locator.getProperty("Inventory"));
+	action.ClickLink(locator.getProperty("Subnet_Configuration"));
+	action.SwithchFrame("iframe0");
+	//Verification for new button is enabled and Delete button is disabled by default
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+	action.VerifyEnableButton(locator.getProperty("Subnet.New"));
+	action.VerifyDisableButton(locator.getProperty("Subnet.Delete"));
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+}
+@Test(description="Verification of subnet is added successfully")
+public void SubnetConfigAdd() throws Exception{
+	action.RefreshPage();
+	//Navigate to SMGR,RTS,SubnetConfiguration
+	action.ClickLink(locator.getProperty("Inventory"));
+	action.ClickLink(locator.getProperty("Subnet_Configuration"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Subnet.New"));
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+	//Fill the required details
+	action.entertext(locator.getProperty("Subnet.Name"), input.getProperty("Name"));
+	action.entertext(locator.getProperty("Subnet.Ip"), input.getProperty("Ip"));
+	action.entertext(locator.getProperty("Subnet.Mask"), input.getProperty("Mask"));
+	//Click on the Save button
+	//Verification of subnet is added successfully
+	action.ClickButton(locator.getProperty("Subnet.Save"));
+	Thread.sleep(3000);
+}
+@Test(description="Verification of subnet is Updated successfully",dependsOnMethods="SubnetConfigAdd")
+public void SubnetConfigUpdate() throws Exception{
+	action.RefreshPage();
+	//Navigate to SMGR,RTS,SubnetConfiguration
+	action.ClickLink(locator.getProperty("Inventory"));
+	action.ClickLink(locator.getProperty("Subnet_Configuration"));
+	action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+	//Select the Created subnet
+	action.ClickButton(locator.getProperty("Subnet.SelectFirst"));
+	Thread.sleep(1000);
+	action.ClearText(locator.getProperty("Subnet.Name"));
+	action.entertext(locator.getProperty("Subnet.Name"), input.getProperty("UpdatedName"));
+	//Click on the Save button
+	action.ClickButton(locator.getProperty("Subnet.Save"));
+	Thread.sleep(2000);
+}
+@Test(description="Verification of subnet is deleted successfully",dependsOnMethods="SubnetConfigUpdate")
+public void SubnetConfigDelete() throws Exception{
+	action.RefreshPage();
+	//Navigate to SMGR,RTS,SubnetConfiguration
+	action.ClickLink(locator.getProperty("Inventory"));
+	action.ClickLink(locator.getProperty("Subnet_Configuration"));
+	action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+	//Select the created first subnet
+	action.ClickButton(locator.getProperty("Subnet.SelectFirst"));
+	action.WaitForTitle(locator.getProperty("Subnet_Configuration"));
+	Thread.sleep(1000);
+	//Click on the Delete button
+	action.ClickButton(locator.getProperty("Subnet.Delete"));
+	Thread.sleep(2000);
+	//Click on the Confirm delete button
+	action.ClickButton(locator.getProperty("Subnet.DeleteCnf"));
+	Thread.sleep(2000);
+}
+
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+@AfterClass(alwaysRun=true)
+public void Close() throws IOException, InterruptedException{
+		action.logout(action);
+	}
+ }
+

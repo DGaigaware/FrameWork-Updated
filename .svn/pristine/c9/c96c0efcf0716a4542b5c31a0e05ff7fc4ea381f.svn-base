@@ -1,0 +1,386 @@
+package com.avaya.smgr.upmtest;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+
+public class ZBulkEditUsers {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+	
+	/* Bulk edit test case require at least 12 users in User management table  */
+	
+
+	@Test(description="Verify the various elements on user bulk edit page",priority=1,enabled=true)	
+public void Verify_Elements() throws Exception
+{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.SwithchFrame("iframe0");
+		
+		//Select Check box
+		action.SelectCheckBox(locator.getProperty("Checkbox0"));
+		Thread.sleep(1000);
+		action.SelectCheckBox(locator.getProperty("Checkbox2"));
+		Thread.sleep(1000);
+		//Click on More Button
+		action.ClickButton(locator.getProperty("Users.More"));
+		
+		action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+		action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+		action.VerifyTitle(locator.getProperty("User_Bulk_Editor"));
+		//Verify the buttons ,Textboxes are enabled
+		Thread.sleep(1000);
+		action.VerifyEnableButton(locator.getProperty("Users.Runnow"));
+		action.VerifyEnableButton(locator.getProperty("Users.Schedule"));
+		action.VerifyEnableButton(locator.getProperty("Users.Cancel"));
+		Thread.sleep(1000);
+		action.VerifyEnableButton(locator.getProperty("Users.Runnowbtm"));
+		action.VerifyEnableButton(locator.getProperty("Users.Schedulebtm"));
+		action.VerifyEnableButton(locator.getProperty("Users.Cancelbtm"));
+		//Click on Edit link
+		Thread.sleep(1000);
+		action.ClickLink(locator.getProperty("EditLink"));
+		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty("CancelLink"))));
+		//Verify string value
+		action.VerifyStringValue("Confirm Password:");
+		action.ClickLink(locator.getProperty("CancelLink"));
+}
+
+	
+	@Test(description="Verify the  bulk edit functionality",priority=2)	
+public void Bulk_Edit() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Select Checkbox
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeSelected(By.xpath(locator.getProperty("Checkbox0"))));
+	action.SelectCheckBox(locator.getProperty("Checkbox2"));
+	Thread.sleep(1000);
+	wait.until(ExpectedConditions.elementToBeSelected(By.xpath(locator.getProperty("Checkbox2"))));
+	action.SelectCheckBox(locator.getProperty("Checkbox3"));
+	Thread.sleep(1000);
+	wait.until(ExpectedConditions.elementToBeSelected(By.xpath(locator.getProperty("Checkbox3"))));
+	//Click on More button,Bulk Edit Users Link
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Users.More"));
+
+	action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+	action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+	Thread.sleep(1000);
+	//Edit the language and time
+	action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+	action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+	//Click on Run now button
+	action.ClickButton(locator.getProperty("Users.Runnow"));
+	Thread.sleep(1000);
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+}
+	
+	
+	
+@Test(description="Verify Edited User",priority=3)
+public void Verify_Bulk_Edit() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Select Checkbox
+	Thread.sleep(1000);
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.View"))));
+	//Click on view Button
+	action.ClickButton(locator.getProperty("Users.View"));
+	action.WaitForTitle(locator.getProperty("User_Profile_View"));
+	//Click on Identity Tab
+	action.ClickLinkByxpath(locator.getProperty("Identity"));
+	Thread.sleep(2000);
+	//Verify the language and Time
+	String str1=new Select(action.driver.findElement(By.xpath(locator.getProperty("LangDropdown")))).getFirstSelectedOption().getText();
+	Assert.assertEquals(str1,input.getProperty("Danish"));
+
+	String str2=new Select(action.driver.findElement(By.xpath(locator.getProperty("TimeDropdown")))).getFirstSelectedOption().getText();
+	Assert.assertEquals(input.getProperty("Danishtime"), str2);
+}
+	
+
+@Test(description="Verify the various elements on Schedule Bulk Edit Job page",priority=4)
+public void Verify_Bulk_Editjob_Elements() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+    Thread.sleep(1000);
+	//Click on More button
+	action.ClickButton(locator.getProperty("Users.More"));
+
+	//Click on Status of bulk edit users
+	action.ClickLink(locator.getProperty("Status_of_Bulk_Edit_Users_Jobs"));
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	//Verify the buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Commit"));
+	action.VerifyDisableButton(locator.getProperty("ViewJob"));
+	action.VerifyDisableButton(locator.getProperty("CancelJob"));
+	action.VerifyDisableButton(locator.getProperty("DeleteJob"));
+	//Select the Job
+	action.SelectCheckBox(locator.getProperty("BulkEditorJobchk0"));
+	Thread.sleep(1000);
+	//verify the buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("ViewJob"));
+	action.VerifyEnableButton(locator.getProperty("DeleteJob"));
+	
+}
+
+
+	@Test(description="Verify the View Function of Bulk Edit job",priority=5)
+public void View_Bulkedit_Job() throws Exception
+{
+	boolean b1,b2;
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	
+	//Click on More button
+	 Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Users.More"));
+	
+	action.ClickLink(locator.getProperty("Status_of_Bulk_Edit_Users_Jobs"));
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	action.VerifyTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	action.SelectCheckBox(locator.getProperty("BulkEditorJobchk0"));
+	Thread.sleep(1000);
+	//Click on View button
+	action.ClickButton(locator.getProperty("ViewJob"));
+	action.WaitForTitle(locator.getProperty("Bulk_Edit_Job_Details"));
+	//Verify the buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Refreshbtn1"));
+	action.VerifyEnableButton(locator.getProperty("Backbtn1"));
+	action.VerifyEnableButton(locator.getProperty("Refreshbtn2"));
+	action.VerifyEnableButton(locator.getProperty("Backbtn2"));
+	//Verify the records
+	String Str1=action.driver.findElement(By.xpath(locator.getProperty("TotalRecords"))).getText();
+	String Str2=action.driver.findElement(By.xpath(locator.getProperty("Successrecords"))).getText();
+	String Str3=action.driver.findElement(By.xpath(locator.getProperty("FailedRecord"))).getText();
+	 b1=Str1.equals(Str2);
+	Assert.assertTrue(b1);
+	b2=Str3.equals("0");
+	Assert.assertTrue(b2);
+}
+
+	
+@Test(description="Verify the Success Records",priority=6)
+public void Verify_Success_Record() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Click on More button
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Users.More"));
+	action.ClickLink(locator.getProperty("Status_of_Bulk_Edit_Users_Jobs"));
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	action.SelectCheckBox(locator.getProperty("BulkEditorJobchk0"));
+	Thread.sleep(1000);
+	//Click on View button
+	action.DoubleClickButton(locator.getProperty("ViewJob"));
+	action.WaitForTitle(locator.getProperty("Bulk_Edit_Job_Details"));
+	//Click on panel down Arrow
+	action.driver.findElement(By.cssSelector(".show_panel_arrow")).click();
+	
+	action.VerifyStringValue("Description");
+	//Click on panel Up Arrow
+	action.driver.findElement(By.cssSelector(".show_panel_arrow")).click();
+	
+}
+
+
+
+@Test(description="Verify the Deletion of Bulk Edit job",priority=7)
+public void Delete_BulkEdit_Jobs() throws Exception
+	{	
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		
+		//Click on More button
+		action.ClickButton(locator.getProperty("Users.More"));
+		action.ClickLink(locator.getProperty("Status_of_Bulk_Edit_Users_Jobs"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//Select checkbox
+		action.SelectCheckBox(locator.getProperty("BulkEditorJobchk0"));
+		Thread.sleep(500);
+		//click on delete button
+		action.DoubleClickButton(locator.getProperty("DeleteJob"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//click on commit button
+		action.ClickButton(locator.getProperty("Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+	}
+	
+
+@Test(description="Verify the Bulk edit job get deleted from table",priority=8)
+public void Verify_Delete_Job() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+
+	//Click on More button
+	action.ClickButton(locator.getProperty("Users.More"));
+
+	action.ClickLink(locator.getProperty("Status_of_Bulk_Edit_Users_Jobs"));
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	Thread.sleep(1000);
+	action.VerifyElementValue(locator.getProperty("Bulkeditjobchkbox"), "No Records found");
+	Thread.sleep(500);
+}
+
+	
+@Test(description="Verify the cancelation of Bulk edit job",priority=9)
+public void Cancel_Bulk_Edit_Jobs() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Select all the users
+	for(int i=0;i<10;i++)
+	{
+		action.SelectCheckBox(locator.getProperty("Table1")+i+"']");
+		Thread.sleep(1000);
+	}
+	//action.ClickLinkByxpath(locator.getProperty("All"));
+	
+	//Click on More button
+	action.ClickButton(locator.getProperty("Users.More"));
+	
+	action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+	action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+	//Select language and time
+	action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+	action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+	//click on Run Now button
+	action.ClickButton(locator.getProperty("Users.Runnow"));
+	action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+	
+	//Select the job from table
+	action.SelectCheckBox(locator.getProperty("BulkEditorJobchk0"));
+	Thread.sleep(2000);
+	//Verify the delete button is disabled
+	action.VerifyDisableButton(locator.getProperty("DeleteJob"));
+	action.VerifyEnableButton(locator.getProperty("ViewJob"));
+	action.VerifyEnableButton(locator.getProperty("CancelJob"));
+	//Click on cancel button
+	action.DoubleClickButton(locator.getProperty("CancelJob"));
+    Thread.sleep(1000);
+	//Click on Refresh button
+	action.ClickButton(locator.getProperty("TableRefresh"));
+	Thread.sleep(1000);
+	action.VerifyEnableButton(locator.getProperty("DeleteJob"));
+	action.VerifyDisableButton(locator.getProperty("CancelJob"));
+	Thread.sleep(500);
+	action.ClickButton(locator.getProperty("TableRefresh"));
+	Thread.sleep(500);
+	//Verify Status of job as INTERRUPTED
+	action.VerifyElementValue(locator.getProperty("Bulkeditstatus"), "INTERRUPTED");
+	//Click on Delete button
+	action.DoubleClickButton(locator.getProperty("DeleteJob"));
+	Thread.sleep(1000);
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+}
+
+
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass
+	  public void Close() throws IOException, InterruptedException
+    {
+		action.logout(action);
+	}
+	
+}

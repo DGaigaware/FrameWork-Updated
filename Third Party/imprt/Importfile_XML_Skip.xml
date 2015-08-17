@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tns:users xmlns:ns2="http://xml.avaya.com/schema/import_ce" xmlns:ns3="http://xml.avaya.com/schema/import_csm_b5800" xmlns:ns4="http://xml.avaya.com/schema/import1" xmlns:tns="http://xml.avaya.com/schema/import" xmlns:ns6="http://xml.avaya.com/schema/import_mmcs" xmlns:ns7="http://xml.avaya.com/schema/import_sessionmanager" xmlns:ns8="http://xml.avaya.com/schema/presence" xmlns:ns9="http://xml.avaya.com/schema/import_csm_mm" xmlns:ns10="http://xml.avaya.com/schema/import_csm_cm" xmlns:ns11="http://xml.avaya.com/schema/import_csm_agent" xmlns:ns12="http://xml.avaya.com/schema/deltaImport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.avaya.com/schema/import userimport.xsd">
+    <tns:user>
+        <authenticationType>basic</authenticationType>
+        <displayName>ramesh, babu</displayName>
+        <displayNameAscii>ramesh, ababu</displayNameAscii>
+        <isDuplicatedLoginAllowed>false</isDuplicatedLoginAllowed>
+        <isEnabled>true</isEnabled>
+        <isVirtualUser>false</isVirtualUser>
+        <givenName>Ramesh</givenName>
+        <givenNameAscii>Ramesh</givenNameAscii>
+        <loginName>xmldefault@avaya.com</loginName>
+        <preferredLanguage>en_US</preferredLanguage>
+        <source>exportfile.xlsx</source>
+        <status>provisioned</status>
+        <surname>Babu</surname>
+        <surnameAscii>Babu</surnameAscii>
+        <userName>babu33</userName>
+        <userPassword></userPassword>
+        <roles>
+            <role>End-User</role>
+        </roles>
+        <ownedContactLists>
+            <contactList>
+                <name>list-babu33_avaya.com</name>
+                <isPublic>false</isPublic>
+                <contactListType>general</contactListType>
+            </contactList>
+        </ownedContactLists>
+        <commProfileSet>
+            <commProfileSetName>Primary</commProfileSetName>
+            <isPrimary>true</isPrimary>
+        </commProfileSet>
+    </tns:user>
+</tns:users>

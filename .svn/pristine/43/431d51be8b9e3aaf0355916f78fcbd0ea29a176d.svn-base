@@ -1,0 +1,527 @@
+package com.avaya.smgr.upmtest;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class Commprofile {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+@Test(description="Verify the Title of the page",priority=1)
+public void Verify_Title_page() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	//Verify Title
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.VerifyTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+}
+
+@Test(description="Verify the various elements on Communication Profile Password Policy page",priority=2)
+public void Verify_Page_Elements() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	Thread.sleep(1000);
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.SwithchFrame("iframe0");
+	Thread.sleep(1000);
+	//Verify the save,Cancel buttons are disabled
+	action.VerifyDisableButton(locator.getProperty("Savebtn"));
+	action.VerifyDisableButton(locator.getProperty("Cancel_Cnf"));
+	action.VerifyDisableButton(locator.getProperty("Savebtnbtm"));
+	action.VerifyDisableButton(locator.getProperty("Cancelbtnbtm"));
+	//Verify the check box are enabled
+	action.VerifyEnableCheckbox(locator.getProperty("Historychk"));
+	action.VerifyEnableCheckbox(locator.getProperty("Strengthchk"));
+	//Select check box
+     
+	action.SelectCheckBox(locator.getProperty("Strengthchk"));
+	Thread.sleep(500);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Savebtn"))));
+	Thread.sleep(1000);
+	//Verify the save,Cancel buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Savebtn"));
+	action.VerifyEnableButton(locator.getProperty("Cancel_Cnf"));
+	action.VerifyEnableButton(locator.getProperty("Savebtnbtm"));
+	action.VerifyEnableButton(locator.getProperty("Cancelbtnbtm"));
+}
+
+
+@Test(description="Verify the Commit cancel buttons",priority=3)
+public void verify_Cancel_Button() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.SwithchFrame("iframe0");
+     Thread.sleep(1000);
+	//Select check box
+     WebElement ele=action.driver.findElement(By.xpath(locator.getProperty("Strengthchk")));
+ 	while(!(ele.isSelected()))
+ 	{
+ 		ele.click();
+ 	}
+ 	Thread.sleep(500);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Cancel_Cnf"))));
+	Thread.sleep(1000);
+	//Click on Cancel button
+	action.DoubleClickButton(locator.getProperty("Cancel_Cnf"));
+	Thread.sleep(500);
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Savebtn"))));
+	action.VerifyDisableButton(locator.getProperty("Savebtn"));
+	action.VerifyDisableButton(locator.getProperty("Cancel_Cnf"));
+	action.VerifyDisableButton(locator.getProperty("Savebtnbtm"));
+	action.VerifyDisableButton(locator.getProperty("Cancelbtnbtm"));
+	Thread.sleep(500);
+}
+@Test(description="Verify the Commit cancel buttons",priority=4)
+public void verify_CommitButton() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.SwithchFrame("iframe0");
+     Thread.sleep(1000);
+	//Select check box
+	WebElement ele=action.driver.findElement(By.xpath(locator.getProperty("Strengthchk")));
+	while(!(ele.isSelected()))
+	{
+		ele.click();
+	}
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Savebtn"))));
+	//Click on Save button
+	action.DoubleClickButton(locator.getProperty("Savebtn"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	Thread.sleep(1000);
+	action.VerifySelectcheckbox(locator.getProperty("Strengthchk"));
+	Thread.sleep(1000);
+	//Select Check box
+	action.DeselectCheckBox(locator.getProperty("Strengthchk"));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Savebtn"))));
+	Thread.sleep(500);
+	//Click on Save button
+	action.DoubleClickButton(locator.getProperty("Savebtn"));
+	//verify the title of page
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+}
+		
+	
+@Test(description="Verify the Password policy range",priority=5)
+public void Verify_Password_Range() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.SwithchFrame("iframe0");
+    //Enter length of password
+	action.entertext(locator.getProperty("Minlength"), "5");
+	//Thread.sleep(1000);
+	//Verify Error Message
+	action.VerifyStringValue("Please provide valid numeric value between 6-25.");
+	 //Enter length of password
+	action.ClearText(locator.getProperty("Minlength"));
+	action.entertext(locator.getProperty("Minlength"), "8");
+	WebElement ele=action.driver.findElement(By.xpath(locator.getProperty("Strengthchk")));
+	while(!(ele.isSelected()))
+	{
+		ele.click();
+	}
+	Thread.sleep(500);
+	WebElement ele1=action.driver.findElement(By.xpath(locator.getProperty("Savebtn")));
+	WebDriverWait wait = new WebDriverWait(action.driver, 30);
+	wait.until(ExpectedConditions.elementToBeClickable(ele1));
+	Thread.sleep(500);
+	//Click on Save button
+	action.DoubleClickButton(locator.getProperty("Savebtn"));	
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+}
+
+
+@Test(description="Verify the Password length",priority=6)
+public void Verify_Password_Length() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Click on Edit link
+	action.ClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	//enter Communication profile password
+	action.entertext(locator.getProperty("comprofpass"), "sat");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "sat");
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify following error message
+	action.VerifyStringValue("commPasswordDoNotComplyPolicy");
+}
+
+
+@Test(description="Verify the Password policies",priority=7)
+public void Verify_Password_with_Numbers() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+    Thread.sleep(1000);
+	//Click on Edit link
+	action.ClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter password as only numeric values
+	action.entertext(locator.getProperty("comprofpass"), "11111111");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "11111111");
+	//Click on Commit button
+	WebElement Commit_Btn=action.driver.findElement(By.xpath(locator.getProperty("Commit")));
+	Commit_Btn.sendKeys(org.openqa.selenium.Keys.CONTROL);
+	Thread.sleep(1000);
+	Actions builder = new Actions(action.driver);
+	//build the action chain.
+	Action doubleclick = builder.doubleClick(Commit_Btn).build();
+	doubleclick.perform();
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify following error message
+	action.VerifyStringValue("Communication Profile Password must be of minimum 8 characters and requires 1 lower case character, 1 upper case character, 1 numeric and 1 special character.");
+}
+
+
+@Test(description="Verify the Password without capital letter",priority=8)
+public void Verify_Password_withoutCapletter() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Click on Edit link
+	action.ClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter Password without capital letter
+	action.entertext(locator.getProperty("comprofpass"), "sat@123sh");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "sat@123sh");
+	//click on commit button
+	WebElement Commit_Btn=action.driver.findElement(By.xpath(locator.getProperty("Commit")));
+	Commit_Btn.sendKeys(org.openqa.selenium.Keys.CONTROL);
+	Thread.sleep(1000);
+	Actions builder = new Actions(action.driver);
+	//build the action chain.
+	Action doubleclick = builder.doubleClick(Commit_Btn).build();
+	doubleclick.perform();
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify following error message
+	action.VerifyStringValue("Communication Profile Password must be of minimum 8 characters and requires 1 lower case character, 1 upper case character, 1 numeric and 1 special character.");
+	
+}
+
+
+@Test(description="Verify the Password with correct credentials",priority=9)
+public void Verify_Correct_Password() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Click on Edit link
+	action.ClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter Password without capital letter
+	action.entertext(locator.getProperty("comprofpass"), "sat@123Sh");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "sat@123Sh");
+	//Click on Commit button
+	WebElement Commit_Btn=action.driver.findElement(By.xpath(locator.getProperty("Commit")));
+	Commit_Btn.sendKeys(org.openqa.selenium.Keys.CONTROL);
+	
+	Actions builder = new Actions(action.driver);
+	//build the action chain.
+	Action doubleclick = builder.doubleClick(Commit_Btn).build();
+	doubleclick.perform();
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));	
+}
+
+
+@Test(description="Verify the Password without small letter",priority=10)
+public void Verify_Password_without_Small_Letter() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Click on Edit link
+	action.ClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter Password without small letter
+    action.entertext(locator.getProperty("comprofpass"), "@@#@!1S");
+	action.entertext(locator.getProperty("cnfcomprofpass"),"@@#@!1S");
+	//Click on Commit button
+	
+	WebElement Commit_Btn=action.driver.findElement(By.xpath(locator.getProperty("Commit")));
+	Commit_Btn.sendKeys(org.openqa.selenium.Keys.CONTROL);
+	//Thread.sleep(1000);
+	Actions builder = new Actions(action.driver);
+	//build the action chain.
+	Action doubleclick = builder.doubleClick(Commit_Btn).build();
+	doubleclick.perform();
+	
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify following error message
+	action.VerifyStringValue("commPasswordDoNotComplyPolicy");
+	
+}
+
+
+@Test(description="Verify the Change in Password policy",priority=11)
+public void Change_Commprofile_policy() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Communication Profile Password Policy
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.WaitForTitle(locator.getProperty("Communication_Profile_Password_Policy"));
+	action.SwithchFrame("iframe0");
+	//Set the new password policy
+	action.ClearText(locator.getProperty("Minlength"));
+	action.entertext(locator.getProperty("Minlength"), "7");
+	Thread.sleep(1000);
+	action.ClearText(locator.getProperty("lowercase"));
+	action.entertext(locator.getProperty("lowercase"), "0");
+	Thread.sleep(1000);
+	action.ClearText(locator.getProperty("UpperCase"));
+	action.entertext(locator.getProperty("UpperCase"), "0");
+	Thread.sleep(1000);
+	action.ClearText(locator.getProperty("NumericCase"));
+	action.entertext(locator.getProperty("NumericCase"),"0");
+	Thread.sleep(1000);
+	action.ClearText(locator.getProperty("SpecialCase"));
+	action.entertext(locator.getProperty("SpecialCase"), "0");
+	Thread.sleep(1000);
+	//Click on Save button
+	action.DoubleClickButton(locator.getProperty("Savebtn"));
+	Thread.sleep(2000);
+	
+}
+
+
+@Test(description="Verify the Changed Password policy",priority=12)
+public void Verify_Password_Policy() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	
+	//Select user from table
+	action.SelectCheckBox(locator.getProperty("Checkbox0"));
+    Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Click on Edit link
+	action.DoubleClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	//Enter Password with only small letters
+	action.entertext(locator.getProperty("comprofpass"), "ssssssss");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "ssssssss");
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Users.Commit"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+	//Click on Edit button
+	action.DoubleClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	
+	//Click on Edit link
+	action.DoubleClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter Password with only numbers
+	action.entertext(locator.getProperty("comprofpass"), "11111111");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "11111111");
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Users.Commit"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	Thread.sleep(1000);
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	
+	//Click on Edit link
+	action.DoubleClickButton(locator.getProperty("Editcmf"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+	action.ClearText(locator.getProperty("comprofpass"));
+	action.ClearText(locator.getProperty("cnfcomprofpass"));
+	Thread.sleep(1000);
+	//Enter Password with only Spacial character
+	action.entertext(locator.getProperty("comprofpass"), "@@@@@@@@@@");
+	action.entertext(locator.getProperty("cnfcomprofpass"), "@@@@@@@@@@");
+	//Click on Commit button
+	action.ClickButton(locator.getProperty("Users.Commit"));
+	//verify the title of page
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	
+}
+
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+	
+	@AfterClass
+	  public void Close() throws IOException, InterruptedException
+    {
+		action.logout(action);
+	}
+	
+
+}

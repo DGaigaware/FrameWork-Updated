@@ -1,0 +1,659 @@
+package com.avaya.smgr.upmtest;
+
+import com.avaya.smgr.upmsetup.Upmsetup;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class PublicContacts {
+	boolean b;
+	UserAction action =null;
+	Upmsetup setup=null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		setup=new com.avaya.smgr.upmsetup.Upmsetup(); 
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+	
+@Test(description="Verify the elements of Public contact page",priority=1)
+public void Verify_Elements() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	//Click on Public Contact Link
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Verify the View,Edit,Delete Buttons are disabled
+	action.VerifyDisableButton(locator.getProperty("public_view"));
+	action.VerifyDisableButton(locator.getProperty("EditpvtContact"));
+	action.VerifyDisableButton(locator.getProperty("DeletepvtContact"));
+	//Verify the New,refresh buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("NewContact"));
+	action.VerifyEnableButton(locator.getProperty("Public_Refresh"));
+}
+	
+@Test(description="Verify the elements of New Public contact page",priority=2)
+public void Verify_New_Contact_Page() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	//Click on Public Contact Link
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Click on New Button
+	action.ClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	//Verify the Commit,Cancel buttons are Enabled
+	action.VerifyEnableButton(locator.getProperty("Commit"));
+	action.VerifyEnableButton(locator.getProperty("Cancel"));
+	//Verify the Edit ,delete buttons are disabled  and new button enabled
+	action.VerifyDisableButton(locator.getProperty("EditPostalAdd"));
+	action.VerifyDisableButton(locator.getProperty("DeletePostalAdd"));
+	action.VerifyEnableButton(locator.getProperty("NewPostalAdd"));
+	action.VerifyDisableButton(locator.getProperty("EditContAdd"));
+	action.VerifyDisableButton(locator.getProperty("DeleteContAdd"));
+	action.VerifyEnableButton(locator.getProperty("NewContAdd"));
+	action.VerifyEnableButton(locator.getProperty("Users.Continue"));
+	action.VerifyEnableButton(locator.getProperty("Users.Commitbtm"));
+	//Click on Cancel button
+	action.ClickButton(locator.getProperty("Cancel"));
+}
+
+@Test(description="Verify the Error messages",priority=3)
+public void verify_Error_LastName() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	//Click on Public Contact Link
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Click on New Button
+	action.ClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	action.EntertextUsingKey(locator.getProperty("contactFirstname"), input.getProperty("UserFirstname"),Keys.TAB);
+	wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("contactFirstnameAscii")),input.getProperty("UserFirstname")));
+	//Click on Commit button and verify title
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	Thread.sleep(1000);
+	//Verify the Following error message
+	action.VerifyStringValue("Last Name should not be left blank.");
+	//Enter last name
+		
+}
+
+@Test(description="Verify the Error messages",priority=4)
+public void verify_Error_FirstName() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	//Click on Public Contact Link
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Click on New Button
+	action.ClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	action.EntertextUsingKey(locator.getProperty("contactLastName"), input.getProperty("UserLastname"),Keys.TAB);
+	Thread.sleep(500);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("contactLastNameAscii")),input.getProperty("UserLastname")));
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	Thread.sleep(1000);
+	//Verify the Following error message
+	action.VerifyStringValue("First Name should not be left blank.");
+	
+}
+
+
+@Test(description="Verify the creation of new public contact",priority=5)
+public void Add_Public_Contact() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Click on new button
+	action.ClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	//Fill up the required details
+	
+	action.EntertextUsingKey(locator.getProperty("contactLastName"), input.getProperty("UserLastname"),Keys.TAB);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	Thread.sleep(1000);
+	wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("contactLastNameAscii")),input.getProperty("UserLastname")));
+	action.EntertextUsingKey(locator.getProperty("contactFirstname"), input.getProperty("UserFirstname"),Keys.TAB);
+	Thread.sleep(1000);
+	wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("contactFirstnameAscii")),input.getProperty("UserFirstname")));
+	//Click on Commit button and verify title
+	Thread.sleep(500);
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	//action.ClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	setup.Verify_Addedpucliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	
+}
+
+@Test(description="Verify the Error messages",priority=6)
+public void Verify_Postal_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	
+	//Click on New button
+	action.DoubleClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	//Click on new button
+	action.DoubleClickButton(locator.getProperty("NewPostalAdd"));
+	//action.ClickButton(locator.getProperty("NewPostalAdd"));
+	action.WaitForTitle(locator.getProperty("Add_Address"));
+	action.VerifyTitle(locator.getProperty("Add_Address"));
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	//Verify the Following error message
+	action.VerifyStringValue("Name should not be left blank.");
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify the Addition of postal address",priority=7)
+public void Add_Postal_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select Checkbox
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditpvtContact"))));
+	
+	//Click on edit button
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	Thread.sleep(1000);
+	//Click on new button
+	
+	action.DoubleClickButton(locator.getProperty("NewPostalAdd"));
+	action.WaitForTitle(locator.getProperty("Add_Address"));
+	action.VerifyTitle(locator.getProperty("Add_Address"));
+	//Fill up the required details
+	action.entertext(locator.getProperty("Addressname"), "pune1");
+	action.SelectFromdropDown(locator.getProperty("AddressType"), "Office");
+	
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+@Test(description="Verify the Error messages",priority=8)
+	public void Verify_Contact_Address() throws Exception
+	{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Click on New button
+	action.ClickButton(locator.getProperty("NewContact"));
+	action.WaitForTitle(locator.getProperty("New_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("New_Public_Contact"));
+	
+	//Click on New button to add new contact
+	action.DoubleClickButton(locator.getProperty("NewContAdd"));
+	action.WaitForTitle(locator.getProperty("Add_Address"));
+	action.VerifyTitle(locator.getProperty("Add_Address"));
+	
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.VerifyStringValue("Please enter a valid address");
+		
+	}	
+	
+	
+@Test(description="Verify the Addition of contact address",priority=9)
+public void Add_Contact_Address() throws Exception
+{
+	
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditpvtContact"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Click on New button
+	
+	action.DoubleClickButton(locator.getProperty("NewContAdd"));
+	
+	action.WaitForTitle(locator.getProperty("Add_Address"));
+	action.VerifyTitle(locator.getProperty("Add_Address"));
+	//Fill the required details
+	action.SelectFromdropDown(locator.getProperty("ContAddType"), "Phone");
+	action.SelectFromdropDown(locator.getProperty("AddCatagory"), "Home");
+	action.entertext(locator.getProperty("ContAddress"), "Mumbai");
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+@Test(description="Verify Edit postal address",priority=10)
+public void Edit_Postal_Address() throws Exception
+{
+	
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("EditpvtContact"))));
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	
+	//Select postal address
+	action.DoubleClickButton(locator.getProperty("Postaladdchk0"));
+	Thread.sleep(1000);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("EditPostalAdd"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditPostalAdd"));
+	//Edit address type
+	action.SelectFromdropDown(locator.getProperty("AddressType"), "Home");
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+@Test(description="Verify Delete postal address",priority=11)
+public void Delete_Postal_Address() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditpvtContact"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Select postal address
+	action.DoubleClickButton(locator.getProperty("Postaladdchk0"));
+	Thread.sleep(500);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("DeletePostalAdd"))));
+	//Click on delete button
+	action.DoubleClickButton(locator.getProperty("DeletePostalAdd"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Click on Commit 
+
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+
+@Test(description="Verify Edit contact address",priority=12)
+public void Edit_Contact_Address() throws Exception
+{
+
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("EditpvtContact"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Select Contact address
+	action.DoubleClickButton(locator.getProperty("Contactaddchk0"));
+	action.SelectCheckBox(locator.getProperty("Contactaddchk0"));
+	
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("EditContAdd"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditContAdd"));
+	action.WaitForTitle(locator.getProperty("Edit_Address"));
+	action.VerifyTitle(locator.getProperty("Edit_Address"));
+	action.ClearText(locator.getProperty("ContAddress"));
+	//Edit Contact address
+	action.entertext(locator.getProperty("ContAddress"), "Pune");
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	
+	action.DoubleClickButton(locator.getProperty("Commit"));
+	
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+@Test(description="Verify Delete contact address",priority=13)
+public void Delete_Contact_Address() throws Exception
+{
+	
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("EditpvtContact"))));
+	//Click on Edit button
+	action.ClickButton(locator.getProperty("EditpvtContact"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Select Contact address
+	
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	
+	action.DoubleClickButton(locator.getProperty("Contactaddchk0"));
+	action.SelectCheckBox(locator.getProperty("Contactaddchk0"));
+	Thread.sleep(500);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("DeleteContAdd"))));
+	//Click on Delete button
+	action.ClickButton(locator.getProperty("DeleteContAdd"));
+	action.WaitForTitle(locator.getProperty("Edit_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("Edit_Public_Contact"));
+	//Click on Commit button
+	action.DoubleClickButton(locator.getProperty("Commit"));
+		
+	if(action.isAlertPresent()){
+        action.driver.switchTo().alert();
+        action.driver.switchTo().alert().dismiss();
+    	action.SwithchFrame("iframe0");
+        Thread.sleep(3000);
+        action.DoubleClickButton(locator.getProperty("Commit"));
+    }
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+}
+
+@Test(description="Verify the View of public contact",priority=14)
+public void View_Public_Contact() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select public Contact
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("public_view"))));
+	//Click on view button
+	action.ClickButton(locator.getProperty("public_view"));
+	action.WaitForTitle(locator.getProperty("View_Public_Contact"));
+	action.VerifyTitle(locator.getProperty("View_Public_Contact"));
+	
+	//Verify Edit,Done buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+	//Click on Done button	
+	action.DoubleClickButton(locator.getProperty("Done"));
+	
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	
+}
+
+@Test(description="Verify the Deletion of public contact",priority=15)
+public void Delete_Public_Contact() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Public Contacts
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Public_Contacts"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	action.VerifyTitle(locator.getProperty("Public_Contacts"));
+	action.SwithchFrame("iframe0");
+	//Select Check box
+	setup.Selectpubliccontact(action,locator.getProperty("Publictbyname"),input.getProperty("UserLastname"));
+	//action.SelectCheckBox(locator.getProperty("publicChk0"));
+	Thread.sleep(1000);
+	WebDriverWait wait = new WebDriverWait(action.driver, 60);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("DeletepvtContact"))));
+	//Click on delete button
+	action.ClickButton(locator.getProperty("DeletepvtContact"));
+	action.WaitForTitle(locator.getProperty("Contact_Delete_Confirmation"));
+	action.VerifyTitle(locator.getProperty("Contact_Delete_Confirmation"));
+	//Click on Delete button to confirm
+	action.ClickButton(locator.getProperty("Delete_Cnf"));
+	action.WaitForTitle(locator.getProperty("Public_Contacts"));
+	
+	setup.Verifydeletepubliccontact(action,locator.getProperty("Publictbyname"), input.getProperty("UserLastname"));
+	
+}
+
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass
+public void Close() throws IOException, InterruptedException
+    {
+		action.logout(action);
+	}
+
+}

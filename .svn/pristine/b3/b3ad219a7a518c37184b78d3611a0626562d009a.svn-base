@@ -1,0 +1,246 @@
+package com.avaya.smgr.spm.settings.smgr;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class Scheduler{
+	boolean b;
+	static UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	boolean Accept;
+	
+@BeforeClass(alwaysRun=true)
+public void setup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+   }
+@BeforeMethod(alwaysRun=true)
+public void ScreenshptSetup() throws IOException, InterruptedException{
+	
+}	
+
+@Test(description="enable of Edit and Done buttons",groups={"Sanity"})
+ public void SchedulerEditDoneEnableBtn() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting, SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	//action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Edit and Done buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+	Thread.sleep(1000);
+}
+@Test(description="enable of commit and cancel buttons")
+public void SchedulerCommitCancelEnableBtn() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	//action.SwithchFrame("iframe0");
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Click on the Edit button
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//Verification of Commit and Cancel buttons should be enable
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+	Thread.sleep(1000);
+}
+@Test(description="verify that the title value")
+public void SchedulerTitle() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.SwithchFrame("iframe0");
+	//Click on the Edit button
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	//Verification of Commit and Cancel buttons should be enable
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//Verification of title "Scheduler"
+	action.VerifyStringValue(locator.getProperty("Scheduler"));
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Done"));
+
+}
+@Test(description="Verify that the values are successfully change/override by an administrator and attribute successfully saved",groups={"Sanity"})
+public void SchedulerUpdate() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.Retry"));
+	action.entertext(locator.getProperty("Scheduler.Retry"), input.getProperty("SingleDigitValue"));
+	//Verify that the values are successfully change/override by an administrator and attribute successfully saved
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("View_Profile"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.Retry"), input.getProperty("SingleDigitValue"));
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("SPMHome_Screen"));
+}
+
+@Test(description="Verify that the error message should display when number of try is empty")
+public void SchedulertryError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting SMGR, Scheduler 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.Retry"));
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Scheduler.Retry.msg"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.Retry.msg"), locator.getProperty("You_must_enter_a_value"));
+}
+@Test(description="Verify that the error message should display when retry delay field  is empty")
+public void ScheduleRetryDelayError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.RetryDelay"));
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Scheduler.RetryDelay.msg"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.RetryDelay.msg"), locator.getProperty("You_must_enter_a_value"));
+}
+@Test(description="Verify that the error message should display when Initial Context is empty")
+public void ScheduleIntialError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.Initila"));
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Scheduler.Initila.msg"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.Initila.msg"), locator.getProperty("You_must_enter_a_value"));
+}
+@Test(description="Verify that the error message should display when Naming Convention is empty")
+public void ScheduleNamingError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting SMGR, Scheduler
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.Naming"));
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Scheduler.Naming.msg"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.Naming.msg"), locator.getProperty("You_must_enter_a_value"));
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+@Test(description="Verify that the error message should display when Provide URL is empty")
+public void ScheduleProvideURLError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting, Logging Service 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Scheduler"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Scheduler.URL"));
+	action.ClickButton(locator.getProperty("Commit"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Scheduler.URL.msg"));
+	action.VerifyElementValue(locator.getProperty("Scheduler.URL.msg"), locator.getProperty("You_must_enter_a_value"));
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+@AfterClass(alwaysRun=true)
+	public void Close() throws IOException, InterruptedException{
+		action.logout(action);
+	}
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><tns:users xmlns:tns="http://xml.avaya.com/schema/import" xmlns:delta="http://xml.avaya.com/schema/deltaImport" xmlns:ns10="http://xml.avaya.com/schema/import_csm_cm" xmlns:ns11="http://xml.avaya.com/schema/import_mmcs" xmlns:ns3="http://xml.avaya.com/schema/import_csm_mm" xmlns:ns4="http://xml.avaya.com/schema/import1" xmlns:ns5="http://xml.avaya.com/schema/import_csm_b5800" xmlns:ns6="http://xml.avaya.com/schema/import_ce" xmlns:ns7="http://xml.avaya.com/schema/import_sessionmanager" xmlns:ns8="http://xml.avaya.com/schema/presence" xmlns:ns9="http://xml.avaya.com/schema/import_csm_agent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.avaya.com/schema/import userimport.xsd">
+<tns:user>
+<authenticationType>BASIC</authenticationType>
+<displayName>ramesh, babu</displayName>
+<displayNameAscii>ramesh, ababu</displayNameAscii>
+<givenName>Ramesh1</givenName>
+<givenNameAscii>Ramesh1</givenNameAscii>
+<loginName>xmldefault@avaya.com</loginName>
+<newLoginName>xmlmerge@avaya.com</newLoginName>
+<preferredLanguage>en_US</preferredLanguage>
+<surname>Babu</surname>
+<surnameAscii>Babu</surnameAscii>
+<commProfileSet>
+<commProfileSetName>Primary</commProfileSetName>
+<isPrimary>true</isPrimary>
+</commProfileSet>
+</tns:user>
+</tns:users>

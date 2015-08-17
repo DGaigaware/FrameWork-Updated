@@ -1,0 +1,171 @@
+package com.avaya.smgr.upm.basic;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class AssignCMSMtoUser {
+
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+	
+	@Test(description="Verify CM is assigned to user successfully",priority=1)
+	public void Assign_CMSM() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+	
+		action.ClickButton(locator.getProperty("Users.New"));
+		action.WaitForTitle(locator.getProperty("New_User_Profile"));
+		action.EntertextUsingKey(locator.getProperty("Lastname"),input.getProperty("UsersLastname"),Keys.TAB);
+		Thread.sleep(500);
+		WebDriverWait wait=new WebDriverWait(action.driver,60);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Lastnameascii")),input.getProperty("UsersLastname")));
+		action.EntertextUsingKey(locator.getProperty("Firstname"),input.getProperty("UsersFirstname"),Keys.TAB);
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Firstnameascii")),input.getProperty("UsersFirstname")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Loginname"))));
+		Thread.sleep(500);
+		action.EntertextUsingKey(locator.getProperty("Loginname"),input.getProperty("UserLogname1"),Keys.TAB);
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Tent.AdminLink"))));
+		action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("comprofpass"))));
+		action.entertext(locator.getProperty("comprofpass"), input.getProperty("pass2"));
+		action.entertext(locator.getProperty("cnfcomprofpass"), input.getProperty("pass2"));
+		//Thread.sleep(2000);
+		action.ClickButton(locator.getProperty("NewCP"));
+		//Thread.sleep(2000);
+		action.SelectFromdropDown(locator.getProperty("CPTypelist"), locator.getProperty("Avaya_SIP"));
+		action.entertext(locator.getProperty("CPHandle"), input.getProperty("use1"));
+		//Thread.sleep(1000);
+		action.SelectFromdropDown(locator.getProperty("UPR.SIP"), input.getProperty("Sipdomain"));
+		action.DoubleClickButton(locator.getProperty("CPAdd"));
+		Thread.sleep(1000);
+		WebElement ele=action.driver.findElement(By.xpath(locator.getProperty("Upr.smcheckbox1")));
+		while(!(ele.isSelected()))
+		{
+			ele.click();
+			
+		}
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.smlist"))));
+		Thread.sleep(1000);
+		action.EntertextUsingKey(locator.getProperty("Users.smlist"), input.getProperty("SM_Pune"), Keys.RETURN);
+		Thread.sleep(2000);
+		action.SelectFromdropDown(locator.getProperty("Users.smloc"),input.getProperty("Pune"));
+		Thread.sleep(1000);
+		action.SelectCheckBox(locator.getProperty("Upr.cmcheckbox2"));
+		Thread.sleep(2000);
+		action.SelectFromdropDown(locator.getProperty("Upr.cmlist"),input.getProperty("cm29"));
+		Thread.sleep(1500);
+		WebElement ele1=action.driver.findElement(By.xpath(locator.getProperty("Users.exttypecheckbox")));
+		while(!(ele1.isSelected()))
+				{
+		action.SelectCheckBox(locator.getProperty("Users.exttypecheckbox"));
+				}
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Extensiontextbox"))));
+		Thread.sleep(500);
+		action.ClearText(locator.getProperty("Extensiontextbox"));
+		action.entertext(locator.getProperty("Extensiontextbox"), input.getProperty("extension2"));
+		Thread.sleep(2000);
+		action.SelectFromdropDown(locator.getProperty("Upr.templatelist"), input.getProperty("Template"));
+		Thread.sleep(500);
+		//Click on Commit Button and verify title
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		//Thread.sleep(2000);
+		action.SelectElementByLoginname(input.getProperty("UserLogname1"));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+		action.DoubleClickButton(locator.getProperty("Users.Edit"));
+		action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+		//Thread.sleep(3000);
+		action.VerifySelectcheckbox(locator.getProperty("Upr.smcheckbox1"));
+		action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+		//Thread.sleep(2000);
+	}
+	
+	
+	@Test(description="Verify SM is unassigned  successfully",priority=2)
+	public void Unassign_CMSM() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+
+		action.SelectElementByLoginname(input.getProperty("UserLogname1"));
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+		action.ClickButton(locator.getProperty("Users.Edit"));
+		action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.smcheckbox1"))));
+		action.DeselectCheckBox(locator.getProperty("Upr.smcheckbox1"));
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmcheckbox2"))));
+		action.DeselectCheckBox(locator.getProperty("Upr.cmcheckbox2"));
+		Thread.sleep(500);
+		//Click on Commit Button and verify title
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+		action.DoubleClickButton(locator.getProperty("Users.Edit"));
+		action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmcheckbox2"))));
+		action.VerifydeSelectcheckbox(locator.getProperty("Upr.smcheckbox1"));
+		action.VerifydeSelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+		Thread.sleep(500);
+	}
+
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+		  
+		action.Screenshot(result, action);
+	}
+
+	@AfterClass
+	  public void Close() throws IOException, InterruptedException
+	  {
+		action.logout(action);
+	  }
+}

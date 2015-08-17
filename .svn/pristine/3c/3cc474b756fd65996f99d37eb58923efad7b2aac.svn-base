@@ -1,0 +1,94 @@
+package com.avaya.smgr.Links;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class NoofRows {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+	
+@Test(priority=1,description="Verifying that No. of Rows displayed in table as per the Configuration")
+	 public void Rows_Test() throws Exception
+	 {
+		//Click Configuration,Settings,SMGR,Common Console
+		action.ClickLink(locator.getProperty("Configurations"));
+		action.ClickLink(locator.getProperty("Settings"));
+		action.ClickLink(locator.getProperty("SMGR"));
+		String str1=action.driver.getWindowHandle();
+		action.ClickLink(locator.getProperty("Common_Console"));
+		action.VerifyTitle(locator.getProperty("View_Profile"));
+		action.SwithchFrame("iframe0");
+		action.ClickButton(locator.getProperty("Edit"));
+		//provide invalid input and check for error
+		action.entertext(locator.getProperty("noofrowstextbox"), input.getProperty("seventeen"));
+		action.ClickButton(locator.getProperty("Commit"));
+		action.WaitForTitle(locator.getProperty("Edit_Profile"));
+		Thread.sleep(3000);
+		action.VerifyStringValue("Input value is out of range. Enter a value between 15 to 100.");
+		//Set the maximum number of rows to show in table
+		action.ClearText(locator.getProperty("noofrowstextbox"));
+		action.entertext(locator.getProperty("noofrowstextbox"), input.getProperty("seventeen"));
+		action.ClickButton(locator.getProperty("Commit"));
+		action.driver.switchTo().window(str1);
+		action.ClickLink(locator.getProperty("Home"));
+		//logout and login
+		action.logout(action);
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+		Thread.sleep(2000);
+		action.ClickLink(locator.getProperty("Events"));
+		action.WaitForTitle(locator.getProperty("Events"));
+		action.ClickLink(locator.getProperty("Logs"));
+		action.WaitForTitle(locator.getProperty("Logs"));
+		Thread.sleep(1000);
+		action.ClickLink(locator.getProperty("Log_Settings"));
+		action.WaitForTitle(locator.getProperty("Log_Settings"));
+		action.SwithchFrame("iframe0");
+	
+		String selectedOption = new Select(action.driver.findElement(By.xpath(locator.getProperty("Noofrows")))).getFirstSelectedOption().getText();
+		Assert.assertEquals( input.getProperty("seventeen"),selectedOption);
+		Thread.sleep(2000);
+	 }
+	
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass		  
+ public void Close() throws IOException, InterruptedException
+            {
+			action.logout(action);
+			}
+	 }
+
+

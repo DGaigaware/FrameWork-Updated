@@ -1,0 +1,338 @@
+package com.avaya.smgr.spm.settings.smgr;
+//
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class Alarming{
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	Boolean Accept;
+	public WebDriver driver;
+@BeforeClass(alwaysRun=true)
+public void setup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+   }
+@BeforeMethod
+public void BeforeMethod() throws IOException, InterruptedException{
+	
+   }
+@Test(description="Eanable of Edit and Done buttons",groups={"Sanity"})
+public void AlarmEditDoneEnableBtn() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	//Verification of Edit and Done buttons should be enable
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+
+@Test(description="Eanable of commit and cancel buttons")
+public void AlarmCommit() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	//Verification of Commit and Cancel buttons should be enable
+	action.VerifyEnableButton(locator.getProperty("Edit"));
+	action.VerifyEnableButton(locator.getProperty("Done"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+
+@Test(description="Showing/Hiding behaviour of Alarm Sevirity Levels")
+ public void AlarmSev() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,SMGR,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	//action.ClickButton(locator.getProperty("Edit"));
+	 //2) Click on  the Show button for the Alarm Severity Level
+	action.ClickButton(locator.getProperty("GeneralProp"));
+	Thread.sleep(2000);
+	//3) Verify that  Alarm Severity Level fields are hiding
+    action.VerifyNoElementdisplay(locator.getProperty("Alarming.Cleared"));
+    //4) Click on  the hide  button 
+	action.ClickButton(locator.getProperty("GeneralProp"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Alarming.Cleared"));
+	//5)Alarm Severity levels is displaying
+    action.VerifyElementDisplay(locator.getProperty("Alarming.Cleared"));
+    
+	action.ClickButton(locator.getProperty("Done"));
+    }
+
+//Verification for the hiding/showing functionality for Auto Fresh
+@Test(description="Showing/Hiding behaviour of AutoFresh")
+public void Alarminfofficetable() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	  //2) Click on  the Expand  button for the Auto fresh
+	action.ClickButton(locator.getProperty("IPOfficeProp"));
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Alarming.AutoFresh"));
+    //3) Verify that  Auto Fresh fields are not showing
+	action.VerifyNoElementdisplay(locator.getProperty("Alarming.AutoFresh"));
+	 //4) Click on  the Expand  button 
+	action.ClickButton(locator.getProperty("IPOfficeProp"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Alarming.AutoFresh"));
+    //5) Verify that Auto Fresh fields are showing
+	action.VerifyElementDisplay(locator.getProperty("Alarming.AutoFresh"));
+	action.ClickButton(locator.getProperty("Done"));
+   }
+//Verification of Collapse all functionality
+@Test(description="Collapse functionality of Alarming UI")
+public void CollapseAll() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	 //2) Click on  the Collapse button 
+	action.ClickButton(locator.getProperty("CollapseAll"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Alarming.Cleared"));
+	//3) Verify that all fields are hiding
+    action.VerifyNoElementdisplay(locator.getProperty("Alarming.Cleared"));
+   	action.VerifyNoElementdisplay(locator.getProperty("Alarming.AutoFresh"));
+	action.ClickButton(locator.getProperty("Done"));
+	
+   }
+//Verification of expand all functionality for Alarming UI
+@Test(description="Expand functioanality of Alarming UI")
+public void ExpandAll() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,CSM
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	//3) Click on  the expand  button 
+	action.ClickButton(locator.getProperty("ExpandAll"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	Thread.sleep(500);
+	action.WaitForObj(locator.getProperty("Alarming.Cleared"));
+    action.VerifyElementDisplay(locator.getProperty("Alarming.Cleared"));
+   	action.VerifyElementDisplay(locator.getProperty("Alarming.AutoFresh"));
+	action.ClickButton(locator.getProperty("Done"));
+ }
+//Verification of Name Alarming UI
+@Test(description="Alaming UI name on UI")
+public void AlarmingUI() throws Exception{
+	action.RefreshPage();
+	//1)Navigate to Configuration page, setting,Alarming UI
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	//2)Alarming UI name is present in the web page
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.VerifyStringValue(locator.getProperty("Alarming_UI"));
+}
+@Test(description="Verify that the values are successfully change/override by an administrator and attribute successfully saved",groups={"Sanity"})
+public void AlarmUpdate() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Alarming 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Alarming.AutoFresh"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.entertext(locator.getProperty("Alarming.AutoFresh"), input.getProperty("FourDigitValue"));
+	//Verify that the values are successfully change/override by an administrator and attribute successfully saved
+	action.ClickButton(locator.getProperty("Commit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForObj(locator.getProperty("Alarming.AutoFresh"));
+	action.VerifyElementValue(locator.getProperty("Alarming.AutoFresh"), input.getProperty("FourDigitValue"));
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle("SPMHome Screen");
+}
+@Test(description="Verify that the errror message should display when Interminate field is missed")
+public void AlarmIntermidateError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Alarming 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("Alarm.IntermRed"));
+	action.ClearText(locator.getProperty("Alarm.IntermGreen"));
+	action.ClearText(locator.getProperty("alarm.IntermBlue"));
+
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//action.entertext(locator.getProperty("Alarming.AutoFresh"), input.getProperty("FourDigitValue"));
+	//Verify that the values are successfully change/override by an administrator and attribute successfully saved
+	action.ClickButton(locator.getProperty("Commit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	//action.VerifyElementValue(locator.getProperty("Alarming.AutoFresh"), input.getProperty("FourDigitValue"));
+	action.VerifyStringValue("Provide a value for the red component.");
+	action.VerifyStringValue("Provide a value for the green component.");
+	action.VerifyStringValue("Provide a value for the blue component.");
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+
+@Test(description="Verify that the errror message should display when Minor field is empty")
+public void AlarmMinorError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Alarming 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("alarm.MinorRed"));
+	action.ClearText(locator.getProperty("alarm.minorGreen"));
+	action.ClearText(locator.getProperty("alarm.minorBlue"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.VerifyStringValue("Provide a value for the red component.");
+	action.VerifyStringValue("Provide a value for the green component.");
+	action.VerifyStringValue("Provide a value for the blue component.");
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+
+@Test(description="Verify that the errror message should display when Warning field is empty")
+public void AlarmWarningError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Alarming 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("alarm.warningRed"));
+	action.ClearText(locator.getProperty("alarm.warningGreen"));
+	action.ClearText(locator.getProperty("alarm.warningBlue"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.VerifyStringValue("Provide a value for the red component.");
+	action.VerifyStringValue("Provide a value for the green component.");
+	action.VerifyStringValue("Provide a value for the blue component.");
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+
+@Test(description="Verify that the errror message should display when Time field is empty")
+public void AlarmTimeError() throws Exception{
+	action.RefreshPage();
+	//Navigate to Configuration page, setting,Alarming 
+	action.ClickLink(locator.getProperty("Configurations"));
+	action.ClickLink(locator.getProperty("Settings"));
+	action.ClickLink(locator.getProperty("SMGR"));
+	action.ClickLink(locator.getProperty("Alarming_UI"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("Edit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	//update the value 
+	action.ClearText(locator.getProperty("alarm.time"));
+	action.WaitForTitle(locator.getProperty("Edit_Profile"));
+	action.ClickButton(locator.getProperty("Commit"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+	action.VerifyStringValue("Integer value is out of range.");
+	Thread.sleep(1000);
+	action.ClickButton(locator.getProperty("Done"));
+	Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+@AfterMethod(alwaysRun=true)
+public void AfterMethod(ITestResult result) throws Exception{
+	  
+	action.Screenshot(result, action);
+	boolean Accept=action.isAlertPresent();
+	action.alert(Accept);
+}
+@AfterClass(alwaysRun=true)
+public void Afterclass() throws IOException, InterruptedException{
+	  
+	action.logout(action);
+}
+}

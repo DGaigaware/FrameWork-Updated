@@ -1,0 +1,1044 @@
+package com.avaya.smgr.upmtest;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+public class ZBulkEditwithElements {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws IOException, InterruptedException
+	{
+		action = new UserAction();
+		locator=new Properties();
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		input=new Properties();
+		input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+		action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+	@Test(description="Verify the various elements on user bulk edit page",priority=1)	
+	public void Verify_Elements() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.VerifyTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			//Select the users from table
+			action.SelectCheckBox(locator.getProperty("Checkbox0"));
+			Thread.sleep(1000);
+			action.SelectCheckBox(locator.getProperty("Checkbox2"));
+			Thread.sleep(1000);
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			action.VerifyTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			//Verify the elements state
+			action.VerifydeSelectcheckbox(locator.getProperty("Upr.checkbox1"));
+			action.VerifydeSelectcheckbox(locator.getProperty("Upr.checkbox2"));
+			action.VerifyNoElementdisplay(locator.getProperty("Upr.smlist"));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			action.VerifyElementDisplay(locator.getProperty("Upr.smlist"));
+			action.VerifyNoElementdisplay(locator.getProperty("Upr.templatelist"));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			action.VerifyElementDisplay(locator.getProperty("Upr.templatelist"));
+	}
+	
+	@Test(description="Verify new user creation",priority=2)
+	public void New_User() throws Exception
+	{
+		
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		
+		for(int i=0;i<2;i++)
+		{
+		action.DoubleClickButton(locator.getProperty("Users.New"));
+		action.WaitForTitle(locator.getProperty("New_User_Profile"));
+		//Enter the last name,First name,Login name
+		action.EntertextUsingKey(locator.getProperty("Lastname"),input.getProperty("UserLastname"),Keys.TAB);
+		Thread.sleep(1000);
+		WebDriverWait wait=new WebDriverWait(action.driver,60);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Lastnameascii")),input.getProperty("UserLastname")));
+		Thread.sleep(1000);
+		action.EntertextUsingKey(locator.getProperty("Firstname"),input.getProperty("UserFirstname"),Keys.TAB);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Firstnameascii")),input.getProperty("UserFirstname")));
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Loginname"))));
+		action.EntertextUsingKey(locator.getProperty("Loginname"),"a1"+i+"@avaya.com",Keys.TAB);
+		wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(locator.getProperty("Loginname")),"a1"+i+"@avaya.com"));
+		//Click on Commit button
+		Thread.sleep(500);
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		Thread.sleep(1000);
+		}
+		
+	}
+	
+	@Test(description="Verify the error message on empty Session manager field",priority=3)	
+	public void Verify_Error_Msg_EmptySM() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select users from table
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(200);
+			action.SelectFromdropDownbyValue(locator.getProperty("UPR.SIP"), "0");
+			Thread.sleep(2000);
+			action.DoubleClickButton(locator.getProperty("Editcmf"));
+			//Enter com. profile password
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+			action.entertext(locator.getProperty("Upr.comprofilepass"), "Avaya123$");
+			action.entertext(locator.getProperty("Upr.confirmpass"), "Avaya123$");
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select the SM check box
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select the location from list
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlisthl"), "0");
+			Thread.sleep(2000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(1000);
+			//Verify Error message on empty SM field
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Smerrmsg"))));
+			action.VerifyElementValue(locator.getProperty("Smerrmsg"), "A Session Manager selection is required.");		
+	}
+	
+	@Test(description="Verify the error message on empty location field",priority=3)	
+	public void Verify_Error_Msg_EmptyLoc() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select users from table
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(200);
+			action.SelectFromdropDownbyValue(locator.getProperty("UPR.SIP"), "0");
+			Thread.sleep(2000);
+			action.DoubleClickButton(locator.getProperty("Editcmf"));
+			//Enter com. profile password
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+			action.entertext(locator.getProperty("Upr.comprofilepass"), "Avaya123$");
+			action.entertext(locator.getProperty("Upr.confirmpass"), "Avaya123$");
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select the SM check box
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select SM from list
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlist"), "1");
+			Thread.sleep(3000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(1000);
+			//Verify Error message on empty home location
+			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locator.getProperty("Locerrmsg"))));
+			action.VerifyElementValue(locator.getProperty("Locerrmsg"), "A Home Location selection is required.");	
+					
+	}
+	
+	@Test(description="Verify the error message on empty SIP domain field",priority=3)	
+	public void Verify_Error_Msg_EmptySIP() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select users from table
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select SM check box
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select SM from drop down list
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlist"), "1");
+			Thread.sleep(2000);
+			//Select location from List
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlisthl"), "0");
+			Thread.sleep(2000);
+			//Click on Identity link
+			action.DoubleClickButton(locator.getProperty("Identity"));
+			Thread.sleep(1000);
+			//Click on edit link
+			action.DoubleClickButton(locator.getProperty("Editcmf"));
+			//Enter Com profile password
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+			action.entertext(locator.getProperty("Upr.comprofilepass"), "Avaya123$");
+			action.entertext(locator.getProperty("Upr.confirmpass"), "Avaya123$");
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(1000);
+			//Verify the error message on Empty SIP domain
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Siperrmsg"))));
+			action.VerifyElementValue(locator.getProperty("Siperrmsg"), "SIP Domain is required for Session Manager Communication Profile");
+			
+			Thread.sleep(500);
+	}
+	@Test(description="Verify the error message on empty Communication profile field",priority=3)	
+	public void Verify_Error_Msg_EmptyCP_Password() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select users from table
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select SM check box
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select SM from drop down list
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlist"), "1");
+			Thread.sleep(2000);
+			//Select location from List
+			action.SelectFromdropDownbyValue(locator.getProperty("Upr.smlisthl"), "0");
+			Thread.sleep(2000);
+			//Click on Identity link
+			action.DoubleClickButton(locator.getProperty("Identity"));
+			Thread.sleep(1000);
+			//Select SIP domain drom the list
+			action.SelectFromdropDownbyValue(locator.getProperty("UPR.SIP"), "0");
+			Thread.sleep(3000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(1000);
+			//Verify Error message on empty com profile password
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("Cppaswdmsg"))));
+			action.VerifyElementValue(locator.getProperty("Cppaswdmsg"), "Communication Profile Password is required for Session Manager Communication Profile");
+						
+	}
+	
+	@Test(description="Verify the Assignment of SM to multiple user throgh bulk edit",priority=4)	
+	public void Assign_SM_With_Bulk_Edit() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Select bulk edit user link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			//Select SM check box 
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select SM from SM list
+			action.SelectFromdropDown(locator.getProperty("Upr.smlist"), input.getProperty("SM_Pune"));
+			Thread.sleep(2000);
+			//Select location from list
+			action.SelectFromdropDown(locator.getProperty("Upr.smlisthl"), input.getProperty("Pune"));
+			Thread.sleep(2000);
+			//Click on Identity link
+			action.DoubleClickButton(locator.getProperty("Identity"));
+			//Select SIP domain from list
+			action.SelectFromdropDown(locator.getProperty("UPR.SIP"), input.getProperty("Sipdomain"));
+			Thread.sleep(2000);
+			//Click on edit link
+			action.DoubleClickButton(locator.getProperty("Editcmf"));
+			//enter com profile password
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+			action.entertext(locator.getProperty("Upr.comprofilepass"), "Avaya123$");
+			action.entertext(locator.getProperty("Upr.confirmpass"), "Avaya123$");
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+			Thread.sleep(1000);
+			//Click on Refresh button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("TableRefresh"))));
+			action.ClickButton(locator.getProperty("TableRefresh"));
+			//Click on Commit button
+			action.DoubleClickButton(locator.getProperty("Commit"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			//Select one user
+			action.SelectElementByLoginnamewithoutfilter("a10@avaya.com");
+			Thread.sleep(1000);
+			//click on Edit button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Edit"))));
+			action.DoubleClickButton(locator.getProperty("Users.Edit"));
+			action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+			action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+			Thread.sleep(1000);
+			//Verify SM is assigned to the user
+			action.VerifySelectcheckbox(locator.getProperty("Users.SMCheckBox"));
+			Thread.sleep(500);
+			
+	}
+
+	
+	@Test(description="Verify the Change of old SM to new SM for multiple users",priority=5)	
+	public void Bulk_Edit_SM_Element() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			//Select SM check box
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select SM from list
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.smlist"))));
+			Select dropdown = new Select(action.driver.findElement(By.xpath(locator.getProperty("Upr.smlist"))));
+			dropdown.selectByValue("0");
+			//action.SelectFromdropDown_Index(locator.getProperty("Upr.smlist"),1);
+			Thread.sleep(3000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+			//Click on Commit button
+			action.ClickButton(locator.getProperty("Commit"));
+            action.WaitForTitle(locator.getProperty("User_Management"));
+			//Select user
+			action.SelectElementByLoginnamewithoutfilter("a10@avaya.com");
+			Thread.sleep(1000);
+			//Click on edit button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Edit"))));
+			action.DoubleClickButton(locator.getProperty("Users.Edit"));
+			action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+			action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+			Thread.sleep(1000);
+			//verify  SM check box selected
+			action.VerifySelectcheckbox(locator.getProperty("Users.SMCheckBox"));
+			Thread.sleep(1000);
+			//Verify the new SM assigned to the user
+			//action.VerifyElementValue(locator.getProperty("Users.smlist"), input.getProperty("sm123"));
+			String str1=action.driver.findElement(By.xpath(locator.getProperty("Users.smlist"))).getAttribute("value");
+			Assert.assertEquals(str1,input.getProperty("sm123"));
+			
+	}
+
+	@Test(description="Verify the error message on empty Communication Manager field",priority=6)	
+	public void Verify_ErrMsg_EmptyCM() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			//Select the CM Checkbox
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			Thread.sleep(1000);
+			//Select new profile checkbox
+			action.SelectCheckBox(locator.getProperty("Newprofilecmchk"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmlist"))));
+			//Click on Run Now button
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(1000);
+			//verify error messages on empty CM Field
+			action.VerifyStringValue("Please select a System -it is a mandatory field.");
+			action.VerifyStringValue("Please select a Template -it is a mandatory field.");
+			
+	}
+	
+	@Test(description="Verify the error message on empty Template field",priority=7)	
+	public void Verify_ErrMsg_EmptyTemplate() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			//Select CM checkbox
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			Thread.sleep(1000);
+			//Select new profile checkbox
+			action.SelectCheckBox(locator.getProperty("Newprofilecmchk"));
+			//Select CM from list
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmlist"))));
+			action.SelectFromdropDown(locator.getProperty("Upr.cmlist"), input.getProperty("cm29"));
+			Thread.sleep(4000);	
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			Thread.sleep(500);
+			//Verify error message on empty template
+			action.VerifyStringValue("Please select a Template -it is a mandatory field.");
+			
+	}
+	
+
+	
+	@Test(description="Verify the Assignment of CM to multiple user throgh bulk edit",priority=8)	
+	public void Assign_CM_With_Bulk_Edit() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on Bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select the CM checkbox
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			Thread.sleep(1000);
+			//Select new profile checkbox
+			action.SelectCheckBox(locator.getProperty("Newprofilecmchk"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmlist"))));
+			//Select CM from list
+			action.SelectFromdropDown(locator.getProperty("Upr.cmlist"), input.getProperty("cm29"));
+			Thread.sleep(4000);
+			//Select Template from list
+			action.SelectFromdropDown(locator.getProperty("Upr.templatelist"), input.getProperty("Template"));
+			Thread.sleep(2000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+			Thread.sleep(1000);
+			//Click on refresh button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("TableRefresh"))));
+			action.ClickButton(locator.getProperty("TableRefresh"));
+			while(action.driver.findElement(By.xpath(locator.getProperty("Bulkeditstatus"))).getText().equals("RUNNING")||action.driver.findElement(By.xpath(locator.getProperty("Bulkeditstatus"))).getText().equals("PENDINGEXECUTION"))
+			{
+				action.ClickButton(locator.getProperty("TableRefresh"));
+				Thread.sleep(1000);
+			}
+			//Click on Commit button
+			action.DoubleClickButton(locator.getProperty("Commit"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			//Select user
+			action.SelectElementByLoginnamewithoutfilter("a11@avaya.com");
+			Thread.sleep(1000);
+			//Click on Edit button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Edit"))));
+			action.DoubleClickButton(locator.getProperty("Users.Edit"));
+			action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+			action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+			Thread.sleep(1000);
+			//verify that CM is assigned to user
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("Upr.cmcheckbox2"))));
+			action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+			Thread.sleep(500);
+			
+	}
+
+	@Test(description="Verify the Change of old template to new template for multiple users",priority=9)	
+	public void Bulk_Edit_CM_Element() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on Bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select the CM checkbox
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			Thread.sleep(1000);
+			//Select template from list
+			Select dropdown = new Select(action.driver.findElement(By.xpath(locator.getProperty("Upr.templatelist"))));
+			dropdown.selectByValue("2");
+			//action.SelectFromdropDown_Index(locator.getProperty("Upr.templatelist"), 3);
+			Thread.sleep(5000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+			Thread.sleep(2000);
+			//Click on refresh button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("TableRefresh"))));
+			action.ClickButton(locator.getProperty("TableRefresh"));
+			//Click on Commit button
+			action.DoubleClickButton(locator.getProperty("Commit"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			//Select user
+			action.SelectElementByLoginnamewithoutfilter("a11@avaya.com");
+			Thread.sleep(1000);
+			//Click on Edit button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Edit"))));
+			action.DoubleClickButton(locator.getProperty("Users.Edit"));
+			action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+			action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+			Thread.sleep(1000);
+			//Verify CM checkbox selected
+			action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+			Thread.sleep(100);
+			//Verify new template assigned to user
+			String str=new Select(action.driver.findElement(By.xpath(locator.getProperty("Upr.templatelist")))).getFirstSelectedOption().getText();
+			Assert.assertEquals(str, input.getProperty("Template1"));
+	}
+
+
+	
+	@Test(description="Verify the elements of schedule bulk edit job page",priority=10)	
+	public void Verify_Bulk_Edit_Schedule_Page() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		//Select users
+		for(int i=0;i<2;i++)
+		{
+			action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		     Thread.sleep(1000);
+		}
+		Thread.sleep(1000);
+		action.ClickButton(locator.getProperty("Users.More"));
+        //Click on bulk edit users link
+		action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+		action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+		Thread.sleep(1000);
+		//Edit the language and time
+		action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+		action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Users.Schedule"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//verify the buttons state
+		action.VerifyEnableButton(locator.getProperty("Bulk.schedule"));
+		action.VerifyEnableButton(locator.getProperty("Commit"));
+		action.VerifyElementDisplay(locator.getProperty("Bulk.schedule"));
+		//Click on Collapse all link
+		action.ClickLinkByxpath(locator.getProperty("Coolapse"));
+		//Verify schedule button not get displayed
+		action.VerifyNoElementdisplay(locator.getProperty("Bulk.schedule"));
+		//Click on Expand Link
+		action.ClickLinkByxpath(locator.getProperty("Import.Expand"));
+		//Verify schedule button displayed
+		action.VerifyElementDisplay(locator.getProperty("Bulk.schedule"));
+		//Click on Collapse all link
+		action.ClickLinkByxpath(locator.getProperty("Coolapse"));
+		//Click on Schedule link
+		action.ClickButton(locator.getProperty("Bulk.schedulelink"));
+		//verify Schedule button displayed
+		action.VerifyElementDisplay(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(500);
+		//Click on Bulk edit job list link
+		action.ClickButton(locator.getProperty("Bulk.Joblink"));
+		//verify table with job list displayed
+		action.VerifyElementDisplay(locator.getProperty("TableRefresh"));
+		
+	}
+	
+	@Test(description="Verify the error message on incorrect date inputs",priority=11)	
+	public void Verify_ErrMsg_on_EmptyDate() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		//Select users
+		for(int i=0;i<2;i++)
+		{
+			action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		     Thread.sleep(1000);
+		}
+		Thread.sleep(1000);
+		action.ClickButton(locator.getProperty("Users.More"));
+        //Click on bulk edit user link
+		action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+		action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+		Thread.sleep(1000);
+		//Edit the language and time
+		action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+		action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+		//Click on Run now button
+		action.DoubleClickButton(locator.getProperty("Users.Schedule"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//Select previous month from list
+		action.SelectFromdropDown(locator.getProperty("Bulk.month"), "March");
+		//Click on schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		//Verify error message
+		Thread.sleep(1000);
+		action.VerifyStringValue("Start Time - Please provide Start Date/Time greater than current Date/Time");
+		//Enter incorrect day
+		action.ClearText(locator.getProperty("Bulk.day"));
+		action.entertext(locator.getProperty("Bulk.day"), "32");
+		//Click on schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(1000);
+		//Verify Error message
+		action.VerifyStringValue("Invalid date");
+		
+	}
+	
+	@Test(description="Verify the error message on incorrect time inputs",priority=12)	
+	public void Verify_ErrMsg_on_EmptyTime() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		//Select users
+		for(int i=0;i<2;i++)
+		{
+			action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		     Thread.sleep(1000);
+		}
+		Thread.sleep(1000);
+		action.ClickButton(locator.getProperty("Users.More"));
+        //Click on Bulk edit user link
+		action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+		action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+		Thread.sleep(1000);
+		//Edit the language and time
+		action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+		action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Users.Schedule"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//Enter incorrect hours in text box
+		action.ClearText(locator.getProperty("Bulk.hour"));
+		action.entertext(locator.getProperty("Bulk.hour"), "25");
+		//Click on schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(1000);
+		//Verify error message
+		action.VerifyStringValue("Invalid Time; value for hour must be on or between 0 and 23.");
+		//Enter incorrect minute in text box
+		action.ClearText(locator.getProperty("Bulk.minute"));
+		action.entertext(locator.getProperty("Bulk.minute"), "62");
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(1000);
+		//Verify error message
+		action.VerifyStringValue("Invalid Time; value for minute(s) must be between 0 and 59.");
+		//Verify incorrect seconds
+		action.ClearText(locator.getProperty("Bulk.second"));
+		action.entertext(locator.getProperty("Bulk.second"), "62");
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(1000);
+		action.VerifyStringValue("Invalid Time; value for second(s) must be between 0 and 59.");
+	}
+	
+	
+	@Test(description="Verify the scheduling of bulk edit job successfully.",priority=13)	
+	public void Schedule_Bulk_Edit_Job() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+		//Select users
+		for(int i=0;i<2;i++)
+		{
+			action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		     Thread.sleep(1000);
+		}
+		Thread.sleep(1000);
+		action.ClickButton(locator.getProperty("Users.More"));
+        //Click on bulk edit users link
+		action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+		action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+		Thread.sleep(1000);
+		//Edit the language and time
+		action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+		action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Users.Schedule"));
+		action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+		//Set the time 
+		String min=action.driver.findElement(By.xpath(locator.getProperty("Bulk.minute"))).getAttribute("value");
+		int minute=Integer.parseInt(min);
+		minute+=1;
+		String str=String.valueOf(minute);
+		action.ClearText(locator.getProperty("Bulk.minute"));
+		action.entertext(locator.getProperty("Bulk.minute"), str);
+		Thread.sleep(5000);
+		//Click on Schedule button
+		action.DoubleClickButton(locator.getProperty("Bulk.schedule"));
+		Thread.sleep(1000);
+		//Verify the status of bulk edit job
+		String state=action.driver.findElement(By.xpath(locator.getProperty("Bulkeditstatus"))).getText();
+		Assert.assertEquals(state, "PENDINGEXECUTION");
+		while(action.driver.findElement(By.xpath(locator.getProperty("Bulkeditstatus"))).getText().equals("RUNNING")||action.driver.findElement(By.xpath(locator.getProperty("Bulkeditstatus"))).getText().equals("PENDINGEXECUTION"))
+		{
+			action.ClickButton(locator.getProperty("TableRefresh"));
+			Thread.sleep(2000);
+		}
+		//verify status is completed
+		action.VerifyElementValue(locator.getProperty("Bulkeditstatus"), "COMPLETED");
+		//Click on Commit button
+		action.ClickButton(locator.getProperty("Commit"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+	}
+	
+	
+	@Test(description="Verify CM and SM is unassigned  successfully",priority=14)
+	public void Unassign_CMSM() throws Exception
+	{
+		action.driver.navigate().refresh();
+		//Click on User Management,Manage Users
+		action.ClickLink(locator.getProperty("User_Management"));
+		action.WaitForTitle(locator.getProperty("User_Management"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.ClickLink(locator.getProperty("Manage_Users"));
+		action.SwithchFrame("iframe0");
+        for(int i=0;i<2;i++)
+        {
+        action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		WebDriverWait wait = new WebDriverWait(action.driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("Users.Edit"))));
+		action.ClickButton(locator.getProperty("Users.Edit"));
+		action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.smcheckbox1"))));
+		action.DeselectCheckBox(locator.getProperty("Upr.smcheckbox1"));
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmcheckbox2"))));
+		action.DeselectCheckBox(locator.getProperty("Upr.cmcheckbox2"));
+		Thread.sleep(1000);
+		//Click on Commit Button and verify title
+		action.DoubleClickButton(locator.getProperty("Users.Commit"));
+		action.VerifyTitle(locator.getProperty("User_Management"));
+		action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+		Thread.sleep(1000);
+        }
+		
+	}
+	
+	@Test(description="Verify the Assignment of CM to multiple user throgh bulk edit",priority=15)	
+	public void Assign_SM_CM_With_Bulk_Edit() throws Exception
+	{
+			action.driver.navigate().refresh();
+			//Click on User Management,Manage Users
+			action.ClickLink(locator.getProperty("User_Management"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.ClickLink(locator.getProperty("Manage_Users"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			action.SwithchFrame("iframe0");
+			
+			//Select Check box
+			for(int i=0;i<2;i++)
+			{
+				action.SelectElementByLoginnamewithoutfilter("a1"+i+"@avaya.com");
+			     Thread.sleep(1000);
+			}
+			//Click on More Button
+			action.ClickButton(locator.getProperty("Users.More"));
+			//Click on Bulk edit users link
+			action.ClickLink(locator.getProperty("Bulk_Edit_Users"));
+			action.WaitForTitle(locator.getProperty("User_Bulk_Editor"));
+			//Click on Communication profile link
+			action.ClickLinkByxpath(locator.getProperty("Tent.AdminLink"));
+			WebDriverWait wait = new WebDriverWait(action.driver, 60);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox1"));
+			Thread.sleep(1000);
+			//Select new profile check box
+			action.SelectCheckBox(locator.getProperty("Newprofilechk"));
+			Thread.sleep(4000);
+			//Select SM from SM list
+			action.SelectFromdropDown(locator.getProperty("Upr.smlist"), input.getProperty("SM_Pune"));
+			Thread.sleep(2000);
+			//Select location from list
+			action.SelectFromdropDown(locator.getProperty("Upr.smlisthl"), input.getProperty("Pune"));
+			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.checkbox1"))));
+			//Select the CM checkbox
+			action.SelectCheckBox(locator.getProperty("Upr.checkbox2"));
+			Thread.sleep(1000);
+			//Select new profile checkbox
+			action.SelectCheckBox(locator.getProperty("Newprofilecmchk"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Upr.cmlist"))));
+			//Select CM from list
+			action.SelectFromdropDown(locator.getProperty("Upr.cmlist"), input.getProperty("cm29"));
+			Thread.sleep(4000);
+			//Select Template from list
+			action.SelectFromdropDown(locator.getProperty("Upr.templatelist"), input.getProperty("Template"));
+			Thread.sleep(2000);
+			//Click on Identity link
+			action.DoubleClickButton(locator.getProperty("Identity"));
+			//Select SIP domain from list
+			action.SelectFromdropDown(locator.getProperty("UPR.SIP"), input.getProperty("Sipdomain"));
+			Thread.sleep(2000);
+			//Click on edit link
+			action.DoubleClickButton(locator.getProperty("Editcmf"));
+			//enter com profile password
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("cnfcomprofpass"))));
+			action.entertext(locator.getProperty("Upr.comprofilepass"), "Avaya123$");
+			action.entertext(locator.getProperty("Upr.confirmpass"), "Avaya123$");
+			Thread.sleep(1000);
+			//Click on Run Now button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Runnow"))));
+			action.DoubleClickButton(locator.getProperty("Users.Runnow"));
+			action.WaitForTitle(locator.getProperty("Schedule_Bulk_Edit_Job"));
+			Thread.sleep(1000);
+			//Click on refresh button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("TableRefresh"))));
+			action.ClickButton(locator.getProperty("TableRefresh"));
+			//Click on Commit button
+			action.DoubleClickButton(locator.getProperty("Commit"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			//Select user
+			for(int j=0;j<2;j++)
+			{
+			action.SelectElementByLoginnamewithoutfilter("a1"+j+"@avaya.com");
+			Thread.sleep(1000);
+			//Click on Edit button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Users.Edit"))));
+			action.DoubleClickButton(locator.getProperty("Users.Edit"));
+			action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+			action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+			Thread.sleep(1000);
+			//verify that CM is assigned to user
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("Upr.cmcheckbox2"))));
+			action.VerifySelectcheckbox(locator.getProperty("Upr.smcheckbox1"));
+			action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox2"));
+			Thread.sleep(500);
+			action.DoubleClickButton(locator.getProperty("Users.Commit"));
+			action.WaitForTitle(locator.getProperty("User_Management"));
+			Thread.sleep(500);
+			action.SelectElementByLoginnamewithoutfilter("a1"+j+"@avaya.com");
+			Thread.sleep(500);
+			}
+			
+	}
+	
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException
+{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass
+	  public void Close() throws IOException, InterruptedException
+    {
+		action.logout(action);
+	}
+	
+
+}

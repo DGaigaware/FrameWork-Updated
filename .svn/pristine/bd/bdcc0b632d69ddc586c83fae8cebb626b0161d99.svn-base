@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" preserve-order="true">
+
+<test name="Work Assignment" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.workassgnment.*"/> 
+    </packages> 
+  </test> 
+  
+ <test name="SPM" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.spm.*"/>
+    </packages>
+  </test> 
+  <test name="IMPORT" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.imprt.*"/>
+    </packages>
+  </test>
+  <test name="RTS" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.RTS.*"/>
+    </packages>
+  </test>
+      
+            
+  <test name="UPM_Search" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.upm.advancesearch.*"/> 
+    </packages>
+  </test>
+  
+			  
+  <test name="UPM_Test" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.upmtest.*"/>
+    </packages>
+  </test>
+      
+     <test name="UPM_Basic" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.upm.basic.*"/>
+    </packages>
+  </test> 		 
+   	   	
+   	
+<test name="UPR_Create" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.upr.create.*"/> 
+    </packages>
+  </test>
+  
+  
+  <test name="UPR_Basic" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.upr.basic.*"/>
+    </packages>
+  </test>
+ 
+  
+  <test name="UPR_Elements" preserve-order="true" thread-count="1">
+   <packages>
+     <package name="com.avaya.smgr.upr.elements.*"/>
+   </packages>
+  </test>
+ 
+  <test name="UPR_Tenancy" preserve-order="true" thread-count="1">
+   <packages>
+     <package name="com.avaya.smgr.upr.tenancy.*"/>
+   </packages>
+  </test>
+  
+ 
+  <test name="Tenancy1" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Tenant1.*"/>
+    </packages>
+  </test>
+    <test name="Tenancy2" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Tenant2.*"/>
+    </packages>
+  </test>
+  
+  <test name="Tenancy3" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Tenant3.*"/>
+    </packages>
+  </test>
+    <test name="Tenancy4" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Tenant4.*"/>
+    </packages>
+  </test>
+   <test name="Tenancy5" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Tenant5.*"/>
+    </packages>
+  </test>
+     
+  
+   <test name="PEM" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.pem.*"/>
+    </packages>
+  </test>
+  
+  <test name="CC" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Links.*"/> 
+    </packages> 
+  </test>
+  			
+  <test name="GLS" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.gls.*"/> 
+    </packages> 
+  </test>
+  <test name="Scheduler" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.Scheduler.*"/> 
+    </packages> 
+  </test>
+   <test name="SDM" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.sdm.*"/> 
+    </packages> 
+  </test>
+  <test name="WebLM" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.weblm.*"/> 
+    </packages> 
+  </test>
+   <test name="Events" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.events.*"/> 
+    </packages> 
+  </test>
+ 
+  
+ <test name="Geo_Configure" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.geo.configure.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="Geo_Primary" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.geo.primary.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="Geo_Elements" preserve-order="true" >
+    <packages>
+      <package name="com.avaya.smgr.geo.elements.*"/> 
+    </packages> 
+  </test> 
+
+</suite> <!-- Suite -->

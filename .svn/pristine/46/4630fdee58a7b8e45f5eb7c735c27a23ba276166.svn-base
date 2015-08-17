@@ -1,0 +1,107 @@
+package com.avaya.smgr.workassgnment.assmanagement;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+import com.avaya.smgr.Worksetup.WorkSetup;
+
+public class UserManagement {
+	boolean b=false,match=false;;
+	UserAction action =null;
+	Properties locator=null;
+	WorkSetup setup=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeClass
+public void setup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+   	setup=new WorkSetup();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+   }
+
+@Test
+public void Verify_EWA_User() throws Exception
+{
+	action.driver.navigate().refresh();
+	//Click on User Management,Manage Users
+	action.ClickLink(locator.getProperty("User_Management"));
+	action.WaitForTitle(locator.getProperty("User_Management"));
+	action.VerifyTitle(locator.getProperty("User_Management"));
+	action.ClickLink(locator.getProperty("Manage_Users"));
+	action.SwithchFrame("iframe0");
+	//Select WA User from table
+	action.SelectElementByLoginname(input.getProperty("UsersLoginnameWS"));
+	action.WaitToClick(locator.getProperty("Users.Edit"));
+	action.ClickButton(locator.getProperty("Users.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	action.VerifySelectcheckbox(locator.getProperty("Upr.cmcheckbox3"));
+	//Verify Reource Details button
+	action.DoubleClickButton(locator.getProperty("User.Resourcedetail"));
+	//Switch to Assignment Management page
+	action.WaitForTitle(locator.getProperty("Assignment_ManagementDocument"));
+	action.VerifyTitle(locator.getProperty("Assignment_ManagementDocument"));
+	action.VerifyElementValue(locator.getProperty("Resourcetablerow"), "work@avaya.com");
+	action.VerifySelectcheckbox(locator.getProperty("Resourcechk1"));
+	//click on Cancel button
+	action.ClickButton(locator.getProperty("Upgrade.Cancel"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify Account Details button
+	action.DoubleClickButton(locator.getProperty("User.AccDetail"));
+	//Switch to  Account Assignment Details page
+	action.WaitForTitle(locator.getProperty("Account_Assignment_Details"));
+	action.VerifyTitle(locator.getProperty("Account_Assignment_Details"));
+	action.VerifyElementDisplay(locator.getProperty("Attributetab"));
+	action.VerifyElementDisplay(locator.getProperty("Propertytab"));
+	//click on Cancel button
+	action.ClickButton(locator.getProperty("Acc.AttrCancelbtn"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+	Thread.sleep(1000);
+	//Verify Source Details button
+	action.DoubleClickButton(locator.getProperty("User.SourceDetail"));
+	//Switch to  Source Assignment Details page
+	action.WaitForTitle(locator.getProperty("Source_Assignment_Details"));
+    action.VerifyTitle(locator.getProperty("Source_Assignment_Details"));
+    action.VerifyElementDisplay(locator.getProperty("Attributetab"));
+	//click on Cancel button
+	action.ClickButton(locator.getProperty("Acc.SourceCancel"));
+	action.WaitForTitle(locator.getProperty("User_Profile_Edit"));
+	action.VerifyTitle(locator.getProperty("User_Profile_Edit"));
+	
+}
+
+	@AfterMethod
+	public void Screenshots(ITestResult result) throws IOException, InterruptedException
+	{
+		  
+		action.Screenshot(result, action);
+	}
+	
+	@AfterClass
+	public void Close() throws IOException, InterruptedException
+	{
+		action.logout(action);
+	}
+
+
+}

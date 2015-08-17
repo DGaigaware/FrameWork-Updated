@@ -1,0 +1,193 @@
+package com.avaya.smgr.sdm;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class UserSettings {
+	boolean b;
+	UserAction action =null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeMethod(alwaysRun=true)
+public void setup() throws IOException, InterruptedException
+	{
+	action = new UserAction();
+	locator=new Properties();
+	locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+	input=new Properties();
+	input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+/*
+@Test(description="Verify the title and elements of User_Settings page")
+public void VerifypageElements() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	//Verify Edit button is enabled
+	action.VerifyEnableButton(locator.getProperty("USetting.Edit"));
+	action.VerifyDisableCheckbox(locator.getProperty("USetting.Webchk"));
+	action.VerifyDisableCheckbox(locator.getProperty("USettings.proxychk"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyEnableButton(locator.getProperty("USetting.Edit"));
+	action.VerifyEnableButton(locator.getProperty("USettings.Resetbtn"));
+	action.VerifyEnableButton(locator.getProperty("USettings.Canceltbtn"));
+	action.VerifyEnableCheckbox(locator.getProperty("USetting.Webchk"));
+	action.VerifyEnableCheckbox(locator.getProperty("USettings.proxychk"));
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify the error message when SSO User Name field is empty")
+public void UserSetSSOEmpty() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.ClearText(locator.getProperty("UserSet.SSO"));
+	action.entertext(locator.getProperty("UserSet.SSOPassword"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOCnfPass"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.CompanyID"), input.getProperty("UserId"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue("Enter the SSO User Name. It is a mandatory field.");
+	Thread.sleep(1000);
+}
+@Test(description="Verify the error message when SSO Password field is empty")
+public void UserSetSSOPassEmpty() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.entertext(locator.getProperty("UserSet.SSO"), input.getProperty("UserId"));
+	action.ClearText(locator.getProperty("UserSet.SSOPassword"));
+	//action.entertext(locator.getProperty("UserSet.SSOPassword"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOCnfPass"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.CompanyID"), input.getProperty("UserId"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue("Enter the SSO Password. It is a mandatory field.");
+	Thread.sleep(1000);
+}
+
+@Test(description="Verify the error message when Confirm password field is empty")
+public void UserSetSSOCnfPassEmpty() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.entertext(locator.getProperty("UserSet.SSO"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOPassword"), input.getProperty("UserId"));
+	action.ClearText(locator.getProperty("UserSet.SSOCnfPass"));
+
+	//action.entertext(locator.getProperty("UserSet.SSOCnfPass"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.CompanyID"), input.getProperty("UserId"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue("SSO Password does not match with Confirm Password.");
+	Thread.sleep(1000);
+}
+@Test(description="Verify the error message when Company ID field is empty")
+public void UserCompIDEmpty() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.entertext(locator.getProperty("UserSet.SSO"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOPassword"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOCnfPass"), input.getProperty("UserId"));
+	action.ClearText(locator.getProperty("UserSet.CompanyID"));
+
+	//action.entertext(locator.getProperty("UserSet.CompanyID"), input.getProperty("UserId"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	Thread.sleep(2000);
+	action.VerifyStringValue("Enter the Company ID. It is a mandatory field.");
+	Thread.sleep(1000);
+}*/
+@Test(description="Verify the user settings page information is sucessfully saved")
+public void UserSetSaved() throws Exception
+{
+	action.driver.navigate().refresh();
+	action.ClickLink(locator.getProperty("Solution_Deployment_Manager"));
+	action.WaitForTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.VerifyTitle(locator.getProperty("Solution_Deployment_Manager"));
+	action.ClickLink(locator.getProperty("User_Settings"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.VerifyTitle(locator.getProperty("User_Settings"));
+	action.SwithchFrame("iframe0");
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.entertext(locator.getProperty("UserSet.SSO"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOPassword"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.SSOCnfPass"), input.getProperty("UserId"));
+	action.entertext(locator.getProperty("UserSet.CompanyID"), input.getProperty("UserId"));
+	action.ClickButton(locator.getProperty("USetting.Edit"));
+	action.WaitForTitle(locator.getProperty("User_Settings"));
+	action.ClickButton(locator.getProperty("Import.Status"));
+	Thread.sleep(2000);
+	action.VerifyStringValue("User Settings has been saved successfully");
+	Thread.sleep(1000);
+}
+@AfterMethod(alwaysRun=true)
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+	action.logout(action);
+
+}
+
+@AfterClass(alwaysRun=true)
+public void Close() throws IOException, InterruptedException
+{
+}
+
+
+}

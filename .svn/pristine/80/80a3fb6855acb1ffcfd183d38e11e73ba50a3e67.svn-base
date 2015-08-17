@@ -1,0 +1,77 @@
+package com.avaya.smgr.upr.create;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.avaya.smgr.Tsetup.Tenantsetup;
+
+import utility.UserAction;
+
+
+public class UPRCancel {
+	boolean b;
+	UserAction action =null;
+	Tenantsetup setup=null;
+	Properties locator=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeClass
+public void setup() throws IOException, InterruptedException
+	{
+	action = new UserAction();
+	locator=new Properties();
+	setup=new com.avaya.smgr.Tsetup.Tenantsetup();
+	locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+	input=new Properties();
+	input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+	}
+
+@Test(description="Verify the functionality of Cancel Button")
+public void UPR_Cancel() throws Exception
+{
+	
+action.driver.navigate().refresh();
+//Click on User Provisioning Rule
+action.ClickLink(locator.getProperty("User_Provisioning_Rule"));
+action.WaitForTitle(locator.getProperty("User_Provisioning_Rules"));
+
+action.SwithchFrame("iframe0");
+//Click on New Button
+action.DoubleClickButton(locator.getProperty("Users.New"));
+action.WaitForTitle(locator.getProperty("New_User_Provisioning_Rule"));
+
+//Fill up the required fields of Upr
+action.entertext(locator.getProperty("Uprname"),input.getProperty("upr1"));
+action.SelectFromdropDown(locator.getProperty("LangDropdown"), input.getProperty("Danish"));
+action.SelectFromdropDown(locator.getProperty("TimeDropdown"), input.getProperty("Danishtime"));
+//Click on Cancel Button and Verify the title of the page
+action.DoubleClickButton(locator.getProperty("Cancel"));
+action.WaitForTitle(locator.getProperty("User_Provisioning_Rules"));
+action.DoubleClickButton(locator.getProperty("Upr.refresh"));
+Thread.sleep(1000);
+setup.VerifydeleteUprname(action,input.getProperty("upr1"));
+	
+}
+
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass
+public void Close() throws IOException, InterruptedException{
+	action.logout(action);
+}
+
+}

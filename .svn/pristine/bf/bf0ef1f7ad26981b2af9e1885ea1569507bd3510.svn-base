@@ -1,0 +1,345 @@
+package com.avaya.smgr.workassgnment.attributeproperty;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import com.avaya.smgr.Worksetup.*;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import utility.UserAction;
+
+
+public class AttrManagement {
+	boolean b=false,match=false;;
+	UserAction action =null;
+	Properties locator=null;
+	WorkSetup setup=null;
+	Properties read=null;
+	Properties input=null;
+	public WebDriver driver;
+@BeforeClass
+public void setup() throws IOException, InterruptedException{
+	action = new UserAction();
+	locator=new Properties();
+   	input=new Properties();
+   	setup=new WorkSetup();
+    locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+    input.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\testData\\INPUT.properties"));
+	action.login(input.getProperty("UserId"),input.getProperty("Password"),action);
+   }
+
+@Test(description="Verify the page elements")
+public void Verify_Page() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	//Verify buttons are enabled
+	action.VerifyEnableButton(locator.getProperty("Attribute.CatAdd"));
+	action.VerifyEnableButton(locator.getProperty("Attribute.CatDelete"));
+	action.VerifyEnableButton(locator.getProperty("Attribute.AttrAdd"));
+	//verify the buttons are disabled
+	action.VerifyDisableButton(locator.getProperty("Attribute.AttrDelete"));
+}
+
+@Test(description="Verify the search operation for Category")
+public void Verify_Search_Catagory() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("WAT.Searchbox"))));
+	//Enter category in search box to be search
+	action.entertext(locator.getProperty("WAT.Searchbox"), "Channel");
+	setup.VerifyAddCatagory(action, "Channel");
+	//Thread.sleep(1000);
+	//Verify message after entering invalid category to search
+	action.ClearText(locator.getProperty("WAT.Searchbox"));
+	action.entertext(locator.getProperty("WAT.Searchbox"), "Chanel");
+	String str=action.driver.findElement(By.xpath(locator.getProperty("NomatchRowcat"))).getText();
+    Assert.assertEquals("No matching records found", str);
+}
+
+
+@Test(description="Verify the search operation for Attribute")
+public void Verify_Search_Attribute() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("WAT.SearchboxAttr"))));
+	//Enter attribute in search box to be search
+	action.entertext(locator.getProperty("WAT.SearchboxAttr"), "Voice");
+	setup.VerifyAddAttribute(action, "Voice");
+	//Thread.sleep(1000);
+	////Verify message after entering invalid attribute to search
+	action.ClearText(locator.getProperty("WAT.SearchboxAttr"));
+	action.entertext(locator.getProperty("WAT.SearchboxAttr"), "vice");
+	String str=action.driver.findElement(By.xpath(locator.getProperty("NomatchRow"))).getText();
+    Assert.assertEquals("No matching records found", str);
+}
+
+@Test(description="Verify the error mesaage on empty category name")
+public void Verify_Error_Msg() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Verify the error message on empty attribute name
+	action.ClickButton(locator.getProperty("Attribute.CatAdd"));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.Cataddbtn"))));
+	action.ClickButton(locator.getProperty("Attribute.Cataddbtn"));
+	Thread.sleep(1000);
+	action.VerifyStringValue("Category has invalid content.");
+	}
+
+
+
+@Test(description="Verify the Add category operation",priority=1)
+public void Add_Category() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.CatAdd"));
+	action.entertext(locator.getProperty("Attribute.Newcat"), input.getProperty("Medium"));
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.Cataddbtn"));
+	Thread.sleep(1000);
+	//verify message
+	action.VerifyStringValue("Add Category Medium successful!");
+	//Enter Category name
+	setup.VerifyAddCatagory(action, input.getProperty("Medium"));
+	Thread.sleep(1000);
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.CatAdd"));
+	//Enter Category name
+	action.entertext(locator.getProperty("Attribute.Newcat"), "abc");
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.Cataddbtn"));
+	Thread.sleep(1000);
+	//verify message
+	action.VerifyStringValue("Add Category abc successful!");
+	setup.VerifyAddCatagory(action,"abc");
+}
+
+
+@Test(description="Verify the add Attribute operation",priority=2)
+public void Add_Attribute() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	Thread.sleep(2000);
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+    //Select category to add attribute
+	action.SelectCheckBox(locator.getProperty("Attribute.CatChk1"));
+	Thread.sleep(1000);
+	action.VerifyDisableButton(locator.getProperty("Attribute.AttrAdd"));
+	//Thread.sleep(1000);
+	action.SelectCheckBox(locator.getProperty("Attribute.CatChk")+"Medium']");
+	wait.until(ExpectedConditions.elementToBeSelected(By.xpath(locator.getProperty("Attribute.CatChk")+"Medium']")));
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.AttrAdd"));
+	//Enter attribute name
+	action.entertext(locator.getProperty("Attribute.NewAttr"), input.getProperty("Voice"));
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.Attraddbtn"));
+	Thread.sleep(1000);
+	//Verify Message on Successful addition of attribute
+	action.VerifyStringValue("Add attribute Voice for category Medium successful!");
+
+}
+
+
+@Test(description="Verify the error meassage on adding category with same name",priority=3)
+public void Verify_Error() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.CatAdd"));
+	//Enter category name
+	action.entertext(locator.getProperty("Attribute.Newcat"), input.getProperty("Medium"));
+    //Click on Add button
+	action.ClickButton(locator.getProperty("Attribute.Cataddbtn"));
+	Thread.sleep(1000);
+	//verify error message
+	action.VerifyStringValue("Error: Category Medium already exist!");
+}
+
+
+
+@Test(description="Verify the error meassage on deleting category before deleing attribute",priority=4)
+public void Delete_Catagory_Before_Atrribute() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Select category to delete
+	action.SelectCheckBox(locator.getProperty("Attribute.CatChk1"));
+	Thread.sleep(1000);
+	setup.SelectCatagory(action, "Medium");
+	//Thread.sleep(1000);
+	//Click on Delete button
+	action.ClickButton(locator.getProperty("Attribute.CatDelete"));
+	//Thread.sleep(1000);
+	//Click on Confirm dutton
+	action.ClickButton(locator.getProperty("DeleteCnfrm"));
+	Thread.sleep(1000);
+	//Verify error message
+	action.VerifyStringValue("Delete Category Medium failed. Cause of failure:Category is referenced by an attribute.");
+	
+}
+
+
+@Test(description="Verify the Deletion of Attribute",priority=5)
+public void Delete_Atrribute() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	//Thread.sleep(2000);
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Select category to delete
+	action.SelectCheckBox(locator.getProperty("Attribute.CatChk1"));
+	Thread.sleep(1000);
+	setup.SelectCatagory(action, "Medium");
+	//Thread.sleep(1000);
+	//Select attribute
+	setup.SelectAddAttribute(action, "Voice");
+	//Thread.sleep(1000);
+	action.WaitToClick(locator.getProperty("Attribute.AttrDelete"));
+	//Click on Delete button
+	action.ClickButton(locator.getProperty("Attribute.AttrDelete"));
+	//Click on Confirm button
+	action.ClickButton(locator.getProperty("DeleteCnfrm"));
+	Thread.sleep(1000);
+	//verify attribute get deleted
+	action.VerifyStringValue("Delete of attribute Voice from category Medium successful!");
+	setup.VerifydeleteAttribute(action, "Voice");
+	}
+
+
+@Test(description="Verify the Deletion of category",priority=6)
+public void Delete_Catagory() throws Exception
+{
+	action.RefreshPage();
+	//Navigate to work assignment
+	action.ClickLink(locator.getProperty("Work_Assignment"));
+	action.WaitForTitle(locator.getProperty("Work_Assignment"));
+	action.ClickLink(locator.getProperty("Attribute_Management"));
+	//verify page title
+	action.WaitForTitle(locator.getProperty("Attribute_Management"));
+	action.VerifyTitle(locator.getProperty("Attribute_Management"));
+	action.SwithchFrame("iframe0");
+	WebDriverWait wait=new WebDriverWait(action.driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator.getProperty("Attribute.CatAdd"))));
+	//Select category to delete
+	action.SelectCheckBox(locator.getProperty("Attribute.CatChk1"));
+	Thread.sleep(1000);
+	setup.SelectCatagory(action, "Medium");
+	//Thread.sleep(1000);
+	//Click on Delete button
+	action.ClickButton(locator.getProperty("Attribute.CatDelete"));
+	//Thread.sleep(1000);
+	//Click on Confirm button
+	action.ClickButton(locator.getProperty("DeleteCnfrm"));
+	Thread.sleep(1000);
+	action.VerifyStringValue("Delete Category Medium successful!");
+	setup.VerifydeleteCatagory(action, "Medium");
+	
+}
+
+@AfterMethod
+public void Screenshots(ITestResult result) throws IOException, InterruptedException
+{
+	  
+	action.Screenshot(result, action);
+}
+
+@AfterClass
+public void Close() throws IOException, InterruptedException
+{
+	action.logout(action);
+}
+}
