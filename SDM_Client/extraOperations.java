@@ -34,7 +34,7 @@ public class extraOperations {
     public static void main(String args[]){
         String input[] = {"SM 7.0 Profile 5 Max Devices 23,300","SM 7.0 Profile 1 Max Devices 2,500","SM 7.0 Profile 2 Max Devices 4,500"};
         int tem[] = {12,20,25,6};
-        tempSDM ob = new tempSDM();
+        extraOperations ob = new extraOperations();
         int arr[] = {0,0,0} ;
         List<Integer> i= new ArrayList<Integer>();
        

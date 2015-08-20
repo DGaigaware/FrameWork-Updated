@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class _VM {
-	Settings obj = new Settings();
+	_Settings obj = new _Settings();
 	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
 	public void _AddVM() throws InterruptedException, IOException {
 		

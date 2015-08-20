@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 
-public class Settings {
+public class _Settings {
 	
 	final String _dataStore = "boundlist-1542-listEl";
 	final String _FilePathFootPrintSelect = "boundlist-1591-listEl";

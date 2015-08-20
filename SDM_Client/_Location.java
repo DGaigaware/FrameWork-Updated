@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class _Location {
-	Settings obj = new Settings();
+	_Settings obj = new _Settings();
 	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
 	
 	public void _AddLocation() throws IOException, InterruptedException {
