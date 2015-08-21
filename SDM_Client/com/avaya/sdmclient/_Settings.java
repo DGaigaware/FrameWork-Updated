@@ -30,9 +30,9 @@ public class _Settings {
 	final String _SWLibFileSelect = "boundlist-1546-listEl";
 	final String _SWLibandURLFootPrintSelect = "boundlist-1545-listEl";
 	final String _LocationSelect = "boundlist-1537-listEl";
-	final String _TimeZoneSelect = "boundlist-1594-listEl";
-	final String _NetworkPublicSelect = "boundlist-1595-listEl";
-	final String _NetworkOOBMSelect = "boundlist-1596-listEl";
+	final String _TimeZoneSelect = "boundlist-1593-listEl";
+	final String _NetworkPublicSelect = "boundlist-1594-listEl";
+	final String _NetworkOOBMSelect = "boundlist-1595-listEl";
 	final List<String> _bListGetComponent = new ArrayList<String>();
 	
 	public void _addToList(){
@@ -323,7 +323,7 @@ public class _Settings {
 		public String fluentWait(final By locator,WebDriver driver,int _time,String _Test) {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(_time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 			wait.until(ExpectedConditions.textToBePresentInElement(locator, _Test));
-			logClass.info(driver.findElement(locator).getText());
+			logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 		    return driver.findElement(locator).getText();
 		}
 		

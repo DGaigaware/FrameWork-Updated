@@ -33,7 +33,7 @@ public class _VM {
 		final String _SWLib = "Software Library";
 		final String _URL = "URL";
 		
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(6500, TimeUnit.MILLISECONDS);
 		driver.manage().window().maximize();
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -110,7 +110,7 @@ public class _VM {
 		driver.findElement(By.xpath(".//*[@id='cmbSelectFlexiFootPrint-inputEl']")).click();
 		Thread.sleep(450);
 		
-		obj._boundListSelect(driver, "Profile 5", 1);
+		obj._boundListSelect(driver, "Profile 1", 1);
 		//Thread.sleep(250);
 		_Check = obj._checkError(driver);
 		obj._errorBox(driver,obj._checkError(driver));
@@ -121,7 +121,7 @@ public class _VM {
 		obj._exec(!_Check);
 		
 		driver.findElement(By.xpath(".//*[@id='domain-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='domain-inputEl']")).sendKeys("smgrdev.avaya.com");
+		driver.findElement(By.xpath(".//*[@id='domain-inputEl']")).sendKeys("testsm221.smgrdev.avaya.com");
 		
 		obj._IPFill(driver, "148.147.162.221", ".//*[@id='textfield-1548-inputEl']");
 	
@@ -142,6 +142,8 @@ public class _VM {
 		driver.findElement(By.xpath(".//*[@id='timezone-inputEl']")).click();
 		
 		obj._boundListSelect(driver, "Asia/Kolkata", 5);
+		
+		Thread.sleep(2500);
 		logClass.info("Selected Given TimeZone");
 		
 		driver.findElement(By.xpath(".//*[@id='CUSTLOGIN-inputEl']")).clear();
@@ -189,16 +191,14 @@ public class _VM {
 		driver.findElement(By.linkText("Status Details")).click();
 		logClass.info("Checking Status Details");
 		
+		WebDriverWait wait = new WebDriverWait(driver, 3000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id("vmDeployStatus")).getText());
 		
 		System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver, 1500, "VM Deployment Completed"));
 		
-		if(driver.findElement(By.id("vmDeployStatus")).getText().contains("VM Deployment Completed"))
-			{
-				driver.findElement(By.xpath(".//*[@id='tool-1541-toolEl']")).click();
-				System.out.println("Completed Successfully");
-			}
+		obj._StatusCheck(driver, "VM Deployment Completed", 20);
 		
 	}
 	
@@ -234,6 +234,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='saveEditVM-btnInnerEl']")).click();
 		
+		obj._errorBox(driver, obj._checkError(driver));
 		logClass.endTestCase("Edited VM Successfully");
 	}
 
