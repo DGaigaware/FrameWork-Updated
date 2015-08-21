@@ -1,0 +1,239 @@
+2015-08-21 11:43:40,552 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:43:40,552 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 11:43:49,159 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:43:49,275 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:43:49,275 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 11:43:56,568 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:43:56,776 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:43:56,776 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 11:44:07,895 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:44:10,516 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:44:10,823 INFO  [Logger] Adding new Host 
+2015-08-21 11:47:24,490 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:47:24,491 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 11:47:34,851 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:47:36,976 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:47:37,205 INFO  [Logger] Adding new Host 
+2015-08-21 11:47:40,301 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 11:47:40,305 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:47:40,306 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 11:47:49,987 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:47:56,393 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:48:05,790 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:48:05,790 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 11:48:10,810 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:51:22,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:51:22,827 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 11:51:33,989 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:51:35,851 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:51:36,308 INFO  [Logger] Adding new Host 
+2015-08-21 11:51:38,835 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 11:51:38,837 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:51:38,837 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 11:51:45,388 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:51:49,958 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:51:52,835 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 11:51:52,837 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:51:52,837 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 11:51:59,494 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:52:04,883 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 11:52:05,817 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 11:53:12,007 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:53:12,008 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 11:53:25,351 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:53:28,204 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:53:28,749 INFO  [Logger] Adding new Host 
+2015-08-21 11:53:30,845 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 11:53:30,851 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:53:30,851 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 11:53:38,354 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:53:43,294 INFO  [Logger] In 'Host' Tab 
+2015-08-21 11:53:45,620 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 11:53:45,622 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:53:45,622 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 11:53:51,661 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:53:57,597 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 11:53:59,429 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 11:56:23,659 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:56:23,660 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 11:56:32,181 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:56:34,633 INFO  [Logger] Adding new Location 
+2015-08-21 11:56:37,179 INFO  [Logger] Saved New Location 
+2015-08-21 11:56:37,180 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 11:56:37,182 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:56:37,182 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-21 11:56:43,526 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:56:47,944 INFO  [Logger] Saved Location 
+2015-08-21 11:56:47,944 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-21 11:56:47,949 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:56:47,949 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-21 11:56:56,823 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:56:58,430 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-21 11:56:59,589 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-21 11:57:32,004 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:57:32,005 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 11:57:41,480 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:57:41,823 INFO  [Logger] Adding new Location 
+2015-08-21 11:57:43,223 INFO  [Logger] Saved New Location 
+2015-08-21 11:57:43,223 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 11:57:43,257 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:57:43,257 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-21 11:57:49,099 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:57:54,120 INFO  [Logger] Saved Location 
+2015-08-21 11:57:54,121 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-21 11:57:54,124 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 11:57:54,124 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-21 11:57:58,934 INFO  [Logger] Clicked on VM management 
+2015-08-21 11:58:03,497 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-21 11:58:04,127 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-21 12:01:21,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:01:21,827 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 12:01:32,206 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:01:32,472 INFO  [Logger] Adding new Location 
+2015-08-21 12:01:34,111 INFO  [Logger] Saved New Location 
+2015-08-21 12:01:34,111 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 12:02:20,148 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:02:20,149 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 12:02:34,250 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:02:34,765 INFO  [Logger] Adding new Location 
+2015-08-21 12:02:36,538 INFO  [Logger] Saved New Location 
+2015-08-21 12:02:36,538 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 12:03:05,668 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:03:05,669 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 12:03:17,555 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:03:17,949 INFO  [Logger] Adding new Location 
+2015-08-21 12:03:19,512 INFO  [Logger] Saved New Location 
+2015-08-21 12:03:19,512 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 12:03:19,530 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:03:19,530 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-21 12:03:25,029 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:03:31,107 INFO  [Logger] Saved Location 
+2015-08-21 12:03:31,107 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-21 12:03:31,110 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:03:31,110 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-21 12:03:39,023 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:03:42,135 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-21 12:03:43,527 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-21 12:05:51,706 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:05:51,707 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 12:06:01,592 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:06:02,039 INFO  [Logger] Adding new Location 
+2015-08-21 12:06:03,573 INFO  [Logger] Saved New Location 
+2015-08-21 12:06:08,178 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 12:06:08,188 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:06:08,188 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-21 12:06:14,170 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:06:19,387 INFO  [Logger] Saved Location 
+2015-08-21 12:06:19,387 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-21 12:06:19,389 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:06:19,389 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-21 12:06:24,291 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:06:27,994 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-21 12:06:28,694 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-21 12:18:40,859 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:18:40,860 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 12:18:52,569 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:18:54,819 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 12:18:55,940 INFO  [Logger] Given Name 
+2015-08-21 12:19:01,917 INFO  [Logger] Choosen From File 
+2015-08-21 12:19:02,467 INFO  [Logger] File Path Given 
+2015-08-21 12:50:19,080 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:50:19,081 INFO  [Logger]                              Adding vCenter to given Location                             
+2015-08-21 12:50:28,210 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:50:30,360 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:50:31,200 INFO  [Logger] Adding vCenter 
+2015-08-21 12:50:32,567 ERROR [Logger] Duplicate Records! 
+2015-08-21 12:50:32,568 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-21 12:50:32,827 ERROR [Logger] Something went wrong :( 
+2015-08-21 12:50:32,827 INFO  [Logger] Check Screenshot for the same 
+2015-08-21 12:50:32,926 INFO  [Logger] *************************End of test caseAdded vCenter Succesfully******************************
+
+ 
+2015-08-21 12:50:32,928 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:50:32,928 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-08-21 12:50:37,520 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:50:37,910 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:50:48,072 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:50:48,073 INFO  [Logger]                              Deleting vCenter to given Location                             
+2015-08-21 12:50:53,605 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:50:55,721 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:50:56,910 INFO  [Logger] *************************End of test caseDeleted Successfully******************************
+
+ 
+2015-08-21 12:52:14,143 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:52:14,143 INFO  [Logger]                              Adding vCenter to given Location                             
+2015-08-21 12:52:26,244 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:52:27,812 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:52:28,593 INFO  [Logger] Adding vCenter 
+2015-08-21 12:52:34,271 INFO  [Logger] *************************End of test caseAdded vCenter Succesfully******************************
+
+ 
+2015-08-21 12:52:34,273 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:52:34,274 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-08-21 12:52:40,177 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:52:42,186 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:52:49,074 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:52:49,075 INFO  [Logger]                              Deleting vCenter to given Location                             
+2015-08-21 12:52:54,365 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:52:55,977 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:52:57,604 INFO  [Logger] *************************End of test caseDeleted Successfully******************************
+
+ 
+2015-08-21 12:54:16,502 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:54:16,503 INFO  [Logger]                              Adding vCenter to given Location                             
+2015-08-21 12:54:25,494 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:54:27,820 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:54:28,896 INFO  [Logger] Adding vCenter 
+2015-08-21 12:54:34,549 INFO  [Logger] *************************End of test caseAdded vCenter Succesfully******************************
+
+ 
+2015-08-21 12:54:34,552 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:54:34,552 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-08-21 12:54:41,094 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:54:43,956 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 12:54:50,423 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 12:54:50,423 INFO  [Logger]                              Deleting vCenter to given Location                             
+2015-08-21 12:54:55,351 INFO  [Logger] Clicked on VM management 
+2015-08-21 12:54:57,045 INFO  [Logger] Clicked on 'Map vCenter'  

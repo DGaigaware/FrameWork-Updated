@@ -143,6 +143,23 @@
     </packages> 
   </test> 
   
+  <test name="LocationOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.workassgnment.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="HostOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.workassgnment.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="VMOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.smgr.workassgnment.*"/> 
+    </packages> 
+  </test>
  <!--test name="Geo_Configure" preserve-order="true" thread-count="1">
     <packages>
       <package name="com.avaya.smgr.geo.configure.*"/> 
