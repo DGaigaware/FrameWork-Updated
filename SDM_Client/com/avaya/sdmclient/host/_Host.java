@@ -1,9 +1,13 @@
+package com.avaya.sdmclient.host;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.testng.annotations.Test;
+import com.avaya.sdmclient.*;
 public class _Host {
 	_Settings obj = new _Settings();
 
@@ -11,7 +15,8 @@ public class _Host {
 	
 	//public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
-		
+	
+	@Test(description="Adding Host to given Location")	
 	public void addHost() throws IOException, InterruptedException{
 	
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
@@ -22,7 +27,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 				
-		obj._findLocationOrHost(driver, "Pune");
+		obj._findLocationOrHost(driver, "testLoc");
 
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
@@ -51,6 +56,7 @@ public class _Host {
 		logClass.endTestCase("Added Host Succesfully");
 	}		
 		
+	@Test(description="Editing Host to given Location",priority=1)
 		public void _EditHost() throws IOException, InterruptedException{
 		
 		logClass.startTestCase("Editing Host to given Location");
@@ -64,7 +70,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
 	
-		obj._findHostInGrid(driver, "GivenHost");
+		obj._findHostInGrid(driver, "148.147.162.196");
 		
 		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
@@ -93,6 +99,8 @@ public class _Host {
 		logClass.endTestCase("Edited Host Succesfully");
 		
 	}
+	
+	@Test(description="Deleting Host to given Location",priority=2)
 		
 		public void _DeleteHost() throws IOException{
 			logClass.startTestCase("Deleting Host to given Location");
@@ -101,7 +109,7 @@ public class _Host {
 			driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 			logClass.info("Clicked on VM management");
 			
-			obj._findLocationOrHost(driver, "NewLocation");
+			obj._findLocationOrHost(driver, "testLoc");
 		
 			obj._findHostInGrid(driver, obj._readFromFile("input.txt", "NewHostName"));
 			

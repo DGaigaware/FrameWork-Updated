@@ -1,13 +1,19 @@
+package com.avaya.sdmclient.vcenter;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
+import com.avaya.sdmclient.*;
 public class _vCenter {
 	_Settings obj = new _Settings();
 
 	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
+	@Test(description="Adding vCenter to given Location")
 	public void _AddvCenter() throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
@@ -20,7 +26,7 @@ public class _vCenter {
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 		
-		obj._findLocationOrHost(driver, "Pune");
+		obj._findLocationOrHost(driver, "NewLocation");
 		
 		driver.findElement(By.xpath(".//*[@id='menuitem-1022-textEl']")).click();
 		logClass.info("Clicked on 'Map vCenter' ");
@@ -46,6 +52,7 @@ public class _vCenter {
 		
 	}
 
+	@Test(description="Editing vCenter to given Location",priority=1)
 	public void _EditvCenter() throws InterruptedException, IOException{
 		
 		logClass.startTestCase("Editing vCenter to given Location");
@@ -58,6 +65,8 @@ public class _vCenter {
 		logClass.info("Clicked on 'Map vCenter' ");
 		
 		obj._findVCenterInGrid(driver, "148.147.162.168");
+		
+		obj._errorBox(driver, obj._checkError(driver));
 		
 		driver.findElement(By.xpath(".//*[@id='editVcenterBtn-btnInnerEl']")).click();
 		
@@ -75,9 +84,10 @@ public class _vCenter {
 		logClass.endTestCase("Edited vCenter Successfully");
 	}
 	
+	@Test(description="Deleting Host to given Location",priority=2)
 	public void _DeletevCenter() throws IOException{
 		
-		logClass.startTestCase("Adding vCenter to given Location");
+		logClass.startTestCase("Deleting vCenter to given Location");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();

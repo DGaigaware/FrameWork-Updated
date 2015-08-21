@@ -1,13 +1,20 @@
+package com.avaya.sdmclient.location;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+import com.avaya.sdmclient._Settings;
+import com.avaya.sdmclient.logClass;
 
 public class _Location {
 	_Settings obj = new _Settings();
 	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
 	
+	@Test(description="Adding Location")
 	public void _AddLocation() throws IOException, InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
@@ -44,10 +51,13 @@ public class _Location {
 		driver.findElement(By.xpath(".//*[@id='savenewlocation-btnInnerEl']")).click();
 		logClass.info("Saved New Location");
 		
+		obj._errorBox(driver, obj._checkError(driver));
 		logClass.endTestCase("Added a new Location");
 		
 	}
 	
+	
+	@Test(description="Editing Location",priority=1)
 	public void _EditLocation() throws IOException{
 		
 		logClass.startTestCase("Edit Location on SDM");
@@ -85,6 +95,8 @@ public class _Location {
 		logClass.endTestCase("Edited Location");
 	}
 	
+	
+	@Test(description="Deleting Location",priority=2)
 	public void _DeleteLocation() throws IOException{
 		
 		logClass.startTestCase("Delete Location on SDM");

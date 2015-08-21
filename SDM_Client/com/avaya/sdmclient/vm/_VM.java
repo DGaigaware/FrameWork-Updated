@@ -1,3 +1,5 @@
+package com.avaya.sdmclient.vm;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -7,10 +9,21 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import com.avaya.sdmclient._Settings;
+import com.avaya.sdmclient.logClass;
+
+import utility.UserAction;
 
 public class _VM {
 	_Settings obj = new _Settings();
 	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
+	UserAction action = new UserAction();
+	
+	@Test(description="Adding VM to given Location and Host")
 	public void _AddVM() throws InterruptedException, IOException {
 		
 		obj._addToList();
@@ -179,7 +192,7 @@ public class _VM {
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id("vmDeployStatus")).getText());
 		
-		System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver));
+		System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver, 1500, "VM Deployment Completed"));
 		
 		if(driver.findElement(By.id("vmDeployStatus")).getText().contains("VM Deployment Completed"))
 			{
@@ -189,6 +202,9 @@ public class _VM {
 		
 	}
 	
+	
+	@Test(description="Editing VM to given Location and Host",priority=1)
+
 	public void _EditVM() throws InterruptedException{
 		
 		logClass.startTestCase("Editing VM to given Location and Host");
@@ -201,7 +217,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
 		
-		obj._findVMForHost(driver, "testcmm221");
+		obj._findVMForHost(driver, "testSM2211");
 		driver.findElement(By.xpath(".//*[@id='editvm-btnInnerEl']")).click();
 		logClass.info("Clicked on - Edit VM");
 		Thread.sleep(750);
@@ -214,15 +230,19 @@ public class _VM {
 		driver.findElement(By.xpath(".//*[@id='textfield-1254-inputEl']")).sendKeys("148.147.162.221");
 		
 		driver.findElement(By.xpath(".//*[@id='textfield-1255-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='textfield-1255-inputEl']")).sendKeys("testcmm221");
+		driver.findElement(By.xpath(".//*[@id='textfield-1255-inputEl']")).sendKeys("testSM2211");
 		
 		driver.findElement(By.xpath(".//*[@id='saveEditVM-btnInnerEl']")).click();
 		
 		logClass.endTestCase("Edited VM Successfully");
 	}
+
 	
-	public void _StopVM(){
+	@Test(description="Stoping VM to given Location and Host",priority=2)
+
+	public void _StopVM() throws InterruptedException{
 		
+		Thread.sleep(5000);
 		logClass.startTestCase("Stop VM to given Location and Host");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
@@ -233,7 +253,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
 		
-		obj._findVMForHost(driver, "testcmm221");
+		obj._findVMForHost(driver, "testSM2211");
 		
 		driver.findElement(By.xpath(".//*[@id='stopvm-btnInnerEl']")).click();
 		
@@ -241,9 +261,13 @@ public class _VM {
 		
 		logClass.endTestCase("Stopped VM successfully");
 	}
+
 	
-	public void _StartVM(){
+	@Test(description="Starting VM to given Location and Host",priority=3)
+
+	public void _StartVM() throws InterruptedException{
 		
+		Thread.sleep(5000);
 		logClass.startTestCase("Start VM to given Location and Host");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
@@ -254,7 +278,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
 		
-		obj._findVMForHost(driver, "testcmm221");
+		obj._findVMForHost(driver, "testSM2211");
 		
 		driver.findElement(By.xpath(".//*[@id='startvm-btnInnerEl']")).click();
 		
@@ -262,9 +286,13 @@ public class _VM {
 		
 		logClass.endTestCase("Started VM successfully");
 	}
-	
-	public void _RefreshVM() throws InterruptedException{
 
+	
+	@Test(description="Refreshing VM to given Location and Host",priority=4)
+
+	public void _RefreshVM() throws InterruptedException, IOException{
+
+		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
@@ -283,21 +311,31 @@ public class _VM {
 		driver.switchTo().activeElement();
 		
 		driver.findElement(By.xpath(".//*[@id='userNameRestablishConn-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='userNameRestablishConn-inputEl']")).sendKeys("dadmin");
+		driver.findElement(By.xpath(".//*[@id='userNameRestablishConn-inputEl']")).sendKeys("cust");
 		
 		driver.findElement(By.xpath(".//*[@id='passwordRestablishConn-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='passwordRestablishConn-inputEl']")).sendKeys("dadmin01");
+		driver.findElement(By.xpath(".//*[@id='passwordRestablishConn-inputEl']")).sendKeys("cust01");
 		
 		driver.findElement(By.xpath(".//*[@id='reestablishConnProceed-btnIconEl']")).click();
 		
 		Thread.sleep(5000);
 		
+		obj._StatusCheck(driver, "VM Trust Establishment Completed",50);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='refreshvm-btnInnerEl']")));
+		
 		if(driver.findElement(By.xpath(".//*[@id='refreshvm-btnInnerEl']")).isEnabled())
 		driver.findElement(By.xpath(".//*[@id='refreshvm-btnInnerEl']")).click();
 		
+		Thread.sleep(2500);
+		obj._StatusCheck(driver, "VM Refresh Completed", 50);
 		logClass.endTestCase("VM refreshed Successfully");
 	}
+
 	
+	@Test(description="Restarting VM to given Location and Host",priority=5)
+
 	public void _RestartVM(){
 
 		logClass.startTestCase("Restart VM to given Location and Host");
@@ -310,7 +348,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
 		
-		obj._findVMForHost(driver, "testcmm221");
+		obj._findVMForHost(driver, "testSM221");
 		
 		driver.findElement(By.xpath(".//*[@id='restartvm-btnInnerEl']")).click();
 		
@@ -318,7 +356,10 @@ public class _VM {
 		
 		logClass.endTestCase("Restarted VM successfully");
 	}
+
 	
+	@Test(description="Deleting VM to given Location and Host",priority=6)
+
 	public void _DeleteVM(){
 
 		logClass.startTestCase("Delete VM to given Location and Host");

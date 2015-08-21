@@ -1,3 +1,5 @@
+package com.avaya.sdmclient;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -5,6 +7,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -50,7 +54,7 @@ public class _Settings {
 	}
 	
 	public String _readFromFile(String _fileName,String _find) throws IOException{
-		File file = new File(_fileName);
+		File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+_fileName);
 		List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		String _output = null;
@@ -202,15 +206,7 @@ public class _Settings {
 			driver.findElement(By.xpath(_addresses.get(i))).sendKeys(_IPConvert(driver, _IP, i));
 		}	
 	}
-	
-	@SuppressWarnings("deprecation")
-	public String fluentWait(final By locator,WebDriver driver) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(500, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.textToBePresentInElement(locator, "VM Deployment Completed"));
-		logClass.info(driver.findElement(locator).getText());
-	    return driver.findElement(locator).getText();
-	}
-	
+
 	public boolean _checkError(WebDriver driver){
 		boolean b = false;
 		try{
@@ -222,6 +218,7 @@ public class _Settings {
 		}
 		return b;
 	}
+	
 	public void _errorBox(WebDriver driver,boolean _check){
 		if(_check)
 		{
@@ -282,6 +279,90 @@ public class _Settings {
 			logClass.info("Confirmed");
 		}
 	}
+
+		public String _ExtractText(String _tag,String _FilePath) throws IOException{
+			String _check = "";
+			String ans = "";
+			File file = new File(_FilePath);
+			final Pattern pattern = Pattern.compile("<"+_tag+">(.+?)</"+_tag+">");
+			List<String> _Lines = FileUtils.readLines(file);
+			for(String l: _Lines)
+				if(pattern.matcher(l).find())
+					_check = l;
+			
+			final Matcher matcher = pattern.matcher(_check);
+			while(matcher.find())
+			{
+				System.out.println(matcher.group(1).toString());
+				ans = matcher.group(1).toString();
+			} 	
+			return ans;
+		}
+
+		public void _comboClick(WebDriver driver, String _StartAddress){
+			List<WebElement> _cols = driver.findElement(By.id("combobox-1238")).findElements(By.xpath(".//*[local-name(.)='td']"));
+			String _ID;
+			for(WebElement e : _cols)
+				{
+					System.out.println(e.getAttribute("id"));
+					if(e.getAttribute("id").contains("ext"))
+						{
+							System.out.println("test "+e.getAttribute("id"));//e.click();
+							_ID = e.getAttribute("id");
+							e.findElement(By.id(_ID)).click();
+							//e.findElement(By.id(_ID)).click();
+						}
+				}
+		}
+		
+		public void _autoGrab(WebDriver driver){
+			System.out.println(driver.findElement(By.id("panelConfigParameters")).findElement(By.id("panelConfigParameters-innerCt")).findElement(By.xpath(".//*[@id='^textfield']")).getText());
+		}
+		
+		@SuppressWarnings("deprecation")
+		public String fluentWait(final By locator,WebDriver driver,int _time,String _Test) {
+			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(_time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+			wait.until(ExpectedConditions.textToBePresentInElement(locator, _Test));
+			logClass.info(driver.findElement(locator).getText());
+		    return driver.findElement(locator).getText();
+		}
+		
+		
+		public void _StatusCheck(WebDriver driver,String _toBeChecked,int _time) throws IOException{
+			driver.findElement(By.linkText("Status Details")).click();
+			driver.switchTo().activeElement();
+			System.out.println(fluentWait(By.id("vmDeployStatus"), driver, _time, _toBeChecked));
+
+			if(driver.findElement(By.id("vmDeployStatus")).getText().contains(_toBeChecked))
+			{
+				_closeWindow(driver);
+				System.out.println("Completed Successfully");
+			}
+
+			else if(driver.findElement(By.id("vmDeployStatus")).getText().contains("failed"))
+			{
+				System.out.println(driver.findElement(By.id("vmDeployStatus")).getText());
+				logClass.error(driver.findElement(By.id("vmDeployStatus")).getText());
+				File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(scrFile, new File("C:\\Users\\bshingala\\Desktop\\screenshotSDMfail.png"));
+				logClass.error("Something went wrong :(");
+				logClass.info("Check Screenshot for the same");
+				_closeWindow(driver);
+			}
+			
+		}
+		
+		public void _closeWindow(WebDriver driver){
+			List<WebElement> _elem = driver.findElement(By.id("vmDeployStatus")).findElement(By.id("vmDeployStatus_header")).findElement(By.id("vmDeployStatus_header-innerCt")).findElement(By.id("vmDeployStatus_header-targetEl")).findElements(By.tagName("div"));
+			//System.out.println(_elem.size());
+			
+			for(WebElement e : _elem)
+				{
+					//System.out.println(e.getAttribute("class"));
+					if(e.getAttribute("class").contains("x-tool"))
+					e.click();
+				}
+		}
 	
 }
 
