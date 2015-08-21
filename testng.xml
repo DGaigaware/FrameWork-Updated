@@ -145,19 +145,25 @@
   
   <test name="LocationOperations" preserve-order="true" thread-count="1">
     <packages>
-      <package name="com.avaya.smgr.workassgnment.*"/> 
+      <package name="com.avaya.sdmclient.location.*"/> 
     </packages> 
   </test>
   
   <test name="HostOperations" preserve-order="true" thread-count="1">
     <packages>
-      <package name="com.avaya.smgr.workassgnment.*"/> 
+      <package name="com.avaya.sdmclient.host.*"/> 
     </packages> 
   </test>
   
   <test name="VMOperations" preserve-order="true" thread-count="1">
     <packages>
-      <package name="com.avaya.smgr.workassgnment.*"/> 
+      <package name="com.avaya.sdmclient.vm.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="VCenterOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.sdmclient.vcenter.*"/> 
     </packages> 
   </test>
  <!--test name="Geo_Configure" preserve-order="true" thread-count="1">

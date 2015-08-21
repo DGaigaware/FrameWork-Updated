@@ -137,7 +137,7 @@ public class _Settings {
 				//System.out.println(e.getText()+ "\n Test \n");
 				if(e.getText().contains(_toBeSelected))
 				{
-					System.out.println("\nSelected : \n"+e.getText());
+					//System.out.println("\nSelected : \n"+e.getText());
 					e.click();
 				}
 			}
@@ -260,23 +260,30 @@ public class _Settings {
 			if(driver.findElement(By.id("messagebox-1001")).isDisplayed())
 			{
 				logClass.info("Action being performed: "+driver.findElement(By.xpath(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());		
-				System.out.println("Action being performed: "+driver.findElement(By.xpath(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+				//System.out.println("Action being performed: "+driver.findElement(By.xpath(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
 			}
 		}
 		catch(Exception ex){
 			System.out.println("Couldn't find any text");
 		}
 		
-		driver.findElement(By.xpath(".//*[@id='button-1006-btnIconEl']")).click();
-		
 		try{
-			driver.switchTo().activeElement();
-			driver.findElement(By.xpath(".//*[@id='button-1005-btnIconEl']")).click();
-			System.out.println("Confirmed");
+		driver.findElement(By.xpath(".//*[@id='button-1006-btnIconEl']")).click();
 		}
 		catch(Exception ex){
-			System.out.println("Confirmed");
-			logClass.info("Confirmed");
+			System.out.println("\n");
+		}
+		try{
+			driver.switchTo().activeElement();
+			//System.out.println(driver.switchTo().activeElement().getText());
+			logClass.info("Confirmation: "+driver.findElement(By.xpath(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());		
+			//System.out.println("Confirmation: "+driver.findElement(By.xpath(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+			driver.findElement(By.xpath(".//*[@id='button-1005-btnIconEl']")).click();
+			//System.out.println("Confirmed");
+		}
+		catch(Exception ex){
+			System.out.println("Check Logs.");
+			logClass.info("Check Logs");
 		}
 	}
 

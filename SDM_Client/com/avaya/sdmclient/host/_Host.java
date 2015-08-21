@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 import com.avaya.sdmclient.*;
+import com.sun.jna.platform.win32.OaIdl.CURRENCY._CURRENCY;
 public class _Host {
 	_Settings obj = new _Settings();
 
@@ -50,8 +51,7 @@ public class _Host {
 		Thread.sleep(250);
 		driver.findElement(By.xpath(".//*[@id='saveNewHost']")).click();
 	
-		driver.switchTo().activeElement();
-		driver.findElement(By.xpath(".//*[@id='button-1005-btnIconEl']")).click();
+		obj._confirmDialogBox(driver);
 
 		logClass.endTestCase("Added Host Succesfully");
 	}		
@@ -79,6 +79,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='combobox-1137-inputEl']")).click();
 		obj._addToList();
 		
+		Thread.sleep(250);
 		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewLoc"), 4);
 		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(linkText)));
 	    driver.findElement(By.linkText(linkText)).click();*/
@@ -96,6 +97,8 @@ public class _Host {
 		Thread.sleep(250);
 		
 		driver.findElement(By.xpath(".//*[@id='saveOnEditHost-btnInnerEl']")).click();
+		
+		obj._errorBox(driver, obj._checkError(driver));
 		logClass.endTestCase("Edited Host Succesfully");
 		
 	}
