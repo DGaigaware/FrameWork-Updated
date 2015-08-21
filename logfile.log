@@ -237,3 +237,256 @@
 2015-08-21 12:54:50,423 INFO  [Logger]                              Deleting vCenter to given Location                             
 2015-08-21 12:54:55,351 INFO  [Logger] Clicked on VM management 
 2015-08-21 12:54:57,045 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-21 14:44:30,962 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:44:31,138 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:44:40,773 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:44:43,357 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:44:44,325 INFO  [Logger] Given Name 
+2015-08-21 14:44:50,265 INFO  [Logger] Choosen From File 
+2015-08-21 14:44:51,107 INFO  [Logger] File Path Given 
+2015-08-21 14:44:57,782 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:44:57,782 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:45:02,602 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:45:08,574 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 14:45:19,029 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:19,029 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 14:45:24,598 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:45:39,491 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:39,491 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-21 14:45:45,570 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:45,570 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-21 14:45:46,577 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:46,577 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-21 14:45:47,407 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:47,407 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-21 14:45:48,003 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:45:48,003 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:45:58,676 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:46:00,896 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:46:01,872 INFO  [Logger] Given Name 
+2015-08-21 14:46:07,695 INFO  [Logger] Choosen From File 
+2015-08-21 14:46:08,225 INFO  [Logger] File Path Given 
+2015-08-21 14:46:20,206 INFO  [Logger] IP address given 
+2015-08-21 14:46:20,384 INFO  [Logger] Given the Name of VM 
+2015-08-21 14:46:21,064 INFO  [Logger] Given NetMask 
+2015-08-21 14:46:21,713 INFO  [Logger] Given Default Gateway 
+2015-08-21 14:46:26,810 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:46:26,811 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:46:31,285 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:46:36,533 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 14:46:38,695 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-21 14:46:43,699 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:46:43,699 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 14:46:47,399 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:46:52,440 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:46:52,440 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-21 14:47:17,136 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:47:17,137 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:47:25,918 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:47:28,622 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:47:29,579 INFO  [Logger] Given Name 
+2015-08-21 14:47:35,396 INFO  [Logger] Choosen From File 
+2015-08-21 14:47:35,908 INFO  [Logger] File Path Given 
+2015-08-21 14:47:48,004 INFO  [Logger] IP address given 
+2015-08-21 14:47:48,176 INFO  [Logger] Given the Name of VM 
+2015-08-21 14:47:48,837 INFO  [Logger] Given NetMask 
+2015-08-21 14:47:49,478 INFO  [Logger] Given Default Gateway 
+2015-08-21 14:47:54,601 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:47:54,601 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:47:59,029 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:48:04,580 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 14:48:06,771 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-21 14:48:11,774 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:48:11,774 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 14:48:17,243 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:50:44,920 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:50:44,920 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:50:56,084 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:50:58,366 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:50:59,354 INFO  [Logger] Given Name 
+2015-08-21 14:51:05,240 INFO  [Logger] Choosen From File 
+2015-08-21 14:51:05,793 INFO  [Logger] File Path Given 
+2015-08-21 14:51:17,899 INFO  [Logger] IP address given 
+2015-08-21 14:51:18,076 INFO  [Logger] Given the Name of VM 
+2015-08-21 14:51:18,737 INFO  [Logger] Given NetMask 
+2015-08-21 14:51:19,380 INFO  [Logger] Given Default Gateway 
+2015-08-21 14:51:24,487 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:51:24,487 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:51:29,296 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:51:34,679 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 14:51:36,332 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-21 14:51:41,334 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:51:41,334 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 14:51:46,119 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:53:25,333 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:53:25,334 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:53:34,424 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:53:37,017 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:53:37,989 INFO  [Logger] Given Name 
+2015-08-21 14:53:43,754 INFO  [Logger] Choosen From File 
+2015-08-21 14:53:44,292 INFO  [Logger] File Path Given 
+2015-08-21 14:53:56,535 INFO  [Logger] IP address given 
+2015-08-21 14:53:56,715 INFO  [Logger] Given the Name of VM 
+2015-08-21 14:53:57,388 INFO  [Logger] Given NetMask 
+2015-08-21 14:53:58,042 INFO  [Logger] Given Default Gateway 
+2015-08-21 14:54:03,177 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:54:03,177 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:54:07,781 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:57:14,192 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:57:14,193 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:57:22,851 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:57:25,543 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 14:57:26,486 INFO  [Logger] Given Name 
+2015-08-21 14:57:32,299 INFO  [Logger] Choosen From File 
+2015-08-21 14:57:32,815 INFO  [Logger] File Path Given 
+2015-08-21 14:57:44,774 INFO  [Logger] IP address given 
+2015-08-21 14:57:44,971 INFO  [Logger] Given the Name of VM 
+2015-08-21 14:57:45,641 INFO  [Logger] Given NetMask 
+2015-08-21 14:57:46,278 INFO  [Logger] Given Default Gateway 
+2015-08-21 14:57:51,372 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:57:51,372 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 14:57:54,599 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:59:48,447 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 14:59:48,448 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 14:59:57,069 INFO  [Logger] Clicked on VM management 
+2015-08-21 14:59:59,867 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:00:02,120 INFO  [Logger] Given Name 
+2015-08-21 15:00:16,379 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:00:16,379 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 15:00:21,109 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:00:50,007 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:00:50,008 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 15:00:59,688 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:01:02,139 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:01:03,295 INFO  [Logger] Given Name 
+2015-08-21 15:01:11,140 INFO  [Logger] Choosen From File 
+2015-08-21 15:01:11,805 INFO  [Logger] File Path Given 
+2015-08-21 15:01:27,838 INFO  [Logger] IP address given 
+2015-08-21 15:01:28,020 INFO  [Logger] Given the Name of VM 
+2015-08-21 15:01:28,677 INFO  [Logger] Given NetMask 
+2015-08-21 15:01:29,319 INFO  [Logger] Given Default Gateway 
+2015-08-21 15:01:36,442 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:01:36,442 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 15:01:41,226 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:01:45,650 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 15:01:58,160 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:01:58,160 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 15:02:04,171 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:02:04,171 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-21 15:02:10,179 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:02:10,179 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-21 15:02:11,196 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:02:11,196 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-21 15:02:12,202 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:02:12,202 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-21 15:03:44,348 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:03:44,349 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 15:03:53,360 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:03:56,048 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:03:56,999 INFO  [Logger] Given Name 
+2015-08-21 15:04:04,803 INFO  [Logger] Choosen From File 
+2015-08-21 15:04:05,347 INFO  [Logger] File Path Given 
+2015-08-21 15:04:21,460 INFO  [Logger] IP address given 
+2015-08-21 15:04:21,639 INFO  [Logger] Given the Name of VM 
+2015-08-21 15:04:22,320 INFO  [Logger] Given NetMask 
+2015-08-21 15:04:22,966 INFO  [Logger] Given Default Gateway 
+2015-08-21 15:05:56,517 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:05:56,518 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 15:06:06,519 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:06:08,881 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:06:09,855 INFO  [Logger] Given Name 
+2015-08-21 15:06:17,610 INFO  [Logger] Choosen From File 
+2015-08-21 15:06:18,261 INFO  [Logger] File Path Given 
+2015-08-21 15:06:34,210 INFO  [Logger] IP address given 
+2015-08-21 15:06:34,393 INFO  [Logger] Given the Name of VM 
+2015-08-21 15:06:35,106 INFO  [Logger] Given NetMask 
+2015-08-21 15:06:35,741 INFO  [Logger] Given Default Gateway 
+2015-08-21 15:06:44,276 INFO  [Logger] Selected Given TimeZone 
+2015-08-21 15:06:45,030 INFO  [Logger] Given Login ID and Password 
+2015-08-21 15:06:45,816 INFO  [Logger] Given Primary SMGR IP 
+2015-08-21 15:06:46,345 INFO  [Logger] Given Enrollment Password 
+2015-08-21 15:06:53,603 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:06:53,604 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 15:06:59,346 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:07:04,216 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 15:09:31,325 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:09:31,326 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 15:09:39,818 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:09:43,113 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:09:44,087 INFO  [Logger] Given Name 
+2015-08-21 15:09:52,201 INFO  [Logger] Choosen From File 
+2015-08-21 15:09:52,750 INFO  [Logger] File Path Given 
+2015-08-21 15:10:08,802 INFO  [Logger] IP address given 
+2015-08-21 15:10:08,981 INFO  [Logger] Given the Name of VM 
+2015-08-21 15:10:09,646 INFO  [Logger] Given NetMask 
+2015-08-21 15:10:10,293 INFO  [Logger] Given Default Gateway 
+2015-08-21 15:10:18,857 INFO  [Logger] Selected Given TimeZone 
+2015-08-21 15:10:19,893 INFO  [Logger] Given Login ID and Password 
+2015-08-21 15:10:20,873 INFO  [Logger] Given Primary SMGR IP 
+2015-08-21 15:10:21,320 INFO  [Logger] Given Enrollment Password 
+2015-08-21 15:10:22,358 INFO  [Logger] Selected Network Parameters 
+2015-08-21 15:10:23,023 INFO  [Logger] Accepted EULA 
+2015-08-21 15:10:34,842 INFO  [Logger] Checking Status Details 
+2015-08-21 15:10:41,972 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:10:41,972 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 15:10:50,662 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:10:59,548 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 15:11:11,944 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:11:11,944 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 15:11:16,805 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:11:21,961 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:11:21,961 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-21 15:11:27,971 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:11:27,971 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-21 15:11:28,975 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:11:28,975 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-21 15:11:29,987 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:11:29,987 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-21 15:25:18,779 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:25:18,785 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 15:25:27,891 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:25:30,572 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 15:25:31,564 INFO  [Logger] Given Name 
+2015-08-21 15:25:39,580 INFO  [Logger] Choosen From File 
+2015-08-21 15:25:40,238 INFO  [Logger] File Path Given 
+2015-08-21 15:25:56,350 INFO  [Logger] IP address given 
+2015-08-21 15:25:56,523 INFO  [Logger] Given the Name of VM 
+2015-08-21 15:25:57,186 INFO  [Logger] Given NetMask 
+2015-08-21 15:25:57,835 INFO  [Logger] Given Default Gateway 
+2015-08-21 15:26:06,462 INFO  [Logger] Selected Given TimeZone 
+2015-08-21 15:26:07,608 INFO  [Logger] Given Login ID and Password 
+2015-08-21 15:26:08,495 INFO  [Logger] Given Primary SMGR IP 
+2015-08-21 15:26:08,922 INFO  [Logger] Given Enrollment Password 
+2015-08-21 15:26:09,954 INFO  [Logger] Selected Network Parameters 
+2015-08-21 15:26:11,428 INFO  [Logger] Accepted EULA 
+2015-08-21 15:26:24,086 INFO  [Logger] Checking Status Details 
+2015-08-21 15:39:27,699 INFO  [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment Completed 
+2015-08-21 15:39:30,036 INFO  [Logger] VM Deployment Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment Completed :;VM Deployment Completed 
+2015-08-21 15:39:30,889 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:39:30,889 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 15:39:36,465 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:39:42,965 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 15:39:44,687 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-21 15:39:49,689 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:39:49,689 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 15:39:54,877 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:40:12,418 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:40:12,418 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-21 15:40:19,353 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:40:41,695 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:40:41,695 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-21 15:40:46,142 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:40:57,627 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:40:57,628 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-21 15:41:02,634 INFO  [Logger] Clicked on VM management 
+2015-08-21 15:41:21,164 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 15:41:21,164 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-21 15:41:25,817 INFO  [Logger] Clicked on VM management 
