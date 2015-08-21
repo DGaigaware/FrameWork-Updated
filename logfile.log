@@ -490,3 +490,251 @@
 2015-08-21 15:41:21,164 INFO  [Logger] *************************Started Testing****************************** 
 2015-08-21 15:41:21,164 INFO  [Logger]                              Delete VM to given Location and Host                             
 2015-08-21 15:41:25,817 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:42:25,833 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:42:25,850 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 16:42:57,833 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:43:03,139 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:43:03,140 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 16:43:08,273 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:43:15,770 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:43:15,770 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 16:43:20,331 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:45:28,570 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:45:28,571 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-21 16:45:37,778 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:45:38,128 INFO  [Logger] Adding new Location 
+2015-08-21 16:45:40,003 INFO  [Logger] Saved New Location 
+2015-08-21 16:45:44,622 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-21 16:45:44,625 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:45:44,625 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-21 16:45:51,324 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:45:59,134 INFO  [Logger] Saved Location 
+2015-08-21 16:45:59,134 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-21 16:45:59,136 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:45:59,136 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-21 16:46:03,933 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:46:06,941 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-21 16:46:08,244 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-21 16:47:01,376 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:47:01,376 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 16:47:10,980 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:47:12,345 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:47:12,666 INFO  [Logger] Adding new Host 
+2015-08-21 16:47:14,859 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 16:47:14,862 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:47:14,862 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 16:47:26,367 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:47:28,762 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:47:37,723 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:47:37,723 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 16:47:42,518 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:50:09,601 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:50:09,602 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 16:50:20,029 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:50:21,582 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:50:22,019 INFO  [Logger] Adding new Host 
+2015-08-21 16:50:24,085 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 16:50:24,096 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:50:24,096 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 16:50:35,924 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:50:40,126 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:50:45,854 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:50:45,854 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 16:50:51,582 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:54:57,053 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:54:57,054 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 16:55:38,618 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:55:40,538 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:55:40,755 INFO  [Logger] Adding new Host 
+2015-08-21 16:55:42,484 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 16:55:42,487 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:55:42,487 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 16:55:49,817 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:55:53,195 INFO  [Logger] In 'Host' Tab 
+2015-08-21 16:55:55,980 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 16:55:55,982 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 16:55:55,982 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 16:56:03,346 INFO  [Logger] Clicked on VM management 
+2015-08-21 16:56:07,318 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 16:56:08,162 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 17:00:32,917 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:00:32,918 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 17:00:41,259 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:00:44,519 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:00:44,769 INFO  [Logger] Adding new Host 
+2015-08-21 17:00:46,621 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 17:00:46,623 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:00:46,624 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 17:00:54,434 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:00:57,348 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:01:05,798 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 17:01:05,800 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:01:05,801 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 17:01:10,363 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:01:14,915 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 17:01:15,589 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 17:13:11,786 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:13:11,787 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 17:13:21,590 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:13:23,076 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:13:23,486 INFO  [Logger] Adding new Host 
+2015-08-21 17:13:24,898 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 17:13:29,822 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 17:13:29,827 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:13:29,827 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 17:13:35,134 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:13:39,584 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:13:46,767 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 17:13:46,773 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:13:46,773 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 17:13:51,351 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:13:56,921 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 17:14:06,473 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 17:25:10,025 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:25:10,026 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 17:25:19,594 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:25:21,474 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:25:21,697 INFO  [Logger] Adding new Host 
+2015-08-21 17:25:23,300 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 17:25:28,038 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 17:25:28,291 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 17:25:28,293 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:25:28,293 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 17:25:33,634 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:25:36,741 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:25:44,329 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 17:25:44,332 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:25:44,332 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 17:25:49,513 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:25:53,149 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 17:25:53,363 INFO  [Logger] Confirmation:  
+2015-08-21 17:25:53,907 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 17:29:08,993 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:29:08,993 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 17:29:18,560 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:29:20,875 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:29:21,145 INFO  [Logger] Adding new Host 
+2015-08-21 17:29:22,927 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 17:29:27,631 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 17:29:27,835 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 17:29:27,843 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:29:27,843 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 17:29:34,148 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:29:37,110 INFO  [Logger] In 'Host' Tab 
+2015-08-21 17:29:44,361 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 17:29:44,363 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:29:44,363 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 17:29:49,093 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:29:56,892 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 17:29:57,528 INFO  [Logger] Confirmation: Host Deleted Successfully 
+2015-08-21 17:29:57,837 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-21 17:32:56,081 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:32:56,082 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 17:33:05,007 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:33:07,722 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 17:33:08,711 INFO  [Logger] Given Name 
+2015-08-21 17:33:23,036 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:33:23,036 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 17:33:27,769 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:33:33,204 INFO  [Logger] Clicked on - Edit VM 
+2015-08-21 17:33:41,648 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-21 17:33:46,651 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:33:46,651 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-21 17:34:40,401 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:34:40,402 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 17:34:49,895 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:34:52,707 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 17:34:53,665 INFO  [Logger] Given Name 
+2015-08-21 17:35:01,764 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-08-21 17:35:01,764 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-21 17:35:02,099 ERROR [Logger] Something went wrong :( 
+2015-08-21 17:35:02,099 INFO  [Logger] Check Screenshot for the same 
+2015-08-21 17:35:08,852 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:35:08,852 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 17:36:10,055 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:36:10,056 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 17:36:18,815 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:36:21,658 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 17:36:22,621 INFO  [Logger] Given Name 
+2015-08-21 17:36:30,194 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-08-21 17:36:30,194 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-21 17:36:30,450 ERROR [Logger] Something went wrong :( 
+2015-08-21 17:36:30,450 INFO  [Logger] Check Screenshot for the same 
+2015-08-21 17:36:37,139 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:36:37,139 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 17:37:24,752 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:37:24,753 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-21 17:37:33,444 INFO  [Logger] Clicked on VM management 
+2015-08-21 17:37:36,176 INFO  [Logger] Clicked on - Add new VM 
+2015-08-21 17:37:37,292 INFO  [Logger] Given Name 
+2015-08-21 17:37:51,450 INFO  [Logger] Choosen From File 
+2015-08-21 17:37:52,091 INFO  [Logger] File Path Given 
+2015-08-21 17:38:00,350 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 17:38:00,350 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-21 21:24:27,564 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 21:24:27,565 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-21 21:24:36,349 INFO  [Logger] Clicked on VM management 
+2015-08-21 21:24:38,458 INFO  [Logger] In 'Host' Tab 
+2015-08-21 21:24:38,689 INFO  [Logger] Adding new Host 
+2015-08-21 21:24:40,157 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 21:24:44,854 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-08-21 21:24:45,057 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-21 21:24:45,087 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 21:24:45,087 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-21 21:24:50,432 INFO  [Logger] Clicked on VM management 
+2015-08-21 21:24:53,602 INFO  [Logger] In 'Host' Tab 
+2015-08-21 21:25:00,917 INFO  [Logger] *************************End of test caseEdited Host Succesfully******************************
+
+ 
+2015-08-21 21:25:00,919 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-21 21:25:00,919 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-21 21:25:05,390 INFO  [Logger] Clicked on VM management 
+2015-08-21 21:25:09,378 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-21 21:25:09,553 INFO  [Logger] Confirmation:  
+2015-08-21 21:25:10,433 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
