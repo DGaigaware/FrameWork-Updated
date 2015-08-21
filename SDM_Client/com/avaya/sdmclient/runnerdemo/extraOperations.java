@@ -65,7 +65,11 @@ public class extraOperations {
 //            System.out.println("Greater");
         
         ob._compare(tem);*/
-        _Settings obj = new _Settings();
+    	
+    	String _path = "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf";
+		_Settings obj = new _Settings();
+		obj._ExtractText("Product",_path);
+
     	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
         driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 		//driver.manage().window().maximize();
@@ -107,7 +111,7 @@ public class extraOperations {
 		driver.findElement(By.xpath(".//*[@id='cmbVMDataStore-inputEl']")).click();
 		Thread.sleep(250);
 
-		obj._boundListSelect(driver, "data", 0);
+		obj._boundListSelect(driver, "data", obj._selBoundList(driver));
 		
 		//1 - File Path; 3 - SW Library; 4 - URL 
 		switch(_default){
@@ -154,7 +158,7 @@ public class extraOperations {
 		driver.findElement(By.xpath(".//*[@id='cmbSelectFlexiFootPrint-inputEl']")).click();
 		Thread.sleep(450);
 		
-		obj._boundListSelect(driver, "Profile 1", 1);
+		obj._boundListSelect(driver, "Profile 1", obj._selBoundList(driver));
 		//Thread.sleep(250);
 		_Check = obj._checkError(driver);
 		obj._errorBox(driver,obj._checkError(driver));
@@ -185,7 +189,7 @@ public class extraOperations {
 		
 		driver.findElement(By.xpath(".//*[@id='timezone-inputEl']")).click();
 		
-		obj._boundListSelect(driver, "Asia/Kolkata", 5);
+		obj._boundListSelect(driver, "Asia/Kolkata", obj._selBoundList(driver));
 		
 		Thread.sleep(2500);
 		logClass.info("Selected Given TimeZone");

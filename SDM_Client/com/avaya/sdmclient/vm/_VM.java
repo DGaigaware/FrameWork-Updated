@@ -54,16 +54,17 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).clear();
 		//driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).sendKeys(obj._readFromFile("input.txt", "VMName"));	
-		driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).sendKeys("testSM2211");
+		driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).sendKeys("testSM22111");
 		logClass.info("Given Name");
-		Thread.sleep(450);
+		Thread.sleep(250);
 		
 		obj._errorBox(driver,obj._checkError(driver));
 		
 		driver.findElement(By.xpath(".//*[@id='cmbVMDataStore-inputEl']")).click();
 		Thread.sleep(250);
-
-		obj._boundListSelect(driver, "data", 0);
+		obj._errorBox(driver,obj._checkError(driver));
+		
+		obj._boundListSelect(driver, "data", obj._selBoundList(driver));
 		
 		//1 - File Path; 3 - SW Library; 4 - URL 
 		switch(_default){
@@ -110,7 +111,7 @@ public class _VM {
 		driver.findElement(By.xpath(".//*[@id='cmbSelectFlexiFootPrint-inputEl']")).click();
 		Thread.sleep(450);
 		
-		obj._boundListSelect(driver, "Profile 1", 1);
+		obj._boundListSelect(driver, "Profile 1", obj._selBoundList(driver));
 		//Thread.sleep(250);
 		_Check = obj._checkError(driver);
 		obj._errorBox(driver,obj._checkError(driver));
@@ -141,7 +142,7 @@ public class _VM {
 		
 		driver.findElement(By.xpath(".//*[@id='timezone-inputEl']")).click();
 		
-		obj._boundListSelect(driver, "Asia/Kolkata", 5);
+		obj._boundListSelect(driver, "Asia/Kolkata", obj._selBoundList(driver));
 		
 		Thread.sleep(2500);
 		logClass.info("Selected Given TimeZone");
@@ -170,15 +171,15 @@ public class _VM {
 		driver.findElement(By.xpath(".//*[@id='tab-1243-btnInnerEl']")).click();
 		
 		driver.findElement(By.xpath(".//*[@id='Public-inputEl']")).click();
-		obj._boundListSelect(driver, "VM Network", 6);
+		obj._boundListSelect(driver, "VM Network", obj._selBoundList(driver));
 		
 		driver.findElement(By.xpath(".//*[@id='Out of Band Management-inputEl']")).click();
-		obj._boundListSelect(driver, "VM Network", 7);
+		obj._boundListSelect(driver, "VM Network", obj._selBoundList(driver));
 		logClass.info("Selected Network Parameters");
 		
 		driver.findElement(By.xpath(".//*[@id='button-1245-btnInnerEl']")).click();
 		
-		driver.findElement(By.xpath(".//*[@id='button-1589-btnInnerEl']")).click();
+		//driver.findElement(By.xpath(".//*[@id='button-1589-btnInnerEl']")).click();
 		logClass.info("Accepted EULA");
 		
 		Thread.sleep(9000);

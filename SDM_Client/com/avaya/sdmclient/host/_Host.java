@@ -74,13 +74,13 @@ public class _Host {
 		
 		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
-		System.out.println("\n\n\n");
+		//System.out.println("\n\n\n");
 		
 		driver.findElement(By.xpath(".//*[@id='combobox-1137-inputEl']")).click();
 		obj._addToList();
 		
 		Thread.sleep(250);
-		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewLoc"), 4);
+		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewLoc"), obj._selBoundList(driver));
 		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(linkText)));
 	    driver.findElement(By.linkText(linkText)).click();*/
 		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).clear();

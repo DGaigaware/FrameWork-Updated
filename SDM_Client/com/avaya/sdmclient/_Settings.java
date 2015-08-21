@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -129,8 +130,22 @@ public class _Settings {
 		}	
 	}
 
-	public void _boundListSelect(WebDriver driver,String _toBeSelected,int i){
+/*	public void _boundListSelect(WebDriver driver,String _toBeSelected,int i){
 		WebElement element = driver.findElement(By.id(_bListGetComponent.get(i)));
+		List<WebElement> tmp1 = element.findElements(By.className("x-boundlist-item"));
+		for (WebElement e : tmp1 )
+			{
+				//System.out.println(e.getText()+ "\n Test \n");
+				if(e.getText().contains(_toBeSelected))
+				{
+					//System.out.println("\nSelected : \n"+e.getText());
+					e.click();
+				}
+			}
+	}*/
+	
+	public void _boundListSelect(WebDriver driver,String _toBeSelected,String s){
+		WebElement element = driver.findElement(By.id(s));
 		List<WebElement> tmp1 = element.findElements(By.className("x-boundlist-item"));
 		for (WebElement e : tmp1 )
 			{
@@ -242,6 +257,18 @@ public class _Settings {
 				System.out.println("No Errors Uptill Now.");
 			}
 		}
+	}
+	
+	public String _selBoundList(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
+		for(WebElement s : a)
+			{//System.out.println(s.getText());
+			System.out.println(s.getTagName());
+			//System.out.println(s.getClass());
+			System.out.println(s.getAttribute("id"));
+			}
+		return a.get(a.size()-1).getAttribute("id");
 	}
 	
 	public void _exec(boolean _in) {
