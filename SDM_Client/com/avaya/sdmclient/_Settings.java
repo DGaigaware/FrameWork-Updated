@@ -264,7 +264,7 @@ public class _Settings {
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
 		for(WebElement s : a)
 			{//System.out.println(s.getText());
-			System.out.println(s.getTagName());
+			//System.out.println(s.getTagName());
 			//System.out.println(s.getClass());
 			System.out.println(s.getAttribute("id"));
 			}
@@ -397,6 +397,53 @@ public class _Settings {
 					e.click();
 				}
 		}
+		
+		public void _AutoFill(WebDriver driver,String _input) throws IOException{
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			String _returnID = "";
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input +"]');return nl");
+			for(WebElement s : a)
+				{//System.out.println(s.getText());
+				//System.out.println(s.getTagName());
+				//System.out.println(s.getClass());
+				//System.out.println(s.getAttribute("id"));
+				if(s.getTagName().equals("input"))
+					{
+						_returnID = s.getAttribute("id");
+						System.out.println(s.getAttribute("id"));
+					}
+				}
+			
+			driver.findElement(By.id(_returnID)).clear();
+			driver.findElement(By.id(_returnID)).sendKeys(_readFromFile("input.txt", _input));
+		}
 	
+		public void _AutoFillIP(WebDriver driver,String _inputForJS,String _IP){
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			String _returnID = "";
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _inputForJS +"]');return nl");
+			List<String> _Addresses = new ArrayList<String>();
+			for(WebElement s : a)
+				{//System.out.println(s.getText());
+				//System.out.println(s.getTagName());
+				//System.out.println(s.getClass());
+				//System.out.println(s.getAttribute("id"));
+						_returnID = s.getAttribute("id");
+						System.out.println(s.getAttribute("id"));
+					
+				}
+	
+			List<WebElement> tempcellsCols = driver.findElement(By.id(_returnID)).findElements(By.xpath(".//*[local-name(.)='td']"));
+			
+			for(WebElement e : tempcellsCols)
+				if(e.getAttribute("id").contains("body"))
+				{
+					//e.sendKeys("148");
+					System.out.println(e.getAttribute("id").replace("body", "input"));
+					_Addresses.add(e.getAttribute("id").replace("body", "input"));
+				}
+			
+			_IPFill(driver, _IP, _Addresses.get(0));
+		}
 }
 

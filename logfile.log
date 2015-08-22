@@ -738,3 +738,115 @@
 2015-08-21 21:25:10,433 INFO  [Logger] *************************End of test caseDeleted Host******************************
 
  
+2015-08-22 16:59:35,903 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 16:59:35,944 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 16:59:48,881 INFO  [Logger] Clicked on VM management 
+2015-08-22 16:59:54,349 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 16:59:55,422 INFO  [Logger] Given Name 
+2015-08-22 17:00:06,095 INFO  [Logger] Choosen From File 
+2015-08-22 17:00:06,744 INFO  [Logger] File Path Given 
+2015-08-22 17:02:47,428 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:02:47,429 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:03:00,210 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:03:04,458 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:03:05,485 INFO  [Logger] Given Name 
+2015-08-22 17:03:16,015 INFO  [Logger] Choosen From File 
+2015-08-22 17:03:16,537 INFO  [Logger] File Path Given 
+2015-08-22 17:04:41,026 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:04:41,027 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:04:50,583 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:04:56,059 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:04:56,991 INFO  [Logger] Given Name 
+2015-08-22 17:05:02,460 ERROR [Logger] Select a host first! 
+2015-08-22 17:05:02,460 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-22 17:05:02,717 ERROR [Logger] Something went wrong :( 
+2015-08-22 17:05:02,717 INFO  [Logger] Check Screenshot for the same 
+2015-08-22 17:05:32,903 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:05:32,904 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:05:41,706 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:05:46,967 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:05:47,908 INFO  [Logger] Given Name 
+2015-08-22 17:06:08,119 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:06:08,120 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:06:17,328 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:06:21,327 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:06:22,509 INFO  [Logger] Given Name 
+2015-08-22 17:06:33,036 INFO  [Logger] Choosen From File 
+2015-08-22 17:06:33,549 INFO  [Logger] File Path Given 
+2015-08-22 17:08:49,813 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:08:49,813 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:08:58,557 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:09:04,364 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:09:05,541 INFO  [Logger] Given Name 
+2015-08-22 17:09:16,271 INFO  [Logger] Choosen From File 
+2015-08-22 17:09:16,794 INFO  [Logger] File Path Given 
+2015-08-22 17:35:30,660 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:35:30,670 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:35:40,991 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:35:44,406 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:35:45,459 INFO  [Logger] Given Name 
+2015-08-22 17:35:56,147 INFO  [Logger] Choosen From File 
+2015-08-22 17:35:56,883 INFO  [Logger] File Path Given 
+2015-08-22 17:38:01,303 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:38:01,304 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:38:11,900 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:38:16,003 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:38:17,096 INFO  [Logger] Given Name 
+2015-08-22 17:38:27,505 INFO  [Logger] Choosen From File 
+2015-08-22 17:38:28,018 INFO  [Logger] File Path Given 
+2015-08-22 17:41:02,661 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:41:02,662 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:41:10,289 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:41:15,002 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:41:16,069 INFO  [Logger] Given Name 
+2015-08-22 17:41:26,475 INFO  [Logger] Choosen From File 
+2015-08-22 17:41:26,983 INFO  [Logger] File Path Given 
+2015-08-22 17:48:08,512 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:48:08,513 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:48:18,057 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:48:22,066 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:48:23,080 INFO  [Logger] Given Name 
+2015-08-22 17:48:33,618 INFO  [Logger] Choosen From File 
+2015-08-22 17:48:34,128 INFO  [Logger] File Path Given 
+2015-08-22 17:58:44,415 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 17:58:44,416 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 17:58:54,164 INFO  [Logger] Clicked on VM management 
+2015-08-22 17:58:57,021 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 17:58:58,021 INFO  [Logger] Given Name 
+2015-08-22 17:59:08,522 INFO  [Logger] Choosen From File 
+2015-08-22 17:59:09,035 INFO  [Logger] File Path Given 
+2015-08-22 18:00:19,825 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 18:00:19,826 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 18:00:28,785 INFO  [Logger] Clicked on VM management 
+2015-08-22 18:00:31,903 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 18:00:32,971 INFO  [Logger] Given Name 
+2015-08-22 18:00:43,600 INFO  [Logger] Choosen From File 
+2015-08-22 18:00:44,127 INFO  [Logger] File Path Given 
+2015-08-22 18:02:13,899 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 18:02:13,900 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 18:02:23,531 INFO  [Logger] Clicked on VM management 
+2015-08-22 18:02:27,201 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 18:02:28,193 INFO  [Logger] Given Name 
+2015-08-22 18:02:38,749 INFO  [Logger] Choosen From File 
+2015-08-22 18:02:39,258 INFO  [Logger] File Path Given 
+2015-08-22 18:05:28,254 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 18:05:28,255 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 18:05:37,987 INFO  [Logger] Clicked on VM management 
+2015-08-22 18:05:41,332 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 18:05:42,443 INFO  [Logger] Given Name 
+2015-08-22 18:05:53,046 INFO  [Logger] Choosen From File 
+2015-08-22 18:05:53,572 INFO  [Logger] File Path Given 
+2015-08-22 18:15:18,602 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 18:15:18,603 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 18:15:27,950 INFO  [Logger] Clicked on VM management 
+2015-08-22 18:15:30,890 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 18:15:31,890 INFO  [Logger] Given Name 
+2015-08-22 18:15:42,472 INFO  [Logger] Choosen From File 
+2015-08-22 18:15:42,992 INFO  [Logger] File Path Given 
+2015-08-22 18:19:40,479 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-22 18:19:40,480 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-22 18:19:49,210 INFO  [Logger] Clicked on VM management 
+2015-08-22 18:19:52,327 INFO  [Logger] Clicked on - Add new VM 
+2015-08-22 18:19:53,414 INFO  [Logger] Given Name 
+2015-08-22 18:20:03,917 INFO  [Logger] Choosen From File 
+2015-08-22 18:20:04,434 INFO  [Logger] File Path Given 

@@ -18,7 +18,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
+import com.avaya.sdmclient.*;
 
 
 public class tryC {
@@ -39,24 +39,47 @@ public class tryC {
 		List<NamedNodeMap> _nlmap = new ArrayList<>();
 		for(int i=0;i<nl.getLength();i++)
 			_nlmap.add(nl.item(i).getAttributes());
-		
+		String _op[][] = new String[nl.getLength()-1][2];
 		System.out.println(_Labels.size());
 		/*for(int i=0;i<nl.getLength();i++)
 			System.out.println(nl.item(i).getAttributes());*/
-		/*for (int i = 0; i < nl.getLength()-1; i++)
-			{
-				System.out.println();
+	
+		NodeList nlLabelNet = document.getElementsByTagName("Network");
+		List<NamedNodeMap> _nlmapnet = new ArrayList<>();
+		for(int i=0;i<nlLabelNet.getLength();i++)
+			_nlmapnet.add(nlLabelNet.item(i).getAttributes());
+		
+		for (int i = 0; i < nlLabelNet.getLength(); i++)
+		{
+			System.out.println("-inputEl");
+			
+				//System.out.println(_Labels.get(i));
+			//System.out.print(nl.item(i).getTextContent());
+			//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+			for(int j=0;j<_nlmapnet.get(i).getLength();j++)
+				{
+					Node attr = _nlmapnet.get(i).item(j);
+					//System.out.println(_nlmap.get(i).toString());
 				
-					System.out.println(_Labels.get(i));
-				//System.out.print(nl.item(i).getTextContent());
-				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
-				for(int j=0;j<_nlmap.get(i).getLength();j++)
-					{
-						Node attr = _nlmap.get(i).item(j);
-						//System.out.println(_nlmap.get(i).toString());
-						System.out.println(attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
-					}
-			}*/
+					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+				}
+		}
+		for (int i = 0; i < nl.getLength()-1; i++)
+		{
+			System.out.println();
+			
+				System.out.println(_Labels.get(i));
+			//System.out.print(nl.item(i).getTextContent());
+			//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+			for(int j=0;j<_nlmap.get(i).getLength();j++)
+				{
+					Node attr = _nlmap.get(i).item(j);
+					//System.out.println(_nlmap.get(i).toString());
+				
+					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+				}
+		}
+		_Settings obj = new _Settings();
 		
 		for (int i = 0; i < nl.getLength()-1; i++)
 		{
@@ -69,12 +92,32 @@ public class tryC {
 				{
 					Node attr = _nlmap.get(i).item(j);
 					//System.out.println(_nlmap.get(i).toString());
-					if(attr.getNodeName().contains("vmw:qualifiers"))
+					if(attr.getNodeName().contains("vmw:qualifiers")){
 						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
-					else if(attr.getNodeName().contains("ovf:key"))
-					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						_op[i][1] = attr.getNodeValue();
+					}
+						
+					else if(attr.getNodeName().contains("ovf:key")){
+						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						_op[i][0] = attr.getNodeValue();
+					}
 				}
 		}
+		
+		for(int i=0;i<16;i++)
+			
+				{
+					//System.out.println(_op[i][z]);
+					if(_op[i][1]!=null)
+						{
+							System.out.println("Going to IP");
+							//obj._AutoFill(driver, _op[i][0]);
+						}
+					else
+						{
+							System.out.println("Default");
+						}
+				}
 		//System.out.println(nl.item(16).getNodeName());
 		//System.out.println(nl.item(16).getTextContent());
 
