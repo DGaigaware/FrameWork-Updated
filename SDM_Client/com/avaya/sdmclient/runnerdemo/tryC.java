@@ -30,29 +30,53 @@ public class tryC {
 		NodeList nl =document.getElementsByTagName("Property");
 		System.out.println(nl.getLength());
 		
+		List<String> _Labels = new ArrayList<String>();
 
 		NodeList nlLabel = document.getElementsByTagName("Label");
 		for(int j=0;j<nlLabel.getLength();j++)
 			if(nlLabel.item(j).getParentNode().getNodeName().equals("Property"))
-			System.out.println(nlLabel.item(j).getTextContent());
+			_Labels.add(nlLabel.item(j).getTextContent());
 		List<NamedNodeMap> _nlmap = new ArrayList<>();
 		for(int i=0;i<nl.getLength();i++)
 			_nlmap.add(nl.item(i).getAttributes());
 		
+		System.out.println(_Labels.size());
 		/*for(int i=0;i<nl.getLength();i++)
 			System.out.println(nl.item(i).getAttributes());*/
-		for (int i = 0; i < nl.getLength(); ++i)
+		/*for (int i = 0; i < nl.getLength()-1; i++)
 			{
 				System.out.println();
+				
+					System.out.println(_Labels.get(i));
 				//System.out.print(nl.item(i).getTextContent());
 				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
 				for(int j=0;j<_nlmap.get(i).getLength();j++)
 					{
 						Node attr = _nlmap.get(i).item(j);
 						//System.out.println(_nlmap.get(i).toString());
-						System.out.println("\n"+attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 					}
-			}
+			}*/
+		
+		for (int i = 0; i < nl.getLength()-1; i++)
+		{
+			System.out.println();
+			
+				System.out.println(_Labels.get(i));
+			//System.out.print(nl.item(i).getTextContent());
+			//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+			for(int j=0;j<_nlmap.get(i).getLength();j++)
+				{
+					Node attr = _nlmap.get(i).item(j);
+					//System.out.println(_nlmap.get(i).toString());
+					if(attr.getNodeName().contains("vmw:qualifiers"))
+						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+					else if(attr.getNodeName().contains("ovf:key"))
+					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+				}
+		}
+		//System.out.println(nl.item(16).getNodeName());
+		//System.out.println(nl.item(16).getTextContent());
 
 	}
 	
