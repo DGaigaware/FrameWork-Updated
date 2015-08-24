@@ -60,7 +60,7 @@ public class _vCenter {
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
-		
+		Thread.sleep(1500);
 		driver.findElement(By.xpath(".//*[@id='menuitem-1022-textEl']")).click();
 		logClass.info("Clicked on 'Map vCenter' ");
 		
@@ -85,14 +85,14 @@ public class _vCenter {
 	}
 	
 	@Test(description="Deleting Host to given Location",priority=2)
-	public void _DeletevCenter() throws IOException{
+	public void _DeletevCenter() throws IOException, InterruptedException{
 		
 		logClass.startTestCase("Deleting vCenter to given Location");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
-		
+		Thread.sleep(1500);
 		driver.findElement(By.xpath(".//*[@id='menuitem-1022-textEl']")).click();
 		logClass.info("Clicked on 'Map vCenter' ");
 		

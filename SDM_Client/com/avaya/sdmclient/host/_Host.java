@@ -19,7 +19,8 @@ public class _Host {
 	
 	@Test(description="Adding Host to given Location")	
 	public void addHost() throws IOException, InterruptedException{
-	
+		
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 			
 		logClass.startTestCase("Adding Host to given Location");
@@ -28,7 +29,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 				
-		obj._findLocationOrHost(driver, "testLoc");
+		obj._findLocationOrHost(driver, obj._readFromFile("input.txt", "NewLocation"));
 
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
@@ -58,7 +59,7 @@ public class _Host {
 		
 	@Test(description="Editing Host to given Location",priority=1)
 		public void _EditHost() throws IOException, InterruptedException{
-		
+
 		logClass.startTestCase("Editing Host to given Location");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
@@ -70,7 +71,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
 	
-		obj._findHostInGrid(driver, "148.147.162.196");
+		obj._findHostInGrid(driver, obj._readFromFile("input.txt", "NewHostIP"));
 		
 		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
@@ -80,7 +81,7 @@ public class _Host {
 		obj._addToList();
 		
 		Thread.sleep(250);
-		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewLoc"), obj._selBoundList(driver));
+		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewHostEditLoc"), obj._selBoundList(driver));
 		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(linkText)));
 	    driver.findElement(By.linkText(linkText)).click();*/
 		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).clear();
@@ -99,7 +100,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='saveOnEditHost-btnInnerEl']")).click();
 		
 		obj._errorBox(driver, obj._checkError(driver));
-		logClass.endTestCase("Edited Host Succesfully");
+		logClass.endTestCase("Edited Host Successfully");
 		
 	}
 	

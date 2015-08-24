@@ -23,7 +23,7 @@ import com.avaya.sdmclient.*;
 
 public class tryC {
 
-	public static void _ExtractText(String _tag,String _filePath) throws IOException, ParserConfigurationException, SAXException{
+	public static void FillValues(String _tag,String _filePath) throws IOException, ParserConfigurationException, SAXException{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = dbf.newDocumentBuilder();
         Document document = db.parse(new File(_filePath));
@@ -148,7 +148,7 @@ public class tryC {
 		String s1 = "<Property ovf:value=\"\" ovf:required=\"true\"";
 		String s = "<Property ovf:value=\"\" ovf:type=\"string\" ovf:required=\"true\" ovf:qualifiers=\"MinLen(1),MaxLen(255)\" ovf:userConfigurable=\"true\" ovf:key=\"hostname\"><Label>Short Hostname:</Label><Description>Short hostname for Session Manager</Description></Property>";
 		String _fp = "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf";
-		_ExtractText("Property", _fp);
+		FillValues("Property", _fp);
 		System.out.println("Test");
 	}
 

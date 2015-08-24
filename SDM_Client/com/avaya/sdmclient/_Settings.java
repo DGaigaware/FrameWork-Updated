@@ -10,6 +10,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,8 +26,14 @@ import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
-
+@SuppressWarnings("unchecked")
 public class _Settings {
 	
 	final String _dataStore = "boundlist-1542-listEl";
@@ -65,7 +75,7 @@ public class _Settings {
 					while(sc.hasNext())
 						if(sc.next().contains(_find))
 							if(sc.hasNext())
-							_output = sc.next();
+							_output = sc.next().trim();
 			}
 		return _output;
 	}
@@ -78,8 +88,14 @@ public class _Settings {
 		for(WebElement e : cells)
 		{	
 			//System.out.println(e.getText());
-			if(e.getText().trim().equals(_input))
-				e.click();
+			try{
+				if(e.isDisplayed())
+					if(e.getText().trim().equals(_input))
+						e.click();
+			}
+			catch(Exception ex){
+				System.out.println("Couldn't find");
+			}
 		}
 	}
 	
@@ -99,12 +115,19 @@ public class _Settings {
 		WebElement table = driver.findElement(By.id("gridview-1115"));
 		List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='td']"));
 		//System.out.println(cells.size()+"\n\n");
-	
+		
 		for(WebElement e : cells)
 		{	//System.out.println("Test:"+e.getText()+"\n");
+			try{
 			if(e.getText().trim().equals(_Host))
 				e.click();
+			}
+			catch(Exception ex){
+				System.out.println("Couldn't find Host");
+			}
 		}
+		
+		
 	}
 	
 	public void _findVMForHost(WebDriver driver, String _Host){
@@ -129,20 +152,6 @@ public class _Settings {
 				e.click();
 		}	
 	}
-
-/*	public void _boundListSelect(WebDriver driver,String _toBeSelected,int i){
-		WebElement element = driver.findElement(By.id(_bListGetComponent.get(i)));
-		List<WebElement> tmp1 = element.findElements(By.className("x-boundlist-item"));
-		for (WebElement e : tmp1 )
-			{
-				//System.out.println(e.getText()+ "\n Test \n");
-				if(e.getText().contains(_toBeSelected))
-				{
-					//System.out.println("\nSelected : \n"+e.getText());
-					e.click();
-				}
-			}
-	}*/
 	
 	public void _boundListSelect(WebDriver driver,String _toBeSelected,String s){
 		WebElement element = driver.findElement(By.id(s));
@@ -259,6 +268,7 @@ public class _Settings {
 		}
 	}
 	
+	@SuppressWarnings({ "unused" })
 	public String _selBoundList(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
@@ -266,7 +276,7 @@ public class _Settings {
 			{//System.out.println(s.getText());
 			//System.out.println(s.getTagName());
 			//System.out.println(s.getClass());
-			System.out.println(s.getAttribute("id"));
+			//System.out.println(s.getAttribute("id"));
 			}
 		return a.get(a.size()-1).getAttribute("id");
 	}
@@ -280,7 +290,7 @@ public class _Settings {
 	    System.exit(0);
 	}
 	
-	public void _confirmDialogBox(WebDriver driver){
+	public void _confirmDialogBox(WebDriver driver) throws IOException{
 		driver.switchTo().activeElement();
 		
 		try{
@@ -291,6 +301,10 @@ public class _Settings {
 			}
 		}
 		catch(Exception ex){
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File("C:\\Users\\bshingala\\Desktop\\screenshotSDMfail1.png"));
+			logClass.error("Something went wrong :(");
+			logClass.info("Check Screenshot for the same");
 			System.out.println("Couldn't find any text");
 		}
 		
@@ -354,15 +368,31 @@ public class _Settings {
 		}
 		
 		@SuppressWarnings("deprecation")
-		public String fluentWait(final By locator,WebDriver driver,int _time,String _Test) {
+		public String fluentWait(final By locator,WebDriver driver,int _time,String _Test) throws InterruptedException {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(_time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+			//Thread.sleep(45000);
+			//_closeWindow(driver);
 			wait.until(ExpectedConditions.textToBePresentInElement(locator, _Test));
 			logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 		    return driver.findElement(locator).getText();
 		}
 		
 		
-		public void _StatusCheck(WebDriver driver,String _toBeChecked,int _time) throws IOException{
+		public String fluentWaitCloseOpen(final By locator,WebDriver driver,int _time,String _Test) throws InterruptedException {
+			Thread.sleep(45000);
+			_closeWindow(driver);
+			
+			driver.findElement(By.linkText("Status Details")).click();
+			logClass.info("CO "+"Checking Status Details");
+			
+			WebDriverWait wait = new WebDriverWait(driver, 3000);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));
+			driver.switchTo().activeElement();
+			System.out.println(driver.findElement(By.id("vmDeployStatus")).getText());
+			return fluentWait(locator, driver, _time, _Test);
+		}
+		
+		public void _StatusCheck(WebDriver driver,String _toBeChecked,int _time) throws IOException, InterruptedException{
 			driver.findElement(By.linkText("Status Details")).click();
 			driver.switchTo().activeElement();
 			System.out.println(fluentWait(By.id("vmDeployStatus"), driver, _time, _toBeChecked));
@@ -398,6 +428,7 @@ public class _Settings {
 				}
 		}
 		
+		
 		public void _AutoFill(WebDriver driver,String _input) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID = "";
@@ -406,22 +437,22 @@ public class _Settings {
 				{//System.out.println(s.getText());
 				//System.out.println(s.getTagName());
 				//System.out.println(s.getClass());
-				//System.out.println(s.getAttribute("id"));
+				System.out.println("Check : "+s.getAttribute("id"));
 				if(s.getTagName().equals("input"))
 					{
 						_returnID = s.getAttribute("id");
 						System.out.println(s.getAttribute("id"));
 					}
 				}
-			
-			driver.findElement(By.id(_returnID)).clear();
-			driver.findElement(By.id(_returnID)).sendKeys(_readFromFile("input.txt", _input));
+			System.out.println("Ckeck :"+_returnID);
+			//driver.findElement(By.id(_returnID)).clear();
+			driver.findElement(By.id(_returnID)).sendKeys(_readFromFile("input1.txt", _input));
 		}
 	
 		public void _AutoFillIP(WebDriver driver,String _inputForJS,String _IP){
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID = "";
-			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _inputForJS +"]');return nl");
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=ipfs"+ _inputForJS +"]');return nl");
 			List<String> _Addresses = new ArrayList<String>();
 			for(WebElement s : a)
 				{//System.out.println(s.getText());
@@ -432,18 +463,181 @@ public class _Settings {
 						System.out.println(s.getAttribute("id"));
 					
 				}
-	
+			System.out.println("Final"+_returnID);
+			
+			System.out.println("Test");
 			List<WebElement> tempcellsCols = driver.findElement(By.id(_returnID)).findElements(By.xpath(".//*[local-name(.)='td']"));
 			
 			for(WebElement e : tempcellsCols)
 				if(e.getAttribute("id").contains("body"))
 				{
-					//e.sendKeys("148");
-					System.out.println(e.getAttribute("id").replace("body", "input"));
+					System.out.println("To be Printed"+e.getAttribute("id").replace("body", "input"));
 					_Addresses.add(e.getAttribute("id").replace("body", "input"));
 				}
-			
+			System.out.println("Before Fill IP");
 			_IPFill(driver, _IP, _Addresses.get(0));
+			System.out.println("After Fill IP");
+		}
+		
+		public void FillValues(String _tag,String _filePath,WebDriver driver) throws IOException, ParserConfigurationException, SAXException{
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder db = dbf.newDocumentBuilder();
+	        Document document = db.parse(new File(_filePath));
+			NodeList nl =document.getElementsByTagName("Property");
+			System.out.println(nl.getLength());
+			
+			List<String> _Labels = new ArrayList<String>();
+
+			NodeList nlLabel = document.getElementsByTagName("Label");
+			for(int j=0;j<nlLabel.getLength();j++)
+				if(nlLabel.item(j).getParentNode().getNodeName().equals("Property"))
+				_Labels.add(nlLabel.item(j).getTextContent());
+			List<NamedNodeMap> _nlmap = new ArrayList<>();
+			for(int i=0;i<nl.getLength();i++)
+				_nlmap.add(nl.item(i).getAttributes());
+			String _op[][] = new String[nl.getLength()-1][2];
+			System.out.println(_Labels.size());
+			/*for(int i=0;i<nl.getLength();i++)
+				System.out.println(nl.item(i).getAttributes());*/
+		
+			NodeList nlLabelNet = document.getElementsByTagName("Network");
+			List<NamedNodeMap> _nlmapnet = new ArrayList<>();
+			for(int i=0;i<nlLabelNet.getLength();i++)
+				_nlmapnet.add(nlLabelNet.item(i).getAttributes());
+			
+			for (int i = 0; i < nlLabelNet.getLength(); i++)
+			{
+				System.out.println("-inputEl");
+				
+					//System.out.println(_Labels.get(i));
+				//System.out.print(nl.item(i).getTextContent());
+				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+				for(int j=0;j<_nlmapnet.get(i).getLength();j++)
+					{
+						Node attr = _nlmapnet.get(i).item(j);
+						//System.out.println(_nlmap.get(i).toString());
+					
+						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+					}
+			}
+			for (int i = 0; i < nl.getLength()-1; i++)
+			{
+				System.out.println();
+				
+					System.out.println(_Labels.get(i));
+				//System.out.print(nl.item(i).getTextContent());
+				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+				for(int j=0;j<_nlmap.get(i).getLength();j++)
+					{
+						Node attr = _nlmap.get(i).item(j);
+						//System.out.println(_nlmap.get(i).toString());
+					
+						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+					}
+			}
+			
+			for (int i = 0; i < nl.getLength()-1; i++)
+			{
+				System.out.println();
+				
+					System.out.println(_Labels.get(i));
+				//System.out.print(nl.item(i).getTextContent());
+				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
+				for(int j=0;j<_nlmap.get(i).getLength();j++)
+					{
+						Node attr = _nlmap.get(i).item(j);
+						//System.out.println(_nlmap.get(i).toString());
+						if(attr.getNodeName().contains("vmw:qualifiers")){
+							System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+							_op[i][1] = attr.getNodeValue();
+							System.out.println("1st: "+_op[i][1]+ " "+ _op[i][0]);
+						}
+						
+						else if(attr.getNodeName().contains("ovf:password")){
+							System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+							_op[i][1] = attr.getNodeValue();
+							System.out.println("1st: "+_op[i][1]+ " "+ _op[i][0]);
+						}
+							
+						else if(attr.getNodeName().contains("ovf:key")){
+							System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+							_op[i][0] = attr.getNodeValue();
+							System.out.println("1st: "+_op[i][1]+ " "+ _op[i][0]);
+						}
+					}
+			}
+			for(int i=0;i<nl.getLength()-5;i++)
+				System.out.println(_op[i][0]);
+			for(int i=0;i<nl.getLength()-5;i++)
+				
+					{
+						System.out.println(_op[i][0]);
+						if(_op[i][1]!=null && _op[i][1].equals("Ip"))
+							{
+								System.out.println("Going to IP " + i);
+								_AutoFillIP(driver, _op[i][0],_readFromFile("input1.txt", _op[i][0]));
+							}
+						
+						else if(_op[i][1]!=null && _op[i][1].equals("true"))
+							{
+								System.out.println("Password " + i);
+								_AutoFillPasswd(driver, _op[i][0]);
+							}
+						else if(_op[i][1]==null && _op[i][0].equalsIgnoreCase("timezone"))
+							{
+								System.out.println("Combo " + i);
+								_AutoFillCombo(driver, _op[i][0]);
+							}
+						else
+							{
+								System.out.println("Default " + i);
+								_AutoFill(driver, _op[i][0]);
+							}
+						System.out.println("Loop: \n");
+					}
+		}
+		
+		public void _AutoFillCombo(WebDriver driver,String _input) throws IOException{
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			String _returnID = "";
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input.toUpperCase() +"]');return nl");
+			//System.out.println(a.size());
+			//System.out.println(a.get(0).getText());
+			//System.out.println(_input);
+			for(WebElement s : a)
+				{//System.out.println(s.getText());
+				//System.out.println(s.getTagName());
+				//System.out.println(s.getClass());
+				System.out.println(s.getAttribute("role"));
+				System.out.println("IDs: "+s.getAttribute("id"));
+				//if(s.getTagName().equals("input"))
+					{
+						_returnID = s.getAttribute("id");
+						System.out.println(s.getAttribute("id"));
+					}
+				}
+			driver.findElement(By.id(_returnID)).click();
+			_boundListSelect(driver, _readFromFile("input1.txt", _input.toUpperCase()), _selBoundList(driver));
+		}
+		
+		public void _AutoFillPasswd(WebDriver driver,String _input) throws IOException{
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			String _returnID1 = "";
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input +"]');return nl");
+			for(WebElement s : a)
+				{//System.out.println(s.getText());
+				//System.out.println(s.getTagName());
+				//System.out.println(s.getClass());
+				//System.out.println(s.getAttribute("id"));
+				if(s.getTagName().equals("input"))
+					{
+						_returnID1 = s.getAttribute("id");
+						System.out.println(s.getAttribute("id"));
+					}
+				}
+
+				driver.findElement(By.id(_returnID1)).sendKeys(_readFromFile("input1.txt", _input));
+				driver.findElement(By.id("conf"+_returnID1)).sendKeys(_readFromFile("input1.txt", _input));
 		}
 }
 
