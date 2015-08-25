@@ -12,186 +12,71 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import com.avaya.sdmclient.logClass;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class extraOperations {
-	List<String> strings = new ArrayList<String>();
-    public List<String> _findStr(String _input[]){
-        
-        Scanner sc ;
-        String _op = null ;
-        for(String s : _input)
-        {
-        	sc = new Scanner(s);
-        	while(sc.hasNext())
-        		if(sc.next().contains("Profile"))
-        		{
-        			_op = sc.next().replace(",", "");
-        			strings.add(_op);
-        			//System.out.println(_op);
-        		}
-        }
-        return strings;
-    }
-    
-    public int _compare(int i[]){
-        int temp = 100000000;
-        for(int index=0;index<i.length;index++)
-            if(i[index]<temp)
-                temp = i[index];
-        System.out.println(temp);
-        return temp;
-    }
-    
-    public static void main(String args[]) throws IOException, InterruptedException{
-       /* String input[] = {"SM 7.0 Profile 5 Max Devices 23,300","SM 7.0 Profile 1 Max Devices 2,500","SM 7.0 Profile 2 Max Devices 4,500"};
-        int tem[] = {12,20,25,6};
-        extraOperations ob = new extraOperations();
-        int arr[] = {0,0,0} ;
-        List<Integer> i= new ArrayList<Integer>();
-       
-        for(int z=0;z<input.length;z++)
-            i.add(Integer.parseInt(ob._findStr(input).get(z)));
-            
-        for(int y : i)
-            System.out.println(y);
-        
-        for(int z=0;z<input.length;z++)
-            arr[z]=i.get(z);
-        ob._compare(arr);
-        
-//        if(i>ob._compare(tem))
-//            System.out.println("Greater");
-        
-        ob._compare(tem);*/
-    	
-    	String _path = "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf";
-		_Settings obj = new _Settings();
-		obj._ExtractText("Product",_path);
+	
+	public static void main(String[] args) throws IOException, InterruptedException {
+		Settings obj = new Settings();
 
-    	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
-        driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-		//driver.manage().window().maximize();
-		
-        obj._addToList();
-		boolean _Check;
-		
-		final String _default = "Filepath";
-		final String _SWLib = "Software Library";
-		final String _URL = "URL";
-		
-		driver.manage().timeouts().implicitlyWait(6500, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
-		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
-		
-		logClass.startTestCase("Adding VM to given Location and Host");
+		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
+logClass.startTestCase("Editing Host to given Location");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 		
-		obj._findLocationOrHost(driver, "testHost");
+		obj.findLocationOrHost(driver, "testLoc");
 		
-		driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
-		driver.findElement(By.xpath(".//*[@id='newVM_-btnInnerEl']")).click();
-		logClass.info("Clicked on - Add new VM");
-		Thread.sleep(750);
+		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
+		logClass.info("In 'Host' Tab");
+	
+		obj.findHostInGrid(driver, obj.readFromFile("input.txt", "NewHostIP"));
 		
-		driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).clear();
-		//driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).sendKeys(obj._readFromFile("input.txt", "VMName"));	
-		driver.findElement(By.xpath(".//*[@id='vmname-inputEl']")).sendKeys("testSM2211");
-		logClass.info("Given Name");
-		Thread.sleep(450);
+		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
-		obj._errorBox(driver,obj._checkError(driver));
+		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).clear();
+		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostName"));
 		
-		driver.findElement(By.xpath(".//*[@id='cmbVMDataStore-inputEl']")).click();
+		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).clear();
+		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostIP"));
+		
+		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).clear();
+		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostUser"));
+		
+		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).clear();
+		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).sendKeys("1234");
 		Thread.sleep(250);
-
-		obj._boundListSelect(driver, "data", obj._selBoundList(driver));
 		
-		//1 - File Path; 3 - SW Library; 4 - URL 
-		switch(_default){
-			case _default:
-					driver.findElement(By.xpath(".//*[@id='radio1-inputEl']")).click();
-					logClass.info("Choosen From File");
+		driver.findElement(By.xpath(".//*[@id='saveOnEditHost-btnInnerEl']")).click();
 		
-					driver.findElement(By.xpath(".//*[@id='textfield-1228-inputEl']")).clear();
-					driver.findElement(By.xpath(".//*[@id='textfield-1228-inputEl']")).sendKeys(obj._readFromFile("input.txt", "FilePath"));
-					driver.findElement(By.xpath(".//*[@id='button-1229-btnIconEl']")).click();
-					logClass.info("File Path Given");
-					Thread.sleep(500);
-					break;
-			case _URL:
-					driver.findElement(By.xpath(".//*[@id='radio4-inputEl']")).click();
-					logClass.info("Choosen From URL");
-					
-					driver.findElement(By.xpath(".//*[@id='txtOVAURL-inputEl']")).clear();
-					driver.findElement(By.xpath(".//*[@id='txtOVAURL-inputEl']")).sendKeys("http://148.147.214.158/alternate_source/SM-7.0.0.0.700007-e55-01.ova");
-					driver.findElement(By.xpath(".//*[@id='button-1240-btnIconEl']")).click();
-					Thread.sleep(450);
-					break;
-			case _SWLib:
-					driver.findElement(By.xpath(".//*[@id='radio3-inputEl']")).click();
-					logClass.info("Choosen From Software Library");
-					
-					driver.findElement(By.xpath(".//*[@id='combobox-1237-inputEl']")).click();
-					WebElement element = driver.findElement(By.id("boundlist-1543-listEl"));
-					List<WebElement> tmp1 = element.findElements(By.className("x-boundlist-item"));
-					for (WebElement e : tmp1 )
-						{
-							//System.out.println(e.getText()+ "\n Test \n");
-							if(e.getText().contains("SM"))
-							{
-								System.out.println("\nSelected : \n"+e.getText());
-								e.click();
-							}
-						}
-					break;
+		//obj.errorBox(driver, obj.checkError(driver));
+		
+		//obj.confirmDialogBox(driver);
+		Thread.sleep(3500);
+		WebElement table1 = driver.findElement(By.id("gridview-1115"));
+		List<WebElement> cells1 = table1.findElements(By.xpath(".//*[local-name(.)='tr']"));
+		for(WebElement e : cells1)
+			
+		{	
+			if(e.getText().trim().contains(obj.readFromFile("input.txt", "NewHostIP")))
+			{
+				System.out.println("next"+e.getText());
+				e.click();
+				e.findElement(By.linkText("Status Details")).click();
+			}
+			
 		}
 		
-		//obj._errorBox(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 3000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));
+		System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver, 50, "Host Create/Update Completed"));
+		
+		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
 
-		driver.findElement(By.xpath(".//*[@id='cmbSelectFlexiFootPrint-inputEl']")).click();
-		Thread.sleep(450);
-		
-		obj._boundListSelect(driver, "Profile 1", obj._selBoundList(driver));
-		//Thread.sleep(250);
-		_Check = obj._checkError(driver);
-		obj._errorBox(driver,obj._checkError(driver));
-	
-		driver.findElement(By.xpath(".//*[@id='gridcolumn-1221-textEl']")).click();
-		obj._checkFailureOfHostCapacity(driver);
-		
-		obj._exec(!_Check);
-		
-		driver.findElement(By.xpath(".//*[@id='domain-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='domain-inputEl']")).sendKeys("testsm221.smgrdev.avaya.com");
-		
-		obj._IPFill(driver, "148.147.162.221", ".//*[@id='textfield-1548-inputEl']");
-	
-		logClass.info("IP address given");
-		
-		driver.findElement(By.xpath(".//*[@id='hostname-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostname-inputEl']")).sendKeys(obj._readFromFile("input.txt", "VMName"));
-		logClass.info("Given the Name of VM");
-		
-		obj._IPFill(driver, "255.255.255.0", ".//*[@id='textfield-1556-inputEl']");
-	
-		logClass.info("Given NetMask");
-
-		obj._IPFill(driver, "148.147.162.1", ".//*[@id='textfield-1564-inputEl']");
-		
-		logClass.info("Given Default Gateway");
-		
-		driver.findElement(By.xpath(".//*[@id='timezone-inputEl']")).click();
-		
-		obj._boundListSelect(driver, "Asia/Kolkata", obj._selBoundList(driver));
-		
-		Thread.sleep(2500);
-		logClass.info("Selected Given TimeZone");
+		logClass.endTestCase("Added Host Succesfully");
     }
+
 }

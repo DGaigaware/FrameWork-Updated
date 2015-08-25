@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.lang.model.element.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,7 +17,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import com.avaya.sdmclient.*;
 
 
 public class tryC {
@@ -79,8 +77,9 @@ public class tryC {
 					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 				}
 		}
-		_Settings obj = new _Settings();
 		
+		
+			
 		for (int i = 0; i < nl.getLength()-1; i++)
 		{
 			System.out.println();
@@ -104,6 +103,8 @@ public class tryC {
 				}
 		}
 		
+		for (int i = 0; i < nl.getLength()-1; i++)
+			System.out.println(_op[i][0]);
 		for(int i=0;i<16;i++)
 			
 				{
@@ -143,11 +144,12 @@ public class tryC {
 	}
 
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws Exception {
 
 		String s1 = "<Property ovf:value=\"\" ovf:required=\"true\"";
 		String s = "<Property ovf:value=\"\" ovf:type=\"string\" ovf:required=\"true\" ovf:qualifiers=\"MinLen(1),MaxLen(255)\" ovf:userConfigurable=\"true\" ovf:key=\"hostname\"><Label>Short Hostname:</Label><Description>Short hostname for Session Manager</Description></Property>";
-		String _fp = "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf";
+		String _fp = "C:\\Users\\bshingala\\Downloads\\BSM-7.0.0.0.700007-e55-01_EXTRACT\\BSM-7.0.0.0.700007_OVF10.ovf";
 		FillValues("Property", _fp);
 		System.out.println("Test");
 	}

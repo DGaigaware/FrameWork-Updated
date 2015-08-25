@@ -9,27 +9,17 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
 
-import com.avaya.sdmclient._Settings;
+import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
-
-import utility.UserAction;
 
 public class testC {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
-		_Settings obj = new _Settings();
-		WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
-		
-			obj._addToList();
-			boolean _Check;
-			
-			final String _default = "Filepath";
-			final String _SWLib = "Software Library";
-			final String _URL = "URL";
-			
+		Settings obj = new Settings();
+		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
+	
 			driver.manage().timeouts().implicitlyWait(6500, TimeUnit.MILLISECONDS);
 			driver.manage().window().maximize();
 			
@@ -42,7 +32,7 @@ public class testC {
 			driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 			logClass.info("Clicked on VM management");
 			
-			obj._findLocationOrHost(driver, "testHost");
+			obj.findLocationOrHost(driver, "testHost");
 			
 			driver.findElement(By.xpath(".//*[@id='tab-1306-btnInnerEl']")).click();
 			
@@ -55,7 +45,7 @@ public class testC {
 				
 			}
 				
-			obj._findVMForHost(driver, "testSM22111");
+			obj.findVMForHost(driver, "testSM22111");
 			/*
 			 * Working Fine with Refresh and Polling on Window check
 			 * 
@@ -80,7 +70,7 @@ public class testC {
 			System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver, 50, "VM Refresh Completed"));
 			obj._StatusCheck(driver, "VM Refresh Completed", 20);*/
 			driver.findElement(By.xpath(".//*[@id='stopvm-btnInnerEl']")).click();
-			obj._confirmDialogBox(driver);
+			obj.confirmDialogBox(driver);
 
 			
 			WebElement tablet = driver.findElement(By.id("gridview-1190"));
