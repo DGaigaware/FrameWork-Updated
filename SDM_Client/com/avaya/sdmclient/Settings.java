@@ -34,37 +34,16 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 @SuppressWarnings("unchecked")
-public class _Settings {
+public class Settings {
 	
-	final String _dataStore = "boundlist-1542-listEl";
-	final String _FilePathFootPrintSelect = "boundlist-1591-listEl";
-	final String _SWLibFileSelect = "boundlist-1546-listEl";
-	final String _SWLibandURLFootPrintSelect = "boundlist-1545-listEl";
-	final String _LocationSelect = "boundlist-1537-listEl";
-	final String _TimeZoneSelect = "boundlist-1593-listEl";
-	final String _NetworkPublicSelect = "boundlist-1594-listEl";
-	final String _NetworkOOBMSelect = "boundlist-1595-listEl";
-	final List<String> _bListGetComponent = new ArrayList<String>();
-	
-	public void _addToList(){
-		_bListGetComponent.add(_dataStore);
-		_bListGetComponent.add(_FilePathFootPrintSelect);
-		_bListGetComponent.add(_SWLibFileSelect);
-		_bListGetComponent.add(_SWLibandURLFootPrintSelect);
-		_bListGetComponent.add(_LocationSelect);
-		_bListGetComponent.add(_TimeZoneSelect);
-		_bListGetComponent.add(_NetworkPublicSelect);
-		_bListGetComponent.add(_NetworkOOBMSelect);
-	}
-	
-	public FirefoxProfile _selectProfile(String _profile){
+	public FirefoxProfile selectProfile(String _profile){
 		ProfilesIni allProfiles = new ProfilesIni();
 		FirefoxProfile profile = allProfiles.getProfile(_profile);
 		logClass.confFile();
 		return profile;
 	}
 	
-	public String _readFromFile(String _fileName,String _find) throws IOException{
+	public String readFromFile(String _fileName,String _find) throws IOException{
 		File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+_fileName);
 		List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
@@ -73,14 +52,15 @@ public class _Settings {
 			{
 				sc = new Scanner(s);
 					while(sc.hasNext())
-						if(sc.next().contains(_find))
+						if(sc.next().equals(_find))
 							if(sc.hasNext())
 							_output = sc.next().trim();
 			}
+		System.out.println(_output);
 		return _output;
 	}
 	
-	public void _findLocationOrHost(WebDriver driver, String _input){
+	public void findLocationOrHost(WebDriver driver, String _input){
 		WebElement table = driver.findElement(By.id("treeview-1014"));
 		List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='tr']"));
 		//System.out.println(cells.size()+"\n\n");
@@ -99,7 +79,7 @@ public class _Settings {
 		}
 	}
 	
-	public void _findLocationInGrid(WebDriver driver, String _Location){
+	public void findLocationInGrid(WebDriver driver, String _Location){
 		WebElement table = driver.findElement(By.id("gridview-1054"));
 		List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='td']"));
 		//System.out.println(cells.size()+"\n\n");
@@ -111,7 +91,7 @@ public class _Settings {
 		}
 	}
 	
-	public void _findHostInGrid(WebDriver driver, String _Host){
+	public void findHostInGrid(WebDriver driver, String _Host){
 		WebElement table = driver.findElement(By.id("gridview-1115"));
 		List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='td']"));
 		//System.out.println(cells.size()+"\n\n");
@@ -130,7 +110,7 @@ public class _Settings {
 		
 	}
 	
-	public void _findVMForHost(WebDriver driver, String _Host){
+	public void findVMForHost(WebDriver driver, String _Host){
 		WebElement table = driver.findElement(By.id("gridview-1190"));
 		List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='td']"));
 		//System.out.println(cells.size()+"\n\n");
@@ -142,7 +122,7 @@ public class _Settings {
 		}
 	}
 	
-	public void _findVCenterInGrid(WebDriver driver, String _VCenter){
+	public void findVCenterInGrid(WebDriver driver, String _VCenter){
 		WebElement temp = driver.findElement(By.xpath(".//*[@id='gridview-1315']"));
 		List<WebElement> tempcells = temp.findElements(By.xpath(".//*[local-name(.)='td']"));
 		
@@ -153,7 +133,7 @@ public class _Settings {
 		}	
 	}
 	
-	public void _boundListSelect(WebDriver driver,String _toBeSelected,String s){
+	public void boundListSelect(WebDriver driver,String _toBeSelected,String s){
 		WebElement element = driver.findElement(By.id(s));
 		List<WebElement> tmp1 = element.findElements(By.className("x-boundlist-item"));
 		for (WebElement e : tmp1 )
@@ -167,7 +147,7 @@ public class _Settings {
 			}
 	}
 	
-	public void _checkFailureOfHostCapacity(WebDriver driver){
+	public void checkFailureOfHostCapacity(WebDriver driver){
 		WebElement temp = driver.findElement(By.xpath(".//*[@id='gridview-1222']"));
 		List<WebElement> tempcells = temp.findElements(By.xpath(".//*[local-name(.)='td']/div/span"));
 		List<WebElement> tempcellsRow = temp.findElements(By.xpath(".//*[local-name(.)='tr']"));
@@ -199,12 +179,14 @@ public class _Settings {
 			}
 	}
 	
-	public String _IPConvert(WebDriver driver,String _IP,int _partIndex){
-		String[] parts = _IP.split("\\."); 
+	public String IPConvert(WebDriver driver,String _IP,int _partIndex){
+		String[] parts = _IP.split("\\.");
+		for(int i=0;i<4;i++)
+			System.out.println(parts[i]);
 		return parts[_partIndex];
 	}
 	
-	public String _removeAlpha(String str){
+	public String removeAlpha(String str){
 		StringBuilder sc = new StringBuilder();
 	            for (int i=0;i<str.length();i++)
 		        if (!Character.isDigit(str.charAt(i)))
@@ -214,24 +196,24 @@ public class _Settings {
 	        return sc.toString();
 	}
 
-	public List<String> _makeFields(String _input){
+	public List<String> makeFields(String _input){
 		List<String> _Fields = new ArrayList<String>();
-		int _it = Integer.parseInt(_removeAlpha(_input));
+		int _it = Integer.parseInt(removeAlpha(_input));
 		for(int i=0;i<4;i++)
 			_Fields.add(".//*[@id='textfield-"+(_it+(i*2))+"-inputEl']");
 		return _Fields;
 	}
 	
-	public void _IPFill(WebDriver driver,String _IP,String _startAddress){
-		List<String> _addresses = _makeFields(_startAddress);
+	public void IPFill(WebDriver driver,String _IP,String _startAddress){
+		List<String> _addresses = makeFields(_startAddress);
 		for(int i=0;i<4;i++)
 		{
 			driver.findElement(By.xpath(_addresses.get(i))).clear();
-			driver.findElement(By.xpath(_addresses.get(i))).sendKeys(_IPConvert(driver, _IP, i));
+			driver.findElement(By.xpath(_addresses.get(i))).sendKeys(IPConvert(driver, _IP, i));
 		}	
 	}
 
-	public boolean _checkError(WebDriver driver){
+	public boolean checkError(WebDriver driver){
 		boolean b = false;
 		try{
 			if(driver.findElement(By.id("messagebox-1001")).isDisplayed())
@@ -243,8 +225,8 @@ public class _Settings {
 		return b;
 	}
 	
-	public void _errorBox(WebDriver driver,boolean _check){
-		if(_check)
+	public void errorBox(WebDriver driver,boolean check){
+		if(check)
 		{
 			try{
 				if(driver.findElement(By.id("messagebox-1001")).isDisplayed())
@@ -269,7 +251,7 @@ public class _Settings {
 	}
 	
 	@SuppressWarnings({ "unused" })
-	public String _selBoundList(WebDriver driver){
+	public String selBoundList(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
 		for(WebElement s : a)
@@ -281,7 +263,7 @@ public class _Settings {
 		return a.get(a.size()-1).getAttribute("id");
 	}
 	
-	public void _exec(boolean _in) {
+	public void exec(boolean _in) {
 	    if(_in == true) {
 	        return;
 	    }
@@ -290,7 +272,7 @@ public class _Settings {
 	    System.exit(0);
 	}
 	
-	public void _confirmDialogBox(WebDriver driver) throws IOException{
+	public void confirmDialogBox(WebDriver driver) throws IOException{
 		driver.switchTo().activeElement();
 		
 		try{
@@ -323,12 +305,12 @@ public class _Settings {
 			//System.out.println("Confirmed");
 		}
 		catch(Exception ex){
-			System.out.println("Check Logs.");
-			logClass.info("Check Logs");
+			//System.out.println("Check Logs.");
+			//logClass.info("Check Logs");
 		}
 	}
 
-		public String _ExtractText(String _tag,String _FilePath) throws IOException{
+		public String ExtractText(String _tag,String _FilePath) throws IOException{
 			String _check = "";
 			String ans = "";
 			File file = new File(_FilePath);
@@ -347,7 +329,7 @@ public class _Settings {
 			return ans;
 		}
 
-		public void _comboClick(WebDriver driver, String _StartAddress){
+		public void comboClick(WebDriver driver, String _StartAddress){
 			List<WebElement> _cols = driver.findElement(By.id("combobox-1238")).findElements(By.xpath(".//*[local-name(.)='td']"));
 			String _ID;
 			for(WebElement e : _cols)
@@ -362,11 +344,7 @@ public class _Settings {
 						}
 				}
 		}
-		
-		public void _autoGrab(WebDriver driver){
-			System.out.println(driver.findElement(By.id("panelConfigParameters")).findElement(By.id("panelConfigParameters-innerCt")).findElement(By.xpath(".//*[@id='^textfield']")).getText());
-		}
-		
+
 		@SuppressWarnings("deprecation")
 		public String fluentWait(final By locator,WebDriver driver,int _time,String _Test) throws InterruptedException {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(_time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
@@ -380,8 +358,9 @@ public class _Settings {
 		
 		public String fluentWaitCloseOpen(final By locator,WebDriver driver,int _time,String _Test) throws InterruptedException {
 			Thread.sleep(45000);
-			_closeWindow(driver);
+			closeWindow(driver);
 			
+			Thread.sleep(1000);
 			driver.findElement(By.linkText("Status Details")).click();
 			logClass.info("CO "+"Checking Status Details");
 			
@@ -392,14 +371,16 @@ public class _Settings {
 			return fluentWait(locator, driver, _time, _Test);
 		}
 		
-		public void _StatusCheck(WebDriver driver,String _toBeChecked,int _time) throws IOException, InterruptedException{
-			driver.findElement(By.linkText("Status Details")).click();
+		public void StatusCheck(WebDriver driver,String _toBeChecked,int _time) throws IOException, InterruptedException{
+			
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));
 			driver.switchTo().activeElement();
 			System.out.println(fluentWait(By.id("vmDeployStatus"), driver, _time, _toBeChecked));
 
 			if(driver.findElement(By.id("vmDeployStatus")).getText().contains(_toBeChecked))
 			{
-				_closeWindow(driver);
+				closeWindow(driver);
 				System.out.println("Completed Successfully");
 			}
 
@@ -411,12 +392,12 @@ public class _Settings {
 				FileUtils.copyFile(scrFile, new File("C:\\Users\\bshingala\\Desktop\\screenshotSDMfail.png"));
 				logClass.error("Something went wrong :(");
 				logClass.info("Check Screenshot for the same");
-				_closeWindow(driver);
+				closeWindow(driver);
 			}
 			
 		}
 		
-		public void _closeWindow(WebDriver driver){
+		public void closeWindow(WebDriver driver){
 			List<WebElement> _elem = driver.findElement(By.id("vmDeployStatus")).findElement(By.id("vmDeployStatus_header")).findElement(By.id("vmDeployStatus_header-innerCt")).findElement(By.id("vmDeployStatus_header-targetEl")).findElements(By.tagName("div"));
 			//System.out.println(_elem.size());
 			
@@ -429,7 +410,7 @@ public class _Settings {
 		}
 		
 		
-		public void _AutoFill(WebDriver driver,String _input) throws IOException{
+		public void AutoFill(WebDriver driver,String _input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID = "";
 			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input +"]');return nl");
@@ -445,11 +426,11 @@ public class _Settings {
 					}
 				}
 			System.out.println("Ckeck :"+_returnID);
-			//driver.findElement(By.id(_returnID)).clear();
-			driver.findElement(By.id(_returnID)).sendKeys(_readFromFile("input1.txt", _input));
+			driver.findElement(By.id(_returnID)).clear();
+			driver.findElement(By.id(_returnID)).sendKeys(readFromFile(fileName, _input));
 		}
 	
-		public void _AutoFillIP(WebDriver driver,String _inputForJS,String _IP){
+		public void AutoFillIP(WebDriver driver,String _inputForJS,String _IP,String fileName){
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID = "";
 			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=ipfs"+ _inputForJS +"]');return nl");
@@ -475,11 +456,11 @@ public class _Settings {
 					_Addresses.add(e.getAttribute("id").replace("body", "input"));
 				}
 			System.out.println("Before Fill IP");
-			_IPFill(driver, _IP, _Addresses.get(0));
+			IPFill(driver, _IP, _Addresses.get(0));
 			System.out.println("After Fill IP");
 		}
 		
-		public void FillValues(String _tag,String _filePath,WebDriver driver) throws IOException, ParserConfigurationException, SAXException{
+		public void FillValues(String fileName,String _filePath,WebDriver driver) throws IOException, ParserConfigurationException, SAXException{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder db = dbf.newDocumentBuilder();
 	        Document document = db.parse(new File(_filePath));
@@ -499,7 +480,7 @@ public class _Settings {
 			System.out.println(_Labels.size());
 			/*for(int i=0;i<nl.getLength();i++)
 				System.out.println(nl.item(i).getAttributes());*/
-		
+			String _opNet[] = new String[2];
 			NodeList nlLabelNet = document.getElementsByTagName("Network");
 			List<NamedNodeMap> _nlmapnet = new ArrayList<>();
 			for(int i=0;i<nlLabelNet.getLength();i++)
@@ -516,7 +497,7 @@ public class _Settings {
 					{
 						Node attr = _nlmapnet.get(i).item(j);
 						//System.out.println(_nlmap.get(i).toString());
-					
+						_opNet[i]=attr.getNodeValue();
 						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 					}
 			}
@@ -575,32 +556,42 @@ public class _Settings {
 						if(_op[i][1]!=null && _op[i][1].equals("Ip"))
 							{
 								System.out.println("Going to IP " + i);
-								_AutoFillIP(driver, _op[i][0],_readFromFile("input1.txt", _op[i][0]));
+								AutoFillIP(driver, _op[i][0],readFromFile(fileName, _op[i][0]),fileName);
 							}
 						
 						else if(_op[i][1]!=null && _op[i][1].equals("true"))
 							{
 								System.out.println("Password " + i);
-								_AutoFillPasswd(driver, _op[i][0]);
+								AutoFillPasswd(driver, _op[i][0],fileName);
 							}
 						else if(_op[i][1]==null && _op[i][0].equalsIgnoreCase("timezone"))
 							{
 								System.out.println("Combo " + i);
-								_AutoFillCombo(driver, _op[i][0]);
+								AutoFillCombo(driver, _op[i][0],fileName);
 							}
 						else
 							{
 								System.out.println("Default " + i);
-								_AutoFill(driver, _op[i][0]);
+								AutoFill(driver, _op[i][0],fileName);
 							}
 						System.out.println("Loop: \n");
 					}
+			
+			driver.findElement(By.xpath(".//*[@id='tab-1243-btnInnerEl']")).click();
+			logClass.info("Selecting NetWorks");
+			
+			for(int i=0;i<2;i++)
+			{
+				driver.findElement(By.id(_opNet[i]+"-inputEl")).click();
+				boundListSelect(driver, "VM Network", selBoundList(driver));
+			}
+			System.out.println("Filled Values");
 		}
 		
-		public void _AutoFillCombo(WebDriver driver,String _input) throws IOException{
+		public void AutoFillCombo(WebDriver driver,String _input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID = "";
-			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input.toUpperCase() +"]');return nl");
+			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input +"]');return nl");
 			//System.out.println(a.size());
 			//System.out.println(a.get(0).getText());
 			//System.out.println(_input);
@@ -617,10 +608,10 @@ public class _Settings {
 					}
 				}
 			driver.findElement(By.id(_returnID)).click();
-			_boundListSelect(driver, _readFromFile("input1.txt", _input.toUpperCase()), _selBoundList(driver));
+			boundListSelect(driver, readFromFile("input1.txt", _input.toUpperCase()), selBoundList(driver));
 		}
 		
-		public void _AutoFillPasswd(WebDriver driver,String _input) throws IOException{
+		public void AutoFillPasswd(WebDriver driver,String _input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String _returnID1 = "";
 			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^="+ _input +"]');return nl");
@@ -636,8 +627,27 @@ public class _Settings {
 					}
 				}
 
-				driver.findElement(By.id(_returnID1)).sendKeys(_readFromFile("input1.txt", _input));
-				driver.findElement(By.id("conf"+_returnID1)).sendKeys(_readFromFile("input1.txt", _input));
+				driver.findElement(By.id(_returnID1)).sendKeys(readFromFile(fileName, _input));
+				driver.findElement(By.id("conf"+_returnID1)).sendKeys(readFromFile(fileName, _input));
+		}
+		
+		public void check(WebDriver driver,List<String> inputIP){
+			
+			WebElement table = driver.findElement(By.id("gridview-1369"));
+			List<WebElement> cells = table.findElements(By.xpath(".//*[local-name(.)='td']"));
+			System.out.println(cells.size()+"\n\n");
+			for(int i=0;i<inputIP.size();i++)
+			{
+				for(WebElement e : cells)
+			
+				{	//System.out.println(e.getText());
+					if(e.getText().trim().equals(inputIP.get(i)))
+						{
+							e.click();
+							System.out.println("Added: "+e.getText());
+						}
+				}
+			}
 		}
 }
 

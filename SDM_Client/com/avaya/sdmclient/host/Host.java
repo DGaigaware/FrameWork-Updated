@@ -8,11 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 import com.avaya.sdmclient.*;
-import com.sun.jna.platform.win32.OaIdl.CURRENCY._CURRENCY;
-public class _Host {
-	_Settings obj = new _Settings();
+public class Host {
+	Settings obj = new Settings();
 
-	WebDriver driver = new FirefoxDriver(obj._selectProfile("Selenium"));
+	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 	
 	//public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
@@ -29,7 +28,7 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 				
-		obj._findLocationOrHost(driver, obj._readFromFile("input.txt", "NewLocation"));
+		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"));
 
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
@@ -38,21 +37,21 @@ public class _Host {
 		logClass.info("Adding new Host");
 		
 		driver.findElement(By.xpath(".//*[@id='hostNameField-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostNameField-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostIP"));
+		driver.findElement(By.xpath(".//*[@id='hostNameField-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostIP"));
 		
 		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnField-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnField-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostIP"));
+		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnField-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostIP"));
 		
 		driver.findElement(By.xpath(".//*[@id='usernameId-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='usernameId-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostUser"));
+		driver.findElement(By.xpath(".//*[@id='usernameId-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostUser"));
 		
 		driver.findElement(By.xpath(".//*[@id='paswordId-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='paswordId-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostPwd"));
+		driver.findElement(By.xpath(".//*[@id='paswordId-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostPwd"));
 		
 		Thread.sleep(250);
 		driver.findElement(By.xpath(".//*[@id='saveNewHost']")).click();
 	
-		obj._confirmDialogBox(driver);
+		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Added Host Succesfully");
 	}		
@@ -66,40 +65,39 @@ public class _Host {
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 		logClass.info("Clicked on VM management");
 		
-		obj._findLocationOrHost(driver, "testLoc");
+		obj.findLocationOrHost(driver, "testLoc");
 		
 		driver.findElement(By.xpath(".//*[@id='tab-1305-btnInnerEl']")).click();
 		logClass.info("In 'Host' Tab");
 	
-		obj._findHostInGrid(driver, obj._readFromFile("input.txt", "NewHostIP"));
+		obj.findHostInGrid(driver, obj.readFromFile("input.txt", "NewHostIP"));
 		
 		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
 		//System.out.println("\n\n\n");
 		
 		driver.findElement(By.xpath(".//*[@id='combobox-1137-inputEl']")).click();
-		obj._addToList();
 		
 		Thread.sleep(250);
-		obj._boundListSelect(driver, obj._readFromFile("input.txt", "NewHostEditLoc"), obj._selBoundList(driver));
+		obj.boundListSelect(driver, obj.readFromFile("input.txt", "NewHostEditLoc"), obj.selBoundList(driver));
 		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(linkText)));
 	    driver.findElement(By.linkText(linkText)).click();*/
 		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostName"));
+		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostName"));
 		
 		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostIP"));
+		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostIP"));
 		
 		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostUser"));
+		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostUser"));
 		
 		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).sendKeys(obj._readFromFile("input.txt", "NewHostPwd"));
+		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostPwd"));
 		Thread.sleep(250);
 		
 		driver.findElement(By.xpath(".//*[@id='saveOnEditHost-btnInnerEl']")).click();
 		
-		obj._errorBox(driver, obj._checkError(driver));
+		obj.errorBox(driver, obj.checkError(driver));
 		logClass.endTestCase("Edited Host Successfully");
 		
 	}
@@ -113,13 +111,13 @@ public class _Host {
 			driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
 			logClass.info("Clicked on VM management");
 			
-			obj._findLocationOrHost(driver, "testLoc");
+			obj.findLocationOrHost(driver, "testLoc");
 		
-			obj._findHostInGrid(driver, obj._readFromFile("input.txt", "NewHostName"));
+			obj.findHostInGrid(driver, obj.readFromFile("input.txt", "NewHostName"));
 			
 			driver.findElement(By.xpath(".//*[@id='deleteHostBtn-btnInnerEl']")).click();
 
-			obj._confirmDialogBox(driver);
+			obj.confirmDialogBox(driver);
 			
 			logClass.endTestCase("Deleted Host");
 		}
