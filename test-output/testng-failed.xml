@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.avaya.sdmclient.vm._VM">
+      <class name="com.avaya.sdmclient.runnerdemo.total">
         <methods>
-          <include name="_RefreshVM"/>
+          <include name="addHost1"/>
+          <include name="_EditHost"/>
+          <include name="_DeleteHost"/>
         </methods>
-      </class> <!-- com.avaya.sdmclient.vm._VM -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.total -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
