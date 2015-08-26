@@ -1,7 +1,9 @@
 package com.avaya.sdmclient.runnerdemo;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -13,16 +15,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 
+import utility.UserAction;
+
 public class total {
 	Settings obj = new Settings();
 	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
-	
+	Properties locator = null;
+	@BeforeClass(alwaysRun=true)
+	public void setup() throws IOException, InterruptedException
+		{
+			locator=new Properties();
+			locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		}
 	@Test(description="Adding Location",priority=0)
 	public void _AddLocation() throws IOException, InterruptedException {
 		
@@ -32,10 +43,10 @@ public class total {
 		logClass.startTestCase("Add a new Location on SDM");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
+		driver.findElement(By.xpath(locator.getProperty("_VM.Management"))).click();
 		logClass.info("Clicked on VM management");
 		
-		driver.findElement(By.xpath(".//*[@id='addnewlocation-btnInnerEl']")).click();
+		driver.findElement(By.xpath(locator.getProperty("_AddLocation"))).click();
 		logClass.info("Adding new Location");
 		
 		driver.findElement(By.xpath(".//*[@id='Name-inputEl']")).clear();
@@ -162,6 +173,14 @@ public class total {
 			driver.findElement(By.xpath(".//*[@id='saveNewHost']")).click();
 		
 			obj.confirmDialogBox(driver);
+			
+			obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
+			
+			WebDriverWait wait = new WebDriverWait(driver, 3000);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));
+			System.out.println(obj.fluentWait(By.id("vmDeployStatus"), driver, 50, "Host Create/Update Completed"));
+			
+			obj.StatusCheck(driver, "Host Create/Update Completed", 20);
 
 			logClass.endTestCase("Added Host Succesfully");
 		}		
@@ -214,7 +233,7 @@ public class total {
 		
 		@Test(description="Deleting Host to given Location",priority=5)
 			
-			public void _DeleteHost() throws IOException{
+			public void DeleteHost() throws IOException{
 				logClass.startTestCase("Deleting Host to given Location");
 				
 				driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");

@@ -22,7 +22,7 @@ public class extraOperations {
 		Settings obj = new Settings();
 
 		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
-logClass.startTestCase("Editing Host to given Location");
+		logClass.startTestCase("Editing Host to given Location");
 		
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(".//*[@id='menuitem-1014-textEl']")).click();
@@ -38,16 +38,16 @@ logClass.startTestCase("Editing Host to given Location");
 		driver.findElement(By.xpath(".//*[@id='editHostBtn-btnInnerEl']")).click();
 		
 		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostName"));
+		driver.findElement(By.xpath(".//*[@id='hostNameFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "HostName175"));
 		
 		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostIP"));
+		driver.findElement(By.xpath(".//*[@id='hostIpOrFqdnFieldEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "HostName175"));
 		
 		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "NewHostUser"));
+		driver.findElement(By.xpath(".//*[@id='usernameIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "username175"));
 		
 		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).clear();
-		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).sendKeys("1234");
+		driver.findElement(By.xpath(".//*[@id='paswordIdEdit-inputEl']")).sendKeys(obj.readFromFile("input.txt", "password175"));
 		Thread.sleep(250);
 		
 		driver.findElement(By.xpath(".//*[@id='saveOnEditHost-btnInnerEl']")).click();
@@ -56,19 +56,8 @@ logClass.startTestCase("Editing Host to given Location");
 		
 		//obj.confirmDialogBox(driver);
 		Thread.sleep(3500);
-		WebElement table1 = driver.findElement(By.id("gridview-1115"));
-		List<WebElement> cells1 = table1.findElements(By.xpath(".//*[local-name(.)='tr']"));
-		for(WebElement e : cells1)
-			
-		{	
-			if(e.getText().trim().contains(obj.readFromFile("input.txt", "NewHostIP")))
-			{
-				System.out.println("next"+e.getText());
-				e.click();
-				e.findElement(By.linkText("Status Details")).click();
-			}
-			
-		}
+		
+		obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
 		
 		WebDriverWait wait = new WebDriverWait(driver, 3000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("vmDeployStatus")));

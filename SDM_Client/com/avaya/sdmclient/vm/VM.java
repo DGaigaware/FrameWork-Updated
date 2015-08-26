@@ -112,11 +112,11 @@ public class VM {
 	
 	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
 
-		boolean _Check;
+		boolean Check;
 		
-		final String _default = "Filepath";
-		final String _SWLib = "Software Library";
-		final String _URL = "URL";
+		final String defaultOp = "Filepath";
+		final String SWLib = "Software Library";
+		final String URL = "URL";
 		
 		driver.manage().timeouts().implicitlyWait(6500, TimeUnit.MILLISECONDS);
 		driver.manage().window().maximize();
@@ -152,8 +152,8 @@ public class VM {
 		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
 		
 		//1 - File Path; 3 - SW Library; 4 - URL 
-		switch(_default){
-			case _default:
+		switch(defaultOp){
+			case defaultOp:
 					driver.findElement(By.xpath(".//*[@id='radio1-inputEl']")).click();
 					logClass.info("Choosen From File");
 		
@@ -163,7 +163,7 @@ public class VM {
 					logClass.info("File Path Given");
 					Thread.sleep(2500);
 					break;
-			case _URL:
+			case URL:
 					driver.findElement(By.xpath(".//*[@id='radio4-inputEl']")).click();
 					logClass.info("Choosen From URL");
 					
@@ -172,7 +172,7 @@ public class VM {
 					driver.findElement(By.xpath(".//*[@id='button-1240-btnIconEl']")).click();
 					Thread.sleep(450);
 					break;
-			case _SWLib:
+			case SWLib:
 					driver.findElement(By.xpath(".//*[@id='radio3-inputEl']")).click();
 					logClass.info("Choosen From Software Library");
 					
@@ -198,13 +198,13 @@ public class VM {
 		
 		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
 		//Thread.sleep(250);
-		_Check = obj.checkError(driver);
+		Check = obj.checkError(driver);
 		obj.errorBox(driver,obj.checkError(driver));
 	
 		driver.findElement(By.xpath(".//*[@id='gridcolumn-1221-textEl']")).click();
 		obj.checkFailureOfHostCapacity(driver);
 		
-		obj.exec(!_Check);
+		obj.exec(!Check);
 		
 		//removed
 		
