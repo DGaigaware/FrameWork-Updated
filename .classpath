@@ -17,7 +17,7 @@
 	<classpathentry kind="src" path="WebLM"/>
 	<classpathentry kind="src" path="SPM"/>
 	<classpathentry kind="src" path="WASS"/>
-	<classpathentry excluding="com/avaya/sdmclient/log/|com/avaya/sdmclient/settings/|com/avaya/sdmclient/settings/" kind="src" path="SDM_Client"/>
+	<classpathentry kind="src" path="SDM_clientChange"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/bshingala/Avaya/test/Files/dom4j-1.6.jar"/>
