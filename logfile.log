@@ -4656,3 +4656,524 @@
 2015-08-27 15:50:10,599 INFO  [Logger] Check Screenshot for the same 
 2015-08-27 15:51:47,141 ERROR [Logger] Something went wrong :( 
 2015-08-27 15:51:47,141 INFO  [Logger] Check Screenshot for the same 
+2015-08-27 17:05:42,608 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:05:42,609 INFO  [Logger]                              Adding vCenter to given Location                             
+2015-08-27 17:05:44,442 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:05:44,442 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-08-27 17:05:46,444 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:05:46,445 INFO  [Logger]                              Deleting vCenter to given Location                             
+2015-08-27 17:07:50,502 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:07:50,503 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-27 17:07:59,171 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:07:59,464 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:07:59,465 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-27 17:08:05,662 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:08:10,675 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:08:10,675 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-27 17:08:16,673 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:08:21,681 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:08:21,681 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-27 17:08:27,706 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:08:27,706 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-27 17:08:28,714 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:08:28,714 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-27 17:08:29,717 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:08:29,717 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-27 17:09:24,460 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:09:24,461 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-27 17:09:33,042 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:09:36,808 INFO  [Logger] Clicked on - Add new VM 
+2015-08-27 17:09:37,748 INFO  [Logger] Given Name 
+2015-08-27 17:09:52,105 INFO  [Logger] Choosen From File 
+2015-08-27 17:09:52,628 INFO  [Logger] File Path Given 
+2015-08-27 17:10:22,614 INFO  [Logger] Selecting NetWorks 
+2015-08-27 17:10:24,554 INFO  [Logger] Accepted EULA 
+2015-08-27 17:10:37,598 INFO  [Logger] Checking Status Details 
+2015-08-27 17:11:39,095 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:11:39,095 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-27 17:11:49,645 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:11:57,649 INFO  [Logger] Clicked on - Edit VM 
+2015-08-27 17:12:10,097 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:12:10,097 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-27 17:12:28,227 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:12:45,025 ERROR [Logger] Something went wrong :( 
+2015-08-27 17:12:45,025 INFO  [Logger] Check Screenshot for the same 
+2015-08-27 17:12:58,167 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-08-27 17:14:03,173 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:14:03,173 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-27 17:14:12,650 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:14:26,815 ERROR [Logger] Something went wrong :( 
+2015-08-27 17:14:26,815 INFO  [Logger] Check Screenshot for the same 
+2015-08-27 17:14:39,993 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-08-27 17:15:44,999 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:15:44,999 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-27 17:15:55,331 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:16:17,739 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:16:17,739 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-27 17:16:24,368 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:16:38,981 ERROR [Logger] Something went wrong :( 
+2015-08-27 17:16:38,981 INFO  [Logger] Check Screenshot for the same 
+2015-08-27 17:16:52,115 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-08-27 17:18:32,113 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:18:32,113 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-27 17:18:42,276 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:18:55,027 ERROR [Logger] Something went wrong :( 
+2015-08-27 17:18:55,027 INFO  [Logger] Check Screenshot for the same 
+2015-08-27 17:19:08,152 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-08-27 17:25:48,987 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:25:48,998 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-27 17:25:58,560 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:26:01,680 INFO  [Logger] Clicked on - Add new VM 
+2015-08-27 17:26:02,629 INFO  [Logger] Given Name 
+2015-08-27 17:26:16,926 INFO  [Logger] Choosen From File 
+2015-08-27 17:26:17,739 INFO  [Logger] File Path Given 
+2015-08-27 17:26:47,517 INFO  [Logger] Selecting NetWorks 
+2015-08-27 17:26:49,513 INFO  [Logger] Accepted EULA 
+2015-08-27 17:27:02,090 INFO  [Logger] Checking Status Details 
+2015-08-27 17:27:54,844 INFO  [Logger] CO Checking Status Details   
+2015-08-27 17:38:58,948 INFO  [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment Completed 
+2015-08-27 17:39:05,476 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:39:05,476 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-27 17:39:10,355 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:39:17,101 INFO  [Logger] Clicked on - Edit VM 
+2015-08-27 17:39:25,363 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-08-27 17:39:30,365 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:39:30,365 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-27 17:39:34,798 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:39:42,418 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-08-27 17:39:42,581 INFO  [Logger] Confirmation:  
+2015-08-27 17:39:49,327 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-08-27 17:40:54,327 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:40:54,327 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-27 17:41:00,754 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:41:04,666 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-08-27 17:41:04,871 INFO  [Logger] Confirmation:  
+2015-08-27 17:41:11,488 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-08-27 17:42:16,488 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:42:16,488 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-27 17:42:21,425 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:43:06,362 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-08-27 17:43:45,996 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-08-27 17:43:46,367 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-08-27 17:43:49,237 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-08-27 17:43:49,239 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:43:49,239 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-27 17:43:53,676 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:43:59,304 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-08-27 17:43:59,612 INFO  [Logger] Confirmation:  
+2015-08-27 17:44:06,565 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-08-27 17:45:46,572 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-27 17:45:46,572 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-27 17:45:51,068 INFO  [Logger] Clicked on VM management 
+2015-08-27 17:45:55,913 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-08-27 17:45:56,087 INFO  [Logger] Confirmation:  
+2015-08-27 17:46:02,658 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-08-28 11:03:18,484 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:03:18,508 INFO  [Logger]                              Adding vCenter to given Location                             
+2015-08-28 11:03:29,448 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:03:30,764 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-28 11:03:31,855 INFO  [Logger] Adding vCenter 
+2015-08-28 11:03:33,872 ERROR [Logger] Duplicate Records! 
+2015-08-28 11:03:33,872 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 11:03:34,102 ERROR [Logger] Something went wrong :( 
+2015-08-28 11:03:34,102 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 11:03:44,102 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:03:44,102 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-08-28 11:03:49,104 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:03:52,235 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-28 11:04:00,212 INFO  [Logger] *************************End of test caseEdited vCenter Successfully******************************
+
+ 
+2015-08-28 11:04:00,215 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:04:00,215 INFO  [Logger]                              Deleting vCenter to given Location                             
+2015-08-28 11:04:11,925 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:04:14,972 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-08-28 11:04:17,167 INFO  [Logger] *************************End of test caseDeleted Successfully******************************
+
+ 
+2015-08-28 11:13:59,052 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:13:59,081 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:14:01,647 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:14:01,647 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-28 11:14:02,844 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:14:02,844 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-28 11:14:57,345 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:14:57,346 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:14:59,383 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:14:59,383 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-28 11:15:00,859 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:15:00,860 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-28 11:39:14,858 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:14,878 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:39:16,776 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:16,776 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-28 11:39:17,938 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:17,938 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-28 11:39:19,033 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:19,033 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:39:20,139 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:20,139 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-28 11:39:21,264 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:21,265 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-28 11:39:22,443 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:22,443 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:39:23,616 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:23,616 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:39:24,834 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:24,834 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 11:39:26,070 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:26,071 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-28 11:39:32,341 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:32,341 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-28 11:39:39,646 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:39,646 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-28 11:39:45,979 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:45,979 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-28 11:39:47,248 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:47,248 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-28 11:39:48,643 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:39:48,643 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-28 11:40:16,473 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:40:16,474 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:40:25,468 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:40:27,236 INFO  [Logger] Adding new Location 
+2015-08-28 11:40:29,103 INFO  [Logger] Saved New Location 
+2015-08-28 11:40:33,826 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-28 11:40:33,829 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:40:33,829 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-28 11:40:39,296 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:40:48,688 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:40:48,689 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-28 11:40:54,771 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:40:58,432 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-28 11:40:58,636 INFO  [Logger] Confirmation:  
+2015-08-28 11:40:59,390 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-28 11:40:59,393 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:40:59,393 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:41:11,283 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:41:11,612 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:11,612 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-28 11:41:12,628 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:12,628 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-28 11:41:13,631 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:13,631 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:41:14,642 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:14,642 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:41:16,663 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:16,663 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-28 11:41:22,675 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:22,675 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-28 11:41:28,684 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:28,684 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-28 11:41:34,694 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:34,694 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-28 11:41:35,701 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:35,701 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-28 11:41:36,708 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:41:36,708 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-28 11:51:02,412 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:51:02,413 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:51:11,776 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:51:12,654 INFO  [Logger] Adding new Location 
+2015-08-28 11:51:14,648 INFO  [Logger] Saved New Location 
+2015-08-28 11:51:19,302 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-28 11:51:19,305 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:51:19,305 INFO  [Logger]                              Edit Location on SDM                             
+2015-08-28 11:51:24,461 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:51:30,204 INFO  [Logger] Saved Location 
+2015-08-28 11:51:30,205 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-08-28 11:51:30,208 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:51:30,208 INFO  [Logger]                              Delete Location on SDM                             
+2015-08-28 11:51:35,228 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:51:38,840 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-08-28 11:51:39,088 INFO  [Logger] Confirmation:  
+2015-08-28 11:51:39,859 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-08-28 11:51:39,862 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:51:39,862 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:51:50,151 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:51:50,450 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:51:50,450 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:51:57,078 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:51:57,920 INFO  [Logger] Adding new Location 
+2015-08-28 11:52:01,075 INFO  [Logger] Saved New Location 
+2015-08-28 11:52:05,643 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-28 11:52:10,876 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-08-28 11:52:14,655 INFO  [Logger] In 'Host' Tab 
+2015-08-28 11:52:15,029 INFO  [Logger] Adding new Host 
+2015-08-28 11:52:17,036 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-08-28 11:52:21,770 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-08-28 11:52:27,879 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Complete :;Host Create/Update Completed 
+2015-08-28 11:52:28,245 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Complete :;Host Create/Update Completed 
+2015-08-28 11:52:28,622 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-28 11:52:28,624 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:52:28,624 INFO  [Logger]                              Editing Host to given Location                             
+2015-08-28 11:52:33,731 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:52:37,482 INFO  [Logger] In 'Host' Tab 
+2015-08-28 11:53:01,841 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:53:01,841 INFO  [Logger]                              Deleting Host to given Location                             
+2015-08-28 11:53:07,249 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:53:13,661 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-08-28 11:53:13,852 INFO  [Logger] Confirmation:  
+2015-08-28 11:53:14,630 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-08-28 11:53:14,632 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:53:14,632 INFO  [Logger]                              Add a new Location on SDM                             
+2015-08-28 11:53:21,094 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:53:21,418 INFO  [Logger] Adding new Location 
+2015-08-28 11:53:23,385 INFO  [Logger] Saved New Location 
+2015-08-28 11:53:28,003 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-08-28 11:53:28,004 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:53:28,004 INFO  [Logger]                              Adding Host to given Location                             
+2015-08-28 11:53:33,353 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:53:36,259 INFO  [Logger] In 'Host' Tab 
+2015-08-28 11:53:36,617 INFO  [Logger] Adding new Host 
+2015-08-28 11:53:38,886 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-08-28 11:53:43,575 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-08-28 11:53:43,875 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-08-28 11:53:44,784 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:53:44,784 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 11:53:50,485 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:53:56,126 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 11:53:57,104 INFO  [Logger] Given Name 
+2015-08-28 11:54:07,418 INFO  [Logger] Choosen From File 
+2015-08-28 11:54:07,956 INFO  [Logger] File Path Given 
+2015-08-28 11:54:40,677 INFO  [Logger] Selecting NetWorks 
+2015-08-28 11:54:41,998 INFO  [Logger] Accepted EULA 
+2015-08-28 11:55:00,775 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:00,775 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-08-28 11:55:15,348 INFO  [Logger] Clicked on VM management 
+2015-08-28 11:55:31,393 INFO  [Logger] Clicked on - Edit VM 
+2015-08-28 11:55:42,382 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:42,382 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-08-28 11:55:48,469 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:48,469 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-08-28 11:55:54,475 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:54,475 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-08-28 11:55:55,481 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:55,481 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-08-28 11:55:56,487 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 11:55:56,487 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-08-28 12:34:41,592 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 12:34:41,734 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 12:34:51,691 INFO  [Logger] Clicked on VM management 
+2015-08-28 12:34:55,824 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 12:34:56,849 INFO  [Logger] Given Name 
+2015-08-28 12:35:02,434 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-08-28 12:35:02,434 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 12:35:02,743 ERROR [Logger] Something went wrong :( 
+2015-08-28 12:35:02,743 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 12:35:03,241 INFO  [Logger] Choosen From Software Library 
+2015-08-28 12:35:05,442 ERROR [Logger] Select the data store 
+2015-08-28 12:35:05,442 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 12:37:05,780 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 12:37:05,781 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 12:37:14,999 INFO  [Logger] Clicked on VM management 
+2015-08-28 12:37:18,926 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 12:37:19,961 INFO  [Logger] Given Name 
+2015-08-28 12:37:30,202 INFO  [Logger] Choosen From Software Library 
+2015-08-28 12:37:32,449 ERROR [Logger] Select the data store 
+2015-08-28 12:37:32,449 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 12:37:32,659 ERROR [Logger] Something went wrong :( 
+2015-08-28 12:37:32,659 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 12:39:03,059 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 12:39:03,060 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 12:39:11,492 INFO  [Logger] Clicked on VM management 
+2015-08-28 12:39:15,526 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 12:39:16,572 INFO  [Logger] Given Name 
+2015-08-28 12:39:26,869 INFO  [Logger] Choosen From Software Library 
+2015-08-28 12:39:29,219 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 12:39:29,219 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 12:39:29,574 ERROR [Logger] Something went wrong :( 
+2015-08-28 12:39:29,574 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 12:50:37,419 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 12:50:37,420 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 12:50:46,812 INFO  [Logger] Clicked on VM management 
+2015-08-28 12:50:53,470 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 12:50:54,405 INFO  [Logger] Given Name 
+2015-08-28 12:51:04,696 INFO  [Logger] Choosen From Software Library 
+2015-08-28 12:51:06,771 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 12:51:06,771 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 12:51:06,979 ERROR [Logger] Something went wrong :( 
+2015-08-28 12:51:06,979 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 13:32:05,179 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 13:32:05,180 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 13:32:14,033 INFO  [Logger] Clicked on VM management 
+2015-08-28 13:32:18,183 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 13:32:19,165 INFO  [Logger] Given Name 
+2015-08-28 13:32:29,504 INFO  [Logger] Choosen From Software Library 
+2015-08-28 13:32:31,583 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 13:32:31,583 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 13:32:31,881 ERROR [Logger] Something went wrong :( 
+2015-08-28 13:32:31,881 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:27:31,758 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:27:31,762 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:27:44,985 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:27:49,183 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:27:50,209 INFO  [Logger] Given Name 
+2015-08-28 14:28:00,565 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:28:02,601 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:28:02,601 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:28:02,821 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:28:02,821 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:30:02,448 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:30:02,449 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:30:12,648 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:30:16,254 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:30:17,261 INFO  [Logger] Given Name 
+2015-08-28 14:30:27,636 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:30:29,713 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:30:29,714 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:30:29,921 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:30:29,921 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:31:25,430 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:31:25,431 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:31:34,679 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:31:38,169 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:31:39,223 INFO  [Logger] Given Name 
+2015-08-28 14:31:49,605 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:31:51,662 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:31:51,662 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:31:51,879 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:31:51,879 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:34:11,650 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:34:11,651 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:34:24,412 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:34:28,458 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:34:29,435 INFO  [Logger] Given Name 
+2015-08-28 14:34:39,759 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:34:41,837 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:34:41,837 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:34:42,050 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:34:42,050 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:36:08,974 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:36:08,975 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:36:19,973 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:36:23,705 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:36:24,667 INFO  [Logger] Given Name 
+2015-08-28 14:36:35,098 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:36:37,201 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:36:37,202 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:36:37,417 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:36:37,417 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:38:42,767 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:38:42,768 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:38:52,029 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:39:00,707 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:39:01,681 INFO  [Logger] Given Name 
+2015-08-28 14:39:12,020 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:39:14,189 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:39:14,189 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:39:14,402 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:39:14,402 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:40:34,893 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:40:34,894 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:40:43,660 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:40:47,835 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:40:48,866 INFO  [Logger] Given Name 
+2015-08-28 14:40:59,284 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:41:01,366 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:41:01,366 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:41:01,577 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:41:01,577 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:43:58,167 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:43:58,168 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:44:12,984 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:44:16,872 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:44:17,831 INFO  [Logger] Given Name 
+2015-08-28 14:44:59,318 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:44:59,319 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:45:13,138 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:45:17,663 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:45:18,710 INFO  [Logger] Given Name 
+2015-08-28 14:45:29,058 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:46:01,345 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:46:01,345 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:46:11,569 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:46:15,046 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:46:16,020 INFO  [Logger] Given Name 
+2015-08-28 14:46:26,450 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:46:28,502 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:46:28,503 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:46:28,720 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:46:28,720 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:47:45,126 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:47:45,126 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:47:55,010 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:47:58,729 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:47:59,696 INFO  [Logger] Given Name 
+2015-08-28 14:48:10,025 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:48:12,165 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:48:12,165 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:48:12,388 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:48:12,388 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:48:26,225 INFO  [Logger] Selecting NetWorks 
+2015-08-28 14:50:54,421 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:50:54,421 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:51:04,495 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:51:08,351 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:51:09,353 INFO  [Logger] Given Name 
+2015-08-28 14:51:19,695 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:51:21,788 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:51:21,788 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:51:21,997 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:51:21,997 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:52:27,622 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:52:27,623 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:52:35,398 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:52:40,760 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:52:41,708 INFO  [Logger] Given Name 
+2015-08-28 14:52:52,079 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:52:54,257 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:52:54,257 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:52:54,469 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:52:54,469 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:53:50,379 INFO  [Logger] *************************Started Testing****************************** 
+2015-08-28 14:53:50,380 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-08-28 14:54:01,373 INFO  [Logger] Clicked on VM management 
+2015-08-28 14:54:04,969 INFO  [Logger] Clicked on - Add new VM 
+2015-08-28 14:54:05,988 INFO  [Logger] Given Name 
+2015-08-28 14:54:16,247 INFO  [Logger] Choosen From Software Library 
+2015-08-28 14:54:18,470 ERROR [Logger] Required Utility Services (US) VM is absent or not registered with this SDM instance. If absent, deploy US. If not registered, refresh host and then select US VM, and click More Options>Reestablish Connections. 
+2015-08-28 14:54:18,471 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-08-28 14:54:18,685 ERROR [Logger] Something went wrong :( 
+2015-08-28 14:54:18,685 INFO  [Logger] Check Screenshot for the same 
+2015-08-28 14:54:33,435 INFO  [Logger] Selecting NetWorks 

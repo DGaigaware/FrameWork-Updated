@@ -7,7 +7,7 @@
    </run>
 </groups-->
 
-  <test name="Test">
+  <!-- < test name="Test">
     <classes>
       <class name="com.avaya.sdmclient.runnerdemo.cHost2608"/>
       <class name="com.avaya.sdmclient.host.Host"/>
@@ -17,7 +17,7 @@
       <class name="com.avaya.sdmclient.runnerdemo.CH12608"/>
       <class name="com.avaya.sdmclient.location.Location"/>
     </classes>
-  </test> 
+  </test> -->
   
  <test name="SPM" preserve-order="true" thread-count="1">
     <packages>
@@ -162,7 +162,9 @@
   
   <test name="HostOperations" preserve-order="true" thread-count="1">
     <packages>
-      <package name="com.avaya.sdmclient.host.*"/> 
+      <package name="com.avaya.sdmclient.host.*">
+      <include name="Host" />
+    </package>  
     </packages> 
   </test>
   
