@@ -24,7 +24,7 @@ public class VC2508 {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 
 	public static void check(WebDriver driver,List<String> inputIP){

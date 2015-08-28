@@ -31,7 +31,7 @@ public class vCenter {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding vCenter to given Location")
 	public void _AddvCenter() throws IOException, InterruptedException {
@@ -76,7 +76,7 @@ public class vCenter {
 		obj.errorBox(driver,obj.checkError(driver));
 		Thread.sleep(9000);
 		WebDriverWait wait = new WebDriverWait(driver, 15);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("gridview-1369"))));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("VCVMList"))));
 
 		obj.check(driver,inputIP);
 		driver.findElement(By.id(locator.getProperty("manageHosts"))).click();

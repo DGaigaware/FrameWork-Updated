@@ -27,7 +27,7 @@ public class Location {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding Location")
 	public void _AddLocation() throws IOException, InterruptedException {

@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -13,8 +12,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
@@ -30,19 +27,14 @@ public class total {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream("C:\\Users\\bshingala\\Desktop\\xprev.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
-	/*@Test(description="Adding Location",priority=0)
+	@Test(description="Adding Location",priority=0)
 	public void _AddLocation() throws IOException, InterruptedException {
-
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
 
 		logClass.startTestCase("Add a new Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty(("VM-Management")))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		driver.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
 		logClass.info("Adding new Location");
@@ -80,9 +72,7 @@ public class total {
 
 		logClass.startTestCase("Edit Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationInGrid(driver, "testLoc");
 
@@ -103,7 +93,8 @@ public class total {
 		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).sendKeys(obj.readFromFile("input.txt", "NewCountry"));
 
-		driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
+		obj.waitForPresence(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
+		//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 		driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 
 		driver.switchTo().activeElement();
@@ -119,9 +110,7 @@ public class total {
 
 		logClass.startTestCase("Delete Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, "VM Management");
 
@@ -138,14 +127,9 @@ public class total {
 	@Test(description="Adding Host to given Location",priority=3)
 	public void addHost1() throws IOException, InterruptedException{
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-
 		logClass.startTestCase("Adding Host to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"))){
 			_AddLocation();
@@ -184,8 +168,8 @@ public class total {
 
 		obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
 
-		WebDriverWait wait = new WebDriverWait(driver, 3000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
+		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+		
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
 
 		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
@@ -198,9 +182,7 @@ public class total {
 
 		logClass.startTestCase("Editing Host to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, "testLoc");
 
@@ -217,8 +199,10 @@ public class total {
 
 		Thread.sleep(250);
 		obj.boundListSelect(driver, obj.readFromFile("input.txt", "DefaultLoc"), obj.selBoundList(driver));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty(linkText)));
-driver.findElement(By.linkText(locator.getProperty(linkText)).click();
+		
+		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty(linkText))));
+		driver.findElement(By.linkText(locator.getProperty(linkText))).click();*/
+		
 		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).sendKeys(obj.readFromFile("input.txt", "HostName175"));
 
@@ -238,13 +222,13 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 
 		Thread.sleep(2500);
 
-		//obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
+		/*obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
 
-		WebDriverWait wait = new WebDriverWait(driver, 3000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
+		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+		
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
 
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+		obj.StatusCheck(driver, "Host Create/Update Completed", 20);*/
 		logClass.endTestCase("Edited Host Successfully");
 
 	}
@@ -254,9 +238,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 	public void DeleteHost() throws IOException, InterruptedException{
 		logClass.startTestCase("Deleting Host to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "DefaultLoc"));
 
@@ -267,19 +249,14 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Deleted Host");
-	}*/
+	}
 
-	/*@Test(description="Adding Location",priority=6)
+	@Test(description="Adding Location",priority=6)
 	public void AddLocation() throws IOException, InterruptedException {
-
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
 
 		logClass.startTestCase("Add a new Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		driver.findElement(By.xpath(locator.getProperty("LocationAdd"))).click();
 		logClass.info("Adding new Location");
@@ -314,14 +291,9 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 	@Test(description="Adding Host to given Location",priority=7)
 	public void addHost() throws IOException, InterruptedException{
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-
 		logClass.startTestCase("Adding Host to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"));
 
@@ -350,7 +322,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 
 		logClass.endTestCase("Added Host Succesfully");
 	}
-*/
+
 	@Test(description="Adding VM to given Location and Host",priority=8)
 
 	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
@@ -361,17 +333,12 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		final String _SWLib = "Software Library";
 		final String _URL = "URL";
 
-		driver.manage().timeouts().implicitlyWait(6500, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
-
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 
 		logClass.startTestCase("Adding VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"))){
 			//addHost1();
@@ -472,12 +439,14 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 		obj.findVMForHostT(driver, "testSM221");
+		
+		Thread.sleep(4500);
 
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		logClass.info("Checking Status Details");
 
-		WebDriverWait wait = new WebDriverWait(driver, 3000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
+		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+		
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
@@ -496,15 +465,14 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 
 		logClass.startTestCase("Editing VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		
 		driver.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 		logClass.info("Clicked on - Edit VM");
 		Thread.sleep(750);
@@ -533,10 +501,8 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		Thread.sleep(5000);
 		logClass.startTestCase("Stop VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
-
+		obj.goToSite(driver);
+		
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
@@ -561,9 +527,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		Thread.sleep(5000);
 		logClass.startTestCase("Start VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
@@ -587,9 +551,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
@@ -602,8 +564,9 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		driver.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
 
 		Thread.sleep(500);
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnUN"))));
+		
+		obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
+		
 		driver.switchTo().activeElement();
 
 		driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
@@ -612,7 +575,8 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.txt", "CustPwd"));
 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
+		obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
 		Thread.sleep(250);
 		driver.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 
@@ -620,7 +584,8 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
+		obj.waitForPresence(driver, By.xpath(locator.getProperty("RefreshVM")));
+		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
 
 		if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 			driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
@@ -653,9 +618,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 
 		logClass.startTestCase("Restart VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
@@ -678,9 +641,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();
 
 		logClass.startTestCase("Delete VM to given Location and Host");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName"));
 

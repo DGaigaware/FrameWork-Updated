@@ -26,7 +26,7 @@ public class Host {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\OR.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	//public static void main(String[] args) throws IOException, InterruptedException {
 	// TODO Auto-generated method stub

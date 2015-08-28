@@ -33,7 +33,7 @@ public class VM {
 	public void setup() throws IOException, InterruptedException
 	{
 		locator=new Properties();
-		locator.load(new FileInputStream("C:\\Users\\bshingala\\Desktop\\xprev.properties"));
+		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding Location")
 	public void AddLocation() throws IOException, InterruptedException {
