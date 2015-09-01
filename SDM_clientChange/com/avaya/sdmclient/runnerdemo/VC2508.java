@@ -61,9 +61,8 @@ public class VC2508 {
 
 		logClass.startTestCase("Editing vCenter to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSite(driver);
+		
 		Thread.sleep(1500);
 		driver.findElement(By.xpath(locator.getProperty("VCenterMap"))).click();
 		logClass.info("Clicked on 'Map vCenter' ");

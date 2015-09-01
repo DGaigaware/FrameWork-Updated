@@ -103,7 +103,7 @@ public class AdDemo25082015 {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, "testSM221");
+		obj.findVMForHost(driver, "testSM221");
 
 		driver.findElement(By.linkText(locator.getProperty("Status Details  "))).click();
 		logClass.info("Checking Status Details  ");

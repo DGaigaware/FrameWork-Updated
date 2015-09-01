@@ -39,6 +39,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+
 @SuppressWarnings("unchecked")
 public class Settings {
 
@@ -51,10 +52,10 @@ public class Settings {
 	
 	public void goToSite(WebDriver driver) throws IOException, InterruptedException{
 		setup();
+		driver.manage().window().maximize();
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
 		logClass.info("Clicked on VM management");
-		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 	}
 	
@@ -141,9 +142,9 @@ public class Settings {
 			b=true;
 		}
 
-		for(String s : tm){
+		/*for(String s : tm){
 			System.out.println(s);
-		}
+		}*/
 		return b;
 	}
 
@@ -156,7 +157,7 @@ public class Settings {
 		{
 			if(e.getText().trim().contains(input))
 			{
-				System.out.println("next"+e.getText());
+				//System.out.println("next"+e.getText());
 				e.click();
 				e.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			}
@@ -197,7 +198,7 @@ public class Settings {
 
 	}
 
-	public void findVMForHostT(WebDriver driver, String Host) throws IOException, InterruptedException{
+	public void findVMForHost(WebDriver driver, String Host) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
@@ -338,16 +339,10 @@ public class Settings {
 		}
 	}
 
-	@SuppressWarnings({ "unused" })
 	public String selBoundList(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
-		for(WebElement s : a)
-		{//System.out.println(s.getText());
-			//System.out.println(s.getTagName());
-			//System.out.println(s.getClass());
-			//System.out.println(s.getAttribute("id"));
-		}
+		// Select the Last Boundlist which is rendered in DOM as last
 		return a.get(a.size()-1).getAttribute("id");
 	}
 
@@ -411,20 +406,11 @@ public class Settings {
 		return ans;
 	}
 
-	public void comboClick(WebDriver driver, String StartAddress){
-		List<WebElement> cols = driver.findElement(By.id(locator.getProperty("abc"))).findElements(By.xpath(".//*[local-name(.)='td']"));
-		String ID;
-		for(WebElement e : cols)
-		{
-			System.out.println(e.getAttribute("id"));
-			if(e.getAttribute("id").contains("ext"))
-			{
-				System.out.println("test "+e.getAttribute("id"));//e.click();
-				ID = e.getAttribute("id");
-				e.findElement(By.id((ID))).click();
-				//e.findElement(By.id((_ID)).click();
-			}
-		}
+	public void comboClick(WebDriver driver, String StartAddress,String input) throws IOException, InterruptedException{
+		driver.findElement(By.id(StartAddress+"-inputEl")).click();
+		driver.findElement(By.id(StartAddress+"-inputEl")).sendKeys(input);
+		Thread.sleep(2000);
+		boundListSelect(driver, input, selBoundList(driver));
 	}
 
 	@SuppressWarnings("deprecation")
@@ -488,6 +474,111 @@ public class Settings {
 				e.click();
 		}
 	}
+	
+	public List<String> getViewFrame(WebDriver driver,String input){
+		List<String> types = new ArrayList<>();
+		List<String> ret = new ArrayList<>();
+		String returnStr = "";
+		String refStr = "";
+		
+		types.add("newlocationview");
+		types.add("editlocationview");
+		types.add("host_new");
+		types.add("host_edit");
+		
+		if(input.equals("AddLocation"))
+			{
+				returnStr = types.get(0);
+				refStr = "locationgridpanel";
+			}
+		else if(input.equals("EditLocation"))
+			{
+				returnStr = types.get(1);
+				refStr = "locationgridpanel";
+			}
+		else if(input.equals("AddHost"))
+			{
+				returnStr = types.get(2);
+				refStr = "host_view";
+			}
+		else if(input.equals("EditHost"))
+			{
+				returnStr = types.get(3);
+				refStr = "host_view";
+			}
+		ret.add(returnStr);
+		ret.add(refStr);
+		
+		for(String s : ret)
+			System.out.println(s);
+		
+		return ret;
+	}
+	
+	public void findIDandFillValues(WebDriver driver,String filename,String input) throws IOException, InterruptedException{
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String sc = "var nl = document.getElementById(\"" + getViewFrame(driver, input).get(0) + "\").getElementsByTagName(\"input\"); return nl;";
+		//String sc = "var nl = document.getElementById(\""+getViewFrame(driver, input)+"\").querySelectorAll('[id^=\"text\"]'); return nl;";
+		String returnID = "";
+		
+		ArrayList<WebElement> elem = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println("Before");
+		System.out.println(elem.size());
+		
+		if(input.equals("EditHost")){
+			driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
+			Thread.sleep(250);
+			boundListSelect(driver, readFromFile(filename, "DefaultLoc"), selBoundList(driver));
+		}
+		
+		for(WebElement e : elem){
+			if(e.getAttribute("readonly")==null){
+			System.out.println("Attribb"+e.getAttribute("readonly"));
+			WebElement el = driver.findElement(By.id(e.getAttribute("id").replace("input", "label")));
+			System.out.println(el.getText());
+			returnID = e.getAttribute("id");
+			System.out.println(returnID);
+			driver.findElement(By.id(returnID)).clear();
+			driver.findElement(By.id(returnID)).sendKeys(readFromFile(filename, input+el.getText().replace("*", "").replace(" ", "")));
+			}
+		}
+		
+		System.out.println("After");
+	}
+	
+	public void refreshItems(WebDriver driver,String methodBy){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script1 = "var nl = document.getElementById(\"" + getViewFrame(driver, methodBy).get(1) + "\").querySelectorAll('[id^=\"pagingtoolbar\"]'); return nl;";
+		ArrayList<WebElement> elem1 = (ArrayList<WebElement>) js.executeScript(script1);
+		
+		/*for(WebElement e : elem1)
+			System.out.println(e.getAttribute("id"));
+		
+		System.out.println("Before");
+		System.out.println(elem1.size());*/
+		
+		String script2 = "var nl = document.getElementById(\""+elem1.get(0).getAttribute("id")+"\").querySelectorAll('[id^=\"button\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		
+		/*System.out.println("Before");
+		System.out.println(elem2.size());*/
+		
+		List<String> buttons = new ArrayList<>();
+		for(WebElement e : elem2){
+			if(e.getAttribute("id").contains("btnEl"))
+			{
+				buttons.add(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
+			}
+		}
+		
+		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
+		System.out.println("Refreshed");
+			
+	}
 
 		public void FillValues(String fileName,String filePath,WebDriver driver) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -528,8 +619,8 @@ public class Settings {
 				//System.out.println(nl.item(i).getTextContent().substring(0, nl.item(i).getTextContent().indexOf("\n") ));
 				for(int j=0;j<nlmapnet.get(i).getLength();j++)
 				{
-					Node attr = nlmapnet.get(i).item(j);
 					//System.out.println(_nlmap.get(i).toString());
+					Node attr = nlmapnet.get(i).item(j);
 					opNet[i]=attr.getNodeValue();
 					System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 				}
@@ -573,6 +664,12 @@ public class Settings {
 						op[i][1] = attr.getNodeValue();
 						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
+					
+					else if(attr.getNodeValue().contains("ValueMap")){
+					System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+					op[i][1] = "ValueMap";//attr.getNodeValue();
+					System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+					}
 
 					else if(attr.getNodeName().contains("ovf:key")){
 						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
@@ -587,7 +684,7 @@ public class Settings {
 			
 			//for(int i=0;i<nl.getLength()-5;i++)			// As last 5 Fields are not Visible in UI
 
-			for(int i=0;i<18;i++)
+			for(int i=0;i<nl.getLength()-1;i++)
 			{
 				//System.out.println(op[i][0]);
 				if(op[i][1]!=null && op[i][1].equals("Ip"))
@@ -608,11 +705,12 @@ public class Settings {
 					AutoFillCheckBox(driver, op[i][0]);
 				}
 				
-				else if(op[i][1]==null && op[i][0].equalsIgnoreCase("timezone"))
+				else if(op[i][1]!=null && op[i][1].equals("ValueMap"))
 				{
-					//System.out.println("Combo " + i);
+					System.out.println("Combo " + i);
 					AutoFillCombo(driver, op[i][0],fileName);
 				}
+				
 				else
 				{
 					System.out.println("Default " + i);
@@ -632,27 +730,31 @@ public class Settings {
 			System.out.println("Filled Values");
 		}
 		
+		@SuppressWarnings("unused")
 		public void AutoFill(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
 			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\""+ input +"\"]');return nl");
 			List<String> IDs = new ArrayList<>();
+			System.out.println(a.size());
 			
-			for(WebElement s : a)
-			{//System.out.println(s.getText());
-				//System.out.println(s.getTagName());
-				//System.out.println(s.getClass());
-				//System.out.println("Check : "+s.getAttribute("id"));
-				if(s.getTagName().equals("input"))
-				{
-					IDs.add(s.getAttribute("id"));
-					returnID = s.getAttribute("id");
-					System.out.println(s.getAttribute("id"));
+			if(a.size()>0){
+				for(WebElement s : a)
+				{//System.out.println(s.getText());
+					//System.out.println(s.getTagName());
+					//System.out.println(s.getClass());
+					//System.out.println("Check : "+s.getAttribute("id"));
+					if(s.getTagName().equals("input"))
+					{
+						IDs.add(s.getAttribute("id"));
+						returnID = s.getAttribute("id");
+						System.out.println(s.getAttribute("id"));
+					}
 				}
+				System.out.println("Ckeck :"+IDs.get(0));
+				driver.findElement(By.id((IDs.get(0)))).clear();	// Take the first one as the two different ID can start with same string
+				driver.findElement(By.id((IDs.get(0)))).sendKeys(readFromFile(fileName, input));
 			}
-			System.out.println("Ckeck :"+IDs.get(0));
-			driver.findElement(By.id((IDs.get(0)))).clear();
-			driver.findElement(By.id((IDs.get(0)))).sendKeys(readFromFile(fileName, input));
 		}
 
 		public void AutoFillIP(WebDriver driver,String inputForJS,String IP,String fileName){
@@ -695,16 +797,17 @@ public class Settings {
 				//System.out.println(s.getText());
 				//System.out.println(s.getTagName());
 				//System.out.println(s.getClass());
-				System.out.println(s.getAttribute("role"));
-				System.out.println("IDs: "+s.getAttribute("id"));
-				//if(s.getTagName().equals("input"))
+				//System.out.println(s.getAttribute("role"));
+				//System.out.println("IDs: "+s.getAttribute("id"));
+				if(s.getAttribute("id").contains("input"))
 				{
 					returnID = s.getAttribute("id");
 					System.out.println(s.getAttribute("id"));
+					System.out.println("test P : "+s.getAttribute("role"));
 				}
 			}
 			driver.findElement(By.id((returnID))).click();
-			boundListSelect(driver, readFromFile("input1.txt", input.toUpperCase()), selBoundList(driver));
+			boundListSelect(driver, readFromFile(fileName, input.toUpperCase()), selBoundList(driver));
 		}
 
 		public void AutoFillPasswd(WebDriver driver,String input,String fileName) throws IOException{
@@ -750,7 +853,7 @@ public class Settings {
 
 	public void check(WebDriver driver,List<String> inputIP){
 
-		WebElement table = driver.findElement(By.id(locator.getProperty("gridview-1369")));
+		WebElement table = driver.findElement(By.id(locator.getProperty("VCVMList")));
 		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty(".//*[local-name(.)='td']")));
 		System.out.println(cells.size()+"\n\n");
 		for(int i=0;i<inputIP.size();i++)
@@ -765,6 +868,37 @@ public class Settings {
 					}
 				}
 		}
+	}
+	
+	public void loginToSite(WebDriver driver){
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
+		driver.get("https://sit4vm1.smgrdev.avaya.com");
+		
+		driver.findElement(By.id("IDToken1")).sendKeys("admin");
+	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
+	    driver.findElement(By.xpath(".//*[@id='SubmitButton']")).click();
+	    logClass.info("Logged in Successfully");
+	    
+	    driver.findElement(By.xpath(".//*[@id='Services_SoftwareManagement']/a")).click();
+	    
+	    driver.switchTo().frame("iframe0");
+	    
+	    driver.findElement(By.xpath(".//*[@id='vmMgmtId-textEl']")).click();
+		logClass.info("Clicked on VM management");
+		
+	}
+	
+	public void goHome(WebDriver driver) throws InterruptedException{
+		Thread.sleep(1000);
+		
+		driver.navigate().refresh();
+		logOut(driver);
+		loginToSite(driver);
+	}
+	
+	public void logOut(WebDriver driver){
+		driver.findElement(By.xpath(".//*[@id='logoff']")).click();
 	}
 	
 }

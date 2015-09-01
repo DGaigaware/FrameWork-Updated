@@ -37,7 +37,7 @@ public class demo2708 {
 
 			driver.findElement(By.xpath(prop.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHostT(driver, "testBSM225");
+			obj.findVMForHost(driver, "testBSM225");
 
 			driver.findElement(By.xpath(prop.getProperty("VMMoreAction"))).click();
 			Thread.sleep(500);

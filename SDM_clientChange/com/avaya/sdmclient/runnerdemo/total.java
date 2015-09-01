@@ -29,7 +29,7 @@ public class total {
 		locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
-	@Test(description="Adding Location",priority=0)
+	/*@Test(description="Adding Location",priority=0)
 	public void _AddLocation() throws IOException, InterruptedException {
 
 		logClass.startTestCase("Add a new Location on SDM");
@@ -200,8 +200,8 @@ public class total {
 		Thread.sleep(250);
 		obj.boundListSelect(driver, obj.readFromFile("input.txt", "DefaultLoc"), obj.selBoundList(driver));
 		
-		/*wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty(linkText))));
-		driver.findElement(By.linkText(locator.getProperty(linkText))).click();*/
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty(linkText))));
+		driver.findElement(By.linkText(locator.getProperty(linkText))).click();
 		
 		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).sendKeys(obj.readFromFile("input.txt", "HostName175"));
@@ -222,13 +222,13 @@ public class total {
 
 		Thread.sleep(2500);
 
-		/*obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
+		obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
 
 		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
 		
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
 
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);*/
+		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
 		logClass.endTestCase("Edited Host Successfully");
 
 	}
@@ -249,9 +249,9 @@ public class total {
 		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Deleted Host");
-	}
+	}*/
 
-	@Test(description="Adding Location",priority=6)
+	/*@Test(description="Adding Location",priority=6)
 	public void AddLocation() throws IOException, InterruptedException {
 
 		logClass.startTestCase("Add a new Location on SDM");
@@ -321,7 +321,7 @@ public class total {
 		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Added Host Succesfully");
-	}
+	}*/
 
 	@Test(description="Adding VM to given Location and Host",priority=8)
 
@@ -343,8 +343,7 @@ public class total {
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"))){
 			//addHost1();
 			System.out.println("Adding Host");
-			driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-			driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
+			obj.goToSite(driver);
 			logClass.info("Added Host as Location was not there beforehand.");
 		}
 		
@@ -395,17 +394,7 @@ public class total {
 			logClass.info("Choosen From Software Library");
 
 			driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
-			WebElement element = driver.findElement(By.id(locator.getProperty("boundlist-1543-listEl")));
-			List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("x-boundlist-item")));
-			for (WebElement e : tmp1 )
-			{
-				//System.out.println(e.getText()+ "\n Test \n");
-				if(e.getText().contains("SM"))
-				{
-					System.out.println("\nSelected : \n"+e.getText());
-					e.click();
-				}
-			}
+			obj.boundListSelect(driver, "SMGR", obj.selBoundList(driver));
 			break;
 		}
 
@@ -426,7 +415,7 @@ public class total {
 
 		//removed
 
-		obj.FillValues("inputsm.txt", "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf", driver);
+		obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver);
 
 		driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
@@ -438,7 +427,7 @@ public class total {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, "testSM221");
+		obj.findVMForHost(driver, "testSM221");
 		
 		Thread.sleep(4500);
 
@@ -458,7 +447,7 @@ public class total {
 
 	}
 
-
+/*
 	@Test(description="Editing VM to given Location and Host",priority=9)
 
 	public void EditVM() throws InterruptedException, IOException{
@@ -656,6 +645,6 @@ public class total {
 		logClass.endTestCase("Deleted VM successfully");
 	}
 
-
+*/
 
 }

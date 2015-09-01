@@ -229,7 +229,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, "testSM221");
+		obj.findVMForHost(driver, "testSM221");
 
 		driver.findElement(By.linkText(locator.getProperty("Status Details  "))).click();
 		logClass.info("Checking Status Details  ");
@@ -262,7 +262,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 		driver.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 		logClass.info("Clicked on - Edit VM");
 		Thread.sleep(750);
@@ -299,7 +299,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
 		driver.findElement(By.xpath(locator.getProperty("StopVM"))).click();
 
@@ -325,7 +325,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
 		driver.findElement(By.xpath(locator.getProperty("VMStart"))).click();
 
@@ -350,7 +350,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
 		driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
 		Thread.sleep(500);
@@ -416,7 +416,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
 		driver.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 
@@ -441,7 +441,7 @@ public class VM {
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-		obj.findVMForHostT(driver, obj.readFromFile("input.txt", "VMName221"));
+		obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
 		driver.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 
