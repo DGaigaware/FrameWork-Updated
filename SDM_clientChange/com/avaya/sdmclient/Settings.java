@@ -531,7 +531,7 @@ public class Settings {
 		if(input.equals("EditHost")){
 			driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 			Thread.sleep(250);
-			boundListSelect(driver, readFromFile(filename, "AddLocationCity:"), selBoundList(driver));
+			boundListSelect(driver, readFromFile(filename, "EditHostLocation:"), selBoundList(driver));
 		}
 		
 		else if(input.equals("AddLocation") || input.equals("EditLocation")){
@@ -926,6 +926,31 @@ public class Settings {
 				//System.out.println("Something went wrong. Check Screenshot");
 				TakeScreenShot(driver);
 			}
+	}
+	
+	public void findButton(WebDriver driver){
+		//EulaAgreementWindow
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		
+		System.out.println("Before");
+		System.out.println(elem2.size());
+		
+		List<String> buttons = new ArrayList<>();
+		for(WebElement e : elem2){
+			System.out.println(e.getText());
+			if(e.getAttribute("id").contains("btnEl") && driver.findElement(By.id(e.getAttribute("id"))).getText().equals("Accept"))
+			{
+				buttons.add(e.getAttribute("id"));
+				System.out.println("Buttons: "+e.getAttribute("id"));
+				System.out.println(driver.findElement(By.id(e.getAttribute("id"))).getText());
+			}
+		}
+		
+		waitForPresence(driver, By.id(buttons.get(0)));
+		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
+		System.out.println("Clicked");
 	}
 	
 }

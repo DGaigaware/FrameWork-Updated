@@ -31,7 +31,7 @@ package com.avaya.sdmclient.runnerdemo;
 		}
 		
 		
-		@Test(description="Adding Location",priority=0)
+		/*@Test(description="Adding Location",priority=0)
 		public void AddLocation() throws IOException, InterruptedException {
 
 			logClass.startTestCase("Add a new Location on SDM");
@@ -105,20 +105,20 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.endTestCase("Deleted Location");
 		}
-
+*/
 		
 		@Test(description="Adding Host to given Location",priority=3)
 		public void addHost() throws IOException, InterruptedException{
 
 			logClass.startTestCase("Adding Host to given Location");
 
-			obj.goHome(driver);
-			//obj.loginToSite(driver);
+			//obj.goHome(driver);
+			obj.loginToSite(driver);
 			
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
 				driver.navigate().refresh();
 				obj.logOut(driver);
-				AddLocation();
+				//AddLocation();
 				System.out.println("Adding Location");
 				logClass.info("Location was not there. Adding it and pausing current thread.");
 				obj.goHome(driver);
@@ -146,7 +146,8 @@ package com.avaya.sdmclient.runnerdemo;
 			Thread.sleep(4500);
 			
 			obj.refreshItems(driver, "AddHost");
-
+			Thread.sleep(1500);
+			
 			obj.checkSuccess(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
 			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
@@ -172,13 +173,10 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.findHostInGrid(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("EditHost"))).click();
-			driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
+			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();*/
 
 			Thread.sleep(250);
-			
-			obj.boundListSelect(driver, obj.readFromFile("input.txt", "AddLocationCity:"), obj.selBoundList(driver));
-			Thread.sleep(500);
-			
+	
 			obj.findIDandFillValues(driver, "input.txt", "EditHost");
 			Thread.sleep(250);
 			
@@ -191,12 +189,6 @@ package com.avaya.sdmclient.runnerdemo;
 			
 			obj.refreshItems(driver, "EditHost");
 
-			obj.checkSuccess(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
-
-			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
-			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
-
-			obj.StatusCheck(driver, "Host Create/Update Completed", 20);
 			logClass.endTestCase("Edited Host Successfully");
 
 		}
@@ -363,7 +355,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
-			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
+			obj.findButton(driver);
+//			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
 			logClass.info("Accepted EULA");
 
 			Thread.sleep(9000);
@@ -383,13 +376,13 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed"));
+			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed"));
 			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driver);
 			Thread.sleep(5000);
 
-		}*/
+		}
 
 	
 		@Test(description="Editing VM to given Location and Host",priority=9)
@@ -598,7 +591,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.endTestCase("Deleted VM successfully");
 		}
-
+*/
 	
 
 	
