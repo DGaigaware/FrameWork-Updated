@@ -30,7 +30,7 @@ package com.avaya.sdmclient.runnerdemo;
 			locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 		}
 		
-		/*
+		
 		@Test(description="Adding Location",priority=0)
 		public void AddLocation() throws IOException, InterruptedException {
 
@@ -42,8 +42,10 @@ package com.avaya.sdmclient.runnerdemo;
 			logClass.info("Adding new Location");
 
 			obj.findIDandFillValues(driver, "input.txt", "AddLocation");
-			
 			Thread.sleep(250);
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationSave")));
+			
 			driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
 			logClass.info("Saved New Location");
 
@@ -69,6 +71,9 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.findIDandFillValues(driver, "input.txt", "EditLocation");
 			
 			obj.waitForPresence(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
+			
 			//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 			driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 
@@ -92,12 +97,14 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.findLocationInGrid(driver, obj.readFromFile("input.txt", "AddLocationName:"));
 
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationDelete")));
+			
 			driver.findElement(By.xpath(locator.getProperty("LocationDelete"))).click();
 
 			obj.confirmDialogBox(driver);
 
 			logClass.endTestCase("Deleted Location");
-		}*/
+		}
 
 		
 		@Test(description="Adding Host to given Location",priority=3)
@@ -105,15 +112,17 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.startTestCase("Adding Host to given Location");
 
-			//obj.goHome(driver);
-			obj.loginToSite(driver);
+			obj.goHome(driver);
+			//obj.loginToSite(driver);
 			
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
 				driver.navigate().refresh();
 				obj.logOut(driver);
-				//AddLocation();
+				AddLocation();
 				System.out.println("Adding Location");
+				logClass.info("Location was not there. Adding it and pausing current thread.");
 				obj.goHome(driver);
+				//obj.loginToSite(driver);
 				logClass.info("Added Location as Location was not there beforehand.");
 			}
 
@@ -124,18 +133,16 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("New-Host"))).click();
 			logClass.info("Adding new Host");
-
 			Thread.sleep(250);			
 		
 			obj.findIDandFillValues(driver, "input.txt", "AddHost");
-			
 			Thread.sleep(250);
 			
-			Thread.sleep(250);
+			obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHost")));
+			
 			driver.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
 
 			obj.confirmDialogBox(driver);
-
 			Thread.sleep(4500);
 			
 			obj.refreshItems(driver, "AddHost");
@@ -174,6 +181,8 @@ package com.avaya.sdmclient.runnerdemo;
 			
 			obj.findIDandFillValues(driver, "input.txt", "EditHost");
 			Thread.sleep(250);
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHostEdit")));
 
 			driver.findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
 
@@ -203,6 +212,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.findHostInGrid(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
+			obj.checkFocus(driver, By.xpath(locator.getProperty("HostDelete")));
+			
 			driver.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
 
 			obj.confirmDialogBox(driver);
@@ -348,6 +359,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver);
 
+			obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
+
 			driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
 			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
@@ -408,6 +421,7 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(obj.readFromFile("input.txt", "NewVMName"));
 
+			obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
 			driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(driver, obj.checkError(driver));
@@ -432,6 +446,8 @@ package com.avaya.sdmclient.runnerdemo;
 			
 			Thread.sleep(1500);
 
+			//obj.checkFocus(driver, By.xpath(locator.getProperty("StopVM")));
+
 			driver.findElement(By.xpath(locator.getProperty("StopVM"))).click();
 
 			obj.confirmDialogBox(driver);
@@ -455,6 +471,8 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+
+			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
 
 			driver.findElement(By.xpath(locator.getProperty("VMStart"))).click();
 
@@ -547,6 +565,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
 
+			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
+
 			driver.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 
 			obj.confirmDialogBox(driver);
@@ -569,6 +589,8 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+
+			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
 
 			driver.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 

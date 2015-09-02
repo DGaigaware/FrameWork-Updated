@@ -82,9 +82,47 @@ public class demo0109 {
 		Properties locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 		
+		logClass.startTestCase("Add a new Location on SDM");
+
 		obj.loginToSite(driver);
+
+		driver.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
+		logClass.info("Adding new Location");
+
+		obj.findIDandFillValues(driver, "input.txt", "AddLocation");
 		
-		/*if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
+		
+		
+		Thread.sleep(250);
+		
+		obj.checkFocus(driver, By.xpath(locator.getProperty("LocationSave")));
+		
+		//driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
+		/*logClass.info("Saved New Location");
+
+		obj.errorBox(driver, obj.checkError(driver));
+		obj.refreshItems(driver, "AddLocation");
+		
+		logClass.endTestCase("Added a new Location");*/
+		
+		//obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHost")));
+		//driver.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
+
+		/*obj.confirmDialogBox(driver);
+		Thread.sleep(1500);
+		
+		obj.refreshItems(driver, "AddHost");
+		Thread.sleep(1500);
+		obj.checkSuccess(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+
+		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+		
+		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
+
+		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+
+		logClass.endTestCase("Added Host Succesfully");
+		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
 			driver.navigate().refresh();
 			obj.logOut(driver);
 			//AddLocation();
@@ -104,8 +142,8 @@ public class demo0109 {
 		Thread.sleep(250);	
 		
 		//findIDandFillValues(driver, "input.txt", "AddHost");
-*/		
-		obj.refreshItems(driver, "AddLocation");
+		*/
+		//obj.refreshItems(driver, "AddHost");
 		System.out.println("refreshed");
 		
 	}

@@ -157,7 +157,7 @@ public class Settings {
 		{
 			if(e.getText().trim().contains(input))
 			{
-				//System.out.println("next"+e.getText());
+				System.out.println("next"+e.getText());
 				e.click();
 				e.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			}
@@ -361,8 +361,8 @@ public class Settings {
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
 					{
-				logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-				//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+						logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+						//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
 					}
 		}
 		catch(Exception ex){
@@ -373,6 +373,7 @@ public class Settings {
 		try{
 			driver.findElement(By.xpath(locator.getProperty("ConfButton1"))).click();
 		}
+		
 		catch(Exception ex){
 			System.out.println("\n");
 		}
@@ -530,10 +531,25 @@ public class Settings {
 		if(input.equals("EditHost")){
 			driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 			Thread.sleep(250);
-			boundListSelect(driver, readFromFile(filename, "DefaultLoc"), selBoundList(driver));
+			boundListSelect(driver, readFromFile(filename, "AddLocationCity:"), selBoundList(driver));
+		}
+		
+		else if(input.equals("AddLocation") || input.equals("EditLocation")){
+			
+			String sc1 = "var nl = document.getElementById(\""+ getViewFrame(driver, input).get(0) + "\").querySelectorAll(\"textarea\"); return nl;";
+			ArrayList<WebElement> elems = (ArrayList<WebElement>) js.executeScript(sc1);
+			WebElement ee = driver.findElement(By.id(elems.get(0).getAttribute("id").replace("inputEl", "labelEl")));
+			
+			System.out.println("Main: "+ee.getText());
+			returnID = elems.get(0).getAttribute("id");
+			System.out.println(returnID);
+			
+			driver.findElement(By.id(returnID)).clear();
+			driver.findElement(By.id(returnID)).sendKeys(readFromFile(filename, input+ee.getText().replace("*", "").replace(" ", "")));
 		}
 		
 		for(WebElement e : elem){
+			System.out.println("Main: "+driver.findElement(By.id(e.getAttribute("id").replace("input", "label"))).getText());
 			if(e.getAttribute("readonly")==null){
 			System.out.println("Attribb"+e.getAttribute("readonly"));
 			WebElement el = driver.findElement(By.id(e.getAttribute("id").replace("input", "label")));
@@ -554,27 +570,28 @@ public class Settings {
 		String script1 = "var nl = document.getElementById(\"" + getViewFrame(driver, methodBy).get(1) + "\").querySelectorAll('[id^=\"pagingtoolbar\"]'); return nl;";
 		ArrayList<WebElement> elem1 = (ArrayList<WebElement>) js.executeScript(script1);
 		
-		/*for(WebElement e : elem1)
+		for(WebElement e : elem1)
 			System.out.println(e.getAttribute("id"));
 		
 		System.out.println("Before");
-		System.out.println(elem1.size());*/
+		System.out.println(elem1.size());
 		
 		String script2 = "var nl = document.getElementById(\""+elem1.get(0).getAttribute("id")+"\").querySelectorAll('[id^=\"button\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
 		
-		/*System.out.println("Before");
-		System.out.println(elem2.size());*/
+		System.out.println("Before");
+		System.out.println(elem2.size());
 		
 		List<String> buttons = new ArrayList<>();
 		for(WebElement e : elem2){
 			if(e.getAttribute("id").contains("btnEl"))
 			{
 				buttons.add(e.getAttribute("id"));
-				//System.out.println(e.getAttribute("id"));
+				System.out.println("Buttons: "+e.getAttribute("id"));
 			}
 		}
 		
+		waitForPresence(driver, By.id(buttons.get(buttons.size()-1)));
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
 		System.out.println("Refreshed");
 			
@@ -899,6 +916,16 @@ public class Settings {
 	
 	public void logOut(WebDriver driver){
 		driver.findElement(By.xpath(".//*[@id='logoff']")).click();
+	}
+	
+	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
+		System.out.println(driver.findElement(toLocate).getCssValue("opacity"));
+		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
+			{
+				logClass.error("Something went wrong. Check Screenshot");
+				//System.out.println("Something went wrong. Check Screenshot");
+				TakeScreenShot(driver);
+			}
 	}
 	
 }
