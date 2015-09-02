@@ -5,16 +5,8 @@
     <classes>
       <class name="com.avaya.sdmclient.runnerdemo.sdmSMGR">
         <methods>
-          <include name="RefreshVM"/>
-          <include name="StartVM"/>
           <include name="setup"/>
-          <include name="addHost"/>
-          <include name="DeleteHost"/>
-          <include name="RestartVM"/>
-          <include name="StopVM"/>
-          <include name="DeleteVM"/>
           <include name="_EditHost"/>
-          <include name="EditVM"/>
         </methods>
       </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGR -->
     </classes>
