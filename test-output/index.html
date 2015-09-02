@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 9 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1729730426\testng-customsuite.xml</span>
+                    <span>C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1775074073\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 8 failed,   1 passed</span>
+                    <span class="method-stats">12 methods, 9 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -139,6 +139,11 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="_EditHost">_EditHost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="addHost">addHost</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
@@ -150,7 +155,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="addHost">addHost</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="AddLocation">AddLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="DeleteLocation">DeleteLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.avaya.sdmclient.runnerdemo.sdmSMGR" hash-for-method="EditLocation">EditLocation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -176,28 +191,15 @@
                   <a name="DeleteHost">
                   </a> <!-- DeleteHost -->
                   <span class="method-name">DeleteHost</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;gridview-1115&quot;}
-Command duration or timeout: 4.57 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-*** Element info: {Using=id, value=gridview-1115}
-Session ID: 410df238-6f73-48f5-ba45-a37db247ba25
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at com.avaya.sdmclient.Settings.findHostInGrid(Settings.java:184)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.DeleteHost(sdmSMGR.java:204)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.DeleteHost(sdmSMGR.java:202)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -222,13 +224,36 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;gridview-1115&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
-System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 43 more
 
 </div> <!-- stack-trace -->
                   <em>
@@ -247,8 +272,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
-	at com.avaya.sdmclient.Settings.goHome(Settings.java:846)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.DeleteVM(sdmSMGR.java:565)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.DeleteVM(sdmSMGR.java:567)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -314,28 +339,14 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   <a name="EditVM">
                   </a> <!-- EditVM -->
                   <span class="method-name">EditVM</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;IDToken1&quot;}
-Command duration or timeout: 4.67 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-*** Element info: {Using=id, value=IDToken1}
-Session ID: 410df238-6f73-48f5-ba45-a37db247ba25
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at com.avaya.sdmclient.Settings.loginToSite(Settings.java:829)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.EditVM(sdmSMGR.java:388)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at com.avaya.sdmclient.Settings.loginToSite(Settings.java:889)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.EditVM(sdmSMGR.java:390)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -360,13 +371,36 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;IDToken1&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
-System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 27 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 42 more
 
 </div> <!-- stack-trace -->
                   <em>
@@ -385,8 +419,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
-	at com.avaya.sdmclient.Settings.goHome(Settings.java:846)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.RefreshVM(sdmSMGR.java:475)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.RefreshVM(sdmSMGR.java:477)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -459,8 +493,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
-	at com.avaya.sdmclient.Settings.goHome(Settings.java:846)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.RestartVM(sdmSMGR.java:542)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.RestartVM(sdmSMGR.java:544)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -533,8 +567,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
-	at com.avaya.sdmclient.Settings.goHome(Settings.java:846)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR.StartVM(sdmSMGR.java:451)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.StartVM(sdmSMGR.java:453)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -600,27 +634,14 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   <a name="StopVM">
                   </a> <!-- StopVM -->
                   <span class="method-name">StopVM</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
-Command duration or timeout: 45 milliseconds
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-*** Element info: {Using=xpath, value=.//*[local-name(.)=&apos;tr&apos;]}
-Session ID: 410df238-6f73-48f5-ba45-a37db247ba25
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:188)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementsByXPath(RemoteWebElement.java:249)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:164)
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:108)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
 	at com.avaya.sdmclient.runnerdemo.sdmSMGR.StopVM(sdmSMGR.java:427)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -646,102 +667,36 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
-Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
-System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12350)
-	at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9089)
-	at &lt;anonymous class&gt;.Resource.prototype.handle(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9236)
-	at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9183)
-	at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12136)
-	at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
-	at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
-	at &lt;anonymous class&gt;.Connection.prototype.process(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
-	at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
-	at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
-	at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
-	at &lt;anonymous class&gt;..request(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:48763)
-	at &lt;anonymous class&gt;..statics.initializeRbac(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/app/util/VMUtil.js?_dc=1441115710908:1850)
-	at &lt;anonymous class&gt;..listeners.viewready(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/app/view/VMTreeView.js?_dc=1441115710527:39)
-	at &lt;anonymous class&gt;..fire(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:16634)
-	at &lt;anonymous class&gt;..continueFireEvent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18521)
-	at &lt;anonymous class&gt;..fireEventArgs(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18492)
-	at &lt;anonymous class&gt;..monitor/prototype.fireEventArgs(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:61804)
-	at &lt;anonymous class&gt;..fireEvent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18469)
-	at &lt;anonymous class&gt;..onViewReady(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:151295)
-	at &lt;anonymous class&gt;..fire(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:16634)
-	at &lt;anonymous class&gt;..continueFireEvent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18521)
-	at &lt;anonymous class&gt;..fireEventArgs(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18492)
-	at &lt;anonymous class&gt;..monitor/prototype.fireEventArgs(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:61804)
-	at &lt;anonymous class&gt;..fireEvent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:18469)
-	at &lt;anonymous class&gt;..refresh(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:138262)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..refresh(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:139741)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..refresh(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:154073)
-	at &lt;anonymous class&gt;..doFirstRefresh(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:138623)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:138081)
-	at &lt;anonymous class&gt;..finishRenderItems(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53101)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53547)
-	at &lt;anonymous class&gt;..finishRenderChildren(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:56518)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:41896)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:50586)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:42195)
-	at &lt;anonymous class&gt;..finishRenderItems(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53101)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53547)
-	at &lt;anonymous class&gt;..finishRenderChildren(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:56518)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:41896)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:50586)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:42195)
-	at &lt;anonymous class&gt;..finishRenderItems(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53101)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53547)
-	at &lt;anonymous class&gt;..finishRenderChildren(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:56518)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:41896)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:50586)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:42195)
-	at &lt;anonymous class&gt;..finishRenderItems(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53101)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:53547)
-	at &lt;anonymous class&gt;..finishRenderChildren(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:56518)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:41896)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..afterRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:50586)
-	at &lt;anonymous class&gt;..finishRender(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:42195)
-	at &lt;anonymous class&gt;..render(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:42523)
-	at &lt;anonymous class&gt;..constructor(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:44758)
-	at &lt;anonymous class&gt;..callParent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:7387)
-	at &lt;anonymous class&gt;..constructor(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:50528)
-	at &lt;anonymous class&gt;.constructor(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:8672)
-	at &lt;anonymous class&gt;.anonymous(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js line 9461 &gt; Function:1)
-	at &lt;anonymous class&gt;.Ext.ClassManager.instantiate(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:9426)
-	at &lt;anonymous class&gt;.Ext.Function.alias/&lt;(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:3807)
-	at &lt;anonymous class&gt;..launch(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/app.js:135)
-	at &lt;anonymous class&gt;..onBeforeLaunch(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:84163)
-	at &lt;anonymous class&gt;..constructor(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:84085)
-	at &lt;anonymous class&gt;.constructor(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:8672)
-	at &lt;anonymous class&gt;.Ext.application/createApp/&lt;(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:13807)
-	at &lt;anonymous class&gt;..createSingle/&lt;(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:16679)
-	at &lt;anonymous class&gt;..fire(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:16634)
-	at &lt;anonymous class&gt;.Ext.EventManager&lt;/readyEvent.fire(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:16905)
-	at &lt;anonymous class&gt;.Ext.EventManager&lt;/&lt;.fireReadyEvent(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:17005)
-	at &lt;anonymous class&gt;.Ext.EventManager&lt;/&lt;.onDocumentReady(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:17032)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.onReady/fn(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11506)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.triggerReady(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11492)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.require(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11313)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.triggerReady(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11478)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10974)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.refreshQueue(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:10975)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.onFileLoaded(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11391)
-	at &lt;anonymous class&gt;.Ext.Function.pass/&lt;(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:3793)
-	at &lt;anonymous class&gt;.Ext.Loader&lt;/&lt;.injectScriptElement/onLoadFn(https://sit4vm1.smgrdev.avaya.com/vm-mgmt-ui/extjs/ext-all-dev.js:11001)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 43 more
 
 </div> <!-- stack-trace -->
                   <em>
@@ -753,23 +708,15 @@ Driver info: driver.version: unknown
                   <a name="_EditHost">
                   </a> <!-- _EditHost -->
                   <span class="method-name">_EditHost</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 4.56 seconds
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-Session ID: 410df238-6f73-48f5-ba45-a37db247ba25
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:80)
-	at com.avaya.sdmclient.runnerdemo.sdmSMGR._EditHost(sdmSMGR.java:158)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
+	at com.avaya.sdmclient.Settings.goHome(Settings.java:910)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR._EditHost(sdmSMGR.java:161)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -794,18 +741,113 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
-System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9615)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12265)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5052666575713032566webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 43 more
 
 </div> <!-- stack-trace -->
                   <em>
 (Editing Host to given Location)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addHost">
+                  </a> <!-- addHost -->
+                  <span class="method-name">addHost</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
+System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:514)
+	at com.avaya.sdmclient.Settings.refreshItems(Settings.java:570)
+	at com.avaya.sdmclient.runnerdemo.sdmSMGR.addHost(sdmSMGR.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
+	at org.testng.TestNG.run(TestNG.java:1009)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 27 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 42 more
+
+</div> <!-- stack-trace -->
+                  <em>
+(Adding Host to given Location)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -818,11 +860,29 @@ Driver info: driver.version: unknown
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addHost">
-                  </a> <!-- addHost -->
-                  <span class="method-name">addHost</span>
+                  <a name="AddLocation">
+                  </a> <!-- AddLocation -->
+                  <span class="method-name">AddLocation</span>
                   <em>
-(Adding Host to given Location)                  </em>
+(Adding Location)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteLocation">
+                  </a> <!-- DeleteLocation -->
+                  <span class="method-name">DeleteLocation</span>
+                  <em>
+(Deleting Location)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="EditLocation">
+                  </a> <!-- EditLocation -->
+                  <span class="method-name">EditLocation</span>
+                  <em>
+(Editing Location)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -830,7 +890,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1729730426\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1775074073\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -879,43 +939,55 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addHost')
 data.setCell(0, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(0, 3, 38174);
+data.setCell(0, 3, 80044);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'StopVM')
+data.setCell(1, 1, 'EditLocation')
 data.setCell(1, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(1, 3, 23379);
+data.setCell(1, 3, 21905);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'DeleteHost')
+data.setCell(2, 1, 'DeleteLocation')
 data.setCell(2, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(2, 3, 22670);
+data.setCell(2, 3, 18255);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, '_EditHost')
+data.setCell(3, 1, 'AddLocation')
 data.setCell(3, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(3, 3, 21665);
+data.setCell(3, 3, 18154);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'RefreshVM')
+data.setCell(4, 1, 'StopVM')
 data.setCell(4, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(4, 3, 7007);
+data.setCell(4, 3, 7009);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'StartVM')
+data.setCell(5, 1, 'RefreshVM')
 data.setCell(5, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(5, 3, 7006);
+data.setCell(5, 3, 7002);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'EditVM')
+data.setCell(6, 1, 'StartVM')
 data.setCell(6, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(6, 3, 6811);
+data.setCell(6, 3, 6996);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'RestartVM')
+data.setCell(7, 1, '_EditHost')
 data.setCell(7, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(7, 3, 2013);
+data.setCell(7, 3, 2006);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'DeleteVM')
+data.setCell(8, 1, 'RestartVM')
 data.setCell(8, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
-data.setCell(8, 3, 2006);
+data.setCell(8, 3, 2005);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'DeleteVM')
+data.setCell(9, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
+data.setCell(9, 3, 2002);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'DeleteHost')
+data.setCell(10, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
+data.setCell(10, 3, 2002);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'EditVM')
+data.setCell(11, 2, 'com.avaya.sdmclient.runnerdemo.sdmSMGR')
+data.setCell(11, 3, 1016);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -952,56 +1024,70 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">AddLocation</span>
+                <span class="method-start">13 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">EditLocation</span>
+                <span class="method-start">18202 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DeleteLocation</span>
+                <span class="method-start">40108 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">addHost</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">58364 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">_EditHost</span>
-                <span class="method-start">38193 ms</span>
+                <span class="method-start">138457 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">DeleteHost</span>
-                <span class="method-start">59876 ms</span>
+                <span class="method-start">140469 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">EditVM</span>
-                <span class="method-start">82555 ms</span>
+                <span class="method-start">142477 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">StopVM</span>
-                <span class="method-start">89370 ms</span>
+                <span class="method-start">143497 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">StartVM</span>
-                <span class="method-start">112771 ms</span>
+                <span class="method-start">150510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">RefreshVM</span>
-                <span class="method-start">119781 ms</span>
+                <span class="method-start">157510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">RestartVM</span>
-                <span class="method-start">126792 ms</span>
+                <span class="method-start">164516 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">DeleteVM</span>
-                <span class="method-start">128810 ms</span>
+                <span class="method-start">166524 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

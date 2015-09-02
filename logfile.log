@@ -7205,3 +7205,529 @@
 2015-09-01 20:38:18,754 INFO  [Logger] In 'Host' Tab 
 2015-09-01 20:39:35,358 INFO  [Logger] Logged in Successfully 
 2015-09-01 20:39:40,362 INFO  [Logger] Clicked on VM management 
+2015-09-02 10:41:37,235 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:41:37,285 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 10:41:41,631 INFO  [Logger] Logged in Successfully 
+2015-09-02 10:41:46,510 INFO  [Logger] Clicked on VM management 
+2015-09-02 10:41:50,588 INFO  [Logger] Adding new Location 
+2015-09-02 10:41:54,090 INFO  [Logger] Saved New Location 
+2015-09-02 10:41:59,007 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:41:59,007 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 10:42:06,366 INFO  [Logger] Logged in Successfully 
+2015-09-02 10:42:11,221 INFO  [Logger] Clicked on VM management 
+2015-09-02 10:42:24,331 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:24,331 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 10:42:30,188 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:30,188 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 10:42:31,195 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:31,195 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 10:42:33,204 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:33,204 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 10:42:35,219 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:35,219 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 10:42:41,225 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:41,225 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 10:42:48,255 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:48,255 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 10:42:55,260 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:55,260 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 10:42:57,265 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:57,266 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 10:42:59,280 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:42:59,281 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 10:46:57,347 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:46:57,348 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 10:47:01,252 INFO  [Logger] Logged in Successfully 
+2015-09-02 10:47:06,150 INFO  [Logger] Clicked on VM management 
+2015-09-02 10:47:10,022 INFO  [Logger] Adding new Location 
+2015-09-02 10:47:14,000 INFO  [Logger] Saved New Location 
+2015-09-02 10:47:19,031 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:19,031 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 10:47:24,377 INFO  [Logger] Logged in Successfully 
+2015-09-02 10:47:27,484 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:27,484 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 10:47:29,510 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:29,511 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 10:47:30,515 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:30,515 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 10:47:32,521 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:32,521 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 10:47:34,535 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:34,536 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 10:47:40,550 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:40,550 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 10:47:47,565 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:47,565 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 10:47:54,576 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:54,576 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 10:47:56,580 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:56,580 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 10:47:58,590 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 10:47:58,590 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 11:20:54,188 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:20:54,189 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:20:59,106 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:21:04,035 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:21:08,309 INFO  [Logger] Adding new Location 
+2015-09-02 11:21:12,981 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:12,982 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:21:17,300 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:17,300 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:21:19,341 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:19,342 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:21:20,354 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:20,354 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:21:22,369 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:22,370 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:21:24,381 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:24,381 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:21:30,388 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:30,388 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 11:21:37,422 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:37,422 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 11:21:44,438 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:44,438 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 11:21:46,445 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:46,446 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 11:21:48,462 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:21:48,463 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 11:24:09,307 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:24:09,308 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:24:13,344 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:24:18,229 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:24:22,126 INFO  [Logger] Adding new Location 
+2015-09-02 11:24:26,406 INFO  [Logger] Saved New Location 
+2015-09-02 11:24:26,923 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:24:26,925 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:24:26,925 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:24:34,157 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:24:39,079 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:24:48,149 INFO  [Logger] Saved Location 
+2015-09-02 11:24:48,149 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 11:24:48,153 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:24:48,153 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:24:55,103 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:24:59,987 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:25:05,067 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 11:25:05,232 INFO  [Logger] Confirmation:  
+2015-09-02 11:25:05,728 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 11:25:05,730 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:25:05,730 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:25:12,477 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:25:12,477 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:25:22,465 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:25:27,325 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:25:35,948 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:25:35,949 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:25:43,769 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:25:48,776 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:25:57,238 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:25:57,238 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:26:08,806 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:08,806 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 11:26:20,513 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:20,513 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 11:26:27,509 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:27,509 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 11:26:29,515 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:29,515 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 11:26:31,526 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:31,526 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 11:26:37,750 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:37,751 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:26:41,680 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:26:46,577 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:26:51,518 INFO  [Logger] Adding new Location 
+2015-09-02 11:26:55,677 INFO  [Logger] Saved New Location 
+2015-09-02 11:26:56,215 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:26:56,217 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:26:56,217 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:27:03,322 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:27:08,252 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:27:17,111 INFO  [Logger] Saved Location 
+2015-09-02 11:27:17,111 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 11:27:17,113 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:27:17,114 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:27:24,639 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:27:29,490 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:27:34,180 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 11:27:34,339 INFO  [Logger] Confirmation:  
+2015-09-02 11:27:34,800 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 11:27:34,805 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:27:34,805 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:27:41,971 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:27:46,837 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:28:00,613 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:28:00,613 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:28:06,857 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:28:06,857 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:28:13,108 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:28:13,108 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:28:16,418 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:28:21,318 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:28:28,741 INFO  [Logger] Clicked on - Edit VM 
+2015-09-02 11:30:34,216 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:30:34,216 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:30:38,300 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:30:43,209 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:30:46,982 INFO  [Logger] Adding new Location 
+2015-09-02 11:30:51,351 INFO  [Logger] Saved New Location 
+2015-09-02 11:30:51,865 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:30:51,869 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:30:51,869 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:30:58,952 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:31:03,931 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:31:13,749 INFO  [Logger] Saved Location 
+2015-09-02 11:31:13,750 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 11:31:13,751 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:31:13,751 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:31:21,224 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:31:26,169 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:31:31,906 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 11:31:32,050 INFO  [Logger] Confirmation:  
+2015-09-02 11:31:32,543 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 11:31:32,545 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:31:32,545 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:31:39,436 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:31:44,340 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:31:54,533 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:31:59,555 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:31:59,555 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-09-02 11:32:07,940 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:32:07,941 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:32:15,540 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:32:20,406 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:32:29,003 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:32:29,003 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:32:36,670 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:32:41,519 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:32:49,864 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:32:49,864 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:33:01,069 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:33:01,069 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 11:33:08,077 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:33:08,077 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 11:33:15,082 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:33:15,082 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 11:33:17,096 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:33:17,096 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 11:33:19,115 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:33:19,115 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 11:34:23,841 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:34:23,841 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:34:28,140 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:34:33,092 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:34:37,101 INFO  [Logger] Adding new Location 
+2015-09-02 11:34:41,472 INFO  [Logger] Saved New Location 
+2015-09-02 11:34:41,965 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:34:41,968 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:34:41,968 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:34:48,678 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:34:53,555 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:35:05,663 INFO  [Logger] Saved Location 
+2015-09-02 11:35:05,663 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 11:35:05,668 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:35:05,668 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:35:13,306 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:35:18,233 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:35:22,863 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 11:35:23,033 INFO  [Logger] Confirmation:  
+2015-09-02 11:35:23,666 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 11:35:23,667 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:35:23,667 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:35:31,170 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:35:36,056 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:35:42,921 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:35:42,921 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:35:46,229 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:35:51,125 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:35:55,371 INFO  [Logger] Adding new Location 
+2015-09-02 11:35:59,059 INFO  [Logger] Saved New Location 
+2015-09-02 11:36:04,093 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:36:10,853 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:36:15,688 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:36:15,688 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-09-02 11:36:21,032 INFO  [Logger] In 'Host' Tab 
+2015-09-02 11:36:21,461 INFO  [Logger] Adding new Host 
+2015-09-02 11:36:28,672 ERROR [Logger] Something went wrong :( 
+2015-09-02 11:36:28,672 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 11:36:43,334 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:36:43,334 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:36:50,483 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:36:55,365 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:37:00,694 INFO  [Logger] In 'Host' Tab 
+2015-09-02 11:37:03,187 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:37:03,188 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:37:10,017 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:37:14,921 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:37:24,545 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:37:24,545 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:37:36,142 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:37:36,142 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 11:37:44,036 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:37:48,872 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:38:01,724 ERROR [Logger] Something went wrong :( 
+2015-09-02 11:38:01,724 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 11:42:48,839 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:42:48,840 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:42:52,940 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:42:57,812 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:43:01,752 INFO  [Logger] Adding new Location 
+2015-09-02 11:43:05,808 INFO  [Logger] Saved New Location 
+2015-09-02 11:43:06,309 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:43:06,311 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:43:06,311 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 11:43:13,504 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:43:18,391 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:43:27,711 INFO  [Logger] Saved Location 
+2015-09-02 11:43:27,711 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 11:43:27,713 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:43:27,713 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 11:43:34,205 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:43:39,097 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:43:44,983 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 11:43:45,161 INFO  [Logger] Confirmation:  
+2015-09-02 11:43:45,702 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 11:43:45,704 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:43:45,704 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 11:43:52,545 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:43:57,442 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:44:04,395 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:44:04,395 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 11:44:07,644 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:44:12,608 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:44:17,429 INFO  [Logger] Adding new Location 
+2015-09-02 11:44:21,567 INFO  [Logger] Saved New Location 
+2015-09-02 11:44:26,582 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 11:44:26,582 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-09-02 11:44:33,672 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:44:38,634 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:44:38,635 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-09-02 11:44:43,811 INFO  [Logger] In 'Host' Tab 
+2015-09-02 11:44:44,392 INFO  [Logger] Adding new Host 
+2015-09-02 11:44:51,850 ERROR [Logger] Something went wrong :( 
+2015-09-02 11:44:51,850 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 11:45:06,468 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:45:06,468 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 11:45:13,391 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:45:18,260 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:45:23,737 INFO  [Logger] In 'Host' Tab 
+2015-09-02 11:45:26,265 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:45:26,265 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 11:45:33,695 INFO  [Logger] Logged in Successfully 
+2015-09-02 11:45:38,609 INFO  [Logger] Clicked on VM management 
+2015-09-02 11:45:44,410 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:45:44,410 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 11:45:50,422 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:45:50,422 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 11:45:57,441 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:45:57,441 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 11:46:04,446 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:46:04,446 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 11:46:06,452 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:46:06,452 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 11:46:08,468 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 11:46:08,469 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 12:36:45,407 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:36:45,447 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 12:36:49,599 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:36:54,533 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:36:58,514 INFO  [Logger] Adding new Location 
+2015-09-02 12:37:02,995 INFO  [Logger] Saved New Location 
+2015-09-02 12:37:03,538 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 12:37:03,574 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:37:03,574 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-02 12:37:10,933 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:37:15,864 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:37:25,478 INFO  [Logger] Saved Location 
+2015-09-02 12:37:25,478 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-02 12:37:25,479 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:37:25,479 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-02 12:37:32,440 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:37:37,331 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:37:43,032 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-02 12:37:43,193 INFO  [Logger] Confirmation:  
+2015-09-02 12:37:43,734 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-02 12:37:43,735 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:37:43,735 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:37:51,489 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:37:56,417 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:38:02,850 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:38:02,850 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 12:38:06,110 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:38:10,983 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:38:15,090 INFO  [Logger] Adding new Location 
+2015-09-02 12:38:18,675 INFO  [Logger] Saved New Location 
+2015-09-02 12:38:23,845 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-02 12:38:23,845 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-09-02 12:38:30,864 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:38:35,791 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:38:35,792 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-09-02 12:38:41,376 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:38:41,644 INFO  [Logger] Adding new Host 
+2015-09-02 12:38:49,093 ERROR [Logger] Something went wrong :( 
+2015-09-02 12:38:49,093 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 12:39:03,829 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:03,830 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-02 12:39:05,841 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:05,841 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-02 12:39:07,849 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:07,849 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-02 12:39:13,868 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:13,868 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-02 12:39:20,881 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:20,881 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-02 12:39:27,882 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:27,882 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-02 12:39:29,887 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:29,887 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-02 12:39:31,895 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:39:31,896 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-02 12:44:08,963 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:44:13,869 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:44:13,869 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:44:13,869 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:44:18,880 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:44:19,459 INFO  [Logger] Adding new Host 
+2015-09-02 12:44:26,837 ERROR [Logger] Something went wrong :( 
+2015-09-02 12:44:26,837 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 12:47:09,577 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:47:15,380 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:47:15,380 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:47:15,380 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:47:19,906 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:47:20,280 INFO  [Logger] Adding new Host 
+2015-09-02 12:47:27,342 ERROR [Logger] Something went wrong :( 
+2015-09-02 12:47:27,342 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 12:48:49,122 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:48:54,013 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:48:54,013 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:48:54,013 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:48:59,946 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:49:00,222 INFO  [Logger] Adding new Host 
+2015-09-02 12:49:02,482 INFO  [Logger] Action being performed: This Host Name already exists! Please try another name. 
+2015-09-02 12:49:07,136 INFO  [Logger] Confirmation: This Host Name already exists! Please try another name. 
+2015-09-02 12:49:42,761 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:49:47,717 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:49:47,717 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:49:47,717 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:49:52,178 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:49:52,590 INFO  [Logger] Adding new Host 
+2015-09-02 12:49:59,567 ERROR [Logger] Something went wrong :( 
+2015-09-02 12:49:59,567 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 12:52:52,121 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:52:57,023 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:52:57,024 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:52:57,024 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:53:02,254 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:53:02,518 INFO  [Logger] Adding new Host 
+2015-09-02 12:53:57,813 INFO  [Logger] Logged in Successfully 
+2015-09-02 12:54:02,720 INFO  [Logger] Clicked on VM management 
+2015-09-02 12:54:02,720 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 12:54:02,720 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 12:54:07,678 INFO  [Logger] In 'Host' Tab 
+2015-09-02 12:54:08,235 INFO  [Logger] Adding new Host 
+2015-09-02 12:54:15,469 ERROR [Logger] Something went wrong :( 
+2015-09-02 12:54:15,469 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 12:54:29,488 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Discovering VMs: Add VM testBSM225 in local inventory :;Discovering VMs: Add VM testBSM225 in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-02 12:54:30,102 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Discovering VMs: Add VM testBSM225 in local inventory :;Discovering VMs: Add VM testBSM225 in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-02 12:54:30,629 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-09-02 15:25:56,031 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:26:00,965 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:26:00,965 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:26:00,965 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-02 15:26:05,851 INFO  [Logger] In 'Host' Tab 
+2015-09-02 15:26:06,130 INFO  [Logger] Adding new Host 
+2015-09-02 15:28:04,945 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:28:04,945 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:28:08,829 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:28:13,699 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:28:17,659 INFO  [Logger] Adding new Location 
+2015-09-02 15:28:21,559 INFO  [Logger] Saved New Location 
+2015-09-02 15:29:23,526 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:29:23,527 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:29:27,483 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:29:32,385 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:29:36,190 INFO  [Logger] Adding new Location 
+2015-09-02 15:32:36,085 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:32:36,086 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:32:39,858 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:32:44,748 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:32:49,165 INFO  [Logger] Adding new Location 
+2015-09-02 15:37:27,454 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:37:27,455 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:37:31,373 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:37:36,270 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:37:39,983 INFO  [Logger] Adding new Location 
+2015-09-02 15:44:11,204 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:44:11,205 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:44:15,149 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:44:20,103 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:44:24,365 INFO  [Logger] Adding new Location 
+2015-09-02 15:47:11,603 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:47:11,604 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:47:15,455 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:47:20,379 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:47:24,131 INFO  [Logger] Adding new Location 
+2015-09-02 15:49:36,200 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:49:36,201 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:49:39,972 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:49:44,849 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:49:48,636 INFO  [Logger] Adding new Location 
+2015-09-02 15:52:34,855 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:52:34,855 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:52:38,731 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:52:43,624 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:52:47,367 INFO  [Logger] Adding new Location 
+2015-09-02 15:52:47,853 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-02 15:52:48,064 ERROR [Logger] Something went wrong :( 
+2015-09-02 15:52:48,064 INFO  [Logger] Check Screenshot for the same 
+2015-09-02 15:53:48,647 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-02 15:53:48,648 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-02 15:53:53,022 INFO  [Logger] Logged in Successfully 
+2015-09-02 15:53:58,071 INFO  [Logger] Clicked on VM management 
+2015-09-02 15:54:01,985 INFO  [Logger] Adding new Location 

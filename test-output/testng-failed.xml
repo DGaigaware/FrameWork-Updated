@@ -8,6 +8,7 @@
           <include name="RefreshVM"/>
           <include name="StartVM"/>
           <include name="setup"/>
+          <include name="addHost"/>
           <include name="DeleteHost"/>
           <include name="RestartVM"/>
           <include name="StopVM"/>
