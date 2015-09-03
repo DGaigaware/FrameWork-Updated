@@ -427,7 +427,7 @@ System.out.println(nl.item(i).getAttributes());*/
 
 
 	@SuppressWarnings("unused")
-	public static void main(String[] args) throws Exception {
+	public static void main() throws Exception {
 
 		String s1 = "<Property ovf:value=\"\" ovf:required=\"true\"";
 		String s = "<Property ovf:value=\"\" ovf:type=\"string\" ovf:required=\"true\" ovf:qualifiers=\"MinLen(1),MaxLen(255)\" ovf:userConfigurable=\"true\" ovf:key=\"hostname\"><Label>Short Hostname:</Label><Description>Short hostname for Session Manager</Description></Property>";

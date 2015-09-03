@@ -43,7 +43,8 @@ public class VM {
 
 		logClass.startTestCase("Add a new Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
+		obj.loginToSite(driver);
+		//driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
 		logClass.info("Clicked on VM management");
 
