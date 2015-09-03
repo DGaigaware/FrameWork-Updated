@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
+<title>TestNG:  Command line test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
+<h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 03 19:01:09 IST 2015</td>
+<td>Started on:</td><td>Thu Sep 03 18:54:25 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (36 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (3 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,7 +78,12 @@ function toggleAllBoxes() {
 <td title='com.avaya.sdmclient.runnerdemo.demoToRun.parameterTest()'><b>parameterTest</b><br>Test class: com.avaya.sdmclient.runnerdemo.demoToRun</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;IP&apos; is required by @Test on method parameterTest but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse--1621303298\testng-customsuite.xml
+
+	at com.avaya.sdmclient.runnerdemo.TESTtestNG.testTestNGProgramatically(TESTtestNG.java:26)
+... Removed 43 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1972321710", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1972321710'><pre>org.testng.TestNGException: 
+Parameter &apos;IP&apos; is required by @Test on method parameterTest but has not been marked @Optional or defined
+
 	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
@@ -98,19 +103,15 @@ in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse--1621303298\testng-custo
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
 	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace469613237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace469613237'><pre>org.testng.TestNGException: 
-Parameter &apos;IP&apos; is required by @Test on method parameterTest but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse--1621303298\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1287)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1004)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1093)
+	at com.avaya.sdmclient.runnerdemo.TESTtestNG.testTestNGProgramatically(TESTtestNG.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
 	at org.testng.TestRunner.privateRun(TestRunner.java:771)
@@ -129,7 +130,7 @@ in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse--1621303298\testng-custo
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>0</td>
-<td>com.avaya.sdmclient.runnerdemo.demoToRun@998c805</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.demoToRun@2b8535cb</td></tr>
 </table><p>
 </body>
 </html>
