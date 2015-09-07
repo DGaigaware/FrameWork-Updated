@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="7" total="7" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="0" started-at="2015-09-03T14:44:18Z" finished-at="2015-09-03T14:44:18Z">
+  <suite name="Default Suite" duration-ms="0" started-at="2015-09-07T04:27:51Z" finished-at="2015-09-07T04:27:51Z">
     <groups>
     </groups>
   </suite> <!-- Default Suite -->
-  <suite name="Suite1" duration-ms="410106" started-at="2015-09-03T14:37:28Z" finished-at="2015-09-03T14:44:18Z">
+  <suite name="Suite1" duration-ms="42873" started-at="2015-09-07T04:27:08Z" finished-at="2015-09-07T04:27:51Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="410106" started-at="2015-09-03T14:37:28Z" finished-at="2015-09-03T14:44:18Z">
-      <class name="com.avaya.sdmclient.runnerdemo.VMOpe">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="setup" is-config="true" duration-ms="20" started-at="2015-09-03T20:07:28Z" finished-at="2015-09-03T20:07:28Z">
+    <test name="test1" duration-ms="42873" started-at="2015-09-07T04:27:08Z" finished-at="2015-09-07T04:27:51Z">
+      <class name="com.avaya.sdmclient.runnerdemo.c1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="setup" is-config="true" duration-ms="21" started-at="2015-09-07T09:57:08Z" finished-at="2015-09-07T09:57:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="AddVMSuite(java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="AddVMSuite" duration-ms="383863" started-at="2015-09-03T20:07:28Z" description="Adding VM to given Location and Host" finished-at="2015-09-03T20:13:52Z">
+        <test-method status="FAIL" signature="AddVMSuite(java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="AddVMSuite" duration-ms="16759" started-at="2015-09-07T09:57:08Z" description="Adding VM to given Location and Host" finished-at="2015-09-07T09:57:24Z">
           <params>
             <param index="0">
               <value>
@@ -40,14 +40,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
 	at org.openqa.selenium.By$ById.findElement(By.java:215)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:809)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:807)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at com.avaya.sdmclient.Settings.fluentWait(Settings.java:422)
-	at com.avaya.sdmclient.Settings.fluentWaitCloseOpen(Settings.java:441)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.AddVMSuite(VMOpe.java:130)
+	at com.avaya.sdmclient.Settings.checkLocationOrHost(Settings.java:125)
+	at com.avaya.sdmclient.runnerdemo.c1.AddVMSuite(c1.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -83,13 +77,13 @@ Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7
 	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
 	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
 	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
 	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
-	... 36 more
+	... 30 more
 Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
@@ -101,14 +95,14 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.Socket.connect(Unknown Source)
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
-	... 51 more
+	... 45 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddVMSuite -->
-        <test-method status="FAIL" signature="EditVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="EditVM" duration-ms="1012" started-at="2015-09-03T20:13:52Z" description="Editing VM to given Location and Host" finished-at="2015-09-03T20:13:53Z">
+        <test-method status="FAIL" signature="EditVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="EditVM" duration-ms="1013" started-at="2015-09-07T09:57:24Z" description="Editing VM to given Location and Host" finished-at="2015-09-07T09:57:25Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -124,7 +118,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
 	at com.avaya.sdmclient.Settings.loginToSite(Settings.java:891)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.EditVM(VMOpe.java:145)
+	at com.avaya.sdmclient.runnerdemo.c1.EditVM(c1.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -185,7 +179,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EditVM -->
-        <test-method status="FAIL" signature="StopVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="StopVM" duration-ms="7003" started-at="2015-09-03T20:13:53Z" description="Stoping VM to given Location and Host" finished-at="2015-09-03T20:14:00Z">
+        <test-method status="FAIL" signature="StopVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="StopVM" duration-ms="7012" started-at="2015-09-07T09:57:25Z" description="Stoping VM to given Location and Host" finished-at="2015-09-07T09:57:32Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -202,7 +196,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StopVM(VMOpe.java:183)
+	at com.avaya.sdmclient.runnerdemo.c1.StopVM(c1.java:183)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -263,7 +257,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopVM -->
-        <test-method status="FAIL" signature="StartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="StartVM" duration-ms="7164" started-at="2015-09-03T20:14:00Z" description="Starting VM to given Location and Host" finished-at="2015-09-03T20:14:07Z">
+        <test-method status="FAIL" signature="StartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="StartVM" duration-ms="7009" started-at="2015-09-07T09:57:32Z" description="Starting VM to given Location and Host" finished-at="2015-09-07T09:57:39Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -280,7 +274,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StartVM(VMOpe.java:211)
+	at com.avaya.sdmclient.runnerdemo.c1.StartVM(c1.java:211)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -341,7 +335,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartVM -->
-        <test-method status="FAIL" signature="RefreshVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="RefreshVM" duration-ms="7024" started-at="2015-09-03T20:14:07Z" description="Refreshing VM to given Location and Host" finished-at="2015-09-03T20:14:14Z">
+        <test-method status="FAIL" signature="RefreshVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="RefreshVM" duration-ms="7012" started-at="2015-09-07T09:57:39Z" description="Refreshing VM to given Location and Host" finished-at="2015-09-07T09:57:46Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -358,7 +352,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RefreshVM(VMOpe.java:237)
+	at com.avaya.sdmclient.runnerdemo.c1.RefreshVM(c1.java:237)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -419,7 +413,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RefreshVM -->
-        <test-method status="FAIL" signature="RestartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="RestartVM" duration-ms="2001" started-at="2015-09-03T20:14:14Z" description="Restarting VM to given Location and Host" finished-at="2015-09-03T20:14:16Z">
+        <test-method status="FAIL" signature="RestartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="RestartVM" duration-ms="2012" started-at="2015-09-07T09:57:46Z" description="Restarting VM to given Location and Host" finished-at="2015-09-07T09:57:48Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -436,7 +430,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RestartVM(VMOpe.java:304)
+	at com.avaya.sdmclient.runnerdemo.c1.RestartVM(c1.java:304)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -497,7 +491,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RestartVM -->
-        <test-method status="FAIL" signature="DeleteVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VMOpe@56515185]" name="DeleteVM" duration-ms="2002" started-at="2015-09-03T20:14:16Z" description="Deleting VM to given Location and Host" finished-at="2015-09-03T20:14:18Z">
+        <test-method status="FAIL" signature="DeleteVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@5bc9b01d]" name="DeleteVM" duration-ms="2004" started-at="2015-09-07T09:57:48Z" description="Deleting VM to given Location and Host" finished-at="2015-09-07T09:57:51Z">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
@@ -514,7 +508,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.DeleteVM(VMOpe.java:329)
+	at com.avaya.sdmclient.runnerdemo.c1.DeleteVM(c1.java:329)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -575,7 +569,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DeleteVM -->
-      </class> <!-- com.avaya.sdmclient.runnerdemo.VMOpe -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.c1 -->
     </test> <!-- test1 -->
   </suite> <!-- Suite1 -->
 </testng-results>

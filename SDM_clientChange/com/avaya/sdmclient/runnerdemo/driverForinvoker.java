@@ -33,9 +33,11 @@ public class driverForinvoker {
 		    				testng.setPreserveOrder(true);
 		    				testng.setVerbose(2);
 		    				XmlSuite suite = new XmlSuite();
-		    				
+		    				//XmlTest test = new XmlTest();
+		    				//test.getXmlClasses();
+		    				//suite.setName("TestSM");
 		    				suite.setSuiteFiles(Arrays.asList("./temp.xml"));
-
+		    				//suite.addTest(test);
 		    				testng.setXmlSuites(Arrays.asList(suite));
 
 		    				testng.run();

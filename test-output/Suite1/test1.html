@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 03 20:07:28 IST 2015</td>
+<td>Started on:</td><td>Mon Sep 07 09:57:08 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>410 seconds (410106 ms)</td>
+<tr><td>Total time:</td><td>42 seconds (42873 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,7 +75,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.AddVMSuite()'><b>AddVMSuite</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Adding VM to given Location and Host<br>Parameters: 148.147.162.221</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.AddVMSuite()'><b>AddVMSuite</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Adding VM to given Location and Host<br>Parameters: 148.147.162.221</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -85,14 +85,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
 	at org.openqa.selenium.By$ById.findElement(By.java:215)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:809)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:807)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at com.avaya.sdmclient.Settings.fluentWait(Settings.java:422)
-	at com.avaya.sdmclient.Settings.fluentWaitCloseOpen(Settings.java:441)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.AddVMSuite(VMOpe.java:130)
+	at com.avaya.sdmclient.Settings.checkLocationOrHost(Settings.java:125)
+	at com.avaya.sdmclient.runnerdemo.c1.AddVMSuite(c1.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -128,13 +122,13 @@ Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7
 	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
 	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
 	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
 	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
-	... 36 more
+	... 30 more
 Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
@@ -146,9 +140,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.Socket.connect(Unknown Source)
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
-	... 51 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1228319013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1228319013'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+	... 45 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace624364096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace624364096'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -157,14 +151,8 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
 	at org.openqa.selenium.By$ById.findElement(By.java:215)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:809)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:807)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at com.avaya.sdmclient.Settings.fluentWait(Settings.java:422)
-	at com.avaya.sdmclient.Settings.fluentWaitCloseOpen(Settings.java:441)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.AddVMSuite(VMOpe.java:130)
+	at com.avaya.sdmclient.Settings.checkLocationOrHost(Settings.java:125)
+	at com.avaya.sdmclient.runnerdemo.c1.AddVMSuite(c1.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -200,13 +188,13 @@ Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7
 	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
 	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
 	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
 	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
-	... 36 more
+	... 30 more
 Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
@@ -218,12 +206,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.Socket.connect(Unknown Source)
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
-	... 51 more
+	... 45 more
 </pre></div></td>
-<td>383</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>16</td>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.DeleteVM()'><b>DeleteVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Deleting VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.DeleteVM()'><b>DeleteVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Deleting VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -232,7 +220,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.DeleteVM(VMOpe.java:329)
+	at com.avaya.sdmclient.runnerdemo.c1.DeleteVM(c1.java:329)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -287,8 +275,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 43 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1424546293", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1424546293'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace934707077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace934707077'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -296,7 +284,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.DeleteVM(VMOpe.java:329)
+	at com.avaya.sdmclient.runnerdemo.c1.DeleteVM(c1.java:329)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -353,9 +341,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 43 more
 </pre></div></td>
 <td>2</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.EditVM()'><b>EditVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Editing VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.EditVM()'><b>EditVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Editing VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -363,7 +351,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
 	at com.avaya.sdmclient.Settings.loginToSite(Settings.java:891)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.EditVM(VMOpe.java:145)
+	at com.avaya.sdmclient.runnerdemo.c1.EditVM(c1.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -418,15 +406,15 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 42 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1237273148", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1237273148'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace394809520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace394809520'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
 	at com.avaya.sdmclient.Settings.loginToSite(Settings.java:891)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.EditVM(VMOpe.java:145)
+	at com.avaya.sdmclient.runnerdemo.c1.EditVM(c1.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -483,9 +471,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 42 more
 </pre></div></td>
 <td>1</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.RefreshVM()'><b>RefreshVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Refreshing VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.RefreshVM()'><b>RefreshVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Refreshing VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -494,7 +482,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RefreshVM(VMOpe.java:237)
+	at com.avaya.sdmclient.runnerdemo.c1.RefreshVM(c1.java:237)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -549,8 +537,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 43 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1019089910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1019089910'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1988737471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1988737471'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -558,7 +546,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RefreshVM(VMOpe.java:237)
+	at com.avaya.sdmclient.runnerdemo.c1.RefreshVM(c1.java:237)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -615,9 +603,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 43 more
 </pre></div></td>
 <td>7</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.RestartVM()'><b>RestartVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Restarting VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.RestartVM()'><b>RestartVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Restarting VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -626,7 +614,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RestartVM(VMOpe.java:304)
+	at com.avaya.sdmclient.runnerdemo.c1.RestartVM(c1.java:304)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -681,8 +669,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 43 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1461187286", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1461187286'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace285130463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace285130463'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -690,7 +678,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.RestartVM(VMOpe.java:304)
+	at com.avaya.sdmclient.runnerdemo.c1.RestartVM(c1.java:304)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -747,9 +735,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 43 more
 </pre></div></td>
 <td>2</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.StartVM()'><b>StartVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Starting VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.StartVM()'><b>StartVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Starting VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -758,7 +746,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StartVM(VMOpe.java:211)
+	at com.avaya.sdmclient.runnerdemo.c1.StartVM(c1.java:211)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -813,8 +801,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 43 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace859313632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace859313632'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace743513566", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace743513566'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -822,7 +810,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StartVM(VMOpe.java:211)
+	at com.avaya.sdmclient.runnerdemo.c1.StartVM(c1.java:211)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -879,9 +867,9 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 43 more
 </pre></div></td>
 <td>7</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.VMOpe.StopVM()'><b>StopVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.VMOpe<br>Test method: Stoping VM to given Location and Host</td>
+<td title='com.avaya.sdmclient.runnerdemo.c1.StopVM()'><b>StopVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.c1<br>Test method: Stoping VM to given Location and Host</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
@@ -890,7 +878,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StopVM(VMOpe.java:183)
+	at com.avaya.sdmclient.runnerdemo.c1.StopVM(c1.java:183)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -945,8 +933,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 43 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace2113592028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2113592028'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre></div><a href='#' onClick='toggleBox("stack-trace589322281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace589322281'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.46.0&apos;, revision: &apos;87c69e2&apos;, time: &apos;2015-06-04 16:16:47&apos;
 System info: host: &apos;HA1101901716&apos;, ip: &apos;148.147.208.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -954,7 +942,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:868)
 	at com.avaya.sdmclient.Settings.goHome(Settings.java:912)
-	at com.avaya.sdmclient.runnerdemo.VMOpe.StopVM(VMOpe.java:183)
+	at com.avaya.sdmclient.runnerdemo.c1.StopVM(c1.java:183)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1011,7 +999,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	... 43 more
 </pre></div></td>
 <td>7</td>
-<td>com.avaya.sdmclient.runnerdemo.VMOpe@56515185</td></tr>
+<td>com.avaya.sdmclient.runnerdemo.c1@5bc9b01d</td></tr>
 </table><p>
 </body>
 </html>

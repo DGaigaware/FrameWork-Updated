@@ -5,18 +5,18 @@
   <test name="test1(failed)">
     <parameter name="IP" value="148.147.162.221"/>
     <classes>
-      <class name="com.avaya.sdmclient.runnerdemo.VMOpe">
+      <class name="com.avaya.sdmclient.runnerdemo.c1">
         <methods>
-          <include name="RefreshVM"/>
-          <include name="StartVM"/>
           <include name="setup"/>
-          <include name="StopVM"/>
-          <include name="AddVMSuite" invocation-numbers="0"/>
-          <include name="RestartVM"/>
+          <include name="StartVM"/>
+          <include name="RefreshVM"/>
           <include name="EditVM"/>
           <include name="DeleteVM"/>
+          <include name="AddVMSuite" invocation-numbers="0"/>
+          <include name="StopVM"/>
+          <include name="RestartVM"/>
         </methods>
-      </class> <!-- com.avaya.sdmclient.runnerdemo.VMOpe -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.c1 -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
