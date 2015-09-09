@@ -486,6 +486,7 @@ public class Settings {
 		types.add("editlocationview");
 		types.add("host_new");
 		types.add("host_edit");
+		types.add("panelConfigParameters");
 		
 		if(input.equals("AddLocation"))
 			{
@@ -506,7 +507,12 @@ public class Settings {
 			{
 				returnStr = types.get(3);
 				refStr = "host_view";
-			}
+			}//
+		else if(input.equals("AddVM"))
+		{
+			returnStr = types.get(4);
+			refStr = "";
+		}
 		ret.add(returnStr);
 		ret.add(refStr);
 		
@@ -706,32 +712,43 @@ public class Settings {
 				//System.out.println(op[i][0]);
 				if(op[i][1]!=null && op[i][1].equals("Ip"))
 				{
-					//System.out.println("Going to IP " + i);
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
+					System.out.println("Going to IP " + i);
 					AutoFillIP(driver, op[i][0],readFromFile(fileName, op[i][0]),fileName);
 				}
 
 				else if(op[i][1]!=null && op[i][1].equals("true"))
 				{
-					//System.out.println("Password " + i);
-					AutoFillPasswd(driver, op[i][0],fileName);
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
+					System.out.println("Password " + i);
+					//AutoFillPasswd(driver, op[i][0],fileName);
+					autoFillPasswdforVM(driver, id, fileName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("boolean"))
 				{
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
 					System.out.println("CheckBox " + i);
-					AutoFillCheckBox(driver, op[i][0]);
+					//AutoFillCheckBox(driver, op[i][0]);
+					autoFillCheckBoxforVM(driver, id);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("ValueMap"))
 				{
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
 					System.out.println("Combo " + i);
-					AutoFillCombo(driver, op[i][0],fileName);
+					//AutoFillCombo(driver, op[i][0],fileName);
+					autoFillComboforVM(driver, id, fileName);
 				}
 				
 				else
 				{
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
 					System.out.println("Default " + i);
-					AutoFill(driver, op[i][0],fileName);
+					//AutoFill(driver, op[i][0],fileName);
+					System.out.println("a");
+					autoFilltextforVM(driver, id, fileName);
+					System.out.println("b");
 				}
 				System.out.println("Loop: \n");
 			}
@@ -774,11 +791,13 @@ public class Settings {
 			}
 		}
 
-		public void AutoFillIP(WebDriver driver,String inputForJS,String IP,String fileName){
+		//public void AutoFillIP(WebDriver driver,String inputForJS,String IP,String fileName){
+		public void AutoFillIP(WebDriver driver,String id,String IP,String fileName){
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
-			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=ipfs"+ inputForJS +"]');return nl");
 			List<String> Addresses = new ArrayList<String>();
+			/*ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=ipfs"+ inputForJS +"]');return nl");
+			
 			for(WebElement s : a)
 			{//System.out.println(s.getText());
 				//System.out.println(s.getTagName());
@@ -787,7 +806,9 @@ public class Settings {
 				returnID = s.getAttribute("id");
 				System.out.println(s.getAttribute("id"));
 
-			}
+			}*/
+			returnID  = "ipfs"+id;
+			//driver.findElement(By.id("ipfs"+id));
 			System.out.println("Final"+returnID);
 
 			//System.out.println("Test");
@@ -808,14 +829,15 @@ public class Settings {
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
 			ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\""+ input +"\"]');return nl");
-			
+			System.out.println(a.size());
+			System.out.println(input);
 			for(WebElement s : a)
 			{
 				//System.out.println(s.getText());
 				//System.out.println(s.getTagName());
 				//System.out.println(s.getClass());
 				//System.out.println(s.getAttribute("role"));
-				//System.out.println("IDs: "+s.getAttribute("id"));
+				System.out.println("IDs: "+s.getAttribute("id"));
 				if(s.getAttribute("id").contains("input"))
 				{
 					returnID = s.getAttribute("id");
@@ -953,5 +975,55 @@ public class Settings {
 		System.out.println("Clicked");
 	}
 	
+	public String findIDandFillValuesForVM(WebDriver driver,String filename,String inputIDfromOVF){
+		List<String> IDs = new ArrayList<>();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String sc = "var nl = document.getElementById(\"panelConfigParameters\").getElementsByTagName(\"input\"); return nl;";
+		//String sc = "var nl = document.getElementById(\""+getViewFrame(driver, input)+"\").querySelectorAll('[id^=\"text\"]'); return nl;";
+		String returnID = "";
+		
+		ArrayList<WebElement> elem = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println("Before");
+		System.out.println(elem.size());
+		for(WebElement e:elem)
+		{
+			IDs.add(e.getAttribute("id"));
+			//System.out.println(e.getAttribute("id")); 
+			//System.out.println(e.getAttribute("role"));
+		}
+		
+		for(String s : IDs){
+			if((inputIDfromOVF+"-inputEl").equalsIgnoreCase(s))
+				returnID = s;
+		}
+		return returnID;
+	}
+	
+	public void autoFilltextforVM(WebDriver driver,String id,String fileName) throws IOException{
+		if(!id.isEmpty()){
+			driver.findElement(By.id(id)).clear();
+			driver.findElement(By.id(id)).sendKeys(readFromFile(fileName, id.replace("-inputEl", "")));;
+		}
+	}
+	
+	public void autoFillIPforVM(WebDriver driver,String id,String fileName){
+		driver.findElement(By.id("ipfs"+id)).click();
+	}
+	
+	public void autoFillPasswdforVM(WebDriver driver,String id,String fileName) throws IOException{
+		driver.findElement(By.id(id)).clear();
+		driver.findElement(By.id(id)).sendKeys(readFromFile(fileName, id.replace("-inputEl", "")));
+		driver.findElement(By.id(("conf"+id))).sendKeys(readFromFile(fileName, id.replace("-inputEl", "")));
+	}
+
+	public void autoFillComboforVM(WebDriver driver,String id,String fileName) throws IOException, InterruptedException{
+		driver.findElement(By.id(id)).click();
+		boundListSelect(driver, readFromFile(fileName, id.replace("-inputEl", "")), selBoundList(driver));
+	}
+
+	public void autoFillCheckBoxforVM(WebDriver driver,String id){
+		driver.findElement(By.id(id)).click();
+	}
 }
 

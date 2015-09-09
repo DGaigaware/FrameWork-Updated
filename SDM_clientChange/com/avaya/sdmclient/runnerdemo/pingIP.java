@@ -16,9 +16,28 @@ import org.testng.annotations.BeforeClass;
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 
+class index{
+	String flagI[] = {"","",""};
+}
+
+
 public class pingIP {
 
 	static Settings obj = new Settings();
+	
+	static String flag[] = {"","",""};
+	
+	public String[][] sel(){
+		String [][]a = new String[3][2];
+		a[0][0] = "BSM-7.0.0.0.700007-e55-01.ova";
+		a[1][0] = "SM-7.0.0.0.700007-e55-01.ova";
+		a[2][0] = "BSM-7.0.0.0.700007-e55-01.ova";
+		a[0][1] = flag[0];
+		a[1][1] = flag[1];
+		a[2][1] = flag[2];
+		
+		return a;
+	}
 	
 	 public static boolean runSystemCommand(String command) throws IOException {
 		 boolean b = false;
@@ -82,10 +101,10 @@ public class pingIP {
 			}
 			
 			for(String s : IPblacklist){
-				System.out.println("BlackListed"+s);
+				//System.out.println("BlackListed"+s);
 			}
 			for(String s : IPwhitelist){
-				System.out.println("WhiteListed"+s);
+				//System.out.println("WhiteListed"+s);
 			}
 			
 			if(IPwhitelist.isEmpty())
@@ -107,27 +126,24 @@ public class pingIP {
 	 
 	 public String chooseOVA(){
 			List<String> list = new ArrayList<>();
-			String [][]a = new String[3][2];
-			a[0][0] = "BSM-7.0.0.0.700007-e55-01.ova";
-			a[1][0] = "SM-7.0.0.0.700007-e55-01.ova";
-			a[2][0] = "BSM-7.0.0.0.700007-e55-01.ova";
-			a[0][1] = "0";
-			a[1][1] = "0";
-			a[2][1] = "0";
+			String input[][] = sel();
+			
 			String returnOVA="";
 			
 			for(int i=0;i<3;i++){
-				if(a[i][1].equals("0"))
+				if(input[i][1].isEmpty())
 					{
-						System.out.println("Choosen "+a[i][0]);
-						a[i][1]="1";
-						returnOVA = a[i][0];
-						return returnOVA;
+						System.out.println("Choosen "+input[i][0]);
+						input[i][1]="1";
+						flag[i] = "1";
+						//flagI[i]="1";
+						returnOVA = input[i][0];
+						break;
 					}
 			}
 			
 			for(int i=0;i<3;i++){
-				System.out.println(a[i][0]);
+				System.out.println(input[i][1]);
 			}
 			return returnOVA;
 		}

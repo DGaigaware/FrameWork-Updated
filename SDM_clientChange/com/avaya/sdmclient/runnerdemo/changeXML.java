@@ -24,6 +24,7 @@ public class changeXML {
 		File file = new File("./temp.xml");
 		List<String> lines = FileUtils.readLines(file);
 		String addIP = "<parameter name=\"IP\" value=\""+IP+"\"/>";
+		String VMname = "<parameter name=\"VMName\" value=\""+testName+"\"/>";
 		String addTestName = "<test name=\""+testName+"\">";
 		
 		for(String s : lines){
@@ -38,6 +39,13 @@ public class changeXML {
 					lines.add(i,addIP);
 					System.out.println(addIP);
 				}
+			else if(lines.get(i).contains("name=\"VMName\""))
+			{
+				System.out.println(lines.get(i));
+				lines.remove(i);
+				lines.add(i,VMname);
+				System.out.println(VMname);
+			}
 			else if (lines.get(i).contains("test name="))
 				{
 					lines.remove(i);
@@ -75,7 +83,9 @@ public class changeXML {
 
 		System.out.println("IP available"+p.findAvailableIP(driver, by));
 		
-		System.out.println(p.chooseOVA());
+		//System.out.println(p.chooseOVA());
+		
+		changeXMl(p.chooseOVA(), p.findAvailableIP(driver, by));
 		
 		//changeXMl(p.chooseOVA(), p.findAvailableIP(driver, by));
 	}

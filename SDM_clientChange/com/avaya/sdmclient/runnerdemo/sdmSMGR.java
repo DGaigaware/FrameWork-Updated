@@ -31,7 +31,7 @@ package com.avaya.sdmclient.runnerdemo;
 		}
 		
 		
-		@Test(description="Adding Location",priority=0)
+		/*@Test(description="Adding Location",priority=0)
 		public void AddLocation() throws IOException, InterruptedException {
 
 			logClass.startTestCase("Add a new Location on SDM");
@@ -112,13 +112,13 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.startTestCase("Adding Host to given Location");
 
-			//obj.goHome(driver);
-			obj.loginToSite(driver);
+			obj.goHome(driver);
+			//obj.loginToSite(driver);
 			
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
 				driver.navigate().refresh();
 				obj.logOut(driver);
-				//AddLocation();
+				AddLocation();
 				System.out.println("Adding Location");
 				logClass.info("Location was not there. Adding it and pausing current thread.");
 				obj.goHome(driver);
@@ -173,7 +173,7 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.findHostInGrid(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("EditHost"))).click();
-			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();*/
+			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 
 			Thread.sleep(250);
 	
@@ -211,7 +211,7 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.confirmDialogBox(driver);
 
 			logClass.endTestCase("Deleted Host");
-		}
+		}*/
 /*
 		@Test(description="Adding Location",priority=6)
 		public void AddLocation() throws IOException, InterruptedException {
@@ -285,7 +285,7 @@ package com.avaya.sdmclient.runnerdemo;
 			logClass.endTestCase("Added Host Succesfully");
 		}
 */
-		/*@Test(description="Adding VM to given Location and Host",priority=8)
+		@Test(description="Adding VM to given Location and Host",priority=8)
 
 		public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
 
@@ -300,7 +300,7 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.loginToSite(driver);
 
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
-				//addHost1();
+				//addHost();
 				System.out.println("Adding Host");
 				obj.goHome(driver);
 				logClass.info("Added Host as Location was not there beforehand.");
@@ -391,8 +391,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.startTestCase("Editing VM to given Location and Host");
 
-			obj.loginToSite(driver);
-			//obj.goHome(driver);
+			//obj.loginToSite(driver);
+			obj.goHome(driver);
 
 			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
@@ -591,7 +591,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			logClass.endTestCase("Deleted VM successfully");
 		}
-*/
+
 	
 
 	
