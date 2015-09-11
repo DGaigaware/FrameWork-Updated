@@ -1,0 +1,16 @@
+SMOVFPath C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf
+VMName221 testSM221
+ip0 148.147.162.221
+hostname testSM221
+domain testsm221.smgrdev.avaya.com
+netmask0 255.255.255.0
+gateway 148.147.162.1
+dns 8.8.8.8
+timezone Asia/Kolkata
+TIMEZONE Asia/Kolkata
+ntpservers abcd
+CUSTLOGIN cust
+CUSTPWD cust01
+smgr_ip 148.147.162.35
+enrollment_pw 123456
+LSPIP 148.147.162.224

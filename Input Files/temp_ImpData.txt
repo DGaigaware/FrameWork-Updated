@@ -1,0 +1,12 @@
+SM 7.0 Profile 5 Max Devices 23,300
+SM configuration that supports up to 23,300 devices. This deployment will need 20 vCPUs and 18GB memory.
+SM 7.0 Profile 1 Max Devices 2,500
+SM configuration that supports up to 2,500 devices. This deployment will need 3 vCPUs and 4GB memory.
+SM 7.0 Profile 2 Max Devices 4,500
+SM configuration that supports up to 4,500 devices. This deployment will need 5 vCPUs and 5GB memory.
+SM 7.0 Profile 3 Max Devices 7,000
+SM configuration that supports up to 7,000 devices. This deployment will need 8 vCPUs and 8GB memory.
+SM 7.0 Profile 4 Max Devices 10,000
+SM configuration that supports up to 10,000 devices. This deployment will need 12 vCPUs and 10GB memory.Test
+SM 7.0 Profile 5 Max Devices 23,300
+SM configuration that supports up to 23,300 devices. This deployment will need 20 vCPUs and 18GB memory.
