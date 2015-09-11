@@ -35,8 +35,8 @@ package com.avaya.sdmclient.runnerdemo;
 		
 		
 		@Test(description="Adding VM to given Location and Host",priority=8)
-		@Parameters("IP")
-		public void AddVMSuite(String IP) throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+		@Parameters({"IP", "VMName"})
+		public void AddVMSuite(String IP,String VMName) throws InterruptedException, IOException, ParserConfigurationException, SAXException {
 
 			boolean _Check;
 
@@ -66,7 +66,8 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VMName"))).clear();
 			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.txt", "VMName"));
-			driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("inputbsm.txt", "VMName225"));
+			driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+VMName.substring(0, 5));
+			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("inputbsm.txt", "VMName225"));
 			logClass.info("Given Name");
 			Thread.sleep(250);
 
@@ -83,7 +84,7 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
-			obj.comboClick(driver, "combobox-1238", "BSM-7.0.0.0.700007-e55-01.ova");
+			obj.comboClick(driver, "combobox-1238", VMName);
 			Thread.sleep(2500);
 			
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();

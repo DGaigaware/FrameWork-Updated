@@ -1,8 +1,12 @@
 package com.avaya.sdmclient.runnerdemo;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -31,7 +35,7 @@ public class sdmSMGRConcurrent {
 		}
 		
 		
-		@Test(description="Adding Location",priority=0)
+	/*	@Test(description="Adding Location",priority=0)
 		public void AddLocation() throws IOException, InterruptedException {
 
 			logClass.startTestCase("Add a new Location on SDM");
@@ -112,13 +116,13 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Adding Host to given Location");
 
-			//obj.goHome(driver);
-			obj.loginToSite(driver);
+			obj.goHome(driver);
+			//obj.loginToSite(driver);
 			
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddLocationName:"))){
 				driver.navigate().refresh();
 				obj.logOut(driver);
-				//AddLocation();
+				AddLocation();
 				System.out.println("Adding Location");
 				logClass.info("Location was not there. Adding it and pausing current thread.");
 				obj.goHome(driver);
@@ -173,7 +177,7 @@ public class sdmSMGRConcurrent {
 			obj.findHostInGrid(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("EditHost"))).click();
-			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();*/
+			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 
 			Thread.sleep(250);
 	
@@ -212,7 +216,7 @@ public class sdmSMGRConcurrent {
 
 			logClass.endTestCase("Deleted Host");
 		}
-/*
+
 		@Test(description="Adding Location",priority=6)
 		public void AddLocation() throws IOException, InterruptedException {
 
@@ -284,8 +288,8 @@ public class sdmSMGRConcurrent {
 
 			logClass.endTestCase("Added Host Succesfully");
 		}
-*/
-		/*@Test(description="Adding VM to given Location and Host",priority=8)
+
+		@Test(description="Adding VM to given Location and Host",priority=8)
 
 		public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
 
@@ -296,11 +300,11 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Adding VM to given Location and Host");
 
-			//obj.goHome(driver);
-			obj.loginToSite(driver);
+			obj.goHome(driver);
+			//obj.loginToSite(driver);
 
 			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
-				//addHost1();
+				addHost();
 				System.out.println("Adding Host");
 				obj.goHome(driver);
 				logClass.info("Added Host as Location was not there beforehand.");
@@ -358,6 +362,31 @@ public class sdmSMGRConcurrent {
 			obj.findButton(driver);
 //			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
 			logClass.info("Accepted EULA");
+			
+			//Adding Code for concurrency
+			final List<String> ele = new ArrayList<>();
+			ele.add("SM-7.0.0.0.700007-e55-01.ova");
+			ele.add("BSM-7.0.0.0.700007-e55-01.ova");
+			ele.add("CMM-7.0.0.0.700007-e55-01.ova");
+			final WebDriver driver1 = new FirefoxDriver(obj.selectProfile("Selenium"));
+			class MyRunnable implements Runnable {
+				 public void run() {
+					 settingsForConcThreads ob = new settingsForConcThreads();
+					 try {
+						ob.runThread(driver1, ele);
+					} catch (ParserConfigurationException | SAXException | IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 }
+			}
+			
+			MyRunnable r = new MyRunnable();
+			Thread t = new Thread(r);
+			t.start();
 
 			Thread.sleep(9000);
 			obj.findLocationOrHost(driver, "testHost");
@@ -369,6 +398,7 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(4500);
 
 			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
+			//obj.chooseLink(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 			logClass.info("Checking Status Details");
 
 			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
@@ -391,8 +421,8 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Editing VM to given Location and Host");
 
-			obj.loginToSite(driver);
-			//obj.goHome(driver);
+			//obj.loginToSite(driver);
+			obj.goHome(driver);
 
 			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
@@ -566,7 +596,7 @@ public class sdmSMGRConcurrent {
 
 			logClass.endTestCase("Restarted VM successfully");
 			Thread.sleep(100000);
-		}
+		}*/
 
 
 		@Test(description="Deleting VM to given Location and Host",priority=14)
@@ -575,9 +605,11 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Delete VM to given Location and Host");
 
-			obj.goHome(driver);
+			//obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName"));
+			obj.loginToSite(driver);
+			
+			/*obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -589,9 +621,32 @@ public class sdmSMGRConcurrent {
 
 			obj.confirmDialogBox(driver);
 
-			logClass.endTestCase("Deleted VM successfully");
-		}
-*/
-	
+			logClass.endTestCase("Deleted VM successfully");*/
+			
+			driver.quit();
+			final List<String> ele = new ArrayList<>();
+			ele.add("SM-7.0.0.0.700007-e55-01.ova");
+			ele.add("BSM-7.0.0.0.700007-e55-01.ova");
+			ele.add("CMM-7.0.0.0.700007-e55-01.ova");
+			final WebDriver driver2 = new FirefoxDriver(obj.selectProfile("Selenium"));
+			class MyRunnable implements Runnable {
+				 public void run() {
+					 settingsForConcThreads ob = new settingsForConcThreads();
+					 try {
+						ob.runThread(driver2, ele);
+					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 }
+			}
+			
+			MyRunnable r = new MyRunnable();
+			Thread t = new Thread(r);
+			t.start();
+			t.join();
+		
+			System.out.println("Completed All threads");
+			}
 
 }

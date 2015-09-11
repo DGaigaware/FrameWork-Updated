@@ -69,7 +69,7 @@ public class Settings {
 	    File imageFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 		GregorianCalendar gcalendar = new GregorianCalendar();
-		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+".png";
+		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+gcalendar.getTimeInMillis()+".png";
 		File failureImageFile=new File(failureImageFileName);
 		FileUtils.moveFile(imageFile, failureImageFile);
 		logClass.error("Something went wrong :(");
@@ -84,7 +84,8 @@ public class Settings {
 	}
 
 	public String readFromFile(String fileName,String find) throws IOException{
-		File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+fileName);
+		//File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+fileName);
+		File file = new File(System.getProperty("user.dir")+"\\Input Files\\"+fileName);
 		List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		String output = null;
@@ -327,10 +328,11 @@ public class Settings {
 					logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					logClass.error("Error : Check the Log and Screenshot for the same.");
 					System.out.println(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-
 					TakeScreenShot(driver);
+					logClass.info("Screenshot taken");
 
 					driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
+					System.out.println("Confirmed");
 				}
 			}
 			catch(Exception ex){
@@ -411,7 +413,20 @@ public class Settings {
 		driver.findElement(By.id(StartAddress+"-inputEl")).click();
 		driver.findElement(By.id(StartAddress+"-inputEl")).sendKeys(input);
 		Thread.sleep(2000);
-		boundListSelect(driver, input, selBoundList(driver));
+		
+		setup();
+		WebElement element = driver.findElement(By.id((selBoundList(driver))));
+		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
+		for (WebElement e : tmp1 )
+		{
+			//System.out.println(e.getText()+ "\n Test \n");
+			if(e.getText().equals(input))
+			{
+				//System.out.println("\nSelected : \n"+e.getText());
+				e.click();
+			}
+		}
+		//boundListSelect(driver, input, selBoundList(driver));
 	}
 
 	@SuppressWarnings("deprecation")
@@ -433,12 +448,29 @@ public class Settings {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Status Details")));
 		Thread.sleep(1000);
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
+		
+		//chooseLink(driver, host);
 		logClass.info("CO "+"Checking Status Details  ");
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 		return fluentWait(locatorTo, driver, time, Test);
+	}
+	
+	public void chooseLink(WebDriver driver,String VMName) throws IOException, InterruptedException{
+		setup();
+		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
+		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
+		//System.out.println(cells.size()+"\n\n");
+
+		for(WebElement e : cells)
+		{	System.out.println(e.getText());
+			if(e.getText().contains(VMName))
+				e.findElement(By.linkText("Status Details")).click();
+			System.out.println("After");
+		}
+		//findVMForHost(driver, host);
 	}
 
 	public void StatusCheck(WebDriver driver,String toBeChecked,int time) throws IOException, InterruptedException{
@@ -449,18 +481,18 @@ public class Settings {
 		System.out.println(fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, time, toBeChecked));
 
 		if(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText().contains(toBeChecked))
-				{
-			closeWindow(driver);
-			System.out.println("Completed Successfully");
-				}
+			{
+				closeWindow(driver);
+				System.out.println("Completed Successfully");
+			}
 
 		else if(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText().contains("failed"))
-				{
-			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
-			logClass.error(driver.findElement(By.id(locator.getProperty("vmDeployStatus "))).getText());
-			TakeScreenShot(driver);
-			closeWindow(driver);
-				}
+			{
+				System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
+				logClass.error(driver.findElement(By.id(locator.getProperty("vmDeployStatus "))).getText());
+				TakeScreenShot(driver);
+				closeWindow(driver);
+			}
 
 	}
 
@@ -912,7 +944,7 @@ public class Settings {
 	public void loginToSite(WebDriver driver){
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-		driver.get("https://sit4vm1.smgrdev.avaya.com");
+		driver.get("https://pdev55vm2.smgrdev.avaya.com");
 		
 		driver.findElement(By.id("IDToken1")).sendKeys("admin");
 	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
