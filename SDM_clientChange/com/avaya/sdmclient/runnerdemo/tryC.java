@@ -16,12 +16,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 
 
@@ -68,6 +70,19 @@ System.out.println(nl.item(i).getAttributes());*/
 				System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 			}
 		}
+		
+		for (int i = 0; i < nl.getLength()-1; i++)
+		{
+			System.out.println();
+
+			for(int j=0;j<_nlmap.get(i).getLength();j++)
+			{
+				Node attr = _nlmap.get(i).item(j);
+				//System.out.println(_nlmap.get(i).toString());
+				if(attr.getNodeName().equals("ovf:key"))
+				System.out.println(attr.getNodeValue() );
+			}
+		}		
 		for (int i = 0; i < nl.getLength()-1; i++)
 		{
 			System.out.println();
@@ -427,15 +442,20 @@ System.out.println(nl.item(i).getAttributes());*/
 
 
 	@SuppressWarnings("unused")
-	public static void main() throws Exception {
-
+	public static void main(String args[]) throws Exception {
+		//WebDriver driver = new FirefoxDriver();
+		//Settings ob = new Settings();
 		String s1 = "<Property ovf:value=\"\" ovf:required=\"true\"";
 		String s = "<Property ovf:value=\"\" ovf:type=\"string\" ovf:required=\"true\" ovf:qualifiers=\"MinLen(1),MaxLen(255)\" ovf:userConfigurable=\"true\" ovf:key=\"hostname\"><Label>Short Hostname:</Label><Description>Short hostname for Session Manager</Description></Property>";
 		
 		String _fpSMGR = "C:\\Program Files\\Avaya\\SDMClient\\SDM_API\\SMGR-7.0.0.0.16266-e55-43.ovf";
-		
+		String _cmm = "C:\\Users\\bshingala\\Desktop\\CMM_OVF10.ovf";
+		String _cmd = "C:\\Users\\bshingala\\Desktop\\CM-Duplex_OVF10.ovf";
+		String _cms = "C:\\Users\\bshingala\\Desktop\\CM-Simplex_OVF10.ovf";
+		String _US = "C:\\Users\\bshingala\\Desktop\\US-7.0.0.0.0.11-e55-01_OVF10.ovf";
 		String _fp = "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf";
-		FillValues("Property", _fp);
+		FillValues("Property", _US);
+		//ob.FillValues(" "," ", driver);
 		System.out.println("Test");
 	}
 

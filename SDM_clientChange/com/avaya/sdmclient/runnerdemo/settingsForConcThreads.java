@@ -30,9 +30,9 @@ import com.avaya.sdmclient.logClass;
 
 public class settingsForConcThreads {
 	
-	public String changeXMl(String testName,String IP) throws ParserConfigurationException, SAXException, IOException{
-		File file = new File("./temp.xml");
-		File file1 = new File("./temp"+testName.substring(0, testName.indexOf("-"))+".xml");
+	public String createTempXMl(String testName,String IP) throws ParserConfigurationException, SAXException, IOException{
+		File file = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp.xml");
+		File file1 = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp"+testName.substring(0, testName.indexOf("-"))+".xml");
 		List<String> lines = FileUtils.readLines(file);
 		String addIP = "<parameter name=\"IP\" value=\""+IP+"\"/>";
 		String VMname = "<parameter name=\"VMName\" value=\""+testName+"\"/>";
@@ -88,7 +88,7 @@ public class settingsForConcThreads {
 		List<String> IPblacklist = new ArrayList<>();
 		List<String> IPwhitelist = new ArrayList<>();
 		String returnIP="";
-		File file = new File(System.getProperty("user.dir")+"\\Input Files\\"+"inputip.txt");
+		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+"inputip.txt");
 		List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		for(String s : lines)
@@ -172,7 +172,7 @@ public class settingsForConcThreads {
 	public static String match(List<String> input,String fromFile){
 			String returnStr = "";
 			for(String s : input){
-				if(s.substring(0, s.indexOf("-")).equalsIgnoreCase(fromFile))
+				if(s.substring(0, fromFile.length()).equalsIgnoreCase(fromFile))
 					returnStr = s;
 			}
 			return returnStr;
@@ -181,18 +181,17 @@ public class settingsForConcThreads {
 	 public String chooseNextOVA(List<String> inputFromBoundlist) throws IOException{
 		 	//Settings obj = new Settings();
 			String testOVA = "";
-			List<String> ele = new ArrayList<>();
+			/*List<String> ele = new ArrayList<>();
 			ele.add("SM-7.0.0.0.700007-e55-01.ova");
 			ele.add("BSM-7.0.0.0.700007-e55-01.ova");
-			ele.add("CMM-7.0.0.0.700007-e55-01.ova");
+			ele.add("CMM-7.0.0.0.700007-e55-01.ova");*/
 			
-			File file = new File(System.getProperty("user.dir")+"\\Input Files\\"+"inputelem.txt");
-			File fileTemp = new File(System.getProperty("user.dir")+"\\Input Files\\"+"inputtemp.txt");
+			File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+"inputelem.txt");
+			File fileTemp = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+"inputtemp.txt");
 			List<String> lines = FileUtils.readLines(file);
 			Scanner sc = new Scanner(fileTemp);
 			int temp = Integer.parseInt(sc.next());
 			System.out.println(temp);
-			logClass.info("InnerThread: Choosen OVA");
 			
 			String output = lines.get(temp);
 			PrintWriter pr = new PrintWriter(fileTemp);
@@ -200,26 +199,34 @@ public class settingsForConcThreads {
 			pr.close();
 			logClass.info("InnerThread: Incremented Count in File");
 			
-			testOVA = match(ele, output);
+			testOVA = match(inputFromBoundlist, output);
 			System.out.println(testOVA);
+			logClass.info("InnerThread: Choosen OVA "+testOVA);
 			sc.close();
 			
 			return testOVA;
 	 }
 	 
-	 public void runThread(WebDriver driver,List<String> inpFromBL) throws ParserConfigurationException, SAXException, IOException, InterruptedException{
+	 public List<String> readOVAs() throws IOException{
+		 File f = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\ovanames.txt");
+		// File f = new File("C:\\Users\\bshingala\\Desktop\\FrameWork Updated-17082015\\Third Party\\Input Files\\ovanames.txt");
+		 List<String> lines = FileUtils.readLines(f);
+		 return lines;
+	 }
+	 
+	 public void runThread(WebDriver driver) throws ParserConfigurationException, SAXException, IOException, InterruptedException{
 		 Settings obj = new Settings();
 		 Properties locator=new Properties();
 		 locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 		 By by = By.id(locator.getProperty("VMGrid"));
-		 String fName = changeXMl(chooseNextOVA(inpFromBL), findAvailableIP(driver, by));
+		 String fName = createTempXMl(chooseNextOVA(readOVAs()), findAvailableIP(driver, by));
 		 
 		 driver.quit();
 		 logClass.info("InnerThread: Closing current instance of Browser and starting execution of test with changed XML");
 		 try {
 			 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 			 	GregorianCalendar gcalendar = new GregorianCalendar();
-			 	String opDirectory = System.getProperty("user.dir")+"\\testruns_programmatically\\"+fName.replace("temp", "").replace(".xml", "")+"_"+dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"\\";
+			 	String opDirectory = System.getProperty("user.dir")+"\\testruns_programmatically\\"+dateFormat.format(new java.util.Date())+File.separator +fName.replace("temp", "").replace(".xml", "")+"_"+gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"\\";
  				
 			 	System.out.println("in try block\n\n");
  				TestNG testng;
@@ -229,7 +236,7 @@ public class settingsForConcThreads {
  				testng.setVerbose(2);
  				
  				XmlSuite suite = new XmlSuite();
- 				suite.setSuiteFiles(Arrays.asList(fName));
+ 				suite.setSuiteFiles(Arrays.asList(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+fName));
  				testng.setXmlSuites(Arrays.asList(suite));
  				
  				System.out.println("Before "+testng.getOutputDirectory());

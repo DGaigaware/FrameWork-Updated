@@ -6,6 +6,7 @@
       <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
         <methods>
           <include name="DeleteVM"/>
+          <include name="AddVMSuite"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->

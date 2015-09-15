@@ -38,6 +38,8 @@ package com.avaya.sdmclient.runnerdemo;
 		@Parameters({"IP", "VMName"})
 		public void AddVMSuite(String IP,String VMName) throws InterruptedException, IOException, ParserConfigurationException, SAXException {
 
+			String shortVMName = VMName.substring(0, VMName.indexOf("-")); 
+			
 			boolean _Check;
 
 			System.out.println(IP);
@@ -66,7 +68,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VMName"))).clear();
 			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.txt", "VMName"));
-			driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+VMName.substring(0, 5));
+			driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
 			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("inputbsm.txt", "VMName225"));
 			logClass.info("Given Name");
 			Thread.sleep(250);
@@ -87,9 +89,9 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.comboClick(driver, "combobox-1238", VMName);
 			Thread.sleep(2500);
 			
-			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
+			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
-			obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
+			obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));*/
 
 			_Check = obj.checkError(driver);
 			obj.errorBox(driver,obj.checkError(driver));
@@ -101,8 +103,10 @@ package com.avaya.sdmclient.runnerdemo;
 
 			//removed
 
-			obj.FillValues("inputbsm.txt", obj.readFromFile("inputbsm.txt", "BSMOVFPath"), driver);
-
+			//obj.FillValues("inputbsm.txt", obj.readFromFile("inputbsm.txt", "BSMOVFPath"), driver);
+			//obj.FillValues("inputcmsimplex.txt", obj.readFromFile("inputcmsimplex.txt","Path"), driver);
+			obj.FillValues("inputsm.txt", System.getProperty("user.dir")+"\\Third Party\\OVFs\\"+obj.matchFileOVF(shortVMName), driver,IP,VMName);
+			
 			obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
 
 			driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
@@ -116,7 +120,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, "testBSM225");
+			obj.findVMForHost(driver, "test"+shortVMName);
 			
 			Thread.sleep(4500);
 
@@ -138,19 +142,21 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Editing VM to given Location and Host",priority=9)
+		@Parameters({"IP", "VMName"})
+		public void EditVM(String IP,String VMName) throws InterruptedException, IOException{
 
-		public void EditVM() throws InterruptedException, IOException{
-
+			String shortVMName = VMName.substring(0, VMName.indexOf("-")); 
+			
 			logClass.startTestCase("Editing VM to given Location and Host");
 
-			obj.loginToSite(driver);
-			//obj.goHome(driver);
+			//obj.loginToSite(driver);
+			obj.goHome(driver);
 
 			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver, "test"+shortVMName);
 			
 			driver.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 			logClass.info("Clicked on - Edit VM");
@@ -161,10 +167,10 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
 			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(obj.readFromFile("input.txt", "IPI"));
+			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
 
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(obj.readFromFile("input.txt", "NewVMName"));
+			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys("test"+shortVMName);
 
 			obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
 			driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
@@ -175,9 +181,9 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Stoping VM to given Location and Host",priority=10)
-
-		public void StopVM() throws InterruptedException, IOException{
-
+		@Parameters({"IP", "VMName"})
+		public void StopVM(String IP,String VMName) throws InterruptedException, IOException{
+			String shortVMName = VMName.substring(0, VMName.indexOf("-"));
 			Thread.sleep(5000);
 			logClass.startTestCase("Stop VM to given Location and Host");
 
@@ -187,7 +193,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver, "test"+shortVMName);
 			
 			Thread.sleep(1500);
 
@@ -203,9 +209,9 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Starting VM to given Location and Host",priority=11)
-
-		public void StartVM() throws InterruptedException, IOException{
-
+		@Parameters({"IP", "VMName"})
+		public void StartVM(String IP,String VMName) throws InterruptedException, IOException{
+			String shortVMName = VMName.substring(0, VMName.indexOf("-"));
 			Thread.sleep(5000);
 			logClass.startTestCase("Start VM to given Location and Host");
 
@@ -215,7 +221,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
 
@@ -229,9 +235,9 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Refreshing VM to given Location and Host",priority=12)
-
-		public void RefreshVM() throws InterruptedException, IOException{
-
+		@Parameters({"IP", "VMName"})
+		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException{
+			String shortVMName = VMName.substring(0, VMName.indexOf("-"));
 			Thread.sleep(5000);
 			logClass.startTestCase("Refresh VM to given Location and Host");
 
@@ -241,7 +247,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver,"test"+shortVMName);
 
 			driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
 			Thread.sleep(500);
@@ -297,9 +303,9 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Restarting VM to given Location and Host",priority=13)
-
-		public void RestartVM() throws IOException, InterruptedException{
-
+		@Parameters({"IP", "VMName"})
+		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException{
+			String shortVMName = VMName.substring(0, VMName.indexOf("-"));
 			logClass.startTestCase("Restart VM to given Location and Host");
 
 			obj.goHome(driver);
@@ -308,7 +314,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
 
@@ -322,9 +328,9 @@ package com.avaya.sdmclient.runnerdemo;
 
 
 		@Test(description="Deleting VM to given Location and Host",priority=14)
-
-		public void DeleteVM() throws IOException, InterruptedException{
-
+		@Parameters({"IP", "VMName"})
+		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException{
+			String shortVMName = VMName.substring(0, VMName.indexOf("-"));
 			logClass.startTestCase("Delete VM to given Location and Host");
 
 			obj.goHome(driver);
@@ -333,7 +339,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
-			obj.findVMForHost(driver, obj.readFromFile("input.txt", "VMName221"));
+			obj.findVMForHost(driver, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
 

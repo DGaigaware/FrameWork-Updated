@@ -11570,3 +11570,1066 @@
 2015-09-11 21:25:43,925 INFO  [Logger]                              Delete VM to given Location and Host                             
 2015-09-11 21:25:46,238 INFO  [Logger] InnerThread: Test Started 
 2015-09-11 21:25:46,238 INFO  [Logger] Thread-3 22 Start 
+2015-09-13 13:40:21,569 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:40:21,628 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 13:40:25,465 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:40:30,373 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:43:10,008 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:43:10,009 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 13:43:13,650 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:43:18,532 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:43:38,719 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 13:44:20,952 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:44:20,953 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 13:44:25,826 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:44:30,736 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:44:49,656 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 13:44:49,658 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-13 13:44:49,660 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:44:49,660 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-13 13:44:53,555 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:44:58,559 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:45:04,084 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-13 13:45:04,487 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-09-13 13:47:40,529 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:47:40,530 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 13:47:44,220 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:47:49,112 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:48:07,335 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 13:48:07,336 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-13 13:48:07,338 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 13:48:07,338 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-13 13:48:10,837 INFO  [Logger] Logged in Successfully 
+2015-09-13 13:48:15,743 INFO  [Logger] Clicked on VM management 
+2015-09-13 13:48:20,793 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-13 13:48:21,205 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-09-13 13:48:21,208 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-13 13:48:22,763 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-13 13:48:22,821 INFO  [Logger] InnerThread: Test Started 
+2015-09-13 13:48:22,821 INFO  [Logger] Thread-3 22 Start 
+2015-09-13 14:08:09,155 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:08:09,155 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 14:08:12,675 INFO  [Logger] Logged in Successfully 
+2015-09-13 14:08:18,377 INFO  [Logger] Clicked on VM management 
+2015-09-13 14:08:37,822 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 14:08:37,824 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-13 14:08:37,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:08:37,826 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-13 14:08:41,405 INFO  [Logger] Logged in Successfully 
+2015-09-13 14:08:46,306 INFO  [Logger] Clicked on VM management 
+2015-09-13 14:08:51,353 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-13 14:08:51,782 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-09-13 14:08:51,796 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-13 14:08:53,964 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-13 14:09:09,261 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:09:09,262 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-13 14:09:12,812 INFO  [Logger] Logged in Successfully 
+2015-09-13 14:09:17,707 INFO  [Logger] Clicked on VM management 
+2015-09-13 14:09:23,721 INFO  [Logger] Clicked on - Add new VM 
+2015-09-13 14:09:24,662 INFO  [Logger] Given Name 
+2015-09-13 14:10:16,949 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:10:16,949 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-13 14:10:27,677 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:10:27,677 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-13 14:10:35,326 INFO  [Logger] Logged in Successfully 
+2015-09-13 14:10:40,278 INFO  [Logger] Clicked on VM management 
+2015-09-13 14:10:54,118 ERROR [Logger] Something went wrong :( 
+2015-09-13 14:10:54,118 INFO  [Logger] Check Screenshot for the same 
+2015-09-13 14:11:03,253 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-13 14:12:08,258 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:12:08,258 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-13 14:12:14,419 INFO  [Logger] Logged in Successfully 
+2015-09-13 14:12:19,320 INFO  [Logger] Clicked on VM management 
+2015-09-13 14:12:30,609 ERROR [Logger] Something went wrong :( 
+2015-09-13 14:12:30,609 INFO  [Logger] Check Screenshot for the same 
+2015-09-13 14:12:39,734 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-13 14:13:44,739 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:13:44,739 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-13 14:13:46,741 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:13:46,742 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-13 14:13:48,747 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 14:13:48,747 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 14:13:51,063 INFO  [Logger] InnerThread: Test Started 
+2015-09-13 14:13:51,064 INFO  [Logger] Thread-3 22 Start 
+2015-09-13 16:11:19,944 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:11:19,952 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-13 16:11:23,802 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:11:28,679 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:11:35,553 INFO  [Logger] Clicked on - Edit VM 
+2015-09-13 16:11:45,930 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:11:45,930 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-13 16:11:52,473 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:11:57,481 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:12:09,438 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:12:09,438 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-13 16:12:16,445 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:12:16,445 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-13 16:12:18,459 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:12:18,460 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-13 16:12:20,476 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:12:20,476 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 16:13:31,312 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:13:31,313 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 16:13:36,055 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:13:41,316 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:14:03,929 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 16:15:25,259 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:15:25,260 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-13 16:15:28,901 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:15:33,792 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:15:54,649 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-13 16:15:54,650 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-13 16:15:54,652 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:15:54,652 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-13 16:15:58,189 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:16:03,096 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:16:08,180 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-13 16:16:08,586 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-09-13 16:16:08,590 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-13 16:16:10,347 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-13 16:16:22,129 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:16:22,129 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-13 16:16:25,893 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:16:30,776 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:16:36,762 INFO  [Logger] Clicked on - Add new VM 
+2015-09-13 16:16:37,696 INFO  [Logger] Given Name 
+2015-09-13 16:17:14,263 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:17:14,264 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-13 16:17:25,297 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-13 16:17:25,297 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-13 16:17:31,620 INFO  [Logger] Logged in Successfully 
+2015-09-13 16:17:36,611 INFO  [Logger] Clicked on VM management 
+2015-09-13 16:17:49,990 ERROR [Logger] Something went wrong :( 
+2015-09-13 16:17:49,990 INFO  [Logger] Check Screenshot for the same 
+2015-09-13 16:17:59,181 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 10:44:37,694 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 10:44:37,776 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 10:45:06,654 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 10:45:06,655 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 10:45:11,011 INFO  [Logger] Logged in Successfully 
+2015-09-14 10:45:15,877 INFO  [Logger] Clicked on VM management 
+2015-09-14 10:45:22,178 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 10:45:23,147 INFO  [Logger] Given Name 
+2015-09-14 10:47:15,727 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 10:47:15,727 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 10:47:19,709 INFO  [Logger] Logged in Successfully 
+2015-09-14 10:47:24,596 INFO  [Logger] Clicked on VM management 
+2015-09-14 10:47:30,921 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 10:47:31,882 INFO  [Logger] Given Name 
+2015-09-14 10:51:09,276 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 10:51:09,277 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 10:51:12,978 INFO  [Logger] Logged in Successfully 
+2015-09-14 10:51:17,881 INFO  [Logger] Clicked on VM management 
+2015-09-14 10:51:24,549 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 10:51:25,486 INFO  [Logger] Given Name 
+2015-09-14 10:53:55,491 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 10:53:55,492 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 10:54:00,055 INFO  [Logger] Logged in Successfully 
+2015-09-14 10:54:04,936 INFO  [Logger] Clicked on VM management 
+2015-09-14 10:54:11,500 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 10:54:12,438 INFO  [Logger] Given Name 
+2015-09-14 10:54:55,899 INFO  [Logger] Selecting NetWorks 
+2015-09-14 11:02:38,734 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:02:38,734 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:02:42,865 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:02:47,755 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:02:53,997 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:02:55,019 INFO  [Logger] Given Name 
+2015-09-14 11:03:38,701 INFO  [Logger] Selecting NetWorks 
+2015-09-14 11:05:25,998 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:05:25,999 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:05:29,902 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:05:34,784 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:05:40,969 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:05:41,952 INFO  [Logger] Given Name 
+2015-09-14 11:06:25,413 INFO  [Logger] Selecting NetWorks 
+2015-09-14 11:08:15,028 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:08:15,029 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:08:18,671 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:08:23,560 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:08:29,567 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:08:30,587 INFO  [Logger] Given Name 
+2015-09-14 11:09:14,685 INFO  [Logger] Selecting NetWorks 
+2015-09-14 11:18:01,989 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:18:01,990 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:18:05,657 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:18:10,543 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:18:16,904 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:18:17,915 INFO  [Logger] Given Name 
+2015-09-14 11:19:02,306 INFO  [Logger] Selecting NetWorks 
+2015-09-14 11:22:03,134 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:22:03,135 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:22:07,234 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:22:12,145 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:22:18,113 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:22:19,108 INFO  [Logger] Given Name 
+2015-09-14 11:27:06,145 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:27:06,145 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:27:10,225 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:27:15,133 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:27:21,419 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:27:22,407 INFO  [Logger] Given Name 
+2015-09-14 11:29:18,839 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:29:18,840 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:29:23,184 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:29:28,075 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:29:34,145 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:29:35,367 INFO  [Logger] Given Name 
+2015-09-14 11:32:17,148 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 11:32:17,149 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 11:32:21,051 INFO  [Logger] Logged in Successfully 
+2015-09-14 11:32:25,943 INFO  [Logger] Clicked on VM management 
+2015-09-14 11:32:31,977 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 11:32:32,930 INFO  [Logger] Given Name 
+2015-09-14 11:33:13,069 INFO  [Logger] Selecting NetWorks 
+2015-09-14 19:42:47,748 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:42:47,839 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-14 19:42:52,491 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:42:57,381 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:43:01,321 INFO  [Logger] Adding new Location 
+2015-09-14 19:43:06,563 INFO  [Logger] Saved New Location 
+2015-09-14 19:43:07,121 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-14 19:43:07,137 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:43:07,137 INFO  [Logger]                              Edit Location on SDM                             
+2015-09-14 19:43:13,212 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:43:18,080 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:43:27,983 INFO  [Logger] Saved Location 
+2015-09-14 19:43:27,983 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-09-14 19:43:27,985 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:43:27,985 INFO  [Logger]                              Delete Location on SDM                             
+2015-09-14 19:43:34,212 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:43:39,079 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:43:44,271 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-09-14 19:43:44,443 INFO  [Logger] Confirmation:  
+2015-09-14 19:43:44,927 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-09-14 19:43:44,928 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:43:44,928 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-14 19:43:51,090 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:43:55,985 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:44:02,004 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:44:02,004 INFO  [Logger]                              Add a new Location on SDM                             
+2015-09-14 19:44:05,061 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:44:09,977 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:44:14,882 INFO  [Logger] Adding new Location 
+2015-09-14 19:44:19,020 INFO  [Logger] Saved New Location 
+2015-09-14 19:44:24,249 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-09-14 19:44:24,249 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-09-14 19:44:30,433 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:44:35,801 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:44:35,801 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-09-14 19:44:41,187 INFO  [Logger] In 'Host' Tab 
+2015-09-14 19:44:41,492 INFO  [Logger] Adding new Host 
+2015-09-14 19:44:49,034 ERROR [Logger] Something went wrong :( 
+2015-09-14 19:44:49,034 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 19:45:05,842 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-14 19:45:06,227 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-14 19:45:06,653 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-09-14 19:45:06,656 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:45:06,656 INFO  [Logger]                              Editing Host to given Location                             
+2015-09-14 19:45:12,926 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:45:17,764 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:45:23,043 INFO  [Logger] In 'Host' Tab 
+2015-09-14 19:45:34,369 INFO  [Logger] *************************End of test caseEdited Host Successfully******************************
+
+ 
+2015-09-14 19:45:34,370 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:45:34,370 INFO  [Logger]                              Deleting Host to given Location                             
+2015-09-14 19:45:40,515 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:45:45,378 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:45:51,564 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-09-14 19:45:51,706 INFO  [Logger] Confirmation:  
+2015-09-14 19:45:52,831 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-09-14 19:45:52,848 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:45:52,848 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 19:45:59,256 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:46:04,197 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:46:07,949 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:46:07,949 INFO  [Logger]                              Adding Host to given Location                             
+2015-09-14 19:46:14,296 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:46:19,239 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:46:23,949 INFO  [Logger] In 'Host' Tab 
+2015-09-14 19:46:24,371 INFO  [Logger] Adding new Host 
+2015-09-14 19:46:31,969 ERROR [Logger] Something went wrong :( 
+2015-09-14 19:46:31,969 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 19:46:48,970 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Discovering VMs: Add VM CM-128_CMM in local inventory :;Discovering VMs: Add VM CM-128_CMM in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-14 19:46:49,601 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Discovering VMs: Add VM CM-128_CMM in local inventory :;Discovering VMs: Add VM CM-128_CMM in Inventory :;Complete :;Host Create/Update Completed 
+2015-09-14 19:46:50,128 INFO  [Logger] *************************End of test caseAdded Host Succesfully******************************
+
+ 
+2015-09-14 19:46:56,442 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:47:01,305 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:47:01,305 INFO  [Logger] Added Host as Location was not there beforehand. 
+2015-09-14 19:47:07,186 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 19:47:08,124 INFO  [Logger] Given Name 
+2015-09-14 19:47:56,497 INFO  [Logger] Selecting NetWorks 
+2015-09-14 19:47:58,917 INFO  [Logger] Accepted EULA 
+2015-09-14 19:48:13,447 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-14 19:48:13,449 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-14 19:48:13,451 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:48:13,451 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-14 19:48:17,230 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:48:22,122 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:48:28,276 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-14 19:48:28,739 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.223 
+2015-09-14 19:48:28,775 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-14 19:48:30,602 INFO  [Logger] Checking Status Details 
+2015-09-14 19:48:34,063 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-14 19:48:52,328 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:48:52,328 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 19:48:56,246 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:49:02,016 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:49:09,186 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 19:49:10,147 INFO  [Logger] Given Name 
+2015-09-14 19:49:18,571 INFO  [Logger] CO Checking Status Details   
+2015-09-14 19:49:42,248 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:49:42,248 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 19:49:53,916 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:49:53,916 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 19:50:00,916 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:50:00,916 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 19:50:07,919 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:50:07,919 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 19:50:09,921 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:50:09,921 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 19:50:11,922 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:50:11,923 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 19:50:14,338 INFO  [Logger] InnerThread: Test Started 
+2015-09-14 19:50:14,338 INFO  [Logger] Thread-2 18 Start 
+2015-09-14 19:54:54,102 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-09-14 19:55:00,601 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:00,602 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 19:55:07,660 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:55:12,663 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:55:21,578 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:21,578 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 19:55:28,582 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:28,582 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 19:55:35,586 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:35,586 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 19:55:37,592 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:37,592 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 19:55:39,608 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:55:39,608 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 19:56:36,434 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:56:36,435 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 19:56:40,050 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:56:44,986 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:56:51,351 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 19:56:52,344 INFO  [Logger] Given Name 
+2015-09-14 19:57:40,594 INFO  [Logger] Selecting NetWorks 
+2015-09-14 19:57:42,276 INFO  [Logger] Accepted EULA 
+2015-09-14 19:57:53,035 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-14 19:57:53,036 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-14 19:57:53,038 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:57:53,038 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-14 19:57:56,780 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:58:01,633 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:58:07,517 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-14 19:58:07,992 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.223 
+2015-09-14 19:58:07,995 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-14 19:58:10,545 INFO  [Logger] Checking Status Details 
+2015-09-14 19:58:11,151 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-14 19:58:26,631 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:58:26,631 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 19:58:30,570 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:58:35,926 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:58:42,581 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 19:58:43,537 INFO  [Logger] Given Name 
+2015-09-14 19:58:58,860 INFO  [Logger] CO Checking Status Details   
+2015-09-14 19:59:15,599 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:59:15,599 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 19:59:22,184 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:59:27,519 INFO  [Logger] Clicked on VM management 
+2015-09-14 19:59:34,762 INFO  [Logger] Clicked on - Edit VM 
+2015-09-14 19:59:45,089 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 19:59:45,089 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 19:59:51,787 INFO  [Logger] Logged in Successfully 
+2015-09-14 19:59:56,609 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:00:10,454 ERROR [Logger] Something went wrong :( 
+2015-09-14 20:00:10,455 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 20:00:19,599 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 20:01:24,597 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:01:24,597 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 20:01:31,070 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:01:35,955 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:01:54,165 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:01:54,165 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 20:01:56,173 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:01:56,173 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 20:01:58,185 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:01:58,185 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 20:02:00,462 INFO  [Logger] InnerThread: Test Started 
+2015-09-14 20:02:00,463 INFO  [Logger] Thread-2 18 Start 
+2015-09-14 20:04:34,774 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-09-14 20:04:41,232 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:04:41,233 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 20:04:47,569 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:04:52,471 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:04:59,815 INFO  [Logger] Clicked on - Edit VM 
+2015-09-14 20:05:06,651 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-09-14 20:05:11,653 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:05:11,653 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 20:05:18,437 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:05:23,344 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:05:32,464 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-09-14 20:05:32,620 INFO  [Logger] Confirmation:  
+2015-09-14 20:05:37,178 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 20:06:42,222 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:06:42,222 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 20:06:48,935 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:06:53,777 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:07:01,294 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-09-14 20:07:01,522 INFO  [Logger] Confirmation:  
+2015-09-14 20:07:06,148 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-14 20:08:11,150 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:08:11,150 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 20:08:13,194 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:08:13,195 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 20:08:15,200 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:08:15,200 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 20:12:49,923 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:12:49,924 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:12:53,995 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:12:58,903 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:13:08,074 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:13:09,063 INFO  [Logger] Given Name 
+2015-09-14 20:13:59,257 INFO  [Logger] Selecting NetWorks 
+2015-09-14 20:14:01,699 INFO  [Logger] Accepted EULA 
+2015-09-14 20:14:12,314 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-14 20:14:12,316 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-14 20:14:12,317 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:14:12,317 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-14 20:14:16,830 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:14:21,848 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:14:27,866 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-14 20:14:28,324 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.223 
+2015-09-14 20:14:28,327 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-14 20:14:29,074 INFO  [Logger] Checking Status Details 
+2015-09-14 20:14:31,630 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-14 20:14:46,624 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:14:46,624 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:14:50,843 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:14:55,785 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:15:03,354 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:15:04,505 INFO  [Logger] Given Name 
+2015-09-14 20:15:17,612 INFO  [Logger] CO Checking Status Details   
+2015-09-14 20:15:54,025 INFO  [Logger] Selecting NetWorks 
+2015-09-14 20:15:55,998 INFO  [Logger] Accepted EULA 
+2015-09-14 20:16:12,665 INFO  [Logger] Checking Status Details 
+2015-09-14 20:17:00,742 INFO  [Logger] CO Checking Status Details   
+2015-09-14 20:22:29,290 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-09-14 20:22:35,858 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:22:35,858 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 20:22:42,818 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:22:48,100 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:22:51,678 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-09-14 20:22:57,490 INFO  [Logger] Clicked on - Edit VM 
+2015-09-14 20:22:58,476 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:22:58,477 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 20:23:04,720 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-09-14 20:23:05,234 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:23:09,724 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:23:09,724 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 20:23:10,366 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:23:19,373 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:23:22,909 INFO  [Logger] Clicked on - Edit VM 
+2015-09-14 20:23:25,596 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:23:30,697 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-09-14 20:23:35,698 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:23:35,698 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 20:23:38,605 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-09-14 20:23:38,787 INFO  [Logger] Confirmation:  
+2015-09-14 20:23:42,853 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:23:43,437 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 20:23:44,391 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:23:44,392 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 20:23:47,757 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:23:49,012 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:23:53,965 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:24:05,897 ERROR [Logger] Something went wrong :( 
+2015-09-14 20:24:05,897 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 20:24:15,042 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 20:24:48,443 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:24:48,443 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 20:24:55,023 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:24:59,968 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:25:08,426 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-09-14 20:25:08,590 INFO  [Logger] Confirmation:  
+2015-09-14 20:25:13,255 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-14 20:25:20,046 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:25:20,046 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 20:25:26,922 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:25:32,118 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:25:45,526 ERROR [Logger] Something went wrong :( 
+2015-09-14 20:25:45,526 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 20:25:54,665 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-14 20:26:18,263 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:26:18,263 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 20:26:25,005 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:26:29,939 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:26:59,671 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:26:59,671 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 20:27:06,379 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:27:11,257 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:27:35,374 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:27:35,374 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 20:27:38,031 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:27:38,035 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 20:27:43,007 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:27:46,002 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:27:48,121 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:27:51,571 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:28:04,936 ERROR [Logger] Something went wrong :( 
+2015-09-14 20:28:04,936 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 20:28:05,924 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-09-14 20:28:06,132 INFO  [Logger] Confirmation:  
+2015-09-14 20:28:10,761 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-09-14 20:28:12,581 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:28:12,582 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 20:28:14,018 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-09-14 20:28:18,303 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:28:23,988 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:29:50,759 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:29:50,759 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 20:29:54,013 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:29:54,014 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 20:29:57,522 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:30:00,871 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:30:02,484 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:30:05,751 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:30:14,696 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-09-14 20:30:14,987 INFO  [Logger] Confirmation:  
+2015-09-14 20:30:19,578 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-14 20:30:20,452 ERROR [Logger] Something went wrong :( 
+2015-09-14 20:30:20,452 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 20:30:29,546 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-14 20:30:29,802 INFO  [Logger] InnerThread: Test Started 
+2015-09-14 20:30:29,802 INFO  [Logger] Thread-2 18 Start 
+2015-09-14 20:30:49,464 INFO  [Logger] InnerThread: Choosen OVA 
+2015-09-14 20:30:49,467 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-14 20:30:49,469 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:30:49,470 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-14 20:30:53,748 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:30:59,494 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:31:05,300 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-14 20:31:05,809 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-14 20:46:40,463 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:46:40,464 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:46:44,433 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:46:49,758 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:46:56,790 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:46:57,738 INFO  [Logger] Given Name 
+2015-09-14 20:48:36,373 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:48:36,374 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:48:40,052 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:48:45,032 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:48:51,530 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:48:52,502 INFO  [Logger] Given Name 
+2015-09-14 20:53:21,909 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:53:21,910 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:53:25,918 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:53:30,807 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:53:38,460 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:53:39,401 INFO  [Logger] Given Name 
+2015-09-14 20:57:10,484 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:57:10,485 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:57:14,142 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:57:19,018 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:57:25,396 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:57:26,416 INFO  [Logger] Given Name 
+2015-09-14 20:59:22,270 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 20:59:22,271 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 20:59:25,926 INFO  [Logger] Logged in Successfully 
+2015-09-14 20:59:30,821 INFO  [Logger] Clicked on VM management 
+2015-09-14 20:59:37,355 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 20:59:38,300 INFO  [Logger] Given Name 
+2015-09-14 21:09:50,744 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:09:50,745 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 21:09:54,716 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:09:59,616 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:10:06,029 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 21:10:07,003 INFO  [Logger] Given Name 
+2015-09-14 21:17:59,461 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:17:59,462 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 21:18:03,015 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:18:07,916 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:18:19,020 ERROR [Logger] Something went wrong :( 
+2015-09-14 21:18:19,020 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 21:18:28,202 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-14 21:19:43,573 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:19:43,573 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 21:19:47,273 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:19:52,966 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:20:04,326 ERROR [Logger] Something went wrong :( 
+2015-09-14 21:20:04,326 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 21:20:13,524 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-14 21:45:08,114 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:45:08,115 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 21:45:11,752 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:45:16,640 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:45:23,107 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 21:45:24,195 INFO  [Logger] Given Name 
+2015-09-14 21:46:15,050 INFO  [Logger] Selecting NetWorks 
+2015-09-14 21:46:17,403 INFO  [Logger] Accepted EULA 
+2015-09-14 21:46:44,725 INFO  [Logger] Checking Status Details 
+2015-09-14 21:47:32,524 INFO  [Logger] CO Checking Status Details   
+2015-09-14 21:48:54,028 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:48:54,029 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 21:49:00,758 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:49:05,711 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:54:01,735 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:54:01,736 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 21:54:06,403 INFO  [Logger] Logged in Successfully 
+2015-09-14 21:54:11,314 INFO  [Logger] Clicked on VM management 
+2015-09-14 21:54:17,882 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 21:54:18,870 INFO  [Logger] Given Name 
+2015-09-14 21:55:11,863 INFO  [Logger] Selecting NetWorks 
+2015-09-14 21:55:14,440 INFO  [Logger] Accepted EULA 
+2015-09-14 21:55:41,891 INFO  [Logger] Checking Status Details 
+2015-09-14 21:56:29,741 INFO  [Logger] CO Checking Status Details   
+2015-09-14 21:56:56,624 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 21:56:56,624 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 22:07:58,705 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:07:58,706 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 22:08:02,976 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:08:08,797 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:08:16,678 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 22:08:17,678 INFO  [Logger] Given Name 
+2015-09-14 22:09:09,517 INFO  [Logger] Selecting NetWorks 
+2015-09-14 22:09:11,887 INFO  [Logger] Accepted EULA 
+2015-09-14 22:09:23,169 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-14 22:09:23,169 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-09-14 22:09:23,170 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:09:23,170 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-14 22:09:27,455 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:09:33,497 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:09:40,311 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-14 22:09:40,892 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-14 22:09:40,903 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-14 22:09:41,437 INFO  [Logger] Checking Status Details 
+2015-09-14 22:09:43,987 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-14 22:10:10,899 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:10:10,899 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-14 22:10:14,997 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:10:20,429 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:10:27,149 INFO  [Logger] Clicked on - Add new VM 
+2015-09-14 22:10:28,061 INFO  [Logger] Given Name 
+2015-09-14 22:10:29,458 INFO  [Logger] CO Checking Status Details   
+2015-09-14 22:10:33,628 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-09-14 22:10:33,629 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-09-14 22:10:33,874 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:10:33,875 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:10:33,875 INFO  [Logger] Screenshot taken 
+2015-09-14 22:11:06,525 INFO  [Logger] Selecting NetWorks 
+2015-09-14 22:11:07,509 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-14 22:11:07,684 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:11:07,684 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:11:07,847 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:11:07,847 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-14 22:11:14,653 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:11:19,542 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:11:27,661 INFO  [Logger] Clicked on - Edit VM 
+2015-09-14 22:11:38,066 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:11:38,066 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-14 22:11:44,973 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:11:49,814 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:12:04,247 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:12:04,247 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:12:13,315 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-14 22:13:18,318 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:13:18,318 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-14 22:13:24,895 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:13:30,683 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:13:43,613 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:13:43,613 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:13:52,755 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-14 22:14:57,761 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:14:57,761 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-14 22:15:04,508 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:15:09,413 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:15:33,934 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:15:33,934 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-14 22:15:40,549 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:15:45,435 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:15:58,962 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:15:58,962 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:16:08,080 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-09-14 22:17:48,086 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:17:48,086 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-14 22:17:54,868 INFO  [Logger] Logged in Successfully 
+2015-09-14 22:18:00,881 INFO  [Logger] Clicked on VM management 
+2015-09-14 22:18:13,782 ERROR [Logger] Something went wrong :( 
+2015-09-14 22:18:13,782 INFO  [Logger] Check Screenshot for the same 
+2015-09-14 22:18:22,931 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-14 22:18:23,171 INFO  [Logger] InnerThread: Test Started 
+2015-09-14 22:18:23,172 INFO  [Logger] Thread-2 18 Start 
+2015-09-14 22:18:42,344 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-14 22:18:42,344 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:09:48,420 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:09:48,879 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:16:08,424 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:16:08,424 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:16:13,262 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:16:18,122 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:16:24,766 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:16:25,693 INFO  [Logger] Given Name 
+2015-09-15 12:17:02,169 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:17:02,169 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:21:22,608 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:21:22,609 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:21:26,454 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:21:31,326 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:21:39,118 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:21:40,045 INFO  [Logger] Given Name 
+2015-09-15 12:22:20,991 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:22:20,991 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:25:35,439 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:25:35,440 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:25:39,093 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:25:44,023 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:25:52,023 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:25:52,985 INFO  [Logger] Given Name 
+2015-09-15 12:26:44,410 INFO  [Logger] Selecting NetWorks 
+2015-09-15 12:26:45,267 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-15 12:26:45,510 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:26:45,510 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:26:45,681 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:26:45,681 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:26:52,040 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:26:56,950 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:27:08,479 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:27:08,479 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:27:17,569 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-15 12:27:32,056 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-15 12:27:32,057 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-09-15 12:27:32,058 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:27:32,058 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-15 12:27:33,696 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:42:47,609 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:42:47,610 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:42:51,333 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:42:56,193 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:43:03,147 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:43:04,110 INFO  [Logger] Given Name 
+2015-09-15 12:43:09,740 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-09-15 12:43:09,741 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-09-15 12:43:10,021 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:43:10,021 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:43:10,021 INFO  [Logger] Screenshot taken 
+2015-09-15 12:43:26,221 ERROR [Logger] Select the data store 
+2015-09-15 12:43:26,221 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-09-15 12:43:26,420 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:43:26,420 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:43:26,420 INFO  [Logger] Screenshot taken 
+2015-09-15 12:43:26,947 ERROR [Logger] Check Log and Screenshot for the same. 
+2015-09-15 12:45:02,396 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:45:02,397 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:45:06,430 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:45:11,361 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:45:18,263 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:45:19,213 INFO  [Logger] Given Name 
+2015-09-15 12:46:13,403 INFO  [Logger] Selecting NetWorks 
+2015-09-15 12:46:14,167 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-15 12:46:14,352 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:46:14,352 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:46:14,531 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:46:14,531 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:46:20,103 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:49:25,451 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:49:25,452 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:49:29,302 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:49:34,159 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:49:40,826 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:49:41,770 INFO  [Logger] Given Name 
+2015-09-15 12:50:32,050 INFO  [Logger] Selecting NetWorks 
+2015-09-15 12:50:33,822 INFO  [Logger] Accepted EULA 
+2015-09-15 12:50:53,895 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-15 12:50:53,896 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-09-15 12:50:53,897 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:50:53,897 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-15 12:50:58,418 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:51:04,278 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:51:12,647 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-15 12:51:13,208 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-15 12:51:13,211 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-15 12:51:13,622 INFO  [Logger] Checking Status Details 
+2015-09-15 12:51:21,821 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-15 12:51:50,196 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:51:50,197 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 12:51:54,289 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:51:59,249 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:52:03,622 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:52:03,622 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:52:06,520 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 12:52:07,467 INFO  [Logger] Given Name 
+2015-09-15 12:52:11,925 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:52:14,220 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-09-15 12:52:14,220 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-09-15 12:52:14,504 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:52:14,504 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:52:14,504 INFO  [Logger] Screenshot taken 
+2015-09-15 12:52:18,820 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:52:32,004 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:52:32,004 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:52:41,146 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-15 12:52:47,349 INFO  [Logger] Selecting NetWorks 
+2015-09-15 12:52:48,719 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-15 12:52:48,916 ERROR [Logger] Something went wrong :( 
+2015-09-15 12:52:48,916 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 12:52:49,113 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:52:49,113 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 12:52:57,885 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:52:57,885 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-15 12:53:00,712 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-15 12:53:00,712 INFO  [Logger] InnerThread: Choosen OVA CM-Simplex-07.0.0.0.441-e55-0.ova 
+2015-09-15 12:53:00,714 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:53:00,714 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-15 12:53:04,961 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:53:04,961 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-15 12:53:06,295 INFO  [Logger] Logged in Successfully 
+2015-09-15 12:53:11,958 INFO  [Logger] Clicked on VM management 
+2015-09-15 12:53:12,063 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:53:12,063 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-15 12:53:14,167 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:53:14,168 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-15 12:53:16,172 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 12:53:16,172 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 12:53:18,245 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-15 12:53:18,678 INFO  [Logger] InnerThread: Test Started 
+2015-09-15 12:53:18,678 INFO  [Logger] Thread-2 17 Start 
+2015-09-15 12:53:19,189 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-15 12:53:19,191 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-15 12:53:21,210 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-15 15:04:19,361 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:04:19,437 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 15:04:24,140 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:04:29,128 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:06:24,272 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:06:24,273 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 15:06:28,254 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:06:33,167 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:13:22,000 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:13:22,001 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 15:13:25,667 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:13:31,367 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:13:38,940 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 15:13:39,931 INFO  [Logger] Given Name 
+2015-09-15 15:14:29,983 INFO  [Logger] Selecting NetWorks 
+2015-09-15 15:14:32,300 INFO  [Logger] Accepted EULA 
+2015-09-15 15:14:44,753 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-15 15:14:44,753 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-09-15 15:14:44,755 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:14:44,755 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-15 15:14:48,457 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:14:54,187 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:15:01,659 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-15 15:15:02,191 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-15 15:15:02,194 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-15 15:15:03,171 INFO  [Logger] Checking Status Details 
+2015-09-15 15:15:06,321 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-15 15:15:28,569 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:15:28,569 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 15:15:32,542 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:15:37,417 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:15:44,237 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 15:15:45,218 INFO  [Logger] Given Name 
+2015-09-15 15:15:50,853 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-09-15 15:15:50,853 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-09-15 15:15:51,135 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:15:51,135 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:15:51,135 INFO  [Logger] Screenshot taken 
+2015-09-15 15:15:51,664 INFO  [Logger] CO Checking Status Details   
+2015-09-15 15:16:21,323 INFO  [Logger] Selecting NetWorks 
+2015-09-15 15:16:22,106 ERROR [Logger] Something went wrong. Check Screenshot 
+2015-09-15 15:16:22,274 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:16:22,274 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:16:22,450 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:16:22,450 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 15:16:29,350 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:16:34,815 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:16:44,562 INFO  [Logger] Clicked on - Edit VM 
+2015-09-15 15:16:54,957 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:16:54,957 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-15 15:17:01,717 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:17:06,564 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:17:21,126 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:17:21,126 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:17:30,281 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-15 15:18:35,279 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:18:35,279 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-15 15:18:41,795 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:18:46,710 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:18:59,646 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:18:59,646 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:19:08,850 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-15 15:20:13,848 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:20:13,848 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-15 15:20:20,286 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:20:25,222 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:20:49,436 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:20:49,436 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-15 15:20:55,727 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:21:00,602 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:21:09,259 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-09-15 15:21:09,605 INFO  [Logger] Confirmation:  
+2015-09-15 15:21:11,674 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-09-15 15:21:27,181 INFO  [Logger] VM Deploy Status :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;Download/Extract OVA :;Deployment :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-09-15 15:21:33,652 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:21:33,652 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 15:21:40,507 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:21:45,383 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:21:53,669 INFO  [Logger] Clicked on - Edit VM 
+2015-09-15 15:22:00,095 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-09-15 15:22:05,096 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:22:05,096 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-15 15:22:11,303 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:22:16,358 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:22:26,053 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-09-15 15:22:27,155 INFO  [Logger] Confirmation:  
+2015-09-15 15:22:31,737 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-09-15 15:22:51,669 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:22:51,670 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 15:22:58,181 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:23:03,027 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:23:15,388 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:23:15,388 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:23:24,503 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-15 15:23:25,080 INFO  [Logger] InnerThread: Test Started 
+2015-09-15 15:23:25,080 INFO  [Logger] Thread-2 17 Start 
+2015-09-15 15:23:36,735 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:23:36,735 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-15 15:23:43,074 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:23:47,988 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:23:57,055 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-09-15 15:23:57,223 INFO  [Logger] Confirmation:  
+2015-09-15 15:24:01,783 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-09-15 15:25:06,780 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:25:06,780 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-15 15:25:13,206 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:25:18,097 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:26:26,126 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:26:26,127 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-15 15:26:33,420 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:26:38,572 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:26:48,362 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-09-15 15:26:48,561 INFO  [Logger] Confirmation:  
+2015-09-15 15:26:53,171 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-09-15 15:28:33,167 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:28:33,167 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 15:28:39,884 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:28:44,783 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:28:57,520 ERROR [Logger] Something went wrong :( 
+2015-09-15 15:28:57,520 INFO  [Logger] Check Screenshot for the same 
+2015-09-15 15:29:06,658 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-09-15 15:29:25,312 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-15 15:29:25,312 INFO  [Logger] InnerThread: Choosen OVA CM-Simplex-07.0.0.0.441-e55-0.ova 
+2015-09-15 15:29:25,321 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:29:25,321 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-15 15:29:28,937 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:29:33,825 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:29:39,757 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-15 15:29:40,221 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-15 15:29:40,253 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-15 15:29:42,031 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-15 15:29:54,919 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:29:54,920 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-15 15:29:58,709 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:30:03,638 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:30:10,061 INFO  [Logger] Clicked on - Add new VM 
+2015-09-15 15:30:11,006 INFO  [Logger] Given Name 
+2015-09-15 15:30:54,700 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:30:54,701 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-15 15:31:00,945 INFO  [Logger] Logged in Successfully 
+2015-09-15 15:31:05,851 INFO  [Logger] Clicked on VM management 
+2015-09-15 15:31:15,224 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:31:15,224 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-15 15:31:22,237 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:31:22,237 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-15 15:31:29,250 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:31:29,250 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-15 15:31:31,262 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:31:31,262 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-15 15:31:33,264 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-15 15:31:33,264 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-15 15:31:35,487 INFO  [Logger] InnerThread: Test Started 
+2015-09-15 15:31:35,487 INFO  [Logger] Thread-5 32 Start 

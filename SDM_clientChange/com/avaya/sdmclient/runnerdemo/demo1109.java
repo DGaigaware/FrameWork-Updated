@@ -32,7 +32,7 @@ public class demo1109 {
 		ele.add("CMM-7.0.0.0.700007-e55-01.ova");
 		// TODO Auto-generated method stub
 		settingsForConcThreads ob = new settingsForConcThreads();
-		ob.runThread(driver, ele);
+		ob.runThread(driver);
 	}
 
 }

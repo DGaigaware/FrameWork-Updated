@@ -3,6 +3,7 @@ package com.avaya.sdmclient;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -85,7 +86,7 @@ public class Settings {
 
 	public String readFromFile(String fileName,String find) throws IOException{
 		//File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+fileName);
-		File file = new File(System.getProperty("user.dir")+"\\Input Files\\"+fileName);
+		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+fileName);
 		List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		String output = null;
@@ -99,6 +100,17 @@ public class Settings {
 		}
 		System.out.println(output);
 		return output;
+	}
+	
+	public String matchFileOVF(String input){
+		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
+		String returnStr = "";
+		for(File f : folder.listFiles()){
+			System.out.println(f.getName());
+			if(f.getName().substring(0,input.length()).equals(input))
+				returnStr = f.getName();
+		}
+		return returnStr;
 	}
 
 	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
@@ -411,6 +423,7 @@ public class Settings {
 
 	public void comboClick(WebDriver driver, String StartAddress,String input) throws IOException, InterruptedException{
 		driver.findElement(By.id(StartAddress+"-inputEl")).click();
+		driver.findElement(By.id(StartAddress+"-inputEl")).clear();
 		driver.findElement(By.id(StartAddress+"-inputEl")).sendKeys(input);
 		Thread.sleep(2000);
 		
@@ -458,7 +471,7 @@ public class Settings {
 		return fluentWait(locatorTo, driver, time, Test);
 	}
 	
-	public void chooseLink(WebDriver driver,String VMName) throws IOException, InterruptedException{
+	public void chooseLink(WebDriver driver,String Name) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
@@ -466,13 +479,53 @@ public class Settings {
 
 		for(WebElement e : cells)
 		{	System.out.println(e.getText());
-			if(e.getText().contains(VMName))
+			if(e.getText().contains(Name))
 				e.findElement(By.linkText("Status Details")).click();
 			System.out.println("After");
 		}
 		//findVMForHost(driver, host);
 	}
 
+	public void maintainedList(WebDriver driver,String ID) throws IOException, InterruptedException{
+		driver.findElement(By.id(ID)).click();
+		driver.findElement(By.id(ID)).sendKeys("random");
+		
+		File f = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+"ovanames.txt");
+		
+		List<String> availableOVAs = new ArrayList<>();
+		setup();
+		//System.out.println(selBoundList(driver));
+		Thread.sleep(2000);
+		System.out.println(selBoundList(driver));
+		WebElement element = driver.findElement(By.id(selBoundList(driver)));
+		//System.out.println("First "+element.getText());
+		List<WebElement> a = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
+		System.out.println("Size "+a.size());
+		
+		if(!availableOVAs.isEmpty())
+			{	
+			for(int i=0;i<availableOVAs.size();i++)
+				availableOVAs.remove(i);
+			}
+		System.out.println("Size "+availableOVAs.size());		
+		
+		for(WebElement e : a){
+			availableOVAs.add(e.getText());
+			System.out.println("Text "+e.getText());
+		}
+		
+		PrintWriter pr = new PrintWriter(f);
+		
+		for(String s : availableOVAs)
+			{
+				pr.write(s+"\n");
+				System.out.println("Written "+s+" Successfully in File.");
+			}
+		
+		pr.close();
+		
+	}
+	
 	public void StatusCheck(WebDriver driver,String toBeChecked,int time) throws IOException, InterruptedException{
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -635,7 +688,7 @@ public class Settings {
 			
 	}
 
-		public void FillValues(String fileName,String filePath,WebDriver driver) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
+		public void FillValues(String fileName,String filePath,WebDriver driver,String IP,String hostName) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			Document document = db.parse(new File(filePath));
@@ -662,7 +715,7 @@ public class Settings {
 			/*for(int i=0;i<nl.getLength();i++)
 			System.out.println(nl.item(i).getAttributes());*/
 			
-			String opNet[] = new String[2];
+			String opNet[] = new String[nlLabelNet.getLength()];
 			
 			for(int i=0;i<nlLabelNet.getLength();i++)
 				nlmapnet.add(nlLabelNet.item(i).getAttributes());
@@ -734,20 +787,31 @@ public class Settings {
 				}
 			}
 			
-			/*for(int i=0;i<nl.getLength()-5;i++)
-				System.out.println(op[i][0]);*/
+			for(int i=0;i<op.length;i++)
+				System.out.println(op[i][0]);
 			
 			//for(int i=0;i<nl.getLength()-5;i++)			// As last 5 Fields are not Visible in UI
 
 			for(int i=0;i<nl.getLength()-1;i++)
 			{
 				//System.out.println(op[i][0]);
-				if(op[i][1]!=null && op[i][1].equals("Ip"))
+				if(op[i][0].equals("ip0")){
+					System.out.println("Filled IP for VM " + i);
+					AutoFillIP(driver, op[i][0],IP,fileName);
+				}
+				
+				else if(op[i][0].equals("hostname")){
+					System.out.println("Filled hostname for VM "+i + " "+hostName);
+					autoFillhostnameforVM(driver, op[i][0], hostName);
+				}
+				
+				else if(op[i][1]!=null && op[i][1].equals("Ip"))
 				{
-					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
+					//String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
 					System.out.println("Going to IP " + i);
 					AutoFillIP(driver, op[i][0],readFromFile(fileName, op[i][0]),fileName);
 				}
+				
 
 				else if(op[i][1]!=null && op[i][1].equals("true"))
 				{
@@ -788,7 +852,7 @@ public class Settings {
 			driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
 			logClass.info("Selecting NetWorks");
 
-			for(int i=0;i<2;i++)
+			for(int i=0;i<nlLabelNet.getLength();i++)
 			{
 				driver.findElement(By.id((opNet[i]+"-inputEl"))).click();
 				boundListSelect(driver, "VM Network", selBoundList(driver));
@@ -825,6 +889,7 @@ public class Settings {
 
 		//public void AutoFillIP(WebDriver driver,String inputForJS,String IP,String fileName){
 		public void AutoFillIP(WebDriver driver,String id,String IP,String fileName){
+			@SuppressWarnings("unused")
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
 			List<String> Addresses = new ArrayList<String>();
@@ -1039,8 +1104,11 @@ public class Settings {
 		}
 	}
 	
-	public void autoFillIPforVM(WebDriver driver,String id,String fileName){
-		driver.findElement(By.id("ipfs"+id)).click();
+	public void autoFillhostnameforVM(WebDriver driver,String id,String hostname){
+		if(!id.isEmpty()){
+			driver.findElement(By.id(id+"-inputEl")).clear();
+			driver.findElement(By.id(id+"-inputEl")).sendKeys(hostname);;
+		}
 	}
 	
 	public void autoFillPasswdforVM(WebDriver driver,String id,String fileName) throws IOException{

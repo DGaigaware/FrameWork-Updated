@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Concurrent Suite">
+<test name="Concurrent Installations">
+   
+<parameter name="IP" value="148.147.162.221"/>
+<parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
+      
+    <!-- <packages>
+      <package name="com.avaya.smgr.Scheduler.*"/> 
+    </packages> 
+  -->
+      <classes>
+         <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent" />
+      </classes> 
+      
+   </test>
+</suite>
