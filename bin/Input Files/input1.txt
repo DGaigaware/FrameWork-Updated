@@ -1,0 +1,13 @@
+ip0 148.147.162.221
+hostname testBSM
+domain testbsm.smgrdev.avaya.com
+netmask0 255.255.255.0
+gateway 148.147.162.1
+dns 8.8.8.8
+TIMEZONE Asia/Kolkata
+ntpservers abcd
+CUSTLOGIN dadmin
+CUSTPWD dadmin01
+smgr_ip 148.147.162.35
+enrollment_pw 123456
+LSPIP 148.147.1.1

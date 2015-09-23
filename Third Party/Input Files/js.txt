@@ -1,0 +1,30 @@
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+var nl = innerDoc.querySelectorAll('[id^="text"]');
+var final=[];
+for(var a=0;a<nl.length;a++)
+  if(nl[a].textContent.contains("Address"))
+    final.push(nl[a]);
+
+for(var b=0;b<final.length;b++)
+  console.log(final[b])
+  
+//Get all ID  
+  
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+console.log(innerDoc.querySelectorAll('[id^="text"]'))
+
+//Get ID only in that Panel
+
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+console.log(innerDoc.getElementById("newlocationview").querySelectorAll('[id^="text"]'))
+
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+console.log(innerDoc.getElementById("host_new").getElementsByTagName("input"))
+
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+console.log(innerDoc.getElementById("pagingtoolbar-1117").querySelectorAll('[id^="button"]'))

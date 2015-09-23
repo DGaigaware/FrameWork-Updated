@@ -11,3 +11,16 @@ CUSTPWD dadmin01
 smgr_ip 148.147.162.35
 enrollment_pw 123456
 LSPIP 148.147.1.1
+CMIPv4Address 
+CMIPv4Netmask
+CMIPv4Gateway
+OutofBandManagementIPv4Address
+OutofBandManagementIPv4Netmask 
+CMHostname
+NTPServer(s)
+DNSServer(s)
+SearchDomainList
+WebLMServerIPv4Address
+CMPrivilegedAdministratorUserLogin
+CMPrivilegedAdministratorUserPassword
+ConfirmPassword

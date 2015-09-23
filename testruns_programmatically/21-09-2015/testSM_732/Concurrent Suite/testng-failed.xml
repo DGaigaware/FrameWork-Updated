@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Concurrent Suite]">
+  <parameter name="IP" value="148.147.162.221"/>
+  <parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
+  <test name="Concurrent Installations(failed)">
+    <parameter name="IP" value="148.147.162.221"/>
+    <parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
+    <classes>
+      <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
+        <methods>
+          <include name="StopVM" invocation-numbers="0"/>
+          <include name="RestartVM" invocation-numbers="0"/>
+          <include name="DeleteVM" invocation-numbers="0"/>
+          <include name="EditVM" invocation-numbers="0"/>
+          <include name="StartVM" invocation-numbers="0"/>
+          <include name="RefreshVM" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->
+    </classes>
+  </test> <!-- Concurrent Installations(failed) -->
+</suite> <!-- Failed suite [Concurrent Suite] -->

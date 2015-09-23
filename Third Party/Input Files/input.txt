@@ -25,11 +25,12 @@ usernameVC Administrator@vsphere.local
 passwordVC Avaya123$
 CMFP C:\\Users\\bshingala\\Desktop\\CM-Duplex_OVF10.ovf
 CMFPS C:\\Users\\bshingala\\Desktop\\CM-Simplex_OVF10.ovf
-USFP C:\\Users\\bshingala\\Desktop\\US-7.0.0.0.0.11-e55-01_OVF10.ovf
+USFP C:\\Users\\bshingala\\Desktop\\FrameWork Updated-17082015\\Third Party\\OVFs\\US-7.0.0.0.0.12-e55-01_OVF10.ovf
 SMFilePath C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01.ova
 SMOVFPath C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf
 BSMOVFPath C:\\Users\\bshingala\\Downloads\\BSM-7.0.0.0.700007-e55-01_EXTRACT\\BSM-7.0.0.0.700007_OVF10.ovf
 BSMFilePath C:\\Users\\bshingala\\Downloads\\BSM-7.0.0.0.700007-e55-01.ova
+Utility_Services_Mode full_functionality
 NewHostIP 148.147.162.196
 NewHostUser root
 NewHostPwd Avaya1234$
@@ -47,16 +48,3 @@ Gateway 148.147.162.1
 TZ Asia/Kolkata
 SMGRIP 148.147.162.35
 VMSMGRName pdev55vm2
-CMIPv4Address 
-CMIPv4Netmask
-CMIPv4Gateway
-OutofBandManagementIPv4Address
-OutofBandManagementIPv4Netmask 
-CMHostname
-NTPServer(s)
-DNSServer(s)
-SearchDomainList
-WebLMServerIPv4Address
-CMPrivilegedAdministratorUserLogin
-CMPrivilegedAdministratorUserPassword
-ConfirmPassword
