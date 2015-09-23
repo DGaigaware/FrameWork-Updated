@@ -36,7 +36,7 @@ package com.avaya.sdmclient.runnerdemo;
 		
 		@Test(description="Adding VM to given Location and Host",priority=8)
 		@Parameters({"IP", "VMName"})
-		public void AddVMSuite(String IP,String VMName) throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+		public void AddVMSuite(String IP,String VMName) throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
 
 			String shortVMName = VMName.substring(0, VMName.indexOf("-")); 
 			
@@ -52,14 +52,14 @@ package com.avaya.sdmclient.runnerdemo;
 			//obj.goHome(driver);
 			obj.loginToSite(driver);
 
-			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
+			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"))){
 				//addHost1();
 				System.out.println("Adding Host");
 				obj.goHome(driver);
 				logClass.info("Added Host as Location was not there beforehand.");
 			}
 			
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			driver.findElement(By.xpath(locator.getProperty("NewVM"))).click();
@@ -67,7 +67,7 @@ package com.avaya.sdmclient.runnerdemo;
 			Thread.sleep(750);
 
 			driver.findElement(By.xpath(locator.getProperty("VMName"))).clear();
-			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.txt", "VMName"));
+			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.properties", "VMName"));
 			driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
 			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("inputbsm.txt", "VMName225"));
 			logClass.info("Given Name");
@@ -83,10 +83,18 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.boundListSelect(driver, "data", obj.selBoundList(driver));
 			Thread.sleep(2500);
 			
-			obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
+			/*obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
 			obj.comboClick(driver, "combobox-1238", VMName);
+			Thread.sleep(2500);*/
+			
+			obj.comboClick(driver, "Select Software Library:","SMGR_DEFAULT_LOCAL");
+			Thread.sleep(2500);
+			
+			//obj.maintainedList(driver, obj.comboID(driver, "Select OVAs:"));
+			
+			obj.comboClick(driver, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
 			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
@@ -105,7 +113,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			//obj.FillValues("inputbsm.txt", obj.readFromFile("inputbsm.txt", "BSMOVFPath"), driver);
 			//obj.FillValues("inputcmsimplex.txt", obj.readFromFile("inputcmsimplex.txt","Path"), driver);
-			obj.FillValues("inputsm.txt", System.getProperty("user.dir")+"\\Third Party\\OVFs\\"+obj.matchFileOVF(shortVMName), driver,IP,VMName);
+			obj.FillValues("inputsm.properties", System.getProperty("user.dir")+"\\Third Party\\OVFs\\"+obj.matchFileOVF(shortVMName), driver,IP,"test"+shortVMName);
 			
 			obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
 
@@ -124,15 +132,16 @@ package com.avaya.sdmclient.runnerdemo;
 			
 			Thread.sleep(4500);
 
-			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-			logClass.info("Checking Status Details");
+			/*driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
+			logClass.info("Checking Status Details");*/
+			obj.chooseLink(driver, "test"+shortVMName);
 
 			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
 			
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed"));
+			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed","test"+shortVMName));
 			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driver);
@@ -143,7 +152,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 		@Test(description="Editing VM to given Location and Host",priority=9)
 		@Parameters({"IP", "VMName"})
-		public void EditVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void EditVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 
 			String shortVMName = VMName.substring(0, VMName.indexOf("-")); 
 			
@@ -152,7 +161,7 @@ package com.avaya.sdmclient.runnerdemo;
 			//obj.loginToSite(driver);
 			obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -189,7 +198,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.goHome(driver);
 			
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -217,7 +226,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -243,7 +252,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -260,10 +269,10 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.switchTo().activeElement();
 
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.txt", "CustomerName"));
+			driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
 
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.txt", "CustPwd"));
+			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
 
 			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
 			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
@@ -310,7 +319,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -335,7 +344,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			obj.goHome(driver);
 
-			obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName"));
 
 			driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
@@ -348,6 +357,29 @@ package com.avaya.sdmclient.runnerdemo;
 			obj.confirmDialogBox(driver);
 
 			logClass.endTestCase("Deleted VM successfully");
+			
+			driver.quit();
+			
+			final WebDriver driver2 = new FirefoxDriver(obj.selectProfile("Selenium"));
+			class MyRunnable implements Runnable {
+				 public void run() {
+					 settingsForConcThreads ob = new settingsForConcThreads();
+					 try {
+						ob.runThread(driver2);
+					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (MyException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 }
+			}
+			
+			MyRunnable r = new MyRunnable();
+			Thread t = new Thread(r);
+			t.start();
+			t.join();
 		}
 	
 

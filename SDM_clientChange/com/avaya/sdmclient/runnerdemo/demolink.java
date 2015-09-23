@@ -64,16 +64,29 @@ public class demolink {
 		
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
+		WebElement el = null;
 		//System.out.println(cells.size()+"\n\n");
-
+		String id = "";
+		
+		
 		for(WebElement e : cells)
 		{	System.out.println("RTest "+e.getText());
 			if(e.getText().contains("sm3"))
-				e.findElement(By.linkText("Status Details")).click();
-			/*System.out.println("After");
-			System.out.println("Dep "+e.findElement(By.className("deployinprogress")).getText());
-			System.out.println(e.findElement(By.tagName("href")));*/
+				{
+					el = e;
+					id = e.getAttribute("id");
+					System.out.println("Row ID: "+id);
+				}
+			
+				//e.findElement(By.linkText("Status Details")).click();
+			System.out.println("After");
+			//Thread.sleep(4500);
+			//System.out.println("Dep "+e.findElement(By.className("deployinprogress")).getText());
+			
+			//System.out.println(e.findElement(By.tagName("href")));
 		}
+		driver.findElement(By.id(id)).findElement(By.className("deployinprogress")).click();
+		//el.findElement(By.className("deployinprogress")).click();
 		
 		/*JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");

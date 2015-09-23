@@ -2,6 +2,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -9,6 +10,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.xml.sax.SAXException;
 
@@ -36,7 +38,10 @@ public class testDemo {
 		logClass.startTestCase("Adding VM to given Location and Host");
 
 		//obj.goHome(driver);
-		obj.loginToSite(driver);
+		//obj.loginToSite(driver);
+		obj.goToSite(driver);
+		
+		//obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"));
 
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
 			//addHost();
@@ -68,11 +73,18 @@ public class testDemo {
 		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
 		Thread.sleep(2500);
 		
-		obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
+		driver.findElement(By.xpath(locator.getProperty("OVASWLib"))).click();
+		logClass.info("Choosen From Software Library");
+
+		driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
+		
+		obj.boundListSelect(driver, "WebLM-7.0.0.9-16703-e55-19.ova", obj.selBoundList(driver));
+		
+		/*obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
 		Thread.sleep(2500);
 		
 		obj.comboClick(driver, "combobox-1238", "US-7.0.0.0.0.11-e55-01_OVF10.ova");
-		Thread.sleep(2500);
+		Thread.sleep(2500);*/
 		
 		/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 		Thread.sleep(450);
@@ -84,11 +96,13 @@ public class testDemo {
 		driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
 		obj.checkFailureOfHostCapacity(driver);
 
-		obj.exec(!_Check);
+		//obj.exec(!_Check);
 
 		//removed
+		
+		
 
-		obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "USFP"), driver);
+		obj.FillValues("inputsm.txt", "C:\\Users\\bshingala\\Desktop\\FrameWork Updated-17082015\\Third Party\\OVFs\\WebLM-7.0.0.9-16703-e55-19.ovf", driver,"148.147.162.225","CMMM");
 	}
 
 }

@@ -2,7 +2,10 @@ package com.avaya.sdmclient.runnerdemo;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -38,9 +41,9 @@ public class settingsForConcThreads {
 		String VMname = "<parameter name=\"VMName\" value=\""+testName+"\"/>";
 		String addTestName = "<test name=\""+testName+"\">";
 		
-		for(String s : lines){
-			System.out.println(s);
-		}
+		/*for(String s : lines){
+			//System.out.println(s);
+		}*/
 		
 		for(int i=0;i<lines.size();i++)
 		{
@@ -68,7 +71,7 @@ public class settingsForConcThreads {
 		PrintWriter pr = new PrintWriter(file1);
 		
 		for(String s : lines){
-			System.out.println(s);
+			//System.out.println(s);
 			pr.write(s+"\n");
 		}
 		logClass.info("InnerThread: Changed XML File Successfully");
@@ -77,10 +80,13 @@ public class settingsForConcThreads {
 		return file1.getName();
 	}
 	
-	public static String findAvailableIP(WebDriver driver, By by) throws IOException, InterruptedException{
+	public static String findAvailableIP(WebDriver driver, By by) throws IOException, InterruptedException, MyException{
 		Settings obj = new Settings();
 		Properties locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
+		
+		Properties pr=new Properties();
+		pr.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\Input Files\\black-whitelistedIP.properties"));
 		
 		List<String> IDs = new ArrayList<>();
 		List<String> IPsFromGrid = new ArrayList<>();
@@ -108,7 +114,7 @@ public class settingsForConcThreads {
 		obj.loginToSite(driver);
 		//obj.goHome(driver);
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"));
+		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 		logClass.info("InnerThread: Checking if IP is assigned to any VM or not.");
@@ -140,19 +146,50 @@ public class settingsForConcThreads {
 		}
 
 		for(String s : IPblacklist){
-			System.out.println("BlackListed"+s);
+			System.out.println("BlackListed "+s);
+			pr.setProperty(s, "BlackList");
 		}
 		for(String s : IPwhitelist){
-			System.out.println("WhiteListed"+s);
+			System.out.println("WhiteListed "+s);
+			pr.setProperty(s, "WhiteList");
 		}
 
 		if(IPwhitelist.isEmpty())
 		{
 			System.out.println("Can not proceed further");
+			logClass.error("No free IP available for Installation.");
+			throw new MyException("No free IP available for Installation.");
 			//System.exit(0);
 		}
 		else
-			returnIP = IPwhitelist.get(0);
+			{
+				System.out.println("Checking whether IP is already in use or not..");
+				logClass.info("Checking whether IP is already in use or not..");
+				
+				for(int i=0;i<IPwhitelist.size();i++){
+					if(pr.getProperty(IPwhitelist.get(i)).equals("WhiteList"))
+						{
+							returnIP = IPwhitelist.get(i);
+							break;
+						}
+				}
+				
+				if(returnIP.isEmpty())
+				{
+					System.out.println("Can not proceed further");
+					logClass.error("No free IP available for Installation as another instance has taken IP.");
+					throw new MyException("No free IP available for Installation as another instance has taken IP.");
+					//System.exit(0);
+				}
+				
+				System.out.println(returnIP+" IP is available");
+				logClass.info(returnIP+" IP is available");
+					
+				obj.makeIPWhiteBlackList(returnIP, "BlackList");
+				//pr.setProperty(returnIP, "BlackList");
+				System.out.println("IP is BlackListed as it will be used to install next VM");
+				logClass.info("IP is BlackListed as it will be used to install next VM");
+			}
 
 		logClass.info("InnerThread: Choosen WhiteListed IP "+returnIP);
 		
@@ -191,7 +228,7 @@ public class settingsForConcThreads {
 			List<String> lines = FileUtils.readLines(file);
 			Scanner sc = new Scanner(fileTemp);
 			int temp = Integer.parseInt(sc.next());
-			System.out.println(temp);
+			System.out.println("Counter in File: "+temp);
 			
 			String output = lines.get(temp);
 			PrintWriter pr = new PrintWriter(fileTemp);
@@ -214,7 +251,7 @@ public class settingsForConcThreads {
 		 return lines;
 	 }
 	 
-	 public void runThread(WebDriver driver) throws ParserConfigurationException, SAXException, IOException, InterruptedException{
+	 public void runThread(WebDriver driver) throws ParserConfigurationException, SAXException, IOException, InterruptedException, MyException{
 		 Settings obj = new Settings();
 		 Properties locator=new Properties();
 		 locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));

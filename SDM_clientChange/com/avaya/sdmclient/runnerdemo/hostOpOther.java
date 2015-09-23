@@ -38,6 +38,10 @@ public class hostOpOther {
 		driver.findElement(By.id("chgNetwkParamBtn")).click();
 		obj.errorBox(driver, obj.checkError(driver));
 		
+		
+		
+		
+		
 		driver.findElement(By.id("chgPassBtn")).click();
 		obj.errorBox(driver, obj.checkError(driver));
 		
