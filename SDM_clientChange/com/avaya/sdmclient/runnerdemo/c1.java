@@ -100,6 +100,8 @@ package com.avaya.sdmclient.runnerdemo;
 			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
 			obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));*/
+			
+			obj.selectFP(driver, shortVMName);
 
 			_Check = obj.checkError(driver);
 			obj.errorBox(driver,obj.checkError(driver));

@@ -1073,7 +1073,7 @@ public class Settings {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 		//driver.get("https://pdev55vm2.smgrdev.avaya.com");
-		driver.get("https://sit4vm1.smgrdev.avaya.com");
+		driver.get("https://pdev55vm2.smgrdev.avaya.com");
 		
 		driver.findElement(By.id("IDToken1")).sendKeys("admin");
 	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
@@ -1223,9 +1223,10 @@ public class Settings {
 	}
 	
 	public void selectFP(WebDriver driver,String shortvmname) throws IOException, InterruptedException{
-		if(driver.findElement(By.xpath(locator.getProperty("FootPrint"))).getAttribute("disabled").isEmpty())
+		if(driver.findElement(By.xpath(locator.getProperty("FootPrint"))).getAttribute("disabled")==null)
 		{
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
+			Thread.sleep(450);
 			System.out.println(locator.getProperty("FP"+shortvmname));
 			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundList(driver));
 		}

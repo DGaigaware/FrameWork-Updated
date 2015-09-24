@@ -14863,3 +14863,36 @@
 2015-09-23 19:55:47,446 INFO  [Logger] Clicked on VM management 
 2015-09-23 19:55:54,045 INFO  [Logger] Clicked on - Add new VM 
 2015-09-23 19:55:54,994 INFO  [Logger] Given Name 
+2015-09-24 10:31:13,498 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-24 10:31:13,537 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-24 10:31:17,144 INFO  [Logger] Logged in Successfully 
+2015-09-24 10:31:29,053 INFO  [Logger] Clicked on VM management 
+2015-09-24 10:31:35,046 INFO  [Logger] Clicked on - Add new VM 
+2015-09-24 10:31:35,983 INFO  [Logger] Given Name 
+2015-09-24 10:48:49,933 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-24 10:48:49,934 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-24 10:48:53,138 INFO  [Logger] Logged in Successfully 
+2015-09-24 10:49:05,057 INFO  [Logger] Clicked on VM management 
+2015-09-24 10:49:11,093 INFO  [Logger] Clicked on - Add new VM 
+2015-09-24 10:49:12,051 INFO  [Logger] Given Name 
+2015-09-24 10:51:37,939 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-24 10:51:37,940 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-24 10:51:41,026 INFO  [Logger] Logged in Successfully 
+2015-09-24 10:51:52,918 INFO  [Logger] Clicked on VM management 
+2015-09-24 10:51:58,588 INFO  [Logger] Clicked on - Add new VM 
+2015-09-24 10:51:59,537 INFO  [Logger] Given Name 
+2015-09-24 10:53:20,063 INFO  [Logger] Selecting NetWorks 
+2015-09-24 10:53:21,660 INFO  [Logger] Accepted EULA 
+2015-09-24 10:53:38,255 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-24 10:53:38,256 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-09-24 10:53:38,257 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-24 10:53:38,257 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-24 10:53:41,977 INFO  [Logger] Logged in Successfully 
+2015-09-24 10:53:53,870 INFO  [Logger] Clicked on VM management 
+2015-09-24 10:53:59,265 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-24 11:27:54,833 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-24 11:27:54,834 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-24 11:27:58,886 INFO  [Logger] Logged in Successfully 
+2015-09-24 11:28:11,680 INFO  [Logger] Clicked on VM management 
+2015-09-24 11:28:18,004 INFO  [Logger] Clicked on - Add new VM 
+2015-09-24 11:28:18,963 INFO  [Logger] Given Name 

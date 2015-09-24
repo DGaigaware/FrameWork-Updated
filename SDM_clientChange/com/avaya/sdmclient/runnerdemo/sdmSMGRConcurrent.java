@@ -279,15 +279,16 @@ public class sdmSMGRConcurrent {
 			obj.comboClick(driver, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
-			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
-			Thread.sleep(450);
-			obj.boundListSelect(driver, obj.readFromFile("input.properties", "MinProfile"), obj.selBoundList(driver));
-
+			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
+			Thread.sleep(450);*/
+			//obj.boundListSelect(driver, obj.readFromFile("input.properties", "MinProfile"), obj.selBoundList(driver));
+			obj.selectFP(driver, shortVMName);
+			
 			_Check = obj.checkError(driver);
 			String err = obj.errorBox(driver,obj.checkError(driver));
 
-			driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
-			obj.checkFailureOfHostCapacity(driver);
+			//driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
+			//obj.checkFailureOfHostCapacity(driver);
 
 			//obj.exec(!_Check);
 			if(_Check){
