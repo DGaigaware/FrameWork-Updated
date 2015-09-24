@@ -45,7 +45,7 @@ public class VC2508 {
 			}
 		}
 	}
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws InterruptedException, IOException, MyException {
 		// TODO Auto-generated method stub
 		Settings obj = new Settings();
 		List<String> inputIP = new ArrayList<String>();
@@ -61,7 +61,7 @@ public class VC2508 {
 
 		logClass.startTestCase("Editing vCenter to given Location");
 
-		obj.goToSite(driver);
+		obj.goToSDMCliURL(driver);
 		
 		Thread.sleep(1500);
 		driver.findElement(By.xpath(locator.getProperty("VCenterMap"))).click();

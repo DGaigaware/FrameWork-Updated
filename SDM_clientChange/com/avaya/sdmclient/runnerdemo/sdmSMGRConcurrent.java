@@ -11,9 +11,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ITestNGMethod;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -354,7 +351,7 @@ public class sdmSMGRConcurrent {
 			obj.chooseLink(driver, "test"+shortVMName);
 			logClass.info("Checking Status Details");
 
-			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+			obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
 			
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
@@ -489,7 +486,7 @@ public class sdmSMGRConcurrent {
 
 			Thread.sleep(500);
 			
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
 			
 			driver.switchTo().activeElement();
 
@@ -499,7 +496,7 @@ public class sdmSMGRConcurrent {
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
 			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
 			Thread.sleep(250);
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
@@ -508,7 +505,7 @@ public class sdmSMGRConcurrent {
 			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("RefreshVM")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
 			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
 
 			if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())

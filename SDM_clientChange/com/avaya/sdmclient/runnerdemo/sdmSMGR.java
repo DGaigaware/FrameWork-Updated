@@ -287,7 +287,7 @@ package com.avaya.sdmclient.runnerdemo;
 */
 		@Test(description="Adding VM to given Location and Host",priority=8)
 
-		public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+		public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
 
 			boolean _Check;
 
@@ -349,7 +349,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			//removed
 
-			obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver);
+			obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver,"","");
 
 			obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
 
@@ -371,12 +371,12 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			logClass.info("Checking Status Details");
 
-			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+			obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
 			
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed"));
+			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed",""));
 			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driver);
@@ -387,7 +387,7 @@ package com.avaya.sdmclient.runnerdemo;
 	
 		@Test(description="Editing VM to given Location and Host",priority=9)
 
-		public void EditVM() throws InterruptedException, IOException{
+		public void EditVM() throws InterruptedException, IOException, MyException{
 
 			logClass.startTestCase("Editing VM to given Location and Host");
 
@@ -497,7 +497,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			Thread.sleep(500);
 			
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
 			
 			driver.switchTo().activeElement();
 
@@ -507,7 +507,7 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.txt", "CustPwd"));
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
 			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
 			Thread.sleep(250);
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
@@ -516,7 +516,7 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("RefreshVM")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
 			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
 
 			if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())

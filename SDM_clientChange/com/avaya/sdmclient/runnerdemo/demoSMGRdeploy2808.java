@@ -25,7 +25,7 @@ public class demoSMGRdeploy2808 {
 	
 
 	
-	public static void main(String[] args) throws InterruptedException, FileNotFoundException, IOException, ParserConfigurationException, SAXException {
+	public static void main(String[] args) throws InterruptedException, FileNotFoundException, IOException, ParserConfigurationException, SAXException, MyException {
 		// TODO Auto-generated method stub
 		Settings obj = new Settings();
 		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
@@ -39,7 +39,7 @@ public class demoSMGRdeploy2808 {
 		
 		logClass.startTestCase("Adding VM to given Location and Host");
 
-		obj.goToSite(driver);
+		obj.goToSDMCliURL(driver);
 
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"))){
 			//addHost1();
@@ -97,7 +97,7 @@ public class demoSMGRdeploy2808 {
 
 		//removed
 
-		obj.FillValues("inputsmgr.txt", "C:\\Program Files\\Avaya\\SDMClient\\SDM_API\\SMGR-7.0.0.0.16266-e55-43.ovf", driver);
+		obj.FillValues("inputsmgr.txt", "C:\\Program Files\\Avaya\\SDMClient\\SDM_API\\SMGR-7.0.0.0.16266-e55-43.ovf", driver,"","");
 
 		driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 	}

@@ -21,6 +21,7 @@ import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.runnerdemo.MyException;
 
 import utility.UserAction;
 
@@ -36,7 +37,7 @@ public class VM {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding Location")
-	public void AddLocation() throws IOException, InterruptedException {
+	public void AddLocation() throws IOException, InterruptedException, MyException {
 
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 		driver.manage().window().maximize();
@@ -120,7 +121,7 @@ public class VM {
 
 	@Test(description="Adding VM to given Location and Host",priority=2)
 
-	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
 
 		boolean Check;
 
@@ -218,7 +219,7 @@ public class VM {
 
 		//removed
 
-		obj.FillValues("inputsm.txt", "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf", driver);
+		obj.FillValues("inputsm.txt", "C:\\Users\\bshingala\\Downloads\\SM-7.0.0.0.700007-e55-01_EXTRACT\\SM-7.0.0.0.700007_OVF10.ovf", driver,"","");
 
 		driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
@@ -240,7 +241,7 @@ public class VM {
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed"));
+		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed",""));
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 		obj.closeWindow(driver);
@@ -251,7 +252,7 @@ public class VM {
 
 	@Test(description="Editing VM to given Location and Host",priority=3)
 
-	public void EditVM() throws InterruptedException, IOException{
+	public void EditVM() throws InterruptedException, IOException, MyException{
 
 		logClass.startTestCase("Editing VM to given Location and Host");
 

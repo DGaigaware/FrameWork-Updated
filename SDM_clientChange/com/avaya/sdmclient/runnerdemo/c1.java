@@ -106,8 +106,8 @@ package com.avaya.sdmclient.runnerdemo;
 			_Check = obj.checkError(driver);
 			obj.errorBox(driver,obj.checkError(driver));
 
-			driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
-			obj.checkFailureOfHostCapacity(driver);
+			//driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
+			//obj.checkFailureOfHostCapacity(driver);
 
 			obj.exec(!_Check);
 
@@ -138,7 +138,7 @@ package com.avaya.sdmclient.runnerdemo;
 			logClass.info("Checking Status Details");*/
 			obj.chooseLink(driver, "test"+shortVMName);
 
-			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+			obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
 			
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
@@ -266,7 +266,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 			Thread.sleep(500);
 			
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
 			
 			driver.switchTo().activeElement();
 
@@ -276,7 +276,7 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
 			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
 			Thread.sleep(250);
 			driver.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
@@ -285,7 +285,7 @@ package com.avaya.sdmclient.runnerdemo;
 			driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
-			obj.waitForPresence(driver, By.xpath(locator.getProperty("RefreshVM")));
+			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
 			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
 
 			if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())

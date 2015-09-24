@@ -14,7 +14,7 @@ import com.avaya.sdmclient.logClass;
 
 public class hostOpOther {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException, InterruptedException, MyException {
 
 		Settings obj = new Settings();
 		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
@@ -25,7 +25,7 @@ public class hostOpOther {
 
 		logClass.startTestCase("Testing Other Operations");
 
-		obj.goToSite(driver);
+		obj.goToSDMCliURL(driver);
 
 		obj.findLocationOrHost(driver, "testLoc");
 

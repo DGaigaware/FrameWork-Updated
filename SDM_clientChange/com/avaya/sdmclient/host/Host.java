@@ -17,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.avaya.sdmclient.*;
+import com.avaya.sdmclient.runnerdemo.MyException;
 public class Host {
 	Settings obj = new Settings();
 
@@ -72,7 +73,7 @@ public class Host {
 	}
 
 	@Test(description="Editing Host to given Location",priority=1)
-	public void _EditHost() throws IOException, InterruptedException{
+	public void _EditHost() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Editing Host to given Location");
 

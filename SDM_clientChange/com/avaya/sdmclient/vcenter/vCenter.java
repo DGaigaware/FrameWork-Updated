@@ -22,6 +22,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.*;
+import com.avaya.sdmclient.runnerdemo.MyException;
 public class vCenter {
 	Settings obj = new Settings();
 
@@ -34,7 +35,7 @@ public class vCenter {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding vCenter to given Location")
-	public void _AddvCenter() throws IOException, InterruptedException {
+	public void _AddvCenter() throws IOException, InterruptedException, MyException {
 		// TODO Auto-generated method stub
 
 
@@ -101,7 +102,7 @@ public class vCenter {
 	}
 
 	@Test(description="Editing vCenter to given Location",priority=1)
-	public void _EditvCenter() throws InterruptedException, IOException{
+	public void _EditvCenter() throws InterruptedException, IOException, MyException{
 
 		logClass.startTestCase("Editing vCenter to given Location");
 

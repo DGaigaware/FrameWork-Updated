@@ -325,7 +325,7 @@ public class total {
 
 	@Test(description="Adding VM to given Location and Host",priority=8)
 
-	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException {
+	public void AddVMSuite() throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
 
 		boolean _Check;
 
@@ -338,12 +338,12 @@ public class total {
 
 		logClass.startTestCase("Adding VM to given Location and Host");
 
-		obj.goToSite(driver);
+		obj.goToSDMCliURL(driver);
 
 		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"))){
 			//addHost1();
 			System.out.println("Adding Host");
-			obj.goToSite(driver);
+			obj.goToSDMCliURL(driver);
 			logClass.info("Added Host as Location was not there beforehand.");
 		}
 		
@@ -415,7 +415,7 @@ public class total {
 
 		//removed
 
-		obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver);
+		obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver,"","");
 
 		driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
@@ -434,12 +434,12 @@ public class total {
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		logClass.info("Checking Status Details");
 
-		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+		obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
 		
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed"));
+		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed",""));
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 		obj.closeWindow(driver);

@@ -287,7 +287,7 @@ public class settingsForConcThreads {
 		
 		catch (SecurityException e) 
 		{
-				obj.TakeScreenShot(driver);
+				obj.takeScreenShotForDriver(driver);
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 		}

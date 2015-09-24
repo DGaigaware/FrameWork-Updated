@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.runnerdemo.MyException;
 
 public class Location {
 	Settings obj = new Settings();
@@ -30,7 +31,7 @@ public class Location {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	@Test(description="Adding Location")
-	public void _AddLocation() throws IOException, InterruptedException {
+	public void _AddLocation() throws IOException, InterruptedException, MyException {
 
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 		driver.manage().window().maximize();

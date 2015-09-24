@@ -16,7 +16,6 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -47,9 +46,10 @@ import org.xml.sax.SAXException;
 import com.avaya.sdmclient.runnerdemo.MyException;
 
 
-@SuppressWarnings("unchecked")
-public class Settings {
+@SuppressWarnings({"unchecked","unused"})
 
+public class Settings {
+	
 	Properties locator = null;
 	public void setup() throws IOException, InterruptedException
 	{
@@ -57,21 +57,28 @@ public class Settings {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	
-	public void goToSite(WebDriver driver) throws IOException, InterruptedException{
+	// Go to SDM Client URL on browser
+	public void goToSDMCliURL(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		driver.manage().window().maximize();
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
+		driver.get(locator.getProperty("SDMCliURL"));
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
 		logClass.info("Clicked on VM management");
-		driver.manage().timeouts().implicitlyWait(15500, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 	}
 	
-	public void waitForPresence(WebDriver driver,By locate){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.presenceOfElementLocated(locate));
+	//Choose a firefox profile for Tests
+	public FirefoxProfile selectProfile(String profile){
+		ProfilesIni allProfiles = new ProfilesIni();
+		FirefoxProfile profil = allProfiles.getProfile(profile);
+		boolean acceptUntrustedSsl = true;
+		profil.setAcceptUntrustedCertificates(acceptUntrustedSsl);
+		logClass.confFile();
+		return profil;
 	}
 	
-	public void TakeScreenShot(WebDriver driver) throws IOException{
+	//Take a screenshot with timestamp in it's name for errors
+	public void takeScreenShotForDriver(WebDriver driver) throws IOException{
 		String workingDirectory = System.getProperty("user.dir"); 
 	    File imageFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -82,29 +89,9 @@ public class Settings {
 		logClass.error("Something went wrong :(");
 		logClass.info("Check Screenshot for the same");
 	}
-	
-	public FirefoxProfile selectProfile(String profile){
-		ProfilesIni allProfiles = new ProfilesIni();
-		FirefoxProfile profil = allProfiles.getProfile(profile);
-		boolean acceptUntrustedSsl = true;
-		profil.setAcceptUntrustedCertificates(acceptUntrustedSsl);
-		logClass.confFile();
-		return profil;
-	}
 
-	/*public static String readInputFromFile(String fileName,String find) throws IOException{
-		//File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+fileName);
-		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+fileName);
-		Properties pr = new Properties();
-		pr.load(new FileReader(file));
-		
-		String output = pr.getProperty(find);
-		System.out.println("Read from file for "+find+": "+output);
-		return output;
-	}*/
-	
+	//Read inputs from file (Firstly it was only from text file,then added code to take input from properties file)
 	public String readFromFile(String fileName,String find) throws IOException{
-		//File file = new File("C:\\Users\\bshingala\\Avaya\\SDMTests\\"+fileName);
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+fileName);
 		/*List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
@@ -125,6 +112,7 @@ public class Settings {
 		return output;
 	}
 	
+	//Choose OVF file which is to be parsed during installation of VM
 	public String matchFileOVF(String input){
 		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
 		String returnStr = "";
@@ -137,6 +125,13 @@ public class Settings {
 		return returnStr;
 	}
 
+	//Wait Explicitly for given element for it's presence
+	public void waitForPresenceOfElement(WebDriver driver,By locate){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locate));
+	}
+
+	//Find location or host by name
 	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
@@ -157,13 +152,14 @@ public class Settings {
 		}
 	}
 
+	//To check whether location or host is available or not (So that we can add if they are not there)
 	public boolean checkLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
 		List<String> tm = new ArrayList<>();
 		boolean b = false;
-		System.out.println("Entries on Left Tree: "+cells.size()+"\n\n");
+		System.out.println("Entries on Left Tree: "+cells.size());
 
 		for(WebElement e : cells)
 		{
@@ -184,23 +180,8 @@ public class Settings {
 		}*/
 		return b;
 	}
-
-	public void checkSuccess(WebDriver driver, String input) throws IOException, InterruptedException{
-		setup();
-		WebElement table1 = driver.findElement(By.id(locator.getProperty("HostInGrid")));
-		List<WebElement> cells1 = table1.findElements(By.xpath((".//*[local-name(.)='tr']")));
-
-		for(WebElement e : cells1)
-		{
-			if(e.getText().trim().contains(input))
-			{
-				//System.out.println("next"+e.getText());
-				e.click();
-				e.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-			}
-		}
-	}
-
+	
+	//Find Location (right side) in grid
 	public void findLocationInGrid(WebDriver driver, String Location) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocationInGrid")));
@@ -214,6 +195,7 @@ public class Settings {
 		}
 	}
 
+	//Find host (right side) in grid
 	public void findHostInGrid(WebDriver driver, String Host) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("HostInGrid")));
@@ -228,13 +210,12 @@ public class Settings {
 			}
 			catch(Exception ex){
 				System.out.println("Couldn't find Host: "+Host);
-				TakeScreenShot(driver);
+				takeScreenShotForDriver(driver);
 			}
 		}
-
-
 	}
 
+	//Find VM for particular host in grid
 	public void findVMForHost(WebDriver driver, String Host) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
@@ -248,6 +229,7 @@ public class Settings {
 		}
 	}
 
+	//Find vCenter (right )
 	public void findvCenterInGrid(WebDriver driver, String VCenter) throws IOException, InterruptedException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("VCenterInGrid")));
@@ -366,7 +348,7 @@ public class Settings {
 					logClass.error("Error : Check the Log and Screenshot for the same.");
 					System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					errMsg = driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText()+"\nCheck Screenshot for the same.\n";
-					TakeScreenShot(driver);
+					takeScreenShotForDriver(driver);
 					logClass.info("Screenshot taken");
 
 					driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
@@ -409,7 +391,7 @@ public class Settings {
 					}
 		}
 		catch(Exception ex){
-			TakeScreenShot(driver);
+			takeScreenShotForDriver(driver);
 			System.out.println("Couldn't find any text");
 		}
 
@@ -466,7 +448,7 @@ public class Settings {
 			//System.out.println(e.getText()+ "\n Test \n");
 			if(e.getText().equals(input))
 			{
-				//System.out.println("\nSelected : \n"+e.getText());
+				System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
 				e.click();
 			}
 		}
@@ -479,13 +461,13 @@ public class Settings {
 		
 		JavascriptExecutor exec = (JavascriptExecutor) driver;
 		List<WebElement> allPanels = (List<WebElement>) exec.executeScript(sc1);
-		System.out.println(allPanels.size());
+		//System.out.println(allPanels.size());
 		
 		for(WebElement e : allPanels){
 			//System.out.println(e.getAttribute("id"));
 			if(e.getAttribute("id").contains("labelEl") && e.getText().equals(select)){
-				System.out.println(e.getText());
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getText());
+				//System.out.println(e.getAttribute("id"));
 				returnID = e.getAttribute("id").replace("labelEl", "inputEl");
 				System.out.println(returnID);
 			}
@@ -527,26 +509,20 @@ public class Settings {
 		Thread.sleep(3500);
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
-		WebElement el = null;
 		String rowID = "";
 		//System.out.println(cells.size()+"\n\n");
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		for(WebElement e : cells)
 		{	
-			//System.out.println("Exp: "+ExpectedConditions.stalenessOf(e));
-			//System.out.println(!ExpectedConditions.stalenessOf(e));
-			//System.out.println("Expected: "+wait.until(ExpectedConditions.stalenessOf(e)));
 			if(e.getText().contains(Name))
 				{
-					el = e;
 					rowID = e.getAttribute("id");
 					System.out.println(rowID);
 				}
 		}
 		driver.findElement(By.id(rowID)).findElement(By.className("deployinprogress")).click();
 		//el.findElement(By.className("deployinprogress")).click();
-		//findVMForHost(driver, host);
 	}
 
 	public void maintainedList(WebDriver driver,String ID) throws IOException, InterruptedException{
@@ -606,7 +582,7 @@ public class Settings {
 			{
 				System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 				logClass.error(driver.findElement(By.id(locator.getProperty("vmDeployStatus "))).getText());
-				TakeScreenShot(driver);
+				takeScreenShotForDriver(driver);
 				closeWindow(driver);
 			}
 
@@ -745,7 +721,7 @@ public class Settings {
 			}
 		}
 		
-		waitForPresence(driver, By.id(buttons.get(buttons.size()-1)));
+		waitForPresenceOfElement(driver, By.id(buttons.get(buttons.size()-1)));
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
 		System.out.println("Refreshed page successfully.");
 			
@@ -923,7 +899,6 @@ public class Settings {
 			System.out.println("Filled Values");
 		}
 		
-		@SuppressWarnings("unused")
 		public void AutoFill(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
@@ -952,7 +927,6 @@ public class Settings {
 
 		//public void AutoFillIP(WebDriver driver,String inputForJS,String IP,String fileName){
 		public void AutoFillIP(WebDriver driver,String id,String IP,String fileName){
-			@SuppressWarnings("unused")
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
 			List<String> Addresses = new ArrayList<String>();
@@ -1120,7 +1094,7 @@ public class Settings {
 			{
 				logClass.error("Something went wrong. Check Screenshot");
 				//System.out.println("Something went wrong. Check Screenshot");
-				TakeScreenShot(driver);
+				takeScreenShotForDriver(driver);
 			}
 	}
 	
@@ -1144,7 +1118,7 @@ public class Settings {
 			}
 		}
 		
-		waitForPresence(driver, By.id(buttons.get(0)));
+		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
 		System.out.println("Clicked");
 	}
