@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="0" started-at="2015-09-28T11:13:25Z" finished-at="2015-09-28T11:13:25Z">
+    <groups>
+    </groups>
+  </suite> <!-- Default Suite -->
+  <suite name="Suite1" duration-ms="2095818" started-at="2015-09-28T10:38:29Z" finished-at="2015-09-28T11:13:25Z">
+    <groups>
+    </groups>
+    <test name="CMM-07.0.0.0.441-e55-0.ova" duration-ms="2095818" started-at="2015-09-28T10:38:29Z" finished-at="2015-09-28T11:13:25Z">
+      <class name="com.avaya.sdmclient.runnerdemo.c1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@112b644f]" name="setup" is-config="true" duration-ms="1" started-at="2015-09-28T16:08:29Z" finished-at="2015-09-28T16:08:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddVMSuite(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@112b644f]" name="AddVMSuite" duration-ms="511686" started-at="2015-09-28T16:08:29Z" description="Adding VM to given Location and Host" finished-at="2015-09-28T16:17:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CMM-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVMSuite -->
+        <test-method status="PASS" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@112b644f]" name="DeleteVM" duration-ms="41167" started-at="2015-09-28T16:17:01Z" description="Deleting VM to given Location and Host" finished-at="2015-09-28T16:17:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CMM-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@112b644f]" name="startNewThread" duration-ms="1542962" started-at="2015-09-28T16:17:42Z" description="Starting New Thread" finished-at="2015-09-28T16:43:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CMM-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startNewThread -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.c1 -->
+    </test> <!-- CMM-07.0.0.0.441-e55-0.ova -->
+  </suite> <!-- Suite1 -->
+</testng-results>

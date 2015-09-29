@@ -9,12 +9,7 @@
     <classes>
       <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
         <methods>
-          <include name="StopVM"/>
-          <include name="RestartVM"/>
           <include name="DeleteVM"/>
-          <include name="EditVM"/>
-          <include name="StartVM"/>
-          <include name="RefreshVM"/>
           <include name="setup"/>
           <include name="AddVM" invocation-numbers="0"/>
         </methods>
