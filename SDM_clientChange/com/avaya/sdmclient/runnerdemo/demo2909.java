@@ -36,7 +36,7 @@ public class demo2909 {
 		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 		obj.chooseTab(driver, "Virtual Machines");
-		obj.findVMForHost(driver,"sm3");
+		obj.findVMForHost(driver,"testSM");
 
 		//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
 		
@@ -63,19 +63,23 @@ public class demo2909 {
 
 		Thread.sleep(5000);
 		
-		obj.chooseLink(driver, "sm3");
+		obj.chooseLink(driver, "testSM");
 		//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
 		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
 
+		Thread.sleep(1500);
 		if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-			driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+			{
+				driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+				System.out.println("Clicking...");
+			}
 		//Added
 		Thread.sleep(5000);
 		
-		obj.chooseLink(driver, "sm3");
+		obj.chooseLink(driver, "testSM");
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "VM Refresh Completed"));
 		obj.StatusCheck(driver, "VM Refresh Completed", 20);
 		// Uptill Now

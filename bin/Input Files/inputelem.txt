@@ -1,5 +1,9 @@
 SM
-BSM
 CMM
 US
 CM
+BSM
+SecureAccessLinkGateway
+MediaServer
+AAM
+AES

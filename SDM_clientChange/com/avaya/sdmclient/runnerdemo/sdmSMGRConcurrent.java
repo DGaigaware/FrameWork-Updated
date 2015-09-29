@@ -530,7 +530,7 @@ public class sdmSMGRConcurrent {
 
 			obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
 			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
-
+			Thread.sleep(1500);
 			if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			//Added

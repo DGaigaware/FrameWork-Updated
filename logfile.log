@@ -16180,3 +16180,180 @@ null (vmId = 1450):: Vm is already powered on
 2015-09-29 14:31:18,088 INFO  [Logger]                              Adding VM to given Location and Host                             
 2015-09-29 14:31:21,204 INFO  [Logger] Logged in Successfully 
 2015-09-29 14:31:33,091 INFO  [Logger] Clicked on VM management 
+2015-09-29 15:00:38,639 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:38,707 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:38,773 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:38,835 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:38,917 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:38,997 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:39,053 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:39,109 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:39,164 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:00:39,188 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:00:39,188 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 15:00:42,281 INFO  [Logger] Logged in Successfully 
+2015-09-29 15:00:54,209 INFO  [Logger] Clicked on VM management 
+2015-09-29 15:01:02,684 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 15:01:03,647 INFO  [Logger] Given Name 
+2015-09-29 15:02:25,850 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-29 15:02:25,855 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-09-29 15:02:25,858 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:02:25,858 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-29 15:04:55,093 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,166 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,229 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,289 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,346 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,408 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,468 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,540 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,607 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 15:04:55,629 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:04:55,629 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 15:04:58,636 INFO  [Logger] Logged in Successfully 
+2015-09-29 15:05:10,535 INFO  [Logger] Clicked on VM management 
+2015-09-29 15:05:17,766 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 15:05:18,685 INFO  [Logger] Given Name 
+2015-09-29 15:06:38,273 INFO  [Logger] Selecting NetWorks 
+2015-09-29 15:06:40,218 INFO  [Logger] Accepted EULA 
+2015-09-29 15:07:03,147 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-29 15:07:03,148 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-09-29 15:07:03,149 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:07:03,149 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-29 15:07:06,360 INFO  [Logger] Logged in Successfully 
+2015-09-29 15:07:18,325 INFO  [Logger] Clicked on VM management 
+2015-09-29 15:07:25,666 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-29 15:07:25,880 INFO  [Logger] Checking Status Details 
+2015-09-29 15:07:26,204 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-09-29 15:07:26,204 INFO  [Logger] 148.147.162.225 IP is available 
+2015-09-29 15:07:26,241 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-09-29 15:07:26,241 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-09-29 15:07:26,241 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-29 15:07:26,244 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-29 15:07:30,986 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-29 15:07:51,071 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:07:51,071 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 15:07:54,484 INFO  [Logger] Logged in Successfully 
+2015-09-29 15:08:06,789 INFO  [Logger] Clicked on VM management 
+2015-09-29 15:08:14,231 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 15:08:15,240 INFO  [Logger] Given Name 
+2015-09-29 15:08:16,554 INFO  [Logger] Checking Status Details 
+2015-09-29 15:09:18,133 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 15:09:18,133 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-29 16:03:29,513 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 16:03:29,514 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-29 16:03:32,718 INFO  [Logger] Logged in Successfully 
+2015-09-29 16:03:44,621 INFO  [Logger] Clicked on VM management 
+2015-09-29 16:04:37,240 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-09-29 16:08:20,365 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 16:08:20,366 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-29 16:08:23,831 INFO  [Logger] Logged in Successfully 
+2015-09-29 16:08:35,749 INFO  [Logger] Clicked on VM management 
+2015-09-29 16:09:28,380 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-09-29 16:11:19,487 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 16:11:19,489 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-29 16:11:22,612 INFO  [Logger] Logged in Successfully 
+2015-09-29 16:11:34,538 INFO  [Logger] Clicked on VM management 
+2015-09-29 16:12:24,603 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-09-29 16:12:25,078 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-09-29 16:12:28,033 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-09-29 16:13:59,094 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 16:13:59,095 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-29 16:14:02,154 INFO  [Logger] Logged in Successfully 
+2015-09-29 16:14:14,896 INFO  [Logger] Clicked on VM management 
+2015-09-29 16:15:12,527 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-09-29 16:15:55,802 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-09-29 16:15:56,221 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-09-29 16:15:59,168 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-09-29 18:28:25,323 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,399 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,475 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,546 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,615 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,677 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,741 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,837 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,910 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:28:25,930 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:28:25,930 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 18:28:29,169 INFO  [Logger] Logged in Successfully 
+2015-09-29 18:28:41,872 INFO  [Logger] Clicked on VM management 
+2015-09-29 18:28:48,989 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 18:28:49,960 INFO  [Logger] Given Name 
+2015-09-29 18:30:10,140 INFO  [Logger] Selecting NetWorks 
+2015-09-29 18:30:12,167 INFO  [Logger] Accepted EULA 
+2015-09-29 18:30:40,635 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-29 18:30:40,635 INFO  [Logger] InnerThread: Choosen OVA MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova 
+2015-09-29 18:30:40,637 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:30:40,637 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-29 18:30:44,175 INFO  [Logger] Logged in Successfully 
+2015-09-29 18:30:56,528 INFO  [Logger] Clicked on VM management 
+2015-09-29 18:31:03,739 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-29 18:31:04,292 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-09-29 18:31:04,292 INFO  [Logger] 148.147.162.225 IP is available 
+2015-09-29 18:31:04,323 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-09-29 18:31:04,323 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-09-29 18:31:04,324 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-29 18:31:04,389 INFO  [Logger] Checking Status Details 
+2015-09-29 18:31:55,628 INFO  [Logger] Checking Status Details 
+2015-09-29 18:33:24,606 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-29 18:33:24,606 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-09-29 18:33:24,608 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:33:24,608 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-29 18:43:18,493 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,568 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,628 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,701 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,843 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,909 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:18,975 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:19,041 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:19,110 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-09-29 18:43:19,131 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:43:19,131 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 18:43:23,240 INFO  [Logger] Logged in Successfully 
+2015-09-29 18:43:36,175 INFO  [Logger] Clicked on VM management 
+2015-09-29 18:43:43,596 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 18:43:44,579 INFO  [Logger] Given Name 
+2015-09-29 18:45:06,970 INFO  [Logger] Selecting NetWorks 
+2015-09-29 18:45:10,170 INFO  [Logger] Accepted EULA 
+2015-09-29 18:45:35,397 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-09-29 18:45:35,401 INFO  [Logger] InnerThread: Choosen OVA AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-09-29 18:45:35,403 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:45:35,403 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-09-29 18:45:41,712 INFO  [Logger] Logged in Successfully 
+2015-09-29 18:45:54,112 INFO  [Logger] Clicked on VM management 
+2015-09-29 18:45:57,183 INFO  [Logger] Checking Status Details 
+2015-09-29 18:46:01,864 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-09-29 18:46:02,379 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-09-29 18:46:02,380 INFO  [Logger] 148.147.162.225 IP is available 
+2015-09-29 18:46:02,385 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-09-29 18:46:02,385 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-09-29 18:46:02,385 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-09-29 18:46:02,388 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-09-29 18:46:05,804 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-09-29 18:46:20,226 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:46:20,226 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-09-29 18:46:23,581 INFO  [Logger] Logged in Successfully 
+2015-09-29 18:46:36,350 INFO  [Logger] Clicked on VM management 
+2015-09-29 18:46:44,046 INFO  [Logger] Clicked on - Add new VM 
+2015-09-29 18:46:45,000 INFO  [Logger] Given Name 
+2015-09-29 18:46:48,131 INFO  [Logger] Checking Status Details 
+2015-09-29 18:47:22,120 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:47:22,120 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-09-29 18:47:53,910 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:47:53,910 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-09-29 18:48:07,964 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:48:07,964 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-09-29 18:48:15,026 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:48:15,026 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-09-29 18:48:17,028 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:48:17,028 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-09-29 18:48:19,037 INFO  [Logger] *************************Started Testing****************************** 
+2015-09-29 18:48:19,037 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-09-29 18:48:32,999 INFO  [Logger] InnerThread: Test Started 
+2015-09-29 18:48:32,999 INFO  [Logger] Thread-3 18 Start 

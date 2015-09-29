@@ -1126,6 +1126,7 @@ public class Settings {
 	
 	public String chooseOVF(String input){
 		String returnStr = "";
+		String fPath = System.getProperty("user.dir")+"\\Third Party\\OVFs\\";
 		
 		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
 		File[] listOfFiles = folder.listFiles();
@@ -1158,7 +1159,7 @@ public class Settings {
 		    		}
 		    	}
 		    }
-		return returnStr;
+		return fPath+returnStr;
 	}
 	
 	public void loginToSite(WebDriver driver){
