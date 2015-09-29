@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.avaya.sdmclient.logClass;
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.ChannelSftp;
@@ -15,7 +16,7 @@ import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
 public class scpWar {
 
-	public static void scpFile() throws JSchException, IOException{
+	public void scpFile() throws JSchException, IOException{
 		String username = "admin";
 		String host = "pdev55vm2.smgrdev.avaya.com";
 		String pass = "Avaya123$";
@@ -88,7 +89,7 @@ public class scpWar {
             while((line = bufferedReader.readLine()) != null){
                 strToscp = line;
                 files.add(line);
-            	System.out.println(line);
+            	//System.out.println(line);
             }
             bufferedReader.close();
             inputReader.close();
@@ -104,14 +105,15 @@ public class scpWar {
         		forSFTP = session.openChannel("sftp");
         		forSFTP.connect();
         		c = (ChannelSftp) forSFTP;
-        		System.out.println("Starting File Upload:");
-        		String fsrc = "./logfile.log", fdest = "./";
+        		System.out.println("Starting File Download:");
+        		//String fsrc = "./logfile.log", fdest = "./";
         		//c = (ChannelSftp) channelold;
-        		System.out.println(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
+        		//System.out.println(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
         		c.get(s,System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
-        		c.put(fsrc, fdest);
+        		//c.put(fsrc, fdest);
         		//c.get("", "./");
-        		System.out.println("File upload Completed");
+        		System.out.println("Download completed "+s);
+        		logClass.info(s+" is downloaded from Upstream.("+host+")");
         	} 
         	catch (Exception e) 
         	{	
@@ -124,7 +126,8 @@ public class scpWar {
 	
 	public static void main(String[] args) throws JSchException, IOException, SftpException {
 
-		scpFile();
+		scpWar s = new scpWar();
+		s.scpFile();
 
 	}
 

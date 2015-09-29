@@ -113,7 +113,7 @@ public class Settings {
 	}
 	
 	//Choose OVF file which is to be parsed during installation of VM
-	public String matchFileOVF(String input){
+	/*public String matchFileOVF(String input){
 		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
 		String returnStr = "";
 		for(File f : folder.listFiles()){
@@ -123,12 +123,75 @@ public class Settings {
 		}
 		System.out.println("Choosen OVF: "+returnStr);
 		return returnStr;
-	}
+	}*/
 
 	//Wait Explicitly for given element for it's presence
 	public void waitForPresenceOfElement(WebDriver driver,By locate){
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locate));
+	}
+	
+	public void chooseTab(WebDriver driver,String selectTab){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script1 = "var nl = document.querySelectorAll('[id^=\"tabbar\"]'); return nl;";
+		ArrayList<WebElement> elem1 = (ArrayList<WebElement>) js.executeScript(script1);
+		
+		/*for(WebElement e : elem1)
+			System.out.println(e.getAttribute("id"));*/
+		
+		String script2 = "var nl = document.getElementById(\""+elem1.get(0).getAttribute("id")+"\").querySelectorAll('[id^=\"tab\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		
+		for(WebElement e : elem2){
+			if(e.getText().equals(selectTab))
+			{
+				//System.out.println("Selected tab is: "+e.getText());
+				e.click();
+			}
+		}
+	}
+	
+	public void selNetworkTab(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		/*String script1 = "var nl = document.querySelectorAll('[id^=\"tabbar\"]'); return nl;";
+		ArrayList<WebElement> elem1 = (ArrayList<WebElement>) js.executeScript(script1);*/
+		
+		/*for(WebElement e : elem1)
+			System.out.println(e.getAttribute("id"));*/
+		
+		String script2 = "var nl = document.querySelectorAll('[id^=\"tab-\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		/*for(WebElement e : elem2)
+			System.out.println(e.getAttribute("id"));*/
+		for(WebElement e : elem2){
+			if(e.getText().contains("Network Parameters"))
+			{
+				//System.out.println("Selected tab is: "+e.getText());
+				e.click();
+			}
+		}
+	}
+	
+	public void deployButtonClick(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elem2.size());
+		
+		String scr = "var nl = document.getElementById(\""+elem2.get(elem2.size()-1).getAttribute("id").replace("-targetEl", "")+"\").querySelectorAll('[id^=\"button-\"]'); return nl;";
+		ArrayList<WebElement> ele = (ArrayList<WebElement>) js.executeScript(scr);
+		for(WebElement ee : ele)
+			{
+				if(ee.getText().equals("Deploy"))
+				{	//System.out.println(ee.getAttribute("id"));
+					//System.out.println(ee.getText());
+					ee.click();
+					break;
+				}
+			}
 	}
 
 	//Find location or host by name
@@ -248,10 +311,11 @@ public class Settings {
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{
-			//System.out.println(e.getText()+ "\n Test \n");
+			//System.out.println(e.getAttribute("id"));
+			//System.out.println(e.getText()+ " Test ");
 			if(e.getText().contains(toBeSelected))
 			{
-				//System.out.println("\nSelected : \n"+e.getText());
+				//System.out.println("Selected : "+e.getText());
 				e.click();
 			}
 		}
@@ -367,6 +431,7 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
 		// Select the Last Boundlist which is rendered in DOM as last
+		//System.out.println(a.get(a.size()-1).getAttribute("id"));
 		return a.get(a.size()-1).getAttribute("id");
 	}
 
@@ -888,7 +953,8 @@ public class Settings {
 				System.out.println("Loop: \n");
 			}
 
-			driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
+			//driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
+			selNetworkTab(driver);
 			logClass.info("Selecting NetWorks");
 
 			for(int i=0;i<nlLabelNet.getLength();i++)
@@ -1041,6 +1107,58 @@ public class Settings {
 					}
 				}
 		}
+	}
+	
+	public String shortVMName(String input){
+		String refInput = "";
+		
+		if(input.contains("-")){
+		    	refInput = input.substring(0, input.indexOf("-"));
+		    	System.out.println("RefInput: "+refInput);
+		}
+		else if(input.contains("_")){
+		    	refInput = input.substring(0, input.indexOf("_"));
+		    	System.out.println("RefInput: "+refInput);
+		}
+		 
+		return refInput;
+	}
+	
+	public String chooseOVF(String input){
+		String returnStr = "";
+		
+		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
+		File[] listOfFiles = folder.listFiles();
+		List<String> fileNames = new ArrayList<>();
+
+		    for (int i = 0; i < listOfFiles.length; i++) {
+		      if (listOfFiles[i].isFile()) {
+		        //System.out.println("File " + listOfFiles[i].getName());
+		        fileNames.add(listOfFiles[i].getName());
+		      } else if (listOfFiles[i].isDirectory()) {
+		        System.out.println("Directory " + listOfFiles[i].getName());
+		      }
+		    }
+		    
+		   String refInput = shortVMName(input);
+		    
+		    for(String s : fileNames){
+		    	if(s.contains("-")){
+		    		if(s.substring(0,s.indexOf("-")).equalsIgnoreCase(refInput))
+		    		{
+		    			returnStr = s;
+		    			System.out.println("Choosen OVF: (-) "+returnStr);
+		    		}
+		    	}
+		    	else if(s.contains("_")){
+		    		if(s.substring(0,s.indexOf("_")).equalsIgnoreCase(refInput))
+		    		{
+		    			returnStr = s;
+		    			System.out.println("Choosen OVF: (_) "+returnStr);
+		    		}
+		    	}
+		    }
+		return returnStr;
 	}
 	
 	public void loginToSite(WebDriver driver){
@@ -1203,6 +1321,50 @@ public class Settings {
 			Thread.sleep(450);
 			System.out.println(locator.getProperty("FP"+shortvmname));
 			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundList(driver));
+		}
+	}
+	
+	public void findMoreActionsButton(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script2 = "var nl = document.getElementById(\"confighostgrid\").querySelectorAll('[id^=\"button-\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elem2.size());
+		
+		for(WebElement ee : elem2)
+			{
+				if(ee.getText().equals("More Actions"))
+				{	//System.out.println(ee.getAttribute("id"));
+					//System.out.println(ee.getText());
+					ee.click();
+					break;
+				}
+			}
+	}
+	
+	public void selectLocforEditHost(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script2 = "var nl = document.getElementById(\"hostEditForm\").querySelectorAll('[id^=\"combobox\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elem2.size());
+		
+		driver.findElement(By.id(elem2.get(0).getAttribute("id").concat("-inputEl"))).click();
+	}
+	
+	public void editVMchooseFPorFQDN(WebDriver driver,String chooseOption){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		String script2 = "var nl = document.getElementById(\"VMEditForm\").querySelectorAll('[id^=\"radiofield\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elem2.size());
+		
+		for(WebElement e : elem2){
+			if(e.getText().contains(chooseOption))
+			{
+				System.out.println("Changing: "+e.getText());
+				e.click();
+			}
 		}
 	}
 }

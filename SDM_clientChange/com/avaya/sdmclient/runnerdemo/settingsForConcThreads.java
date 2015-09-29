@@ -116,7 +116,8 @@ public class settingsForConcThreads {
 
 		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(driver, "Virtual Machines");
 		logClass.info("InnerThread: Checking if IP is assigned to any VM or not.");
 		
 		WebElement table = driver.findElement(by);
@@ -208,12 +209,31 @@ public class settingsForConcThreads {
 	 
 	public static String match(List<String> input,String fromFile){
 			String returnStr = "";
-			for(String s : input){
+			/*for(String s : input){
 				if(s.substring(0, fromFile.length()).equalsIgnoreCase(fromFile))
 					returnStr = s;
 			}
+			return returnStr;*/
+			for(String s : input){
+		    	if(s.contains("-")){
+		    		if(s.substring(0,s.indexOf("-")).equalsIgnoreCase(fromFile))
+		    		{
+		    			returnStr = s;
+		    			System.out.println("Choosen OVA: (-) "+returnStr);
+		    		}
+		    	}
+		    	else if(s.contains("_")){
+		    		if(s.substring(0,s.indexOf("_")).equalsIgnoreCase(fromFile))
+		    		{
+		    			returnStr = s;
+		    			System.out.println("Choosen OVA: (_) "+returnStr);
+		    		}
+		    	}
+		    }
 			return returnStr;
 	}
+	
+	
 	 
 	 public String chooseNextOVA(List<String> inputFromBoundlist) throws IOException{
 		 	//Settings obj = new Settings();

@@ -22,7 +22,7 @@ public class driverConcurrentInstallations {
 	 	TestNG testng;
 		testng = new TestNG();
 		testng.setPreserveOrder(true);
-		testng.setVerbose(2);
+		testng.setVerbose(10);
 		XmlSuite suite = new XmlSuite();
 		
 		suite.setSuiteFiles(Arrays.asList("./concurrent.xml"));
