@@ -55,7 +55,10 @@ public class demo0909 {
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 
 		logClass.startTestCase("Adding VM to given Location and Host");
-
+		
+		
+		obj.FillValues("", obj.chooseOVF("AES-7.0.0.0.0.13.20150629-e50-00.ova"), driver, "148.147.162.221", "test");
+/*
 		//obj.goHome(driver);
 		obj.loginToSite(driver);
 
@@ -89,16 +92,16 @@ public class demo0909 {
 		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
 		Thread.sleep(2500);
 		
-		/*obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
+		obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
 		Thread.sleep(2500);
 		
 		obj.comboClick(driver, "combobox-1238", "CM-Simplex-07.0.0.0.441-e55-0.ova");
 		Thread.sleep(2500);
-		*/
-		/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
+		
+		driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 		Thread.sleep(450);
 		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
-*/
+
 		//comboID(driver, "Select Software Library:");
 		//obj.selectFP(driver, "CM");
 		obj.comboClick(driver, "Select Software Library:","SMGR_DEFAULT_LOCAL");
@@ -116,6 +119,6 @@ public class demo0909 {
 		obj.FillValues("inputsm.properties", obj.readFromFile("input.properties", "CMFPS"), driver,"148.147.162.221","abc");
 		
 		//obj.findIDandFillValuesForVM(driver, "input.properties", "AddVM");
-	}
+*/	}
 
 }

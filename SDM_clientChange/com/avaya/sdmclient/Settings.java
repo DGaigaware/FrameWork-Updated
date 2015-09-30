@@ -860,33 +860,33 @@ public class Settings {
 					Node attr = nlmap.get(i).item(j);
 					//System.out.println(_nlmap.get(i).toString());
 					if(attr.getNodeName().contains("vmw:qualifiers")){
-						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:password")){
-						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("boolean")){
-						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("ValueMap")){
-						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = "ValueMap";//attr.getNodeValue();
-						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:key")){
-						//System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 						op[i][0] = attr.getNodeValue();
-						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 				}
 			}
@@ -904,6 +904,14 @@ public class Settings {
 					AutoFillIP(driver, op[i][0],IP,fileName);
 				}
 				
+				else if(op[i][1]==null && op[i][0].equals("ip0")){
+					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
+					System.out.println(id+" IP as textbox ..");
+					driver.findElement(By.id(id)).clear();
+					driver.findElement(By.id(id)).sendKeys(IP);
+					System.out.println("Filled IP "+IP+" for ID: "+id);
+				}
+				
 				else if(op[i][0].equalsIgnoreCase("hostname")){
 					System.out.println("Filled hostname for VM "+i + " "+hostName);
 					autoFillhostnameforVM(driver, op[i][0], hostName);
@@ -916,7 +924,6 @@ public class Settings {
 					AutoFillIP(driver, op[i][0],readFromFile(fileName, op[i][0]),fileName);
 				}
 				
-
 				else if(op[i][1]!=null && op[i][1].equals("true"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
@@ -1261,8 +1268,12 @@ public class Settings {
 		}
 		
 		for(String s : IDs){
-			if((inputIDfromOVF+"-inputEl").equalsIgnoreCase(s))
-				returnID = s;
+			//if((inputIDfromOVF+"-inputEl").equalsIgnoreCase(s))
+			if(s.contains(inputIDfromOVF))
+				{
+					returnID = s;
+					break;
+				}
 		}
 		return returnID;
 	}

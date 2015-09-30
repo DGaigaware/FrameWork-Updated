@@ -34,8 +34,10 @@ import com.avaya.sdmclient.logClass;
 public class settingsForConcThreads {
 	
 	public String createTempXMl(String testName,String IP) throws ParserConfigurationException, SAXException, IOException{
+		Settings obj = new Settings();
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp.xml");
-		File file1 = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp"+testName.substring(0, testName.indexOf("-"))+".xml");
+		//File file1 = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp"+testName.substring(0, testName.indexOf("-"))+".xml");
+		File file1 = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp"+obj.shortVMName(testName)+".xml");
 		List<String> lines = FileUtils.readLines(file);
 		String addIP = "<parameter name=\"IP\" value=\""+IP+"\"/>";
 		String VMname = "<parameter name=\"VMName\" value=\""+testName+"\"/>";
