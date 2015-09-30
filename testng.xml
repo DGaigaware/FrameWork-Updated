@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite1">
-   <test name="test1">
-   
-      <parameter name="IP" value="148.147.162.221"/> 
-      
-      <classes>
-         <class name="demoToRun" />
-      </classes>
-      
-   </test>
-</suite>
 <suite name="Suite" parallel="false" preserve-order="true">
 <!--groups>
    <run>
