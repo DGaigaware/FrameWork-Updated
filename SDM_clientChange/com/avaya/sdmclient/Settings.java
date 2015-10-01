@@ -1379,5 +1379,22 @@ public class Settings {
 			}
 		}
 	}
+	
+	public void clickMapvCenter(WebDriver driver){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String sc = "var nl = document.querySelectorAll('[id^=\"menuitem\"]');return nl;";
+		
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elem2.size());
+		
+		for(WebElement e : elem2){
+			if(e.getText().equals("Map vCenter"))
+			{
+				//System.out.println("Changing: "+e.getText());
+				e.click();
+				break;
+			}
+		}
+	}
 }
 

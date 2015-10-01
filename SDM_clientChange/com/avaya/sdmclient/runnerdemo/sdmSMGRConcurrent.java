@@ -632,7 +632,7 @@ public class sdmSMGRConcurrent {
 			}
 		
 		
-		@Test(description="Starting New Thread",priority=100)
+		@Test(dependsOnMethods={"AddVM","DeleteVM"},description="Starting New Thread",priority=100)
 		@Parameters({"IP", "VMName"})
 		public void startNewThread(String IP,String VMName) throws InterruptedException{
 			//Thread.sleep(4500);

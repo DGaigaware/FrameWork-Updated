@@ -29,7 +29,7 @@ public class VC2508 {
 
 	public static void check(WebDriver driver,List<String> inputIP){
 
-		WebElement table = driver.findElement(By.id(locator.getProperty("gridview-1369")));
+		WebElement table = driver.findElement(By.id(locator.getProperty("VCVMList")));
 		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty(".//*[local-name(.)='td']")));
 		System.out.println(cells.size()+"\n\n");
 		for(int i=0;i<inputIP.size();i++)
@@ -53,6 +53,7 @@ public class VC2508 {
 		inputIP.add("148.147.162.16");
 		inputIP.add("148.147.162.18");
 		inputIP.add("148.147.162.120");
+		inputIP.add("148.147.162.78");
 
 		WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 
@@ -61,10 +62,12 @@ public class VC2508 {
 
 		logClass.startTestCase("Editing vCenter to given Location");
 
-		obj.goToSDMCliURL(driver);
+		//obj.goToSDMCliURL(driver);
+		obj.loginToSite(driver);
 		
 		Thread.sleep(1500);
-		driver.findElement(By.xpath(locator.getProperty("VCenterMap"))).click();
+		obj.clickMapvCenter(driver);
+		//driver.findElement(By.xpath(locator.getProperty("VCenterMap"))).click();
 		logClass.info("Clicked on 'Map vCenter' ");
 
 		obj.findvCenterInGrid(driver, "148.147.162.168");
@@ -75,7 +78,7 @@ public class VC2508 {
 		Thread.sleep(9000);
 
 		check(driver,inputIP);
-		driver.findElement(By.id(locator.getProperty("manageHosts"))).click();
+		driver.findElement(By.id(locator.getProperty("VCArrowToAdd"))).click();
 
 		driver.findElement(By.id(locator.getProperty("gridcolumn-1515-titleEl"))).click();
 		driver.findElement(By.id(locator.getProperty("bulkLocationUpdateCombo-inputEl"))).click();

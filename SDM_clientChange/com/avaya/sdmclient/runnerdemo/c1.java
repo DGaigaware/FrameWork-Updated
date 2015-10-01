@@ -384,6 +384,8 @@ import com.avaya.sdmclient.vm.VM;
 			
 			driver.quit();
 			
+			obj.makeIPWhiteBlackList(IP, "WhiteList");
+			
 			/*final WebDriver driver2 = new FirefoxDriver(obj.selectProfile("Selenium"));
 			class MyRunnable implements Runnable {
 				 public void run() {
