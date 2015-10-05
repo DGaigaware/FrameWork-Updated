@@ -93,6 +93,8 @@ public class Settings {
 	//Read inputs from file (Firstly it was only from text file,then added code to take input from properties file)
 	public String readFromFile(String fileName,String find) throws IOException{
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+fileName);
+		
+		//Older Version to read from file
 		/*List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		String output = null;
@@ -104,6 +106,7 @@ public class Settings {
 					if(sc.hasNext())
 						output = sc.next().trim();
 		}*/
+		
 		Properties pr = new Properties();
 		pr.load(new FileReader(file));
 		
@@ -131,6 +134,7 @@ public class Settings {
 		wait.until(ExpectedConditions.presenceOfElementLocated(locate));
 	}
 	
+	//Choose tab to choose options like Location/host/VM
 	public void chooseTab(WebDriver driver,String selectTab){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -152,6 +156,7 @@ public class Settings {
 		}
 	}
 	
+	//Select tab to choose Network Parameters
 	public void selNetworkTab(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -174,6 +179,7 @@ public class Settings {
 		}
 	}
 	
+	//Click on deploy button
 	public void deployButtonClick(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -292,7 +298,7 @@ public class Settings {
 		}
 	}
 
-	//Find vCenter (right )
+	//Find vCenter (right side table)
 	public void findvCenterInGrid(WebDriver driver, String VCenter) throws IOException, InterruptedException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("VCenterInGrid")));
@@ -305,22 +311,25 @@ public class Settings {
 		}
 	}
 
-	public void boundListSelect(WebDriver driver,String toBeSelected,String s) throws IOException, InterruptedException{
+	//Select  element from dropdown
+	public void boundListSelect(WebDriver driver,String toBeSelected,String idForBoundlist) throws IOException, InterruptedException{
 		setup();
-		WebElement element = driver.findElement(By.id((s)));
+		WebElement element = driver.findElement(By.id((idForBoundlist)));
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{
 			//System.out.println(e.getAttribute("id"));
-			//System.out.println(e.getText()+ " Test ");
+			System.out.println(e.getText()+ " Test "+e.getAttribute("id"));
 			if(e.getText().contains(toBeSelected))
 			{
 				//System.out.println("Selected : "+e.getText());
 				e.click();
+				System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
 			}
 		}
 	}
 
+	//Check resources and log them if verification fails
 	public void checkFailureOfHostCapacity(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("HostCapacity")));
@@ -372,11 +381,11 @@ public class Settings {
 	}
 
 	public List<String> makeFields(String input){
-		List<String> _Fields = new ArrayList<String>();
-		int _it = Integer.parseInt(removeAlpha(input));
+		List<String> fields = new ArrayList<String>();
+		int it = Integer.parseInt(removeAlpha(input));
 		for(int i=0;i<4;i++)
-			_Fields.add(".//*[@id='textfield-"+(_it+(i*2))+"-inputEl']");
-		return _Fields;
+			fields.add(".//*[@id='textfield-"+(it+(i*2))+"-inputEl']");
+		return fields;
 	}
 
 	public void IPFill(WebDriver driver,String IP,String startAddress){
@@ -427,6 +436,7 @@ public class Settings {
 		return errMsg;
 	}
 
+	//ID for boundlist (rendered last in DOM)
 	public String selBoundList(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
@@ -475,6 +485,7 @@ public class Settings {
 			//System.out.println("Confirmed");
 		}
 		catch(Exception ex){
+			System.out.println("Confirmed");
 		}
 	}
 
@@ -1392,6 +1403,31 @@ public class Settings {
 			{
 				//System.out.println("Changing: "+e.getText());
 				e.click();
+				break;
+			}
+		}
+	}
+	
+	public void editVM(WebDriver driver,String IP,String FQDN){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String sc = "var nl = document.getElementById(\"VMEditForm-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
+		
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elem2.size());
+		
+		for(WebElement e : elem2){
+			if(e.getText().equals("VM IP:")){
+				System.out.println(e.getAttribute("id"));
+				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
+				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(IP);
+				break;
+			}
+		}
+		for(WebElement e : elem2){
+			if(e.getText().equals("VM FQDN:")){
+				System.out.println(e.getAttribute("id"));
+				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
+				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(FQDN);
 				break;
 			}
 		}

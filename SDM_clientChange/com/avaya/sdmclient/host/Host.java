@@ -39,11 +39,11 @@ public class Host {
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
 
 		logClass.startTestCase("Adding Host to given Location");
-
+//
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
 		logClass.info("Clicked on VM management");
-
+//
 		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"));
 
 		driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();

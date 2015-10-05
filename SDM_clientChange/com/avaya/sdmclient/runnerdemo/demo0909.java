@@ -54,71 +54,42 @@ public class demo0909 {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 
-		logClass.startTestCase("Adding VM to given Location and Host");
+		/*System.out.println("Starting to edit VM "+ VMName);
+		logClass.info("Starting to edit VM "+ VMName);
+		String shortVMName = obj.shortVMName(VMName);*/
 		
-		
-		obj.FillValues("", obj.chooseOVF("AES-7.0.0.0.0.13.20150629-e50-00.ova"), driver, "148.147.162.221", "test");
-/*
-		//obj.goHome(driver);
+		logClass.startTestCase("Editing VM to given Location and Host");
+
 		obj.loginToSite(driver);
 
-		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"))){
-			//addHost();
-			System.out.println("Adding Host");
-			obj.goHome(driver);
-			logClass.info("Added Host as Location was not there beforehand.");
-		}
-		
 		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-		driver.findElement(By.xpath(locator.getProperty("NewVM"))).click();
-		logClass.info("Clicked on - Add new VM");
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(driver, "Virtual Machines");
+		obj.findVMForHost(driver, "sm3");
+		
+		driver.findElement(By.xpath(locator.getProperty("EditVM"))).click();
+		logClass.info("Clicked on - Edit VM");
 		Thread.sleep(750);
 
-		driver.findElement(By.xpath(locator.getProperty("VMName"))).clear();
-		//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.properties", "VMName"));
-		driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("input.properties", "VMName221"));
-		logClass.info("Given Name");
-		Thread.sleep(250);
+		//driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVM"))).click();
 
-		obj.errorBox(driver,obj.checkError(driver));
+		obj.editVMchooseFPorFQDN(driver, "FQDN");
+		driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("DataStore"))).click();
-		Thread.sleep(250);
+		obj.editVM(driver,"null","null");
 		
-		obj.errorBox(driver,obj.checkError(driver));
+		/*driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
+		driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
 
-		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
-		Thread.sleep(2500);
-		
-		obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
-		Thread.sleep(2500);
-		
-		obj.comboClick(driver, "combobox-1238", "CM-Simplex-07.0.0.0.441-e55-0.ova");
-		Thread.sleep(2500);
-		
-		driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
-		Thread.sleep(450);
-		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
+		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
+		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-		//comboID(driver, "Select Software Library:");
-		//obj.selectFP(driver, "CM");
-		obj.comboClick(driver, "Select Software Library:","SMGR_DEFAULT_LOCAL");
-		Thread.sleep(2500);
-		obj.comboClick(driver, "Select OVAs:", "CMM-07.0.0.0.440-e55-0.ova");
-		Thread.sleep(2500);
-		_Check = obj.checkError(driver);
-		obj.errorBox(driver,obj.checkError(driver));
+		obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
+		driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
-		obj.checkFailureOfHostCapacity(driver);
-
-		obj.exec(!_Check);
-		
-		obj.FillValues("inputsm.properties", obj.readFromFile("input.properties", "CMFPS"), driver,"148.147.162.221","abc");
-		
-		//obj.findIDandFillValuesForVM(driver, "input.properties", "AddVM");
-*/	}
+		obj.errorBox(driver, obj.checkError(driver));
+		logClass.endTestCase("Edited VM Successfully");
+	}
 
 }

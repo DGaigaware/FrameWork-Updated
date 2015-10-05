@@ -370,7 +370,8 @@ public class sdmSMGRConcurrent {
 		}
 
 	
-		@Test(dependsOnMethods={"AddVM"},description="Editing VM to given Location and Host",priority=9)
+		//@Test(dependsOnMethods={"AddVM"},description="Editing VM to given Location and Host",priority=9)
+		@Test(description="Editing VM to given Location and Host",priority=9)
 		@Parameters({"IP", "VMName"})
 		public void EditVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 			System.out.println("Starting to edit VM "+ VMName);
@@ -397,11 +398,13 @@ public class sdmSMGRConcurrent {
 			obj.editVMchooseFPorFQDN(driver, "FQDN");
 			driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
-			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
+			obj.editVM(driver,IP,"test"+shortVMName+"edited");
+			
+			/*driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
 
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");
+			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
 			obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
 			driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
@@ -411,7 +414,8 @@ public class sdmSMGRConcurrent {
 		}
 
 
-		@Test(dependsOnMethods={"AddVM"},description="Stoping VM to given Location and Host",priority=10)
+		//@Test(dependsOnMethods={"AddVM"},description="Stoping VM to given Location and Host",priority=10)
+		@Test(description="Stoping VM to given Location and Host",priority=10)
 		@Parameters({"IP", "VMName"})
 		public void StopVM(String IP,String VMName) throws InterruptedException, IOException{
 
@@ -445,7 +449,8 @@ public class sdmSMGRConcurrent {
 		}
 
 
-		@Test(dependsOnMethods={"AddVM"},description="Starting VM to given Location and Host",priority=11)
+		//@Test(dependsOnMethods={"AddVM"},description="Starting VM to given Location and Host",priority=11)
+		@Test(description="Starting VM to given Location and Host",priority=11)
 		@Parameters({"IP", "VMName"})
 		public void StartVM(String IP,String VMName) throws InterruptedException, IOException{
 
@@ -477,7 +482,8 @@ public class sdmSMGRConcurrent {
 		}
 
 
-		@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
+		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
+		@Test(description="Refreshing VM to given Location and Host",priority=12)
 		@Parameters({"IP", "VMName"})
 		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException{
 
@@ -546,7 +552,8 @@ public class sdmSMGRConcurrent {
 		}
 
 
-		@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
+		//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
+		@Test(description="Restarting VM to given Location and Host",priority=13)
 		@Parameters({"IP", "VMName"})
 		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException{
 
@@ -576,7 +583,8 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(100000);
 		}
 
-		@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
+		//@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
+		@Test(description="Deleting VM to given Location and Host",priority=14)
 		@Parameters({"IP", "VMName"})
 		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException{
 
@@ -632,7 +640,7 @@ public class sdmSMGRConcurrent {
 			}
 		
 		
-		@Test(dependsOnMethods={"AddVM","DeleteVM"},description="Starting New Thread",priority=100)
+		@Test(description="Starting New Thread",priority=100)
 		@Parameters({"IP", "VMName"})
 		public void startNewThread(String IP,String VMName) throws InterruptedException{
 			//Thread.sleep(4500);
@@ -645,10 +653,8 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver3);
 					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }

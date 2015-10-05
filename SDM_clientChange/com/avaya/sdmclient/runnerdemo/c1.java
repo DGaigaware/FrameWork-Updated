@@ -184,11 +184,13 @@ import com.avaya.sdmclient.vm.VM;
 			obj.editVMchooseFPorFQDN(driver, "FQDN");
 			driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
-			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
+			obj.editVM(driver,IP,"test"+shortVMName+"edited");
+			
+			/*driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
 
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys("test"+shortVMName+"edited");
+			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
 			obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
 			driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
