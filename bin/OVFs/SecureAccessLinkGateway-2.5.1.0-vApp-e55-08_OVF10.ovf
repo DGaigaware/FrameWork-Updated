@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ovf:Envelope xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vmw="http://www.vmware.com/schema/ovf">
+  <References>
+    <File ovf:href="system.vmdk" ovf:size="1786147328" ovf:id="system.vmdk_id"/>
+  </References>
+  <NetworkSection>
+    <Info>List of logical networks used in the package</Info>
+    <Network ovf:name="Public">
+      <Description>Customer LAN</Description>
+    </Network>
+    <Network ovf:name="Out of Band Management">
+      <Description>Out of Band Management. This is an optional interface. To support serviceability for products on OOBM network, customer needs to enable this interface. To enable/configure this OOBM interface, kindly refer to User Documentation.</Description>
+    </Network>
+  </NetworkSection>
+  <vmw:IpAssignmentSection ovf:required="false" vmw:protocols="IPv4,IPv6" vmw:schemes="">
+    <Info>Supported IP assignment schemes</Info>
+  </vmw:IpAssignmentSection>
+  <DiskSection>
+    <Info>List of the virtual disks and partitions needed</Info>
+    <Disk ovf:diskId="system" ovf:capacity="10240" ovf:capacityAllocationUnits="byte * 2^20" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" ovf:fileRef="system.vmdk_id" ovf:populatedSize="3279421440"/>
+  </DiskSection>
+  <VirtualSystem ovf:id="Secure_Access_Link_Gateway_Virtual_Appliance">
+    <Info>A virtual machine</Info>
+    <EulaSection>
+      <Info>End User License Agreement</Info>
+      <License ovf:msgid="license_0">The license agreement for Secure Access Link Gateway is as follows:
+	
+ACS SAL(TM) License Agreement
+									
+AVAYA GLOBAL SOFTWARE LICENSE TERMS
+
+THIS END USER LICENSE AGREEMENT ("SOFTWARE LICENSE TERMS") GOVERNS THE USE OF AVAYA'S PROPRIETARY SOFTWARE and Third-party proprietary software. READ THESE SOFTWARE LICENSE TERMS CAREFULLY, IN ITS ENTIRETY, BEFORE INSTALLING, DOWNLOADING OR USING THE AVAYA PRODUCT(S)(AS DEFINED BELOW). BY INSTALLING, DOWNLOADING OR USING THE AVAYA PRODUCT(S), OR AUTHORIZING OTHERS TO DO SO, YOU, ON BEHALF OF YOURSELF AND THE ENTITY FROM WHOM YOU ARE INSTALLING, DOWNLOADING OR USING THE PRODUCT(S) (HEREINAFTER REFERRED TO INTERCHANGEABLY AS "YOU" AND "END USER"), AGREE TO THESE TERMS AND CONDITIONS AND CREATE A BINDING CONTRACT BETWEEN YOU AND AVAYA INC. OR THE APPLICBALE AVAYA AFFILIATE FROM WHOM YOU PURCHASED THE AVAYA PRODUCT(S) ("AVAYA"). ANY USE OF THE PRODUCT(S) WILL CONSTITUTE YOUR ASSENT TO THE TERMS OF THIS AGREEMENT (OR RATIFICATION OF PREVIOUS CONSENT). IF YOU DO NOT WISH TO BE BOUND BY THESE SOFTWARE LICENSE TERMS, YOU MUST RETURN OR DELETE THE PRODUCT(S) WITHIN TEN (10) DAYS OF DELIVERY FOR A REFUND OF THE FEE, IF ANY, YOU PAID FOR THE LICENSE OR IF SOFTWARE IS ACCESSED ELECTRONICALLY, SELECT THE "DECLINE" BUTTON AT THE END OF THESE SOFTWARE LICENSE TERMS.
+						
+A. Scope. These Software License Terms are applicable to anyone who downloads and/or installs Avaya software (the "Products" or "software"), purchased from Avaya Inc., any Avaya Affiliate, or an authorized Avaya reseller (as applicable) under a commercial agreement with Avaya or authorized Avaya reseller ("Agreement"). Unless otherwise agreed to by Avaya in writing, Avaya does not extend this license if the Product was obtained from anyone other than Avaya, an Avaya Affiliate or an Avaya authorized reseller and Avaya reserves the right to take legal action against you and anyone else using or selling these Products without a license. To the extent there is a conflict between these Software License Terms and your Agreement, the terms and restrictions set forth in your Agreement shall prevail. "Avaya Affiliate" means any entity that is directly or indirectly controlling, controlled by, or under common control with Avaya Inc. For purposes of this definition, "control" means the power to direct the management and policies of such party, directly or indirectly, whether through ownership of voting securities, by contract or otherwise; and the terms "controlling" and "controlled" have meanings correlative to the foregoing.
+
+B. License Grant. Subject to the applicable license terms and restrictions within and incorporated by the commercial agreement between you and Avaya, Avaya grants You a personal, non-sublicensable, non-exclusive, non-transferable license to use Software and Documentation obtained from Avaya or an Avaya authorized reseller and for which applicable fees have been paid, in object code form, for your internal business purposes at the indicated capacity and features and within the scope of the applicable license types described below and at locations where the Software is initially installed. "Documentation" means Avaya information and manuals containing operating instructions and performance specifications that Avaya generally makes available to users of its products and delivers with the Products. Documentation does not include marketing materials.
+
+C. All Rights Reserved. Except for the limited license rights expressly granted in these Software License Terms, Avaya reserves all rights in and to the Software and Documentation and any modifications thereto. You will own only the hardware or physical media on which the Software are stored, if any.
+
+D. General License Restrictions. To the extent permissible under applicable law, you agree not to: (i) decompile, disassemble, or reverse engineer the Software; (ii) alter, modify or create any derivative works based on the Software or Documentation; (iii) merge the Software with any other Software other than as expressly set forth in the Documentation; (iv) use, copy, sell, sublicense, lease, rent, loan, assign, convey or otherwise transfer the Software or Documentation except as expressly authorized by the Agreement with an Avaya Affiliate; (v) distribute, disclose or allow use of the Software or Documentation, in any format, through any timesharing service, service bureau, network or by any other means; (vi) allow any service provider or other third party, with the exception of Avaya's authorized channel resellers and their designated employees ("Authorized Providers") who are acting solely on behalf of and for the benefit of Customer, to use or execute any software commands that cause the Software to perform functions that facilitate the maintenance or repair of any Product except that a service provider or other third party may execute those software commands that, as designed by Avaya, would operate if a user is logged into a Product using a customer level login and Maintenance Software Permissions ("MSPs") were not enabled or activated; (vii) gain access to or the use of any Software or part thereof without authorization from Avaya; (viii) enable or activate, or cause, permit or allow others to enable or activate any logins reserved for use by Avaya or Authorized Providers; or (ix) permit or encourage any third party to do so. Authorized Providers shall be obligated to comply with the terms and provisions of this Agreement. Customer shall advise any third party, including any Authorized Provider, who accesses or uses any Software of the terms and provisions of this Agreement. Customer shall be responsible for such third party's failure to comply and shall indemnify Avaya for any damages, loss, expenses or costs, including attorneys' fees and costs of suit, incurred by Avaya as a result of non-compliance with this section. Notwithstanding the foregoing, if the Software is rightfully located in a member state of the European Union and End User needs information about the Software in order to achieve interoperability of an independently created software program with the Software, End User will first request such information from Avaya. Avaya may charge End User a reasonable fee for the provision of such information. If Avaya refuses to make such information available, then End User may take steps, such as reverse assembly or reverse compilation, to the extent necessary solely in order to achieve interoperability of the Software with an independently created software program. To the extent that the End User is expressly permitted by applicable mandatory law to undertake any of the activities listed in this section End User will not exercise those rights until End User has given Avaya twenty (20) days written notice of its intent to exercise any such rights.
+
+E. Backup Copies. You may create a reasonable number of archival and backup copies of the Software and the Documentation, provided all proprietary rights notices, names and logos of Avaya and its suppliers are duplicated on each copy.
+
+F. Warranty. Avaya provides a limited warranty on its Products. Refer to your Agreement to establish the terms of the limited warranty. In addition, Avaya's standard warranty language as well as information regarding support for the Product, while under warranty, is available through the following web site: http://support.avaya.com. Please note that if you are acquiring the Avaya Products from an authorized Avaya reseller in Europe, Middle East, Africa, the Caribbean or Latin America, the warranty is provided to you by said Avaya reseller and not by Avaya. EXCEPT AS REFERENCED HEREIN, NEITHER AVAYA NOR ITS SUPPLIERS MAKES ANY EXPRESS REPRESENTATIONS OR WARRANTIES WITH REGARD TO ANY PRODUCTS OR SERVICES OR OTHERWISE RELATED TO THE AGREEMENT OR SOFTWARE LICENSE TERMS. AVAYA DOES NOT WARRANT UNINTERRUPTED OR ERROR FREE OPERATION OF PRODUCTS. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AVAYA DISCLAIMS ALL WARRANTIES IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+G. COMPLIANCE. AT AVAYA'S REQUEST AND UPON REASONABLE PRIOR WRITTEN NOTICE, AVAYA WILL HAVE THE RIGHT TO INSPECT CUSTOMER'S COMPLIANCE WITH THESE SOFTWARE LICENSE TERMS.
+
+H. Termination of License. If You breach the license limitations or restrictions in these Software License Terms and if within ten (10) business days of your receipt of a reasonably detailed written request to cure, you have not cured all breaches of license limitations or restrictions, Avaya may, with immediate effect, terminate the Software licenses granted in these Software License Terms.
+
+I.  License Types. Avaya grants you a license within the scope of the license types described below. Where the order documentation does not expressly identify a license type, the applicable license will be a Designated System License. The applicable number of licenses and units of capacity for which the license is granted will be one (1), unless a different number of licenses or units of capacity is specified in the documentation or other materials available to you. "Designated Processor" means a single stand-alone computing device. "Server" means a Designated Processor that hosts a software application to be accessed by multiple users. "Software" means the computer programs in object code, originally licensed by Avaya and ultimately utilized by you, whether as stand-alone Products or pre-installed on Hardware. "Hardware" means the standard hardware Products, originally sold by Avaya and ultimately utilized by you. Designated System(s) License (DS).End User may install and use each copy of the Software only on a number of Designated Processors up to the number indicated in the order. Avaya may require the Designated Processor(s) to be identified in the order by type, serial number, feature key, location or other specific designation, or to be provided by End User to Avaya through electronic means established by Avaya specifically for this purpose.
+
+Concurrent User License (CU). End User may install and use the Software on multiple Designated Processors or one or more Servers, so long as only the licensed number of Units are accessing and using the Software at any given time. A "Unit" means the unit on which Avaya, at its sole discretion, bases the pricing of its licenses and can be, without limitation, an agent, port or user, an e-mail or voice mail account in the name of a person or corporate function (e.g., webmaster or helpdesk), or a directory entry in the administrative database utilized by the Product that permits one user to interface with the Software. Units may be linked to a specific, identified Server.
+
+Database License (DL). End User may install and use each copy of the Software on one Server or on multiple Servers provided that each of the Servers on which the Software is installed communicates with no more than a single instance of the same database.
+
+CPU License (CP). End User may install and use each copy of the Software on a number of Servers up to the number indicated in the order provided that the performance capacity of the Server(s) does not exceed the performance capacity specified for the Software. End User may not re-install or operate the Software on Server(s) with a larger performance capacity without Avaya's prior consent and payment of an upgrade fee.
+
+Named User License (NU). You may: (i) install and use the Software on a single Designated Processor or Server per authorized Named User (defined below); or (ii) install and use the Software on a Server so long as only authorized Named Users access and use the Software. "Named User," means a user or device that has been expressly authorized by Avaya to access and use the Software. At Avaya's sole discretion, a "Named User" may be, without limitation, designated by name, corporate function (e.g., webmaster or helpdesk), an e-mail or voice mail account in the name of a person or corporate function, or a directory entry in the administrative database utilized by the Product that permits one user to interface with the Product.
+
+Shrinkwrap License (SR). You may install and use the Software in accordance with the terms and conditions of the applicable license agreements, such as "shrinkwrap" or "clickthrough" license accompanying or applicable to the Software ("Shrinkwrap License"). The text of the Shrinkwrap License is available on Avaya's web site at: http://support.avaya.com/Copyright.
+
+J. Third-party Components. Certain software programs or portions thereof included in the Product may contain software(including open source software) distributed under third party agreements ("Third Party Components"), which may contain terms that expand or limit rights to use certain portions of the Product ("Third Party Terms"). Information identifying the copyright holders of the Third Party Components and the Third Party Terms that apply is available on Avaya's web site at: http://support.avaya.com/Copyright.
+
+K. Limitation of Liability. EXCEPT FOR PERSONAL INJURY CLAIMS, WILLFUL MISCONDUCT AND END USER'S VIOLATION OF AVAYA'S OR ITS SUPPLIERS INTELLECTUAL PROPERTY RIGHTS, INCLUDING THROUGH A BREACH OF THE SOFTWARE LICENSE, NEITHER AVAYA, ITS SUPPLIERS NOR END USER SHALL BE LIABLE FOR (i) ANY INCIDENTAL, SPECIAL, STATUTORY, INDIRECT OR CONSEQUENTIAL DAMAGES, OR (ii) FOR ANY LOSS OF PROFITS, REVENUE, OR DATA, TOLL FRAUD, OR COST OF COVER AND (iii) DIRECT DAMAGES ARISING UNDER THESE SOFTWARE LICENSE TERMS IN EXCESS OF THE PURCHASE PRICE AND FEES PAID FOR THE PRODUCTS OR SERVICES GIVING RISE TO THE CLAIM.
+
+SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.
+
+L. PROTECTION OF CONFIDENTIAL SOFTWARE AND DOCUMENTATION. END USER ACKNOWLEDGES THAT THE SOFTWARE AND DOCUMENTATION ARE REGARDED AS CONFIDENTIAL BY AVAYA AND ITS SUPPLIERS ("CONFIDENTIAL INFORMATION") AND END USER AGREES AT ALL TIMES TO PROTECT AND PRESERVE IN STRICT CONFIDENCE THE SOFTWARE AND DOCUMENTATION. THE END USER AGREES NOT TO PERMIT OR AUTHORIZE ACCESS TO, OR DISCLOSURE OF THE SOFTWARE AND DOCUMENTATION TO ANY PERSON OR ENTITY OTHER THAN EMPLOYEES OF END USER WHO HAVE AGREED IN WRITING TO BE BOUND BY THE TERMS OF THIS AGREEMENT AND HAVE A NEED TO ACCESS THE SOFTWARE AND DOCUMENTATION FOR THE BENEFIT OF THE END USER.
+
+M. Protection of Personal Data. The use of the Products may require the processing of Personal Data pertaining to You or to your personnel. Personal Data required to use the Products will need to be submitted to Avaya. Failing the submission of such data, the use of the Products will not be possible. You or your personnel have a right to access and correct erroneous Personal Data pertaining to You or your personnel and to object for legitimate reasons to the processing and transfer of these data. You can exercise this right by contacting in writing the Data Privacy Officer of the applicable Avaya Affiliate [specify country in localized version].
+
+N. Miscellaneous. These Software License Terms will be governed by New York State laws, excluding conflict of law principles and the United Nations Convention on Contracts for the International Sale of Goods. If a dispute cannot be settled by good faith negotiation between the parties within a reasonable period of time, and to the extent authorized by applicable law, it must be finally settled upon request of either party by arbitration to be held in accordance with the Rules of Arbitration of the International Chamber of Commerce by a single arbitrator appointed by the parties or (failing agreement) by an arbitrator appointed by the President of the International Chamber of Commerce (from time to time). The arbitration will be conducted in the English language, at a location agreed by the parties or (failing agreement) ordered by the arbitrator. The arbitrator will have authority only to award compensatory damages and will not award punitive or exemplary damages. The arbitrator will not have the authority to limit, expand or otherwise modify the Software License Terms. The ruling by the arbitrator will be final and binding on the parties and may be entered in any court having jurisdiction. Avaya and you will each bear its own attorneys' fees associated with the arbitration. Notwithstanding the foregoing, Avaya shall be entitled to take immediate legal action where required to protect its confidential or proprietary information, or to obtain any interim injunction. If any provision of these Software License Terms is determined to be unenforceable or invalid, these Software License Terms will not be rendered unenforceable or invalid as a whole, and the provision will be changed and interpreted so as to best accomplish the objectives of the original provision within the limits of applicable law. The failure to assert any rights under the Software License Terms, including, but not limited to, the right to terminate in the event of breach or default, will not be deemed to constitute a waiver of the right to enforce each and every provision of the Software License Terms in accordance with their terms. You will not export or re-export the Software or any technical information provided under these Software License Terms in any form in violation of the export control laws of the United States of America and of any other applicable country. For more information on such export laws and regulations, you may refer to the resources provided in the websites maintained by the U.S. Commerce Department, the U.S. State Department and the U.S. Office of Foreign Assets Control.
+
+If you are a resident of Canada, the following will also apply:
+
+Please note that this Section refers to U.S. export and re-export controls in connection with U.S.-origin products and, therefore, does not raise issues under Canada's Foreign Extraterritorial Measures Act.
+
+Agreement in English. The parties confirm that it is their wish that these Software License Terms, as well as all other documents relating hereto, including all notices, have been and shall be drawn up in the English language only. Les parties aux présentes confirment leur volonté que cette convention, de même que tous les documents, y compris tout avis, qui s'y rattachent, soient rédigés en langue anglaise. Las partes ratifican que es su voluntad que este Contrato, así como cualquier otro documento relacionado con el mismo, incluyendo todo tipo de notificaciones, han sido redactados y deberán continuar siendo redactados únicamente en el idioma inglés.</License>
+    </EulaSection>
+    <ProductSection ovf:required="false">
+      <Info>VM ISV branding information</Info>
+      <Product>Secure Access Link Gateway Virtual Appliance</Product>
+      <Vendor>Avaya</Vendor>
+      <!--
+            Version is the actual product version in the
+            form X.X.X.X where X is an unsigned 16-bit integer.
+
+            FullVersion is a descriptive version string
+            including, for example, alpha or beta designations
+            and other release criteria.
+        -->
+      <Version>2.5.1.0</Version>
+      <FullVersion>Secure Access Link Gateway-2.5.1.0-vApp-e55-08</FullVersion>
+      <ProductUrl/>
+      <VendorUrl>http://www.avaya.com</VendorUrl>
+      <AppUrl/>
+      <Category>Application</Category>
+      <Property ovf:key="BuildID" ovf:type="string" ovf:userConfigurable="false" ovf:value="Secure Access Link Gateway-2.5.1.0-vApp-e55-08" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Build Identity</Label>
+        <Description>Full version and build identifier.</Description>
+      </Property>
+      <Property ovf:key="vamitimezone" ovf:type="string" ovf:userConfigurable="true" ovf:value="Etc/UTC" ovf:qualifiers="ValueMap{&quot;Pacific/Samoa&quot;, &quot;US/Hawaii&quot;, &quot;US/Alaska&quot;, &quot;US/Pacific&quot;, &quot;US/Mountain&quot;, &quot;US/Central&quot;, &quot;US/Eastern&quot;, &quot;America/Caracas&quot;, &quot;America/Argentina/Buenos_Aires&quot;, &quot;America/Recife&quot;, &quot;Etc/GMT-1&quot;, &quot;Etc/UTC&quot;, &quot;Europe/London&quot;, &quot;Europe/Paris&quot;, &quot;Africa/Cairo&quot;, &quot;Europe/Moscow&quot;, &quot;Asia/Baku&quot;, &quot;Asia/Karachi&quot;, &quot;Asia/Calcutta&quot;, &quot;Asia/Dacca&quot;, &quot;Asia/Bangkok&quot;, &quot;Asia/Hong_Kong&quot;, &quot;Asia/Tokyo&quot;, &quot;Australia/Sydney&quot;, &quot;Pacific/Noumea&quot;, &quot;Pacific/Fiji&quot;}">
+        <Label>Timezone setting</Label>
+        <Description>Sets the selected timezone setting for Secure Access Link Gateway Virtual Appliance.</Description>
+      </Property>
+      <Property ovf:key="vami.hostname" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Hostname</Label>
+        <Description>Linux hostname or fully qualified domain name for Secure Access Link Gateway Virtual Appliance.</Description>
+      </Property>
+      <Property ovf:key="ADS_COMPONENT_TO_INSTALL" ovf:type="string" ovf:userConfigurable="false" ovf:value="SAL Gateway" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Avaya Diagnostic Server Component(s)</Label>
+        <Description>Choose the Avaya Diangostic Server component(s) you would like to install:</Description>
+      </Property>
+      <Property ovf:key="AUTOUPGRADE_CUST_SELECT" ovf:type="string" ovf:userConfigurable="true" ovf:value="Yes" ovf:qualifiers="ValueMap{&quot;Yes&quot;,&quot;No&quot;}">
+        <Label>Automatic Software Update</Label>
+        <Description>Enable automatic software update for Secure Access Link Gateway.</Description>
+      </Property>
+      <Property ovf:key="SMTP_HOST" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(1),MaxLen(266)">
+        <Label>SMTP Hostname / IP Address*</Label>
+        <Description>The host name or IP address of the SMTP server.</Description>
+      </Property>
+      <Property ovf:key="SMTP_PORT" ovf:type="uint32" ovf:userConfigurable="true" ovf:value="25" ovf:qualifiers="MinValue(1),MaxValue(5000)">
+        <Label>SMTP Port*</Label>
+        <Description>The port for SMTP server.</Description>
+      </Property>
+      <Property ovf:key="SMTP_ADMIN_EMAIL" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(1),MaxLen(65535)">
+        <Label>Administrator's E-mail Address*</Label>
+        <Description>Administrator's e-mail address.</Description>
+      </Property>
+      <Property ovf:key="SMTP_USER_NAME" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>SMTP Username</Label>
+        <Description>The username for SMTP server if it requires authentication.</Description>
+      </Property>
+      <Property ovf:key="SMTP_PASSWORD" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)" ovf:password="true">
+        <Label>SMTP Password</Label>
+        <Description>The password for SMTP server if it requires authentication.</Description>
+      </Property>
+      <Property ovf:key="SMTP_SECONDARY_EMAIL" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Secondary E-mail Address</Label>
+        <Description>Secondary e-mail address.
+
+This is an optional field.</Description>
+      </Property>
+      <Property ovf:key="GATEWAY_SOLUTION_ELEMENTID" ovf:type="string" ovf:userConfigurable="true" ovf:value="(000)777-9999" ovf:qualifiers="MinLen(1),MaxLen(13)">
+        <Label>Solution Element ID*</Label>
+        <Description>A unique identifier in the format (nnn)nnn-nnnn, where n is a digit from 0 through 9. Using this ID, Avaya Services or Avaya Partners can uniquely identify and connect to this particular SAL Gateway. You receive this ID after you register SAL Gateway with Avaya.
+
+Warning: The provided value is the default. If you do not change the value, SAL Gateway services will not start when you boot the virtual appliance.</Description>
+      </Property>
+      <Property ovf:key="SPIRIT_ALARMID" ovf:type="string" ovf:userConfigurable="true" ovf:value="1000000000" ovf:qualifiers="MinLen(1),MaxLen(10)">
+        <Label>Alarm ID*</Label>
+        <Description>A unique 10-character ID, also called Product ID, assigned to a device, for example, this SAL Gateway. The Product ID is included in alarms that are sent to alarm receivers from the managed device. Avaya uses the Alarm ID to identify the device that generated the alarm. You receive this ID after you register SAL Gateway with Avaya.</Description>
+      </Property>
+      <Property ovf:key="PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER" ovf:type="string" ovf:userConfigurable="true" ovf:value="Enterprise-production" ovf:qualifiers="MinLen(1),MaxLen(65535)">
+        <Label>Platform Qualifier*</Label>
+        <Description>An alphanumeric string to establish a channel for communication between SAL Gateway and Concentrator Core Server. The default platform qualifier is Enterprise-production. Do not change the default value unless you are explicitly instructed.</Description>
+      </Property>
+      <Property ovf:key="PRIMARY_AVAYA_ENTERPRISE_URL" ovf:type="string" ovf:userConfigurable="true" ovf:value="secure.alarming.avaya.com" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Primary Destination Core*</Label>
+        <Description>The fully qualified host name of the Concentrator Core Server that SAL Gateway first contacts. The default value is secure.alarming.avaya.com. If you have a local Concentrator Core Server, you must enter the host name or the IP address of this server. Otherwise, you must retain the default value to communicate with the Avaya Concentrator Core Server.</Description>
+      </Property>
+      <Property ovf:key="PRIMARY_AVAYA_ENTERPRISE_PORT" ovf:type="string" ovf:userConfigurable="true" ovf:value="443" ovf:qualifiers="MinLen(1),MaxLen(4)">
+        <Label>Port*</Label>
+        <Description>The port number for the primary destination. The default port number is 443. For the Avaya Concentrator Core Server, you must retain the default value. For a local Concentrator Core Server, you must enter the value as 8443.</Description>
+      </Property>
+      <Property ovf:key="PRIMARY_AXEDA_ENTERPRISE_URL" ovf:type="string" ovf:userConfigurable="true" ovf:value="remote.sal.avaya.com" ovf:qualifiers="MinLen(1),MaxLen(65535)">
+        <Label>Primary Destination Remote*</Label>
+        <Description>The host name of the Concentrator Remote Server that requests and facilitates remote access for service personnel. The default host name is remote.sal.avaya.com.</Description>
+      </Property>
+      <Property ovf:key="PRIMARY_AXEDA_ENTERPRISE_PORT" ovf:type="string" ovf:userConfigurable="true" ovf:value="443" ovf:qualifiers="MinLen(1),MaxLen(4)">
+        <Label>Port*</Label>
+        <Description>The port number for the primary destination. The default port number is 443.</Description>
+      </Property>
+      <Property ovf:key="CUSTOMER_PROXY_TYPE" ovf:type="string" ovf:userConfigurable="true" ovf:value="None" ovf:qualifiers="ValueMap{&quot;None&quot;,&quot;HTTP&quot;,&quot;Authenticated HTTP&quot;,&quot;SOCKS&quot;}">
+        <Label>Proxy Type</Label>
+        <Description>The type of channel the SAL Gateway uses to communicate with the Concentrator Core and Remote Servers.
+
+The options are:
+
+HTTP: For an HTTP proxy without authentication.
+
+Authenticated HTTP: For an HTTP proxy with authentication.
+
+SOCKS: For a SOCKS proxy without authentication.
+
+Note:
+SAL Gateway does not support SOCKS proxies that use authentication.</Description>
+      </Property>
+      <Property ovf:key="CUSTOMER_PROXY_HOSTNAME" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Proxy Hostname</Label>
+        <Description>The host name or IP address of the proxy server. SAL Gateway takes both IPv4 and IPv6 addresses as input.</Description>
+      </Property>
+      <Property ovf:key="CUSTOMER_PROXY_PORT" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(4)">
+        <Label>Proxy Port</Label>
+        <Description>The port number of the proxy server.</Description>
+      </Property>
+      <Property ovf:key="CUSTOMER_PROXY_USER" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Proxy User</Label>
+        <Description>Username for Authenticated HTTP Proxy.
+
+If you are using unauthenticated HTTP Proxy or SOCKS Proxy, leave the field blank.</Description>
+      </Property>
+      <Property ovf:key="CUSTOMER_PROXY_PASSWORD" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)" ovf:password="true">
+        <Label>Proxy Password</Label>
+        <Description>Password for Authenticated HTTP Proxy.
+
+If you are using unauthenticated HTTP Proxy or SOCKS Proxy, leave the field blank.</Description>
+      </Property>
+      <Property ovf:key="POLICY_SERVER_HOSTNAME" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(65535)">
+        <Label>Policy Server Hostname</Label>
+        <Description>The host name or the IP address of the Policy Server.
+
+You can skip this value for now and configure them later using SAL Gateway's web interface.</Description>
+      </Property>
+      <Property ovf:key="POLICY_SERVER_PORT" ovf:type="string" ovf:userConfigurable="true" ovf:value="" ovf:qualifiers="MinLen(0),MaxLen(4)">
+        <Label>Policy Server Port</Label>
+        <Description>The port number the Policy Server will use for communication with SAL Gateway.
+
+You can skip this value for now and configure them later using SAL Gateway's web interface.</Description>
+      </Property>
+      <Property ovf:key="SNMP_SERVER_HOSTNAME" ovf:type="string" ovf:userConfigurable="true" ovf:value="127.0.0.1" ovf:qualifiers="MinLen(1),MaxLen(65535)">
+        <Label>Master Agent Hostname*</Label>
+        <Description>The host name of the Master Agent to which the SNMP SubAgent requires connection. The default host name is '127.0.0.1'.</Description>
+      </Property>
+      <Property ovf:key="SNMP_SERVER_PORT" ovf:type="string" ovf:userConfigurable="true" ovf:value="705" ovf:qualifiers="MinLen(1),MaxLen(4)">
+        <Label>Master AgentX Port*</Label>
+        <Description>The listener port that the Master Agent uses with AgentX. The default port number is 705.</Description>
+      </Property>
+      <Property ovf:key="AVAYA_TECH_ASSIGNED_ROLE" ovf:type="string" ovf:userConfigurable="true" ovf:value="Administrator" ovf:qualifiers="ValueMap{&quot;Administrator&quot;,&quot;Browse&quot;,&quot;Deny&quot;}">
+        <Label>Role</Label>
+        <Description>Assign a role to Avaya support personnel. The assigned role defines the access permissions for Avaya support personnel who might want to access SAL Gateway to provide service.
+
+Select one of the following role from the Role field:
+
+Administrator - This role grants Avaya support personnel full permissions to all the SAL Gateway UI pages except the following pages:
+- Policy Server (Read-only)
+- PKI Configuration (Read-only)
+- OCSP/CRL Configuration (Read-only)
+- Certificate Management (Read-only)
+The Administrator role excludes permissions to edit security settings. Only a Security Administrator can change security settings and this role is not
+available to Avaya support personnel.
+
+Browse - This role grants the user the read-only access to all pages.
+
+Note:
+If you select Deny from the options, the user is denied access to the SAL Gateway UI.</Description>
+      </Property>
+    </ProductSection>
+    <ProductSection ovf:class="vami" ovf:instance="Secure_Access_Link_Gateway_Virtual_Appliance" ovf:required="false">
+      <Info>VAMI Properties</Info>
+      <Category>Networking Properties</Category>
+      <Property ovf:key="gateway" ovf:userConfigurable="true" ovf:type="string">
+        <Label>Default Gateway</Label>
+        <Description>The default gateway address for this VM. Leave blank if DHCP is desired.</Description>
+      </Property>
+      <Property ovf:key="DNS" ovf:userConfigurable="true" ovf:type="string">
+        <Label>DNS</Label>
+        <Description>The domain name servers for this VM (comma separated). Leave blank if DHCP is desired.</Description>
+      </Property>
+      <Property ovf:key="ip0" ovf:userConfigurable="true" ovf:type="string">
+        <Label>Public IP Address</Label>
+        <Description>The IP address for this interface. Leave blank if DHCP is desired.</Description>
+      </Property>
+      <Property ovf:key="netmask0" ovf:userConfigurable="true" ovf:type="string">
+        <Label>Public Netmask</Label>
+        <Description>The netmask or prefix for this interface. Leave blank if DHCP is desired.</Description>
+      </Property>
+      <Property ovf:key="ip1" ovf:userConfigurable="false" ovf:type="string">
+        <Label>Out of Band Management IP Address</Label>
+        <Description>The IP address for this interface. Leave blank if DHCP is desired.</Description>
+      </Property>
+      <Property ovf:key="netmask1" ovf:userConfigurable="false" ovf:type="string">
+        <Label>Out of Band Management Netmask</Label>
+        <Description>The netmask or prefix for this interface. Leave blank if DHCP is desired.</Description>
+      </Property>
+    </ProductSection>
+    <ProductSection ovf:class="vm" ovf:required="false">
+      <Info>VM specific properties</Info>
+      <Property ovf:key="vmname" ovf:type="string" ovf:value="Secure_Access_Link_Gateway_Virtual_Appliance"/>
+    </ProductSection>
+    <AnnotationSection>
+      <Info/>
+      <Annotation>Secure Access Link Gateway Virtual Appliance
+
+Base Version:    Secure Access Link Gateway-2.5.1.0-vApp-e55-08
+Bundled Secure Access Link Gateway Version:     2.5.1.0.5</Annotation>
+    </AnnotationSection>
+    <OperatingSystemSection ovf:id="101" ovf:version="5" vmw:osType="centos64Guest">
+      <Info>Guest Operating System</Info>
+      <Description>CentOS Linux 6.6 64bit</Description>
+    </OperatingSystemSection>
+    <VirtualHardwareSection ovf:transport="iso" ovf:required="false">
+      <Info>Virtual Hardware Requirements</Info>
+      <System>
+        <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+        <vssd:InstanceID>0</vssd:InstanceID>
+        <vssd:VirtualSystemType>vmx-07</vssd:VirtualSystemType>
+      </System>
+      <Item>
+        <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+        <rasd:Description>Number of virtual CPUs</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1 virtual CPU</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+        <rasd:ResourceType>3</rasd:ResourceType>
+        <rasd:VirtualQuantity>1</rasd:VirtualQuantity>
+      </Item>
+      <Item>
+        <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+        <rasd:Description>Memory Size</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1024 MB of memory</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+        <rasd:ResourceType>4</rasd:ResourceType>
+        <rasd:VirtualQuantity>1024</rasd:VirtualQuantity>
+      </Item>
+      <Item>
+        <rasd:Address>0</rasd:Address>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">IDE Controller 0</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">3</rasd:InstanceID>
+        <rasd:ResourceType>5</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AddressOnParent>0</rasd:AddressOnParent>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">CD/DVD Drive 1</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4</rasd:InstanceID>
+        <rasd:Parent>3</rasd:Parent>
+        <rasd:ResourceType>15</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:Address xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">0</rasd:Address>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">SCSI Controller 0  - lsilogic</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">5</rasd:InstanceID>
+        <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
+        <rasd:ResourceType>6</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AddressOnParent>0</rasd:AddressOnParent>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Harddisk 1</rasd:ElementName>
+        <rasd:HostResource>ovf:/disk/system</rasd:HostResource>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">6</rasd:InstanceID>
+        <rasd:Parent>5</rasd:Parent>
+        <rasd:ResourceType>17</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Public</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter on "Public"</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">7</rasd:InstanceID>
+        <rasd:ResourceSubType>Vmxnet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Out of Band Management</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter on "Out of Band Management"</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">8</rasd:InstanceID>
+        <rasd:ResourceSubType>Vmxnet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <vmw:Config ovf:required="false" vmw:key="tools.syncTimeWithHost" vmw:value="FALSE"/>
+    </VirtualHardwareSection>
+  </VirtualSystem>
+  <Strings xml:lang="en">
+    <Msg ovf:msgid="license_0">The license agreement for Secure Access Link Gateway is as follows:
+	
+ACS SAL(TM) License Agreement
+									
+AVAYA GLOBAL SOFTWARE LICENSE TERMS
+
+THIS END USER LICENSE AGREEMENT ("SOFTWARE LICENSE TERMS") GOVERNS THE USE OF AVAYA'S PROPRIETARY SOFTWARE and Third-party proprietary software. READ THESE SOFTWARE LICENSE TERMS CAREFULLY, IN ITS ENTIRETY, BEFORE INSTALLING, DOWNLOADING OR USING THE AVAYA PRODUCT(S)(AS DEFINED BELOW). BY INSTALLING, DOWNLOADING OR USING THE AVAYA PRODUCT(S), OR AUTHORIZING OTHERS TO DO SO, YOU, ON BEHALF OF YOURSELF AND THE ENTITY FROM WHOM YOU ARE INSTALLING, DOWNLOADING OR USING THE PRODUCT(S) (HEREINAFTER REFERRED TO INTERCHANGEABLY AS "YOU" AND "END USER"), AGREE TO THESE TERMS AND CONDITIONS AND CREATE A BINDING CONTRACT BETWEEN YOU AND AVAYA INC. OR THE APPLICBALE AVAYA AFFILIATE FROM WHOM YOU PURCHASED THE AVAYA PRODUCT(S) ("AVAYA"). ANY USE OF THE PRODUCT(S) WILL CONSTITUTE YOUR ASSENT TO THE TERMS OF THIS AGREEMENT (OR RATIFICATION OF PREVIOUS CONSENT). IF YOU DO NOT WISH TO BE BOUND BY THESE SOFTWARE LICENSE TERMS, YOU MUST RETURN OR DELETE THE PRODUCT(S) WITHIN TEN (10) DAYS OF DELIVERY FOR A REFUND OF THE FEE, IF ANY, YOU PAID FOR THE LICENSE OR IF SOFTWARE IS ACCESSED ELECTRONICALLY, SELECT THE "DECLINE" BUTTON AT THE END OF THESE SOFTWARE LICENSE TERMS.
+						
+A. Scope. These Software License Terms are applicable to anyone who downloads and/or installs Avaya software (the "Products" or "software"), purchased from Avaya Inc., any Avaya Affiliate, or an authorized Avaya reseller (as applicable) under a commercial agreement with Avaya or authorized Avaya reseller ("Agreement"). Unless otherwise agreed to by Avaya in writing, Avaya does not extend this license if the Product was obtained from anyone other than Avaya, an Avaya Affiliate or an Avaya authorized reseller and Avaya reserves the right to take legal action against you and anyone else using or selling these Products without a license. To the extent there is a conflict between these Software License Terms and your Agreement, the terms and restrictions set forth in your Agreement shall prevail. "Avaya Affiliate" means any entity that is directly or indirectly controlling, controlled by, or under common control with Avaya Inc. For purposes of this definition, "control" means the power to direct the management and policies of such party, directly or indirectly, whether through ownership of voting securities, by contract or otherwise; and the terms "controlling" and "controlled" have meanings correlative to the foregoing.
+
+B. License Grant. Subject to the applicable license terms and restrictions within and incorporated by the commercial agreement between you and Avaya, Avaya grants You a personal, non-sublicensable, non-exclusive, non-transferable license to use Software and Documentation obtained from Avaya or an Avaya authorized reseller and for which applicable fees have been paid, in object code form, for your internal business purposes at the indicated capacity and features and within the scope of the applicable license types described below and at locations where the Software is initially installed. "Documentation" means Avaya information and manuals containing operating instructions and performance specifications that Avaya generally makes available to users of its products and delivers with the Products. Documentation does not include marketing materials.
+
+C. All Rights Reserved. Except for the limited license rights expressly granted in these Software License Terms, Avaya reserves all rights in and to the Software and Documentation and any modifications thereto. You will own only the hardware or physical media on which the Software are stored, if any.
+
+D. General License Restrictions. To the extent permissible under applicable law, you agree not to: (i) decompile, disassemble, or reverse engineer the Software; (ii) alter, modify or create any derivative works based on the Software or Documentation; (iii) merge the Software with any other Software other than as expressly set forth in the Documentation; (iv) use, copy, sell, sublicense, lease, rent, loan, assign, convey or otherwise transfer the Software or Documentation except as expressly authorized by the Agreement with an Avaya Affiliate; (v) distribute, disclose or allow use of the Software or Documentation, in any format, through any timesharing service, service bureau, network or by any other means; (vi) allow any service provider or other third party, with the exception of Avaya's authorized channel resellers and their designated employees ("Authorized Providers") who are acting solely on behalf of and for the benefit of Customer, to use or execute any software commands that cause the Software to perform functions that facilitate the maintenance or repair of any Product except that a service provider or other third party may execute those software commands that, as designed by Avaya, would operate if a user is logged into a Product using a customer level login and Maintenance Software Permissions ("MSPs") were not enabled or activated; (vii) gain access to or the use of any Software or part thereof without authorization from Avaya; (viii) enable or activate, or cause, permit or allow others to enable or activate any logins reserved for use by Avaya or Authorized Providers; or (ix) permit or encourage any third party to do so. Authorized Providers shall be obligated to comply with the terms and provisions of this Agreement. Customer shall advise any third party, including any Authorized Provider, who accesses or uses any Software of the terms and provisions of this Agreement. Customer shall be responsible for such third party's failure to comply and shall indemnify Avaya for any damages, loss, expenses or costs, including attorneys' fees and costs of suit, incurred by Avaya as a result of non-compliance with this section. Notwithstanding the foregoing, if the Software is rightfully located in a member state of the European Union and End User needs information about the Software in order to achieve interoperability of an independently created software program with the Software, End User will first request such information from Avaya. Avaya may charge End User a reasonable fee for the provision of such information. If Avaya refuses to make such information available, then End User may take steps, such as reverse assembly or reverse compilation, to the extent necessary solely in order to achieve interoperability of the Software with an independently created software program. To the extent that the End User is expressly permitted by applicable mandatory law to undertake any of the activities listed in this section End User will not exercise those rights until End User has given Avaya twenty (20) days written notice of its intent to exercise any such rights.
+
+E. Backup Copies. You may create a reasonable number of archival and backup copies of the Software and the Documentation, provided all proprietary rights notices, names and logos of Avaya and its suppliers are duplicated on each copy.
+
+F. Warranty. Avaya provides a limited warranty on its Products. Refer to your Agreement to establish the terms of the limited warranty. In addition, Avaya's standard warranty language as well as information regarding support for the Product, while under warranty, is available through the following web site: http://support.avaya.com. Please note that if you are acquiring the Avaya Products from an authorized Avaya reseller in Europe, Middle East, Africa, the Caribbean or Latin America, the warranty is provided to you by said Avaya reseller and not by Avaya. EXCEPT AS REFERENCED HEREIN, NEITHER AVAYA NOR ITS SUPPLIERS MAKES ANY EXPRESS REPRESENTATIONS OR WARRANTIES WITH REGARD TO ANY PRODUCTS OR SERVICES OR OTHERWISE RELATED TO THE AGREEMENT OR SOFTWARE LICENSE TERMS. AVAYA DOES NOT WARRANT UNINTERRUPTED OR ERROR FREE OPERATION OF PRODUCTS. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AVAYA DISCLAIMS ALL WARRANTIES IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+G. COMPLIANCE. AT AVAYA'S REQUEST AND UPON REASONABLE PRIOR WRITTEN NOTICE, AVAYA WILL HAVE THE RIGHT TO INSPECT CUSTOMER'S COMPLIANCE WITH THESE SOFTWARE LICENSE TERMS.
+
+H. Termination of License. If You breach the license limitations or restrictions in these Software License Terms and if within ten (10) business days of your receipt of a reasonably detailed written request to cure, you have not cured all breaches of license limitations or restrictions, Avaya may, with immediate effect, terminate the Software licenses granted in these Software License Terms.
+
+I.  License Types. Avaya grants you a license within the scope of the license types described below. Where the order documentation does not expressly identify a license type, the applicable license will be a Designated System License. The applicable number of licenses and units of capacity for which the license is granted will be one (1), unless a different number of licenses or units of capacity is specified in the documentation or other materials available to you. "Designated Processor" means a single stand-alone computing device. "Server" means a Designated Processor that hosts a software application to be accessed by multiple users. "Software" means the computer programs in object code, originally licensed by Avaya and ultimately utilized by you, whether as stand-alone Products or pre-installed on Hardware. "Hardware" means the standard hardware Products, originally sold by Avaya and ultimately utilized by you. Designated System(s) License (DS).End User may install and use each copy of the Software only on a number of Designated Processors up to the number indicated in the order. Avaya may require the Designated Processor(s) to be identified in the order by type, serial number, feature key, location or other specific designation, or to be provided by End User to Avaya through electronic means established by Avaya specifically for this purpose.
+
+Concurrent User License (CU). End User may install and use the Software on multiple Designated Processors or one or more Servers, so long as only the licensed number of Units are accessing and using the Software at any given time. A "Unit" means the unit on which Avaya, at its sole discretion, bases the pricing of its licenses and can be, without limitation, an agent, port or user, an e-mail or voice mail account in the name of a person or corporate function (e.g., webmaster or helpdesk), or a directory entry in the administrative database utilized by the Product that permits one user to interface with the Software. Units may be linked to a specific, identified Server.
+
+Database License (DL). End User may install and use each copy of the Software on one Server or on multiple Servers provided that each of the Servers on which the Software is installed communicates with no more than a single instance of the same database.
+
+CPU License (CP). End User may install and use each copy of the Software on a number of Servers up to the number indicated in the order provided that the performance capacity of the Server(s) does not exceed the performance capacity specified for the Software. End User may not re-install or operate the Software on Server(s) with a larger performance capacity without Avaya's prior consent and payment of an upgrade fee.
+
+Named User License (NU). You may: (i) install and use the Software on a single Designated Processor or Server per authorized Named User (defined below); or (ii) install and use the Software on a Server so long as only authorized Named Users access and use the Software. "Named User," means a user or device that has been expressly authorized by Avaya to access and use the Software. At Avaya's sole discretion, a "Named User" may be, without limitation, designated by name, corporate function (e.g., webmaster or helpdesk), an e-mail or voice mail account in the name of a person or corporate function, or a directory entry in the administrative database utilized by the Product that permits one user to interface with the Product.
+
+Shrinkwrap License (SR). You may install and use the Software in accordance with the terms and conditions of the applicable license agreements, such as "shrinkwrap" or "clickthrough" license accompanying or applicable to the Software ("Shrinkwrap License"). The text of the Shrinkwrap License is available on Avaya's web site at: http://support.avaya.com/Copyright.
+
+J. Third-party Components. Certain software programs or portions thereof included in the Product may contain software(including open source software) distributed under third party agreements ("Third Party Components"), which may contain terms that expand or limit rights to use certain portions of the Product ("Third Party Terms"). Information identifying the copyright holders of the Third Party Components and the Third Party Terms that apply is available on Avaya's web site at: http://support.avaya.com/Copyright.
+
+K. Limitation of Liability. EXCEPT FOR PERSONAL INJURY CLAIMS, WILLFUL MISCONDUCT AND END USER'S VIOLATION OF AVAYA'S OR ITS SUPPLIERS INTELLECTUAL PROPERTY RIGHTS, INCLUDING THROUGH A BREACH OF THE SOFTWARE LICENSE, NEITHER AVAYA, ITS SUPPLIERS NOR END USER SHALL BE LIABLE FOR (i) ANY INCIDENTAL, SPECIAL, STATUTORY, INDIRECT OR CONSEQUENTIAL DAMAGES, OR (ii) FOR ANY LOSS OF PROFITS, REVENUE, OR DATA, TOLL FRAUD, OR COST OF COVER AND (iii) DIRECT DAMAGES ARISING UNDER THESE SOFTWARE LICENSE TERMS IN EXCESS OF THE PURCHASE PRICE AND FEES PAID FOR THE PRODUCTS OR SERVICES GIVING RISE TO THE CLAIM.
+
+SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.
+
+L. PROTECTION OF CONFIDENTIAL SOFTWARE AND DOCUMENTATION. END USER ACKNOWLEDGES THAT THE SOFTWARE AND DOCUMENTATION ARE REGARDED AS CONFIDENTIAL BY AVAYA AND ITS SUPPLIERS ("CONFIDENTIAL INFORMATION") AND END USER AGREES AT ALL TIMES TO PROTECT AND PRESERVE IN STRICT CONFIDENCE THE SOFTWARE AND DOCUMENTATION. THE END USER AGREES NOT TO PERMIT OR AUTHORIZE ACCESS TO, OR DISCLOSURE OF THE SOFTWARE AND DOCUMENTATION TO ANY PERSON OR ENTITY OTHER THAN EMPLOYEES OF END USER WHO HAVE AGREED IN WRITING TO BE BOUND BY THE TERMS OF THIS AGREEMENT AND HAVE A NEED TO ACCESS THE SOFTWARE AND DOCUMENTATION FOR THE BENEFIT OF THE END USER.
+
+M. Protection of Personal Data. The use of the Products may require the processing of Personal Data pertaining to You or to your personnel. Personal Data required to use the Products will need to be submitted to Avaya. Failing the submission of such data, the use of the Products will not be possible. You or your personnel have a right to access and correct erroneous Personal Data pertaining to You or your personnel and to object for legitimate reasons to the processing and transfer of these data. You can exercise this right by contacting in writing the Data Privacy Officer of the applicable Avaya Affiliate [specify country in localized version].
+
+N. Miscellaneous. These Software License Terms will be governed by New York State laws, excluding conflict of law principles and the United Nations Convention on Contracts for the International Sale of Goods. If a dispute cannot be settled by good faith negotiation between the parties within a reasonable period of time, and to the extent authorized by applicable law, it must be finally settled upon request of either party by arbitration to be held in accordance with the Rules of Arbitration of the International Chamber of Commerce by a single arbitrator appointed by the parties or (failing agreement) by an arbitrator appointed by the President of the International Chamber of Commerce (from time to time). The arbitration will be conducted in the English language, at a location agreed by the parties or (failing agreement) ordered by the arbitrator. The arbitrator will have authority only to award compensatory damages and will not award punitive or exemplary damages. The arbitrator will not have the authority to limit, expand or otherwise modify the Software License Terms. The ruling by the arbitrator will be final and binding on the parties and may be entered in any court having jurisdiction. Avaya and you will each bear its own attorneys' fees associated with the arbitration. Notwithstanding the foregoing, Avaya shall be entitled to take immediate legal action where required to protect its confidential or proprietary information, or to obtain any interim injunction. If any provision of these Software License Terms is determined to be unenforceable or invalid, these Software License Terms will not be rendered unenforceable or invalid as a whole, and the provision will be changed and interpreted so as to best accomplish the objectives of the original provision within the limits of applicable law. The failure to assert any rights under the Software License Terms, including, but not limited to, the right to terminate in the event of breach or default, will not be deemed to constitute a waiver of the right to enforce each and every provision of the Software License Terms in accordance with their terms. You will not export or re-export the Software or any technical information provided under these Software License Terms in any form in violation of the export control laws of the United States of America and of any other applicable country. For more information on such export laws and regulations, you may refer to the resources provided in the websites maintained by the U.S. Commerce Department, the U.S. State Department and the U.S. Office of Foreign Assets Control.
+
+If you are a resident of Canada, the following will also apply:
+
+Please note that this Section refers to U.S. export and re-export controls in connection with U.S.-origin products and, therefore, does not raise issues under Canada's Foreign Extraterritorial Measures Act.
+
+Agreement in English. The parties confirm that it is their wish that these Software License Terms, as well as all other documents relating hereto, including all notices, have been and shall be drawn up in the English language only. Les parties aux présentes confirment leur volonté que cette convention, de même que tous les documents, y compris tout avis, qui s'y rattachent, soient rédigés en langue anglaise. Las partes ratifican que es su voluntad que este Contrato, así como cualquier otro documento relacionado con el mismo, incluyendo todo tipo de notificaciones, han sido redactados y deberán continuar siendo redactados únicamente en el idioma inglés.</Msg>
+  </Strings>
+</ovf:Envelope>

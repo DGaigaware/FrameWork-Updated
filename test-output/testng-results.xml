@@ -1,46 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="8" passed="5">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="2895139" started-at="2015-09-30T12:13:10Z" finished-at="2015-09-30T13:01:25Z">
+  <suite name="Default suite" duration-ms="39366" started-at="2015-10-05T11:25:19Z" finished-at="2015-10-05T11:25:59Z">
     <groups>
     </groups>
-    <test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova" duration-ms="2895139" started-at="2015-09-30T12:13:10Z" finished-at="2015-09-30T13:01:25Z">
-      <class name="com.avaya.sdmclient.runnerdemo.c1">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="setup" is-config="true" duration-ms="17" started-at="2015-09-30T17:43:10Z" finished-at="2015-09-30T17:43:10Z">
+    <test name="Default test" duration-ms="39366" started-at="2015-10-05T11:25:19Z" finished-at="2015-10-05T11:25:59Z">
+      <class name="com.avaya.sdmclient.host.Host">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.host.Host@37b0e229]" name="setup" is-config="true" duration-ms="47" started-at="2015-10-05T16:55:20Z" finished-at="2015-10-05T16:55:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="AddVMSuite(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="AddVMSuite" duration-ms="1687133" started-at="2015-09-30T17:43:10Z" description="Adding VM to given Location and Host" finished-at="2015-09-30T18:11:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="FAIL" signature="addHost()[pri:0, instance:com.avaya.sdmclient.host.Host@37b0e229]" name="addHost" duration-ms="35259" started-at="2015-10-05T16:55:20Z" description="Adding Host to given Location" finished-at="2015-10-05T16:55:55Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[Timed out after 1500 seconds waiting for text ('Completed') to be present in element found by By.id: vmDeployStatus
+              <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 1500 seconds waiting for text ('Completed') to be present in element found by By.id: vmDeployStatus
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:260)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.avaya.sdmclient.Settings.fluentWait(Settings.java:548)
-	at com.avaya.sdmclient.Settings.fluentWaitCloseOpen(Settings.java:569)
-	at com.avaya.sdmclient.runnerdemo.c1.AddVMSuite(c1.java:151)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
+	at org.openqa.selenium.By$ById.findElement(By.java:215)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:206)
+	at com.avaya.sdmclient.host.Host.addHost(Host.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -65,53 +55,43 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 2915; received: 0
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:180)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityProxy.streamClosed(ResponseEntityProxy.java:128)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.createResponse(ApacheHttpClient.java:112)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:93)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddVMSuite -->
-        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="EditVM" duration-ms="39248" started-at="2015-09-30T18:11:18Z" description="Editing VM to given Location and Host" finished-at="2015-09-30T18:11:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
+        </test-method> <!-- addHost -->
+        <test-method status="FAIL" signature="_EditHost()[pri:0, instance:com.avaya.sdmclient.host.Host@37b0e229]" name="_EditHost" duration-ms="999" started-at="2015-10-05T16:55:57Z" description="Editing Host to given Location" finished-at="2015-10-05T16:55:58Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[Element is not currently visible and so may not be interacted with
-Command duration or timeout: 11.56 seconds
+              <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 762d04ed-856b-485b-9dce-22cb7f90b232
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 11.56 seconds
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 762d04ed-856b-485b-9dce-22cb7f90b232
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:114)
-	at com.avaya.sdmclient.runnerdemo.c1.EditVM(c1.java:187)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:306)
+	at com.avaya.sdmclient.host.Host._EditHost(Host.java:80)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -136,82 +116,58 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous8662000054884615832webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9615)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous8662000054884615832webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12265)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous8662000054884615832webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous8662000054884615832webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 26 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 41 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EditVM -->
-        <test-method status="PASS" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="StopVM" duration-ms="128078" started-at="2015-09-30T18:11:57Z" description="Stoping VM to given Location and Host" finished-at="2015-09-30T18:14:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StopVM -->
-        <test-method status="PASS" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="StartVM" duration-ms="105754" started-at="2015-09-30T18:14:05Z" description="Starting VM to given Location and Host" finished-at="2015-09-30T18:15:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartVM -->
-        <test-method status="FAIL" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="RefreshVM" duration-ms="93454" started-at="2015-09-30T18:15:51Z" description="Refreshing VM to given Location and Host" finished-at="2015-09-30T18:17:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+        </test-method> <!-- _EditHost -->
+        <test-method status="FAIL" signature="_DeleteHost()[pri:0, instance:com.avaya.sdmclient.host.Host@37b0e229]" name="_DeleteHost" duration-ms="1015" started-at="2015-10-05T16:55:58Z" description="Deleting Host to given Location" finished-at="2015-10-05T16:55:59Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[Timed out after 50 seconds waiting for text ('VM Trust Establishment Completed') to be present in element found by By.id: vmDeployStatus
+              <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 50 seconds waiting for text ('VM Trust Establishment Completed') to be present in element found by By.id: vmDeployStatus
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
 System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:260)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.avaya.sdmclient.Settings.fluentWait(Settings.java:548)
-	at com.avaya.sdmclient.Settings.StatusCheck(Settings.java:638)
-	at com.avaya.sdmclient.runnerdemo.c1.RefreshVM(c1.java:308)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:306)
+	at com.avaya.sdmclient.host.Host._DeleteHost(Host.java:126)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -236,61 +192,43 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:143)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:392)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:578)
+	... 26 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 41 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RefreshVM -->
-        <test-method status="PASS" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="RestartVM" duration-ms="142079" started-at="2015-09-30T18:17:24Z" description="Restarting VM to given Location and Host" finished-at="2015-09-30T18:19:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RestartVM -->
-        <test-method status="PASS" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="DeleteVM" duration-ms="47307" started-at="2015-09-30T18:19:46Z" description="Deleting VM to given Location and Host" finished-at="2015-09-30T18:20:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteVM -->
-        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@6c133d8b]" name="startNewThread" duration-ms="651956" started-at="2015-09-30T18:20:34Z" description="Starting New Thread" finished-at="2015-09-30T18:31:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startNewThread -->
-      </class> <!-- com.avaya.sdmclient.runnerdemo.c1 -->
-    </test> <!-- SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova -->
-  </suite> <!-- Suite1 -->
+        </test-method> <!-- _DeleteHost -->
+      </class> <!-- com.avaya.sdmclient.host.Host -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
