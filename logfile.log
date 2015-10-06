@@ -17836,3 +17836,235 @@ testSM:: Unable to communicate with VMware Hypervisor: com.vmware.vim25.SystemEr
 2015-10-05 17:43:40,823 INFO  [Logger] Clicked on 'Map vCenter'  
 2015-10-05 17:44:03,927 INFO  [Logger] Action being performed: Managing only selected records! 
 2015-10-05 17:44:15,562 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 14:47:05,503 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 14:47:05,561 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 14:47:08,940 INFO  [Logger] Logged in Successfully 
+2015-10-06 14:47:21,669 INFO  [Logger] Clicked on VM management 
+2015-10-06 14:47:26,087 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 14:51:33,034 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 14:51:33,035 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 14:51:38,090 INFO  [Logger] Logged in Successfully 
+2015-10-06 14:51:50,973 INFO  [Logger] Clicked on VM management 
+2015-10-06 14:51:57,822 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 14:54:41,814 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 14:54:41,815 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 14:54:45,286 INFO  [Logger] Logged in Successfully 
+2015-10-06 14:54:58,119 INFO  [Logger] Clicked on VM management 
+2015-10-06 14:55:03,301 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 14:55:32,171 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 14:55:43,793 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 14:59:08,738 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 14:59:08,738 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 14:59:12,263 INFO  [Logger] Logged in Successfully 
+2015-10-06 14:59:24,184 INFO  [Logger] Clicked on VM management 
+2015-10-06 14:59:28,315 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 14:59:56,314 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 15:00:08,005 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 15:04:20,907 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:04:20,908 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:04:24,878 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:04:36,924 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:04:41,035 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:08:41,387 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:08:41,387 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:08:45,151 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:08:57,134 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:09:01,538 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:15:26,585 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:15:26,586 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:15:29,995 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:15:42,086 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:15:46,319 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:22:13,853 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:22:13,853 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:22:17,541 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:22:30,426 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:22:35,913 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:26:25,723 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:26:25,724 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:26:29,091 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:26:41,114 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:26:45,640 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:30:15,650 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:30:15,651 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:30:18,956 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:30:31,840 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:30:36,695 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 15:33:26,240 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 15:33:26,241 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 15:33:29,677 INFO  [Logger] Logged in Successfully 
+2015-10-06 15:33:42,486 INFO  [Logger] Clicked on VM management 
+2015-10-06 15:33:46,832 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 16:57:51,423 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 16:57:51,423 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 16:57:54,784 INFO  [Logger] Logged in Successfully 
+2015-10-06 16:58:06,739 INFO  [Logger] Clicked on VM management 
+2015-10-06 16:58:10,683 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:00:05,890 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:00:05,891 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:00:09,291 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:00:21,184 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:00:25,410 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:02:19,300 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:02:19,301 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:02:22,397 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:02:34,259 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:02:38,422 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:26:25,011 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:26:25,011 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:26:28,272 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:26:40,977 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:26:45,133 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:28:39,126 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:28:39,127 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:28:42,443 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:28:54,331 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:28:58,387 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:35:27,149 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:35:27,150 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:35:30,298 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:35:42,217 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:35:46,454 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:45:34,954 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:45:34,955 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:45:38,236 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:45:50,105 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:45:54,283 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:49:26,738 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:49:26,739 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:49:30,097 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:49:42,025 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:49:46,218 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:52:58,071 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 17:52:58,072 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 17:53:01,590 INFO  [Logger] Logged in Successfully 
+2015-10-06 17:53:13,485 INFO  [Logger] Clicked on VM management 
+2015-10-06 17:53:17,612 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 17:53:47,269 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 17:53:58,901 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:05:03,388 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:05:03,388 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:05:06,632 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:05:18,570 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:05:22,470 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:05:43,262 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:06:42,551 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:06:42,552 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:06:45,669 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:06:57,669 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:07:02,036 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:07:24,785 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:07:46,210 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:08:47,765 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:08:47,766 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:08:51,206 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:09:03,968 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:09:07,819 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:09:27,851 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:09:39,475 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:09:42,545 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:11:07,031 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:11:07,032 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:11:10,256 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:11:22,145 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:11:26,274 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:11:46,327 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:11:57,958 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:12:09,991 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:12:31,442 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:12:43,065 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:16:43,550 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:16:43,551 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:16:47,689 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:16:59,721 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:17:03,727 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:17:23,931 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:17:35,571 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:17:47,623 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:18:09,192 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:18:20,820 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:18:33,002 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:20:56,643 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:20:56,643 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:20:59,751 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:21:11,640 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:21:15,851 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:21:35,766 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:21:47,436 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:21:59,539 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:22:21,039 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:22:32,649 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:22:44,848 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:22:59,155 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:23:10,796 INFO  [Logger] Confirmation:  
+2015-10-06 18:30:09,699 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:30:09,699 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 18:30:12,881 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:30:25,594 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:30:29,811 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:30:49,841 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:31:01,545 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:31:13,625 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:31:35,183 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:31:46,825 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:31:59,014 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 18:32:14,013 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 18:32:25,646 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 18:32:29,635 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:29,716 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:29,784 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:29,849 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:29,907 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:29,972 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:30,043 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:30,109 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:30,164 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-06 18:32:30,186 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:32:30,186 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-06 18:32:33,274 INFO  [Logger] Logged in Successfully 
+2015-10-06 18:32:45,166 INFO  [Logger] Clicked on VM management 
+2015-10-06 18:32:52,690 INFO  [Logger] Clicked on - Add new VM 
+2015-10-06 18:32:53,664 INFO  [Logger] Given Name 
+2015-10-06 18:33:49,105 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-06 18:33:49,105 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:33:49,105 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-06 18:33:56,111 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:33:56,111 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-06 18:34:03,127 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:34:03,127 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-06 18:34:10,131 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:34:10,131 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-06 18:34:12,137 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:34:12,137 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-06 18:34:14,140 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:34:14,140 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-06 18:34:27,655 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-06 18:34:27,656 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-10-06 18:34:27,660 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 18:34:27,660 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-06 19:21:15,430 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 19:21:15,431 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 19:21:18,550 INFO  [Logger] Logged in Successfully 
+2015-10-06 19:21:31,274 INFO  [Logger] Clicked on VM management 
+2015-10-06 19:21:35,315 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:21:56,190 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:22:07,803 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 19:22:20,013 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:22:41,554 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:22:53,154 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 19:23:05,328 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:23:20,579 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:23:32,213 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 19:26:01,123 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-06 19:26:01,124 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-06 19:26:06,025 INFO  [Logger] Logged in Successfully 
+2015-10-06 19:26:17,966 INFO  [Logger] Clicked on VM management 
+2015-10-06 19:26:22,297 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:26:43,069 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:26:54,785 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 19:27:07,020 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:27:28,715 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:27:40,360 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-06 19:27:52,536 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-06 19:28:08,254 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-06 19:28:19,882 INFO  [Logger] Confirmation: Managing only selected records! 

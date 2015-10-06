@@ -12,7 +12,8 @@
     </packages> 
   -->
       <classes>
-         <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent" />
+		<class name="com.avaya.sdmclient.runnerdemo.VC2508" />
+        <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent" />
       </classes> 
       
    </test>
