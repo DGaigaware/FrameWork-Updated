@@ -20,6 +20,7 @@ import org.testng.xml.XmlSuite;
 import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class driverConcurrentInstallations {
 
@@ -30,6 +31,7 @@ public class driverConcurrentInstallations {
 	 	String opDirectory = System.getProperty("user.dir")+"\\testruns_programmatically\\"+dateFormat.format(new java.util.Date())+File.separator +"tempSM".replace("temp", "").replace(".xml", "")+"_"+gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"\\";
 		
 	 	//Adding code to take SM (First element) from file
+	 	
 	 	/*Settings obj = new Settings();
 	 	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 		Properties locator=new Properties();
@@ -39,6 +41,7 @@ public class driverConcurrentInstallations {
 	 	String fName = ob.createTempXMl(ob.chooseNextOVA(ob.readOVAs()), ob.findAvailableIP(driver, by));
 	 	System.out.println(fName);
 	 	driver.quit();*/
+	 	
 	 	//Uptill here
 	 	
 	 	TestNG testng;

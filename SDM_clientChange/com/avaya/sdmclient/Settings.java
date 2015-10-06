@@ -43,13 +43,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.avaya.sdmclient.runnerdemo.MyException;
+import com.avaya.sdmclient.extraResources.MyException;
 
 
 @SuppressWarnings({"unchecked","unused"})
 
 public class Settings {
 	
+	//Setup properties file to take input IDs from it..
 	Properties locator = null;
 	public void setup() throws IOException, InterruptedException
 	{
@@ -57,7 +58,7 @@ public class Settings {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	
-	// Go to SDM Client URL on browser
+	// Go to SDM Client URL on browser (pass driver instance as parameter)
 	public void goToSDMCliURL(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		driver.manage().window().maximize();
@@ -67,17 +68,17 @@ public class Settings {
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 	}
 	
-	//Choose a firefox profile for Tests
-	public FirefoxProfile selectProfile(String profile){
+	//Choose a firefox profile for Tests (Give name of profile as input parameter)
+	public FirefoxProfile selectProfile(String profileName){
 		ProfilesIni allProfiles = new ProfilesIni();
-		FirefoxProfile profil = allProfiles.getProfile(profile);
+		FirefoxProfile profil = allProfiles.getProfile(profileName);
 		boolean acceptUntrustedSsl = true;
 		profil.setAcceptUntrustedCertificates(acceptUntrustedSsl);
 		logClass.confFile();
 		return profil;
 	}
 	
-	//Take a screenshot with timestamp in it's name for errors
+	//Take a screenshot with timestamp in it's name if error is there (pass driver instance as parameter)
 	public void takeScreenShotForDriver(WebDriver driver) throws IOException{
 		String workingDirectory = System.getProperty("user.dir"); 
 	    File imageFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -91,10 +92,12 @@ public class Settings {
 	}
 
 	//Read inputs from file (Firstly it was only from text file,then added code to take input from properties file)
-	public String readFromFile(String fileName,String find) throws IOException{
+	//pass File name and key as parameter
+	public String readFromFile(String fileName,String findProperty) throws IOException{
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+fileName);
 		
 		//Older Version to read from file
+		
 		/*List<String> lines = FileUtils.readLines(file);
 		Scanner sc;
 		String output = null;
@@ -110,12 +113,13 @@ public class Settings {
 		Properties pr = new Properties();
 		pr.load(new FileReader(file));
 		
-		String output = pr.getProperty(find);
-		System.out.println("Read from file "+fileName +" for "+find+": "+output);
+		String output = pr.getProperty(findProperty);
+		System.out.println("Read from file "+fileName +" for "+findProperty+": "+output);
 		return output;
 	}
 	
 	//Choose OVF file which is to be parsed during installation of VM
+	
 	/*public String matchFileOVF(String input){
 		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
 		String returnStr = "";
@@ -129,6 +133,7 @@ public class Settings {
 	}*/
 
 	//Wait Explicitly for given element for it's presence
+	//pass driver instance and By instance of particular element as parameter
 	public void waitForPresenceOfElement(WebDriver driver,By locate){
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locate));
@@ -157,7 +162,7 @@ public class Settings {
 	}
 	
 	//Select tab to choose Network Parameters
-	public void selNetworkTab(WebDriver driver){
+	public void selNetworkTabForVMinstallation(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		/*String script1 = "var nl = document.querySelectorAll('[id^=\"tabbar\"]'); return nl;";
@@ -179,8 +184,8 @@ public class Settings {
 		}
 	}
 	
-	//Click on deploy button
-	public void deployButtonClick(WebDriver driver){
+	//Click on deploy button for VM
+	public void deployButtonClickForVM(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
@@ -201,6 +206,7 @@ public class Settings {
 	}
 
 	//Find location or host by name
+	//pass driver instance and string which is to be find as parameter
 	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
@@ -222,6 +228,7 @@ public class Settings {
 	}
 
 	//To check whether location or host is available or not (So that we can add if they are not there)
+	//pass driver instance and string which is to be find as parameter
 	public boolean checkLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
@@ -250,8 +257,9 @@ public class Settings {
 		return b;
 	}
 	
-	//Find Location (right side) in grid
-	public void findLocationInGrid(WebDriver driver, String Location) throws IOException, InterruptedException{
+	//Find Location (right side) in grid (table)
+	//pass driver instance and location name which is to be find as parameter
+	public void findLocationInGrid(WebDriver driver, String locationName) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocationInGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
@@ -259,13 +267,14 @@ public class Settings {
 
 		for(WebElement e : cells)
 		{
-			if(e.getText().trim().equals(Location))
+			if(e.getText().trim().equals(locationName))
 				e.click();
 		}
 	}
 
-	//Find host (right side) in grid
-	public void findHostInGrid(WebDriver driver, String Host) throws IOException, InterruptedException{
+	//Find host (right side) in grid (table)
+	//pass driver instance and location name which is to be find as parameter
+	public void findHostInGrid(WebDriver driver, String hostName) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("HostInGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
@@ -274,18 +283,19 @@ public class Settings {
 		for(WebElement e : cells)
 		{	//System.out.println("Test:"+e.getText()+"\n");
 			try{
-				if(e.getText().trim().equals(Host))
+				if(e.getText().trim().equals(hostName))
 					e.click();
 			}
 			catch(Exception ex){
-				System.out.println("Couldn't find Host: "+Host);
+				System.out.println("Couldn't find Host: "+hostName);
 				takeScreenShotForDriver(driver);
 			}
 		}
 	}
 
-	//Find VM for particular host in grid
-	public void findVMForHost(WebDriver driver, String Host) throws IOException, InterruptedException{
+	//Find VM (right side) for particular host in grid (table)
+	//pass driver instance and VM name which is to be find as parameter
+	public void findVMForHost(WebDriver driver, String vmName) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
@@ -293,12 +303,13 @@ public class Settings {
 
 		for(WebElement e : cells)
 		{	//System.out.println(e.getText());
-			if(e.getText().trim().equals(Host))
+			if(e.getText().trim().equals(vmName))
 				e.click();
 		}
 	}
 
-	//Find vCenter (right side table)
+	//Find vCenter (right side) in grid (table)
+	//pass driver instance and VCenter name which is to be find as parameter
 	public void findvCenterInGrid(WebDriver driver, String VCenter) throws IOException, InterruptedException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("VCenterInGrid")));
@@ -311,7 +322,8 @@ public class Settings {
 		}
 	}
 
-	//Select  element from dropdown
+	//Select element from dropdown
+	//pass driver instance,value and id for that boundlist which is to be find as parameter
 	public void boundListSelect(WebDriver driver,String toBeSelected,String idForBoundlist) throws IOException, InterruptedException{
 		setup();
 		WebElement element = driver.findElement(By.id((idForBoundlist)));
@@ -329,7 +341,8 @@ public class Settings {
 		}
 	}
 
-	//Check resources and log them if verification fails
+	//Check resources and log them if host resource verification fails
+	//pass driver instance as parameter
 	public void checkFailureOfHostCapacity(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("HostCapacity")));
@@ -363,6 +376,8 @@ public class Settings {
 		}
 	}
 
+	//Split IP address string with '.' 
+	//pass driver instance IP and number of the part that is needed to be retrieved as parameter
 	public String IPConvert(WebDriver driver,String IP,int partIndex){
 		String[] parts = IP.split("\\.");
 		/*for(int i=0;i<4;i++)
@@ -370,6 +385,8 @@ public class Settings {
 		return parts[partIndex];
 	}
 
+	//Remove alphabetical characters from string
+	//pass String as parameter which is to be processed
 	public String removeAlpha(String str){
 		StringBuilder sc = new StringBuilder();
 		for (int i=0;i<str.length();i++)
@@ -380,6 +397,7 @@ public class Settings {
 		return sc.toString();
 	}
 
+	//Make fields (IDs) for IP where it is to be filled
 	public List<String> makeFields(String input){
 		List<String> fields = new ArrayList<String>();
 		int it = Integer.parseInt(removeAlpha(input));
@@ -388,7 +406,7 @@ public class Settings {
 		return fields;
 	}
 
-	public void IPFill(WebDriver driver,String IP,String startAddress){
+	public void fillIPInBoxes(WebDriver driver,String IP,String startAddress){
 		List<String> addresses = makeFields(startAddress);
 		for(int i=0;i<4;i++)
 		{
@@ -460,10 +478,10 @@ public class Settings {
 
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-					{
-						logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-						//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
-					}
+				{
+					logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+				}
 		}
 		catch(Exception ex){
 			takeScreenShotForDriver(driver);
@@ -489,7 +507,7 @@ public class Settings {
 		}
 	}
 
-	public String ExtractText(String tag,String FilePath) throws IOException{
+	public String findTextInBetweenTags(String tag,String FilePath) throws IOException{
 		String check = "";
 		String ans = "";
 		File file = new File(FilePath);
@@ -972,7 +990,7 @@ public class Settings {
 			}
 
 			//driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
-			selNetworkTab(driver);
+			selNetworkTabForVMinstallation(driver);
 			logClass.info("Selecting NetWorks");
 
 			for(int i=0;i<nlLabelNet.getLength();i++)
@@ -1039,7 +1057,7 @@ public class Settings {
 					Addresses.add(e.getAttribute("id").replace("body", "input"));
 				}
 			//System.out.println("Before Fill IP");
-			IPFill(driver, IP, Addresses.get(0));
+			fillIPInBoxes(driver, IP, Addresses.get(0));
 			//System.out.println("After Fill IP");
 		}
 
@@ -1432,5 +1450,6 @@ public class Settings {
 			}
 		}
 	}
+	
 }
 

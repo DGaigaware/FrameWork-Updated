@@ -18,6 +18,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 	import com.avaya.sdmclient.Settings;
 	import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 
 	public class sdmSMGR {
 		Settings obj = new Settings();

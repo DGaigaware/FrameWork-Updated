@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
-import com.avaya.sdmclient.runnerdemo.MyException;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class Location {
 	Settings obj = new Settings();

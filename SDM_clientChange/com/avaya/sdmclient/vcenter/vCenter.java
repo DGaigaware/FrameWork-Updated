@@ -22,7 +22,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.*;
-import com.avaya.sdmclient.runnerdemo.MyException;
+import com.avaya.sdmclient.extraResources.MyException;
 public class vCenter {
 	Settings obj = new Settings();
 

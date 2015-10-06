@@ -1,4 +1,4 @@
-package com.avaya.sdmclient.runnerdemo;
+package com.avaya.sdmclient.extraResources;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,8 +14,9 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
-public class scpWar {
+public class scpFilesFromSMGR {
 
+	@SuppressWarnings("unused")
 	public void scpFile() throws JSchException, IOException{
 		String username = "admin";
 		String host = "pdev55vm2.smgrdev.avaya.com";
@@ -126,7 +127,7 @@ public class scpWar {
 	
 	public static void main(String[] args) throws JSchException, IOException, SftpException {
 
-		scpWar s = new scpWar();
+		scpFilesFromSMGR s = new scpFilesFromSMGR();
 		s.scpFile();
 
 	}

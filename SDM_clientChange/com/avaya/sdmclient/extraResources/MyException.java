@@ -1,4 +1,4 @@
-package com.avaya.sdmclient.runnerdemo;
+package com.avaya.sdmclient.extraResources;
 
 public class MyException extends Exception {
 	public MyException(String message) {

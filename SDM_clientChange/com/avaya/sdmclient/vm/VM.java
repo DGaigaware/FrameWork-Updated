@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
-import com.avaya.sdmclient.runnerdemo.MyException;
+import com.avaya.sdmclient.extraResources.MyException;
 
 import utility.UserAction;
 

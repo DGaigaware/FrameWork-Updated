@@ -18,6 +18,8 @@ import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
+import com.avaya.sdmclient.extraResources.scpFilesFromSMGR;
 
 public class sdmSMGRConcurrent {
 	
@@ -157,7 +159,7 @@ public class sdmSMGRConcurrent {
 
 			obj.StatusCheck(driver, "Host Create/Update Completed", 20);
 
-			logClass.endTestCase("Added Host Succesfully");
+			logClass.endTestCase("Added Host Successfully");
 		}
 
 		@Test(description="Editing Host to given Location",priority=4)
@@ -190,6 +192,15 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(2500);
 			
 			obj.refreshItems(driver, "EditHost");
+			
+			driver.findElement(By.id("chgNetwkParamBtn")).click();
+			obj.errorBox(driver, obj.checkError(driver));
+	
+			driver.findElement(By.id("chgPassBtn")).click();
+			obj.errorBox(driver, obj.checkError(driver));
+			
+			driver.findElement(By.id("updateEsxiHost")).click();
+			obj.errorBox(driver, obj.checkError(driver));
 
 			logClass.endTestCase("Edited Host Successfully");
 
@@ -219,7 +230,7 @@ public class sdmSMGRConcurrent {
 		@Parameters({"IP", "VMName"})
 		public void AddVM(String IP,String VMName) throws Exception {
 
-			scpWar s = new scpWar();
+			scpFilesFromSMGR s = new scpFilesFromSMGR();
 			s.scpFile();
 			
 			String shortVMName = obj.shortVMName(VMName);
@@ -304,7 +315,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
-			obj.deployButtonClick(driver);
+			obj.deployButtonClickForVM(driver);
 			Thread.sleep(450);
 			obj.findButton(driver);
 //			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();

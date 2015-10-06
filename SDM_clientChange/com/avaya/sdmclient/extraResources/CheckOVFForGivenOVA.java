@@ -1,4 +1,4 @@
-package com.avaya.sdmclient.runnerdemo;
+package com.avaya.sdmclient.extraResources;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.avaya.sdmclient.Settings;
 
-public class met2909 {
+public class CheckOVFForGivenOVA {
 
 	public static String find(String input){
 		String returnStr = "";
@@ -42,9 +42,8 @@ public class met2909 {
 		return returnStr;
 	}
 	
-	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		find("BSM");
 		Settings s = new Settings();
 		//s.chooseOVF("");

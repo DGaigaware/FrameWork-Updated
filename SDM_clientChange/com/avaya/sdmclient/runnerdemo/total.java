@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class total {
 	Settings obj = new Settings();
@@ -37,32 +38,20 @@ public class total {
 		obj.goToSite(driver);
 
 		driver.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
-		logClass.info("Adding new Location");
+			logClass.info("Adding new Location");
 
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).sendKeys(obj.readFromFile("input.txt", "NewLocation"));
+			obj.findIDandFillValues(driver, "input.properties", "AddLocation");
+			Thread.sleep(250);
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationSave")));
+			
+			driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
+			logClass.info("Saved New Location");
 
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).sendKeys(obj.readFromFile("input.txt", "FAddress"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).sendKeys(obj.readFromFile("input.txt", "FCity"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).sendKeys(obj.readFromFile("input.txt", "FState"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).sendKeys(obj.readFromFile("input.txt", "FZIP"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).sendKeys(obj.readFromFile("input.txt", "FCountry"));
-
-		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
-		logClass.info("Saved New Location");
-
-		obj.errorBox(driver, obj.checkError(driver));
-		logClass.endTestCase("Added a new Location");
+			obj.errorBox(driver, obj.checkError(driver));
+			obj.refreshItems(driver, "AddLocation");
+			
+			logClass.endTestCase("Added a new Location");
 
 	}
 
@@ -76,32 +65,23 @@ public class total {
 
 		obj.findLocationInGrid(driver, "testLoc");
 
-		driver.findElement(By.xpath(locator.getProperty("LocationEdit"))).click();
+			driver.findElement(By.xpath(locator.getProperty("LocationEdit"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("LocationAddressEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationAddressEdit"))).sendKeys(obj.readFromFile("input.txt", "NewAddress"));
+			obj.findIDandFillValues(driver, "input.properties", "EditLocation");
 
-		driver.findElement(By.xpath(locator.getProperty("LocationCityEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCityEdit"))).sendKeys(obj.readFromFile("input.txt", "NewCity"));
+			obj.waitForPresence(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
 
-		driver.findElement(By.xpath(locator.getProperty("LocationStateEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationStateEdit"))).sendKeys(obj.readFromFile("input.txt", "NewState"));
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
 
-		driver.findElement(By.xpath(locator.getProperty("LocationZIPEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationZIPEdit"))).sendKeys(obj.readFromFile("input.txt", "NewZIP"));
+			//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
+			driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).sendKeys(obj.readFromFile("input.txt", "NewCountry"));
+			driver.switchTo().activeElement();
+			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
+			obj.refreshItems(driver, "EditLocation");
+			logClass.info("Saved Location");
 
-		obj.waitForPresence(driver, By.xpath(locator.getProperty("LocationSaveEdit")));
-		//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
-		driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
-
-		driver.switchTo().activeElement();
-		driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
-		logClass.info("Saved Location");
-
-		logClass.endTestCase("Edited Location");
+			logClass.endTestCase("Edited Location");
 	}
 
 
@@ -112,15 +92,17 @@ public class total {
 
 		obj.goToSite(driver);
 
-		obj.findLocationOrHost(driver, "VM Management");
+			obj.findLocationOrHost(driver, "VM Management");
 
-		obj.findLocationInGrid(driver, obj.readFromFile("input.txt", "Location"));
+			obj.findLocationInGrid(driver, obj.readFromFile("input.properties", "AddLocationName:"));
 
-		driver.findElement(By.xpath(locator.getProperty("LocationDelete"))).click();
+			obj.checkFocus(driver, By.xpath(locator.getProperty("LocationDelete")));
+			
+			driver.findElement(By.xpath(locator.getProperty("LocationDelete"))).click();
 
-		obj.confirmDialogBox(driver);
+			obj.confirmDialogBox(driver);
 
-		logClass.endTestCase("Deleted Location");
+			logClass.endTestCase("Deleted Location");
 	}
 
 
@@ -131,50 +113,48 @@ public class total {
 
 		obj.goToSite(driver);
 
-		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"))){
-			_AddLocation();
-			System.out.println("Adding Location");
-			driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-			driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-			logClass.info("Added Location as Location was not there beforehand.");
-		}
+		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"))){
+				driver.navigate().refresh();
+				obj.logOut(driver);
+				AddLocation();
+				System.out.println("Adding Location");
+				logClass.info("Location was not there. Adding it and pausing current thread.");
+				obj.goHome(driver);
+				//obj.loginToSite(driver);
+				logClass.info("Added Location as Location was not there beforehand.");
+			}
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"));
+			obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
 
-		driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();
-		logClass.info("In 'Host' Tab");
+			driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();
+			logClass.info("In 'Host' Tab");
 
-		driver.findElement(By.xpath(locator.getProperty("New-Host"))).click();
-		logClass.info("Adding new Host");
-
-		driver.findElement(By.xpath(locator.getProperty("HostName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostName"))).sendKeys(obj.readFromFile("input.txt", "HostName175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostIP"))).sendKeys(obj.readFromFile("input.txt", "HostIP175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostUserName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostUserName"))).sendKeys(obj.readFromFile("input.txt", "username175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostPassWord"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostPassWord"))).sendKeys(obj.readFromFile("input.txt", "password175"));
-
-		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
-
-		obj.confirmDialogBox(driver);
-
-		Thread.sleep(4500);
-
-		obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
-
-		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+			driver.findElement(By.xpath(locator.getProperty("New-Host"))).click();
+			logClass.info("Adding new Host");
+			Thread.sleep(250);			
 		
-		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
+			obj.findIDandFillValues(driver, "input.properties", "AddHost");
+			Thread.sleep(250);
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHost")));
+			
+			driver.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
 
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+			obj.confirmDialogBox(driver);
+			Thread.sleep(4500);
+			
+			obj.refreshItems(driver, "AddHost");
+			Thread.sleep(1500);
+			
+			obj.checkSuccess(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		logClass.endTestCase("Added Host Succesfully");
+			obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
+			
+			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
+
+			obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+
+			logClass.endTestCase("Added Host Successfully");
 	}
 
 	@Test(description="Editing Host to given Location",priority=4)
@@ -184,52 +164,31 @@ public class total {
 
 		obj.goToSite(driver);
 
-		obj.findLocationOrHost(driver, "testLoc");
+		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
+			driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();
+			logClass.info("In 'Host' Tab");
 
-		driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();
-		logClass.info("In 'Host' Tab");
+			obj.findHostInGrid(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		obj.findHostInGrid(driver, obj.readFromFile("input.txt", "HostName175"));
+			driver.findElement(By.xpath(locator.getProperty("EditHost"))).click();
+			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("EditHost"))).click();
+			obj.selectLocforEditHost(driver);
+			Thread.sleep(250);
+	
+			obj.findIDandFillValues(driver, "input.properties", "EditHost");
+			Thread.sleep(250);
+			
+			obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHostEdit")));
 
-		System.out.println("\n\n\n");
+			driver.findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
+			obj.errorBox(driver, obj.checkError(driver));
+			Thread.sleep(2500);
+			
+			obj.refreshItems(driver, "EditHost");
 
-		Thread.sleep(250);
-		obj.boundListSelect(driver, obj.readFromFile("input.txt", "DefaultLoc"), obj.selBoundList(driver));
-		
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(locator.getProperty(linkText))));
-		driver.findElement(By.linkText(locator.getProperty(linkText))).click();
-		
-		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostNameEdit"))).sendKeys(obj.readFromFile("input.txt", "HostName175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostIPEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostIPEdit"))).sendKeys(obj.readFromFile("input.txt", "HostIP175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostUserNameEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostUserNameEdit"))).sendKeys(obj.readFromFile("input.txt", "username175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostPassWordEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostPassWordEdit"))).sendKeys(obj.readFromFile("input.txt", "password175"));
-		Thread.sleep(250);
-
-		driver.findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
-
-		obj.errorBox(driver, obj.checkError(driver));
-
-		Thread.sleep(2500);
-
-		obj.checkSuccess(driver, obj.readFromFile("input.txt", "HostName175"));
-
-		obj.waitForPresence(driver, By.id(locator.getProperty("vmDeployStatus")));
-		
-		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"));
-
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
-		logClass.endTestCase("Edited Host Successfully");
+			logClass.endTestCase("Edited Host Successfully");
 
 	}
 
@@ -240,87 +199,17 @@ public class total {
 
 		obj.goToSite(driver);
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "DefaultLoc"));
+		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationCity:"));
 
-		obj.findHostInGrid(driver, obj.readFromFile("input.txt", "HostName175"));
+			obj.findHostInGrid(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		driver.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
+			obj.checkFocus(driver, By.xpath(locator.getProperty("HostDelete")));
+			
+			driver.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
 
-		obj.confirmDialogBox(driver);
+			obj.confirmDialogBox(driver);
 
-		logClass.endTestCase("Deleted Host");
-	}*/
-
-	/*@Test(description="Adding Location",priority=6)
-	public void AddLocation() throws IOException, InterruptedException {
-
-		logClass.startTestCase("Add a new Location on SDM");
-
-		obj.goToSite(driver);
-
-		driver.findElement(By.xpath(locator.getProperty("LocationAdd"))).click();
-		logClass.info("Adding new Location");
-
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).sendKeys(obj.readFromFile("input.txt", "NewLocation"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).sendKeys(obj.readFromFile("input.txt", "FAddress"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).sendKeys(obj.readFromFile("input.txt", "FCity"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).sendKeys(obj.readFromFile("input.txt", "FState"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).sendKeys(obj.readFromFile("input.txt", "FZIP"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).sendKeys(obj.readFromFile("input.txt", "FCountry"));
-
-		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
-		logClass.info("Saved New Location");
-
-		obj.errorBox(driver, obj.checkError(driver));
-		logClass.endTestCase("Added a new Location");
-
-	}
-
-	@Test(description="Adding Host to given Location",priority=7)
-	public void addHost() throws IOException, InterruptedException{
-
-		logClass.startTestCase("Adding Host to given Location");
-
-		obj.goToSite(driver);
-
-		obj.findLocationOrHost(driver, obj.readFromFile("input.txt", "NewLocation"));
-
-		driver.findElement(By.xpath(locator.getProperty("Host-Tab"))).click();
-		logClass.info("In 'Host' Tab");
-
-		driver.findElement(By.xpath(locator.getProperty("New-Host"))).click();
-		logClass.info("Adding new Host");
-
-		driver.findElement(By.xpath(locator.getProperty("HostName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostName"))).sendKeys(obj.readFromFile("input.txt", "HostName175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostIP"))).sendKeys(obj.readFromFile("input.txt", "HostIP175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostUserName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostUserName"))).sendKeys(obj.readFromFile("input.txt", "username175"));
-
-		driver.findElement(By.xpath(locator.getProperty("HostPassWord"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("HostPassWord"))).sendKeys(obj.readFromFile("input.txt", "password175"));
-
-		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
-
-		obj.confirmDialogBox(driver);
-
-		logClass.endTestCase("Added Host Succesfully");
+			logClass.endTestCase("Deleted Host");
 	}*/
 
 	@Test(description="Adding VM to given Location and Host",priority=8)

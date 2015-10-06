@@ -30,6 +30,7 @@ import org.xml.sax.SAXException;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class settingsForConcThreads {
 	

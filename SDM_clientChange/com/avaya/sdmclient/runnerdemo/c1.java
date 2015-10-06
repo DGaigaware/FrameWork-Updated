@@ -19,6 +19,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 	import com.avaya.sdmclient.Settings;
 	import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.vm.VM;
 
 	public class c1 {
@@ -124,7 +125,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			//driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
-			obj.deployButtonClick(driver);
+			obj.deployButtonClickForVM(driver);
 			Thread.sleep(450);
 			obj.findButton(driver);
 //			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
