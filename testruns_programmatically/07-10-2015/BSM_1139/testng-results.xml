@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="0" started-at="2015-10-07T07:23:15Z" finished-at="2015-10-07T07:23:15Z">
+    <groups>
+    </groups>
+  </suite> <!-- Default Suite -->
+  <suite name="Suite1" duration-ms="4421039" started-at="2015-10-07T06:09:34Z" finished-at="2015-10-07T07:23:15Z">
+    <groups>
+    </groups>
+    <test name="BSM-7.0.0.0.700007-e55-01.ova" duration-ms="4421039" started-at="2015-10-07T06:09:34Z" finished-at="2015-10-07T07:23:15Z">
+      <class name="com.avaya.sdmclient.runnerdemo.c1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="setup" is-config="true" duration-ms="0" started-at="2015-10-07T11:39:34Z" finished-at="2015-10-07T11:39:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddVMSuite(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="AddVMSuite" duration-ms="908317" started-at="2015-10-07T11:39:34Z" description="Adding VM to given Location and Host" finished-at="2015-10-07T11:54:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVMSuite -->
+        <test-method status="PASS" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="EditVM" duration-ms="39326" started-at="2015-10-07T11:54:43Z" description="Editing VM to given Location and Host" finished-at="2015-10-07T11:55:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="PASS" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="StopVM" duration-ms="128124" started-at="2015-10-07T11:55:22Z" description="Stoping VM to given Location and Host" finished-at="2015-10-07T11:57:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="PASS" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="StartVM" duration-ms="125832" started-at="2015-10-07T11:57:30Z" description="Starting VM to given Location and Host" finished-at="2015-10-07T11:59:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="PASS" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="RefreshVM" duration-ms="119111" started-at="2015-10-07T11:59:36Z" description="Refreshing VM to given Location and Host" finished-at="2015-10-07T12:01:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="PASS" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="RestartVM" duration-ms="160342" started-at="2015-10-07T12:01:35Z" description="Restarting VM to given Location and Host" finished-at="2015-10-07T12:04:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestartVM -->
+        <test-method status="PASS" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="DeleteVM" duration-ms="38898" started-at="2015-10-07T12:04:15Z" description="Deleting VM to given Location and Host" finished-at="2015-10-07T12:04:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.c1@33d8b0e1]" name="startNewThread" duration-ms="2901088" started-at="2015-10-07T12:04:54Z" description="Starting New Thread" finished-at="2015-10-07T12:53:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.225]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BSM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startNewThread -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.c1 -->
+    </test> <!-- BSM-7.0.0.0.700007-e55-01.ova -->
+  </suite> <!-- Suite1 -->
+</testng-results>

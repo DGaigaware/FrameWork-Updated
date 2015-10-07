@@ -1,17 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="155234" started-at="2015-10-06T13:55:49Z" finished-at="2015-10-06T13:58:25Z">
+  <suite name="Default suite" duration-ms="112247" started-at="2015-10-07T13:59:54Z" finished-at="2015-10-07T14:01:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="155234" started-at="2015-10-06T13:55:49Z" finished-at="2015-10-06T13:58:25Z">
-      <class name="com.avaya.sdmclient.runnerdemo.VC2508">
-        <test-method status="PASS" signature="editVC()[pri:0, instance:com.avaya.sdmclient.runnerdemo.VC2508@1fb59afc]" name="editVC" duration-ms="155217" started-at="2015-10-06T19:25:49Z" description="Editing vCenter" finished-at="2015-10-06T19:28:25Z">
+    <test name="Default test" duration-ms="112247" started-at="2015-10-07T13:59:54Z" finished-at="2015-10-07T14:01:46Z">
+      <class name="com.avaya.sdmclient.runnerdemo.total">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@661ed391]" name="setup" is-config="true" duration-ms="11" started-at="2015-10-07T19:29:54Z" finished-at="2015-10-07T19:29:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editVC -->
-      </class> <!-- com.avaya.sdmclient.runnerdemo.VC2508 -->
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@661ed391]" name="addVM" duration-ms="112173" started-at="2015-10-07T19:29:54Z" description="Adding VM to given Location and Host" finished-at="2015-10-07T19:31:46Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[Window not found. The browser window may have been closed.
+Command duration or timeout: 34 milliseconds
+Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
+System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
+*** Element info: {Using=link text, value=Status Details}
+Session ID: 9e8e2aba-177b-48e9-8acf-2346ad7d1926
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Command duration or timeout: 34 milliseconds
+Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
+System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
+*** Element info: {Using=link text, value=Status Details}
+Session ID: 9e8e2aba-177b-48e9-8acf-2346ad7d1926
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:407)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.avaya.sdmclient.runnerdemo.total.addVM(total.java:323)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
+	at org.testng.TestNG.run(TestNG.java:1009)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
+System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
+Driver info: driver.version: unknown
+	at <anonymous class>.nsCommandProcessor.prototype.execute(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12350)
+	at <anonymous class>.Dispatcher.executeAs/<(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9089)
+	at <anonymous class>.Resource.prototype.handle(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9236)
+	at <anonymous class>.Dispatcher.prototype.dispatch(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9183)
+	at <anonymous class>.WebDriverServer/<.handle(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12136)
+	at <anonymous class>.createHandlerFunc/<(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+	at <anonymous class>.ServerHandler.prototype.handleResponse(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+	at <anonymous class>.Connection.prototype.process(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+	at <anonymous class>.RequestReader.prototype._handleResponse(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+	at <anonymous class>.RequestReader.prototype._processBody(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+	at <anonymous class>.RequestReader.prototype.onInputStreamReady(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2501019882851742124webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVM -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.total -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

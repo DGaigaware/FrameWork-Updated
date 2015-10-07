@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="0" started-at="2015-10-07T10:34:57Z" finished-at="2015-10-07T10:34:57Z">
+    <groups>
+    </groups>
+  </suite> <!-- Default Suite -->
+  <suite name="Concurrent Suite" duration-ms="3508654" started-at="2015-10-07T09:36:28Z" finished-at="2015-10-07T10:34:56Z">
+    <groups>
+    </groups>
+    <test name="SM-7.0.0.0.700007-e55-01.ova" duration-ms="3508654" started-at="2015-10-07T09:36:28Z" finished-at="2015-10-07T10:34:56Z">
+      <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="setup" is-config="true" duration-ms="3" started-at="2015-10-07T15:09:02Z" finished-at="2015-10-07T15:09:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="AddVM" duration-ms="626908" started-at="2015-10-07T15:09:02Z" description="Adding VM to given Location and Host" finished-at="2015-10-07T15:19:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVM -->
+        <test-method status="PASS" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="EditVM" duration-ms="41517" started-at="2015-10-07T15:19:29Z" description="Editing VM to given Location and Host" finished-at="2015-10-07T15:20:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="PASS" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="StopVM" duration-ms="126127" started-at="2015-10-07T15:20:11Z" description="Stoping VM to given Location and Host" finished-at="2015-10-07T15:22:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="PASS" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="StartVM" duration-ms="125689" started-at="2015-10-07T15:22:17Z" description="Starting VM to given Location and Host" finished-at="2015-10-07T15:24:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="PASS" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="RefreshVM" duration-ms="119825" started-at="2015-10-07T15:24:22Z" description="Refreshing VM to given Location and Host" finished-at="2015-10-07T15:26:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="PASS" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="RestartVM" duration-ms="161047" started-at="2015-10-07T15:26:22Z" description="Restarting VM to given Location and Host" finished-at="2015-10-07T15:29:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestartVM -->
+        <test-method status="PASS" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="DeleteVM" duration-ms="38691" started-at="2015-10-07T15:29:03Z" description="Deleting VM to given Location and Host" finished-at="2015-10-07T15:29:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@2599930b]" name="startNewThread" duration-ms="2114315" started-at="2015-10-07T15:29:42Z" description="Starting New Thread" finished-at="2015-10-07T16:04:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-01.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startNewThread -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->
+      <class name="com.avaya.sdmclient.vcenter.VCEdit">
+        <test-method status="PASS" signature="editVC()[pri:0, instance:com.avaya.sdmclient.vcenter.VCEdit@70a2aec3]" name="editVC" duration-ms="154509" started-at="2015-10-07T15:06:28Z" description="Editing vCenter" finished-at="2015-10-07T15:09:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editVC -->
+      </class> <!-- com.avaya.sdmclient.vcenter.VCEdit -->
+    </test> <!-- SM-7.0.0.0.700007-e55-01.ova -->
+  </suite> <!-- Concurrent Suite -->
+</testng-results>
