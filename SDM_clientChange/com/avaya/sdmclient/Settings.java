@@ -199,6 +199,7 @@ public class Settings {
 				if(ee.getText().equals("Deploy"))
 				{	//System.out.println(ee.getAttribute("id"));
 					//System.out.println(ee.getText());
+					System.out.println(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity"));
 					ee.click();
 					break;
 				}
@@ -331,7 +332,7 @@ public class Settings {
 		for (WebElement e : tmp1 )
 		{
 			//System.out.println(e.getAttribute("id"));
-			System.out.println(e.getText()+ " Test "+e.getAttribute("id"));
+			//System.out.println(e.getText()+ " Test "+e.getAttribute("id"));
 			if(e.getText().contains(toBeSelected))
 			{
 				//System.out.println("Selected : "+e.getText());
@@ -750,10 +751,11 @@ public class Settings {
 		
 		ArrayList<WebElement> elem = (ArrayList<WebElement>) js.executeScript(sc);
 		//System.out.println("Before");
-		System.out.println("No of fields in OVF: "+elem.size());
+		//System.out.println("No of fields in OVF: "+elem.size());
 		
 		if(input.equals("EditHost")){
-			driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
+			selectLocforEditHost(driver);
+			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 			Thread.sleep(250);
 			boundListSelect(driver, readFromFile(filename, "EditHostLocation:"), selBoundList(driver));
 		}
@@ -1253,7 +1255,7 @@ public class Settings {
 			}
 	}
 	
-	public void findButton(WebDriver driver){
+	public void findButton(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindow
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
@@ -1274,8 +1276,10 @@ public class Settings {
 		}
 		
 		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
+		Thread.sleep(750);
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
 		System.out.println("Clicked");
+		logClass.info("Accepted EULA ,clicked.");
 	}
 	
 	public String findIDandFillValuesForVM(WebDriver driver,String filename,String inputIDfromOVF){
@@ -1383,7 +1387,7 @@ public class Settings {
 			}
 	}
 	
-	public void selectLocforEditHost(WebDriver driver){
+	public void selectLocforEditHost(WebDriver driver) throws IOException, InterruptedException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"hostEditForm\").querySelectorAll('[id^=\"combobox\"]');return nl;";
@@ -1391,6 +1395,7 @@ public class Settings {
 		System.out.println(elem2.size());
 		
 		driver.findElement(By.id(elem2.get(0).getAttribute("id").concat("-inputEl"))).click();
+		//boundListSelect(driver, toBeSelected, selBoundList(driver));
 	}
 	
 	public void editVMchooseFPorFQDN(WebDriver driver,String chooseOption){
@@ -1450,6 +1455,47 @@ public class Settings {
 			}
 		}
 	}
+
+	public void checkStrings(WebDriver driver,By locator,int time){
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
+		boolean b = true;
+		if(b){
+			try{
+				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
+			}
+			catch(Exception e){
+				System.out.println("testPass");
+				b=false;
+			}
+		}
+		else{
+			try{
+				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Failed"));
+			}
+			catch(Exception e){
+				System.out.println("testFail");
+				b=true;
+			}
+		}
+		
+	}
 	
+	public void clickComboSDMCli(WebDriver driver,String label){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String sc = "var nl = document.querySelectorAll('[id^=\"combobox\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elem2.size());
+		String tempID = "";
+		
+		for(WebElement e : elem2){
+			System.out.println(e.getAttribute("id")+" "+e.getText());
+			if(e.getText().equals(label)){
+				System.out.println(e.getAttribute("id"));
+				tempID = e.getAttribute("id").concat("-inputEl");
+				driver.findElement(By.id(tempID)).click();
+				break;
+			}
+		}
+	}
 }
 

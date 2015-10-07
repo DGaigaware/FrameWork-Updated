@@ -47,7 +47,7 @@ public class driverConcurrentInstallations {
 	 	TestNG testng;
 		testng = new TestNG();
 		testng.setPreserveOrder(true);
-		testng.setVerbose(10);
+		testng.setVerbose(2);
 		XmlSuite suite = new XmlSuite();
 		
 		//suite.setSuiteFiles(Arrays.asList(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+fName));
