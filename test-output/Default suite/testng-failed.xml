@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.avaya.sdmclient.runnerdemo.total">
+      <class name="com.avaya.sdmclient.update.updateVMs">
         <methods>
           <include name="setup"/>
-          <include name="addVM"/>
+          <include name="updateVM"/>
         </methods>
-      </class> <!-- com.avaya.sdmclient.runnerdemo.total -->
+      </class> <!-- com.avaya.sdmclient.update.updateVMs -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
