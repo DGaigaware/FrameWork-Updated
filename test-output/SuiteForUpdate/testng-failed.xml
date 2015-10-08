@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [SuiteForUpdate]">
+  <parameter name="VMName" value="sit4vm1"/>
+  <test name="UpdateSMGR(failed)">
+    <parameter name="VMName" value="sit4vm1"/>
+    <classes>
+      <class name="com.avaya.sdmclient.update.updateVMs">
+        <methods>
+          <include name="setup"/>
+          <include name="updateVM" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.avaya.sdmclient.update.updateVMs -->
+    </classes>
+  </test> <!-- UpdateSMGR(failed) -->
+</suite> <!-- Failed suite [SuiteForUpdate] -->
