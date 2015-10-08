@@ -117,18 +117,12 @@ import com.avaya.sdmclient.vm.VM;
 
 			//removed
 
-			//obj.FillValues("inputbsm.txt", obj.readFromFile("inputbsm.txt", "BSMOVFPath"), driver);
-			//obj.FillValues("inputcmsimplex.txt", obj.readFromFile("inputcmsimplex.txt","Path"), driver);
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), driverC,IP,"test"+shortVMName);
-			
-			//obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
-
-			//driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
 			obj.deployButtonClickForVM(driverC);
 			Thread.sleep(450);
-			//obj.findButton(driverC);
-//			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
+			obj.findButton(driverC);
+
 			logClass.info("Accepted EULA");
 
 			//Adding Code

@@ -318,13 +318,11 @@ public class sdmSMGRConcurrent {
 			obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
 			obj.findButton(drive);
-//			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
 			logClass.info("Accepted EULA");
 			
 			//Adding code to get the same page as before
 			Thread.sleep(5500);
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
 			
 			//Adding Code for concurrency
@@ -353,15 +351,13 @@ public class sdmSMGRConcurrent {
 			t.start();
 
 			Thread.sleep(9000);
-//			obj.findLocationOrHost(driver, "testHost");
-//
-//			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+
 			obj.chooseTab(drive, "Virtual Machines");
-			obj.findVMForHost(drive, "test"+shortVMName);
+			Thread.sleep(1500);
 			
+			obj.findVMForHost(drive, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 			obj.chooseLink(drive, "test"+shortVMName);
 			logClass.info("Checking Status Details");
 

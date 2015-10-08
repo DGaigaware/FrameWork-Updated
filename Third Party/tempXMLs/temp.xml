@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="10">
 <test name="">
    
-<parameter name="IP" value="148.147.162.225"/>
+<parameter name="IP" value="148.147.162.221"/>
 <parameter name="VMName" value=""/>
       
     <!-- <packages>

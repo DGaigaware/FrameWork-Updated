@@ -616,7 +616,7 @@ public class Settings {
 					System.out.println(rowID);
 				}
 		}
-		driver.findElement(By.id(rowID)).findElement(By.className("deployinprogress")).click();
+		driver.findElement(By.id(rowID)).findElement(By.linkText("Status Details")).click();
 		//el.findElement(By.className("deployinprogress")).click();
 	}
 
@@ -1256,7 +1256,7 @@ public class Settings {
 	}
 	
 	public void findButton(WebDriver driver) throws InterruptedException{
-		//EulaAgreementWindow
+		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
@@ -1456,27 +1456,36 @@ public class Settings {
 		}
 	}
 
-	public void checkStrings(WebDriver driver,By locator,int time){
+	public Object checkStrings(WebDriver driver,By locator,int time,boolean b){
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
-		boolean b = true;
+		Object o = null;
+		
 		if(b){
 			try{
 				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
+				System.out.println("Completed Successfully..");
 			}
 			catch(Exception e){
 				System.out.println("testPass");
+				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 				b=false;
+				o = checkStrings(driver, locator, time, b);
 			}
 		}
 		else{
 			try{
 				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Failed"));
+				System.out.println("Failed..");
 			}
 			catch(Exception e){
 				System.out.println("testFail");
+				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 				b=true;
+				o = checkStrings(driver, locator, time, b);
 			}
 		}
+		
+		return o;
 		
 	}
 	
@@ -1496,6 +1505,126 @@ public class Settings {
 				break;
 			}
 		}
+	}
+	
+	public void refreshVMValues(WebDriver driver,String shortVMname,String inputFileName) throws IOException{
+		String uName = "";
+		String pwd = "";
+		final String SM = "SM";
+		final String BSM = "BSM";
+		final String CMM = "CMM";
+		final String EDP = "EDP";
+		final String US = "US";
+		final String AAM = "AAM";
+		final String AES = "AES";
+		final String SecureAccessLinkGateway = "SecureAccessLinkGateway";
+		final String MediaServer = "MediaServer";
+		switch(shortVMname){
+		case SM:
+			uName = readFromFile(inputFileName, "CUSTLOGIN");
+			pwd = readFromFile(inputFileName, "CUSTPWD");
+			break;
+			
+		case BSM:
+			uName = readFromFile(inputFileName, "CUSTLOGIN");
+			pwd = readFromFile(inputFileName, "CUSTPWD");
+			break;
+
+		case CMM:
+			uName = readFromFile(inputFileName, "msg_login");
+			pwd = readFromFile(inputFileName, "msg_password");
+			break;
+
+		case EDP:
+			uName = readFromFile(inputFileName, "CUSTLOGIN");
+			pwd = readFromFile(inputFileName, "CUSTPWD");
+			break;
+
+		/*case US:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
+
+		case AAM:
+			uName = readFromFile(inputFileName, "msg_login");
+			pwd = readFromFile(inputFileName, "msg_password");
+			break;
+
+		/*case AES:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
+
+		/*case SecureAccessLinkGateway:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
+
+		case MediaServer:
+			uName = readFromFile(inputFileName, "CUSTLOGIN");
+			pwd = readFromFile(inputFileName, "CUSTPWD");
+			break;
+			
+		default:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;
+		
+		}
+		
+		driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
+		driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(uName);
+
+		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
+		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(pwd);
+
+	}
+	
+	public void updateVMFilePath(WebDriver driver,String filePath){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String sc = "var nl = document.getElementById(\"panelselectOVALocalUpdateVM-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elem2.size());
+		String tempID = "";
+		
+		for(WebElement e : elem2){
+			System.out.println(e.getAttribute("id")+" "+e.getText());
+			if(e.getText().equals("Select bin file from Local SMGR:")){
+				System.out.println(e.getAttribute("id"));
+				tempID = e.getAttribute("id").concat("-inputEl");
+				break;
+			}
+		}
+		
+		driver.findElement(By.id(tempID)).clear();
+		driver.findElement(By.id(tempID)).sendKeys(filePath);;
+	}
+	
+	public void findButtonUpdate(WebDriver driver) throws InterruptedException{
+		//EulaAgreementWindoweulaAgreementVMUpdatePanel
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String script2 = "var nl = document.getElementById(\"eulaAgreementVMUpdatePanel\").querySelectorAll('[id^=\"button\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		
+		/*System.out.println("Before");
+		System.out.println(elem2.size());*/
+		
+		List<String> buttons = new ArrayList<>();
+		for(WebElement e : elem2){
+			//System.out.println(e.getText());
+			if(e.getAttribute("id").contains("btnEl") && driver.findElement(By.id(e.getAttribute("id"))).getText().equals("Accept"))
+			{
+				buttons.add(e.getAttribute("id"));
+				//System.out.println("Buttons: "+e.getAttribute("id"));
+				//System.out.println(driver.findElement(By.id(e.getAttribute("id"))).getText());
+			}
+		}
+		
+		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
+		Thread.sleep(750);
+		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
+		System.out.println("Clicked");
+		logClass.info("Accepted EULA ,clicked.");
 	}
 }
 
