@@ -1456,33 +1456,53 @@ public class Settings {
 		}
 	}
 
-	public Object checkStrings(WebDriver driver,By locator,int time,boolean b){
+	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b){
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
 		Object o = null;
+		boolean check = false;
 		
 		if(b){
 			try{
+				chooseLink(driver, vmName);
+				driver.switchTo().activeElement();
 				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
-				System.out.println("Completed Successfully..");
+				System.out.println("Task Completed Successfully..");
+				logClass.info("Task Completed Successfully..");
+				logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+				check = true;
+				closeWindow(driver);
 			}
 			catch(Exception e){
-				System.out.println("testPass");
+				//closeWindow(driver);
+				System.out.println("Temporary testing for Completion or failure..");
 				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 				b=false;
-				o = checkStrings(driver, locator, time, b);
+				o = checkSuccessOrFailure(driver, locator, vmName,time, b);
 			}
 		}
 		else{
 			try{
-				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Failed"));
-				System.out.println("Failed..");
+				chooseLink(driver, vmName);
+				driver.switchTo().activeElement();
+				wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
+				System.out.println("Task Failed..");
+				logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
+				logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+				check = true;
+				takeScreenShotForDriver(driver);
+				closeWindow(driver);
 			}
 			catch(Exception e){
-				System.out.println("testFail");
+				System.out.println("Temporary testing for failure or Completion..");
 				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 				b=true;
-				o = checkStrings(driver, locator, time, b);
+				o = checkSuccessOrFailure(driver, locator, vmName,time, b);
 			}
+		}
+		
+		if(check){
+			System.out.println("Completed task.. ");
+			//o = System.out.toString();println("Passed");
 		}
 		
 		return o;
