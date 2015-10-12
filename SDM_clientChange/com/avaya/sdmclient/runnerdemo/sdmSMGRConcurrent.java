@@ -492,7 +492,7 @@ public class sdmSMGRConcurrent {
 		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
 		@Test(description="Refreshing VM to given Location and Host",priority=12)
 		@Parameters({"IP", "VMName"})
-		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 
 			String shortVMName = obj.shortVMName(VMName);
 			
@@ -519,7 +519,7 @@ public class sdmSMGRConcurrent {
 			
 			drive.switchTo().activeElement();
 
-			drive.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
+			/*drive.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
 			drive.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
 
 			drive.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
@@ -554,6 +554,25 @@ public class sdmSMGRConcurrent {
 			// Uptill Now
 			Thread.sleep(2500);
 			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
+			logClass.endTestCase("VM refreshed Successfully");*/
+			
+			obj.refreshVMValues(drive, shortVMName, "inputsm.properties");
+			Thread.sleep(750);
+			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
+			Thread.sleep(250);
+			drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
+			
+			Thread.sleep(1000);
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10);
+			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
+			Thread.sleep(1500);
+			if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
+				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+			Thread.sleep(5000);
+			
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10);		
+			
+			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
 		}
 

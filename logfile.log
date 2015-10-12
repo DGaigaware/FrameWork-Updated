@@ -21045,3 +21045,250 @@ null (vmId = 10100):: Unable to find vm: testEDP
 2015-10-09 20:22:53,668 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
 
  
+2015-10-12 11:42:17,852 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 11:42:17,872 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 11:42:21,322 INFO  [Logger] Logged in Successfully 
+2015-10-12 11:42:33,313 INFO  [Logger] Clicked on VM management 
+2015-10-12 11:43:11,576 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:11,739 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 11:43:12,160 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:12,160 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:17,290 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:17,488 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:17,682 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:17,682 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:22,771 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:22,903 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:23,112 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:23,113 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:28,182 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:28,356 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:28,593 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:28,593 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:33,798 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:33,912 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:34,106 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:34,106 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:39,150 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:39,259 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:39,445 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:39,445 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:44,434 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:44,566 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:44,747 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:44,747 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:49,794 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:49,919 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:50,121 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:50,121 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:43:55,541 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:43:55,648 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:43:55,822 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:43:55,822 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:00,811 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:00,932 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:01,111 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:01,111 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:06,223 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:06,318 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:06,531 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:06,531 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:11,869 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:12,180 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:13,057 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:13,057 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:19,756 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:19,848 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:20,593 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:20,593 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:26,052 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:26,182 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:26,431 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:26,431 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:31,654 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:31,812 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:31,997 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:31,997 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:37,282 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:37,396 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:37,594 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:37,594 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:42,830 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:42,953 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:43,161 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:43,161 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:48,467 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:48,614 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:48,830 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:48,830 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:53,991 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:54,117 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:54,305 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:54,305 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:44:59,370 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:44:59,495 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 11:44:59,676 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:44:59,676 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:45:51,290 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 11:45:51,291 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 11:45:54,820 INFO  [Logger] Logged in Successfully 
+2015-10-12 11:46:07,538 INFO  [Logger] Clicked on VM management 
+2015-10-12 11:46:45,265 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:46:45,378 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 11:46:45,589 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:46:45,590 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:47:44,920 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 11:47:44,922 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 11:47:48,362 INFO  [Logger] Logged in Successfully 
+2015-10-12 11:48:01,108 INFO  [Logger] Clicked on VM management 
+2015-10-12 11:48:38,468 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:48:38,577 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 11:48:38,792 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:48:38,792 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 11:50:39,068 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 11:50:39,069 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 11:50:42,294 INFO  [Logger] Logged in Successfully 
+2015-10-12 11:50:54,181 INFO  [Logger] Clicked on VM management 
+2015-10-12 11:51:26,964 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 11:51:27,090 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 11:51:27,304 ERROR [Logger] Something went wrong :( 
+2015-10-12 11:51:27,304 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 13:29:38,075 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:29:38,088 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:29:41,241 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:29:53,135 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:30:40,407 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:30:40,576 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 13:33:57,190 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:33:57,191 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:34:00,595 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:34:12,489 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:34:59,856 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:35:00,055 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 13:39:15,643 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:39:15,644 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:39:18,927 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:39:31,617 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:40:08,726 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 13:40:08,835 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 13:40:09,156 ERROR [Logger] Something went wrong :( 
+2015-10-12 13:40:09,156 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 13:40:14,435 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 13:40:14,554 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 13:40:14,749 ERROR [Logger] Something went wrong :( 
+2015-10-12 13:40:14,749 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 13:40:57,450 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:40:57,579 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-10-12 13:41:00,245 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-12 13:43:12,570 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:43:12,571 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:43:15,904 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:43:27,799 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:44:15,120 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:44:15,318 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 13:50:47,899 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:50:47,899 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:50:51,336 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:51:03,292 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:51:50,932 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:51:51,102 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 13:54:54,440 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 13:54:54,440 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 13:54:57,682 INFO  [Logger] Logged in Successfully 
+2015-10-12 13:55:09,590 INFO  [Logger] Clicked on VM management 
+2015-10-12 13:55:57,707 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:55:57,880 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 13:56:40,678 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 13:56:40,834 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-10-12 13:56:43,511 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-12 14:00:22,062 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:00:22,063 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:00:25,325 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:00:37,209 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:01:24,669 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 14:01:24,870 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-12 14:03:54,984 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:03:54,985 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:03:58,195 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:04:10,093 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:04:48,399 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:04:48,762 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 14:04:48,966 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:04:48,966 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 14:05:36,256 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:05:36,257 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:05:39,521 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:05:51,418 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:06:28,766 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:06:28,874 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 14:06:29,085 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:06:29,085 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 14:06:34,110 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:06:34,230 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment failed 
+2015-10-12 14:06:34,405 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:06:34,405 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 14:07:17,346 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 14:07:17,481 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-10-12 14:07:20,154 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-12 14:12:08,305 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:12:08,306 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:12:11,722 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:12:24,427 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:13:02,851 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:13:02,964 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 14:13:03,184 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:13:03,184 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 14:13:46,083 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 14:13:46,211 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-10-12 14:13:48,855 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-12 14:16:20,766 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:16:20,767 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:16:24,181 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:16:36,063 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:17:49,693 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:17:49,859 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed :;VM Trust Establishment failed 
+2015-10-12 14:17:50,068 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:17:50,068 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 14:19:29,744 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 14:19:29,745 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 14:19:32,990 INFO  [Logger] Logged in Successfully 
+2015-10-12 14:19:45,687 INFO  [Logger] Clicked on VM management 
+2015-10-12 14:20:58,677 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 14:20:58,833 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed :;VM Trust Establishment failed 
+2015-10-12 14:20:59,045 ERROR [Logger] Something went wrong :( 
+2015-10-12 14:20:59,046 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 15:02:18,671 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 15:02:18,671 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 15:02:22,396 INFO  [Logger] Logged in Successfully 
+2015-10-12 15:02:34,326 INFO  [Logger] Clicked on VM management 
+2015-10-12 15:03:24,270 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 15:03:24,701 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-10-12 15:04:07,832 INFO  [Logger] Task Completed Successfully.. 
+2015-10-12 15:04:07,971 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-10-12 15:04:10,634 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-12 15:04:39,402 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 15:04:39,403 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 15:04:42,602 INFO  [Logger] Logged in Successfully 
+2015-10-12 15:04:54,508 INFO  [Logger] Clicked on VM management 
+2015-10-12 15:06:08,437 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 15:06:08,614 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed :;VM Trust Establishment failed 
+2015-10-12 15:06:08,820 ERROR [Logger] Something went wrong :( 
+2015-10-12 15:06:08,820 INFO  [Logger] Check Screenshot for the same 
+2015-10-12 15:09:33,808 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-12 15:09:33,809 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-12 15:09:37,056 INFO  [Logger] Logged in Successfully 
+2015-10-12 15:09:48,962 INFO  [Logger] Clicked on VM management 
+2015-10-12 15:10:26,004 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-12 15:10:26,117 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-12 15:10:26,324 ERROR [Logger] Something went wrong :( 
+2015-10-12 15:10:26,324 INFO  [Logger] Check Screenshot for the same 

@@ -1456,54 +1456,67 @@ public class Settings {
 		}
 	}
 
-	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b){
+	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b,int count) throws MyException{
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
 		Object o = null;
 		boolean check = false;
+		int counter = 0;
 		
-		if(b){
-			try{
-				chooseLink(driver, vmName);
-				driver.switchTo().activeElement();
-				wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
-				System.out.println("Task Completed Successfully..");
-				logClass.info("Task Completed Successfully..");
-				logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
-				check = true;
-				closeWindow(driver);
+		if(counter<count){
+			if(b){
+				try{
+					chooseLink(driver, vmName);
+					driver.switchTo().activeElement();
+					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
+					System.out.println("Task Completed Successfully..");
+					logClass.info("Task Completed Successfully..");
+					logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					//check = true;
+					closeWindow(driver);
+					counter = count+1;
+				}
+				
+				catch(Exception e){
+					//closeWindow(driver);
+					System.out.println("Testing for Completion or failure..");
+					System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					b=false;
+					counter++;
+					System.out.println(counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter);
+				}
 			}
-			catch(Exception e){
-				//closeWindow(driver);
-				System.out.println("Temporary testing for Completion or failure..");
-				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
-				b=false;
-				o = checkSuccessOrFailure(driver, locator, vmName,time, b);
+			
+			else{
+				try{
+					chooseLink(driver, vmName);
+					driver.switchTo().activeElement();
+					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
+					System.out.println("Task Failed..");
+					logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
+					logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					check = true;
+					takeScreenShotForDriver(driver);
+					closeWindow(driver);
+					counter = count+1;
+				}
+				catch(Exception e){
+					System.out.println("Testing for failure or Completion..");
+					System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					b=true;
+					counter++;
+					System.out.println(counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter);
+				}
 			}
 		}
-		else{
-			try{
-				chooseLink(driver, vmName);
-				driver.switchTo().activeElement();
-				wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
-				System.out.println("Task Failed..");
-				logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
-				logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
-				check = true;
-				takeScreenShotForDriver(driver);
-				closeWindow(driver);
-			}
-			catch(Exception e){
-				System.out.println("Temporary testing for failure or Completion..");
-				System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
-				b=true;
-				o = checkSuccessOrFailure(driver, locator, vmName,time, b);
-			}
-		}
-		
 		if(check){
-			System.out.println("Completed task.. ");
+			System.out.println("Completed task (failed).. ");
+			throw new MyException("Test case failed .. Check screenshot for the same.");
 			//o = System.out.toString();println("Passed");
 		}
+		else 
+			System.out.println("Completed task..");
 		
 		return o;
 		
@@ -1645,6 +1658,47 @@ public class Settings {
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
 		System.out.println("Clicked");
 		logClass.info("Accepted EULA ,clicked.");
+	}
+	
+	public String chooseOVFFromSDMClient(String vmname) throws MyException{
+		String returnStr = "";
+		File folder = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\");
+		File[] listOfFiles = folder.listFiles();
+		List<String> dirNames = new ArrayList<>();
+		String folderName = "";
+		String returnOVFPath = "";
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].isFile()) {
+				//System.out.println("File " + listOfFiles[i].getName());
+			} else if (listOfFiles[i].isDirectory()) {
+				// System.out.println("Directory " + listOfFiles[i].getName());
+				dirNames.add(listOfFiles[i].getName());
+			}
+		}
+
+		for(String s : dirNames){
+			if(shortVMName(s).equalsIgnoreCase(vmname)){
+				System.out.println("Choosen Folder for OVF: "+s);
+				folderName = s;
+				break;
+			}
+		}
+
+		if(!folderName.isEmpty()){
+			File retFile = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\"+folderName);
+			File[] retOVF = retFile.listFiles();
+
+			for (int i = 0; i < retOVF.length; i++) {
+				if (retOVF[i].isFile()) {
+					returnOVFPath = retOVF[i].getAbsolutePath();
+					System.out.println("Choosen OVF is: "+returnOVFPath);
+				}
+			}
+		}   
+		else
+			throw new MyException("OVF not found for "+vmname+" at C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\ . Please check if OVA and OVF are present at given location.");
+		return returnOVFPath;    
 	}
 }
 

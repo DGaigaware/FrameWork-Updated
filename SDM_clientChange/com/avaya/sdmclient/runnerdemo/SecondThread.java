@@ -22,7 +22,7 @@ package com.avaya.sdmclient.runnerdemo;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.vm.VM;
 
-	public class c1 {
+	public class SecondThread {
 		
 		Settings obj = new Settings();
 		WebDriver driverC = new FirefoxDriver(obj.selectProfile("Selenium"));
@@ -71,9 +71,8 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(750);
 
 			driverC.findElement(By.xpath(locator.getProperty("VMName"))).clear();
-			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.properties", "VMName"));
 			driverC.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
-			//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj.readFromFile("inputbsm.txt", "VMName225"));
+			
 			logClass.info("Given Name");
 			Thread.sleep(250);
 
@@ -114,8 +113,6 @@ import com.avaya.sdmclient.vm.VM;
 			//obj.checkFailureOfHostCapacity(driver);
 
 			obj.exec(!_Check);
-
-			//removed
 
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), driverC,IP,"test"+shortVMName);
 
@@ -180,12 +177,6 @@ import com.avaya.sdmclient.vm.VM;
 			driverC.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
 			obj.editVM(driverC,IP,"test"+shortVMName+"edited");
-			
-			/*driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
-
-			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
-			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
 			obj.checkFocus(driverC, By.xpath(locator.getProperty("VMEditSave")));
 			driverC.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
@@ -261,7 +252,7 @@ import com.avaya.sdmclient.vm.VM;
 
 		@Test(description="Refreshing VM to given Location and Host",priority=12)
 		@Parameters({"IP", "VMName"})
-		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
 			Thread.sleep(5000);
 			logClass.startTestCase("Refresh VM to given Location and Host");
@@ -287,7 +278,7 @@ import com.avaya.sdmclient.vm.VM;
 			
 			driverC.switchTo().activeElement();
 
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
+			/*driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
 			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
 
 			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
@@ -318,6 +309,25 @@ import com.avaya.sdmclient.vm.VM;
 			// Uptill Now
 			Thread.sleep(2500);
 			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
+			logClass.endTestCase("VM refreshed Successfully");*/
+			
+			obj.refreshVMValues(driverC, shortVMName, "inputsm.properties");
+			Thread.sleep(750);
+			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
+			Thread.sleep(250);
+			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
+			
+			Thread.sleep(1000);
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 8, true,10);
+			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
+			Thread.sleep(1500);
+			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
+				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+			Thread.sleep(5000);
+			
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10);		
+			
+			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
 		}
 

@@ -214,6 +214,8 @@ public class total {
 
 	public void addVM() throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
 
+		String shortVMName = "BSM";
+		
 		boolean _Check;
 
 		final String _default = "Filepath";
@@ -287,7 +289,7 @@ public class total {
 
 			//driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
 			obj.clickComboSDMCli(driver, "File Name:");
-			obj.boundListSelect(driver, "SMGR", obj.selBoundList(driver));
+			obj.boundListSelect(driver,shortVMName, obj.selBoundList(driver));
 			break;
 		}
 
@@ -308,7 +310,7 @@ public class total {
 
 		//removed
 
-		obj.FillValues("inputsmgr.properties", obj.readFromFile("input.properties", "SMGROVF"), driver,"148.147.162.221","testSMGR");
+		obj.FillValues("inputsm.properties", obj.chooseOVFFromSDMClient(shortVMName), driver,"148.147.162.221","test"+shortVMName);
 
 		obj.deployButtonClickForVM(driver);
 		

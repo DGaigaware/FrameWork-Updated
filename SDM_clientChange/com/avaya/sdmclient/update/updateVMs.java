@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class updateVMs {
 	
@@ -91,7 +92,7 @@ public class updateVMs {
 	
 	@Test(description="Update SMGR from SDM Client",priority=1)
 	@Parameters({"VMName"})
-	public void updateVM(String VMName) throws IOException, InterruptedException {
+	public void updateVM(String VMName) throws IOException, InterruptedException, MyException {
 
 		logClass.startTestCase("Add a new Location on SDM");
 
@@ -118,7 +119,7 @@ public class updateVMs {
 		//obj.fluentWaitCloseOpen(locatorTo, drive, 2200, Test, VMName)
 		//System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 2200, "Completed",VMName));
 		
-		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true);
+		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true,10);
 		
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);
