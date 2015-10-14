@@ -1,5 +1,6 @@
 package com.avaya.sdmclient.extraResources;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,7 +18,7 @@ import com.jcraft.jsch.SftpException;
 public class scpFilesFromSMGR {
 
 	@SuppressWarnings("unused")
-	public void scpFile() throws JSchException, IOException{
+	public void scpFile() throws JSchException, IOException, SftpException{
 		String username = "admin";
 		String host = "pdev55vm2.smgrdev.avaya.com";
 		String pass = "Avaya123$";
@@ -33,6 +34,25 @@ public class scpFilesFromSMGR {
 		
 		List<String> files = new ArrayList<>();
 
+		//Deleting old OVFs so that if new version comes up, they won't collide
+		
+		File folder = new File(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
+		File[] listOfFiles = folder.listFiles();
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].isFile()) {
+				System.out.println("File " + listOfFiles[i].getName());
+			} else if (listOfFiles[i].isDirectory()) {
+				System.out.println("Directory " + listOfFiles[i].getName());
+			}
+		}
+		for(File f : listOfFiles){
+			if(f.exists()){
+				f.delete();
+				System.out.println("Deleted: "+f.getName());
+			}
+		}
+		
 		
 /*		try {
 			jsch = new JSch();
@@ -98,29 +118,32 @@ public class scpFilesFromSMGR {
             ex.printStackTrace();
         }
         
-        for(String s : files)
+       
+        //for(String s : files)
+        for(int i=0;i<files.size();i++)
         {
-        	System.out.println(s);
+        	System.out.println(files.get(i));
         	
-        	try {
+        	//try {
         		forSFTP = session.openChannel("sftp");
         		forSFTP.connect();
         		c = (ChannelSftp) forSFTP;
-        		System.out.println("Starting File Download:");
+        		//System.out.println("Starting File Download:");
         		//String fsrc = "./logfile.log", fdest = "./";
         		//c = (ChannelSftp) channelold;
         		//System.out.println(System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
-        		c.get(s,System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
+        		c.get(files.get(i),System.getProperty("user.dir")+"\\Third Party\\OVFs\\");
         		//c.put(fsrc, fdest);
         		//c.get("", "./");
-        		System.out.println("Download completed "+s);
-        		logClass.info(s+" is downloaded from Upstream.("+host+")");
-        	} 
-        	catch (Exception e) 
+        		System.out.println("Download completed "+files.get(i));
+        		logClass.info(files.get(i)+" is downloaded from Upstream.("+host+")");
+        	//} 
+        	/*/catch (Exception e) 
         	{	
         		e.printStackTrace();	
-        	}
+        	}*/
         }
+        
 		//c.disconnect();
 		session.disconnect();
 	}

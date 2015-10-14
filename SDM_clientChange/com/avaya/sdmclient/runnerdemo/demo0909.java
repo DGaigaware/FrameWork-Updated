@@ -86,7 +86,7 @@ public class demo0909 {
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-		obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
+		obj.checkFocusOfElement(driver, By.xpath(locator.getProperty("VMEditSave")));
 		driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 		obj.errorBox(driver, obj.checkError(driver));

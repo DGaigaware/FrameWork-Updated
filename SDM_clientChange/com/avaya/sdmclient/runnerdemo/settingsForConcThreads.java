@@ -1,10 +1,12 @@
 package com.avaya.sdmclient.runnerdemo;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.text.DateFormat;
@@ -33,6 +35,23 @@ import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 
 public class settingsForConcThreads {
+	
+	public static void runSystemCommand(String command) {
+
+	    try {
+	        Process p = Runtime.getRuntime().exec(command);
+	        BufferedReader inputStream = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+	        String s = "";
+	        // reading output stream of the command
+	        while ((s = inputStream.readLine()) != null) {
+	            System.out.println(s);
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
 	
 	public String createTempXMl(String testName,String IP) throws ParserConfigurationException, SAXException, IOException{
 		Settings obj = new Settings();
@@ -99,7 +118,7 @@ public class settingsForConcThreads {
 		String returnIP="";
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\"+"inputip.txt");
 		List<String> lines = FileUtils.readLines(file);
-		Scanner sc;
+//		Scanner sc;
 		for(String s : lines)
 		{
 			/*sc = new Scanner(s);
@@ -288,7 +307,7 @@ public class settingsForConcThreads {
 			 	GregorianCalendar gcalendar = new GregorianCalendar();
 			 	String opDirectory = System.getProperty("user.dir")+"\\testruns_programmatically\\"+dateFormat.format(new java.util.Date())+File.separator +fName.replace("temp", "").replace(".xml", "")+"_"+gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"\\";
  				
-			 	System.out.println("in try block\n\n");
+			 	System.out.println("In try block\n\n");
  				TestNG testng;
  				
  				testng = new TestNG();
@@ -311,7 +330,6 @@ public class settingsForConcThreads {
 		catch (SecurityException e) 
 		{
 				obj.takeScreenShotForDriver(driver);
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 		}
 	 }

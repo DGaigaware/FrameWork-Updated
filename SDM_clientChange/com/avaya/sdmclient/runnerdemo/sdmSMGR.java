@@ -327,18 +327,18 @@ import com.avaya.sdmclient.extraResources.MyException;
 			
 			obj.errorBox(driver,obj.checkError(driver));
 
-			obj.boundListSelect(driver, "data", obj.selBoundList(driver));
+			obj.boundListSelect(driver, "data", obj.selBoundListID(driver));
 			Thread.sleep(2500);
 			
-			obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
+			obj.comboBoxClickAndSelectValue(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
-			obj.comboClick(driver, "combobox-1238", "SM-7.0.0.0.700007-e55-01.ova");
+			obj.comboBoxClickAndSelectValue(driver, "combobox-1238", "SM-7.0.0.0.700007-e55-01.ova");
 			Thread.sleep(2500);
 			
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
-			obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
+			obj.boundListSelect(driver, "Profile 1", obj.selBoundListID(driver));
 
 			_Check = obj.checkError(driver);
 			obj.errorBox(driver,obj.checkError(driver));
@@ -352,11 +352,11 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 			obj.FillValues("inputsm.txt", obj.readFromFile("input.txt", "SMOVFPath"), driver,"","");
 
-			obj.checkFocus(driver, By.xpath(locator.getProperty("Deploy")));
+			obj.checkFocusOfElement(driver, By.xpath(locator.getProperty("Deploy")));
 
 			driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
-			obj.findButton(driver);
+			obj.findAcceptButtonForEULA(driver,"EULAAgreementWindow");
 //			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
 			logClass.info("Accepted EULA");
 
@@ -415,7 +415,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(obj.readFromFile("input.txt", "NewVMName"));
 
-			obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
+			obj.checkFocusOfElement(driver, By.xpath(locator.getProperty("VMEditSave")));
 			driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(driver, obj.checkError(driver));

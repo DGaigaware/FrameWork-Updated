@@ -87,8 +87,8 @@ public class vCenter {
 		driver.findElement(By.id(locator.getProperty("bulkLocationUpdateCombo-inputEl"))).sendKeys("Pune");
 		Thread.sleep(1500);
 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty(obj.selBoundList(driver)))));
-		obj.boundListSelect(driver, "Pune", obj.selBoundList(driver));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty(obj.selBoundListID(driver)))));
+		obj.boundListSelect(driver, "Pune", obj.selBoundListID(driver));
 
 		driver.findElement(By.id(locator.getProperty("button-1350"))).click();
 		driver.findElement(By.id(locator.getProperty("commitHostsChangesBtn"))).click();

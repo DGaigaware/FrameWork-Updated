@@ -274,15 +274,15 @@ public class sdmSMGRConcurrent {
 			
 			obj.errorBox(drive,obj.checkError(drive));
 
-			obj.boundListSelect(drive, "data", obj.selBoundList(drive));
+			obj.boundListSelect(drive, "data", obj.selBoundListID(drive));
 			Thread.sleep(2500);
 			
-			obj.comboClick(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
+			obj.comboBoxClickAndSelectValue(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
-			obj.maintainedList(drive, obj.comboID(drive, "Select OVAs:"));
+			obj.maintainedListOfOVA(drive, obj.comboBoxID(drive, "Select OVAs:"));
 			
-			obj.comboClick(drive, "Select OVAs:", VMName);
+			obj.comboBoxClickAndSelectValue(drive, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
 //			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
@@ -317,7 +317,7 @@ public class sdmSMGRConcurrent {
 
 			obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
-			obj.findButton(drive);
+			obj.findAcceptButtonForEULA(drive,"EulaAgreementWindow");
 			logClass.info("Accepted EULA");
 			
 			//Adding code to get the same page as before
@@ -358,7 +358,7 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			obj.chooseLink(drive, "test"+shortVMName);
+			obj.chooseLink(drive, "test"+shortVMName,"Status Details");
 			logClass.info("Checking Status Details");
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
@@ -413,7 +413,7 @@ public class sdmSMGRConcurrent {
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-			obj.checkFocus(drive, By.xpath(locator.getProperty("VMEditSave")));
+			obj.checkFocusOfElement(drive, By.xpath(locator.getProperty("VMEditSave")));
 			drive.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(drive, obj.checkError(drive));
