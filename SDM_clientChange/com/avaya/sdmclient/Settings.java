@@ -13,11 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -167,8 +165,14 @@ public class Settings {
 	public void selNetworkTabForVMinstallation(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
-		String script = "var nl = document.querySelectorAll('[id^=\"tab-\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script);
+		/*String script1 = "var nl = document.querySelectorAll('[id^=\"tabbar\"]'); return nl;";
+		ArrayList<WebElement> elem1 = (ArrayList<WebElement>) js.executeScript(script1);*/
+		
+		/*for(WebElement e : elem1)
+			System.out.println(e.getAttribute("id"));*/
+		
+		String script2 = "var nl = document.querySelectorAll('[id^=\"tab-\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
 		/*for(WebElement e : elem2)
 			System.out.println(e.getAttribute("id"));*/
 		for(WebElement e : elem2){
@@ -181,29 +185,22 @@ public class Settings {
 	}
 	
 	//Click on deploy button for VM
-	public void deployButtonClickForVM(WebDriver driver) throws IOException{
+	public void deployButtonClickForVM(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
-		String script = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script);
+		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
 		System.out.println(elem2.size());
 		
-		String script2 = "var nl = document.getElementById(\""+elem2.get(elem2.size()-1).getAttribute("id").replace("-targetEl", "")+"\").querySelectorAll('[id^=\"button-\"]'); return nl;";
-		ArrayList<WebElement> ele = (ArrayList<WebElement>) js.executeScript(script2);
+		String scr = "var nl = document.getElementById(\""+elem2.get(elem2.size()-1).getAttribute("id").replace("-targetEl", "")+"\").querySelectorAll('[id^=\"button-\"]'); return nl;";
+		ArrayList<WebElement> ele = (ArrayList<WebElement>) js.executeScript(scr);
 		for(WebElement ee : ele)
 			{
 				if(ee.getText().equals("Deploy"))
-				{	
-					if(Float.parseFloat(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity")) == 1)
-					{
-						System.out.println(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity"));
-						ee.click();
-					}
-					else
-					{
-						takeScreenShotForDriver(driver);
-						System.out.println("Deploy button is not enabled, make sure all the field are correctly filled.");
-					}
+				{	//System.out.println(ee.getAttribute("id"));
+					//System.out.println(ee.getText());
+					System.out.println(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity"));
+					ee.click();
 					break;
 				}
 			}
@@ -214,13 +211,14 @@ public class Settings {
 	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Row")));
+		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
 		//System.out.println(cells.size()+"\n\n");
 
 		for(WebElement e : cells)
 		{
 			//System.out.println("Locatest"+e.getText());
 			try{
+				if(e.isDisplayed())
 					if(e.getText().trim().equals(input))
 						e.click();
 			}
@@ -235,7 +233,7 @@ public class Settings {
 	public boolean checkLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Row")));
+		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
 		List<String> tm = new ArrayList<>();
 		boolean b = false;
 		System.out.println("Entries on Left Tree: "+cells.size());
@@ -265,7 +263,7 @@ public class Settings {
 	public void findLocationInGrid(WebDriver driver, String locationName) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocationInGrid")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Column")));
+		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
 		//System.out.println(cells.size()+"\n\n");
 
 		for(WebElement e : cells)
@@ -350,7 +348,7 @@ public class Settings {
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("HostCapacity")));
 		List<WebElement> tempcells = temp.findElements(By.xpath((".//*[local-name(.)='td']/div/span")));
-		List<WebElement> tempcellsRow = temp.findElements(By.xpath(locator.getProperty("Row")));
+		List<WebElement> tempcellsRow = temp.findElements(By.xpath((".//*[local-name(.)='tr']")));
 		int count=0;
 
 		for(int i=0;i<tempcells.size();i++)
@@ -420,15 +418,13 @@ public class Settings {
 
 	public boolean checkError(WebDriver driver){
 		boolean b = false;
-		
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-				b = true;
+					b = true;
 		}
 		catch(Exception ex){
 			b=false;
 		}
-		
 		return b;
 	}
 
@@ -436,75 +432,80 @@ public class Settings {
 		String errMsg = "";
 		if(check)
 		{
-			driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText();
-			logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-			logClass.error("Error : Check the Log and Screenshot for the same.");
-			System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-			errMsg = driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText()+"\nCheck Screenshot for the same.\n";
-			takeScreenShotForDriver(driver);
-			logClass.info("Screenshot taken");
+			//try{
+				if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
+				{
+					driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText();
+					logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					logClass.error("Error : Check the Log and Screenshot for the same.");
+					System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					errMsg = driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText()+"\nCheck Screenshot for the same.\n";
+					takeScreenShotForDriver(driver);
+					logClass.info("Screenshot taken");
 
-			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
-			System.out.println("Confirmed");
-			throw new MyException(errMsg);
+					driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
+					System.out.println("Confirmed");
+					throw new MyException(errMsg);
+				}
+//			}
+//			catch(Exception ex){
+//				System.out.println("No Errors Uptill Now.");
+//			}
 		}
-		return errMsg+"\n";
+		return errMsg;
 	}
 
 	//ID for boundlist (rendered last in DOM)
-	public String selBoundListID(WebDriver driver){
+	public String selBoundList(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		ArrayList<WebElement>a = (ArrayList<WebElement>) js.executeScript("var nl = Ext.getBody().dom.querySelectorAll('[id^=\"boundlist\"]');return nl");
-		
+		// Select the Last Boundlist which is rendered in DOM as last
 		//System.out.println(a.get(a.size()-1).getAttribute("id"));
-		return a.get(a.size()-1).getAttribute("id");		// Select the Last Boundlist which is rendered in DOM as last
+		return a.get(a.size()-1).getAttribute("id");
 	}
 
-	public void exec(boolean in) throws MyException {
+	public void exec(boolean in) {
 		if(in == true) {
 			return;
 		}
 		System.out.println("Can not Execute Further. Check the Log for the same.");
 		logClass.error("Check Log and Screenshot for the same.");
-		throw new MyException("Error occurred before filling values for VM. Please check the inputs and verfiy host resources.");
+		
 		//System.exit(0);
 	}
 
-	public void confirmDialogBox(WebDriver driver) throws IOException, InterruptedException{
-		String returnID = "";
+	public void confirmDialogBox(WebDriver driver) throws IOException{
 		driver.switchTo().activeElement();
+
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-			{
-				logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-				//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
-			}
+				{
+					logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+				}
+		}
+		catch(Exception ex){
+			takeScreenShotForDriver(driver);
+			System.out.println("Couldn't find any text");
 		}
 
-		catch(Exception ex){
- 			takeScreenShotForDriver(driver);
-			System.out.println("Couldn't find any DialogueBox..");
- 		}
-		
 		try{
 			driver.findElement(By.xpath(locator.getProperty("ConfButton1"))).click();
 		}
-
+		
 		catch(Exception ex){
 			System.out.println("\n");
 		}
-
 		try{
- 			driver.switchTo().activeElement();
- 			//System.out.println(driver.switchTo().activeElement().getText());
- 			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
- 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
-
- 		}
- 		catch(Exception ex){
- 			System.out.println("Confirmed");
+			driver.switchTo().activeElement();
+			//System.out.println(driver.switchTo().activeElement().getText());
+			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
+			//System.out.println("Confirmed");
 		}
-		
+		catch(Exception ex){
+			System.out.println("Confirmed");
+		}
 	}
 
 	public String findTextInBetweenTags(String tag,String FilePath) throws IOException{
@@ -526,8 +527,8 @@ public class Settings {
 		return ans;
 	}
 
-	public void comboBoxClickAndSelectValue(WebDriver driver, String selCombo,String input) throws IOException, InterruptedException{
-		String cmbid = comboBoxID(driver, selCombo);
+	public void comboClick(WebDriver driver, String selCombo,String input) throws IOException, InterruptedException{
+		String cmbid = comboID(driver, selCombo);
 		
 		driver.findElement(By.id(cmbid)).click();
 		driver.findElement(By.id(cmbid)).clear();
@@ -535,7 +536,7 @@ public class Settings {
 		Thread.sleep(2000);
 		
 		setup();
-		WebElement element = driver.findElement(By.id((selBoundListID(driver))));
+		WebElement element = driver.findElement(By.id((selBoundList(driver))));
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{
@@ -546,10 +547,10 @@ public class Settings {
 				e.click();
 			}
 		}
-		
+		//boundListSelect(driver, input, selBoundList(driver));
 	}
 	
-	public String comboBoxID(WebDriver driver,String select){
+	public String comboID(WebDriver driver,String select){
 		String returnID = "";
 		String sc1 = "var nl = document.getElementById(\"confignewvm\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
 		
@@ -589,7 +590,7 @@ public class Settings {
 		Thread.sleep(1000);
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		*/
-		chooseLink(driver, VMName,"Status Details");
+		chooseLink(driver, VMName);
 		logClass.info("Checking Status Details");
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
@@ -598,11 +599,11 @@ public class Settings {
 		return fluentWait(locatorTo, driver, time, Test);
 	}
 	
-	public void chooseLink(WebDriver driver,String Name,String linkText) throws IOException, InterruptedException{
+	public void chooseLink(WebDriver driver,String Name) throws IOException, InterruptedException{
 		setup();
 		Thread.sleep(3500);
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Row")));
+		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
 		String rowID = "";
 		//System.out.println(cells.size()+"\n\n");
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -615,11 +616,11 @@ public class Settings {
 					System.out.println(rowID);
 				}
 		}
-		driver.findElement(By.id(rowID)).findElement(By.linkText(linkText)).click();
+		driver.findElement(By.id(rowID)).findElement(By.linkText("Status Details")).click();
 		//el.findElement(By.className("deployinprogress")).click();
 	}
 
-	public void maintainedListOfOVA(WebDriver driver,String ID) throws IOException, InterruptedException{
+	public void maintainedList(WebDriver driver,String ID) throws IOException, InterruptedException{
 		driver.findElement(By.id(ID)).click();
 		driver.findElement(By.id(ID)).sendKeys("random");
 		
@@ -627,9 +628,10 @@ public class Settings {
 		
 		List<String> availableOVAs = new ArrayList<>();
 		setup();
+		//System.out.println(selBoundList(driver));
 		Thread.sleep(2000);
-
-		WebElement element = driver.findElement(By.id(selBoundListID(driver)));
+		//System.out.println(selBoundList(driver));
+		WebElement element = driver.findElement(By.id(selBoundList(driver)));
 		//System.out.println("First "+element.getText());
 		List<WebElement> a = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		//System.out.println("Size "+a.size());
@@ -704,9 +706,6 @@ public class Settings {
 		types.add("host_new");
 		types.add("host_edit");
 		types.add("panelConfigParameters");
-		types.add("host_params");
-		types.add("host_passwordChange");
-		//types.add("frmhostUpdate");
 		
 		if(input.equals("AddLocation"))
 			{
@@ -733,21 +732,6 @@ public class Settings {
 			returnStr = types.get(4);
 			refStr = "";
 		}
-		else if(input.equals("ChangeNetWorkParams"))
-		{
-			returnStr = types.get(5);
-			refStr = "";
-		}
-		else if(input.equals("UpdatePwdHost"))
-		{
-			returnStr = types.get(6);
-			refStr = "";
-		}
-		/*else if(input.equals("UpdateHost"))
-		{
-			returnStr = types.get(7);
-			refStr = "";
-		}*/
 		ret.add(returnStr);
 		ret.add(refStr);
 		
@@ -773,7 +757,7 @@ public class Settings {
 			selectLocforEditHost(driver);
 			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 			Thread.sleep(250);
-			boundListSelect(driver, readFromFile(filename, "EditHostLocation:"), selBoundListID(driver));
+			boundListSelect(driver, readFromFile(filename, "EditHostLocation:"), selBoundList(driver));
 		}
 		
 		else if(input.equals("AddLocation") || input.equals("EditLocation")){
@@ -1014,7 +998,7 @@ public class Settings {
 			for(int i=0;i<nlLabelNet.getLength();i++)
 			{
 				driver.findElement(By.id((opNet[i]+"-inputEl"))).click();
-				boundListSelect(driver, "VM Network", selBoundListID(driver));
+				boundListSelect(driver, "VM Network", selBoundList(driver));
 			}
 			System.out.println("Filled Values");
 		}
@@ -1100,7 +1084,7 @@ public class Settings {
 				}
 			}
 			driver.findElement(By.id((returnID))).click();
-			boundListSelect(driver, readFromFile(fileName, input.toUpperCase()), selBoundListID(driver));
+			boundListSelect(driver, readFromFile(fileName, input.toUpperCase()), selBoundList(driver));
 		}
 
 		public void AutoFillPasswd(WebDriver driver,String input,String fileName) throws IOException{
@@ -1261,7 +1245,7 @@ public class Settings {
 		driver.findElement(By.xpath(".//*[@id='logoff']")).click();
 	}
 	
-	public void checkFocusOfElement(WebDriver driver, By toLocate) throws IOException{
+	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
 		System.out.println(driver.findElement(toLocate).getCssValue("opacity"));
 		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
 			{
@@ -1271,11 +1255,10 @@ public class Settings {
 			}
 	}
 	
-	public void findAcceptButtonForEULA(WebDriver driver,String eulaWindowID) throws InterruptedException{
-		//EulaAgreementWindow
-		//eulaAgreementVMUpdatePanel
+	public void findButton(WebDriver driver) throws InterruptedException{
+		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String script2 = "var nl = document.getElementById(\""+eulaWindowID+"\").querySelectorAll('[id^=\"button\"]');return nl;";
+		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
 		
 		/*System.out.println("Before");
@@ -1352,7 +1335,7 @@ public class Settings {
 
 	public void autoFillComboforVM(WebDriver driver,String id,String fileName) throws IOException, InterruptedException{
 		driver.findElement(By.id(id)).click();
-		boundListSelect(driver, readFromFile(fileName, id.replace("-inputEl", "")), selBoundListID(driver));
+		boundListSelect(driver, readFromFile(fileName, id.replace("-inputEl", "")), selBoundList(driver));
 	}
 
 	public void autoFillCheckBoxforVM(WebDriver driver,String id){
@@ -1382,7 +1365,7 @@ public class Settings {
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
 			System.out.println(locator.getProperty("FP"+shortvmname));
-			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundListID(driver));
+			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundList(driver));
 		}
 	}
 	
@@ -1482,7 +1465,7 @@ public class Settings {
 		if(counter<count){
 			if(b){
 				try{
-					chooseLink(driver, vmName,"Status Details");
+					chooseLink(driver, vmName);
 					driver.switchTo().activeElement();
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
 					System.out.println("Task Completed Successfully..");
@@ -1506,7 +1489,7 @@ public class Settings {
 			
 			else{
 				try{
-					chooseLink(driver, vmName,"Status Details");
+					chooseLink(driver, vmName);
 					driver.switchTo().activeElement();
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
 					System.out.println("Task Failed..");
@@ -1590,25 +1573,25 @@ public class Settings {
 			pwd = readFromFile(inputFileName, "CUSTPWD");
 			break;
 
-		case US:
-			uName = readFromFile(inputFileName, "UName");
-			pwd = readFromFile(inputFileName, "USPWD");
-			break;
+		/*case US:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
 
 		case AAM:
 			uName = readFromFile(inputFileName, "msg_login");
 			pwd = readFromFile(inputFileName, "msg_password");
 			break;
 
-		case AES:
-			uName = readFromFile(inputFileName, "UName");
-			pwd = readFromFile(inputFileName, "AESPWD");
-			break;
+		/*case AES:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
 
-		case SecureAccessLinkGateway:
-			uName = readFromFile(inputFileName, "UName");
-			pwd = readFromFile(inputFileName, "SALPWD");
-			break;
+		/*case SecureAccessLinkGateway:
+			uName = readFromFile(inputFileName, "CustPwd");
+			pwd = readFromFile(inputFileName, "CustPwd");
+			break;*/
 
 		case MediaServer:
 			uName = readFromFile(inputFileName, "CUSTLOGIN");
@@ -1650,6 +1633,33 @@ public class Settings {
 		driver.findElement(By.id(tempID)).sendKeys(filePath);;
 	}
 	
+	public void findButtonUpdate(WebDriver driver) throws InterruptedException{
+		//EulaAgreementWindoweulaAgreementVMUpdatePanel
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String script2 = "var nl = document.getElementById(\"eulaAgreementVMUpdatePanel\").querySelectorAll('[id^=\"button\"]');return nl;";
+		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		
+		/*System.out.println("Before");
+		System.out.println(elem2.size());*/
+		
+		List<String> buttons = new ArrayList<>();
+		for(WebElement e : elem2){
+			//System.out.println(e.getText());
+			if(e.getAttribute("id").contains("btnEl") && driver.findElement(By.id(e.getAttribute("id"))).getText().equals("Accept"))
+			{
+				buttons.add(e.getAttribute("id"));
+				//System.out.println("Buttons: "+e.getAttribute("id"));
+				//System.out.println(driver.findElement(By.id(e.getAttribute("id"))).getText());
+			}
+		}
+		
+		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
+		Thread.sleep(750);
+		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
+		System.out.println("Clicked");
+		logClass.info("Accepted EULA ,clicked.");
+	}
+	
 	public String chooseOVFFromSDMClient(String vmname) throws MyException{
 		String returnStr = "";
 		File folder = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\");
@@ -1689,19 +1699,6 @@ public class Settings {
 		else
 			throw new MyException("OVF not found for "+vmname+" at C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\ . Please check if OVA and OVF are present at given location.");
 		return returnOVFPath;    
-	}
-	
-	public void changeNetworkParamsHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
-		findIDandFillValues(driver,fileName,input);
-	}
-	
-	public void changePassWordHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
-		findIDandFillValues(driver, fileName, input);
-	}
-	
-	public void updateESXiHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
-		//findIDandFillValues(driver, fileName, input);
-		System.out.println("AVP Host can be updated...");
 	}
 }
 

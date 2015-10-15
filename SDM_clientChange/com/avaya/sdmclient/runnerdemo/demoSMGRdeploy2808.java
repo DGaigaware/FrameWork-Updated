@@ -69,7 +69,7 @@ public class demoSMGRdeploy2808 {
 		Thread.sleep(250);
 		obj.errorBox(driver,obj.checkError(driver));
 
-		obj.boundListSelect(driver, "server", obj.selBoundListID(driver));
+		obj.boundListSelect(driver, "server", obj.selBoundList(driver));
 
 		//1 - File Path; 3 - SW Library; 4 - URL
 		
@@ -78,7 +78,7 @@ public class demoSMGRdeploy2808 {
 
 			driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
 			
-			obj.boundListSelect(driver, "SMGR", obj.selBoundListID(driver));
+			obj.boundListSelect(driver, "SMGR", obj.selBoundList(driver));
 			
 			Thread.sleep(1500);
 			
@@ -87,7 +87,7 @@ public class demoSMGRdeploy2808 {
 		driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 		Thread.sleep(450);
 
-		obj.boundListSelect(driver, "Profile 1", obj.selBoundListID(driver));
+		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
 		//Thread.sleep(250);
 
 		obj.errorBox(driver,obj.checkError(driver));

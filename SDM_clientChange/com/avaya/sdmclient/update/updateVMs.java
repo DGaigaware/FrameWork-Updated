@@ -69,7 +69,7 @@ public class updateVMs {
 
 		obj.chooseTab(drive, "Virtual Machines");
 
-		obj.chooseLink(drive, VMName,"Status Details");
+		obj.chooseLink(drive, VMName);
 		obj.StatusCheck(drive, "VM Trust Establishment Completed",50);
 
 		obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
@@ -80,7 +80,7 @@ public class updateVMs {
 
 		Thread.sleep(5000);
 		
-		obj.chooseLink(drive, VMName,"Status Details");
+		obj.chooseLink(drive, VMName);
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "VM Refresh Completed"));
 		obj.StatusCheck(drive, "VM Refresh Completed", 20);
 
@@ -113,9 +113,11 @@ public class updateVMs {
 		
 		drive.findElement(By.id("proceedUpdate1VM")).click();
 		
-		obj.findAcceptButtonForEULA(drive,"eulaAgreementVMUpdatePanel");
+		obj.findButtonUpdate(drive);
 		
-		obj.chooseLink(drive, VMName,"Status Details");
+		obj.chooseLink(drive, VMName);
+		//obj.fluentWaitCloseOpen(locatorTo, drive, 2200, Test, VMName)
+		//System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 2200, "Completed",VMName));
 		
 		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true,10);
 		

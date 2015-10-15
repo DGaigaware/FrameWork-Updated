@@ -20,8 +20,6 @@ import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.extraResources.scpFilesFromSMGR;
-import com.jcraft.jsch.JSchException;
-import com.jcraft.jsch.SftpException;
 
 public class sdmSMGRConcurrent {
 	
@@ -29,12 +27,10 @@ public class sdmSMGRConcurrent {
 		WebDriver drive = new FirefoxDriver(obj.selectProfile("Selenium"));
 		Properties locator = null;
 		@BeforeClass(alwaysRun=true)
-		public void setup() throws IOException, InterruptedException, JSchException, SftpException
+		public void setup() throws IOException, InterruptedException
 		{
 			locator=new Properties();
 			locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
-			scpFilesFromSMGR s = new scpFilesFromSMGR();
-			s.scpFile();
 		}
 		
 		/*
@@ -234,6 +230,9 @@ public class sdmSMGRConcurrent {
 		@Parameters({"IP", "VMName"})
 		public void AddVM(String IP,String VMName) throws Exception {
 
+			scpFilesFromSMGR s = new scpFilesFromSMGR();
+			s.scpFile();
+			
 			String shortVMName = obj.shortVMName(VMName);
 			
 			boolean _Check;
@@ -275,15 +274,15 @@ public class sdmSMGRConcurrent {
 			
 			obj.errorBox(drive,obj.checkError(drive));
 
-			obj.boundListSelect(drive, "data", obj.selBoundListID(drive));
+			obj.boundListSelect(drive, "data", obj.selBoundList(drive));
 			Thread.sleep(2500);
 			
-			obj.comboBoxClickAndSelectValue(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
+			obj.comboClick(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
-			obj.maintainedListOfOVA(drive, obj.comboBoxID(drive, "Select OVAs:"));
+			obj.maintainedList(drive, obj.comboID(drive, "Select OVAs:"));
 			
-			obj.comboBoxClickAndSelectValue(drive, "Select OVAs:", VMName);
+			obj.comboClick(drive, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
 //			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
@@ -318,7 +317,7 @@ public class sdmSMGRConcurrent {
 
 			obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
-			obj.findAcceptButtonForEULA(drive,"EulaAgreementWindow");
+			obj.findButton(drive);
 			logClass.info("Accepted EULA");
 			
 			//Adding code to get the same page as before
@@ -335,10 +334,13 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver1);
 					} catch (ParserConfigurationException | SAXException | IOException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }
@@ -356,7 +358,7 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			obj.chooseLink(drive, "test"+shortVMName,"Status Details");
+			obj.chooseLink(drive, "test"+shortVMName);
 			logClass.info("Checking Status Details");
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
@@ -411,7 +413,7 @@ public class sdmSMGRConcurrent {
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 			driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-			obj.checkFocusOfElement(drive, By.xpath(locator.getProperty("VMEditSave")));
+			obj.checkFocus(drive, By.xpath(locator.getProperty("VMEditSave")));
 			drive.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(drive, obj.checkError(drive));
@@ -645,8 +647,10 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver2);
 					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
+						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }
