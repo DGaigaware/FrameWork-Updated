@@ -28,3 +28,8 @@ console.log(innerDoc.getElementById("host_new").getElementsByTagName("input"))
 var iframe = document.getElementById('iframe0');
 var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 console.log(innerDoc.getElementById("pagingtoolbar-1117").querySelectorAll('[id^="button"]'))
+
+var iframe = document.getElementById('iframe0');
+var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+console.log(innerDoc.getElementById("messagebox-1001").querySelectorAll('[id^="button"]'))
+

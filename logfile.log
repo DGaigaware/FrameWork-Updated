@@ -21292,3 +21292,415 @@ null (vmId = 10100):: Unable to find vm: testEDP
 2015-10-12 15:10:26,117 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
 2015-10-12 15:10:26,324 ERROR [Logger] Something went wrong :( 
 2015-10-12 15:10:26,324 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 12:49:34,356 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:49:34,428 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 12:49:35,724 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:49:35,724 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 12:49:36,767 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:49:36,767 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 12:49:37,801 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:49:37,801 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 12:50:11,675 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:50:11,676 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 12:50:18,687 INFO  [Logger] Logged in Successfully 
+2015-10-15 12:50:30,630 INFO  [Logger] Clicked on VM management 
+2015-10-15 12:50:37,687 INFO  [Logger] In 'Host' Tab 
+2015-10-15 12:50:37,948 INFO  [Logger] Adding new Host 
+2015-10-15 12:50:39,898 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:50:39,898 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 12:50:55,551 INFO  [Logger] Clicked on VM management 
+2015-10-15 12:51:01,957 INFO  [Logger] In 'Host' Tab 
+2015-10-15 12:51:14,703 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:51:14,703 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 12:51:16,722 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:51:16,722 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 12:54:00,383 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:54:00,384 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 12:54:03,563 INFO  [Logger] Logged in Successfully 
+2015-10-15 12:54:15,486 INFO  [Logger] Clicked on VM management 
+2015-10-15 12:54:22,388 INFO  [Logger] In 'Host' Tab 
+2015-10-15 12:54:22,636 INFO  [Logger] Adding new Host 
+2015-10-15 12:54:24,359 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:54:24,359 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 12:54:42,262 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:54:42,262 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 12:54:44,278 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 12:54:44,279 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:04:45,479 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:04:45,479 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:04:49,013 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:05:02,129 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:05:08,793 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:05:09,034 INFO  [Logger] Adding new Host 
+2015-10-15 13:05:34,066 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:05:34,067 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:05:52,542 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:05:52,542 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:05:54,551 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:05:54,552 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:11:18,840 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:11:18,841 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:11:22,042 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:11:35,042 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:11:41,695 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:11:41,951 INFO  [Logger] Adding new Host 
+2015-10-15 13:11:43,819 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:11:43,819 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:11:58,693 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:11:58,693 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:12:00,705 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:12:00,706 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:17:10,861 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:17:10,862 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:17:14,512 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:17:26,403 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:17:33,416 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:17:33,677 INFO  [Logger] Adding new Host 
+2015-10-15 13:17:44,036 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:17:55,834 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:17:55,834 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:18:07,699 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:18:07,699 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:18:09,704 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:18:09,704 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:26:12,648 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:26:12,648 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:26:15,782 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:26:27,686 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:26:35,119 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:26:35,364 INFO  [Logger] Adding new Host 
+2015-10-15 13:26:44,440 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:26:56,062 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:26:56,062 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:27:11,660 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:27:18,194 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:31:27,292 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:31:27,292 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:31:30,451 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:31:42,381 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:31:50,186 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:31:50,434 INFO  [Logger] Adding new Host 
+2015-10-15 13:31:52,282 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:31:52,282 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:32:07,741 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:32:14,353 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:32:29,354 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:32:29,354 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:32:58,669 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:32:58,670 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:33:18,776 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:33:18,777 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:33:21,856 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:33:33,794 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:33:40,699 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:33:40,950 INFO  [Logger] Adding new Host 
+2015-10-15 13:33:54,199 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:33:54,200 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:34:10,006 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:34:15,630 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:34:15,631 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:34:17,637 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:34:17,637 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:38:16,087 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:38:16,087 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:38:19,133 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:38:31,043 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:38:38,165 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:38:38,408 INFO  [Logger] Adding new Host 
+2015-10-15 13:38:40,344 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:38:51,952 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:38:51,953 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:39:04,663 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:39:04,664 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:39:06,670 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:39:06,671 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:40:08,087 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:40:08,088 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:40:11,097 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:40:23,001 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:40:29,948 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:40:30,186 INFO  [Logger] Adding new Host 
+2015-10-15 13:40:32,169 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:40:43,766 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:40:43,766 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:40:54,660 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:40:54,660 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:40:56,666 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:40:56,666 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:42:43,673 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:42:43,673 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:42:46,808 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:42:58,707 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:43:05,753 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:43:05,991 INFO  [Logger] Adding new Host 
+2015-10-15 13:43:08,004 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:43:19,643 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:43:19,643 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:43:35,126 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:43:40,022 INFO  [RetryExec] I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:7055: Connection reset 
+2015-10-15 13:43:40,023 INFO  [RetryExec] Retrying request to {}->http://127.0.0.1:7055 
+2015-10-15 13:43:49,130 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:43:49,130 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:43:51,145 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:43:51,146 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:45:03,764 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:45:03,765 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:45:06,987 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:45:18,932 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:45:25,987 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:45:26,240 INFO  [Logger] Adding new Host 
+2015-10-15 13:45:28,290 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 13:45:39,883 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:45:39,883 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 13:46:07,422 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:46:07,423 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 13:46:16,325 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:46:16,325 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 13:46:30,404 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 13:46:30,405 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 13:46:33,793 INFO  [Logger] Logged in Successfully 
+2015-10-15 13:46:45,738 INFO  [Logger] Clicked on VM management 
+2015-10-15 13:46:52,565 INFO  [Logger] In 'Host' Tab 
+2015-10-15 13:46:52,815 INFO  [Logger] Adding new Host 
+2015-10-15 13:46:54,751 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 14:00:14,728 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 14:00:14,729 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 14:00:18,488 INFO  [Logger] Logged in Successfully 
+2015-10-15 14:00:30,360 INFO  [Logger] Clicked on VM management 
+2015-10-15 14:00:39,185 INFO  [Logger] In 'Host' Tab 
+2015-10-15 14:00:39,502 INFO  [Logger] Adding new Host 
+2015-10-15 14:00:41,893 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 14:00:53,592 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 14:01:10,588 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 14:01:10,588 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 14:01:26,116 INFO  [Logger] Clicked on VM management 
+2015-10-15 14:01:32,552 INFO  [Logger] In 'Host' Tab 
+2015-10-15 14:01:47,593 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 14:01:47,594 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 14:02:03,070 INFO  [Logger] Clicked on VM management 
+2015-10-15 14:02:09,991 INFO  [Logger] In 'Host' Tab 
+2015-10-15 14:02:11,246 ERROR [Logger] Change Network Params - is only supported for Appliance Virtualization Platform(AVP) host! 
+2015-10-15 14:02:11,246 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-10-15 14:02:11,575 ERROR [Logger] Something went wrong :( 
+2015-10-15 14:02:11,575 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 14:02:11,575 INFO  [Logger] Screenshot taken 
+2015-10-15 14:02:11,707 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 14:02:11,707 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 14:02:27,252 INFO  [Logger] Clicked on VM management 
+2015-10-15 14:02:55,494 ERROR [Logger] Something went wrong :( 
+2015-10-15 14:02:55,494 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 14:03:18,684 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-10-15 15:13:05,865 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 15:13:05,866 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 15:13:09,790 INFO  [Logger] Logged in Successfully 
+2015-10-15 15:13:21,816 INFO  [Logger] Clicked on VM management 
+2015-10-15 15:13:27,813 INFO  [Logger] In 'Host' Tab 
+2015-10-15 15:13:28,053 INFO  [Logger] Adding new Host 
+2015-10-15 15:13:30,497 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 15:13:42,180 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 15:13:56,944 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 15:13:56,944 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-15 15:14:06,090 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 15:14:06,091 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-15 15:14:08,106 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 15:14:08,106 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-15 15:50:53,443 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 15:50:53,444 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-15 15:50:56,463 INFO  [Logger] Logged in Successfully 
+2015-10-15 15:51:08,356 INFO  [Logger] Clicked on VM management 
+2015-10-15 15:51:15,338 INFO  [Logger] In 'Host' Tab 
+2015-10-15 15:51:15,612 INFO  [Logger] Adding new Host 
+2015-10-15 15:51:17,671 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 15:51:29,351 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-15 17:44:17,430 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:44:17,430 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 17:44:20,659 INFO  [Logger] Logged in Successfully 
+2015-10-15 17:44:32,561 INFO  [Logger] Clicked on VM management 
+2015-10-15 17:44:37,169 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-15 17:44:58,494 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-15 17:45:10,095 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-15 17:45:22,502 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-15 17:45:55,540 INFO  [Logger] Confirmation:  
+2015-10-15 17:46:19,341 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-15 17:46:34,923 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-15 17:46:46,571 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-15 17:46:53,485 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,554 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,622 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,687 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,765 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,835 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,896 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:53,970 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:54,028 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:54,090 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:46:54,093 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-15 17:46:54,093 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:46:54,093 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-15 17:47:00,126 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:00,126 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-15 17:47:06,157 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:06,157 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-15 17:47:12,184 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:12,184 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-15 17:47:13,210 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:13,211 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-15 17:47:14,242 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:14,242 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-15 17:47:25,564 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-15 17:47:25,564 INFO  [Logger] InnerThread: Choosen OVA  
+2015-10-15 17:47:25,566 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:47:25,566 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-15 17:47:29,133 INFO  [Logger] Logged in Successfully 
+2015-10-15 17:47:40,993 INFO  [Logger] Clicked on VM management 
+2015-10-15 17:47:47,163 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-15 17:47:47,611 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-15 17:47:47,611 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-15 17:47:47,632 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-15 17:47:47,632 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-15 17:47:47,632 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-15 17:47:47,634 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-15 17:47:49,297 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-15 17:51:35,516 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:51:35,516 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 17:51:38,764 INFO  [Logger] Logged in Successfully 
+2015-10-15 17:51:39,622 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:39,687 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:39,750 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:39,819 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:39,885 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:39,956 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:40,011 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:40,067 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:40,128 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:51:40,186 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:08,769 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:55:08,769 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 17:55:10,324 INFO  [Logger] Logged in Successfully 
+2015-10-15 17:55:11,115 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,137 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,157 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,176 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,197 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,220 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,234 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,247 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,263 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,285 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,309 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 17:55:11,333 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:55:11,334 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-15 17:55:14,538 INFO  [Logger] Logged in Successfully 
+2015-10-15 17:55:26,482 INFO  [Logger] Clicked on VM management 
+2015-10-15 17:55:46,223 INFO  [Logger] Clicked on VM management 
+2015-10-15 17:55:46,223 INFO  [Logger] Added Host as Location was not there beforehand. 
+2015-10-15 17:55:52,821 INFO  [Logger] Clicked on - Add new VM 
+2015-10-15 17:55:53,754 INFO  [Logger] Given Name 
+2015-10-15 17:55:55,751 ERROR [Logger] Select a host first! 
+2015-10-15 17:55:55,751 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-10-15 17:55:56,064 ERROR [Logger] Something went wrong :( 
+2015-10-15 17:55:56,064 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 17:55:56,064 INFO  [Logger] Screenshot taken 
+2015-10-15 17:55:56,257 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-15 17:55:56,257 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:55:56,257 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-15 17:56:11,773 INFO  [Logger] Clicked on VM management 
+2015-10-15 17:56:22,482 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:56:22,482 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-15 17:56:29,485 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:56:29,485 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-15 17:56:36,487 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:56:36,487 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-15 17:56:38,490 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:56:38,490 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-15 17:56:40,496 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:56:40,496 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-15 17:59:47,172 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 17:59:47,172 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 17:59:50,562 INFO  [Logger] Logged in Successfully 
+2015-10-15 18:00:03,428 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:00:08,721 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-15 18:00:24,007 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,044 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,070 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,096 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,123 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,159 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,178 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,226 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,243 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,262 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,290 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:00:24,311 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:00:24,311 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-15 18:00:27,587 INFO  [Logger] Logged in Successfully 
+2015-10-15 18:00:40,731 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:00:48,768 INFO  [Logger] Clicked on - Add new VM 
+2015-10-15 18:00:49,740 INFO  [Logger] Given Name 
+2015-10-15 18:01:01,516 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-15 18:01:01,516 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:01,516 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-15 18:01:17,183 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:01:30,072 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:30,072 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-15 18:01:37,084 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:37,084 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-15 18:01:44,096 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:44,096 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-15 18:01:46,094 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:46,094 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-15 18:01:48,107 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:01:48,107 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-15 18:06:55,099 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:06:55,099 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 18:07:00,203 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,225 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,243 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,263 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,283 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,303 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,317 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,332 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,347 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,362 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,378 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 18:07:00,399 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:07:00,399 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-15 18:07:03,335 INFO  [Logger] Logged in Successfully 
+2015-10-15 18:07:15,258 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:07:23,078 INFO  [Logger] Clicked on - Add new VM 
+2015-10-15 18:07:24,052 INFO  [Logger] Given Name 
+2015-10-15 18:07:35,872 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-15 18:07:35,872 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:07:35,872 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-15 18:07:51,381 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:07:59,452 INFO  [Logger] Clicked on - Edit VM 
+2015-10-15 18:08:20,446 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:08:20,446 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-15 18:08:35,947 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:09:03,108 ERROR [Logger] Something went wrong :( 
+2015-10-15 18:09:03,108 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 18:09:28,124 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-15 18:10:33,129 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:10:33,129 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-15 18:10:48,717 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:11:09,855 ERROR [Logger] Something went wrong :( 
+2015-10-15 18:11:09,855 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 18:11:34,613 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-15 18:12:39,617 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:12:39,617 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-15 18:12:55,128 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:13:15,874 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 18:13:15,874 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-15 18:13:31,355 INFO  [Logger] Clicked on VM management 
+2015-10-15 18:13:52,067 ERROR [Logger] Something went wrong :( 
+2015-10-15 18:13:52,067 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 18:14:16,866 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 

@@ -83,7 +83,7 @@ import com.avaya.sdmclient.vm.VM;
 			
 			obj.errorBox(driverC,obj.checkError(driverC));
 
-			obj.boundListSelect(driverC, "data", obj.selBoundList(driverC));
+			obj.boundListSelect(driverC, "data", obj.selBoundListID(driverC));
 			Thread.sleep(1500);
 			
 			/*obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
@@ -92,12 +92,12 @@ import com.avaya.sdmclient.vm.VM;
 			obj.comboClick(driver, "combobox-1238", VMName);
 			Thread.sleep(2500);*/
 			
-			obj.comboClick(driverC, "Select Software Library:","SMGR_DEFAULT_LOCAL");
+			obj.comboBoxClickAndSelectValue(driverC, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
 			//obj.maintainedList(driver, obj.comboID(driver, "Select OVAs:"));
 			
-			obj.comboClick(driverC, "Select OVAs:", VMName);
+			obj.comboBoxClickAndSelectValue(driverC, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
 			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
@@ -118,7 +118,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.deployButtonClickForVM(driverC);
 			Thread.sleep(450);
-			obj.findButton(driverC);
+			obj.findAcceptButtonForEULA(driverC,"EulaAgreementWindow");
 
 			logClass.info("Accepted EULA");
 
@@ -132,7 +132,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			obj.chooseLink(driverC, "test"+shortVMName);
+			obj.chooseLink(driverC, "test"+shortVMName,"Status Details");
 			logClass.info("Checking Status Details");
 			
 			obj.waitForPresenceOfElement(driverC, By.id(locator.getProperty("vmDeployStatus")));
@@ -178,7 +178,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.editVM(driverC,IP,"test"+shortVMName+"edited");
 
-			obj.checkFocus(driverC, By.xpath(locator.getProperty("VMEditSave")));
+			obj.checkFocusOfElement(driverC, By.xpath(locator.getProperty("VMEditSave")));
 			driverC.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(driverC, obj.checkError(driverC));

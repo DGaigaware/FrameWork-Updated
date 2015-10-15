@@ -99,7 +99,7 @@ public class VCEdit {
 		Thread.sleep(2000);
 		
 		setup();
-		WebElement element = driver.findElement(By.id((obj.selBoundList(driver))));
+		WebElement element = driver.findElement(By.id((obj.selBoundListID(driver))));
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{

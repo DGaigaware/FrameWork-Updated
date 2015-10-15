@@ -260,7 +260,7 @@ public class total {
 		Thread.sleep(250);
 		obj.errorBox(driver,obj.checkError(driver));
 
-		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
+		obj.boundListSelect(driver, "data", obj.selBoundListID(driver));
 
 		//1 - File Path; 3 - SW Library; 4 - URL
 		switch(_SWLib){
@@ -289,7 +289,7 @@ public class total {
 
 			//driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
 			obj.clickComboSDMCli(driver, "File Name:");
-			obj.boundListSelect(driver,shortVMName, obj.selBoundList(driver));
+			obj.boundListSelect(driver,shortVMName, obj.selBoundListID(driver));
 			break;
 		}
 
@@ -298,7 +298,7 @@ public class total {
 		driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 		Thread.sleep(450);
 
-		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
+		obj.boundListSelect(driver, "Profile 1", obj.selBoundListID(driver));
 		//Thread.sleep(250);
 		_Check = obj.checkError(driver);
 		obj.errorBox(driver,obj.checkError(driver));
@@ -374,7 +374,7 @@ public class total {
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-		obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
+		obj.checkFocusOfElement(driver, By.xpath(locator.getProperty("VMEditSave")));
 		driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 		obj.errorBox(driver, obj.checkError(driver));
@@ -470,7 +470,7 @@ public class total {
 
 		Thread.sleep(5000);
 		//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"));
+		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"Status Details");
 		obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
 		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
@@ -481,7 +481,7 @@ public class total {
 		//Added
 		Thread.sleep(5000);
 		
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"));
+		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"Status Details");
 		
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "VM Refresh Completed"));
 		obj.StatusCheck(driver, "VM Refresh Completed", 20);
