@@ -17,6 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -419,11 +420,14 @@ public class Settings {
 
 	public boolean checkError(WebDriver driver){
 		boolean b = false;
-
-		if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-			b = true;
-		else
+		
+		try{
+			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
+				b = true;
+		}
+		catch(Exception ex){
 			b=false;
+		}
 		
 		return b;
 	}
@@ -444,7 +448,7 @@ public class Settings {
 			System.out.println("Confirmed");
 			throw new MyException(errMsg);
 		}
-		return errMsg;
+		return errMsg+"\n";
 	}
 
 	//ID for boundlist (rendered last in DOM)
@@ -468,52 +472,39 @@ public class Settings {
 
 	public void confirmDialogBox(WebDriver driver) throws IOException, InterruptedException{
 		String returnID = "";
-		String script = "var nl = document.getElementById(\""+locator.getProperty("DialogueBox")+"\").querySelectorAll('[id^=\"button\"]'); return nl;";
-		
-		JavascriptExecutor exec = (JavascriptExecutor) driver;
-		List<WebElement> buttons = (List<WebElement>) exec.executeScript(script);
-		
 		driver.switchTo().activeElement();
+		try{
+			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
+			{
+				logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+				//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
+			}
+		}
 
-		//try{
-		if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-		{
-			logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-			//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
-		}
-		//}
-		//catch(Exception ex){
-		else{
-			takeScreenShotForDriver(driver);
-			System.out.println("Couldn't find any DialogueBox..");
-		}
-			
-		//}
-
-		driver.findElement(By.id(buttons.get(0).getAttribute("id"))).click();
-		Thread.sleep(500);
-		
-		if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
-		{
-			logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-			//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
-			driver.switchTo().activeElement();
-			List<WebElement> buttons1 = (List<WebElement>) exec.executeScript(script);
-			driver.findElement(By.id(buttons1.get(0).getAttribute("id"))).click();
-		}
-		
-		else
-			System.out.println("Confirmed..");
-		/*try{
-			driver.switchTo().activeElement();
-			//System.out.println(driver.switchTo().activeElement().getText());
-			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
-			//System.out.println("Confirmed");
-		}
 		catch(Exception ex){
-			System.out.println("Confirmed");
-		}*/
+ 			takeScreenShotForDriver(driver);
+			System.out.println("Couldn't find any DialogueBox..");
+ 		}
+		
+		try{
+			driver.findElement(By.xpath(locator.getProperty("ConfButton1"))).click();
+		}
+
+		catch(Exception ex){
+			System.out.println("\n");
+		}
+
+		try{
+ 			driver.switchTo().activeElement();
+ 			//System.out.println(driver.switchTo().activeElement().getText());
+ 			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+ 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
+
+ 		}
+ 		catch(Exception ex){
+ 			System.out.println("Confirmed");
+		}
+		
 	}
 
 	public String findTextInBetweenTags(String tag,String FilePath) throws IOException{

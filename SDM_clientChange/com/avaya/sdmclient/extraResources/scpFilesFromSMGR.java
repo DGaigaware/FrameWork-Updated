@@ -118,16 +118,16 @@ public class scpFilesFromSMGR {
             ex.printStackTrace();
         }
         
-       
+        forSFTP = session.openChannel("sftp");
+		forSFTP.connect();
+		c = (ChannelSftp) forSFTP;
         //for(String s : files)
         for(int i=0;i<files.size();i++)
         {
         	System.out.println(files.get(i));
         	
         	//try {
-        		forSFTP = session.openChannel("sftp");
-        		forSFTP.connect();
-        		c = (ChannelSftp) forSFTP;
+        		
         		//System.out.println("Starting File Download:");
         		//String fsrc = "./logfile.log", fdest = "./";
         		//c = (ChannelSftp) channelold;

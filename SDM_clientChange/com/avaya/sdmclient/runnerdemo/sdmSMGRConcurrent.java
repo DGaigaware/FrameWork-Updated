@@ -20,6 +20,8 @@ import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.extraResources.scpFilesFromSMGR;
+import com.jcraft.jsch.JSchException;
+import com.jcraft.jsch.SftpException;
 
 public class sdmSMGRConcurrent {
 	
@@ -27,10 +29,12 @@ public class sdmSMGRConcurrent {
 		WebDriver drive = new FirefoxDriver(obj.selectProfile("Selenium"));
 		Properties locator = null;
 		@BeforeClass(alwaysRun=true)
-		public void setup() throws IOException, InterruptedException
+		public void setup() throws IOException, InterruptedException, JSchException, SftpException
 		{
 			locator=new Properties();
 			locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
+			scpFilesFromSMGR s = new scpFilesFromSMGR();
+			s.scpFile();
 		}
 		
 		/*
@@ -230,9 +234,6 @@ public class sdmSMGRConcurrent {
 		@Parameters({"IP", "VMName"})
 		public void AddVM(String IP,String VMName) throws Exception {
 
-			scpFilesFromSMGR s = new scpFilesFromSMGR();
-			s.scpFile();
-			
 			String shortVMName = obj.shortVMName(VMName);
 			
 			boolean _Check;
@@ -334,13 +335,10 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver1);
 					} catch (ParserConfigurationException | SAXException | IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }
@@ -647,10 +645,8 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver2);
 					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }
