@@ -21704,3 +21704,361 @@ null (vmId = 10100):: Unable to find vm: testEDP
 2015-10-15 18:14:16,866 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
 
  
+2015-10-15 19:17:35,417 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:17:35,418 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-15 19:17:39,359 INFO  [Logger] Logged in Successfully 
+2015-10-15 19:17:46,363 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,384 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,403 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,425 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,449 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,471 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,487 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,503 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,519 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,543 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,557 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-15 19:17:46,577 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:17:46,577 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-15 19:17:49,492 INFO  [Logger] Logged in Successfully 
+2015-10-15 19:18:01,862 INFO  [Logger] Clicked on VM management 
+2015-10-15 19:18:09,661 INFO  [Logger] Clicked on - Add new VM 
+2015-10-15 19:18:10,635 INFO  [Logger] Given Name 
+2015-10-15 19:18:52,810 ERROR [Logger] Host resource verification failed. Please refer to capacity details table 
+2015-10-15 19:18:52,810 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-10-15 19:18:53,094 ERROR [Logger] Something went wrong :( 
+2015-10-15 19:18:53,094 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 19:18:53,094 INFO  [Logger] Screenshot taken 
+2015-10-15 19:18:53,236 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-15 19:18:53,236 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:18:53,236 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-15 19:19:08,755 INFO  [Logger] Clicked on VM management 
+2015-10-15 19:19:17,296 INFO  [Logger] Clicked on - Edit VM 
+2015-10-15 19:19:33,439 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-15 19:19:38,441 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:19:38,441 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-15 19:19:53,944 INFO  [Logger] Clicked on VM management 
+2015-10-15 19:20:16,145 ERROR [Logger] Something went wrong :( 
+2015-10-15 19:20:16,145 INFO  [Logger] Check Screenshot for the same 
+2015-10-15 19:20:41,315 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-15 19:21:46,331 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:21:46,331 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-15 19:21:53,334 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:21:53,334 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-15 19:21:55,336 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:21:55,336 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-15 19:21:57,338 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-15 19:21:57,338 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-16 12:18:01,998 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:18:02,046 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 12:18:05,925 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:18:17,930 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:18:21,843 INFO  [Logger] Adding new Location 
+2015-10-16 12:18:25,144 INFO  [Logger] Saved New Location 
+2015-10-16 12:18:25,835 INFO  [Logger] Adding new Location 
+2015-10-16 12:18:25,989 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:18:25,989 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:18:41,787 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:19:01,194 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:19:01,194 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:23:31,358 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:23:31,359 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 12:23:34,591 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:23:47,337 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:23:51,047 INFO  [Logger] Adding new Location 
+2015-10-16 12:23:54,456 INFO  [Logger] Saved New Location 
+2015-10-16 12:23:55,278 INFO  [Logger] Adding new Location 
+2015-10-16 12:23:58,532 INFO  [Logger] Saved New Location 
+2015-10-16 12:23:58,532 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-16 12:23:58,536 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:23:58,536 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:24:14,081 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:24:30,297 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:24:30,297 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:24:46,144 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:24:51,161 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-16 12:24:51,322 INFO  [Logger] Confirmation:  
+2015-10-16 12:24:52,067 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 12:29:34,510 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:29:34,511 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:29:35,575 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:29:35,575 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:30:16,973 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:30:16,973 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:30:20,117 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:30:32,021 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:30:47,849 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:30:47,849 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:31:03,461 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:31:19,586 ERROR [Logger] Something went wrong :( 
+2015-10-16 12:31:19,586 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 12:31:42,801 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 12:32:58,290 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:32:58,290 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:33:01,549 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:33:13,496 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:33:29,455 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:33:29,455 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:33:44,920 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:34:01,566 ERROR [Logger] Something went wrong :( 
+2015-10-16 12:34:01,566 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 12:34:24,725 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 12:36:12,168 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:36:12,169 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:36:15,275 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:36:27,183 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:36:31,146 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:36:31,146 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:36:46,660 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:37:03,494 ERROR [Logger] Something went wrong :( 
+2015-10-16 12:37:03,494 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 12:37:26,607 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 12:38:07,897 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:38:07,898 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:38:11,039 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:38:23,075 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:38:27,510 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:38:27,510 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:38:43,016 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:38:58,883 ERROR [Logger] Something went wrong :( 
+2015-10-16 12:38:58,883 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 12:39:21,933 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 12:40:30,861 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:40:30,862 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 12:40:35,639 INFO  [Logger] Logged in Successfully 
+2015-10-16 12:40:47,548 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:40:57,114 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-16 12:41:08,810 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-16 12:41:08,934 INFO  [Logger] Saved Location 
+2015-10-16 12:41:08,934 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-16 12:41:08,936 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 12:41:08,936 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 12:41:25,358 INFO  [Logger] Clicked on VM management 
+2015-10-16 12:41:41,398 ERROR [Logger] Something went wrong :( 
+2015-10-16 12:41:41,398 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 12:42:04,495 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 13:00:55,987 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:00:55,988 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 13:00:59,168 INFO  [Logger] Logged in Successfully 
+2015-10-16 13:01:11,078 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:01:14,928 INFO  [Logger] Adding new Location 
+2015-10-16 13:01:17,926 INFO  [Logger] Saved New Location 
+2015-10-16 13:01:18,701 INFO  [Logger] Adding new Location 
+2015-10-16 13:01:21,693 INFO  [Logger] Saved New Location 
+2015-10-16 13:01:21,693 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-16 13:01:21,696 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:01:21,696 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 13:01:34,567 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:01:34,567 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 13:04:07,533 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:04:07,534 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 13:04:10,684 INFO  [Logger] Logged in Successfully 
+2015-10-16 13:04:22,720 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:04:26,703 INFO  [Logger] Adding new Location 
+2015-10-16 13:04:29,702 INFO  [Logger] Saved New Location 
+2015-10-16 13:04:30,559 INFO  [Logger] Adding new Location 
+2015-10-16 13:04:33,516 INFO  [Logger] Saved New Location 
+2015-10-16 13:04:33,516 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-16 13:04:33,524 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:04:33,525 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 13:04:48,942 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:04:48,942 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 13:06:01,430 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:06:01,431 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 13:06:04,551 INFO  [Logger] Logged in Successfully 
+2015-10-16 13:06:16,460 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:06:20,425 INFO  [Logger] Adding new Location 
+2015-10-16 13:06:23,657 INFO  [Logger] Saved New Location 
+2015-10-16 13:06:24,575 INFO  [Logger] Adding new Location 
+2015-10-16 13:06:27,858 INFO  [Logger] Saved New Location 
+2015-10-16 13:06:28,308 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-16 13:06:28,312 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:06:28,313 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 13:06:43,804 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:06:51,149 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-16 13:07:02,781 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-16 13:07:02,924 INFO  [Logger] Saved Location 
+2015-10-16 13:07:02,925 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-16 13:07:02,926 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:07:02,926 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 13:08:29,972 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:08:29,973 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-16 13:08:33,032 INFO  [Logger] Logged in Successfully 
+2015-10-16 13:08:44,917 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:08:48,924 INFO  [Logger] Adding new Location 
+2015-10-16 13:08:51,770 INFO  [Logger] Saved New Location 
+2015-10-16 13:08:52,526 INFO  [Logger] Adding new Location 
+2015-10-16 13:08:55,065 INFO  [Logger] Saved New Location 
+2015-10-16 13:08:55,515 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-16 13:08:55,518 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:08:55,518 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-16 13:09:11,011 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:09:19,188 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-16 13:09:30,836 INFO  [Logger] Confirmation:  
+2015-10-16 13:09:42,418 INFO  [Logger] Saved Location 
+2015-10-16 13:09:42,418 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-16 13:09:42,420 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 13:09:42,420 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-16 13:09:57,917 INFO  [Logger] Clicked on VM management 
+2015-10-16 13:10:02,561 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-16 13:10:02,704 INFO  [Logger] Confirmation:  
+2015-10-16 13:10:03,236 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-16 14:59:05,365 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 14:59:05,371 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-16 14:59:08,547 INFO  [Logger] Logged in Successfully 
+2015-10-16 14:59:20,605 INFO  [Logger] Clicked on VM management 
+2015-10-16 14:59:25,401 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 14:59:25,402 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 14:59:40,704 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 14:59:40,704 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:00:53,397 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:00:53,397 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-16 15:00:56,480 INFO  [Logger] Logged in Successfully 
+2015-10-16 15:01:08,388 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:01:15,042 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:01:15,293 INFO  [Logger] Adding new Host 
+2015-10-16 15:01:17,213 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:01:29,089 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:01:49,437 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:01:49,438 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 15:02:04,907 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:02:11,470 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:02:11,470 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:06:48,671 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:06:48,672 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-16 15:06:51,647 INFO  [Logger] Logged in Successfully 
+2015-10-16 15:07:03,537 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:07:11,898 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:07:12,146 INFO  [Logger] Adding new Host 
+2015-10-16 15:07:14,176 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:07:25,840 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:07:30,240 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:07:34,700 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:07:35,104 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:07:37,559 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:07:37,767 INFO  [Logger] Adding new Host 
+2015-10-16 15:07:51,044 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-10-16 15:07:58,542 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:08:03,195 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:08:03,634 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:08:04,100 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-16 15:08:04,105 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:08:04,106 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 15:08:19,743 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:08:25,831 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:08:25,831 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:08:41,293 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:09:11,770 ERROR [Logger] Something went wrong :( 
+2015-10-16 15:09:11,771 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 15:09:34,591 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-10-16 15:22:40,854 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:22:40,855 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-16 15:22:41,920 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:22:41,921 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-16 15:22:45,855 INFO  [Logger] Logged in Successfully 
+2015-10-16 15:22:57,823 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:23:03,940 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:23:04,182 INFO  [Logger] Adding new Host 
+2015-10-16 15:23:06,459 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:23:18,119 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-16 15:23:22,239 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:23:27,084 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sm3 in Inventory :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sit5_1 in local inventory :;Discovering VMs: Add VM sit5_1 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sit5_1 in Inventory :;Discovering VMs: Add VM AMS in local inventory :;Discovering VMs: Add VM AMS in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM AMS in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:23:27,956 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sm3 in Inventory :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM sit5_1 in local inventory :;Discovering VMs: Add VM sit5_1 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sit5_1 in Inventory :;Discovering VMs: Add VM AMS in local inventory :;Discovering VMs: Add VM AMS in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM AMS in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:23:31,758 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:23:31,979 INFO  [Logger] Adding new Host 
+2015-10-16 15:23:45,320 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-10-16 15:23:52,921 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:23:57,530 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:23:58,051 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-16 15:23:58,517 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-16 15:23:58,519 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:23:58,519 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 15:24:14,062 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:24:21,141 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:24:38,939 INFO  [Logger] *************************End of test caseEdited Host Successfully******************************
+
+ 
+2015-10-16 15:24:38,945 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:24:38,945 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:24:54,860 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:25:24,739 ERROR [Logger] Something went wrong :( 
+2015-10-16 15:25:24,739 INFO  [Logger] Check Screenshot for the same 
+2015-10-16 15:25:50,126 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-10-16 15:32:15,455 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:32:15,456 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-16 15:32:16,548 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:32:16,548 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 15:32:17,603 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:32:17,603 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:32:51,766 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:32:51,767 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-16 15:32:52,829 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:32:52,829 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-16 15:32:56,031 INFO  [Logger] Logged in Successfully 
+2015-10-16 15:33:08,769 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:33:16,684 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:33:34,630 INFO  [Logger] *************************End of test caseEdited Host Successfully******************************
+
+ 
+2015-10-16 15:33:34,632 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:33:34,632 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:33:50,377 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:33:57,836 INFO  [Logger] Action being performed: Are you sure you want to delete host(s) ? 
+2015-10-16 15:33:57,973 INFO  [Logger] Confirmation:  
+2015-10-16 15:33:59,226 INFO  [Logger] *************************End of test caseDeleted Host******************************
+
+ 
+2015-10-16 15:48:45,703 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:48:45,703 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-16 15:48:47,760 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:48:47,760 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:49:30,123 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:49:30,124 INFO  [Logger]                              Checking if the host is AVP or not... (ANd performing operations for the same)                             
+2015-10-16 15:49:33,367 INFO  [Logger] Logged in Successfully 
+2015-10-16 15:49:45,347 INFO  [Logger] Clicked on VM management 
+2015-10-16 15:49:51,359 INFO  [Logger] In 'Host' Tab 
+2015-10-16 15:50:15,631 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-16 15:50:15,631 INFO  [Logger]                              Deleting Host to given Location                             
+2015-10-16 15:50:31,121 INFO  [Logger] Clicked on VM management 
