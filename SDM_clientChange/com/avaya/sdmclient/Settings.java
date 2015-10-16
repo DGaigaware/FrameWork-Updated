@@ -205,37 +205,15 @@ public class Settings {
 				}
 			}
 	}
-
-	//Find location or host by name
-	//pass driver instance and string which is to be find as parameter
-	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
-		setup();
-		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
-		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
-		//System.out.println(cells.size()+"\n\n");
-
-		for(WebElement e : cells)
-		{
-			//System.out.println("Locatest"+e.getText());
-			try{
-				if(e.isDisplayed())
-					if(e.getText().trim().equals(input))
-						e.click();
-			}
-			catch(Exception ex){
-				System.out.println("Couldn't find Location or Host: "+input);
-			}
-		}
-	}
-
+	
 	//To check whether location or host is available or not (So that we can add if they are not there)
 	//pass driver instance and string which is to be find as parameter
-	public boolean checkLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException{
+	public boolean checkPresenceOfLocationOrHostOrVM(WebDriver driver, String input) throws IOException, InterruptedException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
-		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		List<String> tm = new ArrayList<>();
-		boolean b = false;
+		boolean b = true;
 		System.out.println("Entries on Left Tree: "+cells.size());
 
 		for(WebElement e : cells)
@@ -243,83 +221,136 @@ public class Settings {
 			//System.out.println(e.getText());
 			tm.add(e.getText());
 			/*if(e.isDisplayed())
-				if(e.getText().trim().equals(_input))
-					System.out.println(e.getAttribute("id"));*/
+					if(e.getText().trim().equals(_input))
+						System.out.println(e.getAttribute("id"));*/
 		}
 
 		if(!tm.contains(input)){
 			System.out.println("Couldn't Find Location or host in Tree: "+input);
-			b=true;
+			b=false;
 		}
 
 		/*for(String s : tm){
-			System.out.println(s);
-		}*/
+				System.out.println(s);
+			}*/
 		return b;
 	}
+		
+	//Find location or host by name
+	//pass driver instance and string which is to be find as parameter
+	public void findLocationOrHost(WebDriver driver, String input) throws IOException, InterruptedException, MyException{
+		setup();
+		WebElement table = driver.findElement(By.id(locator.getProperty("LocOrHostGrid")));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
+		//System.out.println(cells.size()+"\n\n");
+		
+		if(checkPresenceOfLocationOrHostOrVM(driver, input) && input !=null)
+		{
+			for(WebElement e : cells)
+			{
+				if(e.getText().trim().equals(input))
+					e.click();
+			}
+		}
+		
+		else{
+			System.out.println("Please check whether location name is null or location is present or not.");
+			logClass.error("Error occurred: Either location name or host name is null or location or host does not exist ..");
+			throw new MyException("Error occurred: Either location name or host name is null or location or host does not exist ..");
+		}
+	}
+
 	
 	//Find Location (right side) in grid (table)
 	//pass driver instance and location name which is to be find as parameter
-	public void findLocationInGrid(WebDriver driver, String locationName) throws IOException, InterruptedException{
+	public void findLocationInGrid(WebDriver driver, String locationName) throws IOException, InterruptedException, MyException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("LocationInGrid")));
-		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		//System.out.println(cells.size()+"\n\n");
 
-		for(WebElement e : cells)
+		if(checkPresenceOfLocationOrHostOrVM(driver, locationName) && locationName !=null)
 		{
-			if(e.getText().trim().equals(locationName))
-				e.click();
+			for(WebElement e : cells)
+			{
+				//System.out.println(e.getText()+" :"+locationName);
+				if(e.getText().trim().contains(locationName))
+				{
+					e.click();
+					System.out.println("Clicked on "+locationName);
+				}
+			}
+		}
+		else{
+			System.out.println("Please check whether location name is null or location is present or not.");
+			logClass.error("Error occurred: Either location name is null or location does not exist ..");
+			throw new MyException("Error occurred: Either location name is null or location does not exist ..");
 		}
 	}
 
 	//Find host (right side) in grid (table)
 	//pass driver instance and location name which is to be find as parameter
-	public void findHostInGrid(WebDriver driver, String hostName) throws IOException, InterruptedException{
+	public void findHostInGrid(WebDriver driver, String hostName) throws IOException, InterruptedException, MyException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("HostInGrid")));
 		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
 		//System.out.println(cells.size()+"\n\n");
-
-		for(WebElement e : cells)
-		{	//System.out.println("Test:"+e.getText()+"\n");
-			try{
+		if(checkPresenceOfLocationOrHostOrVM(driver, hostName) && hostName !=null)
+		{
+			for(WebElement e : cells)
+			{	
 				if(e.getText().trim().equals(hostName))
 					e.click();
 			}
-			catch(Exception ex){
-				System.out.println("Couldn't find Host: "+hostName);
-				takeScreenShotForDriver(driver);
-			}
+		}
+		else{
+			System.out.println("Please check whether host name is null or host is present or not.");
+			logClass.error("Error occurred: Either host name is null or host does not exist ..");
+			throw new MyException("Error occurred: Either host name is null or host does not exist ..");
 		}
 	}
 
 	//Find VM (right side) for particular host in grid (table)
 	//pass driver instance and VM name which is to be find as parameter
-	public void findVMForHost(WebDriver driver, String vmName) throws IOException, InterruptedException{
+	public void findVMForHost(WebDriver driver, String vmName) throws IOException, InterruptedException, MyException{
 		setup();
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
-		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='td']")));
-		//System.out.println(cells.size()+"\n\n");
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Column"))));
 
-		for(WebElement e : cells)
-		{	//System.out.println(e.getText());
-			if(e.getText().trim().equals(vmName))
-				e.click();
+		if(checkPresenceOfLocationOrHostOrVM(driver, vmName) && vmName !=null)
+		{
+			for(WebElement e : cells)
+			{	//System.out.println(e.getText());
+				if(e.getText().trim().equals(vmName))
+					e.click();
+			}
+		}
+		else{
+			System.out.println("Please check whether VM name is null or VM is present or not.");
+			logClass.error("Error occurred: Either VM name is null or VM does not exist ..");
+			throw new MyException("Error occurred: Either VM name is null or VM does not exist ..");
 		}
 	}
 
 	//Find vCenter (right side) in grid (table)
 	//pass driver instance and VCenter name which is to be find as parameter
-	public void findvCenterInGrid(WebDriver driver, String VCenter) throws IOException, InterruptedException{
+	public void findvCenterInGrid(WebDriver driver, String VCenter) throws IOException, InterruptedException, MyException{
 		setup();
 		WebElement temp = driver.findElement(By.id(locator.getProperty("VCenterInGrid")));
-		List<WebElement> tempcells = temp.findElements(By.xpath((".//*[local-name(.)='td']")));
+		List<WebElement> tempcells = temp.findElements(By.xpath((locator.getProperty("Column"))));
 
-		for(WebElement e : tempcells)
+		if(checkPresenceOfLocationOrHostOrVM(driver, VCenter) && VCenter !=null)
 		{
-			if(e.getText().trim().equals(VCenter))
-				e.click();
+			for(WebElement e : tempcells)
+			{
+				if(e.getText().trim().equals(VCenter))
+					e.click();
+			}
+		}
+		else{
+			System.out.println("Please check whether VCenter is null or VCenter is present or not.");
+			logClass.error("Error occurred: Either VCenter is null or VCenter does not exist ..");
+			throw new MyException("Error occurred: Either VCenter is null or VCenter does not exist ..");
 		}
 	}
 
@@ -581,7 +612,7 @@ public class Settings {
 	}
 
 
-	public String fluentWaitCloseOpen(final By locatorTo,WebDriver driver,int time,String Test,String VMName) throws InterruptedException, IOException {
+	public String fluentWaitCloseOpen(final By locatorTo,WebDriver driver,int time,String Test,String VMName,String vmOrHost,String linkText) throws InterruptedException, IOException, MyException {
 		Thread.sleep(45000);
 		closeWindow(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 3000);
@@ -590,7 +621,7 @@ public class Settings {
 		Thread.sleep(1000);
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		*/
-		chooseLink(driver, VMName);
+		chooseLink(driver, VMName,vmOrHost,linkText);
 		logClass.info("Checking Status Details");
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
@@ -599,11 +630,22 @@ public class Settings {
 		return fluentWait(locatorTo, driver, time, Test);
 	}
 	
-	public void chooseLink(WebDriver driver,String Name) throws IOException, InterruptedException{
+	public void chooseLink(WebDriver driver,String Name,String vmOrHost,String linkText) throws IOException, InterruptedException, MyException{
 		setup();
+		String id = "";
+		if(vmOrHost.equals("VM")){
+			id = locator.getProperty("VMGrid");
+		}
+		else if(vmOrHost.equals("Host")){
+			id = locator.getProperty("HostInGrid");
+		}
+		else{
+			throw new MyException("Please verify input: Only allowed inputs are 'VM' or 'Host'");
+		}
+		
 		Thread.sleep(3500);
-		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
-		List<WebElement> cells = table.findElements(By.xpath((".//*[local-name(.)='tr']")));
+		WebElement table = driver.findElement(By.id(id));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		String rowID = "";
 		//System.out.println(cells.size()+"\n\n");
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -616,7 +658,7 @@ public class Settings {
 					System.out.println(rowID);
 				}
 		}
-		driver.findElement(By.id(rowID)).findElement(By.linkText("Status Details")).click();
+		driver.findElement(By.id(rowID)).findElement(By.linkText(linkText)).click();
 		//el.findElement(By.className("deployinprogress")).click();
 	}
 
@@ -706,8 +748,10 @@ public class Settings {
 		types.add("host_new");
 		types.add("host_edit");
 		types.add("panelConfigParameters");
+		types.add("networkParamEditForm");
+		types.add("host_passwordChange");
 		
-		if(input.equals("AddLocation"))
+		if(input.equals("AddLocation") || input.equals("AddLocation1"))
 			{
 				returnStr = types.get(0);
 				refStr = "locationgridpanel";
@@ -717,7 +761,7 @@ public class Settings {
 				returnStr = types.get(1);
 				refStr = "locationgridpanel";
 			}
-		else if(input.equals("AddHost"))
+		else if(input.equals("AddHost") || input.equals("AddHost1"))
 			{
 				returnStr = types.get(2);
 				refStr = "host_view";
@@ -730,6 +774,16 @@ public class Settings {
 		else if(input.equals("AddVM"))
 		{
 			returnStr = types.get(4);
+			refStr = "";
+		}
+		else if(input.equals("ChangeNetWorkParams"))
+		{
+			returnStr = types.get(5);
+			refStr = "";
+		}
+		else if(input.equals("UpdatePwdHost"))
+		{
+			returnStr = types.get(6);
 			refStr = "";
 		}
 		ret.add(returnStr);
@@ -750,7 +804,6 @@ public class Settings {
 		String returnID = "";
 		
 		ArrayList<WebElement> elem = (ArrayList<WebElement>) js.executeScript(sc);
-		//System.out.println("Before");
 		//System.out.println("No of fields in OVF: "+elem.size());
 		
 		if(input.equals("EditHost")){
@@ -760,7 +813,7 @@ public class Settings {
 			boundListSelect(driver, readFromFile(filename, "EditHostLocation:"), selBoundList(driver));
 		}
 		
-		else if(input.equals("AddLocation") || input.equals("EditLocation")){
+		else if(input.equals("AddLocation") || input.equals("EditLocation") || input.equals("AddLocation1")){
 			
 			String sc1 = "var nl = document.getElementById(\""+ getViewFrame(driver, input).get(0) + "\").querySelectorAll(\"textarea\"); return nl;";
 			ArrayList<WebElement> elems = (ArrayList<WebElement>) js.executeScript(sc1);
@@ -1456,7 +1509,8 @@ public class Settings {
 		}
 	}
 
-	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b,int count) throws MyException{
+	@SuppressWarnings("deprecation")
+	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b,int count,String linkText) throws MyException{
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
 		Object o = null;
 		boolean check = false;
@@ -1465,7 +1519,7 @@ public class Settings {
 		if(counter<count){
 			if(b){
 				try{
-					chooseLink(driver, vmName);
+					chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
 					System.out.println("Task Completed Successfully..");
@@ -1483,13 +1537,13 @@ public class Settings {
 					b=false;
 					counter++;
 					System.out.println(counter);
-					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter,linkText);
 				}
 			}
 			
 			else{
 				try{
-					chooseLink(driver, vmName);
+					chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
 					System.out.println("Task Failed..");
@@ -1506,10 +1560,14 @@ public class Settings {
 					b=true;
 					counter++;
 					System.out.println(counter);
-					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter,linkText);
 				}
 			}
 		}
+		else{
+			System.out.println("Timed out..");
+		}
+		
 		if(check){
 			System.out.println("Completed task (failed).. ");
 			throw new MyException("Test case failed .. Check screenshot for the same.");
@@ -1699,6 +1757,42 @@ public class Settings {
 		else
 			throw new MyException("OVF not found for "+vmname+" at C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\ . Please check if OVA and OVF are present at given location.");
 		return returnOVFPath;    
+	}
+	
+	public void changeNetworkParamsHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
+		findIDandFillValues(driver,fileName,input);
+	}
+	
+	public void changePassWordHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
+		findIDandFillValues(driver, fileName, input);
+	}
+	
+	public void updateESXiHost(WebDriver driver,String fileName,String input) throws IOException, InterruptedException{
+		//findIDandFillValues(driver, fileName, input);
+		System.out.println("AVP Host can be updated...");
+	}
+	
+	public WebElement findButtonByName(WebDriver driver,String staticIdFrom,String buttonName) throws MyException{
+		WebElement returnEle = null;
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String script = "var nl = document.getElementById(\""+staticIdFrom+"\").querySelectorAll('[id^=\"button\"]');return nl;";
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script);
+		
+		if(!elements.isEmpty()){
+			for(WebElement e : elements){
+				if(e.getText().equals(buttonName)){
+					System.out.println(e.getAttribute("id"));
+					returnEle = e;
+					break;
+				}
+				break;
+			}
+		}
+		if(returnEle==null){
+			throw new MyException("Couldn't find button, check the Static ID which is given and button name");
+		}
+		return returnEle;
 	}
 }
 

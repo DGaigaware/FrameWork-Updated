@@ -42,7 +42,7 @@ public class demoSMGRdeploy2808 {
 
 		obj.goToSDMCliURL(driver);
 
-		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "HostName175"))){
+		if(obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.txt", "HostName175"))){
 			//addHost1();
 			System.out.println("Adding Host");
 			driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");

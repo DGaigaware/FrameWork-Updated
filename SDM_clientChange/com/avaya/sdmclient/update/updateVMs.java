@@ -30,7 +30,7 @@ public class updateVMs {
 	
 	@Test(description="Refreshing VM to given Location and Host",priority=0)
 	@Parameters({"VMName"})
-	public void RefreshVM(String VMName) throws InterruptedException, IOException{
+	public void RefreshVM(String VMName) throws InterruptedException, IOException, MyException{
 		
 		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
@@ -69,7 +69,7 @@ public class updateVMs {
 
 		obj.chooseTab(drive, "Virtual Machines");
 
-		obj.chooseLink(drive, VMName);
+		obj.chooseLink(drive, VMName,"VM","Status Details");
 		obj.StatusCheck(drive, "VM Trust Establishment Completed",50);
 
 		obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
@@ -80,7 +80,7 @@ public class updateVMs {
 
 		Thread.sleep(5000);
 		
-		obj.chooseLink(drive, VMName);
+		obj.chooseLink(drive, VMName,"VM","Status Details");
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "VM Refresh Completed"));
 		obj.StatusCheck(drive, "VM Refresh Completed", 20);
 
@@ -115,11 +115,11 @@ public class updateVMs {
 		
 		obj.findButtonUpdate(drive);
 		
-		obj.chooseLink(drive, VMName);
+		obj.chooseLink(drive, VMName,"VM","Status Details");
 		//obj.fluentWaitCloseOpen(locatorTo, drive, 2200, Test, VMName)
 		//System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 2200, "Completed",VMName));
 		
-		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true,10);
+		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true,10,"Status Details");
 		
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);

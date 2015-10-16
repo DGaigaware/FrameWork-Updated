@@ -229,7 +229,7 @@ public class total {
 
 		obj.goToSDMCliURL(driver);
 
-		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"))){
+		if(obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.properties", "AddHostHostName:"))){
 			//addHost1();
 			System.out.println("Adding Host");
 			obj.goToSDMCliURL(driver);
@@ -260,7 +260,7 @@ public class total {
 		Thread.sleep(250);
 		obj.errorBox(driver,obj.checkError(driver));
 
-		obj.boundListSelect(driver, "data", obj.selBoundListID(driver));
+		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
 
 		//1 - File Path; 3 - SW Library; 4 - URL
 		switch(_SWLib){
@@ -289,7 +289,7 @@ public class total {
 
 			//driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
 			obj.clickComboSDMCli(driver, "File Name:");
-			obj.boundListSelect(driver,shortVMName, obj.selBoundListID(driver));
+			obj.boundListSelect(driver,shortVMName, obj.selBoundList(driver));
 			break;
 		}
 
@@ -298,7 +298,7 @@ public class total {
 		driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 		Thread.sleep(450);
 
-		obj.boundListSelect(driver, "Profile 1", obj.selBoundListID(driver));
+		obj.boundListSelect(driver, "Profile 1", obj.selBoundList(driver));
 		//Thread.sleep(250);
 		_Check = obj.checkError(driver);
 		obj.errorBox(driver,obj.checkError(driver));
@@ -336,7 +336,7 @@ public class total {
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed",""));
+		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed","","VM","Status Details"));
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 		obj.closeWindow(driver);
@@ -374,7 +374,7 @@ public class total {
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
 		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
 
-		obj.checkFocusOfElement(driver, By.xpath(locator.getProperty("VMEditSave")));
+		obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
 		driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 		obj.errorBox(driver, obj.checkError(driver));
@@ -384,7 +384,7 @@ public class total {
 
 	@Test(description="Stoping VM to given Location and Host",priority=10)
 
-	public void StopVM() throws InterruptedException, IOException{
+	public void StopVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Stop VM to given Location and Host");
@@ -410,7 +410,7 @@ public class total {
 
 	@Test(description="Starting VM to given Location and Host",priority=11)
 
-	public void StartVM() throws InterruptedException, IOException{
+	public void StartVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Start VM to given Location and Host");
@@ -434,7 +434,7 @@ public class total {
 
 	@Test(description="Refreshing VM to given Location and Host",priority=12)
 
-	public void RefreshVM() throws InterruptedException, IOException{
+	public void RefreshVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
@@ -470,7 +470,7 @@ public class total {
 
 		Thread.sleep(5000);
 		//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"Status Details");
+		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"VM","Status Details");
 		obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
 
 		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
@@ -481,7 +481,7 @@ public class total {
 		//Added
 		Thread.sleep(5000);
 		
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"Status Details");
+		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"VM","Status Details");
 		
 		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "VM Refresh Completed"));
 		obj.StatusCheck(driver, "VM Refresh Completed", 20);
@@ -494,7 +494,7 @@ public class total {
 
 	@Test(description="Restarting VM to given Location and Host",priority=13)
 
-	public void RestartVM() throws IOException, InterruptedException{
+	public void RestartVM() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Restart VM to given Location and Host");
 
@@ -517,7 +517,7 @@ public class total {
 
 	@Test(description="Deleting VM to given Location and Host",priority=14)
 
-	public void DeleteVM() throws IOException, InterruptedException{
+	public void DeleteVM() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Delete VM to given Location and Host");
 

@@ -54,7 +54,7 @@ import com.avaya.sdmclient.vm.VM;
 			//obj.goHome(driver);
 			obj.loginToSite(driverC);
 
-			if(obj.checkLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"))){
+			if(obj.checkPresenceOfLocationOrHostOrVM(driverC, obj.readFromFile("input.properties", "AddHostHostName:"))){
 				//addHost1();
 				System.out.println("Adding Host");
 				obj.goHome(driverC);
@@ -83,7 +83,7 @@ import com.avaya.sdmclient.vm.VM;
 			
 			obj.errorBox(driverC,obj.checkError(driverC));
 
-			obj.boundListSelect(driverC, "data", obj.selBoundListID(driverC));
+			obj.boundListSelect(driverC, "data", obj.selBoundList(driverC));
 			Thread.sleep(1500);
 			
 			/*obj.comboClick(driver, "combobox-1235","SMGR_DEFAULT_LOCAL");
@@ -92,12 +92,12 @@ import com.avaya.sdmclient.vm.VM;
 			obj.comboClick(driver, "combobox-1238", VMName);
 			Thread.sleep(2500);*/
 			
-			obj.comboBoxClickAndSelectValue(driverC, "Select Software Library:","SMGR_DEFAULT_LOCAL");
+			obj.comboClick(driverC, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
 			
 			//obj.maintainedList(driver, obj.comboID(driver, "Select OVAs:"));
 			
-			obj.comboBoxClickAndSelectValue(driverC, "Select OVAs:", VMName);
+			obj.comboClick(driverC, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			
 			/*driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
@@ -118,10 +118,8 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.deployButtonClickForVM(driverC);
 			Thread.sleep(450);
-			obj.findAcceptButtonForEULA(driverC,"EulaAgreementWindow");
-
+			obj.findButton(driverC);
 			logClass.info("Accepted EULA");
-
 			//Adding Code
 			Thread.sleep(4500);
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
@@ -132,7 +130,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			obj.chooseLink(driverC, "test"+shortVMName,"Status Details");
+			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 			logClass.info("Checking Status Details");
 			
 			obj.waitForPresenceOfElement(driverC, By.id(locator.getProperty("vmDeployStatus")));
@@ -140,7 +138,7 @@ import com.avaya.sdmclient.vm.VM;
 			driverC.switchTo().activeElement();
 			System.out.println(driverC.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driverC, 1500, "Completed","test"+shortVMName));
+			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driverC, 1500, "Completed","test"+shortVMName,"VM","Status Details"));
 			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driverC);
@@ -178,7 +176,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.editVM(driverC,IP,"test"+shortVMName+"edited");
 
-			obj.checkFocusOfElement(driverC, By.xpath(locator.getProperty("VMEditSave")));
+			obj.checkFocus(driverC, By.xpath(locator.getProperty("VMEditSave")));
 			driverC.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(driverC, obj.checkError(driverC));
@@ -188,7 +186,7 @@ import com.avaya.sdmclient.vm.VM;
 
 		@Test(description="Stoping VM to given Location and Host",priority=10)
 		@Parameters({"IP", "VMName"})
-		public void StopVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void StopVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
 			Thread.sleep(5000);
 			logClass.startTestCase("Stop VM to given Location and Host");
@@ -221,7 +219,7 @@ import com.avaya.sdmclient.vm.VM;
 
 		@Test(description="Starting VM to given Location and Host",priority=11)
 		@Parameters({"IP", "VMName"})
-		public void StartVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void StartVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
 			Thread.sleep(5000);
 			logClass.startTestCase("Start VM to given Location and Host");
@@ -318,14 +316,14 @@ import com.avaya.sdmclient.vm.VM;
 			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
-			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 8, true,10);
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 8, true,10,"Status Details");
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
 			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
 			
-			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10);		
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10,"Status Details");		
 			
 			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
@@ -334,7 +332,7 @@ import com.avaya.sdmclient.vm.VM;
 
 		@Test(description="Restarting VM to given Location and Host",priority=13)
 		@Parameters({"IP", "VMName"})
-		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException{
+		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
 			logClass.startTestCase("Restart VM to given Location and Host");
 
@@ -364,7 +362,7 @@ import com.avaya.sdmclient.vm.VM;
 
 		@Test(description="Deleting VM to given Location and Host",priority=14)
 		@Parameters({"IP", "VMName"})
-		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException{
+		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
 			logClass.startTestCase("Delete VM to given Location and Host");
 

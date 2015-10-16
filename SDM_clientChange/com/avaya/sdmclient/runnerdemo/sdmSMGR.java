@@ -300,7 +300,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 			//obj.goHome(driver);
 			obj.loginToSite(driver);
 
-			if(obj.checkLocationOrHost(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
+			if(obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.txt", "AddHostHostName:"))){
 				//addHost();
 				System.out.println("Adding Host");
 				obj.goHome(driver);
@@ -377,7 +377,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 			driver.switchTo().activeElement();
 			System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed",""));
+			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "Completed","","VM","Status Details"));
 			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driver);
@@ -425,7 +425,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 		@Test(description="Stoping VM to given Location and Host",priority=10)
 
-		public void StopVM() throws InterruptedException, IOException{
+		public void StopVM() throws InterruptedException, IOException, MyException{
 
 			Thread.sleep(5000);
 			logClass.startTestCase("Stop VM to given Location and Host");
@@ -453,7 +453,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 		@Test(description="Starting VM to given Location and Host",priority=11)
 
-		public void StartVM() throws InterruptedException, IOException{
+		public void StartVM() throws InterruptedException, IOException, MyException{
 
 			Thread.sleep(5000);
 			logClass.startTestCase("Start VM to given Location and Host");
@@ -479,7 +479,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 		@Test(description="Refreshing VM to given Location and Host",priority=12)
 
-		public void RefreshVM() throws InterruptedException, IOException{
+		public void RefreshVM() throws InterruptedException, IOException, MyException{
 
 			Thread.sleep(5000);
 			logClass.startTestCase("Refresh VM to given Location and Host");
@@ -547,7 +547,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 		@Test(description="Restarting VM to given Location and Host",priority=13)
 
-		public void RestartVM() throws IOException, InterruptedException{
+		public void RestartVM() throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Restart VM to given Location and Host");
 
@@ -572,7 +572,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 		@Test(description="Deleting VM to given Location and Host",priority=14)
 
-		public void DeleteVM() throws IOException, InterruptedException{
+		public void DeleteVM() throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Delete VM to given Location and Host");
 
