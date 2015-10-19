@@ -5,8 +5,8 @@
     <classes>
       <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
         <methods>
-          <include name="AVPHostOperations"/>
-          <include name="DeleteHost"/>
+          <include name="DeleteVM"/>
+          <include name="startNewThread"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->

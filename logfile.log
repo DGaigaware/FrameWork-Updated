@@ -22062,3 +22062,385 @@ null (vmId = 10100):: Unable to find vm: testEDP
 2015-10-16 15:50:15,631 INFO  [Logger] *************************Started Testing****************************** 
 2015-10-16 15:50:15,631 INFO  [Logger]                              Deleting Host to given Location                             
 2015-10-16 15:50:31,121 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:05:35,015 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:05:46,956 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:09:59,699 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:10:11,597 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:12:10,110 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:12:22,012 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:15:46,635 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:15:58,516 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:16:08,656 ERROR [Logger] Something went wrong :( 
+2015-10-19 18:16:08,656 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 18:22:15,612 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:22:15,613 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 18:22:18,760 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:22:31,532 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:22:35,636 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-19 18:22:38,713 ERROR [Logger] Error occurred: Either VCenter is null or VCenter does not exist .. 
+2015-10-19 18:22:40,168 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,187 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,212 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,232 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,252 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,273 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,293 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,309 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,324 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,342 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,359 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:22:40,379 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:22:40,379 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 18:22:43,410 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:22:56,165 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:23:04,163 INFO  [Logger] Clicked on - Add new VM 
+2015-10-19 18:23:05,145 INFO  [Logger] Given Name 
+2015-10-19 18:24:25,268 INFO  [Logger] Selecting NetWorks 
+2015-10-19 18:24:28,110 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-19 18:24:28,111 INFO  [Logger] Accepted EULA 
+2015-10-19 18:24:48,973 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 18:24:48,974 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-19 18:24:48,975 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:24:48,975 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 18:24:52,405 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:25:04,328 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:25:12,144 INFO  [Logger] Checking Status Details 
+2015-10-19 18:25:12,499 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 18:25:13,037 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-19 18:25:13,037 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-19 18:25:13,056 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-19 18:25:13,056 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-19 18:25:13,056 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-19 18:25:13,059 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-19 18:25:24,342 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-19 18:26:02,741 INFO  [Logger] Checking Status Details 
+2015-10-19 18:32:05,401 INFO  [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment Completed 
+2015-10-19 18:32:11,951 INFO  [Logger] Completed adding VM SM with IP 148.147.162.221 
+2015-10-19 18:32:11,952 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 18:32:11,952 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:32:11,952 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 18:32:27,419 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:32:37,011 INFO  [Logger] Clicked on - Edit VM 
+2015-10-19 18:32:52,478 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-19 18:32:57,479 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:32:57,479 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 18:33:12,990 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:33:35,938 ERROR [Logger] Something went wrong :( 
+2015-10-19 18:33:35,939 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 18:34:01,347 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-19 18:35:06,345 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:35:06,345 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 18:35:21,803 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:35:43,257 ERROR [Logger] Something went wrong :( 
+2015-10-19 18:35:43,257 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 18:36:08,642 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-19 18:37:13,640 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:37:13,640 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 18:37:29,157 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:38:19,113 INFO  [Logger] Task Completed Successfully.. 
+2015-10-19 18:38:19,285 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-10-19 18:39:02,507 INFO  [Logger] Task Completed Successfully.. 
+2015-10-19 18:39:02,657 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh :;VM Refresh Completed :;VM Refresh Completed 
+2015-10-19 18:39:05,312 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-19 18:39:05,313 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:39:05,313 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 18:39:20,808 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:39:41,920 ERROR [Logger] Something went wrong :( 
+2015-10-19 18:39:41,920 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 18:40:07,267 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-19 18:41:47,262 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:41:47,262 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 18:42:27,458 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 18:42:27,459 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-19 18:42:27,461 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:42:27,461 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 18:42:30,836 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:42:43,525 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:42:50,534 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 18:42:50,940 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-19 18:42:50,940 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-19 18:42:50,942 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-19 18:42:50,942 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-19 18:42:50,942 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-19 18:42:50,944 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-19 18:42:54,564 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-19 18:43:06,356 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:06,356 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 18:43:09,841 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:43:21,814 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:43:35,933 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:35,933 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 18:43:42,935 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:42,935 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 18:43:49,937 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:49,937 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 18:43:56,939 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:56,939 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 18:43:58,941 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:43:58,941 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 18:44:00,943 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:44:00,943 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 18:44:12,824 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 18:44:12,824 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 18:44:12,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:44:12,826 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 18:44:14,693 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:44:15,172 INFO  [Logger] InnerThread: Test Started 
+2015-10-19 18:44:15,172 INFO  [Logger] Thread-5 29 Start 
+2015-10-19 18:50:42,665 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:50:42,666 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 18:50:44,320 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:50:44,463 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:50:44,463 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 18:50:47,938 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:51:00,773 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:51:10,369 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-10-19 18:51:10,523 INFO  [Logger] Confirmation:  
+2015-10-19 18:51:22,168 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-19 18:51:25,567 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-10-19 18:51:39,680 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 18:51:39,680 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-10-19 18:51:39,682 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:51:39,682 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 18:51:43,219 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:54:11,241 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:54:11,241 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 18:54:16,372 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:54:16,373 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 18:54:19,890 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:54:31,791 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:54:35,728 INFO  [Logger] Adding new Location 
+2015-10-19 18:54:38,525 INFO  [Logger] Saved New Location 
+2015-10-19 18:54:39,491 INFO  [Logger] Adding new Location 
+2015-10-19 18:54:42,936 INFO  [Logger] Saved New Location 
+2015-10-19 18:54:43,386 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 18:54:43,387 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:54:43,387 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-19 18:54:58,937 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:55:06,567 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-19 18:55:18,246 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-19 18:55:18,366 INFO  [Logger] Saved Location 
+2015-10-19 18:55:18,366 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-19 18:55:18,366 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:55:18,367 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-19 18:55:45,265 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:55:45,265 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-19 18:55:57,924 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:55:57,924 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-19 18:56:12,295 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,322 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,345 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,365 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,387 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,413 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,427 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,441 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,457 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,480 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,498 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 18:56:12,515 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:12,515 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 18:56:25,183 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 18:56:25,184 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:25,184 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 18:56:38,609 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:38,609 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 18:56:45,621 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:45,621 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 18:56:52,628 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:52,628 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 18:56:54,630 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:54,630 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 18:56:56,632 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:56:56,632 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 18:57:06,185 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 18:57:06,186 INFO  [Logger] InnerThread: Choosen OVA AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-10-19 18:57:06,188 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:57:06,188 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 18:59:03,241 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:59:03,242 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 18:59:06,718 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:59:18,601 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:59:22,969 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-19 18:59:25,741 ERROR [Logger] Error occurred: Either VCenter is null or VCenter does not exist .. 
+2015-10-19 18:59:25,746 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:59:25,746 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 18:59:29,067 INFO  [Logger] Logged in Successfully 
+2015-10-19 18:59:40,966 INFO  [Logger] Clicked on VM management 
+2015-10-19 18:59:44,749 INFO  [Logger] Adding new Location 
+2015-10-19 18:59:47,499 INFO  [Logger] Saved New Location 
+2015-10-19 18:59:48,654 INFO  [Logger] Adding new Location 
+2015-10-19 18:59:51,495 INFO  [Logger] Saved New Location 
+2015-10-19 18:59:51,945 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 18:59:51,946 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 18:59:51,946 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-19 19:00:07,547 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:00:16,249 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-19 19:00:27,920 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-19 19:00:28,040 INFO  [Logger] Saved Location 
+2015-10-19 19:00:28,041 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-19 19:00:28,042 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:00:28,042 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-19 19:00:43,633 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:00:48,340 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-19 19:00:48,486 INFO  [Logger] Confirmation:  
+2015-10-19 19:00:49,480 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-19 19:00:49,481 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:00:49,481 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-19 19:01:02,417 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:02,417 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-19 19:01:16,828 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,849 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,868 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,888 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,906 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,925 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,941 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,956 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:16,972 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:17,000 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:17,014 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:01:17,029 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:17,029 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 19:01:29,773 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 19:01:29,773 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:29,773 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 19:01:40,686 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:40,686 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 19:01:47,687 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:47,687 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 19:01:54,689 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:54,689 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 19:01:56,691 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:56,691 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 19:01:58,698 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:01:58,699 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 19:02:10,736 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 19:02:10,736 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-10-19 19:02:10,738 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:02:10,738 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 19:02:13,087 INFO  [Logger] Logged in Successfully 
+2015-10-19 19:03:39,271 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:03:39,272 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 19:03:43,212 INFO  [Logger] Logged in Successfully 
+2015-10-19 19:03:48,763 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:03:48,763 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 19:03:52,218 INFO  [Logger] Logged in Successfully 
+2015-10-19 19:04:04,118 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:04:08,114 INFO  [Logger] Adding new Location 
+2015-10-19 19:04:11,286 INFO  [Logger] Saved New Location 
+2015-10-19 19:04:12,334 INFO  [Logger] Adding new Location 
+2015-10-19 19:04:15,316 INFO  [Logger] Saved New Location 
+2015-10-19 19:04:15,766 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 19:04:15,767 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:04:15,767 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-19 19:04:31,319 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:04:39,362 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-19 19:04:51,065 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-19 19:04:51,186 INFO  [Logger] Saved Location 
+2015-10-19 19:04:51,186 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-19 19:04:51,192 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:04:51,192 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-19 19:05:06,733 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:05:11,512 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-19 19:05:11,654 INFO  [Logger] Confirmation:  
+2015-10-19 19:05:12,706 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-19 19:05:12,707 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:05:12,707 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-19 19:05:28,433 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:05:34,756 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:05:34,756 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 19:05:37,720 INFO  [Logger] Logged in Successfully 
+2015-10-19 19:05:49,771 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:05:53,317 INFO  [Logger] Adding new Location 
+2015-10-19 19:05:55,995 INFO  [Logger] Saved New Location 
+2015-10-19 19:06:08,238 INFO  [Logger] Adding new Location 
+2015-10-19 19:06:11,073 INFO  [Logger] Saved New Location 
+2015-10-19 19:06:23,110 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 19:06:23,110 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-10-19 19:06:38,640 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:06:38,640 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-10-19 19:06:44,519 INFO  [Logger] In 'Host' Tab 
+2015-10-19 19:06:44,905 INFO  [Logger] Adding new Host 
+2015-10-19 19:06:46,916 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-19 19:06:58,547 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-19 19:07:02,751 INFO  [Logger] In 'Host' Tab 
+2015-10-19 19:07:07,111 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 19:07:07,484 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 19:07:10,045 INFO  [Logger] In 'Host' Tab 
+2015-10-19 19:07:10,334 INFO  [Logger] Adding new Host 
+2015-10-19 19:07:23,601 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-10-19 19:07:30,875 INFO  [Logger] In 'Host' Tab 
+2015-10-19 19:07:35,383 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 19:07:35,758 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 19:07:36,130 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-19 19:07:36,131 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:07:36,131 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-19 19:07:51,721 INFO  [Logger] Clicked on VM management 
+2015-10-19 19:07:58,499 INFO  [Logger] In 'Host' Tab 
+2015-10-19 19:08:16,437 INFO  [Logger] *************************End of test caseEdited Host Successfully******************************
+
+ 
+2015-10-19 19:08:17,023 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,044 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,062 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,081 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,099 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,119 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,132 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,145 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,161 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,178 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,193 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 19:08:17,208 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:08:17,208 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 19:08:29,858 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 19:08:29,859 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:08:29,859 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 19:08:48,239 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:08:48,239 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 19:09:06,418 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:09:06,418 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 19:09:20,867 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:09:20,867 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 19:09:22,869 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:09:22,869 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 19:09:24,871 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:09:24,871 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 19:09:38,026 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 19:09:38,027 INFO  [Logger] InnerThread: Choosen OVA MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova 
+2015-10-19 19:09:38,029 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 19:09:38,029 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 19:09:41,386 INFO  [Logger] Logged in Successfully 
