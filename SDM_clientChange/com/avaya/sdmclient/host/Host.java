@@ -33,7 +33,7 @@ public class Host {
 	// TODO Auto-generated method stub
 
 	@Test(description="Adding Host to given Location")
-	public void addHost() throws IOException, InterruptedException{
+	public void addHost() throws IOException, InterruptedException, MyException{
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
@@ -120,7 +120,7 @@ driver.findElement(By.linkText(locator.getProperty(linkText)).click();*/
 
 	@Test(description="Deleting Host to given Location",priority=2)
 
-	public void _DeleteHost() throws IOException, InterruptedException{
+	public void _DeleteHost() throws IOException, InterruptedException, MyException{
 		logClass.startTestCase("Deleting Host to given Location");
 
 		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");

@@ -74,7 +74,7 @@ public class Location {
 
 
 	@Test(description="Editing Location",priority=1)
-	public void _EditLocation() throws IOException, InterruptedException{
+	public void _EditLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Edit Location on SDM");
 
@@ -113,7 +113,7 @@ public class Location {
 
 
 	@Test(description="Deleting Location",priority=2)
-	public void _DeleteLocation() throws IOException, InterruptedException{
+	public void _DeleteLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Delete Location on SDM");
 

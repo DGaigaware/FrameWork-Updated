@@ -134,7 +134,7 @@ public class vCenter {
 	}
 
 	@Test(description="Deleting Host to given Location",priority=2)
-	public void _DeletevCenter() throws IOException, InterruptedException{
+	public void _DeletevCenter() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Deleting vCenter to given Location");
 

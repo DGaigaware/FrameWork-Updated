@@ -339,7 +339,7 @@ public class Settings {
 		WebElement temp = driver.findElement(By.id(locator.getProperty("VCenterInGrid")));
 		List<WebElement> tempcells = temp.findElements(By.xpath((locator.getProperty("Column"))));
 
-		if(checkPresenceOfLocationOrHostOrVM(driver, VCenter) && VCenter !=null)
+		if(VCenter !=null)
 		{
 			for(WebElement e : tempcells)
 			{
@@ -1467,20 +1467,26 @@ public class Settings {
 		}
 	}
 	
-	public void clickMapvCenter(WebDriver driver){
+	public void clickLinksOnLeftMenu(WebDriver driver,String linkText) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"menuitem\"]');return nl;";
 		
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
 		System.out.println(elem2.size());
 		
-		for(WebElement e : elem2){
-			if(e.getText().equals("Map vCenter"))
-			{
-				//System.out.println("Changing: "+e.getText());
-				e.click();
-				break;
+		if(linkText!=null && !linkText.isEmpty())
+		{
+			for(WebElement e : elem2){
+				if(e.getText().equals(linkText))
+				{
+					//System.out.println("Changing: "+e.getText());
+					e.click();
+					break;
+				}
 			}
+		}
+		else{
+			throw new MyException("Please give valid input String.. ");
 		}
 	}
 	
@@ -1794,5 +1800,13 @@ public class Settings {
 		}
 		return returnEle;
 	}
+	
+	public void autoReloadVMMgmtTree(WebDriver driver) throws InterruptedException, IOException{
+		//autoLoadCheckBox-inputEl
+		driver.findElement(By.id("autoLoadCheckBox-inputEl")).click();
+		Thread.sleep(1000);
+		confirmDialogBox(driver);
+	}
+
 }
 

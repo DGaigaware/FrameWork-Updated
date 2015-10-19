@@ -33,7 +33,7 @@ public class sdmSMGRConcurrent {
 			locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 		}
 		
-	/*	
+	
 		@Test(description="Adding Location",priority=0)
 		public void AddLocation() throws IOException, InterruptedException, MyException {
 
@@ -96,7 +96,7 @@ public class sdmSMGRConcurrent {
 			//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 			drive.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 
-			Thread.sleep(450);
+			Thread.sleep(1450);
 			obj.confirmDialogBox(drive);
 
 			logClass.info("Saved Location");
@@ -124,21 +124,21 @@ public class sdmSMGRConcurrent {
 
 			logClass.endTestCase("Deleted Location");
 		}
-*/
+
 		
-	/*	@Test(description="Adding Host to given Location",priority=3)
+		@Test(description="Adding Host to given Location",priority=3)
 		public void AddHost() throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Adding Host to given Location");
 
-			//obj.goHome(drive);
-			obj.loginToSite(drive);
+			obj.goHome(drive);
+			//obj.loginToSite(drive);
 			
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:"))){
 				drive.navigate().refresh();
 				obj.logOut(drive);
-				//AddLocation();
-				System.out.println("Adding Location");
+				AddLocation();
+				System.out.println("Adding Location...");
 				logClass.info("Location was not there. Adding it and pausing current thread.");
 				obj.goHome(drive);
 				//obj.loginToSite(driver);
@@ -216,15 +216,15 @@ public class sdmSMGRConcurrent {
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 
 			logClass.endTestCase("Added Host Successfully");
-		}*/
+		}
 
-		/*@Test(description="Editing Host to given Location",priority=4)
+		@Test(description="Editing Host to given Location",priority=4)
 		public void EditHost() throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Editing Host to given Location");
 
-			//obj.goHome(drive);
-			obj.loginToSite(drive);
+			obj.goHome(drive);
+			//obj.loginToSite(drive);
 
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 			obj.chooseTab(drive, "Hosts");
@@ -262,69 +262,69 @@ public class sdmSMGRConcurrent {
 
 			logClass.endTestCase("Edited Host Successfully");
 
-		}*/
-		
-		@Test(description="Operations to check is the host is AVP or not and perform operations for AVP Host",priority=2)
-
-		public void AVPHostOperations() throws IOException, InterruptedException, MyException{
-			
-			logClass.startTestCase("Checking if the host is AVP or not... (ANd performing operations for the same)");
-
-			obj.loginToSite(drive);
-			//obj.goHome(drive);
-
-			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
-			obj.chooseTab(drive, "Hosts");
-			logClass.info("In 'Host' Tab");
-
-			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHost1HostName:"));
-			
-			drive.findElement(By.id("chgNetwkParamBtn")).click();
-			if(obj.checkError(drive)){
-				obj.errorBox(drive, obj.checkError(drive));
-			}
-			else{
-				System.out.println("AVP host...");
-				System.out.println("Changing network parameters..");
-				obj.changeNetworkParamsHost(drive,"input.properties","ChangeNetWorkParams");
-				obj.findButtonByName(drive, "", "Change Gateway").click();
-				drive.findElement(By.id("changenetworkgateway-inputEl")).clear();
-				drive.findElement(By.id("changenetworkgateway-inputEl")).sendKeys("148.147.162.1");
-				drive.findElement(By.id("saveNetworkParam-btnIconEl")).click();
-				obj.errorBox(drive, obj.checkError(drive));
-				Thread.sleep(4500);
-				obj.confirmDialogBox(drive);
-			}
-			
-			drive.findElement(By.id("chgPassBtn")).click();
-			if(obj.checkError(drive)){
-				obj.errorBox(drive, obj.checkError(drive));
-			}
-			else{
-				System.out.println("AVP host...");
-				System.out.println("Changing password..");
-				obj.changePassWordHost(drive,"input.properties","UpdatePwdHost");
-			}
-
-			drive.findElement(By.id("updateEsxiHost")).click();
-			if(obj.checkError(drive)){
-				obj.errorBox(drive, obj.checkError(drive));
-			}
-			else{
-				System.out.println("AVP host...");
-				System.out.println("Updating AVP Host..");
-				obj.updateESXiHost(drive,"input.properties","UpdateHost");
-			}
 		}
-
-		@Test(description="Deleting Host to given Location",priority=5)
-
+		
+//		@Test(description="Operations to check is the host is AVP or not and perform operations for AVP Host",priority=2)
+//
+//		public void AVPHostOperations() throws IOException, InterruptedException, MyException{
+//			
+//			logClass.startTestCase("Checking if the host is AVP or not... (ANd performing operations for the same)");
+//
+//			obj.loginToSite(drive);
+//			//obj.goHome(drive);
+//
+//			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
+//			obj.chooseTab(drive, "Hosts");
+//			logClass.info("In 'Host' Tab");
+//
+//			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHost1HostName:"));
+//			
+//			drive.findElement(By.id("chgNetwkParamBtn")).click();
+//			if(obj.checkError(drive)){
+//				obj.errorBox(drive, obj.checkError(drive));
+//			}
+//			else{
+//				System.out.println("AVP host...");
+//				System.out.println("Changing network parameters..");
+//				obj.changeNetworkParamsHost(drive,"input.properties","ChangeNetWorkParams");
+//				obj.findButtonByName(drive, "host_params", "Change Gateway").click();
+//				drive.findElement(By.id("changenetworkgateway-inputEl")).clear();
+//				drive.findElement(By.id("changenetworkgateway-inputEl")).sendKeys("148.147.162.1");
+//				drive.findElement(By.id("saveNetworkParam-btnIconEl")).click();
+//				obj.errorBox(drive, obj.checkError(drive));
+//				Thread.sleep(4500);
+//				obj.confirmDialogBox(drive);
+//			}
+//			
+//			drive.findElement(By.id("chgPassBtn")).click();
+//			if(obj.checkError(drive)){
+//				obj.errorBox(drive, obj.checkError(drive));
+//			}
+//			else{
+//				System.out.println("AVP host...");
+//				System.out.println("Changing password..");
+//				obj.changePassWordHost(drive,"input.properties","UpdatePwdHost");
+//			}
+//
+//			drive.findElement(By.id("updateEsxiHost")).click();
+//			if(obj.checkError(drive)){
+//				obj.errorBox(drive, obj.checkError(drive));
+//			}
+//			else{
+//				System.out.println("AVP host...");
+//				System.out.println("Updating AVP Host..");
+//				obj.updateESXiHost(drive,"input.properties","UpdateHost");
+//			}
+//		}
+//
+//		@Test(description="Deleting Host to given Location",priority=5)
+//
 		public void DeleteHost() throws IOException, InterruptedException, MyException{
 			logClass.startTestCase("Deleting Host to given Location");
 
 			obj.goHome(drive);
 
-			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationCity:"));
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocation1Name:"));
 
 			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
@@ -337,7 +337,7 @@ public class sdmSMGRConcurrent {
 			logClass.endTestCase("Deleted Host");
 		}
 
-		/*@Test(description="Adding VM to given Location and Host",priority=8)
+		@Test(description="Adding VM to given Location and Host",priority=8)
 		@Parameters({"IP", "VMName"})
 		public void AddVM(String IP,String VMName) throws Exception {
 
@@ -349,14 +349,14 @@ public class sdmSMGRConcurrent {
 			boolean _Check;
 
 			JavascriptExecutor js = (JavascriptExecutor)drive;
-			js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
+			//js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 
 			logClass.startTestCase("Adding VM to given Location and Host");
 
-			//obj.goHome(driver);
-			obj.loginToSite(drive);
+			obj.goHome(drive);
+			//obj.loginToSite(drive);
 
-			if(!obj.checkLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"))){
+			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddHostHostName:"))){
 				//AddHost();
 				System.out.println("Adding Host");
 				obj.goHome(drive);
@@ -445,13 +445,10 @@ public class sdmSMGRConcurrent {
 					 try {
 						ob.runThread(driver1);
 					} catch (ParserConfigurationException | SAXException | IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }
@@ -468,27 +465,29 @@ public class sdmSMGRConcurrent {
 			
 			obj.findVMForHost(drive, "test"+shortVMName);
 			Thread.sleep(4500);
-
-			obj.chooseLink(drive, "test"+shortVMName);
-			logClass.info("Checking Status Details");
-
-			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
-			drive.switchTo().activeElement();
-			System.out.println(drive.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
+			obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")), shortVMName, 6, true, 10, "Status Details");
 
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 1500, "Completed","test"+shortVMName));
-			Thread.sleep(1000);
-			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
-			obj.closeWindow(drive);
+//			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
+//			logClass.info("Checking Status Details");
+//
+//			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
+//			
+//			drive.switchTo().activeElement();
+//			System.out.println(drive.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
+//
+//			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 1500, "Completed","test"+shortVMName,"VM","Status Details"));
+//			Thread.sleep(1000);
+//			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
+//			obj.closeWindow(drive);
 			Thread.sleep(5000);
 			System.out.println("Completed adding VM "+shortVMName+" with IP "+IP);
 			logClass.info("Completed adding VM "+shortVMName+" with IP "+IP);
 			
-		}*/
+		}
 
 	
-	/*	//@Test(dependsOnMethods={"AddVM"},description="Editing VM to given Location and Host",priority=9)
+		//@Test(dependsOnMethods={"AddVM"},description="Editing VM to given Location and Host",priority=9)
 		@Test(description="Editing VM to given Location and Host",priority=9)
 		@Parameters({"IP", "VMName"})
 		public void EditVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
@@ -523,13 +522,13 @@ public class sdmSMGRConcurrent {
 
 			obj.errorBox(drive, obj.checkError(drive));
 			logClass.endTestCase("Edited VM Successfully");
-		}*/
+		}
 
-/*
+
 		//@Test(dependsOnMethods={"AddVM"},description="Stoping VM to given Location and Host",priority=10)
 		@Test(description="Stoping VM to given Location and Host",priority=10)
 		@Parameters({"IP", "VMName"})
-		public void StopVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void StopVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 
 			String shortVMName = obj.shortVMName(VMName);
 			
@@ -559,12 +558,11 @@ public class sdmSMGRConcurrent {
 			logClass.endTestCase("Stopped VM successfully");
 			Thread.sleep(60000);
 		}
-*/
-/*
+
 		//@Test(dependsOnMethods={"AddVM"},description="Starting VM to given Location and Host",priority=11)
 		@Test(description="Starting VM to given Location and Host",priority=11)
 		@Parameters({"IP", "VMName"})
-		public void StartVM(String IP,String VMName) throws InterruptedException, IOException{
+		public void StartVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 
 			String shortVMName = obj.shortVMName(VMName);
 			
@@ -593,8 +591,8 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(60000);
 		}
 
-*/
-/*		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
+
+		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
 		@Test(description="Refreshing VM to given Location and Host",priority=12)
 		@Parameters({"IP", "VMName"})
 		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
@@ -668,24 +666,24 @@ public class sdmSMGRConcurrent {
 			drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
-			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10);
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,"Status Details");
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
 			if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
 			
-			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10);		
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,"Status Details");		
 			
 			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
-		}*/
+		}
 
 
-		/*//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
+		//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
 		@Test(description="Restarting VM to given Location and Host",priority=13)
 		@Parameters({"IP", "VMName"})
-		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException{
+		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 
 			String shortVMName = obj.shortVMName(VMName);
 			
@@ -703,30 +701,30 @@ public class sdmSMGRConcurrent {
 
 			drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 
-			obj.confirmDialogBox(drive);
+			Thread.sleep(1500);
+			//obj.confirmDialogBox(drive);
 			
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
 			logClass.endTestCase("Restarted VM successfully");
 			Thread.sleep(100000);
-		}*/
+		}
 
-		/*//@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
+		//@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
 		@Test(description="Deleting VM to given Location and Host",priority=14)
 		@Parameters({"IP", "VMName"})
-		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException{
+		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Delete VM to given Location and Host");
 
 			String shortVMName = obj.shortVMName(VMName);
 			
-			obj.goHome(drive);
+			//obj.goHome(drive);
 
-			//obj.loginToSite(driver);
+			obj.loginToSite(drive);
 			
-			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "HostName"));
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
@@ -767,10 +765,10 @@ public class sdmSMGRConcurrent {
 //			t.join();
 //		
 //			System.out.println("Completed All threads");
-			}*/
+			}
 		
 		
-		/*@Test(description="Starting New Thread",priority=100)
+		@Test(description="Starting New Thread",priority=100)
 		@Parameters({"IP", "VMName"})
 		public void startNewThread(String IP,String VMName) throws InterruptedException{
 			//Thread.sleep(4500);
@@ -796,7 +794,7 @@ public class sdmSMGRConcurrent {
 			t.join();
 			
 			System.out.println("Completed All Threads.");
-		}*/
+		}
 		
 		
 }

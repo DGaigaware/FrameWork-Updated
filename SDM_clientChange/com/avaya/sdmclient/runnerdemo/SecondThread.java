@@ -54,7 +54,7 @@ import com.avaya.sdmclient.vm.VM;
 			//obj.goHome(driver);
 			obj.loginToSite(driverC);
 
-			if(obj.checkPresenceOfLocationOrHostOrVM(driverC, obj.readFromFile("input.properties", "AddHostHostName:"))){
+			if(!obj.checkPresenceOfLocationOrHostOrVM(driverC, obj.readFromFile("input.properties", "AddHostHostName:"))){
 				//addHost1();
 				System.out.println("Adding Host");
 				obj.goHome(driverC);
@@ -130,16 +130,18 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
-			logClass.info("Checking Status Details");
 			
-			obj.waitForPresenceOfElement(driverC, By.id(locator.getProperty("vmDeployStatus")));
-			
-			driverC.switchTo().activeElement();
-			System.out.println(driverC.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
-
-			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driverC, 1500, "Completed","test"+shortVMName,"VM","Status Details"));
-			Thread.sleep(1000);
+			obj.checkSuccessOrFailure(driverC, By.id(locator.getProperty("vmDeployStatus")), shortVMName, 6, true, 250, "Status Details");
+//			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
+//			logClass.info("Checking Status Details");
+//			
+//			obj.waitForPresenceOfElement(driverC, By.id(locator.getProperty("vmDeployStatus")));
+//			
+//			driverC.switchTo().activeElement();
+//			System.out.println(driverC.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
+//
+//			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driverC, 1500, "Completed","test"+shortVMName,"VM","Status Details"));
+//			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 			obj.closeWindow(driverC);
 			Thread.sleep(5000);
@@ -276,38 +278,38 @@ import com.avaya.sdmclient.vm.VM;
 			
 			driverC.switchTo().activeElement();
 
-			/*driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
-
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
-
-			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
-			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
-			Thread.sleep(250);
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-
-			Thread.sleep(5000);
-			
-			obj.chooseLink(driverC, "test"+shortVMName);
-			//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-			obj.StatusCheck(driverC, "VM Trust Establishment Completed",50);
-
-			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
-			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
-			Thread.sleep(1500);
-			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
-			//Added
-			Thread.sleep(5000);
-			
-			obj.chooseLink(driverC, "test"+shortVMName);
-			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driverC, 50, "VM Refresh Completed"));
-			obj.StatusCheck(driverC, "VM Refresh Completed", 20);
-			// Uptill Now
-			Thread.sleep(2500);
-			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
-			logClass.endTestCase("VM refreshed Successfully");*/
+//			/*driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
+//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
+//
+//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
+//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
+//
+//			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
+//			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
+//			Thread.sleep(250);
+//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
+//
+//			Thread.sleep(5000);
+//			
+//			obj.chooseLink(driverC, "test"+shortVMName);
+//			//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
+//			obj.StatusCheck(driverC, "VM Trust Establishment Completed",50);
+//
+//			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
+//			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
+//			Thread.sleep(1500);
+//			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
+//				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+//			//Added
+//			Thread.sleep(5000);
+//			
+//			obj.chooseLink(driverC, "test"+shortVMName);
+//			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driverC, 50, "VM Refresh Completed"));
+//			obj.StatusCheck(driverC, "VM Refresh Completed", 20);
+//			// Uptill Now
+//			Thread.sleep(2500);
+//			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
+//			logClass.endTestCase("VM refreshed Successfully");*/
 			
 			obj.refreshVMValues(driverC, shortVMName, "inputsm.properties");
 			Thread.sleep(750);
@@ -398,10 +400,8 @@ import com.avaya.sdmclient.vm.VM;
 					 try {
 						ob.runThread(driver2);
 					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				 }

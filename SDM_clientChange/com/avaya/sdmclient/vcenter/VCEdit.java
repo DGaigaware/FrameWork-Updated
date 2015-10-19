@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.extraResources.MyException;
 
 public class VCEdit {
 	static Properties locator = null;
@@ -186,7 +187,7 @@ public class VCEdit {
 	//public static void main(String[] args) throws InterruptedException, IOException, MyException {
 
 	@Test(description="Editing vCenter",priority=0)
-	public static void editVC() throws IOException, InterruptedException{
+	public static void editVC() throws IOException, InterruptedException, MyException{
 		Settings obj = new Settings();
 		setup();
 		
@@ -206,7 +207,7 @@ public class VCEdit {
 		obj.loginToSite(driver);
 		Thread.sleep(2500);
 		
-		obj.clickMapvCenter(driver);
+		obj.clickLinksOnLeftMenu(driver,"Map vCenter");
 		logClass.info("Clicked on 'Map vCenter' ");
 		Thread.sleep(2500);
 		
@@ -222,7 +223,7 @@ public class VCEdit {
 		driver.findElement(By.id(locator.getProperty("RefreshTree"))).click();
 		Thread.sleep(11500);
 		
-		obj.clickMapvCenter(driver);
+		obj.clickLinksOnLeftMenu(driver,"Map vCenter");
 		logClass.info("Clicked on 'Map vCenter' ");
 		Thread.sleep(2500);
 		
@@ -238,7 +239,7 @@ public class VCEdit {
 		driver.findElement(By.id(locator.getProperty("RefreshTree"))).click();
 		Thread.sleep(11500);
 		
-		obj.clickMapvCenter(driver);
+		obj.clickLinksOnLeftMenu(driver,"Map vCenter");
 		logClass.info("Clicked on 'Map vCenter' ");
 		Thread.sleep(2500);
 		

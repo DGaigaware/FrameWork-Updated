@@ -80,7 +80,7 @@ public class VM {
 	}
 
 	@Test(description="Adding Host to given Location",priority=1)
-	public void addHost() throws IOException, InterruptedException{
+	public void addHost() throws IOException, InterruptedException, MyException{
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
@@ -241,7 +241,7 @@ public class VM {
 		driver.switchTo().activeElement();
 		System.out.println(driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).getText());
 
-		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed",""));
+		System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driver, 1500, "VM Deployment Completed","","VM","Status Details"));
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);
 		obj.closeWindow(driver);
@@ -288,7 +288,7 @@ public class VM {
 
 	@Test(description="Stoping VM to given Location and Host",priority=4)
 
-	public void StopVM() throws InterruptedException, IOException{
+	public void StopVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Stop VM to given Location and Host");
@@ -314,7 +314,7 @@ public class VM {
 
 	@Test(description="Starting VM to given Location and Host",priority=5)
 
-	public void StartVM() throws InterruptedException, IOException{
+	public void StartVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Start VM to given Location and Host");
@@ -339,7 +339,7 @@ public class VM {
 
 	@Test(description="Refreshing VM to given Location and Host",priority=6)
 
-	public void RefreshVM() throws InterruptedException, IOException{
+	public void RefreshVM() throws InterruptedException, IOException, MyException{
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
@@ -406,7 +406,7 @@ public class VM {
 
 	@Test(description="Restarting VM to given Location and Host",priority=7)
 
-	public void RestartVM() throws IOException, InterruptedException{
+	public void RestartVM() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Restart VM to given Location and Host");
 
@@ -431,7 +431,7 @@ public class VM {
 
 	@Test(description="Deleting VM to given Location and Host",priority=8)
 
-	public void DeleteVM() throws IOException, InterruptedException{
+	public void DeleteVM() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Delete VM to given Location and Host");
 
