@@ -1,11 +1,9 @@
-CMM-07.0.0.0.441-e55-0.ova
-US-7.0.0.0.0.12-e55-01_OVF10.ova
-BSM-7.0.0.0.700007-e55-01.ova
-SM-7.0.0.0.700007-e55-01.ova
 AAM-07.0.0.0.441-e55-0.ova
-AES-7.0.0.0.0.13.20150629-e50-00.ova
-SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova
-EDP-3.1.0.0.310009_OVF10.ova
 MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova
+SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova
 CM-Duplex-07.0.0.0.441-e55-0.ova
 CM-Simplex-07.0.0.0.441-e55-0.ova
+SM-7.0.0.0.700007-e55-02.ova
+BSM-7.0.0.0.700007-e55-02.ova
+US-7.0.0.0.0.12-e55-01_OVF10.ova
+CMM-07.0.0.0.441-e55-0.ova

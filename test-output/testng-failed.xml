@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Concurrent Suite]">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite1]">
   <parameter name="IP" value="148.147.162.221"/>
-  <parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
-  <test name="SM-7.0.0.0.700007-e55-01.ova(failed)">
+  <parameter name="VMName" value="CMM-07.0.0.0.441-e55-0.ova"/>
+  <test name="CMM-07.0.0.0.441-e55-0.ova(failed)">
     <parameter name="IP" value="148.147.162.221"/>
-    <parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
+    <parameter name="VMName" value="CMM-07.0.0.0.441-e55-0.ova"/>
     <classes>
-      <class name="com.avaya.sdmclient.vcenter.VCEdit">
-        <methods>
-          <include name="editVC"/>
-        </methods>
-      </class> <!-- com.avaya.sdmclient.vcenter.VCEdit -->
-      <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
+      <class name="com.avaya.sdmclient.runnerdemo.SecondThread">
         <methods>
           <include name="setup"/>
+          <include name="DeleteVM" invocation-numbers="0"/>
+          <include name="RestartVM" invocation-numbers="0"/>
+          <include name="RefreshVM" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.SecondThread -->
     </classes>
-  </test> <!-- SM-7.0.0.0.700007-e55-01.ova(failed) -->
-</suite> <!-- Failed suite [Concurrent Suite] -->
+  </test> <!-- CMM-07.0.0.0.441-e55-0.ova(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

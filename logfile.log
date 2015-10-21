@@ -22444,3 +22444,1546 @@ null (vmId = 10100):: Unable to find vm: testEDP
 2015-10-19 19:09:38,029 INFO  [Logger] *************************Started Testing****************************** 
 2015-10-19 19:09:38,029 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
 2015-10-19 19:09:41,386 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:40:27,128 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:40:27,129 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-19 20:40:31,154 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:40:43,053 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:40:47,365 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-19 20:41:31,485 ERROR [Logger] Something went wrong :( 
+2015-10-19 20:41:31,485 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 20:42:06,791 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-19 20:42:35,684 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:42:35,684 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 20:42:39,034 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:42:50,934 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:42:54,431 INFO  [Logger] Adding new Location 
+2015-10-19 20:42:57,423 INFO  [Logger] Saved New Location 
+2015-10-19 20:42:58,369 INFO  [Logger] Adding new Location 
+2015-10-19 20:43:01,053 INFO  [Logger] Saved New Location 
+2015-10-19 20:43:01,503 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 20:43:01,504 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:43:01,504 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-19 20:43:17,054 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:43:25,000 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-19 20:43:36,635 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-19 20:43:36,761 INFO  [Logger] Saved Location 
+2015-10-19 20:43:36,761 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-19 20:43:36,761 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:43:36,761 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-19 20:43:52,316 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:43:56,916 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-19 20:43:57,058 INFO  [Logger] Confirmation:  
+2015-10-19 20:43:57,945 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-19 20:43:57,946 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:43:57,946 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-19 20:44:13,590 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:44:20,017 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:44:20,017 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-19 20:44:23,052 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:44:35,352 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:44:39,314 INFO  [Logger] Adding new Location 
+2015-10-19 20:44:42,287 INFO  [Logger] Saved New Location 
+2015-10-19 20:44:54,537 INFO  [Logger] Adding new Location 
+2015-10-19 20:44:56,961 INFO  [Logger] Saved New Location 
+2015-10-19 20:45:09,006 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-19 20:45:09,007 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-10-19 20:45:24,475 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:45:24,475 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-10-19 20:45:30,632 INFO  [Logger] In 'Host' Tab 
+2015-10-19 20:45:30,868 INFO  [Logger] Adding new Host 
+2015-10-19 20:45:32,888 INFO  [Logger] Action being performed: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-19 20:45:44,544 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.175 
+2015-10-19 20:45:48,752 INFO  [Logger] In 'Host' Tab 
+2015-10-19 20:45:53,116 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 20:45:53,497 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 20:45:55,929 INFO  [Logger] In 'Host' Tab 
+2015-10-19 20:45:56,160 INFO  [Logger] Adding new Host 
+2015-10-19 20:46:09,712 INFO  [Logger] Confirmation: When the host creation status is complete, refresh the VM Management Tree to get the list of VMs associated with the host 148.147.162.196 
+2015-10-19 20:46:17,085 INFO  [Logger] In 'Host' Tab 
+2015-10-19 20:46:21,640 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 20:46:22,008 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-19 20:46:22,381 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-19 20:46:22,382 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:46:22,382 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-19 20:46:49,818 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,845 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,866 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,888 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,913 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,943 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,956 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,971 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:49,987 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:50,004 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:50,019 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-19 20:46:50,024 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:46:50,024 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 20:47:05,559 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:47:13,036 INFO  [Logger] Clicked on - Add new VM 
+2015-10-19 20:47:13,992 INFO  [Logger] Given Name 
+2015-10-19 20:48:33,428 INFO  [Logger] Selecting NetWorks 
+2015-10-19 20:48:36,741 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-19 20:48:36,742 INFO  [Logger] Accepted EULA 
+2015-10-19 20:48:53,035 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 20:48:53,036 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-19 20:48:53,038 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:48:53,038 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 20:48:57,284 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:49:09,979 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:49:17,966 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 20:49:18,614 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-19 20:49:18,614 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-19 20:49:18,620 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-19 20:49:18,620 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-19 20:49:18,620 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-19 20:49:18,623 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-19 20:49:21,119 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-19 20:49:34,657 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:49:34,657 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 20:49:38,456 INFO  [Logger] Logged in Successfully 
+2015-10-19 20:49:50,361 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:49:58,854 INFO  [Logger] Clicked on - Add new VM 
+2015-10-19 20:49:59,856 INFO  [Logger] Given Name 
+2015-10-19 20:51:10,409 INFO  [Logger] Selecting NetWorks 
+2015-10-19 20:51:13,242 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-19 20:51:13,242 INFO  [Logger] Accepted EULA 
+2015-10-19 20:57:34,762 INFO  [Logger] Task Completed Successfully.. 
+2015-10-19 20:57:35,362 INFO  [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment Completed :;VM Deployment Completed 
+2015-10-19 20:57:40,547 INFO  [Logger] Completed adding VM SM with IP 148.147.162.221 
+2015-10-19 20:57:40,547 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 20:57:40,547 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:57:40,547 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 20:57:57,090 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:58:08,619 INFO  [Logger] Clicked on - Edit VM 
+2015-10-19 20:58:24,852 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-19 20:58:29,854 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 20:58:29,854 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 20:58:45,373 INFO  [Logger] Clicked on VM management 
+2015-10-19 20:59:09,551 ERROR [Logger] Something went wrong :( 
+2015-10-19 20:59:09,551 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 20:59:35,531 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-19 21:00:40,536 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:00:40,536 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 21:00:56,068 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:01:18,475 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:01:18,475 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:01:44,491 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-19 21:02:49,514 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:02:49,515 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 21:03:05,058 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:03:56,757 INFO  [Logger] Task Completed Successfully.. 
+2015-10-19 21:03:56,979 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed :;VM Trust Establishment Completed 
+2015-10-19 21:04:40,898 INFO  [Logger] Task Completed Successfully.. 
+2015-10-19 21:04:41,070 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh :;VM Refresh Completed :;VM Refresh Completed 
+2015-10-19 21:04:43,772 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-10-19 21:04:43,773 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:04:43,773 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 21:04:59,420 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:05:14,355 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-19 21:06:54,360 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:06:54,361 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 21:07:19,679 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 21:07:19,679 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-19 21:07:19,681 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:07:19,681 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 21:07:23,145 INFO  [Logger] Logged in Successfully 
+2015-10-19 21:07:35,130 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:07:42,435 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 21:07:43,243 ERROR [Logger] No free IP available for Installation. 
+2015-10-19 21:15:01,641 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-19 21:15:02,841 ERROR [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment failed 
+2015-10-19 21:15:03,051 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:15:03,051 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:15:03,259 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:15:03,259 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 21:15:18,979 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:15:28,898 INFO  [Logger] Clicked on - Edit VM 
+2015-10-19 21:15:44,783 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-19 21:15:49,785 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:15:49,785 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 21:16:05,285 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:16:28,395 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:16:28,395 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:16:53,840 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-19 21:17:58,843 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:17:58,843 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 21:18:14,333 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:18:26,857 INFO  [Logger] Action being performed: Start VM Failed for
+testCMM (vmId = 12050):: Vm is already powered on 
+2015-10-19 21:18:38,531 INFO  [Logger] Confirmation: Start VM Failed for
+testCMM (vmId = 12050):: Vm is already powered on 
+2015-10-19 21:18:40,852 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-19 21:19:45,855 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:19:45,855 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 21:20:01,340 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:20:43,032 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:20:43,032 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 21:20:58,631 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:21:20,128 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:21:20,129 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:21:45,767 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-19 21:23:25,773 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:23:25,773 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 21:23:41,239 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:23:45,707 ERROR [Logger] Error occurred: Either location name or host name is null or location or host does not exist .. 
+2015-10-19 21:23:55,893 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 21:23:55,893 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-01.ova 
+2015-10-19 21:23:55,895 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:23:55,895 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 21:23:59,219 INFO  [Logger] Logged in Successfully 
+2015-10-19 21:24:11,111 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:24:18,111 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 21:24:18,584 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-19 21:24:18,584 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-19 21:24:18,585 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-19 21:24:18,586 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-19 21:24:18,586 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-19 21:24:18,588 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-19 21:24:20,151 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-19 21:24:34,503 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:24:34,503 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 21:24:37,792 INFO  [Logger] Logged in Successfully 
+2015-10-19 21:24:50,465 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:24:58,754 INFO  [Logger] Clicked on - Add new VM 
+2015-10-19 21:24:59,947 INFO  [Logger] Given Name 
+2015-10-19 21:26:16,488 INFO  [Logger] Selecting NetWorks 
+2015-10-19 21:26:19,833 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-19 21:26:19,833 INFO  [Logger] Accepted EULA 
+2015-10-19 21:51:22,894 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-19 21:51:24,110 ERROR [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment failed 
+2015-10-19 21:51:24,344 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:51:24,344 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:51:24,542 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:51:24,542 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 21:51:40,360 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:51:50,901 INFO  [Logger] Clicked on - Edit VM 
+2015-10-19 21:52:06,653 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-19 21:52:11,654 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:52:11,654 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 21:52:27,108 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:52:50,471 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:52:50,471 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:53:15,853 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-19 21:54:20,851 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:54:20,851 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 21:54:36,323 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:54:49,618 INFO  [Logger] Action being performed: Start VM Failed for
+testBSM (vmId = 12100):: Vm is already powered on 
+2015-10-19 21:55:01,219 INFO  [Logger] Confirmation: Start VM Failed for
+testBSM (vmId = 12100):: Vm is already powered on 
+2015-10-19 21:55:03,720 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-19 21:56:08,717 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:56:08,717 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 21:56:24,245 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:57:06,720 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:57:06,720 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 21:57:22,224 INFO  [Logger] Clicked on VM management 
+2015-10-19 21:57:44,594 ERROR [Logger] Something went wrong :( 
+2015-10-19 21:57:44,594 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 21:58:10,222 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-19 21:59:50,217 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 21:59:50,217 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 22:00:05,713 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:00:10,557 ERROR [Logger] Error occurred: Either location name or host name is null or location or host does not exist .. 
+2015-10-19 22:00:21,189 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 22:00:21,190 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-10-19 22:00:21,192 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:00:21,192 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 22:00:24,355 INFO  [Logger] Logged in Successfully 
+2015-10-19 22:00:37,055 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:00:44,219 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 22:00:45,145 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-19 22:00:45,145 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-19 22:00:45,147 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-19 22:00:45,147 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-19 22:00:45,148 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-19 22:00:45,150 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-19 22:00:47,639 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-19 22:00:59,153 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:00:59,153 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-19 22:01:02,272 INFO  [Logger] Logged in Successfully 
+2015-10-19 22:01:15,006 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:01:23,276 INFO  [Logger] Clicked on - Add new VM 
+2015-10-19 22:01:24,230 INFO  [Logger] Given Name 
+2015-10-19 22:02:34,618 INFO  [Logger] Selecting NetWorks 
+2015-10-19 22:02:37,979 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-19 22:02:37,979 INFO  [Logger] Accepted EULA 
+2015-10-19 22:04:22,956 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-19 22:04:23,156 ERROR [Logger] VM Deployment Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment :;VM Deployment failed :;VM Deployment failed 
+2015-10-19 22:04:23,408 ERROR [Logger] Something went wrong :( 
+2015-10-19 22:04:23,409 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 22:04:23,591 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:04:23,591 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-19 22:04:39,316 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:04:50,555 INFO  [Logger] Clicked on - Edit VM 
+2015-10-19 22:05:06,043 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-19 22:05:11,044 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:05:11,044 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-19 22:05:26,513 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:05:50,724 ERROR [Logger] Something went wrong :( 
+2015-10-19 22:05:50,724 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 22:06:16,510 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-19 22:07:21,507 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:07:21,507 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-19 22:07:36,983 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:07:51,303 INFO  [Logger] Action being performed: Start VM Failed for
+testAAM (vmId = 12150):: Unable to find vm: testAAM 
+2015-10-19 22:08:02,924 INFO  [Logger] Confirmation: Start VM Failed for
+testAAM (vmId = 12150):: Unable to find vm: testAAM 
+2015-10-19 22:08:05,611 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-19 22:09:10,608 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:09:10,608 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-19 22:09:26,095 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:10:07,652 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-19 22:10:07,754 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-10-19 22:10:07,948 ERROR [Logger] Something went wrong :( 
+2015-10-19 22:10:07,948 INFO  [Logger] Check Screenshot for the same 
+2015-10-19 22:10:08,115 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:10:08,115 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-19 22:10:23,800 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:10:40,478 INFO  [Logger] Action being performed: Start VM Failed for
+null (vmId = 12150):: Unable to find vm: testAAM 
+2015-10-19 22:10:52,119 INFO  [Logger] Confirmation: Start VM Failed for
+null (vmId = 12150):: Unable to find vm: testAAM 
+2015-10-19 22:10:54,610 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-19 22:12:34,605 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:12:34,605 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-19 22:12:50,073 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:12:54,793 ERROR [Logger] Error occurred: Either location name or host name is null or location or host does not exist .. 
+2015-10-19 22:13:05,738 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-19 22:13:05,738 INFO  [Logger] InnerThread: Choosen OVA AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-10-19 22:13:05,740 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-19 22:13:05,740 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-19 22:13:08,922 INFO  [Logger] Logged in Successfully 
+2015-10-19 22:13:21,666 INFO  [Logger] Clicked on VM management 
+2015-10-19 22:13:28,840 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-19 22:13:29,576 ERROR [Logger] No free IP available for Installation. 
+2015-10-19 22:13:29,768 INFO  [Logger] InnerThread: Test Started 
+2015-10-19 22:13:29,769 INFO  [Logger] Thread-8 48 Start 
+2015-10-19 22:13:29,999 INFO  [Logger] InnerThread: Test Started 
+2015-10-19 22:13:29,999 INFO  [Logger] Thread-6 37 Start 
+2015-10-19 22:13:30,174 INFO  [Logger] InnerThread: Test Started 
+2015-10-19 22:13:30,174 INFO  [Logger] Thread-3 21 Start 
+2015-10-20 17:43:28,837 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:43:28,851 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-20 17:43:40,553 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:43:40,553 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-20 17:43:52,206 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:43:52,206 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-20 17:44:04,788 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:44:04,788 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-20 17:44:17,356 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:44:17,356 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-20 17:44:29,956 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:44:29,956 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-20 17:44:44,212 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,247 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,277 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,297 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,330 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,367 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,379 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,393 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,408 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,428 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,443 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 17:44:44,447 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:44:44,447 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 17:44:56,988 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-20 17:44:56,988 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:44:56,988 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 17:45:14,534 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:45:14,534 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 17:45:32,081 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:45:32,081 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 17:45:49,626 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:45:49,626 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 17:46:02,173 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:46:02,173 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 17:46:14,709 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:46:14,709 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 17:46:34,627 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 17:46:34,628 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-20 17:46:34,630 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 17:46:34,630 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 20:03:34,839 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:03:34,840 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-20 20:03:42,277 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:03:54,214 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:03:59,707 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-20 20:04:38,060 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:38,060 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-20 20:04:39,079 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:39,079 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-20 20:04:41,083 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:41,083 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-20 20:04:43,085 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:43,085 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-20 20:04:45,088 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:45,088 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-20 20:04:48,213 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,240 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,259 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,279 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,302 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,322 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,335 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,349 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,365 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,382 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,400 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:04:48,404 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:48,404 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 20:04:50,418 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-20 20:04:50,418 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:50,418 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 20:04:57,421 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:04:57,421 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 20:05:04,424 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:05:04,424 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 20:05:11,429 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:05:11,429 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 20:05:13,441 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:05:13,441 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 20:05:15,443 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:05:15,443 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 20:05:23,234 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 20:05:23,235 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-20 20:05:23,237 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:05:23,237 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 20:05:25,480 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:17:32,926 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:17:32,927 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-20 20:17:37,637 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:17:49,538 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:17:53,474 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-20 20:18:19,990 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:18:19,991 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-20 20:18:24,401 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:18:37,464 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:18:40,992 INFO  [Logger] Adding new Location 
+2015-10-20 20:18:44,043 INFO  [Logger] Saved New Location 
+2015-10-20 20:18:56,390 INFO  [Logger] Adding new Location 
+2015-10-20 20:18:59,343 INFO  [Logger] Saved New Location 
+2015-10-20 20:19:11,402 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-20 20:19:11,403 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:19:11,403 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-20 20:19:27,062 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:19:35,827 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-20 20:19:47,438 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-20 20:19:47,582 INFO  [Logger] Saved Location 
+2015-10-20 20:19:47,582 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-20 20:19:47,583 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:19:47,583 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-20 20:20:02,961 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:20:08,194 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-20 20:20:08,370 INFO  [Logger] Confirmation:  
+2015-10-20 20:20:09,085 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-20 20:20:09,086 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:20:09,086 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-20 20:20:24,500 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:20:30,586 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:20:30,586 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-20 20:20:33,780 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:20:45,667 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:20:49,571 INFO  [Logger] Adding new Location 
+2015-10-20 20:20:52,961 INFO  [Logger] Saved New Location 
+2015-10-20 20:21:05,228 INFO  [Logger] Adding new Location 
+2015-10-20 20:21:07,835 INFO  [Logger] Saved New Location 
+2015-10-20 20:21:19,864 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-20 20:21:19,864 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-10-20 20:21:35,365 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:21:35,365 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-10-20 20:21:42,098 INFO  [Logger] In 'Host' Tab 
+2015-10-20 20:21:42,326 INFO  [Logger] Adding new Host 
+2015-10-20 20:21:55,818 ERROR [Logger] Something went wrong :( 
+2015-10-20 20:21:55,818 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 20:22:22,198 INFO  [Logger] In 'Host' Tab 
+2015-10-20 20:22:26,964 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sm3 in Inventory :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM AMS in local inventory :;Discovering VMs: Add VM AMS in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM AMS in Inventory :;Discovering VMs: Add VM ustestesx in local inventory :;Discovering VMs: Add VM ustestesx in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM ustestesx in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-20 20:22:28,074 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sm3 in local inventory :;Discovering VMs: Add VM sm3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sm3 in Inventory :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM AMS in local inventory :;Discovering VMs: Add VM AMS in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM AMS in Inventory :;Discovering VMs: Add VM ustestesx in local inventory :;Discovering VMs: Add VM ustestesx in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM ustestesx in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-20 20:22:30,701 INFO  [Logger] In 'Host' Tab 
+2015-10-20 20:22:30,889 INFO  [Logger] Adding new Host 
+2015-10-20 20:22:44,219 ERROR [Logger] Something went wrong :( 
+2015-10-20 20:22:44,219 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 20:23:14,284 INFO  [Logger] In 'Host' Tab 
+2015-10-20 20:23:18,921 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-20 20:23:19,463 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-20 20:23:20,003 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-20 20:23:20,004 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:23:20,004 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-20 20:23:35,389 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:23:42,758 INFO  [Logger] In 'Host' Tab 
+2015-10-20 20:23:56,339 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,363 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,381 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,400 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,420 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,456 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,467 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,482 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,500 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,516 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,530 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-20 20:23:56,534 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:23:56,534 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 20:24:11,993 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:24:19,584 INFO  [Logger] Clicked on - Add new VM 
+2015-10-20 20:24:20,558 INFO  [Logger] Given Name 
+2015-10-20 20:25:36,095 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-20 20:25:36,095 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:25:36,095 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 20:26:08,158 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:26:08,158 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 20:26:23,612 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:26:31,159 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-20 20:26:36,160 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:26:36,160 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 20:26:51,639 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:26:59,317 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-20 20:27:04,317 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:27:04,317 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 20:27:19,801 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:27:27,266 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-20 20:27:27,266 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:27:27,266 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 20:27:42,732 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:27:50,272 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-20 20:27:50,273 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:27:50,273 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 20:28:05,741 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:28:12,988 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-20 20:28:20,226 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 20:28:20,227 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-20 20:28:20,228 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:28:20,229 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 20:28:24,972 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:28:36,847 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:28:43,671 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-20 20:28:44,001 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-20 20:28:44,001 INFO  [Logger] 148.147.162.221 IP is available 
+2015-10-20 20:28:44,020 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-10-20 20:28:44,020 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-20 20:28:44,020 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-10-20 20:28:44,023 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-20 20:28:47,061 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-20 20:28:56,902 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:28:56,902 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 20:29:01,203 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:29:14,022 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:29:22,259 INFO  [Logger] Clicked on - Add new VM 
+2015-10-20 20:29:23,211 INFO  [Logger] Given Name 
+2015-10-20 20:30:34,395 INFO  [Logger] Selecting NetWorks 
+2015-10-20 20:30:37,282 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-20 20:30:37,282 INFO  [Logger] Accepted EULA 
+2015-10-20 20:37:00,235 INFO  [Logger] Task Completed Successfully.. 
+2015-10-20 20:37:00,701 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;Add VM To Inventory :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-10-20 20:37:12,395 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:37:12,395 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 20:37:27,864 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:37:37,574 INFO  [Logger] Clicked on - Edit VM 
+2015-10-20 20:37:53,761 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-20 20:37:58,762 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:37:58,762 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 20:38:14,253 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:38:25,217 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-20 20:38:25,373 INFO  [Logger] Confirmation:  
+2015-10-20 20:38:39,386 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-20 20:39:44,383 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:39:44,383 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 20:39:59,889 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:40:09,816 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-20 20:40:09,967 INFO  [Logger] Confirmation:  
+2015-10-20 20:40:23,854 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-20 20:41:28,852 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:41:28,852 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 20:41:44,355 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:42:25,438 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:42:25,438 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 20:42:41,008 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:42:50,531 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-10-20 20:42:50,829 INFO  [Logger] Confirmation:  
+2015-10-20 20:43:05,182 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-20 20:44:45,177 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:44:45,178 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 20:45:01,838 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:45:13,585 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-10-20 20:45:13,732 INFO  [Logger] Confirmation:  
+2015-10-20 20:45:27,692 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-20 20:45:29,482 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-10-20 20:45:40,779 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 20:45:40,780 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-20 20:45:40,781 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:45:40,781 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 20:45:45,131 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:45:57,847 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:46:04,775 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-20 20:46:05,148 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-20 20:46:05,148 INFO  [Logger] 148.147.162.221 IP is available 
+2015-10-20 20:46:05,150 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-10-20 20:46:05,150 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-20 20:46:05,150 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-10-20 20:46:05,152 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-20 20:46:07,787 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-20 20:46:14,839 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 20:46:14,839 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 20:46:19,008 INFO  [Logger] Logged in Successfully 
+2015-10-20 20:46:30,893 INFO  [Logger] Clicked on VM management 
+2015-10-20 20:46:38,878 INFO  [Logger] Clicked on - Add new VM 
+2015-10-20 20:46:39,837 INFO  [Logger] Given Name 
+2015-10-20 20:47:50,702 INFO  [Logger] Selecting NetWorks 
+2015-10-20 20:47:53,797 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-20 20:47:53,797 INFO  [Logger] Accepted EULA 
+2015-10-20 22:46:48,869 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:46:48,870 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 22:47:06,405 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:47:06,405 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 22:47:23,943 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:47:23,943 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 22:47:41,501 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:47:41,501 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 22:47:54,059 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:47:54,059 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 22:48:06,593 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:48:06,593 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 22:48:27,471 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 22:48:27,471 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-02.ova 
+2015-10-20 22:48:27,473 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:48:27,473 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 22:48:32,029 INFO  [Logger] Logged in Successfully 
+2015-10-20 22:48:44,792 INFO  [Logger] Clicked on VM management 
+2015-10-20 22:48:51,889 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-20 22:48:52,276 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-20 22:48:52,276 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-20 22:48:52,278 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-20 22:48:52,278 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-20 22:48:52,278 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-20 22:48:52,280 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-20 22:48:55,173 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-20 22:49:01,328 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 22:49:01,328 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-20 22:49:05,430 INFO  [Logger] Logged in Successfully 
+2015-10-20 22:49:17,295 INFO  [Logger] Clicked on VM management 
+2015-10-20 22:49:25,037 INFO  [Logger] Clicked on - Add new VM 
+2015-10-20 22:49:26,001 INFO  [Logger] Given Name 
+2015-10-20 22:50:42,374 INFO  [Logger] Selecting NetWorks 
+2015-10-20 22:50:45,771 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-20 22:50:45,771 INFO  [Logger] Accepted EULA 
+2015-10-20 23:16:02,833 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-20 23:16:04,087 ERROR [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy failed :;VM Deploy failed :;VM Deploy failed 
+2015-10-20 23:16:04,297 ERROR [Logger] Something went wrong :( 
+2015-10-20 23:16:04,297 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 23:16:04,508 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:16:04,508 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-20 23:16:20,222 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:16:29,367 INFO  [Logger] Clicked on - Edit VM 
+2015-10-20 23:16:45,144 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-20 23:16:50,145 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:16:50,145 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-20 23:17:05,593 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:17:28,211 ERROR [Logger] Something went wrong :( 
+2015-10-20 23:17:28,211 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 23:17:53,691 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-20 23:18:58,694 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:18:58,694 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-20 23:19:14,191 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:19:24,020 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-20 23:19:24,169 INFO  [Logger] Confirmation:  
+2015-10-20 23:19:28,334 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-20 23:20:33,339 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:20:33,339 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-20 23:20:48,804 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:21:11,847 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:21:11,847 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-20 23:21:27,376 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:21:49,259 ERROR [Logger] Something went wrong :( 
+2015-10-20 23:21:49,259 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 23:22:14,811 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-20 23:23:54,816 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:23:54,816 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-20 23:24:10,325 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:24:31,920 ERROR [Logger] Something went wrong :( 
+2015-10-20 23:24:31,920 INFO  [Logger] Check Screenshot for the same 
+2015-10-20 23:24:57,486 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-20 23:24:59,755 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-10-20 23:25:07,129 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-20 23:25:07,129 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-10-20 23:25:07,131 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-20 23:25:07,131 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-20 23:25:11,914 INFO  [Logger] Logged in Successfully 
+2015-10-20 23:25:23,824 INFO  [Logger] Clicked on VM management 
+2015-10-20 23:25:30,671 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-20 23:25:31,122 ERROR [Logger] No free IP available for Installation. 
+2015-10-20 23:25:31,469 INFO  [Logger] InnerThread: Test Started 
+2015-10-20 23:25:31,469 INFO  [Logger] Thread-8 47 Start 
+2015-10-20 23:25:31,706 INFO  [Logger] InnerThread: Test Started 
+2015-10-20 23:25:31,706 INFO  [Logger] Thread-6 36 Start 
+2015-10-20 23:25:31,894 INFO  [Logger] InnerThread: Test Started 
+2015-10-20 23:25:31,894 INFO  [Logger] Thread-3 21 Start 
+2015-10-21 11:57:40,784 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 11:57:40,794 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 11:57:45,929 INFO  [Logger] Logged in Successfully 
+2015-10-21 11:57:57,923 INFO  [Logger] Clicked on VM management 
+2015-10-21 11:58:05,334 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 11:58:06,303 INFO  [Logger] Given Name 
+2015-10-21 11:59:24,528 INFO  [Logger] Selecting NetWorks 
+2015-10-21 11:59:27,389 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 11:59:27,389 INFO  [Logger] Accepted EULA 
+2015-10-21 12:24:15,435 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-21 12:24:16,783 ERROR [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy failed :;VM Deploy failed 
+2015-10-21 12:24:17,162 ERROR [Logger] Something went wrong :( 
+2015-10-21 12:24:17,162 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 12:24:17,453 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:24:17,453 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 12:24:33,094 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:24:43,103 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 12:24:58,906 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 12:25:03,907 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:25:03,907 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 12:25:19,364 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:25:42,320 ERROR [Logger] Something went wrong :( 
+2015-10-21 12:25:42,320 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 12:26:07,686 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 12:27:12,678 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:27:12,678 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 12:27:28,209 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:27:37,818 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 12:27:37,980 INFO  [Logger] Confirmation:  
+2015-10-21 12:27:42,067 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 12:28:47,060 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:28:47,060 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 12:29:02,459 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:29:25,209 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:29:25,209 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 12:29:27,214 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:29:27,214 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 12:29:39,550 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 12:29:39,550 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-10-21 12:29:39,553 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:29:39,553 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 12:29:44,673 INFO  [Logger] Logged in Successfully 
+2015-10-21 12:29:56,580 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:30:04,543 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 12:30:04,950 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 12:30:04,950 INFO  [Logger] 148.147.162.221 IP is available 
+2015-10-21 12:30:04,966 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-10-21 12:30:04,966 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 12:30:04,966 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-10-21 12:30:04,968 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 12:30:08,301 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 12:30:17,953 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:30:17,953 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 12:30:21,523 INFO  [Logger] Logged in Successfully 
+2015-10-21 12:30:34,274 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:30:42,409 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 12:30:43,394 INFO  [Logger] Given Name 
+2015-10-21 12:32:01,208 INFO  [Logger] Selecting NetWorks 
+2015-10-21 12:32:03,430 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:32:03,430 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 12:32:18,903 INFO  [Logger] Clicked on VM management 
+2015-10-21 12:32:26,961 ERROR [Logger] Error occurred: Either VM name is null or VM does not exist .. 
+2015-10-21 12:32:31,962 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:32:31,962 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 12:32:50,151 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:32:50,151 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 12:32:57,153 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:32:57,153 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 12:32:59,164 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:32:59,164 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 12:33:01,165 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:33:01,165 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 12:33:11,942 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 12:33:11,942 INFO  [Logger] InnerThread: Choosen OVA MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova 
+2015-10-21 12:33:11,944 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 12:33:11,944 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 12:33:16,103 INFO  [Logger] Logged in Successfully 
+2015-10-21 12:33:21,938 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 12:33:21,938 INFO  [Logger] Thread-2 18 Start 
+2015-10-21 13:28:04,080 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:28:04,081 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 13:28:09,854 INFO  [Logger] Logged in Successfully 
+2015-10-21 13:28:21,798 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:28:29,604 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 13:28:30,594 INFO  [Logger] Given Name 
+2015-10-21 13:29:48,087 INFO  [Logger] Selecting NetWorks 
+2015-10-21 13:29:49,515 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:29:49,515 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 13:31:00,326 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:31:00,327 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 13:31:04,564 INFO  [Logger] Logged in Successfully 
+2015-10-21 13:31:17,314 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:31:24,956 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 13:31:25,946 INFO  [Logger] Given Name 
+2015-10-21 13:32:44,041 INFO  [Logger] Selecting NetWorks 
+2015-10-21 13:46:23,258 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:46:23,260 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 13:46:28,252 INFO  [Logger] Logged in Successfully 
+2015-10-21 13:46:41,092 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:46:48,594 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 13:46:49,555 INFO  [Logger] Given Name 
+2015-10-21 13:47:59,678 INFO  [Logger] Selecting NetWorks 
+2015-10-21 13:48:02,520 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 13:48:02,520 INFO  [Logger] Accepted EULA 
+2015-10-21 13:55:57,065 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:55:57,065 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 13:56:12,448 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:56:22,657 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 13:56:38,443 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 13:56:43,445 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:56:43,445 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 13:56:59,055 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:57:10,183 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-21 13:57:10,346 INFO  [Logger] Confirmation:  
+2015-10-21 13:57:24,247 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 13:58:29,272 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 13:58:29,272 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 13:58:44,826 INFO  [Logger] Clicked on VM management 
+2015-10-21 13:58:54,777 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 13:58:55,127 INFO  [Logger] Confirmation:  
+2015-10-21 13:59:09,267 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 14:00:14,273 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:00:14,273 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 14:00:29,971 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:01:14,809 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:01:14,809 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 14:01:16,814 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:01:16,814 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 14:01:32,139 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 14:01:32,139 INFO  [Logger] InnerThread: Choosen OVA  
+2015-10-21 14:01:32,141 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:01:32,141 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 14:01:35,984 INFO  [Logger] Logged in Successfully 
+2015-10-21 14:17:30,743 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:17:30,744 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 14:17:35,099 INFO  [Logger] Logged in Successfully 
+2015-10-21 14:17:47,847 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:17:55,929 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 14:17:56,887 INFO  [Logger] Given Name 
+2015-10-21 14:18:03,208 ERROR [Logger] This VM Name already exists! Please try another name. 
+2015-10-21 14:18:03,209 ERROR [Logger] Error : Check the Log and Screenshot for the same. 
+2015-10-21 14:18:03,471 ERROR [Logger] Something went wrong :( 
+2015-10-21 14:18:03,471 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 14:18:03,471 INFO  [Logger] Screenshot taken 
+2015-10-21 14:18:03,612 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:03,612 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 14:18:16,781 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:16,781 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 14:18:23,789 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:23,789 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 14:18:30,797 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:30,798 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 14:18:32,803 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:32,803 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 14:18:34,815 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:34,815 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 14:18:46,443 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 14:18:46,444 INFO  [Logger] InnerThread: Choosen OVA  
+2015-10-21 14:18:46,467 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:18:46,467 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 14:18:50,558 INFO  [Logger] Logged in Successfully 
+2015-10-21 14:19:21,126 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:19:21,126 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 14:19:25,918 INFO  [Logger] Logged in Successfully 
+2015-10-21 14:19:41,680 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:19:51,111 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 14:19:52,042 INFO  [Logger] Given Name 
+2015-10-21 14:21:09,247 INFO  [Logger] Selecting NetWorks 
+2015-10-21 14:21:12,120 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 14:21:12,120 INFO  [Logger] Accepted EULA 
+2015-10-21 14:27:30,951 INFO  [Logger] Task Completed Successfully.. 
+2015-10-21 14:27:31,392 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;Add VM To Inventory :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-10-21 14:27:36,575 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:27:36,575 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 14:27:52,086 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:28:02,218 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 14:28:18,482 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 14:28:23,484 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:28:23,484 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 14:28:38,953 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:28:50,003 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-21 14:28:50,157 INFO  [Logger] Confirmation:  
+2015-10-21 14:29:04,144 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 14:30:09,151 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:30:09,151 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 14:30:24,678 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:30:34,178 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 14:30:34,346 INFO  [Logger] Confirmation:  
+2015-10-21 14:30:48,359 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 14:31:53,382 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:31:53,382 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 14:32:09,088 INFO  [Logger] Clicked on VM management 
+2015-10-21 14:32:37,464 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:32:37,464 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 14:32:39,484 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:32:39,484 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 14:32:50,647 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 14:32:50,648 INFO  [Logger] InnerThread: Choosen OVA CM-Simplex-07.0.0.0.441-e55-0.ova 
+2015-10-21 14:32:50,650 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 14:32:50,650 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 14:32:55,630 INFO  [Logger] Logged in Successfully 
+2015-10-21 15:53:15,173 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:53:15,173 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-21 15:53:19,112 INFO  [Logger] Logged in Successfully 
+2015-10-21 15:53:31,048 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:53:35,072 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-21 15:53:59,575 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:53:59,575 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-21 15:54:04,467 INFO  [Logger] Logged in Successfully 
+2015-10-21 15:54:17,419 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:54:21,037 INFO  [Logger] Adding new Location 
+2015-10-21 15:54:23,674 INFO  [Logger] Saved New Location 
+2015-10-21 15:54:35,919 INFO  [Logger] Adding new Location 
+2015-10-21 15:54:38,586 INFO  [Logger] Saved New Location 
+2015-10-21 15:54:50,584 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-21 15:54:50,585 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:54:50,585 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-21 15:55:05,958 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:55:14,999 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-21 15:55:26,652 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-21 15:55:26,771 INFO  [Logger] Saved Location 
+2015-10-21 15:55:26,771 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-21 15:55:26,772 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:55:26,772 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-21 15:55:42,229 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:55:46,985 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-21 15:55:47,134 INFO  [Logger] Confirmation:  
+2015-10-21 15:55:47,680 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-21 15:55:47,680 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:55:47,680 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-21 15:56:03,057 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:56:08,488 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:56:08,488 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-21 15:56:11,373 INFO  [Logger] Logged in Successfully 
+2015-10-21 15:56:23,269 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:56:26,779 INFO  [Logger] Adding new Location 
+2015-10-21 15:56:29,349 INFO  [Logger] Saved New Location 
+2015-10-21 15:56:41,738 INFO  [Logger] Adding new Location 
+2015-10-21 15:56:44,244 INFO  [Logger] Saved New Location 
+2015-10-21 15:56:56,285 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-21 15:56:56,285 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-10-21 15:57:11,763 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:57:11,763 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-10-21 15:57:18,288 INFO  [Logger] In 'Host' Tab 
+2015-10-21 15:57:18,551 INFO  [Logger] Adding new Host 
+2015-10-21 15:57:31,861 ERROR [Logger] Something went wrong :( 
+2015-10-21 15:57:31,861 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 15:57:58,794 INFO  [Logger] In 'Host' Tab 
+2015-10-21 15:58:03,182 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-21 15:58:03,577 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-21 15:58:05,926 INFO  [Logger] In 'Host' Tab 
+2015-10-21 15:58:06,153 INFO  [Logger] Adding new Host 
+2015-10-21 15:58:19,445 ERROR [Logger] Something went wrong :( 
+2015-10-21 15:58:19,445 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 15:58:49,513 INFO  [Logger] In 'Host' Tab 
+2015-10-21 15:58:54,134 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-21 15:58:54,516 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-10-21 15:58:54,897 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-10-21 15:58:54,898 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:58:54,898 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-21 15:59:10,359 INFO  [Logger] Clicked on VM management 
+2015-10-21 15:59:17,671 INFO  [Logger] In 'Host' Tab 
+2015-10-21 15:59:41,362 INFO  [Logger] *************************End of test caseEdited Host Successfully******************************
+
+ 
+2015-10-21 15:59:42,806 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,827 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582456/EDP-3.1.0.0.310009_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,845 INFO  [Logger] /swlibrary/swLib/local/SM000000032/BSM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,865 INFO  [Logger] /swlibrary/swLib/local/SM000000031/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,887 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442546011/AES-7.0.0.0.0.13.20150629-e50-00_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,908 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443442545937/AAM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,923 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582716/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,939 INFO  [Logger] /swlibrary/swLib/local/CM000000614/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,955 INFO  [Logger] /swlibrary/swLib/local/FU_OT1443444582583/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,969 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,984 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-10-21 15:59:42,988 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 15:59:42,988 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 15:59:58,442 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:00:06,073 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 16:00:07,049 INFO  [Logger] Given Name 
+2015-10-21 16:01:26,818 INFO  [Logger] Selecting NetWorks 
+2015-10-21 16:01:29,779 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 16:01:29,779 INFO  [Logger] Accepted EULA 
+2015-10-21 16:01:45,956 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 16:01:45,956 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-21 16:01:45,958 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:01:45,958 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 16:01:51,480 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:02:03,365 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:02:11,029 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 16:02:11,435 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 16:02:11,435 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-21 16:02:11,459 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-21 16:02:11,459 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 16:02:11,459 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-21 16:02:11,462 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 16:02:15,518 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 16:02:37,814 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:02:37,814 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 16:02:42,190 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:02:54,088 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:03:03,555 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 16:03:04,538 INFO  [Logger] Given Name 
+2015-10-21 16:04:14,700 INFO  [Logger] Selecting NetWorks 
+2015-10-21 16:04:17,753 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 16:04:17,753 INFO  [Logger] Accepted EULA 
+2015-10-21 16:04:43,137 ERROR [Logger] Something went wrong :( 
+2015-10-21 16:04:43,137 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 16:04:43,138 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-01.ova 
+2015-10-21 16:04:43,138 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:04:43,138 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 16:04:58,841 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:05:10,139 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 16:05:27,892 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:05:27,892 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 16:05:46,433 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:05:46,433 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 16:05:53,434 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:05:53,434 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 16:05:55,433 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:05:55,433 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 16:05:57,433 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:05:57,434 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 16:06:09,489 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 16:06:09,489 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-21 16:06:09,490 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:06:09,490 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 16:06:14,802 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:06:26,759 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:06:34,258 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 16:06:34,754 ERROR [Logger] No free IP available for Installation. 
+2015-10-21 16:27:43,515 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-21 16:27:44,675 ERROR [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy failed 
+2015-10-21 16:27:44,905 ERROR [Logger] Something went wrong :( 
+2015-10-21 16:27:44,905 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 16:27:45,213 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:27:45,213 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 16:28:00,682 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:28:10,132 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 16:28:25,596 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 16:28:30,597 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:28:30,597 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 16:28:46,111 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:29:08,666 ERROR [Logger] Something went wrong :( 
+2015-10-21 16:29:08,666 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 16:29:34,075 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 16:30:39,079 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:30:39,079 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 16:30:54,601 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:31:04,351 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 16:31:04,505 INFO  [Logger] Confirmation:  
+2015-10-21 16:31:08,583 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 16:32:43,589 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:32:43,589 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 16:32:59,080 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:33:21,319 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:33:21,319 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 16:33:36,808 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:34:01,548 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:34:01,548 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 16:34:12,956 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 16:34:12,956 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-02.ova 
+2015-10-21 16:34:12,958 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:34:12,958 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 16:34:16,784 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:34:22,683 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 16:34:22,683 INFO  [Logger] Thread-3 21 Start 
+2015-10-21 16:45:32,408 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:45:32,409 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-10-21 16:45:36,228 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:45:48,105 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:45:52,505 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-21 16:46:14,238 INFO  [Logger] Action being performed: Managing only selected records! 
+2015-10-21 16:46:26,329 INFO  [Logger] Confirmation: Managing only selected records! 
+2015-10-21 16:46:38,475 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-10-21 16:47:07,235 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:47:07,235 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-21 16:47:11,149 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:47:23,065 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:47:26,468 INFO  [Logger] Adding new Location 
+2015-10-21 16:47:29,430 INFO  [Logger] Saved New Location 
+2015-10-21 16:47:41,687 INFO  [Logger] Adding new Location 
+2015-10-21 16:47:44,156 INFO  [Logger] Saved New Location 
+2015-10-21 16:47:56,151 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-21 16:47:56,152 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:47:56,152 INFO  [Logger]                              Edit Location on SDM                             
+2015-10-21 16:48:11,623 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:48:20,730 INFO  [Logger] Action being performed: Location Saved Successfully 
+2015-10-21 16:48:32,768 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-10-21 16:48:32,896 INFO  [Logger] Saved Location 
+2015-10-21 16:48:32,896 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-10-21 16:48:32,897 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:48:32,897 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-10-21 16:48:48,253 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:48:55,176 INFO  [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-10-21 16:48:55,774 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-10-21 16:48:55,995 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-10-21 16:48:55,996 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:48:55,996 INFO  [Logger]                              Adding Host to given Location                             
+2015-10-21 16:49:11,679 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:49:18,117 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:49:18,117 INFO  [Logger]                              Add a new Location on SDM                             
+2015-10-21 16:49:21,465 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:49:33,355 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:49:37,041 INFO  [Logger] Adding new Location 
+2015-10-21 16:49:39,781 INFO  [Logger] Saved New Location 
+2015-10-21 16:49:52,088 INFO  [Logger] Adding new Location 
+2015-10-21 16:49:54,570 INFO  [Logger] Saved New Location 
+2015-10-21 16:50:06,620 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-10-21 16:50:06,620 INFO  [Logger] Location was not there. Adding it and pausing current thread. 
+2015-10-21 16:50:22,138 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:50:22,138 INFO  [Logger] Added Location as Location was not there beforehand. 
+2015-10-21 16:50:29,058 INFO  [Logger] In 'Host' Tab 
+2015-10-21 16:50:29,290 INFO  [Logger] Adding new Host 
+2015-10-21 16:50:30,930 INFO  [Logger] Action being performed: This Host Name already exists! Please try another name. 
+2015-10-21 16:50:43,025 INFO  [Logger] Confirmation: This Host Name already exists! Please try another name. 
+2015-10-21 16:50:46,733 INFO  [Logger] In 'Host' Tab 
+2015-10-21 16:51:02,033 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:51:02,033 INFO  [Logger]                              Editing Host to given Location                             
+2015-10-21 16:51:17,504 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:51:24,074 INFO  [Logger] In 'Host' Tab 
+2015-10-21 16:51:39,642 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,678 INFO  [Logger] /swlibrary/swLib/local/FU_OT1445335713036/MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,704 INFO  [Logger] /swlibrary/swLib/local/FU_OT1445333660728/AAM_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,730 INFO  [Logger] /swlibrary/swLib/local/CM000000613/CM-Duplex_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,759 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,776 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,790 INFO  [Logger] /swlibrary/swLib/local/FU_OT1445335954346/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,809 INFO  [Logger] /swlibrary/swLib/local/SM000000081/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,817 INFO  [Logger] /swlibrary/swLib/local/CM000000612/CM-Simplex_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,828 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,836 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,844 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(sidtsmgr7.smgrdev.avaya.com) 
+2015-10-21 16:51:39,847 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:51:39,847 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 16:51:55,327 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:52:02,818 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 16:52:03,782 INFO  [Logger] Given Name 
+2015-10-21 16:53:22,905 INFO  [Logger] Selecting NetWorks 
+2015-10-21 16:53:25,742 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 16:53:25,742 INFO  [Logger] Accepted EULA 
+2015-10-21 16:53:44,251 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 16:53:44,251 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-10-21 16:53:44,253 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:53:44,253 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 16:54:31,051 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:54:43,529 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:54:51,885 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 16:54:52,287 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 16:54:52,287 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-21 16:54:52,293 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-21 16:54:52,293 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 16:54:52,293 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-21 16:54:52,295 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 16:54:55,431 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 16:55:04,591 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 16:55:04,591 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 16:55:08,828 INFO  [Logger] Logged in Successfully 
+2015-10-21 16:55:21,642 INFO  [Logger] Clicked on VM management 
+2015-10-21 16:55:29,704 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 16:55:30,679 INFO  [Logger] Given Name 
+2015-10-21 16:56:40,923 INFO  [Logger] Selecting NetWorks 
+2015-10-21 16:56:43,714 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 16:56:43,714 INFO  [Logger] Accepted EULA 
+2015-10-21 17:04:25,623 INFO  [Logger] Task Completed Successfully.. 
+2015-10-21 17:04:26,309 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-10-21 17:04:31,654 INFO  [Logger] Completed adding VM SM with IP 148.147.162.221 
+2015-10-21 17:04:31,655 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-10-21 17:04:31,655 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:04:31,655 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 17:04:47,210 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:05:01,211 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 17:05:17,570 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 17:05:22,571 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:05:22,571 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 17:05:38,236 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:06:24,979 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-21 17:06:25,639 INFO  [Logger] Confirmation:  
+2015-10-21 17:06:40,071 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 17:07:45,068 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:07:45,068 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 17:08:00,766 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:08:18,203 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 17:08:18,946 INFO  [Logger] Confirmation:  
+2015-10-21 17:08:32,640 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 17:10:07,635 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:10:07,635 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 17:10:23,246 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:13:15,405 ERROR [Logger] Something went wrong :( 
+2015-10-21 17:13:15,405 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 17:13:15,406 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:13:15,406 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 17:13:31,287 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:13:46,943 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-21 17:15:26,939 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:15:26,940 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 17:15:42,575 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:15:54,113 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-10-21 17:15:54,735 INFO  [Logger] Confirmation:  
+2015-10-21 17:16:06,428 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-21 17:16:11,034 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-10-21 17:16:39,768 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 17:16:39,769 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-10-21 17:16:39,770 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:16:39,770 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 17:16:45,402 INFO  [Logger] Logged in Successfully 
+2015-10-21 17:16:57,329 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:17:04,405 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 17:17:04,824 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 17:17:04,824 INFO  [Logger] 148.147.162.221 IP is available 
+2015-10-21 17:17:04,826 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-10-21 17:17:04,826 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 17:17:04,826 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-10-21 17:17:04,828 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 17:17:06,679 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 17:17:16,312 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:17:16,312 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 17:17:21,401 INFO  [Logger] Logged in Successfully 
+2015-10-21 17:17:33,268 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:17:41,242 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 17:17:42,188 INFO  [Logger] Given Name 
+2015-10-21 17:18:52,625 INFO  [Logger] Selecting NetWorks 
+2015-10-21 17:18:55,762 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 17:18:55,762 INFO  [Logger] Accepted EULA 
+2015-10-21 17:21:05,350 INFO  [Logger] Failed test due to some issue .. Check Scrrenshot for the same. 
+2015-10-21 17:21:06,525 ERROR [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Error Code-CONNECTION_NOT_ESTABLISHED:: The VM was started but a network connection could not be established to it, this may indicate a network issue between this system and the VM or the VM may not have deployed successfully. Please check the network configuration and the VM status from its management interface if connection can be made. :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy failed 
+2015-10-21 17:21:06,779 ERROR [Logger] Something went wrong :( 
+2015-10-21 17:21:06,779 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 17:21:06,977 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:21:06,977 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 17:21:23,267 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:21:35,541 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 17:21:51,340 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 17:21:56,341 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:21:56,341 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 17:22:12,025 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:22:35,619 ERROR [Logger] Something went wrong :( 
+2015-10-21 17:22:35,620 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 17:23:01,397 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 17:24:06,395 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:24:06,395 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 17:24:22,059 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:24:33,994 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 17:24:34,700 INFO  [Logger] Confirmation:  
+2015-10-21 17:24:38,152 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 17:26:13,147 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:26:13,147 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 17:26:28,754 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:26:51,401 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:26:51,401 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 17:27:18,178 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:27:18,178 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 17:27:33,876 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:27:56,417 ERROR [Logger] Something went wrong :( 
+2015-10-21 17:27:56,417 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 17:28:22,374 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-21 17:28:24,853 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-10-21 17:28:35,345 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 17:28:35,346 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-02.ova 
+2015-10-21 17:28:35,347 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 17:28:35,347 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 17:28:39,831 INFO  [Logger] Logged in Successfully 
+2015-10-21 17:28:51,756 INFO  [Logger] Clicked on VM management 
+2015-10-21 17:28:59,433 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 17:28:59,891 ERROR [Logger] No free IP available for Installation. 
+2015-10-21 17:29:03,205 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 17:29:03,206 INFO  [Logger] Thread-3 21 Start 
+2015-10-21 18:23:51,093 ERROR [Logger] Something went wrong :( 
+2015-10-21 18:23:51,093 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 18:23:51,094 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:23:51,094 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 18:24:06,599 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:24:16,202 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 18:24:32,203 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 18:24:37,204 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:24:37,204 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 18:24:52,691 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:25:04,349 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-21 18:25:04,950 INFO  [Logger] Confirmation:  
+2015-10-21 18:25:18,733 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 18:26:23,730 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:26:23,730 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 18:26:39,126 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:26:48,800 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 18:26:49,400 INFO  [Logger] Confirmation:  
+2015-10-21 18:27:03,093 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 18:28:38,088 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:28:38,088 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 18:28:53,522 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:31:50,334 ERROR [Logger] Something went wrong :( 
+2015-10-21 18:31:50,334 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 18:31:50,335 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:31:50,335 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 18:32:05,856 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:32:15,849 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-10-21 18:32:16,480 INFO  [Logger] Confirmation:  
+2015-10-21 18:32:30,365 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-21 18:34:10,360 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:34:10,361 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 18:34:25,851 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:34:36,622 INFO  [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-10-21 18:34:37,228 INFO  [Logger] Confirmation:  
+2015-10-21 18:34:51,127 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-21 18:34:52,706 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-10-21 18:35:11,694 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 18:35:11,695 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-10-21 18:35:11,696 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:35:11,696 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 18:35:15,858 INFO  [Logger] Logged in Successfully 
+2015-10-21 18:35:27,762 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:35:34,525 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 18:35:34,903 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 18:35:34,904 INFO  [Logger] 148.147.162.221 IP is available 
+2015-10-21 18:35:34,905 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-10-21 18:35:34,905 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 18:35:34,905 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-10-21 18:35:34,907 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 18:35:36,311 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 18:35:46,896 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 18:35:46,896 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 18:35:51,493 INFO  [Logger] Logged in Successfully 
+2015-10-21 18:36:04,151 INFO  [Logger] Clicked on VM management 
+2015-10-21 18:36:12,248 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 18:36:13,167 INFO  [Logger] Given Name 
+2015-10-21 18:37:21,983 INFO  [Logger] Selecting NetWorks 
+2015-10-21 18:37:24,653 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 18:37:24,654 INFO  [Logger] Accepted EULA 
+2015-10-21 19:45:18,310 ERROR [Logger] Something went wrong :( 
+2015-10-21 19:45:18,320 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 19:45:18,501 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:45:18,501 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 19:45:34,248 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:45:45,091 INFO  [Logger] Clicked on - Edit VM 
+2015-10-21 19:46:01,090 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-10-21 19:46:06,090 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:46:06,090 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 19:46:21,534 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:46:32,668 INFO  [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-10-21 19:46:33,277 INFO  [Logger] Confirmation:  
+2015-10-21 19:46:46,945 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-10-21 19:47:51,954 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:47:51,954 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 19:48:07,420 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:48:17,525 INFO  [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-10-21 19:48:18,143 INFO  [Logger] Confirmation:  
+2015-10-21 19:48:31,831 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-10-21 19:50:06,855 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:50:06,855 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 19:50:22,335 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:53:23,105 ERROR [Logger] Something went wrong :( 
+2015-10-21 19:53:23,105 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 19:53:23,105 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:53:23,105 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 19:53:38,482 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:53:48,605 INFO  [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-10-21 19:53:49,278 INFO  [Logger] Confirmation:  
+2015-10-21 19:54:03,051 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-10-21 19:55:43,047 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:55:43,047 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 19:55:58,530 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:56:19,504 ERROR [Logger] Something went wrong :( 
+2015-10-21 19:56:19,504 INFO  [Logger] Check Screenshot for the same 
+2015-10-21 19:56:45,363 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-10-21 19:56:47,984 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-10-21 19:57:06,352 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 19:57:06,361 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-10-21 19:57:06,362 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:57:06,362 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 19:57:12,475 INFO  [Logger] Logged in Successfully 
+2015-10-21 19:57:25,074 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:57:31,676 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 19:57:32,117 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-10-21 19:57:32,117 INFO  [Logger] 148.147.162.225 IP is available 
+2015-10-21 19:57:32,118 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-10-21 19:57:32,118 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-10-21 19:57:32,118 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-10-21 19:57:32,130 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-10-21 19:57:33,843 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-10-21 19:57:44,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 19:57:44,827 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-10-21 19:57:49,257 INFO  [Logger] Logged in Successfully 
+2015-10-21 19:58:02,396 INFO  [Logger] Clicked on VM management 
+2015-10-21 19:58:10,144 INFO  [Logger] Clicked on - Add new VM 
+2015-10-21 19:58:11,124 INFO  [Logger] Given Name 
+2015-10-21 19:59:26,706 INFO  [Logger] Selecting NetWorks 
+2015-10-21 19:59:29,319 INFO  [Logger] Accepted EULA ,clicked. 
+2015-10-21 19:59:29,319 INFO  [Logger] Accepted EULA 
+2015-10-21 20:33:02,105 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:02,105 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-10-21 20:33:09,125 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:09,125 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-10-21 20:33:16,142 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:16,142 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-10-21 20:33:23,143 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:23,143 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-10-21 20:33:25,143 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:25,144 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-10-21 20:33:27,154 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:27,154 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-10-21 20:33:40,063 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-10-21 20:33:40,077 INFO  [Logger] InnerThread: Choosen OVA MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova 
+2015-10-21 20:33:40,079 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-21 20:33:40,079 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-10-21 20:33:44,556 INFO  [Logger] Logged in Successfully 
+2015-10-21 20:33:56,451 INFO  [Logger] Clicked on VM management 
+2015-10-21 20:34:03,241 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-10-21 20:34:03,729 ERROR [Logger] No free IP available for Installation. 
+2015-10-21 20:34:04,287 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 20:34:04,287 INFO  [Logger] Thread-14 74 Start 
+2015-10-21 20:34:04,550 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 20:34:04,550 INFO  [Logger] Thread-11 59 Start 
+2015-10-21 20:34:05,041 INFO  [Logger] InnerThread: Test Started 
+2015-10-21 20:34:05,041 INFO  [Logger] Thread-6 36 Start 
