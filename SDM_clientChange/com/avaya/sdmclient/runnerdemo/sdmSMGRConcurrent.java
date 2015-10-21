@@ -1,7 +1,6 @@
 package com.avaya.sdmclient.runnerdemo;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -9,7 +8,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -233,6 +231,7 @@ public class sdmSMGRConcurrent {
 
 			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
+			Thread.sleep(250);
 			drive.findElement(By.xpath(locator.getProperty("EditHost"))).click();
 			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 
@@ -332,7 +331,7 @@ public class sdmSMGRConcurrent {
 			
 			drive.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
 
-			obj.confirmDialogBox(drive);
+			obj.confirmDialogBox(drive); 
 
 			logClass.endTestCase("Deleted Host");
 		}
@@ -466,7 +465,7 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 			Thread.sleep(4500);
 			
-			obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")), shortVMName, 6, true, 10, "Status Details");
+			obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 
 //			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
 //			logClass.info("Checking Status Details");
@@ -588,7 +587,7 @@ public class sdmSMGRConcurrent {
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
 			logClass.endTestCase("Started VM successfully");
-			Thread.sleep(60000);
+			Thread.sleep(90000);
 		}
 
 
@@ -666,14 +665,14 @@ public class sdmSMGRConcurrent {
 			drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
-			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,"Status Details");
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
 			if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
 			
-			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,"Status Details");		
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 			
 			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
@@ -720,9 +719,9 @@ public class sdmSMGRConcurrent {
 
 			String shortVMName = obj.shortVMName(VMName);
 			
-			//obj.goHome(drive);
+			obj.goHome(drive);
 
-			obj.loginToSite(drive);
+			//obj.loginToSite(drive);
 			
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 

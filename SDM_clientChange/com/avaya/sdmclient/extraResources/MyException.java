@@ -1,8 +1,11 @@
 package com.avaya.sdmclient.extraResources;
 
+import java.util.GregorianCalendar;
+
 public class MyException extends Exception {
 	public MyException(String message) {
         super(message);
-        System.out.println(message);
+        GregorianCalendar gcalendar = new GregorianCalendar();
+        System.out.println(message+"\n_"+gcalendar.getTimeInMillis());
     }
 }

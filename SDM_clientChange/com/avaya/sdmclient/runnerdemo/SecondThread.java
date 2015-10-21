@@ -131,7 +131,7 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(4500);
 
 			
-			obj.checkSuccessOrFailure(driverC, By.id(locator.getProperty("vmDeployStatus")), shortVMName, 6, true, 250, "Status Details");
+			obj.checkSuccessOrFailure(driverC, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 //			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 //			logClass.info("Checking Status Details");
 //			
@@ -143,7 +143,7 @@ import com.avaya.sdmclient.vm.VM;
 //			System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), driverC, 1500, "Completed","test"+shortVMName,"VM","Status Details"));
 //			Thread.sleep(1000);
 			//obj.StatusCheck(driver, "VM Deployment Completed", 20);
-			obj.closeWindow(driverC);
+			//obj.closeWindow(driverC);
 			Thread.sleep(5000);
 
 		}
@@ -246,7 +246,7 @@ import com.avaya.sdmclient.vm.VM;
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(driverC, "Virtual Machines");
 			logClass.endTestCase("Started VM successfully");
-			Thread.sleep(60000);
+			Thread.sleep(90000);
 		}
 
 
@@ -318,14 +318,14 @@ import com.avaya.sdmclient.vm.VM;
 			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
-			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 8, true,10,"Status Details");
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
 			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
 			
-			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10,"Status Details");		
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10,0,"Status Details");		
 			
 			Thread.sleep(2500);
 			logClass.endTestCase("VM refreshed Successfully");
@@ -370,7 +370,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.goHome(driverC);
 
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "HostName"));
+			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 

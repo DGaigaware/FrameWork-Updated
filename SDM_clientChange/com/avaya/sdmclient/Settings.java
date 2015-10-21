@@ -84,7 +84,7 @@ public class Settings {
 	    File imageFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 		GregorianCalendar gcalendar = new GregorianCalendar();
-		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+gcalendar.getTimeInMillis()+".png";
+		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"_"+gcalendar.getTimeInMillis()+".png";
 		File failureImageFile=new File(failureImageFileName);
 		FileUtils.moveFile(imageFile, failureImageFile);
 		logClass.error("Something went wrong :(");
@@ -185,9 +185,9 @@ public class Settings {
 	}
 	
 	//Click on deploy button for VM
-	public void deployButtonClickForVM(WebDriver driver){
+	public void deployButtonClickForVM(WebDriver driver) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
+		float opacity = 0;
 		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
 		System.out.println(elem2.size());
@@ -199,9 +199,16 @@ public class Settings {
 				if(ee.getText().equals("Deploy"))
 				{	//System.out.println(ee.getAttribute("id"));
 					//System.out.println(ee.getText());
-					System.out.println(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity"));
-					ee.click();
-					break;
+					opacity = Float.parseFloat(driver.findElement(By.id(ee.getAttribute("id"))).getCssValue("opacity"));
+					System.out.println(opacity);
+					if(opacity==1)
+					{
+						ee.click();
+						break;
+					}
+					else{
+						throw new MyException("All mandatory fields are not filled properly, please fill it properly.\n Exiting..");
+					}
 				}
 			}
 	}
@@ -529,6 +536,7 @@ public class Settings {
 		}
 		try{
 			driver.switchTo().activeElement();
+			Thread.sleep(450);
 			//System.out.println(driver.switchTo().activeElement().getText());
 			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
@@ -741,7 +749,7 @@ public class Settings {
 		List<String> types = new ArrayList<>();
 		List<String> ret = new ArrayList<>();
 		String returnStr = "";
-		String refStr = "";
+		String refStrForRefreshItems = "";
 		
 		types.add("newlocationview");
 		types.add("editlocationview");
@@ -754,40 +762,40 @@ public class Settings {
 		if(input.equals("AddLocation") || input.equals("AddLocation1"))
 			{
 				returnStr = types.get(0);
-				refStr = "locationgridpanel";
+				refStrForRefreshItems = "locationgridpanel";
 			}
 		else if(input.equals("EditLocation"))
 			{
 				returnStr = types.get(1);
-				refStr = "locationgridpanel";
+				refStrForRefreshItems = "locationgridpanel";
 			}
 		else if(input.equals("AddHost") || input.equals("AddHost1"))
 			{
 				returnStr = types.get(2);
-				refStr = "host_view";
+				refStrForRefreshItems = "host_view";
 			}
 		else if(input.equals("EditHost"))
 			{
 				returnStr = types.get(3);
-				refStr = "host_view";
+				refStrForRefreshItems = "host_view";
 			}//
 		else if(input.equals("AddVM"))
 		{
 			returnStr = types.get(4);
-			refStr = "";
+			refStrForRefreshItems = "";
 		}
 		else if(input.equals("ChangeNetWorkParams"))
 		{
 			returnStr = types.get(5);
-			refStr = "";
+			refStrForRefreshItems = "";
 		}
 		else if(input.equals("UpdatePwdHost"))
 		{
 			returnStr = types.get(6);
-			refStr = "";
+			refStrForRefreshItems = "";
 		}
 		ret.add(returnStr);
-		ret.add(refStr);
+		ret.add(refStrForRefreshItems);
 		
 		for(String s : ret)
 			System.out.println("Choosen values: "+s);
@@ -1253,11 +1261,12 @@ public class Settings {
 		return fPath+returnStr;
 	}
 	
-	public void loginToSite(WebDriver driver){
+	public void loginToSite(WebDriver driver) throws IOException, InterruptedException{
+		setup();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 		//driver.get("https://pdev55vm2.smgrdev.avaya.com");
-		driver.get("https://pdev55vm2.smgrdev.avaya.com");
+		driver.get(locator.getProperty("SMGRURLAlt"));
 		
 		driver.findElement(By.id("IDToken1")).sendKeys("admin");
 	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
@@ -1516,34 +1525,35 @@ public class Settings {
 	}
 
 	@SuppressWarnings("deprecation")
-	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int time,boolean b,int count,String linkText) throws MyException{
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(time, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
+	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int timeOutForException,boolean b,int noOfTimeOut,int counter,String linkText) throws MyException, IOException{
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(timeOutForException, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
 		Object o = null;
 		boolean check = false;
-		int counter = 0;
+		//int counter = 0;
 		
-		if(counter<count){
+		if(counter<noOfTimeOut){
 			if(b){
 				try{
 					chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
-					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
+					wait.until(ExpectedConditions.textToBePresentInElement(locator, "VM Deploy Completed"));
 					System.out.println("Task Completed Successfully..");
 					logClass.info("Task Completed Successfully..");
 					logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					//check = true;
 					closeWindow(driver);
-					counter = count+1;
+					System.out.println("Total time taken in seconds: "+noOfTimeOut*timeOutForException);
+					counter = noOfTimeOut+1;
 				}
 				
 				catch(Exception e){
 					//closeWindow(driver);
 					System.out.println("Testing for Completion or failure..");
-					System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=false;
 					counter++;
-					System.out.println(counter);
-					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter,linkText);
+					System.out.println("Count cycle : "+counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,timeOutForException, b,noOfTimeOut,counter,linkText);
 				}
 			}
 			
@@ -1558,20 +1568,23 @@ public class Settings {
 					check = true;
 					takeScreenShotForDriver(driver);
 					closeWindow(driver);
-					counter = count+1;
+					System.out.println("Total time taken in seconds: "+noOfTimeOut*timeOutForException);
+					counter = noOfTimeOut+1;
 				}
 				catch(Exception e){
 					System.out.println("Testing for failure or Completion..");
-					System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=true;
 					counter++;
-					System.out.println(counter);
-					o = checkSuccessOrFailure(driver, locator, vmName,time, b,counter,linkText);
+					System.out.println("Count cycle : "+counter);
+					o = checkSuccessOrFailure(driver, locator, vmName,timeOutForException, b,noOfTimeOut,counter,linkText);
 				}
 			}
 		}
 		else{
 			System.out.println("Timed out..");
+			takeScreenShotForDriver(driver);
+			throw new MyException("Operation Timed out... ");
 		}
 		
 		if(check){
@@ -1579,8 +1592,8 @@ public class Settings {
 			throw new MyException("Test case failed .. Check screenshot for the same.");
 			//o = System.out.toString();println("Passed");
 		}
-		else 
-			System.out.println("Completed task..");
+//		else 
+//			System.out.println("Completed task..");
 		
 		return o;
 		

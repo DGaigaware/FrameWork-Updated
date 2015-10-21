@@ -20,7 +20,7 @@ public class scpFilesFromSMGR {
 	@SuppressWarnings("unused")
 	public void scpFile() throws JSchException, IOException, SftpException{
 		String username = "admin";
-		String host = "pdev55vm2.smgrdev.avaya.com";
+		String host = "sidtsmgr7.smgrdev.avaya.com";
 		String pass = "Avaya123$";
 		String strToscp = "";
 		String command = "find /swlibrary/swLib/local  -name \"*.ovf\"";
