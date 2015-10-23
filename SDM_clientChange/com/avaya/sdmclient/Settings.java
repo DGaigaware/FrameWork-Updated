@@ -1266,7 +1266,7 @@ public class Settings {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 		//driver.get("https://pdev55vm2.smgrdev.avaya.com");
-		driver.get(locator.getProperty("SMGRURLAlt"));
+		driver.get(locator.getProperty("SMGRURL"));
 		
 		driver.findElement(By.id("IDToken1")).sendKeys("admin");
 	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
@@ -1534,17 +1534,21 @@ public class Settings {
 		if(counter<noOfTimeOut){
 			if(b){
 				try{
-					chooseLink(driver, vmName,"VM",linkText);
+					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
+					System.out.println("SuccessTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "VM Deploy Completed"));
+					System.out.println("SuccessTest Passed");
 					System.out.println("Task Completed Successfully..");
 					logClass.info("Task Completed Successfully..");
 					logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					//check = true;
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+noOfTimeOut*timeOutForException);
+					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
+				
+				
 				
 				catch(Exception e){
 					//closeWindow(driver);
@@ -1559,16 +1563,18 @@ public class Settings {
 			
 			else{
 				try{
-					chooseLink(driver, vmName,"VM",linkText);
+					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
+					System.out.println("FailureTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
+					System.out.println("FailedTest");
 					System.out.println("Task Failed..");
 					logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
 					logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					check = true;
 					takeScreenShotForDriver(driver);
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+noOfTimeOut*timeOutForException);
+					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
 				catch(Exception e){
