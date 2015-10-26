@@ -12,7 +12,7 @@
     </packages> 
   -->
       <classes>
-         <class name="com.avaya.sdmclient.runnerdemo.SecondThread2" />
+         <class name="com.avaya.sdmclient.runnerdemo.SecondThread" />
       </classes> 
       
    </test>
