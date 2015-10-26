@@ -24163,3 +24163,52 @@ null (vmId = 12150):: Unable to find vm: testAAM
 2015-10-23 16:41:03,616 INFO  [Logger] *************************Started Testing****************************** 
 2015-10-23 16:41:03,616 INFO  [Logger]                              Delete VM to given Location and Host                             
 2015-10-23 16:41:19,154 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:13:37,102 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:13:37,116 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:13:40,639 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:13:52,542 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:13:59,159 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:13:59,159 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:18:06,520 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:18:06,521 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:18:11,336 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:18:23,237 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:18:27,535 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:18:27,535 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:19:55,192 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:19:55,193 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:20:00,067 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:20:11,990 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:20:19,826 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:20:19,827 INFO  [Logger] Check Screenshot for the same 
+2015-10-26 11:20:19,829 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:20:19,829 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:21:49,243 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:21:49,243 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:21:52,997 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:22:04,903 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:22:12,913 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:22:12,913 INFO  [Logger] Check Screenshot for the same 
+2015-10-26 11:22:12,919 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:22:12,919 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:24:20,681 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:24:20,681 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:24:23,626 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:24:35,520 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:24:58,056 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:24:58,056 INFO  [Logger] Check Screenshot for the same 
+2015-10-26 11:25:09,675 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:25:09,675 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:26:34,592 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:26:34,593 INFO  [Logger]                              Check graphs for hosts                             
+2015-10-26 11:26:37,645 INFO  [Logger] Logged in Successfully 
+2015-10-26 11:26:49,556 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:27:12,203 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:27:12,203 INFO  [Logger] Check Screenshot for the same 
+2015-10-26 11:27:12,207 INFO  [Logger] *************************Started Testing****************************** 
+2015-10-26 11:27:12,208 INFO  [Logger]                              Check graphs for VMs                             
+2015-10-26 11:27:27,761 INFO  [Logger] Clicked on VM management 
+2015-10-26 11:27:47,235 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:27:47,235 INFO  [Logger] Check Screenshot for the same 
+2015-10-26 11:28:03,441 ERROR [Logger] Something went wrong :( 
+2015-10-26 11:28:03,441 INFO  [Logger] Check Screenshot for the same 

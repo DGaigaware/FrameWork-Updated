@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent">
+      <class name="com.avaya.sdmclient.monitorgraphs.CheckGraphs">
         <methods>
-          <include name="DeleteVM"/>
-          <include name="startNewThread"/>
+          <include name="checkGraphForVMs"/>
           <include name="setup"/>
+          <include name="checkGraphForHosts"/>
         </methods>
-      </class> <!-- com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent -->
+      </class> <!-- com.avaya.sdmclient.monitorgraphs.CheckGraphs -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

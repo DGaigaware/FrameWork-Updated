@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 19 18:49:37 IST 2015</td>
+<td>Started on:</td><td>Mon Oct 26 11:26:34 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (41 ms)</td>
+<tr><td>Total time:</td><td>88 seconds (88879 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,125 +67,23 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent.DeleteVM()'><b>DeleteVM</b><br>Test class: com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent<br>Test method: Deleting VM to given Location and Host</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;IP&apos; is required by @Test on method DeleteVM but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1195622215\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1287)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1004)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1093)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace863961716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace863961716'><pre>org.testng.TestNGException: 
-Parameter &apos;IP&apos; is required by @Test on method DeleteVM but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1195622215\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1287)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1004)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1093)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@3482c596</td></tr>
+<td title='com.avaya.sdmclient.monitorgraphs.CheckGraphs.checkGraphForHosts()'><b>checkGraphForHosts</b><br>Test class: com.avaya.sdmclient.monitorgraphs.CheckGraphs<br>Test method: Check graphs for hosts</td>
+<td></td>
+<td>37</td>
+<td>com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd</td></tr>
 <tr>
-<td title='com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent.startNewThread()'><b>startNewThread</b><br>Test class: com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent<br>Test method: Starting New Thread</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;IP&apos; is required by @Test on method startNewThread but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1195622215\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1287)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1004)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1093)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace758553195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace758553195'><pre>org.testng.TestNGException: 
-Parameter &apos;IP&apos; is required by @Test on method startNewThread but has not been marked @Optional or defined
-in C:\Users\bshingala\AppData\Local\Temp\testng-eclipse-1195622215\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:148)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1287)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1004)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1093)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent@3482c596</td></tr>
+<td title='com.avaya.sdmclient.monitorgraphs.CheckGraphs.checkGraphForVMs()'><b>checkGraphForVMs</b><br>Test class: com.avaya.sdmclient.monitorgraphs.CheckGraphs<br>Test method: Check graphs for VMs</td>
+<td></td>
+<td>51</td>
+<td>com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,201 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="74874" started-at="2015-10-23T11:10:29Z" finished-at="2015-10-23T11:11:44Z">
+  <suite name="Default suite" duration-ms="88879" started-at="2015-10-26T05:56:34Z" finished-at="2015-10-26T05:58:03Z">
     <groups>
     </groups>
-    <test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova" duration-ms="74874" started-at="2015-10-23T11:10:29Z" finished-at="2015-10-23T11:11:44Z">
-      <class name="com.avaya.sdmclient.runnerdemo.SecondThread2">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThread2@2019666a]" name="setup" is-config="true" duration-ms="15" started-at="2015-10-23T16:40:29Z" finished-at="2015-10-23T16:40:29Z">
+    <test name="Default test" duration-ms="88879" started-at="2015-10-26T05:56:34Z" finished-at="2015-10-26T05:58:03Z">
+      <class name="com.avaya.sdmclient.monitorgraphs.CheckGraphs">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="setup" is-config="true" duration-ms="10" started-at="2015-10-26T11:26:34Z" finished-at="2015-10-26T11:26:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThread2@2019666a]" name="EditVM" duration-ms="34335" started-at="2015-10-23T16:40:29Z" description="Editing VM to given Location and Host" finished-at="2015-10-23T16:41:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 11.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: a7740ccc-fbfd-4724-8daf-46ff7938bd73
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 11.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: a7740ccc-fbfd-4724-8daf-46ff7938bd73
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:153)
-	at com.avaya.sdmclient.Settings.findVMForHost(Settings.java:331)
-	at com.avaya.sdmclient.runnerdemo.SecondThread2.EditVM(SecondThread2.java:168)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8981)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8574)
-	at <anonymous class>.WebElement.getElementText(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11722)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method status="PASS" signature="checkGraphForHosts()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="checkGraphForHosts" duration-ms="37617" started-at="2015-10-26T11:26:34Z" description="Check graphs for hosts" finished-at="2015-10-26T11:27:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EditVM -->
-        <test-method status="FAIL" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThread2@2019666a]" name="DeleteVM" duration-ms="34750" started-at="2015-10-23T16:41:03Z" description="Deleting VM to given Location and Host" finished-at="2015-10-23T16:41:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 11.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: a7740ccc-fbfd-4724-8daf-46ff7938bd73
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 11.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: a7740ccc-fbfd-4724-8daf-46ff7938bd73
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:153)
-	at com.avaya.sdmclient.Settings.findVMForHost(Settings.java:331)
-	at com.avaya.sdmclient.runnerdemo.SecondThread2.DeleteVM(SecondThread2.java:378)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8981)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8574)
-	at <anonymous class>.WebElement.getElementText(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11722)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous5960597725949970796webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        </test-method> <!-- checkGraphForHosts -->
+        <test-method status="PASS" signature="checkGraphForVMs()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="checkGraphForVMs" duration-ms="51234" started-at="2015-10-26T11:27:12Z" description="Check graphs for VMs" finished-at="2015-10-26T11:28:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteVM -->
-        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThread2@2019666a]" name="startNewThread" duration-ms="5724" started-at="2015-10-23T16:41:38Z" description="Starting New Thread" finished-at="2015-10-23T16:41:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[148.147.162.225]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startNewThread -->
-      </class> <!-- com.avaya.sdmclient.runnerdemo.SecondThread2 -->
-    </test> <!-- SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova -->
-  </suite> <!-- Suite1 -->
+        </test-method> <!-- checkGraphForVMs -->
+      </class> <!-- com.avaya.sdmclient.monitorgraphs.CheckGraphs -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
