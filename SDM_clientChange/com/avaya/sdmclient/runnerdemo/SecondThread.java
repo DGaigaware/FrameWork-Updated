@@ -166,15 +166,16 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.chooseTab(driverC, "Virtual Machines");
 			obj.findVMForHost(driverC, "test"+shortVMName);
-			
-			driverC.findElement(By.xpath(locator.getProperty("EditVM"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("EditVM"));
+			//driverC.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 			logClass.info("Clicked on - Edit VM");
 			Thread.sleep(750);
 
 			//driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVM"))).click();
 			
 			obj.editVMchooseFPorFQDN(driverC, "FQDN");
-			driverC.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("EditIPFQDNVMButton"));
+			//driverC.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
 			obj.editVM(driverC,IP,"test"+shortVMName+"edited");
 
@@ -205,8 +206,8 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(1500);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("StopVM")));
-
-			driverC.findElement(By.xpath(locator.getProperty("StopVM"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("StopVM"));
+			//driverC.findElement(By.xpath(locator.getProperty("StopVM"))).click();
 
 			obj.confirmDialogBox(driverC);
 			
@@ -236,8 +237,8 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-
-			driverC.findElement(By.xpath(locator.getProperty("VMStart"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("VMStart"));
+			//driverC.findElement(By.xpath(locator.getProperty("VMStart"))).click();
 
 			obj.confirmDialogBox(driverC);
 			
@@ -270,7 +271,8 @@ import com.avaya.sdmclient.vm.VM;
 			
 			obj.findMoreActionsButton(driverC);
 			Thread.sleep(500);
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConn"));
+			//driverC.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
 
 			Thread.sleep(500);
 			
@@ -315,7 +317,8 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(750);
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
 			Thread.sleep(250);
-			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConnConf"));
+			//driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
@@ -348,8 +351,8 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-
-			driverC.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("VMRestart"));
+			//driverC.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 
 			obj.confirmDialogBox(driverC);
 			
@@ -378,8 +381,8 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
-
-			driverC.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
+			obj.clickButtonxPath(driverC, locator.getProperty("VMDelete"));
+			//driverC.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 
 			obj.confirmDialogBox(driverC);
 			

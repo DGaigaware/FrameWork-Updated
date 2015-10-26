@@ -1655,26 +1655,26 @@ public class Settings {
 			uName = readFromFile(inputFileName, "CUSTLOGIN");
 			pwd = readFromFile(inputFileName, "CUSTPWD");
 			break;
-
-		/*case US:
-			uName = readFromFile(inputFileName, "CustPwd");
-			pwd = readFromFile(inputFileName, "CustPwd");
-			break;*/
+			
+		case US:
+			uName = readFromFile(inputFileName, "UName");
+			pwd = readFromFile(inputFileName, "USPWD");
+			break;
 
 		case AAM:
 			uName = readFromFile(inputFileName, "msg_login");
 			pwd = readFromFile(inputFileName, "msg_password");
 			break;
 
-		/*case AES:
-			uName = readFromFile(inputFileName, "CustPwd");
-			pwd = readFromFile(inputFileName, "CustPwd");
-			break;*/
+		case AES:
+			uName = readFromFile(inputFileName, "UName");
+			pwd = readFromFile(inputFileName, "AESPWD");
+			break;
 
-		/*case SecureAccessLinkGateway:
-			uName = readFromFile(inputFileName, "CustPwd");
-			pwd = readFromFile(inputFileName, "CustPwd");
-			break;*/
+		case SecureAccessLinkGateway:
+			uName = readFromFile(inputFileName, "UName");
+			pwd = readFromFile(inputFileName, "SALPWD");
+			break;
 
 		case MediaServer:
 			uName = readFromFile(inputFileName, "CUSTLOGIN");
@@ -1825,6 +1825,40 @@ public class Settings {
 		driver.findElement(By.id("autoLoadCheckBox-inputEl")).click();
 		Thread.sleep(1000);
 		confirmDialogBox(driver);
+	}
+	
+	public void findComboBoxForGraphs(WebDriver driver,String staticIdFrom,String eleText) throws MyException{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		String script = "var nl = document.getElementById(\""+staticIdFrom+"\").querySelectorAll('[id^=\"combobox\"]');return nl;";
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script);
+		String returnEleID = null;
+		
+		if(!elements.isEmpty()){
+			for(WebElement e : elements){
+				if(e.getText().replace("*", "").equals(eleText)){
+					System.out.println(e.getAttribute("id"));
+					returnEleID = e.getAttribute("id");
+					break;
+				}
+			}
+		}
+		if(returnEleID==null){
+			throw new MyException("Couldn't find ComboBox, check the Static ID which is given and ComboBox name");
+		}
+		
+		driver.findElement(By.id(returnEleID+"-inputEl")).click();
+		//return returnEleID;
+	}
+	
+	public void clickButtonxPath(WebDriver driver,String buttonxPath) throws IOException, MyException{
+		float opacity = Float.parseFloat(driver.findElement(By.xpath(buttonxPath)).getCssValue("opacity"));
+		if(opacity==1){
+			driver.findElement(By.xpath(buttonxPath)).click();
+		}
+		else{
+			takeScreenShotForDriver(driver);
+			throw new MyException("Check if button is enabled or not..");
+		}
 	}
 
 }

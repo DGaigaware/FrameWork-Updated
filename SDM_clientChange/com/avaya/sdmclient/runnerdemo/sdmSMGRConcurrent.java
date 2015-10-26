@@ -39,30 +39,34 @@ public class sdmSMGRConcurrent {
 
 			obj.loginToSite(drive);
 
-			drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
+			//drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
 			logClass.info("Adding new Location");
 
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation");
 			Thread.sleep(250);
 			
-			obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
+			//obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
 			
-			drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
+			//drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
 			logClass.info("Saved New Location");
 
 			obj.errorBox(drive, obj.checkError(drive));
 			Thread.sleep(450);
 			//obj.refreshItems(drive, "AddLocation");
 			
-			drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
+			//drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
 			logClass.info("Adding new Location");
 
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation1");
 			Thread.sleep(250);
 			
-			obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
+			//obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
 			
-			drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
+			//drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
 			logClass.info("Saved New Location");
 
 			Thread.sleep(450);
@@ -347,7 +351,7 @@ public class sdmSMGRConcurrent {
 			
 			boolean _Check;
 
-			JavascriptExecutor js = (JavascriptExecutor)drive;
+			//JavascriptExecutor js = (JavascriptExecutor)drive;
 			//js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 
 			logClass.startTestCase("Adding VM to given Location and Host");
@@ -505,7 +509,8 @@ public class sdmSMGRConcurrent {
 			obj.chooseTab(drive, "Virtual Machines");
 			obj.findVMForHost(drive, "test"+shortVMName);
 			
-			drive.findElement(By.xpath(locator.getProperty("EditVM"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("EditVM"));
+			//drive.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 			logClass.info("Clicked on - Edit VM");
 			Thread.sleep(750);
 
@@ -546,7 +551,8 @@ public class sdmSMGRConcurrent {
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("StopVM")));
 
-			drive.findElement(By.xpath(locator.getProperty("StopVM"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("StopVM"));
+			//drive.findElement(By.xpath(locator.getProperty("StopVM"))).click();
 
 			obj.confirmDialogBox(drive);
 			
@@ -578,7 +584,8 @@ public class sdmSMGRConcurrent {
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
 
-			drive.findElement(By.xpath(locator.getProperty("VMStart"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("VMStart"));
+			//drive.findElement(By.xpath(locator.getProperty("VMStart"))).click();
 
 			obj.confirmDialogBox(drive);
 			
@@ -613,7 +620,8 @@ public class sdmSMGRConcurrent {
 			
 			obj.findMoreActionsButton(drive);
 			Thread.sleep(500);
-			drive.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConn"));
+			//drive.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
 
 			Thread.sleep(500);
 			
@@ -662,7 +670,8 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(750);
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
 			Thread.sleep(250);
-			drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConnConf"));
+			//drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
 			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
@@ -697,8 +706,8 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-
-			drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("VMRestart"));
+			//drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 
 			Thread.sleep(1500);
 			//obj.confirmDialogBox(drive);
@@ -730,8 +739,8 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
-
-			drive.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("VMDelete"));
+			//drive.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 
 			obj.confirmDialogBox(drive);
 
