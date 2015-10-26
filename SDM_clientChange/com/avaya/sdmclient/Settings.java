@@ -1537,7 +1537,7 @@ public class Settings {
 					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
 					System.out.println("SuccessTest");
-					wait.until(ExpectedConditions.textToBePresentInElement(locator, "VM Deploy Completed"));
+					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
 					System.out.println("SuccessTest Passed");
 					System.out.println("Task Completed Successfully..");
 					logClass.info("Task Completed Successfully..");

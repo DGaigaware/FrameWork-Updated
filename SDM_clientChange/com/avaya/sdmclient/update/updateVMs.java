@@ -119,7 +119,7 @@ public class updateVMs {
 		//obj.fluentWaitCloseOpen(locatorTo, drive, 2200, Test, VMName)
 		//System.out.println(obj.fluentWaitCloseOpen(By.id(locator.getProperty("vmDeployStatus")), drive, 2200, "Completed",VMName));
 		
-		obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")),VMName, 2200, true,10,"Status Details");
+		obj.checkSuccessOrFailure(drive,  By.id(locator.getProperty("vmDeployStatus")), VMName, 6, true, 350, 0, "Installation Details");
 		
 		Thread.sleep(1000);
 		//obj.StatusCheck(driver, "VM Deployment Completed", 20);

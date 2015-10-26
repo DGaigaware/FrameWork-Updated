@@ -130,7 +130,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			Thread.sleep(4500);
 
-			
+			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 			obj.checkSuccessOrFailure(driverC, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 //			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 //			logClass.info("Checking Status Details");
