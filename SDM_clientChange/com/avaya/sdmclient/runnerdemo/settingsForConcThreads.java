@@ -151,11 +151,9 @@ public class settingsForConcThreads {
 
 		for(String s : IPblacklist){
 			System.out.println("BlackListed "+s);
-			pr.setProperty(s, "BlackList");
 		}
 		for(String s : IPwhitelist){
 			System.out.println("WhiteListed "+s);
-			pr.setProperty(s, "WhiteList");
 		}
 
 		if(IPwhitelist.isEmpty())
@@ -171,8 +169,10 @@ public class settingsForConcThreads {
 				logClass.info("Checking whether IP is already in use or not..");
 				
 				for(int i=0;i<IPwhitelist.size();i++){
+					//System.out.println("Test: "+pr.getProperty(IPwhitelist.get(i)));
 					if(pr.getProperty(IPwhitelist.get(i)).equals("WhiteList"))
 						{
+							System.out.println("Looped: "+IPwhitelist.get(i));
 							returnIP = IPwhitelist.get(i);
 							break;
 						}

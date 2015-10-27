@@ -211,10 +211,9 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.confirmDialogBox(driverC);
 			
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-			obj.chooseTab(driverC, "Virtual Machines");
+//			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//			obj.chooseTab(driverC, "Virtual Machines");
 			logClass.endTestCase("Stopped VM successfully");
 			Thread.sleep(60000);
 		}
@@ -231,8 +230,6 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-
 			obj.chooseTab(driverC, "Virtual Machines");
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
@@ -242,10 +239,9 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.confirmDialogBox(driverC);
 			
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-			obj.chooseTab(driverC, "Virtual Machines");
+//			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//			obj.chooseTab(driverC, "Virtual Machines");
 			logClass.endTestCase("Started VM successfully");
 			Thread.sleep(90000);
 		}
@@ -262,12 +258,8 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-
 			obj.chooseTab(driverC, "Virtual Machines");
 			obj.findVMForHost(driverC,"test"+shortVMName);
-
-			//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
 			
 			obj.findMoreActionsButton(driverC);
 			Thread.sleep(500);
@@ -321,13 +313,14 @@ import com.avaya.sdmclient.vm.VM;
 			//driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
 			Thread.sleep(1000);
+			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
 			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
 				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
-			
+			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10,0,"Status Details");		
 			
 			Thread.sleep(2500);
@@ -344,8 +337,6 @@ import com.avaya.sdmclient.vm.VM;
 			obj.goHome(driverC);
 
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.chooseTab(driverC, "Virtual Machines");
 			obj.findVMForHost(driverC, "test"+shortVMName);
@@ -429,10 +420,10 @@ import com.avaya.sdmclient.vm.VM;
 					 try {
 						ob.runThread(drv);
 					} catch (ParserConfigurationException | SAXException | IOException | InterruptedException e) {
-						// TODO Auto-generated catch block
+						
 						e.printStackTrace();
 					} catch (MyException e) {
-						// TODO Auto-generated catch block
+				
 						e.printStackTrace();
 					}
 				 }
