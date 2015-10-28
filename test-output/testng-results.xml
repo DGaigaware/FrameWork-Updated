@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88879" started-at="2015-10-26T05:56:34Z" finished-at="2015-10-26T05:58:03Z">
+  <suite name="Default suite" duration-ms="64583" started-at="2015-10-28T13:40:59Z" finished-at="2015-10-28T13:42:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88879" started-at="2015-10-26T05:56:34Z" finished-at="2015-10-26T05:58:03Z">
-      <class name="com.avaya.sdmclient.monitorgraphs.CheckGraphs">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="setup" is-config="true" duration-ms="10" started-at="2015-10-26T11:26:34Z" finished-at="2015-10-26T11:26:34Z">
+    <test name="Default test" duration-ms="64583" started-at="2015-10-28T13:40:59Z" finished-at="2015-10-28T13:42:03Z">
+      <class name="com.avaya.sdmclient.runnerdemo.deleteVM">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.deleteVM@2f504d39]" name="setup" is-config="true" duration-ms="19" started-at="2015-10-28T19:10:59Z" finished-at="2015-10-28T19:10:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkGraphForHosts()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="checkGraphForHosts" duration-ms="37617" started-at="2015-10-26T11:26:34Z" description="Check graphs for hosts" finished-at="2015-10-26T11:27:12Z">
+        <test-method status="PASS" signature="DeleteVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.deleteVM@2f504d39]" name="DeleteVM" duration-ms="64552" started-at="2015-10-28T19:10:59Z" description="Deleting VM to given Location and Host" finished-at="2015-10-28T19:12:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkGraphForHosts -->
-        <test-method status="PASS" signature="checkGraphForVMs()[pri:0, instance:com.avaya.sdmclient.monitorgraphs.CheckGraphs@76c073fd]" name="checkGraphForVMs" duration-ms="51234" started-at="2015-10-26T11:27:12Z" description="Check graphs for VMs" finished-at="2015-10-26T11:28:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkGraphForVMs -->
-      </class> <!-- com.avaya.sdmclient.monitorgraphs.CheckGraphs -->
+        </test-method> <!-- DeleteVM -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.deleteVM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

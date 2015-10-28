@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="10">
 <test name="AES-7.0.0.0.0.13.20150629-e50-00.ova">
    
-<parameter name="IP" value="148.147.162.221"/>
+<parameter name="IP" value="148.147.162.225"/>
 <parameter name="VMName" value="AES-7.0.0.0.0.13.20150629-e50-00.ova"/>
       
     <!-- <packages>
@@ -12,7 +12,7 @@
     </packages> 
   -->
       <classes>
-         <class name="com.avaya.sdmclient.runnerdemo.c1" />
+         <class name="com.avaya.sdmclient.runnerdemo.SecondThread" />
       </classes> 
       
    </test>
