@@ -165,6 +165,7 @@ import com.avaya.sdmclient.vm.VM;
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			obj.clickButtonxPath(driverC, locator.getProperty("EditVM"));
 			//driverC.findElement(By.xpath(locator.getProperty("EditVM"))).click();
@@ -201,6 +202,7 @@ import com.avaya.sdmclient.vm.VM;
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			
 			Thread.sleep(1500);
@@ -231,6 +233,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
@@ -259,6 +262,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC,"test"+shortVMName);
 			
 			obj.findMoreActionsButton(driverC);
@@ -339,6 +343,8 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
@@ -347,9 +353,9 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.confirmDialogBox(driverC);
 			
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			obj.chooseTab(driverC, "Virtual Machines");
+//			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//			obj.chooseTab(driverC, "Virtual Machines");
 
 			logClass.endTestCase("Restarted VM successfully");
 			Thread.sleep(100000);
@@ -369,17 +375,18 @@ import com.avaya.sdmclient.vm.VM;
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 
 			obj.chooseTab(driverC, "Virtual Machines");
+			
+			Thread.sleep(1500);
 			obj.findVMForHost(driverC, "test"+shortVMName);
 
-			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
 			obj.clickButtonxPath(driverC, locator.getProperty("VMDelete"));
 			//driverC.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 
 			obj.confirmDialogBox(driverC);
 			
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			obj.chooseTab(driverC, "Virtual Machines");
+//			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//			obj.chooseTab(driverC, "Virtual Machines");
 
 			logClass.endTestCase("Deleted VM successfully");
 			

@@ -236,7 +236,7 @@ public class sdmSMGRConcurrent {
 
 			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
-			Thread.sleep(250);
+			Thread.sleep(1250);
 			
 			obj.clickButtonxPath(drive, locator.getProperty("EditHost"));
 			//drive.findElement(By.xpath(locator.getProperty("EditHost"))).click();
@@ -316,6 +316,7 @@ public class sdmSMGRConcurrent {
 //
 //		@Test(description="Deleting Host to given Location",priority=5)
 //
+		@Test(description="Deleting Host to given Location",priority=5)
 		public void DeleteHost() throws IOException, InterruptedException, MyException{
 			logClass.startTestCase("Deleting Host to given Location");
 
@@ -345,16 +346,13 @@ public class sdmSMGRConcurrent {
 			
 			boolean _Check;
 
-			//JavascriptExecutor js = (JavascriptExecutor)drive;
-			//js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
-
 			logClass.startTestCase("Adding VM to given Location and Host");
 
 			obj.goHome(drive);
 			//obj.loginToSite(drive);
 
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddHostHostName:"))){
-				//AddHost();
+				AddHost();
 				System.out.println("Adding Host");
 				obj.goHome(drive);
 				logClass.info("Added Host as Location was not there beforehand.");
@@ -494,8 +492,10 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(drive, "test"+shortVMName);
 			
+			Thread.sleep(900);
 			obj.clickButtonxPath(drive, locator.getProperty("EditVM"));
 			//drive.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 			logClass.info("Clicked on - Edit VM");
@@ -508,8 +508,9 @@ public class sdmSMGRConcurrent {
 
 			obj.editVM(drive,IP,"test"+shortVMName+"edited");
 
-			obj.checkFocus(drive, By.xpath(locator.getProperty("VMEditSave")));
-			drive.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
+			//obj.checkFocus(drive, By.xpath(locator.getProperty("VMEditSave")));
+			obj.clickButtonxPath(drive, locator.getProperty("VMEditSave"));
+			//drive.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
 			obj.errorBox(drive, obj.checkError(drive));
 			logClass.endTestCase("Edited VM Successfully");
@@ -532,6 +533,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(drive,"test"+shortVMName);
 			
 			Thread.sleep(1500);
@@ -566,6 +568,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
@@ -599,6 +602,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
@@ -689,6 +693,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
@@ -722,6 +727,7 @@ public class sdmSMGRConcurrent {
 
 			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1550);
 			obj.findVMForHost(drive, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));

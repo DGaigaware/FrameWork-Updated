@@ -1853,12 +1853,75 @@ public class Settings {
 	public void clickButtonxPath(WebDriver driver,String buttonxPath) throws IOException, MyException{
 		float opacity = Float.parseFloat(driver.findElement(By.xpath(buttonxPath)).getCssValue("opacity"));
 		if(opacity==1){
+			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
+			System.out.println(driver.findElement(By.xpath(buttonxPath)).isEnabled());
 			driver.findElement(By.xpath(buttonxPath)).click();
 		}
 		else{
 			takeScreenShotForDriver(driver);
 			throw new MyException("Check if button is enabled or not..");
 		}
+	}
+	
+	public Object checkCompletion(WebDriver driver,String vmName,int counter,int noOfTimeOut,int timeOutForException) throws MyException, IOException, InterruptedException{
+		Thread.sleep((timeOutForException*noOfTimeOut)/2);
+		
+		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
+		String rowID = "";
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(timeOutForException, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
+		Object o = null;
+		boolean check = false;
+		//.//*[@id='gridview-1193-record-ext-record-713']/td[8]/div
+		
+		if(counter<(noOfTimeOut/2)){
+		
+				try{
+					for(WebElement e : cells)
+					{	
+						if(e.getText().contains(vmName))
+							{
+								rowID = e.getAttribute("id");
+								System.out.println(rowID);
+							}
+					}
+					
+					if(rowID==null || rowID.isEmpty()){
+						takeScreenShotForDriver(driver);
+						throw new MyException("VM does not exist.. Please check for the same.");
+					}
+				
+					String xPathForColumn = ".//*[@id='"+rowID+"']/td[8]/div";
+					System.out.println("Sample: "+driver.findElement(By.xpath(xPathForColumn)).getText());
+					
+					WebElement e = driver.findElement(By.xpath(xPathForColumn));
+					
+					wait.until(ExpectedConditions.textToBePresentInElement(e, "VM_START:COMPLETED.."));
+					System.out.println("SuccessTest Passed");
+					System.out.println("Task Completed Successfully..");
+					logClass.info("Task Completed Successfully..");
+					//check = true;
+					System.out.println("Total time taken in seconds: "+((counter*timeOutForException)+timeOutForException*noOfTimeOut/2));
+					counter = noOfTimeOut+1;
+				}
+				
+				catch(Exception exception){
+					
+					System.out.println("Testing for Completion or failure..");
+					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					counter++;
+					System.out.println("Count cycle : "+counter);
+					o = checkCompletion(driver, vmName, counter, noOfTimeOut, timeOutForException);
+				}
+			
+		}
+		else{
+			System.out.println("Timed out..");
+			takeScreenShotForDriver(driver);
+			throw new MyException("Operation Timed out... ");
+		}
+		
+		return o;
 	}
 
 }
