@@ -32,12 +32,12 @@ public class updateVMs {
 	@Parameters({"VMName"})
 	public void RefreshVM(String VMName) throws InterruptedException, IOException, MyException{
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
 
 		obj.goToSDMCliURL(drive);
 
-		obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "TempHost"));
+		obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHost1HostName:"));
 
 		obj.chooseTab(drive, "Virtual Machines");
 		obj.findVMForHost(drive,VMName);
@@ -65,25 +65,18 @@ public class updateVMs {
 
 		Thread.sleep(5000);
 
-		obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "TempHost"));
-
-		obj.chooseTab(drive, "Virtual Machines");
-
 		obj.chooseLink(drive, VMName,"VM","Status Details");
-		obj.StatusCheck(drive, "VM Trust Establishment Completed",50);
-
+		Thread.sleep(1500);
+		obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"), VMName, 6, true, 10, 0, "Status Details");
 		obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
 
 		Thread.sleep(1500);
-		if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-			drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+		obj.clickButtonxPath(drive, locator.getProperty("RefreshVM"));
 
 		Thread.sleep(5000);
 		
 		obj.chooseLink(drive, VMName,"VM","Status Details");
-		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "VM Refresh Completed"));
-		obj.StatusCheck(drive, "VM Refresh Completed", 20);
-
+		obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"), VMName, 6, true, 10, 0, "Status Details");
 		Thread.sleep(2500);
 
 		logClass.endTestCase("VM refreshed Successfully");
@@ -98,9 +91,10 @@ public class updateVMs {
 
 		obj.goToSDMCliURL(drive);
 		
-		obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "TempHost"));
+		obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHost1HostName:"));
 
 		obj.chooseTab(drive, "Virtual Machines");
+		Thread.sleep(1500);
 		obj.findVMForHost(drive,VMName);
 		
 		obj.findMoreActionsButton(drive);
@@ -111,9 +105,12 @@ public class updateVMs {
 		obj.updateVMFilePath(drive, obj.readFromFile("inputsm.properties", "UpdatePatch"));
 		//panelselectOVALocalUpdateVM-body
 		
-		drive.findElement(By.id("proceedUpdate1VM")).click();
+		obj.clickButtonxPath(drive, locator.getProperty("UpdateVM"));
+		//drive.findElement(By.id("proceedUpdate1VM-btnEl")).click();
 		
 		obj.findButtonUpdate(drive);
+		Thread.sleep(5000);
+		
 		
 		obj.chooseLink(drive, VMName,"VM","Status Details");
 		//obj.fluentWaitCloseOpen(locatorTo, drive, 2200, Test, VMName)

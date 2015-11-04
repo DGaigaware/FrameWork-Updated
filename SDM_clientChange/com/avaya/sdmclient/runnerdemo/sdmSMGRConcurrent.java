@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -322,9 +323,9 @@ public class sdmSMGRConcurrent {
 
 			obj.goHome(drive);
 
-			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocation1Name:"));
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 
-			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
+			obj.findHostInGrid(drive, obj.readFromFile("input.properties", "AddHost1HostName:"));
 
 			obj.checkFocus(drive, By.xpath(locator.getProperty("HostDelete")));
 			

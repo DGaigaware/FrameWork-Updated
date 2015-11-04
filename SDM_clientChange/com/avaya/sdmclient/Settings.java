@@ -1705,7 +1705,7 @@ public class Settings {
 		
 		for(WebElement e : elem2){
 			System.out.println(e.getAttribute("id")+" "+e.getText());
-			if(e.getText().equals("Select bin file from Local SMGR:")){
+			if(e.getText().equals("Select bin file from Local SDM Client:")){
 				System.out.println(e.getAttribute("id"));
 				tempID = e.getAttribute("id").concat("-inputEl");
 				break;
