@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Concurrent Suite" verbose="2" >
-<test name="SM-7.0.0.0.700007-e55-01.ova" preserve-order="true">
+<test name="SM-7.0.0.0.700007-e55-02.ova" preserve-order="true">
    
 <parameter name="IP" value="148.147.162.221"/>
-<parameter name="VMName" value="SM-7.0.0.0.700007-e55-01.ova"/>
+<parameter name="VMName" value="SM-7.0.0.0.700007-e55-02.ova"/>
       
     <!-- <packages>
       <package name="com.avaya.smgr.Scheduler.*"/> 
