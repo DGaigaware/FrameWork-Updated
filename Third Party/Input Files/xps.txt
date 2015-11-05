@@ -2,3 +2,4 @@ preceding-sibling::div[@class='rt-grid-2 rt-omega']
 .//*[@id='msTable_core_table_content']//td[2][contains(text(),'testCM')]
 
 .//*[@id='msTable_core_table_content']//td[2][contains(text(),'testCM')]/preceding-sibling::div[@name='msTable:_s']
+.//*[@id='msTable_core_table_content']//td[2][contains(text(),'testUS1')]/preceding-sibling::div[@name='msTable:_s']
