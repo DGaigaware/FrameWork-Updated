@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="10">
-<test name="BSM-7.0.0.0.700007-e55-01.ova">
+<test name="BSM-7.0.0.0.700007-e55-02.ova">
    
 <parameter name="IP" value="148.147.162.225"/>
-<parameter name="VMName" value="BSM-7.0.0.0.700007-e55-01.ova"/>
+<parameter name="VMName" value="BSM-7.0.0.0.700007-e55-02.ova"/>
       
     <!-- <packages>
       <package name="com.avaya.smgr.Scheduler.*"/> 
