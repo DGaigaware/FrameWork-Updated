@@ -579,7 +579,7 @@ public class Settings {
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{
-			//System.out.println(e.getText()+ "\n Test \n");
+			System.out.println(e.getText()+ "\n Test \n");
 			if(e.getText().equals(input))
 			{
 				System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
@@ -591,14 +591,14 @@ public class Settings {
 	
 	public String comboID(WebDriver driver,String select){
 		String returnID = "";
-		String sc1 = "var nl = document.getElementById(\"confignewvm\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
+		String sc1 = "var nl = document.getElementById(\"VMdepfrmDynPart-body\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
 		
 		JavascriptExecutor exec = (JavascriptExecutor) driver;
 		List<WebElement> allPanels = (List<WebElement>) exec.executeScript(sc1);
-		//System.out.println(allPanels.size());
+		System.out.println(allPanels.size());
 		
 		for(WebElement e : allPanels){
-			//System.out.println(e.getAttribute("id"));
+			System.out.println(e.getAttribute("id"));
 			if(e.getAttribute("id").contains("labelEl") && e.getText().equals(select)){
 				//System.out.println(e.getText());
 				//System.out.println(e.getAttribute("id"));
@@ -1852,9 +1852,12 @@ public class Settings {
 	
 	public void clickButtonxPath(WebDriver driver,String buttonxPath) throws IOException, MyException{
 		float opacity = Float.parseFloat(driver.findElement(By.xpath(buttonxPath)).getCssValue("opacity"));
-		if(opacity==1){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(buttonxPath)));
+		
+		if(opacity==1 && driver.findElement(By.xpath(buttonxPath)).isEnabled()){
 			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
-			System.out.println(driver.findElement(By.xpath(buttonxPath)).isEnabled());
+			System.out.println("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled());
 			driver.findElement(By.xpath(buttonxPath)).click();
 		}
 		else{
