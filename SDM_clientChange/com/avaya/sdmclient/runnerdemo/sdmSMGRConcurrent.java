@@ -164,16 +164,16 @@ public class sdmSMGRConcurrent {
 			
 			drive.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
 
-//			obj.confirmDialogBox(drive);
-//			Thread.sleep(1500);
+			obj.confirmDialogBox(drive);
+			Thread.sleep(1500);
 			
 			obj.refreshItems(drive, "AddHost");
 			Thread.sleep(1500);
 			
-//			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
-//
-//			obj.chooseTab(drive, "Hosts");
-//			logClass.info("In 'Host' Tab");
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
+
+			obj.chooseTab(drive, "Hosts");
+			logClass.info("In 'Host' Tab");
 			
 			obj.chooseLink(drive, obj.readFromFile("input.properties", "AddHostHostName:"), "Host", "Status Details");
 
@@ -201,16 +201,16 @@ public class sdmSMGRConcurrent {
 			
 			drive.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
 
-//			obj.confirmDialogBox(drive);
-//			Thread.sleep(4500);
+			obj.confirmDialogBox(drive);
+			Thread.sleep(4500);
 			
 			obj.refreshItems(drive, "AddHost");
 			Thread.sleep(1500);
 			
-//			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
-//
-//			obj.chooseTab(drive, "Hosts");
-//			logClass.info("In 'Host' Tab");
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
+
+			obj.chooseTab(drive, "Hosts");
+			logClass.info("In 'Host' Tab");
 			obj.chooseLink(drive, obj.readFromFile("input.properties", "AddHost1HostName:"), "Host", "Status Details");
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
