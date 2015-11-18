@@ -557,8 +557,43 @@ public class sdmSMGRConcurrent {
 		}
 
 
+		@Test(description="Establishing trust with VM to given Location and Host",priority=12)
+		@Parameters({"IP", "VMName"})
+		public void TrustEstablish(String IP,String VMName) throws InterruptedException, IOException, MyException{
+			
+			String shortVMName = obj.shortVMName(VMName);
+			
+			Thread.sleep(5000);
+			logClass.startTestCase("Refresh VM to given Location and Host");
+
+			obj.goHome(drive);
+			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
+			obj.chooseTab(drive, "Virtual Machines");
+			Thread.sleep(1500);
+			obj.findVMForHost(drive,"test"+shortVMName);
+			
+			obj.findMoreActionsButton(drive);
+			Thread.sleep(500);
+			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConn"));
+			Thread.sleep(500);
+			
+			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnUN")));
+			drive.switchTo().activeElement();
+			obj.refreshVMValues(drive, shortVMName, "inputsm.properties");
+			Thread.sleep(750);
+			
+			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
+			Thread.sleep(250);
+			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConnConf"));
+			Thread.sleep(1000);
+			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
+			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
+			
+			logClass.endTestCase("Trust Established with VM Successfully");
+		}
+		
 		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
-		@Test(description="Refreshing VM to given Location and Host",priority=12)
+		@Test(description="Refreshing VM to given Location and Host",priority=13)
 		@Parameters({"IP", "VMName"})
 		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
 
@@ -568,89 +603,25 @@ public class sdmSMGRConcurrent {
 			logClass.startTestCase("Refresh VM to given Location and Host");
 
 			obj.goHome(drive);
-
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 			obj.chooseTab(drive, "Virtual Machines");
 			Thread.sleep(1500);
 			obj.findVMForHost(drive,"test"+shortVMName);
 
-			//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
-			
-			obj.findMoreActionsButton(drive);
-			Thread.sleep(500);
-			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConn"));
-			//drive.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
-
-			Thread.sleep(500);
-			
-			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnUN")));
-			
-			drive.switchTo().activeElement();
-
-//			drive.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
-//			drive.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
-//
-//			drive.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
-//			drive.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
-//
-//			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
-//			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
-//			Thread.sleep(250);
-//			drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-//
-//			Thread.sleep(5000);
-//			
-//			//Adding code
-//			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
-//
-//			obj.chooseTab(drive, "Virtual Machines");
-//
-//			obj.chooseLink(drive, "test"+shortVMName);
-//			obj.StatusCheck(drive, "VM Trust Establishment Completed",50);
-//
-//			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
-//			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
-//			Thread.sleep(1500);
-//			if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-//				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
-//			//Added
-//			Thread.sleep(5000);
-//			
-//			obj.chooseLink(drive, "test"+shortVMName);
-//			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "VM Refresh Completed"));
-//			obj.StatusCheck(drive, "VM Refresh Completed", 20);
-//			// Uptill Now
-//			Thread.sleep(2500);
-//			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
-//			logClass.endTestCase("VM refreshed Successfully");
-			
-			obj.refreshVMValues(drive, shortVMName, "inputsm.properties");
-			Thread.sleep(750);
-			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
-			Thread.sleep(250);
-			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConnConf"));
-			//drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-			
-			Thread.sleep(1000);
-			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
-			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
-			Thread.sleep(1500);
-			if(drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+			Thread.sleep(500);
+			obj.clickButtonxPath(drive, locator.getProperty("RefreshVM"));
 			Thread.sleep(5000);
 			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
 			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 			
-			Thread.sleep(2500);
+			Thread.sleep(500);
 			logClass.endTestCase("VM refreshed Successfully");
 		}
 
 
 		//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
-		@Test(description="Restarting VM to given Location and Host",priority=13)
+		@Test(description="Restarting VM to given Location and Host",priority=14)
 		@Parameters({"IP", "VMName"})
 		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 
@@ -682,7 +653,7 @@ public class sdmSMGRConcurrent {
 		}
 
 		//@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
-		@Test(description="Deleting VM to given Location and Host",priority=14)
+		@Test(description="Deleting VM to given Location and Host",priority=15)
 		@Parameters({"IP", "VMName"})
 		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 
