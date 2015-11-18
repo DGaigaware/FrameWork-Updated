@@ -63,13 +63,13 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(750);
 
 			//Adding loc and host
-			driverC.findElement(By.id("cmbSelectLocation-inputEl")).click();
-			Thread.sleep(450);
-			obj.boundListSelect(driverC, "testLoc", obj.selBoundList(driverC));
-			
-			driverC.findElement(By.id("cmbSelectHost-inputEl")).click();
-			Thread.sleep(450);
-			obj.boundListSelect(driverC, "148.147.162.175", obj.selBoundList(driverC));
+//			driverC.findElement(By.id("cmbSelectLocation-inputEl")).click();
+//			Thread.sleep(450);
+//			obj.boundListSelect(driverC, "testLoc", obj.selBoundList(driverC));
+//			
+//			driverC.findElement(By.id("cmbSelectHost-inputEl")).click();
+//			Thread.sleep(450);
+//			obj.boundListSelect(driverC, "148.147.162.175", obj.selBoundList(driverC));
 			Thread.sleep(6000);
 			driverC.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);

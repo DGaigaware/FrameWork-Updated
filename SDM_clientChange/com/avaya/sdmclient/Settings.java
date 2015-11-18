@@ -579,7 +579,7 @@ public class Settings {
 		List<WebElement> tmp1 = element.findElements(By.className(locator.getProperty("CSSForBoundList")));
 		for (WebElement e : tmp1 )
 		{
-			System.out.println(e.getText()+ "\n Test \n");
+			//System.out.println(e.getText()+ "\n Test \n");
 			if(e.getText().equals(input))
 			{
 				System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
@@ -598,12 +598,12 @@ public class Settings {
 		System.out.println(allPanels.size());
 		
 		for(WebElement e : allPanels){
-			System.out.println(e.getAttribute("id"));
+			//System.out.println(e.getAttribute("id"));
 			if(e.getAttribute("id").contains("labelEl") && e.getText().equals(select)){
 				//System.out.println(e.getText());
 				//System.out.println(e.getAttribute("id"));
 				returnID = e.getAttribute("id").replace("labelEl", "inputEl");
-				System.out.println(returnID);
+				System.out.println("ID for selected ComboBox '"+select+"' is: "+returnID);
 			}
 		}
 		return returnID;

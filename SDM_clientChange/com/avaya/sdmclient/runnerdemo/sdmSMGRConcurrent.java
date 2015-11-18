@@ -354,13 +354,13 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(750);
 
 			//Adding loc and host
-			drive.findElement(By.id("cmbSelectLocation-inputEl")).click();
-			Thread.sleep(450);
-			obj.boundListSelect(drive, "testLoc", obj.selBoundList(drive));
-			
-			drive.findElement(By.id("cmbSelectHost-inputEl")).click();
-			Thread.sleep(450);
-			obj.boundListSelect(drive, "148.147.162.175", obj.selBoundList(drive));
+//			drive.findElement(By.id("cmbSelectLocation-inputEl")).click();
+//			Thread.sleep(450);
+//			obj.boundListSelect(drive, "testLoc", obj.selBoundList(drive));
+//			
+//			drive.findElement(By.id("cmbSelectHost-inputEl")).click();
+//			Thread.sleep(450);
+//			obj.boundListSelect(drive, "148.147.162.175", obj.selBoundList(drive));
 			Thread.sleep(6000);
 			drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);

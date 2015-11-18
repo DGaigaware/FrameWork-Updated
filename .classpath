@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="C:/Users/bshingala/Desktop/FrameWork Updated-17082015/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bshingala/Desktop/FrameWork Updated-17082015/lib/jsch-0.1.53.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bshingala/Downloads/MonteMedia-0.7.7src-cc/MonteMediaCC/dist/monte-cc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bshingala/Downloads/sshxcute-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
