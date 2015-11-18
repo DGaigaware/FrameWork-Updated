@@ -1,0 +1,114 @@
+
+=============== [2015/11/16 20:09:38, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:09:38] INFO:    SSHExec initializing ...
+[20:09:38] INFO:    Session initialized and associated with user credential Avaya123$
+[20:09:38] INFO:    SSHExec initialized successfully
+[20:09:38] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:09:39] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:09:39] ERROR:   session is down
+
+=============== [2015/11/16 20:10:47, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:10:47] INFO:    SSHExec initializing ...
+[20:10:47] INFO:    Session initialized and associated with user credential Avaya123$
+[20:10:47] INFO:    SSHExec initialized successfully
+[20:10:47] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:10:48] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:10:48] ERROR:   session is down
+
+=============== [2015/11/16 20:11:38, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:11:38] INFO:    SSHExec initializing ...
+[20:11:38] INFO:    Session initialized and associated with user credential Avaya123$
+[20:11:38] INFO:    SSHExec initialized successfully
+[20:11:38] INFO:    SSHExec trying to connect admin@148.147.162.180
+[20:11:39] INFO:    SSH connection established
+[20:11:39] INFO:    Command is echo 123
+[20:11:39] INFO:    Connection channel established succesfully
+[20:11:39] INFO:    Start to run command
+[20:11:39] INFO:    123
+
+[20:11:39] INFO:    Connection channel closed
+[20:11:39] INFO:    Check if exec success or not ... 
+[20:11:39] INFO:    Execute successfully for command: echo 123
+[20:11:39] INFO:    Now wait 5 seconds to begin next task ...
+[20:11:44] INFO:    Connection channel disconnect
+
+=============== [2015/11/16 20:12:12, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:12:12] INFO:    SSHExec initializing ...
+[20:12:12] INFO:    Session initialized and associated with user credential Avaya123$
+[20:12:12] INFO:    SSHExec initialized successfully
+[20:12:12] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:12:13] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:12:13] ERROR:   session is down
+
+=============== [2015/11/16 20:13:09, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:13:09] INFO:    SSHExec initializing ...
+[20:13:09] INFO:    Session initialized and associated with user credential Avaya123$
+[20:13:09] INFO:    SSHExec initialized successfully
+[20:13:09] INFO:    SSHExec trying to connect admin@testCM@148.147.162.221
+[20:13:09] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:13:09] ERROR:   session is down
+
+=============== [2015/11/16 20:13:20, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:13:20] INFO:    SSHExec initializing ...
+[20:13:21] INFO:    Session initialized and associated with user credential Avaya123$
+[20:13:21] INFO:    SSHExec initialized successfully
+[20:13:21] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:13:21] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:13:21] ERROR:   session is down
+
+=============== [2015/11/16 20:14:31, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:14:31] INFO:    SSHExec initializing ...
+[20:14:31] INFO:    Session initialized and associated with user credential Avaya123$
+[20:14:31] INFO:    SSHExec initialized successfully
+[20:14:31] INFO:    SSHExec trying to connect admin@148.147.162.180
+[20:14:32] INFO:    SSH connection established
+[20:14:32] INFO:    Command is echo 123
+[20:14:32] INFO:    Connection channel established succesfully
+[20:14:32] INFO:    Start to run command
+[20:14:32] INFO:    123
+
+[20:14:32] INFO:    Connection channel closed
+[20:14:32] INFO:    Check if exec success or not ... 
+[20:14:32] INFO:    Execute successfully for command: echo 123
+[20:14:32] INFO:    Now wait 5 seconds to begin next task ...
+[20:14:37] INFO:    Connection channel disconnect
+
+=============== [2015/11/16 20:16:25, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:16:25] INFO:    SSHExec initializing ...
+[20:16:25] INFO:    Session initialized and associated with user credential Avaya123$
+[20:16:25] INFO:    SSHExec initialized successfully
+[20:16:25] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:16:26] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+[20:16:26] ERROR:   session is down
+
+=============== [2015/11/16 20:16:42, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:16:42] INFO:    SSHExec initializing ...
+[20:16:42] INFO:    Session initialized and associated with user credential Avaya123$
+[20:16:42] INFO:    SSHExec initialized successfully
+[20:16:42] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:16:42] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+
+=============== [2015/11/16 20:17:19, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:17:19] INFO:    SSHExec initializing ...
+[20:17:19] INFO:    Session initialized and associated with user credential Avaya123$
+[20:17:19] INFO:    SSHExec initialized successfully
+[20:17:19] INFO:    SSHExec trying to connect admin@148.147.162.221
+[20:17:20] ERROR:   Connect fails with the following exception: com.jcraft.jsch.JSchException: Auth fail
+
+=============== [2015/11/16 20:17:37, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[20:17:37] INFO:    SSHExec initializing ...
+[20:17:37] INFO:    Session initialized and associated with user credential Avaya123$
+[20:17:37] INFO:    SSHExec initialized successfully
+[20:17:37] INFO:    SSHExec trying to connect admin@148.147.162.180
+[20:17:38] INFO:    SSH connection established
