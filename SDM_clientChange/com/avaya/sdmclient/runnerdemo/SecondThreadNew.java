@@ -234,17 +234,17 @@ import com.avaya.sdmclient.vm.VM;
 		}
 
 
-		@Test(description="Refreshing VM to given Location and Host",priority=12)
+		@Test(description="Establishing trust with VM to given Location and Host",priority=12)
 		@Parameters({"IP", "VMName"})
-		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
+		public void TrustEstablish(String IP,String VMName) throws InterruptedException, IOException, MyException{
+			
 			String shortVMName = obj.shortVMName(VMName);
+			
 			Thread.sleep(5000);
 			logClass.startTestCase("Refresh VM to given Location and Host");
 
 			obj.goHome(driverC);
-
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
 			obj.chooseTab(driverC, "Virtual Machines");
 			Thread.sleep(1500);
 			obj.findVMForHost(driverC,"test"+shortVMName);
@@ -252,71 +252,53 @@ import com.avaya.sdmclient.vm.VM;
 			obj.findMoreActionsButton(driverC);
 			Thread.sleep(500);
 			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConn"));
-			//driverC.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
-
 			Thread.sleep(500);
 			
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnUN")));
-			
 			driverC.switchTo().activeElement();
-
-//			/*driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
-//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
-//
-//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
-//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
-//
-//			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
-//			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator.getProperty("VMReEstConnConf"))));
-//			Thread.sleep(250);
-//			driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-//
-//			Thread.sleep(5000);
-//			
-//			obj.chooseLink(driverC, "test"+shortVMName);
-//			//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-//			obj.StatusCheck(driverC, "VM Trust Establishment Completed",50);
-//
-//			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
-//			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
-//			Thread.sleep(1500);
-//			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-//				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
-//			//Added
-//			Thread.sleep(5000);
-//			
-//			obj.chooseLink(driverC, "test"+shortVMName);
-//			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driverC, 50, "VM Refresh Completed"));
-//			obj.StatusCheck(driverC, "VM Refresh Completed", 20);
-//			// Uptill Now
-//			Thread.sleep(2500);
-//			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
-//			logClass.endTestCase("VM refreshed Successfully");*/
-			
 			obj.refreshVMValues(driverC, shortVMName, "inputsm.properties");
 			Thread.sleep(750);
+			
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnConf")));
 			Thread.sleep(250);
 			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConnConf"));
-			//driverC.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-			
 			Thread.sleep(1000);
 			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
-			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
+			
+			logClass.endTestCase("Trust Established with VM Successfully");
+		}
+		
+		//@Test(dependsOnMethods={"AddVM"},description="Refreshing VM to given Location and Host",priority=12)
+		@Test(description="Refreshing VM to given Location and Host",priority=13)
+		@Parameters({"IP", "VMName"})
+		public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
+
+			String shortVMName = obj.shortVMName(VMName);
+			
+			Thread.sleep(5000);
+			logClass.startTestCase("Refresh VM to given Location and Host");
+
+			obj.goHome(driverC);
+			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+			obj.chooseTab(driverC, "Virtual Machines");
 			Thread.sleep(1500);
-			if(driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-				driverC.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+			obj.findVMForHost(driverC,"test"+shortVMName);
+
+			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("RefreshVM")));
+			Thread.sleep(500);
+			obj.clickButtonxPath(driverC, locator.getProperty("RefreshVM"));
 			Thread.sleep(5000);
 			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
-			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 8, true,10,0,"Status Details");		
+			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 			
-			Thread.sleep(2500);
+			Thread.sleep(500);
 			logClass.endTestCase("VM refreshed Successfully");
 		}
 
 
-		@Test(description="Restarting VM to given Location and Host",priority=13)
+
+		@Test(description="Restarting VM to given Location and Host",priority=14)
 		@Parameters({"IP", "VMName"})
 		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 			String shortVMName = obj.shortVMName(VMName);
@@ -346,7 +328,7 @@ import com.avaya.sdmclient.vm.VM;
 		}
 
 
-		@Test(description="Deleting VM to given Location and Host",priority=14)
+		@Test(description="Deleting VM to given Location and Host",priority=15)
 		@Parameters({"IP", "VMName"})
 		public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
 			String shortVMName = obj.shortVMName(VMName);

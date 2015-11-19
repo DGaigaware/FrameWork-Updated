@@ -140,12 +140,12 @@ public class sdmSMGRConcurrent {
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:"))){
 				drive.navigate().refresh();
 				obj.logOut(drive);
+				obj.doLogging("Adding Location as location was not already added ...", "Info");
+				obj.doLogging("Pausing the current thread .. ", "Info");
 				AddLocation();
-				System.out.println("Adding Location...");
-				logClass.info("Location was not there. Adding it and pausing current thread.");
+				obj.doLogging("Location added successfully. Now resuming the current thread .. ", "Info");
 				obj.goHome(drive);
 				//obj.loginToSite(driver);
-				logClass.info("Added Location as Location was not there beforehand.");
 			}
 
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
@@ -172,7 +172,7 @@ public class sdmSMGRConcurrent {
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
-			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"));
+			obj.doLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
 
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 			
@@ -202,7 +202,7 @@ public class sdmSMGRConcurrent {
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
-			System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"));
+			obj.doLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
 
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 
@@ -339,18 +339,18 @@ public class sdmSMGRConcurrent {
 			//obj.loginToSite(drive);
 
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddHostHostName:"))){
+				obj.doLogging("Adding host as host is not added .. ", "Info");
+				obj.doLogging("Pausing the current thread .. ", "Info");
 				AddHost();
-				System.out.println("Adding Host");
+				obj.doLogging("Added new host successfully. Resuming the current thread .. ", "Info");
 				obj.goHome(drive);
-				logClass.info("Added Host as Location was not there beforehand.");
 			}
 
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 
 			obj.chooseTab(drive, "Virtual Machines");
 
-			drive.findElement(By.xpath(locator.getProperty("NewVM"))).click();
-			logClass.info("Clicked on - Add new VM");
+			obj.clickButtonxPath(drive,locator.getProperty("NewVM"));
 			Thread.sleep(750);
 
 			//Adding loc and host
@@ -362,7 +362,8 @@ public class sdmSMGRConcurrent {
 //			Thread.sleep(450);
 //			obj.boundListSelect(drive, "148.147.162.175", obj.selBoundList(drive));
 			Thread.sleep(6000);
-			drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
+			obj.clickButtonxPath(drive, locator.getProperty("DataStore"));
+			//drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);
 			obj.boundListSelect(drive, "data", obj.selBoundList(drive));
 			Thread.sleep(2500);
@@ -400,7 +401,7 @@ public class sdmSMGRConcurrent {
 			}
 
 			if(Thread.currentThread().isInterrupted()){
-				System.out.println("Cannot Execute Further");
+				obj.doLogging("Cannot Execute Further...","Error");
 				throw new MyException(err);
 			}
 

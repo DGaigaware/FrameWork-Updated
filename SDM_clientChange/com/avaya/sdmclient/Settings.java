@@ -1927,5 +1927,14 @@ public class Settings {
 		return o;
 	}
 
+	public void doLogging(String logMessage,String infoOrError){
+		System.out.println(logMessage);
+		if(infoOrError.equals("Info")){
+			logClass.info(logMessage);
+		}
+		else if(infoOrError.equals("Error")){
+			logClass.error(logMessage);
+		}
+	}
 }
 
