@@ -140,10 +140,10 @@ public class sdmSMGRConcurrent {
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:"))){
 				drive.navigate().refresh();
 				obj.logOut(drive);
-				obj.doLogging("Adding Location as location was not already added ...", "Info");
-				obj.doLogging("Pausing the current thread .. ", "Info");
+				obj.debugLogging("Adding Location as location was not already added ...", "Info");
+				obj.debugLogging("Pausing the current thread .. ", "Info");
 				AddLocation();
-				obj.doLogging("Location added successfully. Now resuming the current thread .. ", "Info");
+				obj.debugLogging("Location added successfully. Now resuming the current thread .. ", "Info");
 				obj.goHome(drive);
 				//obj.loginToSite(driver);
 			}
@@ -172,7 +172,7 @@ public class sdmSMGRConcurrent {
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
-			obj.doLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
+			obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
 
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 			
@@ -202,7 +202,7 @@ public class sdmSMGRConcurrent {
 
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
-			obj.doLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
+			obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
 
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 
@@ -339,10 +339,10 @@ public class sdmSMGRConcurrent {
 			//obj.loginToSite(drive);
 
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddHostHostName:"))){
-				obj.doLogging("Adding host as host is not added .. ", "Info");
-				obj.doLogging("Pausing the current thread .. ", "Info");
+				obj.debugLogging("Adding host as host is not added .. ", "Info");
+				obj.debugLogging("Pausing the current thread .. ", "Info");
 				AddHost();
-				obj.doLogging("Added new host successfully. Resuming the current thread .. ", "Info");
+				obj.debugLogging("Added new host successfully. Resuming the current thread .. ", "Info");
 				obj.goHome(drive);
 			}
 
@@ -401,7 +401,7 @@ public class sdmSMGRConcurrent {
 			}
 
 			if(Thread.currentThread().isInterrupted()){
-				obj.doLogging("Cannot Execute Further...","Error");
+				obj.debugLogging("Cannot Execute Further...","Error");
 				throw new MyException(err);
 			}
 

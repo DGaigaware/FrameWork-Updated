@@ -64,7 +64,8 @@ public class Settings {
 		driver.manage().window().maximize();
 		driver.get(locator.getProperty("SDMCliURL"));
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		debugLogging("Clicked on VM Management", "Info");
+		//logClass.info("Clicked on VM management");
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 	}
 	
@@ -87,8 +88,9 @@ public class Settings {
 		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"_"+gcalendar.getTimeInMillis()+".png";
 		File failureImageFile=new File(failureImageFileName);
 		FileUtils.moveFile(imageFile, failureImageFile);
-		logClass.error("Something went wrong :(");
-		logClass.info("Check Screenshot for the same");
+		debugLogging("Somthing went wrong. Check Screenshot.", "Error");
+//		logClass.error("Something went wrong :(");
+//		logClass.info("Check Screenshot for the same");
 	}
 
 	//Read inputs from file (Firstly it was only from text file,then added code to take input from properties file)
@@ -114,7 +116,8 @@ public class Settings {
 		pr.load(new FileReader(file));
 		
 		String output = pr.getProperty(findProperty);
-		System.out.println("Read from file "+fileName +" for "+findProperty+": "+output);
+		debugLogging("Read from file "+fileName +" for "+findProperty+": "+output, "Info");
+		//System.out.println("Read from file "+fileName +" for "+findProperty+": "+output);
 		return output;
 	}
 	
@@ -190,7 +193,7 @@ public class Settings {
 		float opacity = 0;
 		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		//System.out.println(elem2.size());
 		
 		String scr = "var nl = document.getElementById(\""+elem2.get(elem2.size()-1).getAttribute("id").replace("-targetEl", "")+"\").querySelectorAll('[id^=\"button-\"]'); return nl;";
 		ArrayList<WebElement> ele = (ArrayList<WebElement>) js.executeScript(scr);
@@ -221,7 +224,8 @@ public class Settings {
 		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		List<String> tm = new ArrayList<>();
 		boolean b = true;
-		System.out.println("Entries on Left Tree: "+cells.size());
+		debugLogging("Entries on VM trees : "+cells.size(), "Info");
+		//System.out.println("Entries on Left Tree: "+cells.size());
 
 		for(WebElement e : cells)
 		{
@@ -233,7 +237,8 @@ public class Settings {
 		}
 
 		if(!tm.contains(input)){
-			System.out.println("Couldn't Find Location or host in Tree: "+input);
+			debugLogging("Couldn't Find entry in Tree: "+input", "Error");
+			//System.out.println("Couldn't Find Location or host in Tree: "+input);
 			b=false;
 		}
 
@@ -261,8 +266,9 @@ public class Settings {
 		}
 		
 		else{
-			System.out.println("Please check whether location name is null or location is present or not.");
-			logClass.error("Error occurred: Either location name or host name is null or location or host does not exist ..");
+			debugLogging("Either location name or host name is null or location or host does not exist ..", "Error");
+//			System.out.println("Please check whether location name is null or location is present or not.");
+//			logClass.error("Error occurred: Either location name or host name is null or location or host does not exist ..");
 			throw new MyException("Error occurred: Either location name or host name is null or location or host does not exist ..");
 		}
 	}
@@ -284,13 +290,14 @@ public class Settings {
 				if(e.getText().trim().contains(locationName))
 				{
 					e.click();
-					System.out.println("Clicked on "+locationName);
+					//System.out.println("Clicked on "+locationName);
 				}
 			}
 		}
 		else{
-			System.out.println("Please check whether location name is null or location is present or not.");
-			logClass.error("Error occurred: Either location name is null or location does not exist ..");
+			debugLogging("Either location name is null or location does not exist ..", "Error");
+//			System.out.println("Please check whether location name is null or location is present or not.");
+//			logClass.error("Error occurred: Either location name is null or location does not exist ..");
 			throw new MyException("Error occurred: Either location name is null or location does not exist ..");
 		}
 	}
@@ -311,8 +318,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether host name is null or host is present or not.");
-			logClass.error("Error occurred: Either host name is null or host does not exist ..");
+			debugLogging("Either host name is null or host does not exist ..", "Error");
+//			System.out.println("Please check whether host name is null or host is present or not.");
+//			logClass.error("Error occurred: Either host name is null or host does not exist ..");
 			throw new MyException("Error occurred: Either host name is null or host does not exist ..");
 		}
 	}
@@ -333,8 +341,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether VM name is null or VM is present or not.");
-			logClass.error("Error occurred: Either VM name is null or VM does not exist ..");
+			debugLogging("Either VM name is null or VM does not exist ..", "Error");
+//			System.out.println("Please check whether VM name is null or VM is present or not.");
+//			logClass.error("Error occurred: Either VM name is null or VM does not exist ..");
 			throw new MyException("Error occurred: Either VM name is null or VM does not exist ..");
 		}
 	}
@@ -355,8 +364,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether VCenter is null or VCenter is present or not.");
-			logClass.error("Error occurred: Either VCenter is null or VCenter does not exist ..");
+			debugLogging("Either VCenter is null or VCenter does not exist ..", "Error");
+//			System.out.println("Please check whether VCenter is null or VCenter is present or not.");
+//			logClass.error("Error occurred: Either VCenter is null or VCenter does not exist ..");
 			throw new MyException("Error occurred: Either VCenter is null or VCenter does not exist ..");
 		}
 	}
@@ -375,7 +385,8 @@ public class Settings {
 			{
 				//System.out.println("Selected : "+e.getText());
 				e.click();
-				System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
+				debugLogging("Clicked on: "+e.getText(), "Info");
+				//System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
 			}
 		}
 	}
@@ -410,8 +421,9 @@ public class Settings {
 
 		for(int i=0;i<count;i++)
 		{
-			System.out.println("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
-			logClass.error("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
+			debugLogging("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"), "Error");
+//			System.out.println("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
+//			logClass.error("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
 		}
 	}
 
@@ -474,12 +486,13 @@ public class Settings {
 				if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
 				{
 					driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText();
-					logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-					logClass.error("Error : Check the Log and Screenshot for the same.");
-					System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					debugLogging(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Error");
+					//logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					//logClass.error("Error : Check the Log and Screenshot for the same.");
+					debugLogging("Error : Check the Log and Screenshot for the same.", "Error");
+					//System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					errMsg = driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText()+"\nCheck Screenshot for the same.\n";
 					takeScreenShotForDriver(driver);
-					logClass.info("Screenshot taken");
 
 					driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
 					System.out.println("Confirmed");
@@ -506,8 +519,9 @@ public class Settings {
 		if(in == true) {
 			return;
 		}
-		System.out.println("Can not Execute Further. Check the Log for the same.");
-		logClass.error("Check Log and Screenshot for the same.");
+		debugLogging("Can not execute further. Check screnshot for the same.", "Error");
+//		System.out.println("Can not Execute Further. Check the Log for the same.");
+//		logClass.error("Check Log and Screenshot for the same.");
 		
 		//System.exit(0);
 	}
@@ -518,7 +532,8 @@ public class Settings {
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
 				{
-					logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					debugLogging("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Error");
+					//logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
 				}
 		}
@@ -538,7 +553,8 @@ public class Settings {
 			driver.switchTo().activeElement();
 			Thread.sleep(450);
 			//System.out.println(driver.switchTo().activeElement().getText());
-			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+			debugLogging("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))), "Info");
+			//logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
 			//System.out.println("Confirmed");
 		}
@@ -582,7 +598,8 @@ public class Settings {
 			//System.out.println(e.getText()+ "\n Test \n");
 			if(e.getText().equals(input))
 			{
-				System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
+				debugLogging("Selected value for: "+selCombo+" "+input+" "+e.getText(), "Info");
+				//System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
 				e.click();
 			}
 		}
@@ -595,7 +612,7 @@ public class Settings {
 		
 		JavascriptExecutor exec = (JavascriptExecutor) driver;
 		List<WebElement> allPanels = (List<WebElement>) exec.executeScript(sc1);
-		System.out.println(allPanels.size());
+		//System.out.println(allPanels.size());
 		
 		for(WebElement e : allPanels){
 			//System.out.println(e.getAttribute("id"));
@@ -603,7 +620,7 @@ public class Settings {
 				//System.out.println(e.getText());
 				//System.out.println(e.getAttribute("id"));
 				returnID = e.getAttribute("id").replace("labelEl", "inputEl");
-				System.out.println("ID for selected ComboBox '"+select+"' is: "+returnID);
+				//System.out.println("ID for selected ComboBox '"+select+"' is: "+returnID);
 			}
 		}
 		return returnID;
@@ -615,7 +632,8 @@ public class Settings {
 		//Thread.sleep(45000);
 		//_closeWindow(driver);
 		wait.until(ExpectedConditions.textToBePresentInElement(locator, Test));
-		logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+		debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Info");
+		//logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 		return driver.findElement(locator).getText();
 	}
 
@@ -630,7 +648,8 @@ public class Settings {
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		*/
 		chooseLink(driver, VMName,vmOrHost,linkText);
-		logClass.info("Checking Status Details");
+		debugLogging("Checking status details ...", "Info");
+		//logClass.info("Checking Status Details");
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
 		driver.switchTo().activeElement();
@@ -1927,7 +1946,7 @@ public class Settings {
 		return o;
 	}
 
-	public void doLogging(String logMessage,String infoOrError){
+	public void debugLogging(String logMessage,String infoOrError){
 		System.out.println(logMessage);
 		if(infoOrError.equals("Info")){
 			logClass.info(logMessage);
