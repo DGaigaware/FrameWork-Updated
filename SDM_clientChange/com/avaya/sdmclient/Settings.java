@@ -237,7 +237,7 @@ public class Settings {
 		}
 
 		if(!tm.contains(input)){
-			debugLogging("Couldn't Find entry in Tree: "+input", "Error");
+			debugLogging("Couldn't Find entry in Tree: "+input, "Error");
 			//System.out.println("Couldn't Find Location or host in Tree: "+input);
 			b=false;
 		}
@@ -899,8 +899,8 @@ public class Settings {
 		
 		waitForPresenceOfElement(driver, By.id(buttons.get(buttons.size()-1)));
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Refreshed page successfully.");
-			
+		//System.out.println("Refreshed page successfully.");
+		debugLogging("Page refreshed successfully..", "Info");
 	}
 
 		public void FillValues(String fileName,String filePath,WebDriver driver,String IP,String hostName) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
@@ -971,39 +971,39 @@ public class Settings {
 					Node attr = nlmap.get(i).item(j);
 					//System.out.println(_nlmap.get(i).toString());
 					if(attr.getNodeName().contains("vmw:qualifiers")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:password")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("boolean")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("ValueMap")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = "ValueMap";//attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:key")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 						op[i][0] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 				}
 			}
 			
-			for(int i=0;i<op.length;i++)
-				System.out.println(op[i][0]);
+//			for(int i=0;i<op.length;i++)
+//				System.out.println(op[i][0]);
 			
 			//for(int i=0;i<nl.getLength()-5;i++)			// As last 5 Fields are not Visible in UI
 
@@ -1011,69 +1011,77 @@ public class Settings {
 			{
 				//System.out.println(op[i][0]);
 				if(op[i][1]!=null && op[i][1].equals("Ip") && op[i][0].equals("ip0")){
-					System.out.println("Filled IP "+IP+" for VM " + i);
+					//System.out.println("Filled IP "+IP+" for VM " + i);
+					debugLogging("Filled IP "+IP+" for VM " + i, "Info");
 					AutoFillIP(driver, op[i][0],IP,fileName);
 				}
 				
 				else if(op[i][1]==null && op[i][0].equals("ip0")){
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println(id+" IP as textbox ..");
+					//System.out.println(id+" IP as textbox ..");
+					debugLogging("IP as textbox.Not as foue parts .. ", "Info");
 					driver.findElement(By.id(id)).clear();
 					driver.findElement(By.id(id)).sendKeys(IP);
-					System.out.println("Filled IP "+IP+" for ID: "+id);
+					//System.out.println("Filled IP "+IP+" for ID: "+id);
+					debugLogging("Filled IP "+IP+" for ID: "+id, "Info");
 				}
 				
 				else if(op[i][0].equalsIgnoreCase("hostname")){
-					System.out.println("Filled hostname for VM "+i + " "+hostName);
+					//System.out.println("Filled hostname for VM "+i + " "+hostName);
+					debugLogging("Filled hostname for VM "+i + " "+hostName, "Info");
 					autoFillhostnameforVM(driver, op[i][0], hostName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("Ip"))
 				{
 					//String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Going to IP " + i);
+					//System.out.println("Going to IP " + i);
+					debugLogging("'IP' type field " + i, "Info");
 					AutoFillIP(driver, op[i][0],readFromFile(fileName, op[i][0]),fileName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("true"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Password " + i);
+					//System.out.println("Password " + i);
 					//AutoFillPasswd(driver, op[i][0],fileName);
+					debugLogging("'Password' type field "+i, "Info");
 					autoFillPasswdforVM(driver, id, fileName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("boolean"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("CheckBox " + i);
+					//System.out.println("CheckBox " + i);
 					//AutoFillCheckBox(driver, op[i][0]);
+					debugLogging("'Checkbox type field '"+i, "Info");
 					autoFillCheckBoxforVM(driver, id);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("ValueMap"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Combo " + i);
+					//System.out.println("Combo " + i);
 					//AutoFillCombo(driver, op[i][0],fileName);
+					debugLogging("Combobox type field "+i, "Info");
 					autoFillComboforVM(driver, id, fileName);
 				}
 				
 				else
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Default " + i);
+					//System.out.println("Default " + i);
 					//AutoFill(driver, op[i][0],fileName);
 					//System.out.println("a");
+					debugLogging("Default field "+i, "Info");
 					autoFilltextforVM(driver, id, fileName);
 					//System.out.println("b");
 				}
-				System.out.println("Loop: \n");
+				//System.out.println("Loop: \n");
 			}
 
 			//driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
 			selNetworkTabForVMinstallation(driver);
-			logClass.info("Selecting NetWorks");
 
 			for(int i=0;i<nlLabelNet.getLength();i++)
 			{
@@ -1127,7 +1135,7 @@ public class Settings {
 			}*/
 			returnID  = "ipfs"+id;
 			//driver.findElement(By.id("ipfs"+id));
-			System.out.println("Final ID: "+returnID);
+			System.out.println("Final ID for IP filling: "+returnID);
 
 			//System.out.println("Test");
 			List<WebElement> tempcellsCols = driver.findElement(By.id((returnID))).findElements(By.xpath(".//*[local-name(.)='td']"));
@@ -1232,11 +1240,13 @@ public class Settings {
 		
 		if(input.contains("-")){
 		    	refInput = input.substring(0, input.indexOf("-"));
-		    	System.out.println("RefInput: "+refInput);
+		    	//System.out.println("RefInput: "+refInput);
+		    	debugLogging("Reference Input : "+input, "Info");
 		}
 		else if(input.contains("_")){
 		    	refInput = input.substring(0, input.indexOf("_"));
-		    	System.out.println("RefInput: "+refInput);
+		    	//System.out.println("RefInput: "+refInput);
+		    	debugLogging("Reference Input : "+input, "Info");
 		}
 		 
 		return refInput;
@@ -1266,7 +1276,8 @@ public class Settings {
 		    		if(s.substring(0,s.indexOf("-")).equalsIgnoreCase(refInput))
 		    		{
 		    			returnStr = s;
-		    			System.out.println("Choosen OVF: (-) "+returnStr);
+		    			//System.out.println("Choosen OVF: (-) "+returnStr);
+		    			debugLogging("Choosen OVF: (-) "+returnStr, "Info");
 		    		}
 		    	}
 		    	else if(s.contains("_")){
@@ -1274,6 +1285,7 @@ public class Settings {
 		    		{
 		    			returnStr = s;
 		    			System.out.println("Choosen OVF: (_) "+returnStr);
+		    			debugLogging("Choosen OVF: (_) "+returnStr, "Info");
 		    		}
 		    	}
 		    }
@@ -1330,7 +1342,8 @@ public class Settings {
 		System.out.println(driver.findElement(toLocate).getCssValue("opacity"));
 		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
 			{
-				logClass.error("Something went wrong. Check Screenshot");
+				debugLogging("Something went wrong. Check Screenshot", "Info");
+				//logClass.error("Something went wrong. Check Screenshot");
 				//System.out.println("Something went wrong. Check Screenshot");
 				takeScreenShotForDriver(driver);
 			}
@@ -1359,8 +1372,8 @@ public class Settings {
 		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
 		Thread.sleep(750);
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Clicked");
-		logClass.info("Accepted EULA ,clicked.");
+		debugLogging("Accepted EULA .. ", "Info");
+		
 	}
 	
 	public String findIDandFillValuesForVM(WebDriver driver,String filename,String inputIDfromOVF){
@@ -1389,6 +1402,7 @@ public class Settings {
 					break;
 				}
 		}
+		debugLogging("Input ID from OVF is : "+inputIDfromOVF+" Input ID found on UI: "+returnID, "Info");
 		return returnID;
 	}
 	
@@ -1435,9 +1449,8 @@ public class Settings {
         pr.store(out, "Changed TimeStamp: ");
         out.close();
         
-        System.out.println("Done Changing Properties File.");
-		logClass.info(IP+ " IP is made " + list );
-		System.out.println(IP + " IP is made " + list );
+        debugLogging("Changed properties file successfully .. ", "Info");
+        debugLogging(IP+ " IP is made " + list , "Info");
 	}
 	
 	public void selectFP(WebDriver driver,String shortvmname) throws IOException, InterruptedException{
@@ -1445,7 +1458,8 @@ public class Settings {
 		{
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
-			System.out.println(locator.getProperty("FP"+shortvmname));
+			debugLogging("Selected footprint: "+locator.getProperty("FP"+shortvmname), "Info");
+			//System.out.println(locator.getProperty("FP"+shortvmname));
 			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundList(driver));
 		}
 	}
@@ -1509,6 +1523,7 @@ public class Settings {
 				{
 					//System.out.println("Changing: "+e.getText());
 					e.click();
+					debugLogging("Clicked on: "+linkText, "Info");
 					break;
 				}
 			}
@@ -1527,7 +1542,7 @@ public class Settings {
 		
 		for(WebElement e : elem2){
 			if(e.getText().equals("VM IP:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(IP);
 				break;
@@ -1535,7 +1550,7 @@ public class Settings {
 		}
 		for(WebElement e : elem2){
 			if(e.getText().equals("VM FQDN:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(FQDN);
 				break;
@@ -1555,23 +1570,24 @@ public class Settings {
 				try{
 					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
-					System.out.println("SuccessTest");
+					//System.out.println("SuccessTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
-					System.out.println("SuccessTest Passed");
-					System.out.println("Task Completed Successfully..");
-					logClass.info("Task Completed Successfully..");
-					logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					//System.out.println("SuccessTest Passed");
+					debugLogging("Task completed successfully.. ", "Info");
+					//System.out.println("Task Completed Successfully..");
+					//logClass.info("Task Completed Successfully..");
+					debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Info");
+					//logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					//check = true;
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
+					debugLogging("Total time taken in seconds is less than: "+(counter+1)*timeOutForException, "Info");
+					//System.out.println("Total time taken in seconds is less than: "+(counter+1)*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
 				
-				
-				
 				catch(Exception e){
 					//closeWindow(driver);
-					System.out.println("Testing for Completion or failure..");
+					//System.out.println("Testing for Completion or failure..");
 					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=false;
 					counter++;
@@ -1584,20 +1600,22 @@ public class Settings {
 				try{
 					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
-					System.out.println("FailureTest");
+					//System.out.println("FailureTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
-					System.out.println("FailedTest");
-					System.out.println("Task Failed..");
-					logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
-					logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					debugLogging("Task failed .. ", "Error");
+					debugLogging("Failed test. Check screenshot for the same.", "Info");
+					//logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
+					debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Error");
+					//logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					check = true;
 					takeScreenShotForDriver(driver);
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
+					debugLogging("Total time taken in seconds is less than: "+(counter+1)*timeOutForException, "Info");
+					//System.out.println("Total time taken in seconds: "+counter*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
 				catch(Exception e){
-					System.out.println("Testing for failure or Completion..");
+					//System.out.println("Testing for failure or Completion..");
 					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=true;
 					counter++;
@@ -1607,13 +1625,14 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Timed out..");
+			//System.out.println("Timed out..");
+			debugLogging("Operation timed out .. ", "Error");
 			takeScreenShotForDriver(driver);
 			throw new MyException("Operation Timed out... ");
 		}
 		
 		if(check){
-			System.out.println("Completed task (failed).. ");
+			//System.out.println("Completed task (failed).. ");
 			throw new MyException("Test case failed .. Check screenshot for the same.");
 			//o = System.out.toString();println("Passed");
 		}
@@ -1632,9 +1651,9 @@ public class Settings {
 		String tempID = "";
 		
 		for(WebElement e : elem2){
-			System.out.println(e.getAttribute("id")+" "+e.getText());
+			//System.out.println(e.getAttribute("id")+" "+e.getText());
 			if(e.getText().equals(label)){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				tempID = e.getAttribute("id").concat("-inputEl");
 				driver.findElement(By.id(tempID)).click();
 				break;
@@ -1723,9 +1742,9 @@ public class Settings {
 		String tempID = "";
 		
 		for(WebElement e : elem2){
-			System.out.println(e.getAttribute("id")+" "+e.getText());
+			//System.out.println(e.getAttribute("id")+" "+e.getText());
 			if(e.getText().equals("Select bin file from Local SDM Client:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				tempID = e.getAttribute("id").concat("-inputEl");
 				break;
 			}
@@ -1758,7 +1777,7 @@ public class Settings {
 		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
 		Thread.sleep(750);
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Clicked");
+		//System.out.println("Clicked");
 		logClass.info("Accepted EULA ,clicked.");
 	}
 	
@@ -1781,7 +1800,8 @@ public class Settings {
 
 		for(String s : dirNames){
 			if(shortVMName(s).equalsIgnoreCase(vmname)){
-				System.out.println("Choosen Folder for OVF: "+s);
+				debugLogging("Choosen folder for OVF: "+s, "Info");
+				//System.out.println("Choosen Folder for OVF: "+s);
 				folderName = s;
 				break;
 			}
@@ -1794,7 +1814,8 @@ public class Settings {
 			for (int i = 0; i < retOVF.length; i++) {
 				if (retOVF[i].isFile()) {
 					returnOVFPath = retOVF[i].getAbsolutePath();
-					System.out.println("Choosen OVF is: "+returnOVFPath);
+					debugLogging("Choosen OVF is: "+returnOVFPath, "Info");
+					//System.out.println("Choosen OVF is: "+returnOVFPath);
 				}
 			}
 		}   
@@ -1826,7 +1847,8 @@ public class Settings {
 		if(!elements.isEmpty()){
 			for(WebElement e : elements){
 				if(e.getText().equals(buttonName)){
-					System.out.println(e.getAttribute("id"));
+					//System.out.println(e.getAttribute("id"));
+					debugLogging("Button ID: "+e.getAttribute("id")+" for button: "+e.getText(), "Info");
 					returnEle = e;
 					break;
 				}
@@ -1855,7 +1877,7 @@ public class Settings {
 		if(!elements.isEmpty()){
 			for(WebElement e : elements){
 				if(e.getText().replace("*", "").equals(eleText)){
-					System.out.println(e.getAttribute("id"));
+					//System.out.println(e.getAttribute("id"));
 					returnEleID = e.getAttribute("id");
 					break;
 				}
@@ -1875,8 +1897,10 @@ public class Settings {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(buttonxPath)));
 		
 		if(opacity==1 && driver.findElement(By.xpath(buttonxPath)).isEnabled()){
-			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
-			System.out.println("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled());
+//			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
+//			System.out.println("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled());
+			debugLogging("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity, "Info");
+			debugLogging("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled(), "Info");
 			driver.findElement(By.xpath(buttonxPath)).click();
 		}
 		else{
@@ -1954,6 +1978,10 @@ public class Settings {
 		else if(infoOrError.equals("Error")){
 			logClass.error(logMessage);
 		}
+		else{
+			System.out.println("Please give a valid input.\nValid input are: 'Info' and 'Error': "+logMessage);
+		}
 	}
+	
 }
 
