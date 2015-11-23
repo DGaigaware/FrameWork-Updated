@@ -63,13 +63,13 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(750);
 
 			//Adding loc and host
-//			driverC.findElement(By.id("cmbSelectLocation-inputEl")).click();
-//			Thread.sleep(450);
-//			obj.boundListSelect(driverC, "testLoc", obj.selBoundList(driverC));
-//			
-//			driverC.findElement(By.id("cmbSelectHost-inputEl")).click();
-//			Thread.sleep(450);
-//			obj.boundListSelect(driverC, "148.147.162.175", obj.selBoundList(driverC));
+			driverC.findElement(By.id(locator.getProperty("SelLocation"))).click();
+			Thread.sleep(450);
+			obj.boundListSelect(driverC, obj.readFromFile("input.properties", "AddLocationName:"), obj.selBoundList(driverC));
+			
+			driverC.findElement(By.id(locator.getProperty("SelHost"))).click();
+			Thread.sleep(450);
+			obj.boundListSelect(driverC, obj.readFromFile("input.properties", "AddHostHostName:"), obj.selBoundList(driverC));
 			Thread.sleep(6000);
 			driverC.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);
@@ -79,23 +79,19 @@ import com.avaya.sdmclient.vm.VM;
 			
 			
 			//Next Page
-			obj.clickButtonxPath(driverC, ".//*[@id='next-btnIconEl']");
+			obj.clickButtonxPath(driverC, locator.getProperty("Next"));
 			obj.comboClick(driverC, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
-
 			obj.maintainedList(driverC, obj.comboID(driverC, "Select OVAs:"));
-
 			obj.comboClick(driverC, "Select OVAs:", VMName);
 			Thread.sleep(2500);
-
 			obj.selectFP(driverC, shortVMName);
 			
 			//Uptill here
 			
 			//Next Page
-			obj.clickButtonxPath(driverC, ".//*[@id='next-btnIconEl']");
+			obj.clickButtonxPath(driverC, locator.getProperty("Next"));
 			driverC.findElement(By.xpath(locator.getProperty("VMName"))).clear();
-
 			driverC.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
 			logClass.info("Given Name");
 			Thread.sleep(250);
@@ -115,10 +111,10 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), driverC,IP,"test"+shortVMName);
 
-			obj.clickButtonxPath(driverC, ".//*[@id='deployVMBtn-btnEl']");
+			obj.clickButtonxPath(driverC, locator.getProperty("Deploy"));
 			//obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
-			obj.findButton(driverC);
+			obj.findEULAAcceptButton(driverC);
 			logClass.info("Accepted EULA");
 
 			Thread.sleep(9000);
@@ -298,34 +294,34 @@ import com.avaya.sdmclient.vm.VM;
 
 
 
-		@Test(description="Restarting VM to given Location and Host",priority=14)
-		@Parameters({"IP", "VMName"})
-		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
-			String shortVMName = obj.shortVMName(VMName);
-			logClass.startTestCase("Restart VM to given Location and Host");
-
-			obj.goHome(driverC);
-
-			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			obj.chooseTab(driverC, "Virtual Machines");
-			
-			Thread.sleep(1500);
-			obj.findVMForHost(driverC, "test"+shortVMName);
-
-			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-			obj.clickButtonxPath(driverC, locator.getProperty("VMRestart"));
-			//driverC.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
-
-			obj.confirmDialogBox(driverC);
-			
+//		@Test(description="Restarting VM to given Location and Host",priority=14)
+//		@Parameters({"IP", "VMName"})
+//		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
+//			String shortVMName = obj.shortVMName(VMName);
+//			logClass.startTestCase("Restart VM to given Location and Host");
+//
+//			obj.goHome(driverC);
+//
 //			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 //
 //			obj.chooseTab(driverC, "Virtual Machines");
-
-			logClass.endTestCase("Restarted VM successfully");
-			Thread.sleep(100000);
-		}
+//			
+//			Thread.sleep(1500);
+//			obj.findVMForHost(driverC, "test"+shortVMName);
+//
+//			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
+//			obj.clickButtonxPath(driverC, locator.getProperty("VMRestart"));
+//			//driverC.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
+//
+//			obj.confirmDialogBox(driverC);
+//			
+////			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
+////
+////			obj.chooseTab(driverC, "Virtual Machines");
+//
+//			logClass.endTestCase("Restarted VM successfully");
+//			Thread.sleep(100000);
+//		}
 
 
 		@Test(description="Deleting VM to given Location and Host",priority=15)

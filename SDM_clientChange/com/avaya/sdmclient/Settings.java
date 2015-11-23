@@ -224,7 +224,7 @@ public class Settings {
 		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		List<String> tm = new ArrayList<>();
 		boolean b = true;
-		debugLogging("Entries on VM trees : "+cells.size(), "Info");
+		debugLogging("Entries on VM tree : "+cells.size(), "Info");
 		//System.out.println("Entries on Left Tree: "+cells.size());
 
 		for(WebElement e : cells)
@@ -384,8 +384,8 @@ public class Settings {
 			if(e.getText().contains(toBeSelected))
 			{
 				//System.out.println("Selected : "+e.getText());
-				e.click();
 				debugLogging("Clicked on: "+e.getText(), "Info");
+				e.click();
 				//System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
 			}
 		}
@@ -553,7 +553,7 @@ public class Settings {
 			driver.switchTo().activeElement();
 			Thread.sleep(450);
 			//System.out.println(driver.switchTo().activeElement().getText());
-			debugLogging("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))), "Info");
+			debugLogging("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Info");
 			//logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
 			//System.out.println("Confirmed");
@@ -1219,7 +1219,7 @@ public class Settings {
 	public void check(WebDriver driver,List<String> inputIP){
 
 		WebElement table = driver.findElement(By.id(locator.getProperty("VCVMList")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty(".//*[local-name(.)='td']")));
+		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Column")));
 		System.out.println(cells.size()+"\n\n");
 		for(int i=0;i<inputIP.size();i++)
 		{
@@ -1299,43 +1299,39 @@ public class Settings {
 		//driver.get("https://pdev55vm2.smgrdev.avaya.com");
 		driver.get(locator.getProperty("SMGRURL"));
 		
-		driver.findElement(By.id("IDToken1")).sendKeys("admin");
-	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
-	    driver.findElement(By.xpath(".//*[@id='SubmitButton']")).click();
-	    logClass.info("Logged in Successfully");
+		driver.findElement(By.id("IDToken1")).sendKeys(locator.getProperty("UserName"));
+	    driver.findElement(By.id("IDToken2")).sendKeys(locator.getProperty("PassWord"));
+	    driver.findElement(By.xpath(locator.getProperty("Submit"))).click();
+	    debugLogging("Logged in successfully to SMGR: "+locator.getProperty("SMGRURL"), "Info");
+	    //logClass.info("Logged in Successfully");
 	    
-	    driver.findElement(By.xpath(".//*[@id='Services_SoftwareManagement']/a")).click();
-	    
-	    driver.switchTo().frame("iframe0");
-	    
-	    driver.findElement(By.xpath(".//*[@id='vmMgmtId-textEl']")).click();
-		logClass.info("Clicked on VM management");
+	    driver.findElement(By.xpath(locator.getProperty("SDM"))).click();
+	    driver.switchTo().frame(locator.getProperty("IFrame"));
+	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
 		
 	}
 	
-	public void goHome(WebDriver driver) throws InterruptedException{
+	public void goHome(WebDriver driver) throws InterruptedException, IOException{
 		Thread.sleep(1000);
-		
+		setup();
 		/*driver.navigate().refresh();
 		logOut(driver);
 		loginToSite(driver);*/
 		
 		driver.switchTo().defaultContent();
-		WebElement e = driver.findElement(By.id("navIframe"));
+		WebElement e = driver.findElement(By.id(locator.getProperty("NavIframe")));
 		
 		//System.out.println("Ans"+eee.findElement(By.linkText("Solution Deployment Manager")).getText());
 
 		e.findElement(By.linkText("Solution Deployment Manager")).click();
 		Thread.sleep(1500);
-		
-		driver.switchTo().frame("iframe0");
-	    
-	    driver.findElement(By.xpath(".//*[@id='vmMgmtId-textEl']")).click();
-		logClass.info("Clicked on VM management");
+		driver.switchTo().frame(locator.getProperty("IFrame"));
+	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
 	}
 	
-	public void logOut(WebDriver driver){
-		driver.findElement(By.xpath(".//*[@id='logoff']")).click();
+	public void logOut(WebDriver driver) throws IOException, InterruptedException{
+		setup();
+		driver.findElement(By.xpath(locator.getProperty("LogOff"))).click();
 	}
 	
 	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
@@ -1349,7 +1345,7 @@ public class Settings {
 			}
 	}
 	
-	public void findButton(WebDriver driver) throws InterruptedException{
+	public void findEULAAcceptButton(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
@@ -1522,8 +1518,8 @@ public class Settings {
 				if(e.getText().equals(linkText))
 				{
 					//System.out.println("Changing: "+e.getText());
-					e.click();
 					debugLogging("Clicked on: "+linkText, "Info");
+					e.click();
 					break;
 				}
 			}
@@ -1863,7 +1859,8 @@ public class Settings {
 	
 	public void autoReloadVMMgmtTree(WebDriver driver) throws InterruptedException, IOException{
 		//autoLoadCheckBox-inputEl
-		driver.findElement(By.id("autoLoadCheckBox-inputEl")).click();
+		setup();
+		driver.findElement(By.id(locator.getProperty("AutoLoadVMTree"))).click();
 		Thread.sleep(1000);
 		confirmDialogBox(driver);
 	}

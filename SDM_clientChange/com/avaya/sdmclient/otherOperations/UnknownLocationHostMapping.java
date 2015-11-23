@@ -1,4 +1,4 @@
-package otherOperations;
+package com.avaya.sdmclient.otherOperations;
 
 import java.io.FileInputStream;
 import java.io.IOException;

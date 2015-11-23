@@ -118,7 +118,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.deployButtonClickForVM(driverC);
 			Thread.sleep(450);
-			obj.findButton(driverC);
+			obj.findEULAAcceptButton(driverC);
 			logClass.info("Accepted EULA");
 			//Adding Code
 			Thread.sleep(4500);

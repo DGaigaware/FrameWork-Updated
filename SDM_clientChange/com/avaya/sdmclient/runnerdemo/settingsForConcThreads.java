@@ -77,7 +77,8 @@ public class settingsForConcThreads {
 			//System.out.println(s);
 			pr.write(s+"\n");
 		}
-		logClass.info("InnerThread: Changed XML File Successfully");
+		//logClass.info("InnerThread: Changed XML File Successfully");
+		obj.debugLogging("InnerThread: Changed XML File Successfully", "Info");
 		pr.close();
 		
 		return file1.getName();
@@ -109,7 +110,8 @@ public class settingsForConcThreads {
 					System.out.println(sc.next());
 				}*/
 			IPs.add(s);
-			System.out.println(s);
+			obj.debugLogging("IPs available for Installations: "+s, "Info");
+			//System.out.println(s);
 		}
 		
 		logClass.startTestCase("InnerThread: Finding Available IP for Next VM");

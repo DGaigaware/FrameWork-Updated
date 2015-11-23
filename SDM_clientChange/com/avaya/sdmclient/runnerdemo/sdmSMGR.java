@@ -356,7 +356,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 			driver.findElement(By.xpath(locator.getProperty("Deploy"))).click();
 
-			obj.findButton(driver);
+			obj.findEULAAcceptButton(driver);
 //			driver.findElement(By.xpath(locator.getProperty("EULAAccept"))).click();
 			logClass.info("Accepted EULA");
 

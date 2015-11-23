@@ -5,6 +5,7 @@ import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.openqa.jetty.servlet.Debug;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -37,42 +38,35 @@ public class sdmSMGRConcurrent {
 		public void AddLocation() throws IOException, InterruptedException, MyException {
 
 			logClass.startTestCase("Add a new Location on SDM");
-
 			obj.loginToSite(drive);
-
+			
 			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
-			//drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
-			logClass.info("Adding new Location");
+			obj.debugLogging("Adding new Location .. ", "Info");
 
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation");
 			Thread.sleep(250);
-			
-			//obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
+			obj.debugLogging("Filled values .. ", "Info");
 			
 			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
-			//drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
-			logClass.info("Saved New Location");
+			obj.debugLogging("Checking if any errors are occurring or not .. ", "Info");
 
-			obj.errorBox(drive, obj.checkError(drive));
+			obj.confirmDialogBox(drive);
 			Thread.sleep(450);
+			obj.debugLogging("Location added successfully .. ", "Info");
 			//obj.refreshItems(drive, "AddLocation");
 			
 			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
-			//drive.findElement(By.xpath((locator.getProperty("LocationAdd")))).click();
-			logClass.info("Adding new Location");
+			obj.debugLogging("Adding new Location .. ", "Info");
 
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation1");
 			Thread.sleep(250);
-			
-			//obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSave")));
+			obj.debugLogging("Filled values .. ", "Info");
 			
 			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
-			//drive.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
-			logClass.info("Saved New Location");
-
 			Thread.sleep(450);
+			obj.debugLogging("Location added successfully .. ", "Info");
+
 			obj.errorBox(drive, obj.checkError(drive));
-			
 			logClass.endTestCase("Added a new Location");
 
 		}
@@ -82,27 +76,18 @@ public class sdmSMGRConcurrent {
 		public void EditLocation() throws IOException, InterruptedException, MyException{
 
 			logClass.startTestCase("Edit Location on SDM");
-
 			//obj.loginToSite(drive);
 			obj.goHome(drive);
-
 			obj.findLocationInGrid(drive, obj.readFromFile("input.properties", "AddLocationName:"));
-
-			drive.findElement(By.xpath(locator.getProperty("LocationEdit"))).click();
-
+			obj.clickButtonxPath(drive, locator.getProperty("LocationEdit"));
+			
 			obj.findIDandFillValues(drive, "input.properties", "EditLocation");
-			
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("LocationSaveEdit")));
-			
-			//obj.checkFocus(drive, By.xpath(locator.getProperty("LocationSaveEdit")));
-			
-			//driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
-			drive.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
 
-			Thread.sleep(1450);
+			obj.clickButtonxPath(drive, locator.getProperty("LocationSaveEdit"));
+			Thread.sleep(450);
 			obj.confirmDialogBox(drive);
-
-			logClass.info("Saved Location");
+			obj.debugLogging("Location edited successfully .. ", "Info");
 
 			logClass.endTestCase("Edited Location");
 		}
@@ -114,16 +99,16 @@ public class sdmSMGRConcurrent {
 			logClass.startTestCase("Delete Location on SMGR SDM");
 
 			obj.goHome(drive);
-
 			obj.findLocationOrHost(drive, "VM Management");
-
 			obj.findLocationInGrid(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 
-			obj.checkFocus(drive, By.xpath(locator.getProperty("LocationDelete")));
-			
-			drive.findElement(By.xpath(locator.getProperty("LocationDelete"))).click();
-
+			obj.clickButtonxPath(drive, locator.getProperty("LocationDelete"));
 			obj.confirmDialogBox(drive);
+			
+			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:")))
+				obj.debugLogging("Location deleted successfully .. ", "Info");
+			else
+				obj.debugLogging("Error occurred while deleting location.\nPlease Check screenshot.", "Error");
 
 			logClass.endTestCase("Deleted Location");
 		}
@@ -149,31 +134,27 @@ public class sdmSMGRConcurrent {
 			}
 
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
-
 			obj.chooseTab(drive, "Hosts");
-			logClass.info("In 'Host' Tab");
+			obj.debugLogging("Navigated to Host tab.", "Info");
 
-			drive.findElement(By.xpath(locator.getProperty("New-Host"))).click();
-			logClass.info("Adding new Host");
+			obj.clickButtonxPath(drive, locator.getProperty("New-Host"));
+			obj.debugLogging("Adding new host .. ", "Info");
 			Thread.sleep(250);			
 		
 			obj.findIDandFillValues(drive, "input.properties", "AddHost");
 			Thread.sleep(250);
-			
-			obj.checkFocus(drive, By.xpath(locator.getProperty("SaveHost")));
-			
-			drive.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
-			
+			obj.debugLogging("Filled values .. ", "Info");
+		
+			obj.clickButtonxPath(drive, locator.getProperty("SaveHost"));
 			Thread.sleep(1250);
+			
 			obj.refreshItems(drive, "AddHost");
 			Thread.sleep(1500);
 			
 			obj.chooseLink(drive, obj.readFromFile("input.properties", "AddHostHostName:"), "Host", "Status Details");
-
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
 			obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
-
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 			
 			//Adding second host
@@ -181,31 +162,29 @@ public class sdmSMGRConcurrent {
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 
 			obj.chooseTab(drive, "Hosts");
-			logClass.info("In 'Host' Tab");
+			obj.debugLogging("Navigated to Host tab.", "Info");
 
-			drive.findElement(By.xpath(locator.getProperty("New-Host"))).click();
-			logClass.info("Adding new Host");
+			obj.clickButtonxPath(drive, locator.getProperty("New-Host"));
+			obj.debugLogging("Adding new host .. ", "Info");
 			Thread.sleep(250);			
 		
 			obj.findIDandFillValues(drive, "input.properties", "AddHost1");
 			Thread.sleep(250);
+			obj.debugLogging("Filled values .. ", "Info");
 			
-			//drive.findElement(By.xpath(locator.getProperty("SaveHost"))).click();
-
 			obj.clickButtonxPath(drive, locator.getProperty("SaveHost"));
-			
 			Thread.sleep(1250);
+			
 			obj.refreshItems(drive, "AddHost");
 			Thread.sleep(1500);
 			
 			obj.chooseLink(drive, obj.readFromFile("input.properties", "AddHost1HostName:"), "Host", "Status Details");
-
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
 			obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
-
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 
+			obj.debugLogging("Hosts added successfully .. ", "Info");
 			logClass.endTestCase("Added Host Successfully");
 		}
 
@@ -354,16 +333,15 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(750);
 
 			//Adding loc and host
-//			drive.findElement(By.id("cmbSelectLocation-inputEl")).click();
-//			Thread.sleep(450);
-//			obj.boundListSelect(drive, "testLoc", obj.selBoundList(drive));
-//			
-//			drive.findElement(By.id("cmbSelectHost-inputEl")).click();
-//			Thread.sleep(450);
-//			obj.boundListSelect(drive, "148.147.162.175", obj.selBoundList(drive));
+			drive.findElement(By.id(locator.getProperty("SelLocation"))).click();
+			Thread.sleep(450);
+			obj.boundListSelect(drive, obj.readFromFile("input.properties", "AddLocationName:"), obj.selBoundList(drive));
+			
+			drive.findElement(By.id(locator.getProperty("SelHost"))).click();
+			Thread.sleep(450);
+			obj.boundListSelect(drive, obj.readFromFile("input.properties", "AddHostHostName:"), obj.selBoundList(drive));
 			Thread.sleep(6000);
-			obj.clickButtonxPath(drive, locator.getProperty("DataStore"));
-			//drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
+			drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);
 			obj.boundListSelect(drive, "data", obj.selBoundList(drive));
 			Thread.sleep(2500);
@@ -371,23 +349,19 @@ public class sdmSMGRConcurrent {
 			
 			
 			//Next Page
-			obj.clickButtonxPath(drive, ".//*[@id='next-btnIconEl']");
+			obj.clickButtonxPath(drive, locator.getProperty("Next"));
 			obj.comboClick(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
-
 			obj.maintainedList(drive, obj.comboID(drive, "Select OVAs:"));
-
 			obj.comboClick(drive, "Select OVAs:", VMName);
 			Thread.sleep(2500);
-
 			obj.selectFP(drive, shortVMName);
 			
 			//Uptill here
 			
 			//Next Page
-			obj.clickButtonxPath(drive, ".//*[@id='next-btnIconEl']");
+			obj.clickButtonxPath(drive, locator.getProperty("Next"));
 			drive.findElement(By.xpath(locator.getProperty("VMName"))).clear();
-
 			drive.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
 			logClass.info("Given Name");
 			Thread.sleep(250);
@@ -401,18 +375,18 @@ public class sdmSMGRConcurrent {
 			}
 
 			if(Thread.currentThread().isInterrupted()){
-				obj.debugLogging("Cannot Execute Further...","Error");
+				System.out.println("Cannot Execute Further");
 				throw new MyException(err);
 			}
 
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), drive,IP,"test"+shortVMName);
 
-			obj.clickButtonxPath(drive, ".//*[@id='deployVMBtn-btnEl']");
+			obj.clickButtonxPath(drive, locator.getProperty("Deploy"));
 			//obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
-			obj.findButton(drive);
+			obj.findEULAAcceptButton(drive);
 			logClass.info("Accepted EULA");
-
+			
 			final WebDriver driver1 = new FirefoxDriver(obj.selectProfile("Selenium"));
 			class MyRunnable implements Runnable {
 				public void run() {
@@ -650,37 +624,37 @@ public class sdmSMGRConcurrent {
 		}
 
 
-		//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
-		@Test(description="Restarting VM to given Location and Host",priority=13)
-		@Parameters({"IP", "VMName"})
-		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
-
-			String shortVMName = obj.shortVMName(VMName);
-			
-			logClass.startTestCase("Restart VM to given Location and Host");
-
-			obj.goHome(drive);
-
-			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
-
-			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-			obj.chooseTab(drive, "Virtual Machines");
-			Thread.sleep(1500);
-			obj.findVMForHost(drive,"test"+shortVMName);
-
-			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-			obj.clickButtonxPath(drive, locator.getProperty("VMRestart"));
-			//drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
-
-			Thread.sleep(1500);
-			obj.confirmDialogBox(drive);
-			
+//		//@Test(dependsOnMethods={"AddVM"},description="Restarting VM to given Location and Host",priority=13)
+//		@Test(description="Restarting VM to given Location and Host",priority=13)
+//		@Parameters({"IP", "VMName"})
+//		public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
+//
+//			String shortVMName = obj.shortVMName(VMName);
+//			
+//			logClass.startTestCase("Restart VM to given Location and Host");
+//
+//			obj.goHome(drive);
+//
 //			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
 //
+//			//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
 //			obj.chooseTab(drive, "Virtual Machines");
-			logClass.endTestCase("Restarted VM successfully");
-			Thread.sleep(100000);
-		}
+//			Thread.sleep(1500);
+//			obj.findVMForHost(drive,"test"+shortVMName);
+//
+//			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
+//			obj.clickButtonxPath(drive, locator.getProperty("VMRestart"));
+//			//drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
+//
+//			Thread.sleep(1500);
+//			obj.confirmDialogBox(drive);
+//			
+////			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
+////
+////			obj.chooseTab(drive, "Virtual Machines");
+//			logClass.endTestCase("Restarted VM successfully");
+//			Thread.sleep(100000);
+//		}
 
 		//@Test(dependsOnMethods={"AddVM"},description="Deleting VM to given Location and Host",priority=14)
 		@Test(description="Deleting VM to given Location and Host",priority=14)
