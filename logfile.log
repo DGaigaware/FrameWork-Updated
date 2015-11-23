@@ -29767,3 +29767,2208 @@ null (vmId = 12150):: Unable to find vm: testAAM
 2015-11-16 14:18:11,638 INFO  [Logger] Thread-5 32 Start 
 2015-11-16 14:18:11,820 INFO  [Logger] InnerThread: Test Started 
 2015-11-16 14:18:11,820 INFO  [Logger] Thread-3 21 Start 
+2015-11-23 12:59:43,258 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 12:59:43,326 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-11-23 12:59:53,222 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:00:09,659 INFO  [Logger] Clicked on: Map vCenter 
+2015-11-23 13:00:09,659 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-11-23 13:00:32,990 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:00:32,990 INFO  [Logger]                              Add a new Location on SDM                             
+2015-11-23 13:00:36,574 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:00:53,910 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 13:00:53,959 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:00:54,296 INFO  [Logger] Adding new Location ..  
+2015-11-23 13:00:54,442 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-11-23 13:00:55,194 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:00:55,649 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-11-23 13:00:56,125 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-11-23 13:00:56,357 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-11-23 13:00:56,590 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-11-23 13:00:56,748 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-11-23 13:00:56,903 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-11-23 13:00:57,044 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-11-23 13:00:57,177 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-11-23 13:00:57,362 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-11-23 13:00:57,562 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-11-23 13:00:57,731 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-11-23 13:00:58,014 INFO  [Logger] Filled values ..  
+2015-11-23 13:00:58,187 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:00:58,224 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:00:58,444 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-11-23 13:01:12,471 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 13:01:36,455 INFO  [Logger] Location added successfully ..  
+2015-11-23 13:01:36,638 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 13:01:36,685 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:01:36,934 INFO  [Logger] Adding new Location ..  
+2015-11-23 13:01:37,078 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-11-23 13:01:37,298 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-11-23 13:01:37,450 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-11-23 13:01:37,624 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-11-23 13:01:37,805 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-11-23 13:01:38,019 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-11-23 13:01:38,209 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-11-23 13:01:38,370 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-11-23 13:01:38,520 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-11-23 13:01:38,649 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-11-23 13:01:38,799 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-11-23 13:01:38,946 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-11-23 13:01:39,104 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-11-23 13:01:39,385 INFO  [Logger] Filled values ..  
+2015-11-23 13:01:39,594 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:01:39,637 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:01:40,339 INFO  [Logger] Location added successfully ..  
+2015-11-23 13:01:51,861 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-11-23 13:01:51,862 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:01:51,862 INFO  [Logger]                              Edit Location on SDM                             
+2015-11-23 13:02:07,754 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:02:11,931 INFO  [Logger] Entries on VM trees : 3 
+2015-11-23 13:02:12,534 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 13:02:12,576 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:02:13,147 INFO  [Logger] Read from file input.properties for EditLocationAddress:: Tower-12 
+2015-11-23 13:02:13,432 INFO  [Logger] Read from file input.properties for EditLocationAvayaSold-To#:: null 
+2015-11-23 13:02:13,609 INFO  [Logger] Read from file input.properties for EditLocationCity:: Hyderabad 
+2015-11-23 13:02:13,791 INFO  [Logger] Read from file input.properties for EditLocationState/Province/Region:: Telangana 
+2015-11-23 13:02:14,080 INFO  [Logger] Read from file input.properties for EditLocationZip/PostalCode:: 500078 
+2015-11-23 13:02:14,249 INFO  [Logger] Read from file input.properties for EditLocationCountry:: India 
+2015-11-23 13:02:14,416 INFO  [Logger] Read from file input.properties for EditLocationDefaultGateway:: null 
+2015-11-23 13:02:14,548 INFO  [Logger] Read from file input.properties for EditLocationDNSSearchList:: null 
+2015-11-23 13:02:14,696 INFO  [Logger] Read from file input.properties for EditLocationDNSServer1:: null 
+2015-11-23 13:02:14,830 INFO  [Logger] Read from file input.properties for EditLocationDNSServer2:: null 
+2015-11-23 13:02:14,969 INFO  [Logger] Read from file input.properties for EditLocationNetMask:: null 
+2015-11-23 13:02:15,113 INFO  [Logger] Read from file input.properties for EditLocationNtpServer:: null 
+2015-11-23 13:02:15,363 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:02:15,398 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:02:16,424 ERROR [Logger] Action being performed: Location Saved Successfully 
+2015-11-23 13:02:28,490 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:02:28,630 INFO  [Logger] Location edited successfully ..  
+2015-11-23 13:02:28,630 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-11-23 13:02:28,631 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:02:28,631 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-11-23 13:02:48,156 INFO  [Logger] Entries on VM trees : 3 
+2015-11-23 13:02:48,512 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:02:48,595 INFO  [Logger] Entries on VM trees : 3 
+2015-11-23 13:02:49,162 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 13:02:49,196 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:02:49,557 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-11-23 13:02:50,163 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:02:50,412 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:02:50,597 INFO  [Logger] Entries on VM trees : 2 
+2015-11-23 13:02:50,759 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-11-23 13:02:50,759 INFO  [Logger] Location deleted successfully ..  
+2015-11-23 13:02:50,759 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-11-23 13:02:50,760 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:02:50,760 INFO  [Logger]                              Adding Host to given Location                             
+2015-11-23 13:03:06,342 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:03:09,880 INFO  [Logger] Entries on VM trees : 2 
+2015-11-23 13:03:09,971 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-11-23 13:03:13,007 INFO  [Logger] Adding Location as location was not already added ... 
+2015-11-23 13:03:13,007 INFO  [Logger] Pausing the current thread ..  
+2015-11-23 13:03:13,007 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:03:13,007 INFO  [Logger]                              Add a new Location on SDM                             
+2015-11-23 13:03:15,573 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:03:32,696 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 13:03:32,733 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:03:33,051 INFO  [Logger] Adding new Location ..  
+2015-11-23 13:03:34,245 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-11-23 13:03:34,554 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:03:34,716 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-11-23 13:03:34,890 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-11-23 13:03:35,049 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-11-23 13:03:35,238 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-11-23 13:03:35,412 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-11-23 13:03:35,577 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-11-23 13:03:35,724 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-11-23 13:03:35,860 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-11-23 13:03:35,992 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-11-23 13:03:36,134 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-11-23 13:03:36,263 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-11-23 13:03:36,541 INFO  [Logger] Filled values ..  
+2015-11-23 13:03:36,719 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:03:36,765 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:03:36,951 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-11-23 13:03:48,707 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 13:04:12,767 INFO  [Logger] Location added successfully ..  
+2015-11-23 13:04:12,955 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 13:04:13,001 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:04:13,220 INFO  [Logger] Adding new Location ..  
+2015-11-23 13:04:13,369 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-11-23 13:04:13,538 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-11-23 13:04:13,692 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-11-23 13:04:13,865 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-11-23 13:04:14,080 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-11-23 13:04:14,260 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-11-23 13:04:14,464 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-11-23 13:04:14,655 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-11-23 13:04:14,797 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-11-23 13:04:14,942 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-11-23 13:04:15,087 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-11-23 13:04:15,220 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-11-23 13:04:15,347 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-11-23 13:04:15,625 INFO  [Logger] Filled values ..  
+2015-11-23 13:04:15,846 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:04:15,884 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:04:16,499 INFO  [Logger] Location added successfully ..  
+2015-11-23 13:04:28,090 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-11-23 13:04:28,090 INFO  [Logger] Location added successfully. Now resuming the current thread ..  
+2015-11-23 13:04:43,949 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:04:48,007 INFO  [Logger] Entries on VM trees : 3 
+2015-11-23 13:04:51,253 INFO  [Logger] Navigated to Host tab. 
+2015-11-23 13:04:51,451 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-11-23 13:04:51,489 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:04:51,762 INFO  [Logger] Adding new host ..  
+2015-11-23 13:04:52,232 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:04:52,560 INFO  [Logger] Read from file input.properties for AddHostHostFQDNorIP:: 148.147.162.175 
+2015-11-23 13:04:52,780 INFO  [Logger] Read from file input.properties for AddHostUserName:: root 
+2015-11-23 13:04:52,947 INFO  [Logger] Read from file input.properties for AddHostPassword:: root1234 
+2015-11-23 13:04:53,250 INFO  [Logger] Filled values ..  
+2015-11-23 13:04:53,479 INFO  [Logger] Opacity of button Save
+  is: 1.0 
+2015-11-23 13:04:53,521 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:04:55,357 INFO  [Logger] Page refreshed successfully.. 
+2015-11-23 13:04:56,857 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:05:32,934 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM pdev50vm2 in local inventory :;Discovering VMs: Add VM pdev50vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev50vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-11-23 13:05:33,152 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Discovering VMs
+Discovering VMs: Retreive Host Credentials
+Discovering VMs: Retreive VM information from host
+Discovering VMs: Add VM sidtsmgr3 in local inventory
+Discovering VMs: Add VM sidtsmgr3 in Inventory
+Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory
+Discovering VMs: Add VM pdev50vm2 in local inventory
+Discovering VMs: Add VM pdev50vm2 in Inventory
+Error Code-SMGR_VM_1003:: Failed to add VM pdev50vm2 in Inventory
+Complete
+Host Create/Update
+Host Create/Update
+Host Create/Update Completed 
+2015-11-23 13:05:33,598 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM pdev50vm2 in local inventory :;Discovering VMs: Add VM pdev50vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev50vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-11-23 13:05:34,179 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:05:34,270 INFO  [Logger] Entries on VM trees : 4 
+2015-11-23 13:05:36,139 INFO  [Logger] Navigated to Host tab. 
+2015-11-23 13:05:36,342 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-11-23 13:05:36,384 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:05:36,685 INFO  [Logger] Adding new host ..  
+2015-11-23 13:05:37,082 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-11-23 13:05:37,292 INFO  [Logger] Read from file input.properties for AddHost1HostFQDNorIP:: 148.147.162.196 
+2015-11-23 13:05:37,478 INFO  [Logger] Read from file input.properties for AddHost1UserName:: root 
+2015-11-23 13:05:37,663 INFO  [Logger] Read from file input.properties for AddHost1Password:: Avaya1234$ 
+2015-11-23 13:05:37,970 INFO  [Logger] Filled values ..  
+2015-11-23 13:05:38,190 INFO  [Logger] Opacity of button Save
+  is: 1.0 
+2015-11-23 13:05:38,241 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:05:40,285 INFO  [Logger] Page refreshed successfully.. 
+2015-11-23 13:05:41,785 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-11-23 13:06:17,770 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-11-23 13:06:17,981 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Discovering VMs
+Discovering VMs: Retreive Host Credentials
+Discovering VMs: Retreive VM information from host
+Discovering VMs: Add VM pdev55vm2 in local inventory
+Discovering VMs: Add VM pdev55vm2 in Inventory
+Complete
+Host Create/Update
+Host Create/Update
+Host Create/Update Completed 
+2015-11-23 13:06:18,420 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-11-23 13:06:18,963 INFO  [Logger] Hosts added successfully ..  
+2015-11-23 13:06:18,963 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-11-23 13:06:18,964 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:06:18,964 INFO  [Logger]                              Editing Host to given Location                             
+2015-11-23 13:06:34,531 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:06:38,389 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:06:42,027 INFO  [Logger] In 'Host' Tab 
+2015-11-23 13:06:42,028 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:06:42,124 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:06:44,731 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 13:06:44,770 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:06:58,153 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,194 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,236 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,257 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,295 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,346 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 13:06:58,352 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:06:58,352 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:06:58,352 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-11-23 13:07:14,039 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:07:18,005 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:07:18,457 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:07:18,546 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:07:21,468 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 13:07:21,504 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:07:23,700 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:07:24,143 INFO  [Logger] Clicked on:  
+2015-11-23 13:07:24,833 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:07:25,054 INFO  [Logger] Clicked on:  
+2015-11-23 13:07:31,718 INFO  [Logger] Clicked on:  
+2015-11-23 13:07:34,419 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:07:34,462 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:07:37,357 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 13:07:45,354 INFO  [Logger] Selected value for: Select OVAs: SM-7.0.0.0.700007-e55-02.ova SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:07:48,637 INFO  [Logger] Selected footprint: Profile 1 
+2015-11-23 13:07:48,820 INFO  [Logger] Clicked on:  
+2015-11-23 13:07:49,085 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:07:49,128 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:07:52,264 INFO  [Logger] Given Name 
+2015-11-23 13:08:15,852 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:08:15,852 INFO  [Logger] Choosen OVF: (-) SM-7.0.0.0.700007_OVF10.ovf 
+2015-11-23 13:08:15,937 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-11-23 13:08:16,851 INFO  [Logger] Filled hostname for VM 1 testSM 
+2015-11-23 13:08:17,422 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-11-23 13:08:17,422 INFO  [Logger] Default field 2 
+2015-11-23 13:08:17,496 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-11-23 13:08:17,586 INFO  [Logger] 'IP' type field 3 
+2015-11-23 13:08:17,587 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-11-23 13:08:18,564 INFO  [Logger] 'IP' type field 4 
+2015-11-23 13:08:18,565 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-11-23 13:08:19,841 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-11-23 13:08:19,841 INFO  [Logger] Default field 5 
+2015-11-23 13:08:19,896 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-11-23 13:08:20,259 INFO  [Logger] Input ID from OVF is : timezone Input ID found on UI: timezone-inputEl 
+2015-11-23 13:08:20,259 INFO  [Logger] Combobox type field 6 
+2015-11-23 13:08:20,904 INFO  [Logger] Read from file inputsm.properties for timezone: Asia/Kolkata 
+2015-11-23 13:08:24,308 INFO  [Logger] Clicked on:  
+2015-11-23 13:08:27,242 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-11-23 13:08:27,242 INFO  [Logger] Default field 7 
+2015-11-23 13:08:27,320 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-11-23 13:08:27,807 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-11-23 13:08:27,808 INFO  [Logger] Default field 8 
+2015-11-23 13:08:27,865 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 13:08:28,187 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-11-23 13:08:28,187 INFO  [Logger] 'Password' type field 9 
+2015-11-23 13:08:28,251 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 13:08:28,506 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 13:08:28,666 INFO  [Logger] 'IP' type field 10 
+2015-11-23 13:08:28,667 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 13:08:30,128 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 13:08:30,128 INFO  [Logger] 'Password' type field 11 
+2015-11-23 13:08:30,196 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:08:30,494 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:08:31,326 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 13:08:31,326 INFO  [Logger] Default field 12 
+2015-11-23 13:08:31,604 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 13:08:31,604 INFO  [Logger] Default field 13 
+2015-11-23 13:08:31,885 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 13:08:31,886 INFO  [Logger] Default field 14 
+2015-11-23 13:08:32,149 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 13:08:32,149 INFO  [Logger] Default field 15 
+2015-11-23 13:08:34,082 INFO  [Logger] Clicked on:  
+2015-11-23 13:08:34,602 INFO  [Logger] Clicked on:  
+2015-11-23 13:08:34,956 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 13:08:35,010 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:08:37,834 INFO  [Logger] Accepted EULA ..  
+2015-11-23 13:08:37,834 INFO  [Logger] Accepted EULA 
+2015-11-23 13:08:54,081 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 13:08:54,081 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 13:08:54,083 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 13:08:54,083 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 13:08:54,083 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:08:54,083 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 13:09:00,954 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:09:12,960 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:09:17,066 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:09:20,166 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 13:09:20,428 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 13:09:20,428 ERROR [Logger] No free IP available for Installation as another instance has taken IP. 
+2015-11-23 13:18:09,401 INFO  [Logger] Task completed successfully..  
+2015-11-23 13:18:09,747 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 13:18:09,914 INFO  [Logger] Total time taken in seconds is less than: 306 
+2015-11-23 13:18:14,914 INFO  [Logger] Completed adding VM SM with IP 148.147.162.221 
+2015-11-23 13:18:14,915 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:18:14,915 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:18:14,915 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:18:14,915 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 13:18:30,413 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:18:34,434 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:18:39,248 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:18:42,112 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 13:18:42,256 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:18:42,687 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 13:18:46,838 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 13:18:46,875 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:18:58,673 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 13:18:58,674 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:19:03,674 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:19:03,674 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 13:19:19,481 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:19:24,880 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:19:29,682 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:19:32,792 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 13:19:32,835 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:19:33,307 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 13:19:33,951 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:19:45,521 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 13:20:45,520 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:20:50,521 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:20:50,521 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 13:21:06,122 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:21:10,039 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:21:14,935 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:21:16,855 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 13:21:16,914 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:21:17,267 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 13:21:17,872 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:21:29,446 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 13:22:59,442 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:23:04,442 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:23:04,442 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 13:23:20,104 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:23:24,641 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:23:29,702 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:23:32,188 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 13:23:32,234 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:23:33,068 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 13:23:33,069 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 13:23:34,564 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:23:34,602 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:24:11,478 INFO  [Logger] Task completed successfully..  
+2015-11-23 13:24:11,602 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-11-23 13:24:11,788 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 13:24:54,872 INFO  [Logger] Task completed successfully..  
+2015-11-23 13:24:55,028 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 13:24:55,214 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 13:24:57,714 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 13:24:57,714 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:24:57,714 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:24:57,714 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 13:25:14,006 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:25:19,362 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:25:25,201 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:25:28,010 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 13:25:28,063 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:25:30,142 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 13:25:30,779 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:25:42,366 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 13:27:22,363 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:27:22,363 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 13:27:22,363 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:27:38,038 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:27:42,355 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:27:47,194 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:27:49,072 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 13:27:49,110 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:27:49,476 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 13:27:50,354 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cc9536cb-20f8-4d12-a459-65731e2ca434)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:28:02,516 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 13:28:07,496 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 13:28:07,496 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 13:28:20,055 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 13:28:20,055 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:28:20,057 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 13:28:20,057 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 13:28:20,057 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:28:20,057 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 13:28:23,986 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:28:36,124 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:28:40,563 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:28:43,428 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 13:28:43,615 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 13:28:43,616 INFO  [Logger] 148.147.162.221 IP is available 
+2015-11-23 13:28:43,617 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 13:28:43,617 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-11-23 13:28:43,617 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 13:28:43,617 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-11-23 13:28:43,617 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:28:43,619 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 13:28:48,315 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 13:29:01,120 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:29:04,687 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:29:16,763 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:29:22,954 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:29:23,645 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:29:23,740 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:29:27,889 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 13:29:29,310 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:29:29,824 INFO  [Logger] Clicked on:  
+2015-11-23 13:29:30,627 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:29:31,039 INFO  [Logger] Clicked on:  
+2015-11-23 13:29:37,700 INFO  [Logger] Clicked on:  
+2015-11-23 13:29:40,543 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:29:40,627 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:29:43,634 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 13:29:51,609 INFO  [Logger] Selected value for: Select OVAs: US-7.0.0.0.0.12-e55-01_OVF10.ova US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:29:55,029 INFO  [Logger] Selected footprint: Minimal Resources 
+2015-11-23 13:29:55,241 INFO  [Logger] Clicked on:  
+2015-11-23 13:29:55,466 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:29:55,517 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:29:57,976 INFO  [Logger] Given Name 
+2015-11-23 13:30:21,452 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:30:21,452 INFO  [Logger] Choosen OVF: (-) US-7.0.0.0.0.12-e55-01_OVF10.ovf 
+2015-11-23 13:30:21,755 INFO  [Logger] Input ID from OVF is : BuildId Input ID found on UI:  
+2015-11-23 13:30:21,757 INFO  [Logger] Default field 0 
+2015-11-23 13:30:21,757 INFO  [Logger] 'IP' type field 1 
+2015-11-23 13:30:21,758 INFO  [Logger] Read from file inputsm.properties for CM_IP: 0.0.0.0 
+2015-11-23 13:30:23,029 INFO  [Logger] Input ID from OVF is : NTP_IP Input ID found on UI: NTP_IP-inputEl 
+2015-11-23 13:30:23,029 INFO  [Logger] Default field 2 
+2015-11-23 13:30:23,098 INFO  [Logger] Read from file inputsm.properties for NTP_IP: ntp.dr.avaya.com 
+2015-11-23 13:30:23,766 INFO  [Logger] Input ID from OVF is : vami.hostname Input ID found on UI: vami.hostname-inputEl 
+2015-11-23 13:30:23,766 INFO  [Logger] Default field 3 
+2015-11-23 13:30:23,810 INFO  [Logger] Read from file inputsm.properties for vami.hostname: test.smgrdev.avaya.com 
+2015-11-23 13:30:24,387 INFO  [Logger] Input ID from OVF is : vamitimezone Input ID found on UI: vamitimezone-inputEl 
+2015-11-23 13:30:24,387 INFO  [Logger] Combobox type field 4 
+2015-11-23 13:30:24,704 INFO  [Logger] Read from file inputsm.properties for vamitimezone: Asia/Calcutta 
+2015-11-23 13:30:25,201 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:25,465 INFO  [Logger] Input ID from OVF is : Utility_Services_Mode Input ID found on UI: Utility_Services_Mode-inputEl 
+2015-11-23 13:30:25,465 INFO  [Logger] Combobox type field 5 
+2015-11-23 13:30:25,667 INFO  [Logger] Read from file inputsm.properties for Utility_Services_Mode: full_functionality 
+2015-11-23 13:30:25,797 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:26,023 INFO  [Logger] Input ID from OVF is : Out_of_Band_Management_Mode Input ID found on UI: Out_of_Band_Management_Mode-inputEl 
+2015-11-23 13:30:26,023 INFO  [Logger] Combobox type field 6 
+2015-11-23 13:30:26,219 INFO  [Logger] Read from file inputsm.properties for Out_of_Band_Management_Mode: OOBM_Disabled 
+2015-11-23 13:30:26,347 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:26,557 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 13:30:26,557 INFO  [Logger] Default field 7 
+2015-11-23 13:30:26,794 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 13:30:26,794 INFO  [Logger] Default field 8 
+2015-11-23 13:30:27,076 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 13:30:27,076 INFO  [Logger] Default field 9 
+2015-11-23 13:30:27,076 INFO  [Logger] 'IP' type field 10 
+2015-11-23 13:30:27,076 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 13:30:28,410 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 13:30:28,411 INFO  [Logger] 'Password' type field 11 
+2015-11-23 13:30:28,454 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:30:28,545 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:30:29,140 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 13:30:29,140 INFO  [Logger] Default field 12 
+2015-11-23 13:30:29,449 INFO  [Logger] Input ID from OVF is : gateway Input ID found on UI: vami.gateway.Utility_Services-inputEl 
+2015-11-23 13:30:29,449 INFO  [Logger] Default field 13 
+2015-11-23 13:30:29,495 INFO  [Logger] Read from file inputsm.properties for vami.gateway.Utility_Services: 148.147.162.1 
+2015-11-23 13:30:29,798 INFO  [Logger] Input ID from OVF is : DNS Input ID found on UI: vami.DNS.Utility_Services-inputEl 
+2015-11-23 13:30:29,798 INFO  [Logger] Default field 14 
+2015-11-23 13:30:29,846 INFO  [Logger] Read from file inputsm.properties for vami.DNS.Utility_Services: 148.147.162.5 
+2015-11-23 13:30:30,148 INFO  [Logger] Input ID from OVF is : ip0 Input ID found on UI: vami.ip0.Utility_Services-inputEl 
+2015-11-23 13:30:30,149 INFO  [Logger] IP as textbox.Not as foue parts ..  
+2015-11-23 13:30:30,274 INFO  [Logger] Filled IP 148.147.162.221 for ID: vami.ip0.Utility_Services-inputEl 
+2015-11-23 13:30:30,519 INFO  [Logger] Input ID from OVF is : netmask0 Input ID found on UI: vami.netmask0.Utility_Services-inputEl 
+2015-11-23 13:30:30,519 INFO  [Logger] Default field 16 
+2015-11-23 13:30:30,578 INFO  [Logger] Read from file inputsm.properties for vami.netmask0.Utility_Services: 255.255.255.0 
+2015-11-23 13:30:30,856 INFO  [Logger] Input ID from OVF is : ip1 Input ID found on UI:  
+2015-11-23 13:30:30,856 INFO  [Logger] Default field 17 
+2015-11-23 13:30:31,057 INFO  [Logger] Input ID from OVF is : netmask1 Input ID found on UI:  
+2015-11-23 13:30:31,057 INFO  [Logger] Default field 18 
+2015-11-23 13:30:31,277 INFO  [Logger] Input ID from OVF is : ip2 Input ID found on UI: vami.ip2.Utility_Services-inputEl 
+2015-11-23 13:30:31,277 INFO  [Logger] Default field 19 
+2015-11-23 13:30:31,328 INFO  [Logger] Read from file inputsm.properties for vami.ip2.Utility_Services: null 
+2015-11-23 13:30:31,584 INFO  [Logger] Input ID from OVF is : netmask2 Input ID found on UI: vami.netmask2.Utility_Services-inputEl 
+2015-11-23 13:30:31,584 INFO  [Logger] Default field 20 
+2015-11-23 13:30:31,633 INFO  [Logger] Read from file inputsm.properties for vami.netmask2.Utility_Services: null 
+2015-11-23 13:30:33,592 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:33,923 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:34,250 INFO  [Logger] Clicked on:  
+2015-11-23 13:30:34,543 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 13:30:34,597 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:30:36,843 INFO  [Logger] Accepted EULA ..  
+2015-11-23 13:30:36,843 INFO  [Logger] Accepted EULA 
+2015-11-23 13:47:28,905 INFO  [Logger] Task completed successfully..  
+2015-11-23 13:47:29,358 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;Add VM To Inventory :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 13:47:29,534 INFO  [Logger] Total time taken in seconds is less than: 546 
+2015-11-23 13:47:34,534 INFO  [Logger] Completed adding VM US with IP 148.147.162.221 
+2015-11-23 13:47:34,534 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:47:34,534 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:47:34,535 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 13:47:49,991 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:47:53,598 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:47:58,139 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:47:59,843 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 13:47:59,898 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:48:00,226 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 13:48:02,904 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:48:02,948 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:48:17,021 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 13:48:17,022 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:48:22,022 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:48:22,022 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 13:48:37,443 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:48:40,815 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:48:45,643 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:48:48,684 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 13:48:48,720 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:48:49,006 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 13:48:49,609 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (47625bc7-5f4a-49a1-a975-8025b2857e6e)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:49:01,155 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 13:50:01,152 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:50:06,153 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:50:06,153 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 13:50:21,668 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:50:25,362 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:50:29,893 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:50:31,440 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 13:50:31,480 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:50:31,747 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 13:50:32,380 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (47625bc7-5f4a-49a1-a975-8025b2857e6e)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:50:43,940 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 13:52:13,936 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:52:18,936 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:52:18,936 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 13:52:34,459 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:52:38,965 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:52:43,687 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:52:46,047 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 13:52:46,083 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:52:46,787 INFO  [Logger] Read from file inputsm.properties for UName: admin 
+2015-11-23 13:52:46,788 INFO  [Logger] Read from file inputsm.properties for USPWD: admin 
+2015-11-23 13:52:48,478 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:52:48,515 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:53:25,468 ERROR [Logger] Task failed ..  
+2015-11-23 13:53:25,468 INFO  [Logger] Failed test. Check screenshot for the same. 
+2015-11-23 13:53:25,578 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-11-23 13:53:25,779 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 13:53:25,937 INFO  [Logger] Total time taken in seconds is less than: 24 
+2015-11-23 13:53:25,938 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:53:30,938 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:53:30,938 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 13:53:46,376 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:53:50,388 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:53:54,999 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:53:57,155 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 13:53:57,191 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:54:38,139 INFO  [Logger] Task completed successfully..  
+2015-11-23 13:54:38,285 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 13:54:38,452 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 13:54:38,952 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 13:54:38,952 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:54:38,952 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:54:38,952 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 13:54:54,357 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:54:57,930 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:55:03,057 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:55:04,842 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 13:55:04,882 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:55:05,156 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 13:55:05,998 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (47625bc7-5f4a-49a1-a975-8025b2857e6e)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:55:17,644 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 13:56:57,640 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 13:56:57,640 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:56:57,640 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 13:57:13,167 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:57:16,821 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:57:21,455 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 13:57:22,960 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 13:57:22,998 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:57:23,314 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 13:57:23,938 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (47625bc7-5f4a-49a1-a975-8025b2857e6e)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 13:57:35,690 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 13:57:39,183 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 13:57:39,183 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 13:57:48,427 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 13:57:48,427 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:57:48,429 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 13:57:48,429 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 13:57:48,429 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 13:57:48,429 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 13:57:52,971 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:58:04,918 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:58:09,063 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:58:12,517 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 13:58:12,708 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 13:58:12,708 INFO  [Logger] 148.147.162.221 IP is available 
+2015-11-23 13:58:12,710 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 13:58:12,710 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-11-23 13:58:12,710 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 13:58:12,710 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-11-23 13:58:12,710 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:58:12,711 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 13:58:18,923 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 13:58:30,791 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:58:34,478 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 13:58:46,377 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:58:49,874 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:58:50,404 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:58:50,483 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 13:58:53,926 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 13:58:55,333 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 13:58:55,735 INFO  [Logger] Clicked on:  
+2015-11-23 13:58:56,346 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 13:58:56,520 INFO  [Logger] Clicked on:  
+2015-11-23 13:59:03,067 INFO  [Logger] Clicked on:  
+2015-11-23 13:59:05,753 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:59:05,791 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:59:08,517 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 13:59:16,491 INFO  [Logger] Selected value for: Select OVAs: BSM-7.0.0.0.700007-e55-02.ova BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:59:19,802 INFO  [Logger] Selected footprint: Profile 1 
+2015-11-23 13:59:19,979 INFO  [Logger] Clicked on:  
+2015-11-23 13:59:20,178 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 13:59:20,217 INFO  [Logger] Is element enabled: true 
+2015-11-23 13:59:22,840 INFO  [Logger] Given Name 
+2015-11-23 13:59:46,384 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 13:59:46,384 INFO  [Logger] Choosen OVF: (-) BSM-7.0.0.0.700007-e55-02_OVF10.ovf 
+2015-11-23 13:59:46,423 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-11-23 13:59:47,248 INFO  [Logger] Filled hostname for VM 1 testBSM 
+2015-11-23 13:59:47,791 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-11-23 13:59:47,791 INFO  [Logger] Default field 2 
+2015-11-23 13:59:47,845 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-11-23 13:59:47,875 INFO  [Logger] 'IP' type field 3 
+2015-11-23 13:59:47,876 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-11-23 13:59:48,704 INFO  [Logger] 'IP' type field 4 
+2015-11-23 13:59:48,704 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-11-23 13:59:49,809 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-11-23 13:59:49,809 INFO  [Logger] Default field 5 
+2015-11-23 13:59:49,864 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-11-23 13:59:50,168 INFO  [Logger] Input ID from OVF is : TIMEZONE Input ID found on UI: TIMEZONE-inputEl 
+2015-11-23 13:59:50,169 INFO  [Logger] Combobox type field 6 
+2015-11-23 13:59:50,653 INFO  [Logger] Read from file inputsm.properties for TIMEZONE: Asia/Calcutta 
+2015-11-23 13:59:56,418 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-11-23 13:59:56,418 INFO  [Logger] Default field 7 
+2015-11-23 13:59:56,473 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-11-23 13:59:56,773 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-11-23 13:59:56,773 INFO  [Logger] Default field 8 
+2015-11-23 13:59:56,823 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 13:59:57,156 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-11-23 13:59:57,156 INFO  [Logger] 'Password' type field 9 
+2015-11-23 13:59:57,211 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 13:59:57,449 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 13:59:57,600 INFO  [Logger] 'IP' type field 10 
+2015-11-23 13:59:57,601 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 13:59:59,084 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 13:59:59,084 INFO  [Logger] 'Password' type field 11 
+2015-11-23 13:59:59,142 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:59:59,393 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 13:59:59,562 INFO  [Logger] 'IP' type field 12 
+2015-11-23 13:59:59,562 INFO  [Logger] Read from file inputsm.properties for LSPIP: 148.147.162.224 
+2015-11-23 14:00:01,085 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 14:00:01,085 INFO  [Logger] Default field 13 
+2015-11-23 14:00:01,491 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 14:00:01,491 INFO  [Logger] Default field 14 
+2015-11-23 14:00:01,948 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 14:00:01,948 INFO  [Logger] Default field 15 
+2015-11-23 14:00:02,197 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 14:00:02,197 INFO  [Logger] Default field 16 
+2015-11-23 14:00:03,991 INFO  [Logger] Clicked on:  
+2015-11-23 14:00:04,305 INFO  [Logger] Clicked on:  
+2015-11-23 14:00:04,539 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 14:00:04,589 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:00:07,149 INFO  [Logger] Accepted EULA ..  
+2015-11-23 14:00:07,149 INFO  [Logger] Accepted EULA 
+2015-11-23 14:08:56,891 INFO  [Logger] Task completed successfully..  
+2015-11-23 14:08:57,288 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 14:08:57,467 INFO  [Logger] Total time taken in seconds is less than: 294 
+2015-11-23 14:09:02,467 INFO  [Logger] Completed adding VM BSM with IP 148.147.162.221 
+2015-11-23 14:09:02,467 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:09:02,467 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:09:02,468 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 14:09:17,917 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:09:21,880 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:09:26,571 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:09:28,127 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 14:09:28,165 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:09:28,510 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 14:09:30,666 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:09:30,702 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:09:44,283 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 14:09:44,284 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:09:49,284 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:09:49,284 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 14:10:04,671 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:10:08,503 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:10:12,865 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:10:15,877 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 14:10:15,913 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:10:16,309 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 14:10:17,011 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cb0712e7-d365-4c27-98b3-b4bd0758d625)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 14:10:28,616 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 14:11:28,613 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:11:33,613 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:11:33,613 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 14:11:49,195 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:11:53,049 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:11:58,306 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:12:00,296 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 14:12:00,336 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:12:00,648 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 14:12:01,336 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cb0712e7-d365-4c27-98b3-b4bd0758d625)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 14:12:12,944 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 14:13:42,939 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:13:47,940 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:13:47,940 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 14:14:03,753 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:14:09,549 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:14:14,387 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:14:17,151 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 14:14:17,191 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:14:17,825 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 14:14:17,826 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 14:14:19,383 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:14:19,429 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:14:56,340 INFO  [Logger] Task completed successfully..  
+2015-11-23 14:14:56,529 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-11-23 14:14:56,758 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 14:14:56,758 INFO  [Logger] *************************End of test caseTrust Established with VM Successfully******************************
+
+ 
+2015-11-23 14:14:56,758 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:15:01,759 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:15:01,759 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 14:15:17,476 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:15:21,774 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:15:26,566 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:15:28,902 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 14:15:28,938 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:16:10,741 INFO  [Logger] Task completed successfully..  
+2015-11-23 14:16:10,891 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 14:16:11,065 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 14:16:11,565 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 14:16:11,565 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:16:11,565 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:16:11,565 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 14:16:27,201 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:16:31,181 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:16:36,489 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:16:38,479 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 14:16:38,529 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:16:38,911 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 14:16:39,809 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cb0712e7-d365-4c27-98b3-b4bd0758d625)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 14:16:51,552 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 14:18:31,547 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:18:31,548 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:18:31,548 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 14:18:47,296 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:18:53,090 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:18:58,005 INFO  [Logger] Entries on VM trees : 9 
+2015-11-23 14:19:01,019 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 14:19:01,181 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:19:02,005 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 14:19:02,681 INFO  [Logger] Confirmation: [[FirefoxDriver: firefox on WINDOWS (cb0712e7-d365-4c27-98b3-b4bd0758d625)] -> id: messagebox-1001-displayfield-inputEl] 
+2015-11-23 14:19:14,313 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 14:19:18,748 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 14:19:18,748 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 14:19:34,275 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 14:19:34,275 INFO  [Logger] InnerThread: Choosen OVA  
+2015-11-23 14:19:34,277 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 14:19:34,277 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 14:19:34,277 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:19:34,277 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 14:19:37,985 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:19:51,197 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:19:55,892 INFO  [Logger] Entries on VM trees : 8 
+2015-11-23 14:19:59,563 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 14:19:59,779 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 14:19:59,780 INFO  [Logger] 148.147.162.221 IP is available 
+2015-11-23 14:19:59,781 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 14:19:59,781 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-11-23 14:19:59,782 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 14:19:59,782 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-11-23 14:19:59,783 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 14:20:05,046 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 14:20:10,276 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 14:20:10,278 INFO  [Logger] Thread-8 44 Start 
+2015-11-23 14:20:10,387 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 14:20:10,387 INFO  [Logger] Thread-5 29 Start 
+2015-11-23 14:36:11,877 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:36:11,877 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-11-23 14:36:18,497 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:36:35,477 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:36:35,477 INFO  [Logger]                              Add a new Location on SDM                             
+2015-11-23 14:36:38,970 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:36:54,610 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 14:36:54,759 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:36:54,974 INFO  [Logger] Adding new Location ..  
+2015-11-23 14:36:55,163 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-11-23 14:36:55,454 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:36:55,615 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-11-23 14:36:55,768 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-11-23 14:36:55,944 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-11-23 14:36:56,128 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-11-23 14:36:56,344 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-11-23 14:36:56,566 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-11-23 14:36:56,712 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-11-23 14:36:56,880 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-11-23 14:36:57,039 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-11-23 14:36:57,175 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-11-23 14:36:57,335 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-11-23 14:36:57,627 INFO  [Logger] Filled values ..  
+2015-11-23 14:36:57,888 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 14:36:57,921 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:36:58,096 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-11-23 14:37:09,818 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 14:37:33,944 INFO  [Logger] Location added successfully ..  
+2015-11-23 14:37:34,137 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 14:37:34,186 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:37:34,408 INFO  [Logger] Adding new Location ..  
+2015-11-23 14:37:34,553 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-11-23 14:37:34,724 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-11-23 14:37:34,869 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-11-23 14:37:35,033 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-11-23 14:37:35,183 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-11-23 14:37:35,360 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-11-23 14:37:35,515 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-11-23 14:37:35,668 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-11-23 14:37:35,800 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-11-23 14:37:35,930 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-11-23 14:37:36,070 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-11-23 14:37:36,221 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-11-23 14:37:36,350 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-11-23 14:37:36,639 INFO  [Logger] Filled values ..  
+2015-11-23 14:37:36,842 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 14:37:36,881 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:37:37,497 INFO  [Logger] Location added successfully ..  
+2015-11-23 14:37:49,087 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-11-23 14:37:49,088 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:37:49,088 INFO  [Logger]                              Edit Location on SDM                             
+2015-11-23 14:38:04,782 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:38:08,708 INFO  [Logger] Entries on VM tree : 3 
+2015-11-23 14:38:09,878 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 14:38:09,949 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:38:10,563 INFO  [Logger] Read from file input.properties for EditLocationAddress:: Tower-12 
+2015-11-23 14:38:10,784 INFO  [Logger] Read from file input.properties for EditLocationAvayaSold-To#:: null 
+2015-11-23 14:38:10,951 INFO  [Logger] Read from file input.properties for EditLocationCity:: Hyderabad 
+2015-11-23 14:38:11,224 INFO  [Logger] Read from file input.properties for EditLocationState/Province/Region:: Telangana 
+2015-11-23 14:38:11,455 INFO  [Logger] Read from file input.properties for EditLocationZip/PostalCode:: 500078 
+2015-11-23 14:38:11,746 INFO  [Logger] Read from file input.properties for EditLocationCountry:: India 
+2015-11-23 14:38:11,942 INFO  [Logger] Read from file input.properties for EditLocationDefaultGateway:: null 
+2015-11-23 14:38:12,119 INFO  [Logger] Read from file input.properties for EditLocationDNSSearchList:: null 
+2015-11-23 14:38:12,270 INFO  [Logger] Read from file input.properties for EditLocationDNSServer1:: null 
+2015-11-23 14:38:12,418 INFO  [Logger] Read from file input.properties for EditLocationDNSServer2:: null 
+2015-11-23 14:38:12,565 INFO  [Logger] Read from file input.properties for EditLocationNetMask:: null 
+2015-11-23 14:38:12,733 INFO  [Logger] Read from file input.properties for EditLocationNtpServer:: null 
+2015-11-23 14:38:12,962 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 14:38:13,010 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:38:14,043 ERROR [Logger] Action being performed: Location Saved Successfully 
+2015-11-23 14:38:26,118 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-11-23 14:38:26,243 INFO  [Logger] Location edited successfully ..  
+2015-11-23 14:38:26,243 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-11-23 14:38:26,244 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:38:26,244 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-11-23 14:38:46,594 INFO  [Logger] Entries on VM tree : 3 
+2015-11-23 14:38:46,982 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:38:47,063 INFO  [Logger] Entries on VM tree : 3 
+2015-11-23 14:38:47,812 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 14:38:47,847 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:38:48,334 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-11-23 14:38:49,086 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-11-23 14:38:49,485 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:38:49,905 INFO  [Logger] Entries on VM tree : 2 
+2015-11-23 14:38:49,992 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-11-23 14:38:49,992 INFO  [Logger] Location deleted successfully ..  
+2015-11-23 14:38:49,992 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-11-23 14:38:49,992 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:38:49,993 INFO  [Logger]                              Adding Host to given Location                             
+2015-11-23 14:39:05,729 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:39:14,471 INFO  [Logger] Entries on VM tree : 2 
+2015-11-23 14:39:14,581 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-11-23 14:39:17,424 INFO  [Logger] Adding Location as location was not already added ... 
+2015-11-23 14:39:17,424 INFO  [Logger] Pausing the current thread ..  
+2015-11-23 14:39:17,424 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:39:17,425 INFO  [Logger]                              Add a new Location on SDM                             
+2015-11-23 14:39:21,207 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:39:37,303 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 14:39:37,409 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:39:37,682 INFO  [Logger] Adding new Location ..  
+2015-11-23 14:39:38,008 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-11-23 14:39:38,550 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:39:38,957 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-11-23 14:39:39,175 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-11-23 14:39:39,397 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-11-23 14:39:39,583 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-11-23 14:39:39,745 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-11-23 14:39:39,923 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-11-23 14:39:40,177 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-11-23 14:39:40,354 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-11-23 14:39:40,589 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-11-23 14:39:40,868 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-11-23 14:39:41,050 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-11-23 14:39:41,328 INFO  [Logger] Filled values ..  
+2015-11-23 14:39:41,509 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 14:39:41,551 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:39:41,739 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-11-23 14:39:53,477 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 14:40:17,505 INFO  [Logger] Location added successfully ..  
+2015-11-23 14:40:17,687 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 14:40:17,720 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:40:17,949 INFO  [Logger] Adding new Location ..  
+2015-11-23 14:40:18,081 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-11-23 14:40:18,247 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-11-23 14:40:18,411 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-11-23 14:40:18,568 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-11-23 14:40:18,723 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-11-23 14:40:18,899 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-11-23 14:40:19,061 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-11-23 14:40:19,210 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-11-23 14:40:19,408 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-11-23 14:40:19,547 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-11-23 14:40:19,732 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-11-23 14:40:19,864 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-11-23 14:40:19,996 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-11-23 14:40:20,293 INFO  [Logger] Filled values ..  
+2015-11-23 14:40:20,447 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-11-23 14:40:20,479 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:40:21,134 INFO  [Logger] Location added successfully ..  
+2015-11-23 14:40:32,805 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-11-23 14:40:32,805 INFO  [Logger] Location added successfully. Now resuming the current thread ..  
+2015-11-23 14:40:48,560 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:40:52,692 INFO  [Logger] Entries on VM tree : 3 
+2015-11-23 14:40:56,354 INFO  [Logger] Navigated to Host tab. 
+2015-11-23 14:40:56,635 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-11-23 14:40:56,683 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:40:56,958 INFO  [Logger] Adding new host ..  
+2015-11-23 14:40:57,394 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:40:57,728 INFO  [Logger] Read from file input.properties for AddHostHostFQDNorIP:: 148.147.162.175 
+2015-11-23 14:40:57,969 INFO  [Logger] Read from file input.properties for AddHostUserName:: root 
+2015-11-23 14:40:58,158 INFO  [Logger] Read from file input.properties for AddHostPassword:: root1234 
+2015-11-23 14:40:58,460 INFO  [Logger] Filled values ..  
+2015-11-23 14:40:58,705 INFO  [Logger] Opacity of button Save
+  is: 1.0 
+2015-11-23 14:40:58,750 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:41:01,096 INFO  [Logger] Page refreshed successfully.. 
+2015-11-23 14:41:02,596 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:41:07,109 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-11-23 14:41:07,273 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Complete
+Host Create/Update Completed 
+2015-11-23 14:41:07,692 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update Completed 
+2015-11-23 14:41:08,339 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:41:09,741 INFO  [Logger] Entries on VM tree : 6 
+2015-11-23 14:41:11,799 INFO  [Logger] Navigated to Host tab. 
+2015-11-23 14:41:12,057 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-11-23 14:41:12,116 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:41:12,335 INFO  [Logger] Adding new host ..  
+2015-11-23 14:41:12,778 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-11-23 14:41:12,994 INFO  [Logger] Read from file input.properties for AddHost1HostFQDNorIP:: 148.147.162.196 
+2015-11-23 14:41:13,211 INFO  [Logger] Read from file input.properties for AddHost1UserName:: root 
+2015-11-23 14:41:13,417 INFO  [Logger] Read from file input.properties for AddHost1Password:: Avaya1234$ 
+2015-11-23 14:41:13,729 INFO  [Logger] Filled values ..  
+2015-11-23 14:41:13,983 INFO  [Logger] Opacity of button Save
+  is: 1.0 
+2015-11-23 14:41:14,032 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:41:15,926 INFO  [Logger] Page refreshed successfully.. 
+2015-11-23 14:41:17,532 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-11-23 14:41:32,842 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:41:32,843 INFO  [Logger]                              Editing Host to given Location                             
+2015-11-23 14:41:48,528 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:41:53,170 INFO  [Logger] Entries on VM tree : 8 
+2015-11-23 14:41:57,202 INFO  [Logger] In 'Host' Tab 
+2015-11-23 14:41:57,203 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:41:57,296 INFO  [Logger] Entries on VM tree : 8 
+2015-11-23 14:42:00,032 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 14:42:00,093 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:42:13,948 INFO  [Logger] /swlibrary/swLib/local/FU_OT1448269692486/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:13,976 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,003 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,035 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,068 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,095 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,144 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-11-23 14:42:14,152 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:42:14,152 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:42:14,152 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-11-23 14:42:30,132 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:42:34,646 INFO  [Logger] Entries on VM tree : 8 
+2015-11-23 14:42:35,444 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:42:35,723 INFO  [Logger] Entries on VM tree : 8 
+2015-11-23 14:42:38,913 INFO  [Logger] Opacity of button New is: 1.0 
+2015-11-23 14:42:38,952 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:42:41,081 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:42:41,155 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 14:42:42,023 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:42:42,076 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 14:42:48,745 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 14:42:51,523 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:42:51,564 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:42:54,499 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 14:43:02,837 INFO  [Logger] Selected value for: Select OVAs: SM-7.0.0.0.700007-e55-02.ova SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:43:06,257 INFO  [Logger] Selected footprint: Profile 1 
+2015-11-23 14:43:06,341 INFO  [Logger] Clicked on: SM 7.0 Profile 1 Max Devices 2,500
+SM configuration that supports up to 2,500 devices. This deployment will need 3 vCPUs and 4GB memory. 
+2015-11-23 14:43:06,717 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:43:06,766 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:43:09,677 INFO  [Logger] Given Name 
+2015-11-23 14:43:33,299 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:43:33,299 INFO  [Logger] Choosen OVF: (-) SM-7.0.0.0.700007_OVF10.ovf 
+2015-11-23 14:43:33,360 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-11-23 14:43:34,176 INFO  [Logger] Filled hostname for VM 1 testSM 
+2015-11-23 14:43:34,748 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-11-23 14:43:34,749 INFO  [Logger] Default field 2 
+2015-11-23 14:43:34,805 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-11-23 14:43:34,836 INFO  [Logger] 'IP' type field 3 
+2015-11-23 14:43:34,837 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-11-23 14:43:35,707 INFO  [Logger] 'IP' type field 4 
+2015-11-23 14:43:35,708 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-11-23 14:43:36,789 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-11-23 14:43:36,789 INFO  [Logger] Default field 5 
+2015-11-23 14:43:36,843 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-11-23 14:43:37,180 INFO  [Logger] Input ID from OVF is : timezone Input ID found on UI: timezone-inputEl 
+2015-11-23 14:43:37,180 INFO  [Logger] Combobox type field 6 
+2015-11-23 14:43:37,689 INFO  [Logger] Read from file inputsm.properties for timezone: Asia/Kolkata 
+2015-11-23 14:43:40,302 INFO  [Logger] Clicked on: Asia/Kolkata 
+2015-11-23 14:43:43,184 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-11-23 14:43:43,184 INFO  [Logger] Default field 7 
+2015-11-23 14:43:43,241 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-11-23 14:43:43,500 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-11-23 14:43:43,500 INFO  [Logger] Default field 8 
+2015-11-23 14:43:43,563 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 14:43:44,166 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-11-23 14:43:44,166 INFO  [Logger] 'Password' type field 9 
+2015-11-23 14:43:44,290 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 14:43:44,493 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 14:43:44,638 INFO  [Logger] 'IP' type field 10 
+2015-11-23 14:43:44,639 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 14:43:46,266 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 14:43:46,266 INFO  [Logger] 'Password' type field 11 
+2015-11-23 14:43:46,340 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 14:43:46,605 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 14:43:47,215 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 14:43:47,215 INFO  [Logger] Default field 12 
+2015-11-23 14:43:47,596 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 14:43:47,596 INFO  [Logger] Default field 13 
+2015-11-23 14:43:47,872 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 14:43:47,872 INFO  [Logger] Default field 14 
+2015-11-23 14:43:48,690 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 14:43:48,690 INFO  [Logger] Default field 15 
+2015-11-23 14:43:50,236 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 14:43:50,575 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 14:43:50,875 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 14:43:50,922 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:43:52,858 INFO  [Logger] Accepted EULA ..  
+2015-11-23 14:43:52,858 INFO  [Logger] Accepted EULA 
+2015-11-23 14:44:03,219 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 14:44:03,223 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:44:03,224 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 14:44:03,224 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 14:44:03,225 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:44:03,225 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 14:44:07,647 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:44:19,625 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:44:23,785 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 14:44:27,012 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 14:44:27,258 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 14:44:27,258 INFO  [Logger] 148.147.162.225 IP is available 
+2015-11-23 14:44:27,263 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 14:44:27,263 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-11-23 14:44:27,263 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 14:44:27,264 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-11-23 14:44:27,264 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:44:27,265 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 14:44:31,751 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 14:44:54,520 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:44:58,878 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 14:45:11,076 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:45:16,055 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 14:45:16,761 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:45:16,963 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 14:45:21,213 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 14:45:22,662 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 14:45:22,758 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 14:45:23,896 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:45:23,968 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 14:45:30,729 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 14:45:33,504 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:45:33,550 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:45:36,383 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 14:45:44,752 INFO  [Logger] Selected value for: Select OVAs: CMM-07.0.0.0.441-e55-0.ova CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:45:48,117 INFO  [Logger] Selected footprint: 1,000 subscribers 
+2015-11-23 14:45:48,175 INFO  [Logger] Clicked on: 1,000 subscribers
+1,000 subscribers require 25 GB for 20 minutes per mailbox, 333 hours total 
+2015-11-23 14:45:48,646 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:45:48,732 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:45:49,863 INFO  [Logger] Given Name 
+2015-11-23 14:46:15,440 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:46:15,440 INFO  [Logger] Choosen OVF: (_) CMM_OVF10.ovf 
+2015-11-23 14:46:15,455 INFO  [Logger] Filled IP 148.147.162.225 for VM 0 
+2015-11-23 14:46:16,379 INFO  [Logger] 'IP' type field 1 
+2015-11-23 14:46:16,380 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-11-23 14:46:17,798 INFO  [Logger] 'IP' type field 2 
+2015-11-23 14:46:17,799 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-11-23 14:46:19,189 INFO  [Logger] Input ID from OVF is : oobdevice Input ID found on UI:  
+2015-11-23 14:46:19,190 INFO  [Logger] Default field 3 
+2015-11-23 14:46:19,190 INFO  [Logger] 'IP' type field 4 
+2015-11-23 14:46:19,191 INFO  [Logger] Read from file inputsm.properties for ip1: 0.0.0.0 
+2015-11-23 14:46:20,077 INFO  [Logger] 'IP' type field 5 
+2015-11-23 14:46:20,077 INFO  [Logger] Read from file inputsm.properties for netmask1: 0.0.0.0 
+2015-11-23 14:46:21,126 INFO  [Logger] Filled hostname for VM 6 testCMM 
+2015-11-23 14:46:22,375 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-11-23 14:46:22,375 INFO  [Logger] Default field 7 
+2015-11-23 14:46:22,468 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-11-23 14:46:23,219 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-11-23 14:46:23,219 INFO  [Logger] Default field 8 
+2015-11-23 14:46:23,289 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-11-23 14:46:23,836 INFO  [Logger] Input ID from OVF is : searchlist Input ID found on UI: searchlist-inputEl 
+2015-11-23 14:46:23,836 INFO  [Logger] Default field 9 
+2015-11-23 14:46:23,907 INFO  [Logger] Read from file inputsm.properties for searchlist: null 
+2015-11-23 14:46:23,941 INFO  [Logger] 'IP' type field 10 
+2015-11-23 14:46:23,941 INFO  [Logger] Read from file inputsm.properties for weblmip: 135.9.181.64 
+2015-11-23 14:46:25,309 INFO  [Logger] Input ID from OVF is : msg_login Input ID found on UI: msg_login-inputEl 
+2015-11-23 14:46:25,309 INFO  [Logger] Default field 11 
+2015-11-23 14:46:25,370 INFO  [Logger] Read from file inputsm.properties for msg_login: cust 
+2015-11-23 14:46:26,128 INFO  [Logger] Input ID from OVF is : msg_password Input ID found on UI: msg_password-inputEl 
+2015-11-23 14:46:26,129 INFO  [Logger] 'Password' type field 12 
+2015-11-23 14:46:26,187 INFO  [Logger] Read from file inputsm.properties for msg_password: Avaya123$ 
+2015-11-23 14:46:26,439 INFO  [Logger] Read from file inputsm.properties for msg_password: Avaya123$ 
+2015-11-23 14:46:27,140 INFO  [Logger] Input ID from OVF is : smgr_snmp_push Input ID found on UI:  
+2015-11-23 14:46:27,140 INFO  [Logger] Default field 13 
+2015-11-23 14:46:28,849 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 14:46:29,196 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 14:46:29,671 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 14:46:29,815 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:46:32,026 INFO  [Logger] Accepted EULA ..  
+2015-11-23 14:46:32,026 INFO  [Logger] Accepted EULA 
+2015-11-23 14:53:20,793 INFO  [Logger] Task completed successfully..  
+2015-11-23 14:53:21,227 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;Add VM To Inventory :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 14:53:21,416 INFO  [Logger] Total time taken in seconds is less than: 222 
+2015-11-23 14:53:26,416 INFO  [Logger] Completed adding VM CMM with IP 148.147.162.225 
+2015-11-23 14:53:26,417 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:53:26,417 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:53:26,417 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 14:53:42,240 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:53:45,900 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:53:51,153 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:53:53,456 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 14:53:53,492 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:53:53,874 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 14:53:56,298 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:53:56,335 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:54:09,774 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 14:54:09,774 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:54:14,774 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:54:14,774 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 14:54:29,253 INFO  [Logger] Task completed successfully..  
+2015-11-23 14:54:29,601 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 14:54:29,751 INFO  [Logger] Total time taken in seconds is less than: 342 
+2015-11-23 14:54:30,407 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:54:34,197 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:54:34,752 INFO  [Logger] Completed adding VM SM with IP 148.147.162.221 
+2015-11-23 14:54:34,752 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:54:34,752 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:54:34,752 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:54:34,752 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 14:54:39,745 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:54:43,248 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 14:54:43,290 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:54:43,631 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 14:54:44,234 INFO  [Logger] Confirmation:  
+2015-11-23 14:54:55,823 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 14:55:02,719 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:55:07,719 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:55:07,719 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 14:55:23,183 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:55:27,329 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:55:32,610 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:55:36,988 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 14:55:37,075 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:55:37,563 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 14:55:38,384 INFO  [Logger] Confirmation:  
+2015-11-23 14:55:49,932 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 14:55:55,820 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:56:00,820 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:56:00,820 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 14:56:27,627 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:56:32,627 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:56:32,627 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 14:56:48,027 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:56:49,931 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:56:51,308 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:56:54,931 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:56:54,931 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 14:56:55,607 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:56:59,255 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 14:56:59,295 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:56:59,962 INFO  [Logger] Read from file inputsm.properties for msg_login: cust 
+2015-11-23 14:56:59,962 INFO  [Logger] Read from file inputsm.properties for msg_password: Avaya123$ 
+2015-11-23 14:57:01,636 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:57:01,680 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:57:10,910 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:57:14,778 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:57:20,425 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:57:23,289 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 14:57:23,331 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:57:23,799 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 14:57:24,414 INFO  [Logger] Confirmation:  
+2015-11-23 14:57:36,041 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 14:57:39,934 ERROR [Logger] Task failed ..  
+2015-11-23 14:57:39,934 INFO  [Logger] Failed test. Check screenshot for the same. 
+2015-11-23 14:57:40,053 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-11-23 14:57:40,322 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 14:57:40,490 INFO  [Logger] Total time taken in seconds is less than: 24 
+2015-11-23 14:57:40,491 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:57:45,491 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:57:45,491 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 14:58:01,116 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:58:06,196 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:58:12,133 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:58:14,832 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 14:58:14,924 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:58:35,568 ERROR [Logger] Task failed ..  
+2015-11-23 14:58:35,568 INFO  [Logger] Failed test. Check screenshot for the same. 
+2015-11-23 14:58:35,691 ERROR [Logger] VM Refresh Status :;VM Refresh :;Error Code-SMGR_VM_1008:: Plugin Execution Exited with Error :;Retrieve host credentials :;Retrieve VM information :;Error Code-SMGR_VM_1008:: Plugin Execution Exited with Error :;VM Refresh failed 
+2015-11-23 14:58:35,922 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 14:58:36,111 INFO  [Logger] Total time taken in seconds is less than: 12 
+2015-11-23 14:58:36,113 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 14:58:36,113 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:58:36,113 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 14:58:51,847 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:58:56,284 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:59:01,380 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:59:03,736 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 14:59:03,813 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:59:04,273 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 14:59:05,288 INFO  [Logger] Confirmation:  
+2015-11-23 14:59:06,036 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 14:59:11,037 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 14:59:11,037 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 14:59:16,919 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 14:59:26,864 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 14:59:31,685 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:59:36,778 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 14:59:40,158 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 14:59:40,202 INFO  [Logger] Is element enabled: true 
+2015-11-23 14:59:40,874 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 14:59:40,875 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 14:59:42,483 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 14:59:42,528 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:00:19,557 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:00:19,783 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-11-23 15:00:20,046 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:00:56,914 INFO  [Logger] Reference Input : CMM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:00:56,914 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:00:56,914 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:01:03,481 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:01:03,706 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 15:01:04,014 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:01:06,514 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 15:01:06,515 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:01:06,515 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:01:06,515 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 15:01:12,590 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:01:17,000 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:01:22,166 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:01:23,063 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:01:26,484 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 15:01:26,532 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:01:28,862 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:01:34,672 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:01:37,890 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 15:01:37,932 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:01:38,618 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 15:01:40,270 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 15:01:40,898 INFO  [Logger] Confirmation:  
+2015-11-23 15:01:52,729 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 15:02:02,297 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 15:02:06,736 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:02:06,736 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-11-23 15:02:19,283 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:02:19,283 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:02:19,284 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:02:19,284 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:02:19,284 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:02:19,285 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:02:24,434 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:02:36,530 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:02:40,408 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:02:43,219 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:02:43,501 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:02:43,501 INFO  [Logger] 148.147.162.225 IP is available 
+2015-11-23 15:02:43,502 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:02:43,502 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-11-23 15:02:43,502 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 15:02:43,502 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-11-23 15:02:43,502 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:02:43,504 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 15:02:47,368 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 15:03:01,559 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:03:06,455 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:03:19,148 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:03:23,097 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:03:23,662 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:03:23,752 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:03:27,257 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 15:03:28,679 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 15:03:28,743 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 15:03:29,450 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:03:29,508 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 15:03:32,724 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:03:32,725 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:03:32,725 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:03:36,157 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 15:03:38,943 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:03:38,990 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:03:41,904 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 15:03:48,992 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:03:50,052 INFO  [Logger] Selected value for: Select OVAs: US-7.0.0.0.0.12-e55-01_OVF10.ova US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:03:53,548 INFO  [Logger] Selected footprint: Minimal Resources 
+2015-11-23 15:03:53,673 INFO  [Logger] Clicked on: Minimal Resources
+Use this for minimal resources for Utility Services and Services Port Functionality - 512MB RAM. Please note that this will reduce performance of the virtual machine 
+2015-11-23 15:03:54,508 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:03:54,552 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:03:55,035 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:03:58,444 INFO  [Logger] Given Name 
+2015-11-23 15:04:01,484 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:04:03,589 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 15:04:03,625 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:04:03,988 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 15:04:04,591 INFO  [Logger] Confirmation:  
+2015-11-23 15:04:16,154 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 15:04:19,849 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:04:19,849 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 15:04:21,896 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:04:21,897 INFO  [Logger] Choosen OVF: (-) US-7.0.0.0.0.12-e55-01_OVF10.ovf 
+2015-11-23 15:04:22,199 INFO  [Logger] Input ID from OVF is : BuildId Input ID found on UI:  
+2015-11-23 15:04:22,199 INFO  [Logger] Default field 0 
+2015-11-23 15:04:22,199 INFO  [Logger] 'IP' type field 1 
+2015-11-23 15:04:22,199 INFO  [Logger] Read from file inputsm.properties for CM_IP: 0.0.0.0 
+2015-11-23 15:04:23,591 INFO  [Logger] Input ID from OVF is : NTP_IP Input ID found on UI: NTP_IP-inputEl 
+2015-11-23 15:04:23,591 INFO  [Logger] Default field 2 
+2015-11-23 15:04:23,653 INFO  [Logger] Read from file inputsm.properties for NTP_IP: ntp.dr.avaya.com 
+2015-11-23 15:04:24,301 INFO  [Logger] Input ID from OVF is : vami.hostname Input ID found on UI: vami.hostname-inputEl 
+2015-11-23 15:04:24,302 INFO  [Logger] Default field 3 
+2015-11-23 15:04:24,500 INFO  [Logger] Read from file inputsm.properties for vami.hostname: test.smgrdev.avaya.com 
+2015-11-23 15:04:28,841 INFO  [Logger] Input ID from OVF is : vamitimezone Input ID found on UI: vamitimezone-inputEl 
+2015-11-23 15:04:28,841 INFO  [Logger] Combobox type field 4 
+2015-11-23 15:04:29,123 INFO  [Logger] Read from file inputsm.properties for vamitimezone: Asia/Calcutta 
+2015-11-23 15:04:29,601 INFO  [Logger] Clicked on: Asia/Calcutta 
+2015-11-23 15:04:30,043 INFO  [Logger] Input ID from OVF is : Utility_Services_Mode Input ID found on UI: Utility_Services_Mode-inputEl 
+2015-11-23 15:04:30,044 INFO  [Logger] Combobox type field 5 
+2015-11-23 15:04:30,252 INFO  [Logger] Read from file inputsm.properties for Utility_Services_Mode: full_functionality 
+2015-11-23 15:04:30,318 INFO  [Logger] Clicked on: full_functionality 
+2015-11-23 15:04:30,591 INFO  [Logger] Input ID from OVF is : Out_of_Band_Management_Mode Input ID found on UI: Out_of_Band_Management_Mode-inputEl 
+2015-11-23 15:04:30,591 INFO  [Logger] Combobox type field 6 
+2015-11-23 15:04:30,764 INFO  [Logger] Read from file inputsm.properties for Out_of_Band_Management_Mode: OOBM_Disabled 
+2015-11-23 15:04:30,816 INFO  [Logger] Clicked on: OOBM_Disabled 
+2015-11-23 15:04:31,078 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 15:04:31,078 INFO  [Logger] Default field 7 
+2015-11-23 15:04:31,285 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 15:04:31,285 INFO  [Logger] Default field 8 
+2015-11-23 15:04:31,492 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 15:04:31,493 INFO  [Logger] Default field 9 
+2015-11-23 15:04:31,493 INFO  [Logger] 'IP' type field 10 
+2015-11-23 15:04:31,493 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 15:04:32,553 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 15:04:32,553 INFO  [Logger] 'Password' type field 11 
+2015-11-23 15:04:32,635 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 15:04:32,849 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 15:04:33,642 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 15:04:33,642 INFO  [Logger] Default field 12 
+2015-11-23 15:04:33,870 INFO  [Logger] Input ID from OVF is : gateway Input ID found on UI: vami.gateway.Utility_Services-inputEl 
+2015-11-23 15:04:33,870 INFO  [Logger] Default field 13 
+2015-11-23 15:04:34,072 INFO  [Logger] Read from file inputsm.properties for vami.gateway.Utility_Services: 148.147.162.1 
+2015-11-23 15:04:34,485 INFO  [Logger] Input ID from OVF is : DNS Input ID found on UI: vami.DNS.Utility_Services-inputEl 
+2015-11-23 15:04:34,485 INFO  [Logger] Default field 14 
+2015-11-23 15:04:34,562 INFO  [Logger] Read from file inputsm.properties for vami.DNS.Utility_Services: 148.147.162.5 
+2015-11-23 15:04:34,916 INFO  [Logger] Input ID from OVF is : ip0 Input ID found on UI: vami.ip0.Utility_Services-inputEl 
+2015-11-23 15:04:34,916 INFO  [Logger] IP as textbox.Not as foue parts ..  
+2015-11-23 15:04:35,057 INFO  [Logger] Filled IP 148.147.162.225 for ID: vami.ip0.Utility_Services-inputEl 
+2015-11-23 15:04:35,165 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:04:35,166 INFO  [Logger] InnerThread: Choosen OVA BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:04:35,167 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:04:35,167 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:04:35,167 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:04:35,167 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:04:35,735 INFO  [Logger] Input ID from OVF is : netmask0 Input ID found on UI: vami.netmask0.Utility_Services-inputEl 
+2015-11-23 15:04:35,735 INFO  [Logger] Default field 16 
+2015-11-23 15:04:35,808 INFO  [Logger] Read from file inputsm.properties for vami.netmask0.Utility_Services: 255.255.255.0 
+2015-11-23 15:04:36,383 INFO  [Logger] Input ID from OVF is : ip1 Input ID found on UI:  
+2015-11-23 15:04:36,383 INFO  [Logger] Default field 17 
+2015-11-23 15:04:36,685 INFO  [Logger] Input ID from OVF is : netmask1 Input ID found on UI:  
+2015-11-23 15:04:36,685 INFO  [Logger] Default field 18 
+2015-11-23 15:04:37,051 INFO  [Logger] Input ID from OVF is : ip2 Input ID found on UI: vami.ip2.Utility_Services-inputEl 
+2015-11-23 15:04:37,051 INFO  [Logger] Default field 19 
+2015-11-23 15:04:37,176 INFO  [Logger] Read from file inputsm.properties for vami.ip2.Utility_Services: null 
+2015-11-23 15:04:37,893 INFO  [Logger] Input ID from OVF is : netmask2 Input ID found on UI: vami.netmask2.Utility_Services-inputEl 
+2015-11-23 15:04:37,893 INFO  [Logger] Default field 20 
+2015-11-23 15:04:37,989 INFO  [Logger] Read from file inputsm.properties for vami.netmask2.Utility_Services: null 
+2015-11-23 15:04:40,445 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:04:40,830 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:04:41,230 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:04:41,635 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 15:04:41,705 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:04:42,243 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:04:45,094 INFO  [Logger] Accepted EULA ..  
+2015-11-23 15:04:45,094 INFO  [Logger] Accepted EULA 
+2015-11-23 15:04:54,636 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:04:58,327 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:05:02,840 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:05:03,271 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:05:03,271 INFO  [Logger] 148.147.162.221 IP is available 
+2015-11-23 15:05:03,272 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:05:03,272 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-11-23 15:05:03,272 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 15:05:03,272 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-11-23 15:05:03,273 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:05:03,274 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 15:05:07,649 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 15:05:16,563 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:05:26,727 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:05:39,247 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:05:45,705 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:05:46,414 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:05:46,494 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:05:53,652 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 15:05:55,031 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 15:05:55,118 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 15:05:55,821 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:05:55,874 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 15:06:02,599 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 15:06:05,382 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:06:05,424 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:06:08,811 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 15:06:17,012 INFO  [Logger] Selected value for: Select OVAs: BSM-7.0.0.0.700007-e55-02.ova BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:06:20,486 INFO  [Logger] Selected footprint: Profile 1 
+2015-11-23 15:06:20,603 INFO  [Logger] Clicked on: BSM 7.0 Profile 1 Max Devices 1,000
+BSM configuration that supports up to 1,000 devices. This deployment will need 2 vCPUs and 2G memory. 
+2015-11-23 15:06:20,968 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:06:21,009 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:06:22,336 INFO  [Logger] Given Name 
+2015-11-23 15:06:45,654 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:06:45,654 INFO  [Logger] Choosen OVF: (-) BSM-7.0.0.0.700007-e55-02_OVF10.ovf 
+2015-11-23 15:06:45,699 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-11-23 15:06:47,519 INFO  [Logger] Filled hostname for VM 1 testBSM 
+2015-11-23 15:06:48,161 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-11-23 15:06:48,161 INFO  [Logger] Default field 2 
+2015-11-23 15:06:48,222 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-11-23 15:06:48,259 INFO  [Logger] 'IP' type field 3 
+2015-11-23 15:06:48,260 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-11-23 15:06:50,204 INFO  [Logger] 'IP' type field 4 
+2015-11-23 15:06:50,204 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-11-23 15:06:51,330 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-11-23 15:06:51,330 INFO  [Logger] Default field 5 
+2015-11-23 15:06:51,372 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-11-23 15:06:51,741 INFO  [Logger] Input ID from OVF is : TIMEZONE Input ID found on UI: TIMEZONE-inputEl 
+2015-11-23 15:06:51,741 INFO  [Logger] Combobox type field 6 
+2015-11-23 15:06:52,290 INFO  [Logger] Read from file inputsm.properties for TIMEZONE: Asia/Calcutta 
+2015-11-23 15:06:58,799 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-11-23 15:06:58,799 INFO  [Logger] Default field 7 
+2015-11-23 15:06:58,860 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-11-23 15:06:59,179 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-11-23 15:06:59,179 INFO  [Logger] Default field 8 
+2015-11-23 15:06:59,234 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 15:06:59,547 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-11-23 15:06:59,548 INFO  [Logger] 'Password' type field 9 
+2015-11-23 15:06:59,601 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 15:06:59,825 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 15:06:59,991 INFO  [Logger] 'IP' type field 10 
+2015-11-23 15:06:59,992 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-11-23 15:07:01,647 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-11-23 15:07:01,647 INFO  [Logger] 'Password' type field 11 
+2015-11-23 15:07:01,713 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 15:07:01,969 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-11-23 15:07:02,152 INFO  [Logger] 'IP' type field 12 
+2015-11-23 15:07:02,152 INFO  [Logger] Read from file inputsm.properties for LSPIP: 148.147.162.224 
+2015-11-23 15:07:03,601 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-11-23 15:07:03,601 INFO  [Logger] Default field 13 
+2015-11-23 15:07:03,929 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-11-23 15:07:03,930 INFO  [Logger] Default field 14 
+2015-11-23 15:07:04,234 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-11-23 15:07:04,234 INFO  [Logger] Default field 15 
+2015-11-23 15:07:04,531 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-11-23 15:07:04,531 INFO  [Logger] Default field 16 
+2015-11-23 15:07:06,320 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:07:06,725 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:07:07,299 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 15:07:07,374 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:07:10,299 INFO  [Logger] Accepted EULA ..  
+2015-11-23 15:07:10,299 INFO  [Logger] Accepted EULA 
+2015-11-23 15:16:00,552 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:16:00,975 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 15:16:01,429 INFO  [Logger] Total time taken in seconds is less than: 294 
+2015-11-23 15:16:06,432 INFO  [Logger] Completed adding VM BSM with IP 148.147.162.221 
+2015-11-23 15:16:06,432 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:16:06,433 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:16:06,433 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 15:16:22,089 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:16:26,694 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:16:32,557 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:16:36,064 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 15:16:36,121 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:16:36,663 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 15:16:39,470 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:16:39,517 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:16:54,006 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 15:16:54,006 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:16:59,007 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:16:59,007 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 15:17:15,693 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:17:20,078 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:17:25,333 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:17:29,194 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 15:17:29,239 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:17:29,703 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 15:17:30,320 INFO  [Logger] Confirmation:  
+2015-11-23 15:17:41,949 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 15:18:41,947 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:18:46,947 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:18:46,947 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 15:19:02,742 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:19:08,050 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:19:13,762 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:19:17,125 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 15:19:17,165 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:19:17,561 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 15:19:18,253 INFO  [Logger] Confirmation:  
+2015-11-23 15:19:29,852 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 15:20:37,458 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:20:37,982 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;Add VM To Inventory :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 15:20:38,244 INFO  [Logger] Total time taken in seconds is less than: 546 
+2015-11-23 15:20:43,245 INFO  [Logger] Completed adding VM US with IP 148.147.162.225 
+2015-11-23 15:20:43,245 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:20:43,245 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:20:43,246 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 15:20:58,897 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:20:59,848 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:21:03,203 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:21:04,849 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:21:04,849 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:21:08,255 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:21:10,947 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 15:21:10,997 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:21:11,452 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 15:21:13,838 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:21:13,879 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:21:21,265 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:21:27,594 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 15:21:27,595 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:21:27,643 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:21:32,599 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:21:32,599 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 15:21:32,868 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:21:38,068 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 15:21:38,118 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:21:38,833 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-11-23 15:21:38,833 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-11-23 15:21:40,587 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:21:40,632 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:21:48,799 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:21:52,911 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:21:58,094 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:22:01,854 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 15:22:01,901 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:22:02,325 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 15:22:02,975 INFO  [Logger] Confirmation:  
+2015-11-23 15:22:14,596 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 15:22:18,012 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:22:18,179 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-11-23 15:22:18,369 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:22:18,369 INFO  [Logger] *************************End of test caseTrust Established with VM Successfully******************************
+
+ 
+2015-11-23 15:22:18,370 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:22:23,370 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:22:23,370 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:22:39,237 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:22:45,473 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:22:50,897 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:22:54,785 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 15:22:54,826 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:23:14,593 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:23:19,594 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:23:19,594 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 15:23:35,193 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:23:36,148 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:23:36,320 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 15:23:36,727 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:23:37,227 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 15:23:37,228 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:23:37,228 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:23:37,228 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 15:23:39,536 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:23:44,695 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:23:46,637 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 15:23:46,679 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:23:46,986 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 15:23:47,638 INFO  [Logger] Confirmation:  
+2015-11-23 15:23:59,241 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 15:24:04,423 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-11-23 15:24:04,424 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:24:04,424 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:24:20,232 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:24:24,998 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:24:30,399 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:24:32,548 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 15:24:32,585 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:24:32,882 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 15:24:33,727 INFO  [Logger] Confirmation:  
+2015-11-23 15:24:45,343 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 15:24:49,209 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:24:49,209 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 15:24:59,708 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:24:59,708 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:24:59,709 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:24:59,709 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:24:59,709 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:24:59,709 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:25:04,104 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:25:16,805 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:25:21,125 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:25:24,632 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:25:24,932 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:25:24,932 INFO  [Logger] 148.147.162.221 IP is available 
+2015-11-23 15:25:24,933 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:25:24,933 INFO  [Logger] 148.147.162.221 IP is made BlackList 
+2015-11-23 15:25:24,933 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 15:25:24,933 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.221 
+2015-11-23 15:25:24,934 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:25:24,935 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 15:25:29,239 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:25:30,206 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 15:25:34,240 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:25:34,240 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:25:49,818 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:25:50,238 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:25:57,789 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:26:00,543 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:26:06,001 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:26:09,719 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 15:26:09,800 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:26:10,581 INFO  [Logger] Read from file inputsm.properties for UName: admin 
+2015-11-23 15:26:10,582 INFO  [Logger] Read from file inputsm.properties for USPWD: admin01 
+2015-11-23 15:26:12,460 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:26:12,554 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:26:14,215 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:26:21,062 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:26:21,605 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:26:21,679 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:26:25,407 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 15:26:26,796 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 15:26:26,909 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 15:26:28,094 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:26:28,160 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 15:26:35,095 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 15:26:37,970 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:26:38,014 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:26:40,803 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 15:26:48,769 INFO  [Logger] Selected value for: Select OVAs: SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:26:51,687 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:26:51,735 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:26:52,172 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:26:52,383 INFO  [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;Get Trust Status :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment Completed 
+2015-11-23 15:26:52,791 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:26:52,791 INFO  [Logger] *************************End of test caseTrust Established with VM Successfully******************************
+
+ 
+2015-11-23 15:26:52,792 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:26:53,694 INFO  [Logger] Given Name 
+2015-11-23 15:26:57,792 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:26:57,792 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:27:13,727 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:27:17,220 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:27:17,220 INFO  [Logger] Choosen OVF: (-) SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf 
+2015-11-23 15:27:17,692 INFO  [Logger] Input ID from OVF is : BuildID Input ID found on UI:  
+2015-11-23 15:27:17,692 INFO  [Logger] Default field 0 
+2015-11-23 15:27:18,095 INFO  [Logger] Input ID from OVF is : vamitimezone Input ID found on UI: vamitimezone-inputEl 
+2015-11-23 15:27:18,095 INFO  [Logger] Combobox type field 1 
+2015-11-23 15:27:18,605 INFO  [Logger] Read from file inputsm.properties for vamitimezone: Asia/Calcutta 
+2015-11-23 15:27:19,014 INFO  [Logger] Clicked on: Asia/Calcutta 
+2015-11-23 15:27:19,968 INFO  [Logger] Input ID from OVF is : vami.hostname Input ID found on UI: vami.hostname-inputEl 
+2015-11-23 15:27:19,968 INFO  [Logger] Default field 2 
+2015-11-23 15:27:20,060 INFO  [Logger] Read from file inputsm.properties for vami.hostname: test.smgrdev.avaya.com 
+2015-11-23 15:27:20,662 INFO  [Logger] Input ID from OVF is : ADS_COMPONENT_TO_INSTALL Input ID found on UI:  
+2015-11-23 15:27:20,662 INFO  [Logger] Default field 3 
+2015-11-23 15:27:21,130 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:27:21,187 INFO  [Logger] Input ID from OVF is : AUTOUPGRADE_CUST_SELECT Input ID found on UI: AUTOUPGRADE_CUST_SELECT-inputEl 
+2015-11-23 15:27:21,187 INFO  [Logger] Combobox type field 4 
+2015-11-23 15:27:21,480 INFO  [Logger] Read from file inputsm.properties for AUTOUPGRADE_CUST_SELECT: Yes 
+2015-11-23 15:27:21,539 INFO  [Logger] Clicked on: Yes 
+2015-11-23 15:27:22,982 INFO  [Logger] Input ID from OVF is : SMTP_HOST Input ID found on UI: SMTP_HOST-inputEl 
+2015-11-23 15:27:22,982 INFO  [Logger] Default field 5 
+2015-11-23 15:27:23,182 INFO  [Logger] Read from file inputsm.properties for SMTP_HOST: sal.smgrdev.avaya.com 
+2015-11-23 15:27:24,042 INFO  [Logger] Input ID from OVF is : SMTP_PORT Input ID found on UI: SMTP_PORT-inputEl 
+2015-11-23 15:27:24,043 INFO  [Logger] Default field 6 
+2015-11-23 15:27:24,112 INFO  [Logger] Read from file inputsm.properties for SMTP_PORT: 25 
+2015-11-23 15:27:24,628 INFO  [Logger] Input ID from OVF is : SMTP_ADMIN_EMAIL Input ID found on UI: SMTP_ADMIN_EMAIL-inputEl 
+2015-11-23 15:27:24,628 INFO  [Logger] Default field 7 
+2015-11-23 15:27:24,691 INFO  [Logger] Read from file inputsm.properties for SMTP_ADMIN_EMAIL: bshingala@avaya.com 
+2015-11-23 15:27:25,551 INFO  [Logger] Input ID from OVF is : SMTP_USER_NAME Input ID found on UI: SMTP_USER_NAME-inputEl 
+2015-11-23 15:27:25,552 INFO  [Logger] Default field 8 
+2015-11-23 15:27:25,606 INFO  [Logger] Read from file inputsm.properties for SMTP_USER_NAME: cust 
+2015-11-23 15:27:26,088 INFO  [Logger] Input ID from OVF is : SMTP_PASSWORD Input ID found on UI: SMTP_PASSWORD-inputEl 
+2015-11-23 15:27:26,088 INFO  [Logger] 'Password' type field 9 
+2015-11-23 15:27:26,150 INFO  [Logger] Read from file inputsm.properties for SMTP_PASSWORD: Avaya123$ 
+2015-11-23 15:27:26,290 INFO  [Logger] Read from file inputsm.properties for SMTP_PASSWORD: Avaya123$ 
+2015-11-23 15:27:27,310 INFO  [Logger] Input ID from OVF is : SMTP_SECONDARY_EMAIL Input ID found on UI: SMTP_SECONDARY_EMAIL-inputEl 
+2015-11-23 15:27:27,310 INFO  [Logger] Default field 10 
+2015-11-23 15:27:27,354 INFO  [Logger] Read from file inputsm.properties for SMTP_SECONDARY_EMAIL: null 
+2015-11-23 15:27:27,670 INFO  [Logger] Input ID from OVF is : GATEWAY_SOLUTION_ELEMENTID Input ID found on UI: GATEWAY_SOLUTION_ELEMENTID-inputEl 
+2015-11-23 15:27:27,670 INFO  [Logger] Default field 11 
+2015-11-23 15:27:27,723 INFO  [Logger] Read from file inputsm.properties for GATEWAY_SOLUTION_ELEMENTID: (000)777-9999 
+2015-11-23 15:27:28,093 INFO  [Logger] Input ID from OVF is : SPIRIT_ALARMID Input ID found on UI: SPIRIT_ALARMID-inputEl 
+2015-11-23 15:27:28,093 INFO  [Logger] Default field 12 
+2015-11-23 15:27:28,164 INFO  [Logger] Read from file inputsm.properties for SPIRIT_ALARMID: 1000000000 
+2015-11-23 15:27:28,645 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:27:29,039 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER-inputEl 
+2015-11-23 15:27:29,040 INFO  [Logger] Default field 13 
+2015-11-23 15:27:29,102 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER: Enterprise-production 
+2015-11-23 15:27:30,630 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_URL Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_URL-inputEl 
+2015-11-23 15:27:30,630 INFO  [Logger] Default field 14 
+2015-11-23 15:27:30,781 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_URL: secure.alarming.avaya.com 
+2015-11-23 15:27:31,528 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_PORT Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_PORT-inputEl 
+2015-11-23 15:27:31,528 INFO  [Logger] Default field 15 
+2015-11-23 15:27:31,593 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_PORT: 443 
+2015-11-23 15:27:32,183 INFO  [Logger] Input ID from OVF is : PRIMARY_AXEDA_ENTERPRISE_URL Input ID found on UI: PRIMARY_AXEDA_ENTERPRISE_URL-inputEl 
+2015-11-23 15:27:32,184 INFO  [Logger] Default field 16 
+2015-11-23 15:27:32,334 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AXEDA_ENTERPRISE_URL: remote.sal.avaya.com 
+2015-11-23 15:27:32,517 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 15:27:32,567 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:27:33,065 INFO  [Logger] Input ID from OVF is : PRIMARY_AXEDA_ENTERPRISE_PORT Input ID found on UI: PRIMARY_AXEDA_ENTERPRISE_PORT-inputEl 
+2015-11-23 15:27:33,065 INFO  [Logger] Default field 17 
+2015-11-23 15:27:33,121 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AXEDA_ENTERPRISE_PORT: 443 
+2015-11-23 15:27:33,490 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_TYPE Input ID found on UI: CUSTOMER_PROXY_TYPE-inputEl 
+2015-11-23 15:27:33,490 INFO  [Logger] Combobox type field 18 
+2015-11-23 15:27:33,744 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_TYPE: None 
+2015-11-23 15:27:33,811 INFO  [Logger] Clicked on: None 
+2015-11-23 15:27:34,252 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_HOSTNAME Input ID found on UI: CUSTOMER_PROXY_HOSTNAME-inputEl 
+2015-11-23 15:27:34,252 INFO  [Logger] Default field 19 
+2015-11-23 15:27:34,367 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_HOSTNAME: null 
+2015-11-23 15:27:34,699 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_PORT Input ID found on UI: CUSTOMER_PROXY_PORT-inputEl 
+2015-11-23 15:27:34,700 INFO  [Logger] Default field 20 
+2015-11-23 15:27:34,767 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PORT: null 
+2015-11-23 15:27:35,064 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_USER Input ID found on UI: CUSTOMER_PROXY_USER-inputEl 
+2015-11-23 15:27:35,064 INFO  [Logger] Default field 21 
+2015-11-23 15:27:35,122 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_USER: null 
+2015-11-23 15:27:35,449 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_PASSWORD Input ID found on UI: CUSTOMER_PROXY_PASSWORD-inputEl 
+2015-11-23 15:27:35,449 INFO  [Logger] 'Password' type field 22 
+2015-11-23 15:27:35,505 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PASSWORD: null 
+2015-11-23 15:27:35,601 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PASSWORD: null 
+2015-11-23 15:27:35,900 INFO  [Logger] Input ID from OVF is : POLICY_SERVER_HOSTNAME Input ID found on UI: POLICY_SERVER_HOSTNAME-inputEl 
+2015-11-23 15:27:35,900 INFO  [Logger] Default field 23 
+2015-11-23 15:27:36,020 INFO  [Logger] Read from file inputsm.properties for POLICY_SERVER_HOSTNAME: null 
+2015-11-23 15:27:36,361 INFO  [Logger] Input ID from OVF is : POLICY_SERVER_PORT Input ID found on UI: POLICY_SERVER_PORT-inputEl 
+2015-11-23 15:27:36,361 INFO  [Logger] Default field 24 
+2015-11-23 15:27:36,421 INFO  [Logger] Read from file inputsm.properties for POLICY_SERVER_PORT: null 
+2015-11-23 15:27:36,725 INFO  [Logger] Input ID from OVF is : SNMP_SERVER_HOSTNAME Input ID found on UI: SNMP_SERVER_HOSTNAME-inputEl 
+2015-11-23 15:27:36,726 INFO  [Logger] Default field 25 
+2015-11-23 15:27:36,789 INFO  [Logger] Read from file inputsm.properties for SNMP_SERVER_HOSTNAME: 127.0.0.1 
+2015-11-23 15:27:37,353 INFO  [Logger] Input ID from OVF is : SNMP_SERVER_PORT Input ID found on UI: SNMP_SERVER_PORT-inputEl 
+2015-11-23 15:27:37,353 INFO  [Logger] Default field 26 
+2015-11-23 15:27:37,578 INFO  [Logger] Read from file inputsm.properties for SNMP_SERVER_PORT: 705 
+2015-11-23 15:27:38,289 INFO  [Logger] Input ID from OVF is : AVAYA_TECH_ASSIGNED_ROLE Input ID found on UI: AVAYA_TECH_ASSIGNED_ROLE-inputEl 
+2015-11-23 15:27:38,289 INFO  [Logger] Combobox type field 27 
+2015-11-23 15:27:38,552 INFO  [Logger] Read from file inputsm.properties for AVAYA_TECH_ASSIGNED_ROLE: Administrator 
+2015-11-23 15:27:38,639 INFO  [Logger] Clicked on: Administrator 
+2015-11-23 15:27:39,030 INFO  [Logger] Input ID from OVF is : gateway Input ID found on UI: vami.gateway.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-11-23 15:27:39,031 INFO  [Logger] Default field 28 
+2015-11-23 15:27:39,074 INFO  [Logger] Read from file inputsm.properties for vami.gateway.Secure_Access_Link_Gateway_Virtual_Appliance: 148.147.162.1 
+2015-11-23 15:27:39,497 INFO  [Logger] Input ID from OVF is : DNS Input ID found on UI: vami.DNS.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-11-23 15:27:39,497 INFO  [Logger] Default field 29 
+2015-11-23 15:27:39,557 INFO  [Logger] Read from file inputsm.properties for vami.DNS.Secure_Access_Link_Gateway_Virtual_Appliance: 148.147.162.5 
+2015-11-23 15:27:39,883 INFO  [Logger] Input ID from OVF is : ip0 Input ID found on UI: vami.ip0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-11-23 15:27:39,883 INFO  [Logger] IP as textbox.Not as foue parts ..  
+2015-11-23 15:27:40,004 INFO  [Logger] Filled IP 148.147.162.221 for ID: vami.ip0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-11-23 15:27:40,335 INFO  [Logger] Input ID from OVF is : netmask0 Input ID found on UI: vami.netmask0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-11-23 15:27:40,336 INFO  [Logger] Default field 31 
+2015-11-23 15:27:40,383 INFO  [Logger] Read from file inputsm.properties for vami.netmask0.Secure_Access_Link_Gateway_Virtual_Appliance: 255.255.255.0 
+2015-11-23 15:27:40,721 INFO  [Logger] Input ID from OVF is : ip1 Input ID found on UI:  
+2015-11-23 15:27:40,722 INFO  [Logger] Default field 32 
+2015-11-23 15:27:41,009 INFO  [Logger] Input ID from OVF is : netmask1 Input ID found on UI:  
+2015-11-23 15:27:41,009 INFO  [Logger] Default field 33 
+2015-11-23 15:27:43,652 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:27:44,528 INFO  [Logger] Clicked on: VM Network 
+2015-11-23 15:27:45,079 INFO  [Logger] Opacity of button Deploy
+  is: 1.0 
+2015-11-23 15:27:45,136 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:27:48,196 INFO  [Logger] Accepted EULA ..  
+2015-11-23 15:27:48,196 INFO  [Logger] Accepted EULA 
+2015-11-23 15:28:15,841 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:28:16,064 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 15:28:16,314 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:28:16,814 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 15:28:16,814 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:28:16,814 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:28:16,814 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 15:28:32,432 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:28:37,398 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:28:42,363 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:28:44,413 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 15:28:44,456 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:28:44,898 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 15:28:46,073 INFO  [Logger] Confirmation:  
+2015-11-23 15:28:57,788 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 15:30:37,783 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-11-23 15:30:37,783 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:30:37,783 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:30:53,706 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:30:57,894 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:31:03,790 INFO  [Logger] Entries on VM tree : 10 
+2015-11-23 15:31:06,142 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 15:31:06,186 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:31:06,567 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-11-23 15:31:07,208 INFO  [Logger] Confirmation:  
+2015-11-23 15:31:18,876 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 15:31:24,016 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:31:24,016 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-11-23 15:31:46,101 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:31:46,105 INFO  [Logger] InnerThread: Choosen OVA AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:31:46,107 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:31:46,107 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:31:46,107 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:31:46,107 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:31:51,022 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:32:03,119 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:32:08,019 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:32:12,256 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:32:12,624 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:32:12,624 INFO  [Logger] 148.147.162.225 IP is available 
+2015-11-23 15:32:12,625 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:32:12,625 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-11-23 15:32:12,625 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 15:32:12,625 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-11-23 15:32:12,625 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:32:12,627 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 15:32:18,657 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 15:32:35,917 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:32:39,159 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:32:51,116 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:32:55,077 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:32:55,924 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:32:56,016 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:33:00,174 INFO  [Logger] Clicked on - Add new VM 
+2015-11-23 15:33:01,838 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-11-23 15:33:01,974 INFO  [Logger] Clicked on: testLoc 
+2015-11-23 15:33:03,490 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:33:03,557 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-11-23 15:33:10,253 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-11-23 15:33:13,049 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:33:13,093 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:33:16,028 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-11-23 15:33:24,021 INFO  [Logger] Selected value for: Select OVAs: AAM-07.0.0.0.441-e55-0.ova AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:33:27,314 INFO  [Logger] Selected footprint: Standard 
+2015-11-23 15:33:27,374 INFO  [Logger] Clicked on: Standard
+Use for Combined Application and Storage VM or Application Only VM 
+2015-11-23 15:33:27,706 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:33:27,756 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:33:30,873 INFO  [Logger] Given Name 
+2015-11-23 15:33:54,418 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:33:54,580 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:33:54,580 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:33:54,580 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 15:34:10,263 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:34:14,936 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:34:19,986 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:34:20,415 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:34:20,416 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:34:20,416 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:34:25,416 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:34:25,416 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 15:34:40,557 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:34:40,900 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-11-23 15:34:41,105 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:34:41,155 INFO  [Logger] Total time taken in seconds is less than: 222 
+2015-11-23 15:34:45,616 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:34:46,164 INFO  [Logger] Completed adding VM SecureAccessLinkGateway with IP 148.147.162.221 
+2015-11-23 15:34:46,164 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:34:46,164 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:34:46,164 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-11-23 15:34:50,832 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:34:51,358 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:34:51,358 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:34:51,359 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:34:56,359 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:34:56,359 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 15:35:02,290 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:35:07,710 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:12,224 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:12,454 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:35:14,824 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-11-23 15:35:14,943 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:35:15,576 INFO  [Logger] Clicked on - Edit VM 
+2015-11-23 15:35:17,393 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:18,737 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:35:18,783 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:35:22,876 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:23,343 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:35:23,343 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:35:23,343 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:35:28,343 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:35:28,343 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:35:33,446 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-11-23 15:35:33,447 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:35:38,447 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:35:38,447 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-11-23 15:35:44,039 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:35:48,007 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:52,471 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:53,116 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:35:53,116 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:35:53,117 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:35:54,029 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:35:57,858 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:35:58,117 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:35:58,117 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:36:03,153 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:36:07,011 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-11-23 15:36:07,131 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:36:07,527 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-11-23 15:36:08,161 INFO  [Logger] Confirmation:  
+2015-11-23 15:36:14,855 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:36:19,495 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:36:19,775 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-11-23 15:36:24,881 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:36:25,415 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:36:25,415 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:36:25,415 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:36:25,415 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:36:25,415 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 15:36:41,276 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:36:45,661 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:36:50,706 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:36:51,405 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:36:51,405 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:36:51,405 INFO  [Logger] Reference Input : AAM-07.0.0.0.441-e55-0.ova 
+2015-11-23 15:36:51,405 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:36:51,405 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:37:07,617 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:37:11,318 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:37:15,490 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:37:15,880 ERROR [Logger] Couldn't Find entry in Tree: testAAM 
+2015-11-23 15:37:15,880 ERROR [Logger] Either VM name is null or VM does not exist .. 
+2015-11-23 15:37:15,881 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:37:15,881 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-11-23 15:37:15,882 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:37:15,882 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-11-23 15:37:19,772 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:37:24,772 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:37:24,772 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-11-23 15:37:25,169 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:37:25,169 INFO  [Logger] InnerThread: Choosen OVA  
+2015-11-23 15:37:25,170 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:37:25,170 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:37:25,170 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:37:25,170 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:37:32,238 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:37:44,189 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:37:44,744 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:37:50,210 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:37:50,945 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:37:53,599 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:37:53,883 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:37:53,883 INFO  [Logger] 148.147.162.225 IP is available 
+2015-11-23 15:37:53,885 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:37:53,885 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-11-23 15:37:53,885 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-11-23 15:37:53,885 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-11-23 15:37:53,886 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-11-23 15:37:57,456 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:37:59,482 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-11-23 15:37:59,550 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:38:00,666 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-11-23 15:38:01,445 INFO  [Logger] Confirmation:  
+2015-11-23 15:38:02,090 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-11-23 15:38:03,528 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 15:38:03,528 INFO  [Logger] Thread-15 81 Start 
+2015-11-23 15:38:03,613 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 15:38:03,613 INFO  [Logger] Thread-6 36 Start 
+2015-11-23 15:38:03,865 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 15:38:03,865 INFO  [Logger] Thread-3 21 Start 
+2015-11-23 15:38:13,035 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-11-23 15:39:43,031 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:39:48,031 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:39:48,031 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:40:03,588 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:40:07,709 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:40:12,267 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:40:14,755 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-11-23 15:40:14,795 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:40:15,576 INFO  [Logger] Read from file inputsm.properties for UName: admin 
+2015-11-23 15:40:15,576 INFO  [Logger] Read from file inputsm.properties for SALPWD: admin01 
+2015-11-23 15:40:17,116 INFO  [Logger] Opacity of button  is: 1.0 
+2015-11-23 15:40:17,154 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:40:33,440 ERROR [Logger] Task failed ..  
+2015-11-23 15:40:33,440 INFO  [Logger] Failed test. Check screenshot for the same. 
+2015-11-23 15:40:33,566 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-11-23 15:40:33,824 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 15:40:34,023 INFO  [Logger] Total time taken in seconds is less than: 12 
+2015-11-23 15:40:34,024 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:40:39,024 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:40:39,024 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-11-23 15:40:54,898 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:40:59,786 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:41:04,847 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:41:07,074 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-11-23 15:41:07,111 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:41:48,184 INFO  [Logger] Task completed successfully..  
+2015-11-23 15:41:48,332 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-11-23 15:41:48,525 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-11-23 15:41:49,025 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-11-23 15:41:49,025 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:41:49,025 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:41:49,025 INFO  [Logger]                              Restart VM to given Location and Host                             
+2015-11-23 15:42:04,577 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:42:08,726 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:42:14,483 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:42:16,678 INFO  [Logger] Opacity of button Restart is: 1.0 
+2015-11-23 15:42:16,719 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:42:17,081 ERROR [Logger] Action being performed: Are you sure you want to restart vm(s) ? 
+2015-11-23 15:42:17,937 INFO  [Logger] Confirmation:  
+2015-11-23 15:42:29,500 INFO  [Logger] *************************End of test caseRestarted VM successfully******************************
+
+ 
+2015-11-23 15:44:09,495 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-11-23 15:44:09,495 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:44:09,495 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-11-23 15:44:25,027 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:44:28,728 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:44:33,381 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:44:34,858 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-11-23 15:44:34,896 INFO  [Logger] Is element enabled: true 
+2015-11-23 15:44:46,768 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-11-23 15:45:10,345 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-11-23 15:45:14,100 INFO  [Logger] Changed properties file successfully ..  
+2015-11-23 15:45:14,100 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-11-23 15:45:22,573 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-11-23 15:45:22,573 INFO  [Logger] InnerThread: Choosen OVA  
+2015-11-23 15:45:22,575 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-11-23 15:45:22,575 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-11-23 15:45:22,575 INFO  [Logger] *************************Started Testing****************************** 
+2015-11-23 15:45:22,575 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-11-23 15:45:25,750 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 15:45:38,395 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-11-23 15:45:42,484 INFO  [Logger] Entries on VM tree : 9 
+2015-11-23 15:45:45,354 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-11-23 15:45:45,807 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-11-23 15:45:45,807 ERROR [Logger] No free IP available for Installation as another instance has taken IP. 
+2015-11-23 15:45:45,919 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 15:45:45,930 INFO  [Logger] Thread-12 66 Start 
+2015-11-23 15:45:46,100 INFO  [Logger] InnerThread: Test Started 
+2015-11-23 15:45:46,100 INFO  [Logger] Thread-9 51 Start 
+2015-11-23 17:54:51,955 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 17:56:17,928 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:01:27,858 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:02:32,991 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:13:03,876 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:16:50,627 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:17:10,660 INFO  [Logger] Entries on tree : 0 
+2015-11-23 18:19:05,283 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:21:54,648 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:23:15,536 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:25:53,117 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:28:22,621 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:28:39,637 INFO  [Logger] Entries on tree : 0 
+2015-11-23 18:31:00,145 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:32:06,261 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:32:18,683 INFO  [Logger] Entries on tree : 63 
+2015-11-23 18:34:09,542 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:34:22,084 INFO  [Logger] Entries on tree : 63 
+2015-11-23 18:36:21,729 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:36:34,648 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:40:27,956 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:40:45,944 INFO  [Logger] Entries on tree : 0 
+2015-11-23 18:44:20,592 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:44:38,550 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:46:07,303 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:46:19,978 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:49:29,099 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:49:41,637 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:51:33,945 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:51:46,377 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:52:31,680 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:52:44,147 INFO  [Logger] Entries on tree : 20 
+2015-11-23 18:53:18,675 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-11-23 18:53:31,525 INFO  [Logger] Entries on tree : 20 
