@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="8" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="0" started-at="2015-11-23T15:34:01Z" finished-at="2015-11-23T15:34:01Z">
+    <groups>
+    </groups>
+  </suite> <!-- Default Suite -->
+  <suite name="Suite1" duration-ms="2568645" started-at="2015-11-23T14:51:12Z" finished-at="2015-11-23T15:34:01Z">
+    <groups>
+    </groups>
+    <test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova" duration-ms="2568645" started-at="2015-11-23T14:51:12Z" finished-at="2015-11-23T15:34:01Z">
+      <class name="com.avaya.sdmclient.runnerdemo.SecondThreadNew">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="setup" is-config="true" duration-ms="1" started-at="2015-11-23T20:21:12Z" finished-at="2015-11-23T20:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddVMSuite(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="AddVMSuite" duration-ms="703883" started-at="2015-11-23T20:21:12Z" description="Adding VM to given Location and Host" finished-at="2015-11-23T20:32:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVMSuite -->
+        <test-method status="PASS" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="EditVM" duration-ms="41445" started-at="2015-11-23T20:32:56Z" description="Editing VM to given Location and Host" finished-at="2015-11-23T20:33:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="PASS" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="StopVM" duration-ms="104637" started-at="2015-11-23T20:33:38Z" description="Stoping VM to given Location and Host" finished-at="2015-11-23T20:35:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="PASS" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="StartVM" duration-ms="133256" started-at="2015-11-23T20:35:22Z" description="Starting VM to given Location and Host" finished-at="2015-11-23T20:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="FAIL" signature="TrustEstablish(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="TrustEstablish" duration-ms="72664" started-at="2015-11-23T20:37:36Z" description="Establishing trust with VM to given Location and Host" finished-at="2015-11-23T20:38:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.avaya.sdmclient.extraResources.MyException">
+            <message>
+              <![CDATA[Test case failed .. Check screenshot for the same.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Test case failed .. Check screenshot for the same.
+	at com.avaya.sdmclient.Settings.checkSuccessOrFailure(Settings.java:1632)
+	at com.avaya.sdmclient.Settings.checkSuccessOrFailure(Settings.java:1591)
+	at com.avaya.sdmclient.Settings.checkSuccessOrFailure(Settings.java:1619)
+	at com.avaya.sdmclient.Settings.checkSuccessOrFailure(Settings.java:1591)
+	at com.avaya.sdmclient.runnerdemo.SecondThreadNew.TrustEstablish(SecondThreadNew.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1172)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
+	at org.testng.TestNG.run(TestNG.java:1009)
+	at com.avaya.sdmclient.runnerdemo.settingsForConcThreads.runThread(settingsForConcThreads.java:308)
+	at com.avaya.sdmclient.runnerdemo.SecondThreadNew$1MyRunnable.run(SecondThreadNew.java:396)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TrustEstablish -->
+        <test-method status="PASS" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="RefreshVM" duration-ms="74110" started-at="2015-11-23T20:38:48Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-23T20:40:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="PASS" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="DeleteVM" duration-ms="41956" started-at="2015-11-23T20:40:02Z" description="Deleting VM to given Location and Host" finished-at="2015-11-23T20:40:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+        <test-method status="PASS" signature="startNewThread(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.runnerdemo.SecondThreadNew@77c6c59]" name="startNewThread" duration-ms="1396690" started-at="2015-11-23T20:40:44Z" description="Starting New Thread" finished-at="2015-11-23T21:04:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startNewThread -->
+      </class> <!-- com.avaya.sdmclient.runnerdemo.SecondThreadNew -->
+    </test> <!-- SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova -->
+  </suite> <!-- Suite1 -->
+</testng-results>

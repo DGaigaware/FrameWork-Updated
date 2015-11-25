@@ -3,8 +3,8 @@ CMM
 US
 BSM
 SecureAccessLinkGateway
-AAM
 MediaServer
+AAM
 AES
 EDP
 CM

@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="10">
 <test name="US-7.0.0.0.0.12-e55-01_OVF10.ova">
    
-<parameter name="IP" value="148.147.162.225"/>
+<parameter name="IP" value="148.147.162.221"/>
 <parameter name="VMName" value="US-7.0.0.0.0.12-e55-01_OVF10.ova"/>
       
     <!-- <packages>
