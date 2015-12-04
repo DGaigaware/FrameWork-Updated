@@ -1,62 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="8" total="13" passed="5">
+<testng-results skipped="0" failed="49" total="49" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="421534" started-at="2015-11-25T01:19:34Z" finished-at="2015-11-25T01:26:36Z">
+  <suite name="Suite1" duration-ms="60469" started-at="2015-11-26T16:30:23Z" finished-at="2015-11-26T16:31:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="421534" started-at="2015-11-25T01:19:34Z" finished-at="2015-11-25T01:26:36Z">
-      <class name="com.avaya.sdmclient.runnerdemo.total">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="setup" is-config="true" duration-ms="9" started-at="2015-11-25T06:49:34Z" finished-at="2015-11-25T06:49:34Z">
+    <test name="Location" duration-ms="47" started-at="2015-11-26T16:30:23Z" finished-at="2015-11-26T16:30:23Z">
+      <class name="com.avaya.sdmclient.location.Location">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.location.Location@7038ce7b]" name="setup" is-config="true" duration-ms="1" started-at="2015-11-26T22:00:23Z" finished-at="2015-11-26T22:00:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="addLocation" duration-ms="64937" started-at="2015-11-25T06:49:34Z" description="Adding Location" finished-at="2015-11-25T06:50:39Z">
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.location.Location@7038ce7b]" name="addLocation" duration-ms="11" started-at="2015-11-26T22:00:23Z" description="Adding Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addLocation -->
-        <test-method status="PASS" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="editLocation" duration-ms="10539" started-at="2015-11-25T06:50:39Z" description="Editing Location" finished-at="2015-11-25T06:50:50Z">
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.location.Location@7038ce7b]" name="editLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Editing Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editLocation -->
-        <test-method status="PASS" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="deleteLocation" duration-ms="8746" started-at="2015-11-25T06:50:50Z" description="Deleting Location" finished-at="2015-11-25T06:50:58Z">
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.location.Location@7038ce7b]" name="deleteLocation" duration-ms="2" started-at="2015-11-26T22:00:23Z" description="Deleting Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteLocation -->
-        <test-method status="PASS" signature="addHost()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="addHost" duration-ms="75888" started-at="2015-11-25T06:50:58Z" description="Adding Host to given Location" finished-at="2015-11-25T06:52:14Z">
+      </class> <!-- com.avaya.sdmclient.location.Location -->
+    </test> <!-- Location -->
+    <test name="Host" duration-ms="45" started-at="2015-11-26T16:30:23Z" finished-at="2015-11-26T16:30:23Z">
+      <class name="com.avaya.sdmclient.host.Host">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="setup" is-config="true" duration-ms="0" started-at="2015-11-26T22:00:23Z" finished-at="2015-11-26T22:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="addLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Adding Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLocation -->
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="editLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Editing Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLocation -->
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="deleteLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Deleting Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLocation -->
+        <test-method status="FAIL" signature="addHost()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="addHost" duration-ms="2" started-at="2015-11-26T22:00:23Z" description="Adding Host to given Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.host.Host.addHost(Host.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addHost -->
-        <test-method status="FAIL" signature="editHost()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="editHost" duration-ms="42104" started-at="2015-11-25T06:52:14Z" description="Editing Host to given Location" finished-at="2015-11-25T06:52:56Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[Element is not currently visible and so may not be interacted with
-Command duration or timeout: 11.58 seconds
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 29debe3a-e5d7-4a4e-81ce-9ea301f4ab3c
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]]]>
-            </message>
+        <test-method status="FAIL" signature="editHost()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="editHost" duration-ms="2" started-at="2015-11-26T22:00:23Z" description="Editing Host to given Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 11.58 seconds
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Session ID: 29debe3a-e5d7-4a4e-81ce-9ea301f4ab3c
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=40.0.3}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:269)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:80)
-	at com.avaya.sdmclient.Settings.refreshItems(Settings.java:901)
-	at com.avaya.sdmclient.runnerdemo.total.editHost(total.java:233)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.host.Host.editHost(Host.java:122)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -67,47 +210,54 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.46.0', revision: '87c69e2', time: '2015-06-04 16:16:47'
-System info: host: 'HA1101901716', ip: '148.147.208.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_71'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2417136738731071824webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9615)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2417136738731071824webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12265)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2417136738731071824webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/BSHING~1/AppData/Local/Temp/anonymous2417136738731071824webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editHost -->
-        <test-method status="PASS" signature="deleteHost()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="deleteHost" duration-ms="12161" started-at="2015-11-25T06:52:56Z" description="Deleting Host to given Location" finished-at="2015-11-25T06:53:08Z">
+        <test-method status="FAIL" signature="deleteHost()[pri:0, instance:com.avaya.sdmclient.host.Host@788370f8]" name="deleteHost" duration-ms="2" started-at="2015-11-26T22:00:23Z" description="Deleting Host to given Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.host.Host.deleteHost(Host.java:166)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteHost -->
-        <test-method status="FAIL" signature="addVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="addVM" duration-ms="149274" started-at="2015-11-25T06:53:08Z" description="Adding VM to given Location and Host" finished-at="2015-11-25T06:55:38Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[OVF not found for BSM at C:\Program Files\Avaya\SDMClient\Default_Artifacts\ . Please check if OVA and OVF are present at given location.]]>
-            </message>
+      </class> <!-- com.avaya.sdmclient.host.Host -->
+    </test> <!-- Host -->
+    <test name="CM-Simplex-07.0.0.0.441-e55-0.ova" duration-ms="15053" started-at="2015-11-26T16:30:23Z" finished-at="2015-11-26T16:30:38Z">
+      <class name="com.avaya.sdmclient.automation.total">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="setup" is-config="true" duration-ms="1" started-at="2015-11-26T22:00:23Z" finished-at="2015-11-26T22:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="addLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Adding Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: OVF not found for BSM at C:\Program Files\Avaya\SDMClient\Default_Artifacts\ . Please check if OVA and OVF are present at given location.
-	at com.avaya.sdmclient.Settings.chooseOVFFromSDMClient(Settings.java:1819)
-	at com.avaya.sdmclient.runnerdemo.total.addVM(total.java:360)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -118,35 +268,120 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLocation -->
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="editLocation" duration-ms="14" started-at="2015-11-26T22:00:23Z" description="Editing Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLocation -->
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="deleteLocation" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Deleting Location" finished-at="2015-11-26T22:00:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLocation -->
+        <test-method status="FAIL" signature="addVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="addVM" duration-ms="0" started-at="2015-11-26T22:00:23Z" description="Adding VM to given Location and Host" finished-at="2015-11-26T22:00:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.addVM(total.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addVM -->
-        <test-method status="FAIL" signature="EditVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="EditVM" duration-ms="6778" started-at="2015-11-25T06:55:38Z" description="Editing VM to given Location and Host" finished-at="2015-11-25T06:55:44Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="EditVM" duration-ms="1" started-at="2015-11-26T22:00:23Z" description="Editing VM to given Location and Host" finished-at="2015-11-26T22:00:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.EditVM(total.java:403)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.EditVM(total.java:182)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -157,35 +392,33 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EditVM -->
-        <test-method status="FAIL" signature="StopVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="StopVM" duration-ms="11649" started-at="2015-11-25T06:55:44Z" description="Stoping VM to given Location and Host" finished-at="2015-11-25T06:55:56Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="StopVM" duration-ms="5001" started-at="2015-11-26T22:00:23Z" description="Stoping VM to given Location and Host" finished-at="2015-11-26T22:00:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.StopVM(total.java:441)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StopVM(total.java:213)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -196,35 +429,33 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopVM -->
-        <test-method status="FAIL" signature="StartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="StartVM" duration-ms="11392" started-at="2015-11-25T06:55:56Z" description="Starting VM to given Location and Host" finished-at="2015-11-25T06:56:08Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="StartVM" duration-ms="5001" started-at="2015-11-26T22:00:28Z" description="Starting VM to given Location and Host" finished-at="2015-11-26T22:00:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.StartVM(total.java:467)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StartVM(total.java:239)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -235,35 +466,33 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartVM -->
-        <test-method status="FAIL" signature="RefreshVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="RefreshVM" duration-ms="12302" started-at="2015-11-25T06:56:08Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-25T06:56:20Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="RefreshVM" duration-ms="5001" started-at="2015-11-26T22:00:33Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-26T22:00:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.RefreshVM(total.java:491)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RefreshVM(total.java:263)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -274,35 +503,33 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RefreshVM -->
-        <test-method status="FAIL" signature="RestartVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="RestartVM" duration-ms="8021" started-at="2015-11-25T06:56:20Z" description="Restarting VM to given Location and Host" finished-at="2015-11-25T06:56:28Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="RestartVM" duration-ms="3" started-at="2015-11-26T22:00:38Z" description="Restarting VM to given Location and Host" finished-at="2015-11-26T22:00:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.RestartVM(total.java:550)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RestartVM(total.java:322)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -313,35 +540,33 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RestartVM -->
-        <test-method status="FAIL" signature="DeleteVM()[pri:0, instance:com.avaya.sdmclient.runnerdemo.total@49819cf1]" name="DeleteVM" duration-ms="7684" started-at="2015-11-25T06:56:28Z" description="Deleting VM to given Location and Host" finished-at="2015-11-25T06:56:36Z">
-          <exception class="com.avaya.sdmclient.extraResources.MyException">
-            <message>
-              <![CDATA[Error occurred: Either location name or host name is null or location or host does not exist ..]]>
-            </message>
+        <test-method status="FAIL" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@440fb224]" name="DeleteVM" duration-ms="1" started-at="2015-11-26T22:00:38Z" description="Deleting VM to given Location and Host" finished-at="2015-11-26T22:00:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CM-Simplex-07.0.0.0.441-e55-0.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[com.avaya.sdmclient.extraResources.MyException: Error occurred: Either location name or host name is null or location or host does not exist ..
-	at com.avaya.sdmclient.Settings.findLocationOrHost(Settings.java:272)
-	at com.avaya.sdmclient.runnerdemo.total.DeleteVM(total.java:573)
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.DeleteVM(total.java:345)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -352,27 +577,1052 @@ Driver info: driver.version: unknown
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- com.avaya.sdmclient.extraResources.MyException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DeleteVM -->
-      </class> <!-- com.avaya.sdmclient.runnerdemo.total -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.avaya.sdmclient.automation.total -->
+    </test> <!-- CM-Simplex-07.0.0.0.441-e55-0.ova -->
+    <test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova" duration-ms="15052" started-at="2015-11-26T16:30:38Z" finished-at="2015-11-26T16:30:53Z">
+      <class name="com.avaya.sdmclient.automation.total">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="setup" is-config="true" duration-ms="0" started-at="2015-11-26T22:00:38Z" finished-at="2015-11-26T22:00:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="addLocation" duration-ms="1" started-at="2015-11-26T22:00:38Z" description="Adding Location" finished-at="2015-11-26T22:00:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLocation -->
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="editLocation" duration-ms="1" started-at="2015-11-26T22:00:38Z" description="Editing Location" finished-at="2015-11-26T22:00:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLocation -->
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="deleteLocation" duration-ms="0" started-at="2015-11-26T22:00:38Z" description="Deleting Location" finished-at="2015-11-26T22:00:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLocation -->
+        <test-method status="FAIL" signature="addVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="addVM" duration-ms="2" started-at="2015-11-26T22:00:38Z" description="Adding VM to given Location and Host" finished-at="2015-11-26T22:00:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.addVM(total.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVM -->
+        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="EditVM" duration-ms="1" started-at="2015-11-26T22:00:38Z" description="Editing VM to given Location and Host" finished-at="2015-11-26T22:00:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.EditVM(total.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="FAIL" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="StopVM" duration-ms="5001" started-at="2015-11-26T22:00:38Z" description="Stoping VM to given Location and Host" finished-at="2015-11-26T22:00:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StopVM(total.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="FAIL" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="StartVM" duration-ms="5023" started-at="2015-11-26T22:00:43Z" description="Starting VM to given Location and Host" finished-at="2015-11-26T22:00:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StartVM(total.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="FAIL" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="RefreshVM" duration-ms="5001" started-at="2015-11-26T22:00:48Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-26T22:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RefreshVM(total.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="FAIL" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="RestartVM" duration-ms="1" started-at="2015-11-26T22:00:53Z" description="Restarting VM to given Location and Host" finished-at="2015-11-26T22:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RestartVM(total.java:322)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestartVM -->
+        <test-method status="FAIL" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@fc2a074]" name="DeleteVM" duration-ms="0" started-at="2015-11-26T22:00:53Z" description="Deleting VM to given Location and Host" finished-at="2015-11-26T22:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.DeleteVM(total.java:345)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+      </class> <!-- com.avaya.sdmclient.automation.total -->
+    </test> <!-- SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova -->
+    <test name="SM-7.0.0.0.700007-e55-02.ova" duration-ms="15027" started-at="2015-11-26T16:30:53Z" finished-at="2015-11-26T16:31:08Z">
+      <class name="com.avaya.sdmclient.automation.total">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="setup" is-config="true" duration-ms="1" started-at="2015-11-26T22:00:53Z" finished-at="2015-11-26T22:00:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="addLocation" duration-ms="1" started-at="2015-11-26T22:00:53Z" description="Adding Location" finished-at="2015-11-26T22:00:53Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLocation -->
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="editLocation" duration-ms="5" started-at="2015-11-26T22:00:53Z" description="Editing Location" finished-at="2015-11-26T22:00:53Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLocation -->
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="deleteLocation" duration-ms="1" started-at="2015-11-26T22:00:53Z" description="Deleting Location" finished-at="2015-11-26T22:00:53Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLocation -->
+        <test-method status="FAIL" signature="addVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="addVM" duration-ms="1" started-at="2015-11-26T22:00:53Z" description="Adding VM to given Location and Host" finished-at="2015-11-26T22:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.addVM(total.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVM -->
+        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="EditVM" duration-ms="1" started-at="2015-11-26T22:00:53Z" description="Editing VM to given Location and Host" finished-at="2015-11-26T22:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.EditVM(total.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="FAIL" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="StopVM" duration-ms="5002" started-at="2015-11-26T22:00:53Z" description="Stoping VM to given Location and Host" finished-at="2015-11-26T22:00:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StopVM(total.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="FAIL" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="StartVM" duration-ms="5001" started-at="2015-11-26T22:00:58Z" description="Starting VM to given Location and Host" finished-at="2015-11-26T22:01:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StartVM(total.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="FAIL" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="RefreshVM" duration-ms="5001" started-at="2015-11-26T22:01:03Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-26T22:01:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RefreshVM(total.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="FAIL" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="RestartVM" duration-ms="1" started-at="2015-11-26T22:01:08Z" description="Restarting VM to given Location and Host" finished-at="2015-11-26T22:01:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RestartVM(total.java:322)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestartVM -->
+        <test-method status="FAIL" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@1c398896]" name="DeleteVM" duration-ms="2" started-at="2015-11-26T22:01:08Z" description="Deleting VM to given Location and Host" finished-at="2015-11-26T22:01:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SM-7.0.0.0.700007-e55-02.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.DeleteVM(total.java:345)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+      </class> <!-- com.avaya.sdmclient.automation.total -->
+    </test> <!-- SM-7.0.0.0.700007-e55-02.ova -->
+    <test name="US-7.0.0.0.0.12-e55-01_OVF10.ova" duration-ms="15032" started-at="2015-11-26T16:31:08Z" finished-at="2015-11-26T16:31:23Z">
+      <class name="com.avaya.sdmclient.location.driverGetter">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.avaya.sdmclient.location.driverGetter@575ec870]" name="start" is-config="true" duration-ms="14254" started-at="2015-11-26T22:00:09Z" finished-at="2015-11-26T22:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="end()[pri:0, instance:com.avaya.sdmclient.location.driverGetter@575ec870]" name="end" is-config="true" duration-ms="3918" started-at="2015-11-26T22:01:23Z" finished-at="2015-11-26T22:01:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- com.avaya.sdmclient.location.driverGetter -->
+      <class name="com.avaya.sdmclient.automation.total">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="setup" is-config="true" duration-ms="1" started-at="2015-11-26T22:01:08Z" finished-at="2015-11-26T22:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="addLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="addLocation" duration-ms="1" started-at="2015-11-26T22:01:08Z" description="Adding Location" finished-at="2015-11-26T22:01:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.addLocation(Location.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLocation -->
+        <test-method status="FAIL" signature="editLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="editLocation" duration-ms="1" started-at="2015-11-26T22:01:08Z" description="Editing Location" finished-at="2015-11-26T22:01:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.editLocation(Location.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editLocation -->
+        <test-method status="FAIL" signature="deleteLocation()[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="deleteLocation" duration-ms="1" started-at="2015-11-26T22:01:08Z" description="Deleting Location" finished-at="2015-11-26T22:01:08Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.location.Location.deleteLocation(Location.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLocation -->
+        <test-method status="FAIL" signature="addVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="addVM" duration-ms="1" started-at="2015-11-26T22:01:08Z" description="Adding VM to given Location and Host" finished-at="2015-11-26T22:01:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.addVM(total.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVM -->
+        <test-method status="FAIL" signature="EditVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="EditVM" duration-ms="0" started-at="2015-11-26T22:01:08Z" description="Editing VM to given Location and Host" finished-at="2015-11-26T22:01:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.EditVM(total.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditVM -->
+        <test-method status="FAIL" signature="StopVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="StopVM" duration-ms="5002" started-at="2015-11-26T22:01:08Z" description="Stoping VM to given Location and Host" finished-at="2015-11-26T22:01:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StopVM(total.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopVM -->
+        <test-method status="FAIL" signature="StartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="StartVM" duration-ms="5000" started-at="2015-11-26T22:01:13Z" description="Starting VM to given Location and Host" finished-at="2015-11-26T22:01:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.StartVM(total.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartVM -->
+        <test-method status="FAIL" signature="RefreshVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="RefreshVM" duration-ms="5001" started-at="2015-11-26T22:01:18Z" description="Refreshing VM to given Location and Host" finished-at="2015-11-26T22:01:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RefreshVM(total.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefreshVM -->
+        <test-method status="FAIL" signature="RestartVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="RestartVM" duration-ms="1" started-at="2015-11-26T22:01:23Z" description="Restarting VM to given Location and Host" finished-at="2015-11-26T22:01:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.RestartVM(total.java:322)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestartVM -->
+        <test-method status="FAIL" signature="DeleteVM(java.lang.String, java.lang.String)[pri:0, instance:com.avaya.sdmclient.automation.total@6a905eb5]" name="DeleteVM" duration-ms="2" started-at="2015-11-26T22:01:23Z" description="Deleting VM to given Location and Host" finished-at="2015-11-26T22:01:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[148.147.162.221]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[US-7.0.0.0.0.12-e55-01_OVF10.ova]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.avaya.sdmclient.Settings.goToSDMCliURL(Settings.java:64)
+	at com.avaya.sdmclient.automation.total.DeleteVM(total.java:345)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:648)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:834)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteVM -->
+      </class> <!-- com.avaya.sdmclient.automation.total -->
+    </test> <!-- US-7.0.0.0.0.12-e55-01_OVF10.ova -->
+  </suite> <!-- Suite1 -->
 </testng-results>

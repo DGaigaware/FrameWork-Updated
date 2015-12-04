@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite1" parallel="false" verbose="2">
+<suite name="Suite1" parallel="false" preserve-order="true" verbose="2" thread-count="1">
 
 
-<test name="Location">
+<test name="Location" preserve-order="true" thread-count="1">
 	<classes>
 		<class name="com.avaya.sdmclient.location.Location" />
 	</classes> 
 </test>
 
 
-<test name="Host">
+<test name="Host" preserve-order="true" thread-count="1">
 	<classes>
 		<class name="com.avaya.sdmclient.host.Host" />
 	</classes> 
 </test>
 
 
-<test name="CM-Simplex-07.0.0.0.441-e55-0.ova">
+<test name="AES-7.0.0.0.0.13.20150629-e50-00.ova" preserve-order="true" thread-count="1">
+	<parameter name="IP" value="148.147.162.221"/>
+	<parameter name="VMName" value="AES-7.0.0.0.0.13.20150629-e50-00.ova"/>
+		<classes>
+			<class name="com.avaya.sdmclient.automation.total" />
+		</classes> 
+</test>
+
+
+<test name="BSM-7.0.0.0.700007-e55-02.ova" preserve-order="true" thread-count="1">
+	<parameter name="IP" value="148.147.162.221"/>
+	<parameter name="VMName" value="BSM-7.0.0.0.700007-e55-02.ova"/>
+		<classes>
+			<class name="com.avaya.sdmclient.automation.total" />
+		</classes> 
+</test>
+
+
+<test name="CM-Simplex-07.0.0.0.441-e55-0.ova" preserve-order="true" thread-count="1">
 	<parameter name="IP" value="148.147.162.221"/>
 	<parameter name="VMName" value="CM-Simplex-07.0.0.0.441-e55-0.ova"/>
 		<classes>
@@ -26,7 +44,16 @@
 </test>
 
 
-<test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova">
+<test name="CMM-07.0.0.0.441-e55-0.ova" preserve-order="true" thread-count="1">
+	<parameter name="IP" value="148.147.162.221"/>
+	<parameter name="VMName" value="CMM-07.0.0.0.441-e55-0.ova"/>
+		<classes>
+			<class name="com.avaya.sdmclient.automation.total" />
+		</classes> 
+</test>
+
+
+<test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova" preserve-order="true" thread-count="1">
 	<parameter name="IP" value="148.147.162.221"/>
 	<parameter name="VMName" value="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova"/>
 		<classes>
@@ -35,7 +62,7 @@
 </test>
 
 
-<test name="SM-7.0.0.0.700007-e55-02.ova">
+<test name="SM-7.0.0.0.700007-e55-02.ova" preserve-order="true" thread-count="1">
 	<parameter name="IP" value="148.147.162.221"/>
 	<parameter name="VMName" value="SM-7.0.0.0.700007-e55-02.ova"/>
 		<classes>
@@ -44,25 +71,7 @@
 </test>
 
 
-<test name="SMGR-7.0.0.0.16266-e55-43-29.ova">
-	<parameter name="IP" value="148.147.162.221"/>
-	<parameter name="VMName" value="SMGR-7.0.0.0.16266-e55-43-29.ova"/>
-		<classes>
-			<class name="com.avaya.sdmclient.automation.total" />
-		</classes> 
-</test>
-
-
-<test name="System_Manager_R7.0.1.0_S3_701034160.bin">
-	<parameter name="IP" value="148.147.162.221"/>
-	<parameter name="VMName" value="System_Manager_R7.0.1.0_S3_701034160.bin"/>
-		<classes>
-			<class name="com.avaya.sdmclient.automation.total" />
-		</classes> 
-</test>
-
-
-<test name="US-7.0.0.0.0.12-e55-01_OVF10.ova">
+<test name="US-7.0.0.0.0.12-e55-01_OVF10.ova" preserve-order="true" thread-count="1">
 	<parameter name="IP" value="148.147.162.221"/>
 	<parameter name="VMName" value="US-7.0.0.0.0.12-e55-01_OVF10.ova"/>
 		<classes>
