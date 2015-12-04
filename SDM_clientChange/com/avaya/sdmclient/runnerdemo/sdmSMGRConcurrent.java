@@ -248,10 +248,10 @@ public class sdmSMGRConcurrent {
 			obj.findIDandFillValues(drive, "input.properties", "EditHost");
 			Thread.sleep(250);
 			
-			obj.checkFocus(drive, By.xpath(locator.getProperty("SaveHostEdit")));
+			//obj.checkFocus(drive, By.xpath(locator.getProperty("SaveHostEdit")));
 
 			drive.findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
-
+			// check whther error box is coming or not , if it comes, it will throw an error ..  
 			obj.errorBox(drive, obj.checkError(drive));
 			Thread.sleep(2500);
 			
@@ -373,12 +373,16 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(450);
 			obj.boundListSelect(drive, obj.readFromFile("input.properties", "AddLocationName:"), obj.selBoundList(drive));
 			
+			// Select host click
 			drive.findElement(By.id(locator.getProperty("SelHost"))).click();
 			Thread.sleep(450);
+			// Select host name
 			obj.boundListSelect(drive, obj.readFromFile("input.properties", "AddHostHostName:"), obj.selBoundList(drive));
 			Thread.sleep(6000);
+			// click on datastore
 			drive.findElement(By.xpath(locator.getProperty("DataStore"))).click();
 			Thread.sleep(250);
+			// choose datastore
 			obj.boundListSelect(drive, "data", obj.selBoundList(drive));
 			Thread.sleep(2500);
 			//Uptill here
@@ -389,9 +393,11 @@ public class sdmSMGRConcurrent {
 			obj.clickButtonxPath(drive, locator.getProperty("Next"));
 			obj.comboClick(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
+			// Add all ova names in a file which is maintained outside of code ovanames.txt
 			obj.maintainedList(drive, obj.comboID(drive, "Select OVAs:"));
 			obj.comboClick(drive, "Select OVAs:", VMName);
 			Thread.sleep(2500);
+			// Select footprint related to each element
 			obj.selectFP(drive, shortVMName);
 			
 			//Uptill here
@@ -407,6 +413,7 @@ public class sdmSMGRConcurrent {
 			_Check = obj.checkError(drive);
 			String err = obj.errorBox(drive,obj.checkError(drive));
 
+			// Check whther any error is there or not, if yes, interrupt the thread and come out of it
 			if(_Check){
 				System.out.println("Error:");
 				Thread.currentThread().interrupt();
@@ -417,15 +424,18 @@ public class sdmSMGRConcurrent {
 				throw new MyException(err);
 			}
 
+			// Fill all the values related to VM
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), drive,IP,"test"+shortVMName);
 
 			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("Deploy"));
 			//obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
+			// Find EULA accept button and click on that
 			obj.findEULAAcceptButton(drive);
 			logClass.info("Accepted EULA");
 			
+			// Start a new thread for concurrent installation
 			final WebDriver driver1 = new FirefoxDriver(obj.selectProfile("Selenium"));
 			class MyRunnable implements Runnable {
 				public void run() {
@@ -449,6 +459,7 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(9000);
 
 			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
+			// Check for successful deployment or failed attempt
 			obj.checkSuccessOrFailure(drive, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 
 			Thread.sleep(5000);
@@ -593,7 +604,7 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
-			
+			// Find 'more actions' button
 			obj.findMoreActionsButton(drive);
 			Thread.sleep(500);
 			// Click button by it's xPath value
@@ -643,6 +654,7 @@ public class sdmSMGRConcurrent {
 //			//obj.StatusCheck(driver, "VM Refresh Completed", 50);
 //			logClass.endTestCase("VM refreshed Successfully");
 			
+			// give username and password according to the element
 			obj.refreshVMValues(drive, shortVMName, "inputsm.properties");
 			Thread.sleep(750);
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
@@ -653,6 +665,7 @@ public class sdmSMGRConcurrent {
 			
 			Thread.sleep(1000);
 			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
+			// check whether test case is passed or failed..
 			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("RefreshVM")));
 			Thread.sleep(1500);
@@ -660,6 +673,7 @@ public class sdmSMGRConcurrent {
 				drive.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
 			Thread.sleep(5000);
 			obj.chooseLink(drive, "test"+shortVMName,"VM","Status Details");
+			// check whether test case is passed or failed..
 			obj.checkSuccessOrFailure(drive, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 			
 			Thread.sleep(2500);
@@ -732,7 +746,7 @@ public class sdmSMGRConcurrent {
 			
 			//obj.maintainedList(driver, "combobox-1238-inputEl");
 			drive.quit();
-			
+			// make the ip whitelist so that next instance can take that ip..
 			obj.makeIPWhiteBlackList(IP,"WhiteList");
 			
 //			final WebDriver driver2 = new FirefoxDriver(obj.selectProfile("Selenium"));
@@ -759,7 +773,7 @@ public class sdmSMGRConcurrent {
 //			System.out.println("Completed All threads");
 			}
 		
-		
+		// Start new thread as test otherwise it will fail ..
 		@Test(description="Starting New Thread",priority=100)
 		@Parameters({"IP", "VMName"})
 		public void startNewThread(String IP,String VMName) throws InterruptedException{
@@ -783,6 +797,7 @@ public class sdmSMGRConcurrent {
 			MyRunnable r = new MyRunnable();
 			Thread t = new Thread(r);
 			t.start();
+			// Compulsory coz otherwise current thread will stop and subsequent child threads will stop
 			t.join();
 			
 			System.out.println("Completed All Threads.");
