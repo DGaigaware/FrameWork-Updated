@@ -40,32 +40,40 @@ public class sdmSMGRConcurrent {
 			logClass.startTestCase("Add a new Location on SDM");
 			obj.loginToSite(drive);
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
 			obj.debugLogging("Adding new Location .. ", "Info");
 
+			// Calling method find id and fill values to fill values for all the elements which can be find by one static ID, Please see the method declaration for more info
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation");
 			Thread.sleep(250);
 			obj.debugLogging("Filled values .. ", "Info");
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
 			obj.debugLogging("Checking if any errors are occurring or not .. ", "Info");
 
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 			Thread.sleep(450);
 			obj.debugLogging("Location added successfully .. ", "Info");
 			//obj.refreshItems(drive, "AddLocation");
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationAdd"));
 			obj.debugLogging("Adding new Location .. ", "Info");
 
+			// Calling method find id and fill values to fill values for all the elements which can be find by one static ID, Please see the method declaration for more info
 			obj.findIDandFillValues(drive, "input.properties", "AddLocation1");
 			Thread.sleep(250);
 			obj.debugLogging("Filled values .. ", "Info");
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationSave"));
 			Thread.sleep(450);
 			obj.debugLogging("Location added successfully .. ", "Info");
 
+			// Checking if any error are there or not.. If not then it will continue or it will take a screenshot and continue.
 			obj.errorBox(drive, obj.checkError(drive));
 			logClass.endTestCase("Added a new Location");
 
@@ -77,15 +85,21 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Edit Location on SDM");
 			//obj.loginToSite(drive);
+			// Go home .. It will refresh the page and again click on 'SDM' link .. Please check declaration part of this method for more info
 			obj.goHome(drive);
+			// Find location in grid i.e. right side table of locations
 			obj.findLocationInGrid(drive, obj.readFromFile("input.properties", "AddLocationName:"));
+			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationEdit"));
 			
 			obj.findIDandFillValues(drive, "input.properties", "EditLocation");
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("LocationSaveEdit")));
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationSaveEdit"));
 			Thread.sleep(450);
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 			obj.debugLogging("Location edited successfully .. ", "Info");
 
@@ -99,12 +113,17 @@ public class sdmSMGRConcurrent {
 			logClass.startTestCase("Delete Location on SMGR SDM");
 
 			obj.goHome(drive);
+			// Find 'VM management' in left tree
 			obj.findLocationOrHost(drive, "VM Management");
+			// Find location in left grid
 			obj.findLocationInGrid(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("LocationDelete"));
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 			
+			// Check whether location is deleted or not
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:")))
 				obj.debugLogging("Location deleted successfully .. ", "Info");
 			else
@@ -119,9 +138,11 @@ public class sdmSMGRConcurrent {
 
 			logClass.startTestCase("Adding Host to given Location");
 
+			// Refresh the page and again come to SDM
 			obj.goHome(drive);
 			//obj.loginToSite(drive);
 			
+			// Check if location is present or not, if not then add that location
 			if(!obj.checkPresenceOfLocationOrHostOrVM(drive, obj.readFromFile("input.properties", "AddLocationName:"))){
 				drive.navigate().refresh();
 				obj.logOut(drive);
@@ -133,28 +154,36 @@ public class sdmSMGRConcurrent {
 				//obj.loginToSite(driver);
 			}
 
+			// Find location in left grid
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
+			// Choose hosts tab
 			obj.chooseTab(drive, "Hosts");
 			obj.debugLogging("Navigated to Host tab.", "Info");
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("New-Host"));
 			obj.debugLogging("Adding new host .. ", "Info");
 			Thread.sleep(250);			
 		
+			// Give one static ID and it will fill all the values in that panel , ID is given in settings file
 			obj.findIDandFillValues(drive, "input.properties", "AddHost");
 			Thread.sleep(250);
 			obj.debugLogging("Filled values .. ", "Info");
 		
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("SaveHost"));
 			Thread.sleep(1250);
 			
+			// click on refresh 
 			obj.refreshItems(drive, "AddHost");
 			Thread.sleep(1500);
 			
+			// Click on status details
 			obj.chooseLink(drive, obj.readFromFile("input.properties", "AddHostHostName:"), "Host", "Status Details");
 			obj.waitForPresenceOfElement(drive, By.id(locator.getProperty("vmDeployStatus")));
 			
 			obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), drive, 50, "Host Create/Update Completed"),"Info");
+			// To check whether host is successfully added or not .. 
 			obj.StatusCheck(drive, "Host Create/Update Completed", 20);
 			
 			//Adding second host
@@ -164,6 +193,7 @@ public class sdmSMGRConcurrent {
 			obj.chooseTab(drive, "Hosts");
 			obj.debugLogging("Navigated to Host tab.", "Info");
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("New-Host"));
 			obj.debugLogging("Adding new host .. ", "Info");
 			Thread.sleep(250);			
@@ -172,6 +202,7 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(250);
 			obj.debugLogging("Filled values .. ", "Info");
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("SaveHost"));
 			Thread.sleep(1250);
 			
@@ -196,6 +227,7 @@ public class sdmSMGRConcurrent {
 			obj.goHome(drive);
 			//obj.loginToSite(drive);
 
+			// find location in left grid
 			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddLocationName:"));
 			obj.chooseTab(drive, "Hosts");
 
@@ -205,6 +237,7 @@ public class sdmSMGRConcurrent {
 
 			Thread.sleep(1250);
 			
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("EditHost"));
 			//drive.findElement(By.xpath(locator.getProperty("EditHost"))).click();
 			//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
@@ -257,6 +290,7 @@ public class sdmSMGRConcurrent {
 //				drive.findElement(By.id("saveNetworkParam-btnIconEl")).click();
 //				obj.errorBox(drive, obj.checkError(drive));
 //				Thread.sleep(4500);
+		// Confirm the dialogue box. Please see method declaration for more info .. 
 //				obj.confirmDialogBox(drive);
 //			}
 //			
@@ -297,6 +331,7 @@ public class sdmSMGRConcurrent {
 //			
 //			drive.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
 //
+		// Confirm the dialogue box. Please see method declaration for more info .. 
 //			obj.confirmDialogBox(drive); 
 //
 //			logClass.endTestCase("Deleted Host");
@@ -329,6 +364,7 @@ public class sdmSMGRConcurrent {
 
 			obj.chooseTab(drive, "Virtual Machines");
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive,locator.getProperty("NewVM"));
 			Thread.sleep(750);
 
@@ -349,6 +385,7 @@ public class sdmSMGRConcurrent {
 			
 			
 			//Next Page
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("Next"));
 			obj.comboClick(drive, "Select Software Library:","SMGR_DEFAULT_LOCAL");
 			Thread.sleep(2500);
@@ -360,6 +397,7 @@ public class sdmSMGRConcurrent {
 			//Uptill here
 			
 			//Next Page
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("Next"));
 			drive.findElement(By.xpath(locator.getProperty("VMName"))).clear();
 			drive.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
@@ -381,6 +419,7 @@ public class sdmSMGRConcurrent {
 
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), drive,IP,"test"+shortVMName);
 
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("Deploy"));
 			//obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
@@ -442,6 +481,7 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 			
 			Thread.sleep(900);
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("EditVM"));
 			//drive.findElement(By.xpath(locator.getProperty("EditVM"))).click();
 			logClass.info("Clicked on - Edit VM");
@@ -455,6 +495,7 @@ public class sdmSMGRConcurrent {
 			obj.editVM(drive,IP,"test"+shortVMName+"edited");
 
 			//obj.checkFocus(drive, By.xpath(locator.getProperty("VMEditSave")));
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("VMEditSave"));
 			//drive.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
@@ -485,10 +526,10 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(1500);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("StopVM")));
-
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("StopVM"));
 			//drive.findElement(By.xpath(locator.getProperty("StopVM"))).click();
-
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 			
 //			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
@@ -518,10 +559,10 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive,"test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
-
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("VMStart"));
 			//drive.findElement(By.xpath(locator.getProperty("VMStart"))).click();
-
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 			
 //			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
@@ -555,6 +596,7 @@ public class sdmSMGRConcurrent {
 			
 			obj.findMoreActionsButton(drive);
 			Thread.sleep(500);
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConn"));
 			//drive.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
 
@@ -605,6 +647,7 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(750);
 			obj.waitForPresenceOfElement(drive, By.xpath(locator.getProperty("VMReEstConnConf")));
 			Thread.sleep(250);
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("VMReEstConnConf"));
 			//drive.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 			
@@ -643,10 +686,12 @@ public class sdmSMGRConcurrent {
 //			obj.findVMForHost(drive,"test"+shortVMName);
 //
 //			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
+		// Click button by it's xPath value
 //			obj.clickButtonxPath(drive, locator.getProperty("VMRestart"));
 //			//drive.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
 //
 //			Thread.sleep(1500);
+		// Confirm the dialogue box. Please see method declaration for more info .. 
 //			obj.confirmDialogBox(drive);
 //			
 ////			obj.findLocationOrHost(drive, obj.readFromFile("input.properties", "AddHostHostName:"));
@@ -677,9 +722,10 @@ public class sdmSMGRConcurrent {
 			obj.findVMForHost(drive, "test"+shortVMName);
 
 			//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
+			// Click button by it's xPath value
 			obj.clickButtonxPath(drive, locator.getProperty("VMDelete"));
 			//drive.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
-
+			// Confirm the dialogue box. Please see method declaration for more info .. 
 			obj.confirmDialogBox(drive);
 
 			logClass.endTestCase("Deleted VM successfully");

@@ -21,7 +21,7 @@ public class driverSDMClient {
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, InterruptedException, MyException {
 		//System.out.println("Before invoked\n\n");
 		
-		files createXML = new files();
+		//files createXML = new files();
 		//createXML.main();
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 	 	GregorianCalendar gcalendar = new GregorianCalendar();

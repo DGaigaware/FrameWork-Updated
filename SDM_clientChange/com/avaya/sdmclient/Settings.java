@@ -1896,8 +1896,9 @@ public class Settings {
 		if(opacity==1 && driver.findElement(By.xpath(buttonxPath)).isEnabled()){
 //			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
 //			System.out.println("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled());
-			debugLogging("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity, "Info");
+			debugLogging("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText().replaceAll("[\r\n]+", " :")+" is: "+opacity, "Info");
 			debugLogging("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled(), "Info");
+			debugLogging("Clicked on : "+driver.findElement(By.xpath(buttonxPath)).getText().replaceAll("[\r\n]+", " "), "Info");
 			driver.findElement(By.xpath(buttonxPath)).click();
 		}
 		else{

@@ -31,7 +31,7 @@ public class files {
 	
 	public static String makeStrs(String ova,String IP){
 		//List<String> appenders = new ArrayList<>();
-		String appender = "<test name=\""+ova+"\">\n"+
+		String appender = "<test name=\""+ova+"\" preserve-order=\"true\" thread-count=\"1\">\n"+
 				"\t<parameter name=\"IP\" value=\""+IP+"\"/>\n"+
 					"\t<parameter name=\"VMName\" value=\""+ova+"\"/>\n"+
 
@@ -48,14 +48,14 @@ public class files {
 		
 		String pre = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"+
 						"<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\" >\n"+
-							"<suite name=\"Suite1\" parallel=\"false\" verbose=\"2\">\n";
-		String locationtest = "<test name=\"Location\">\n"+
+							"<suite name=\"Suite1\" parallel=\"false\" preserve-order=\"true\" verbose=\"2\" thread-count=\"1\">\n";
+		String locationtest = "<test name=\"Location\" preserve-order=\"true\" thread-count=\"1\">\n"+
 					"\t<classes>\n"+
 						"\t\t<class name=\"com.avaya.sdmclient.location.Location\" />\n"+
 							"\t</classes> \n"+
 
 								"</test>\n";
-		String hosttest = "<test name=\"Host\">\n"+
+		String hosttest = "<test name=\"Host\" preserve-order=\"true\" thread-count=\"1\">\n"+
 				"\t<classes>\n"+
 					"\t\t<class name=\"com.avaya.sdmclient.host.Host\" />\n"+
 						"\t</classes> \n"+

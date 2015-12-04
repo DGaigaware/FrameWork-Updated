@@ -21,19 +21,26 @@ import com.avaya.sdmclient.Settings;
 import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.host.Host;
+import com.avaya.sdmclient.location.Location;
+import com.avaya.sdmclient.location.driverGetter;
 
-public class total {
+public class total extends Location {
 	Settings obj = new Settings();
-	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 	Properties locator = null;
 	
 	@BeforeClass(alwaysRun=true)
 	public void setup() throws IOException, InterruptedException
 	{
+//		if(driver!=null){
+//			driver = new FirefoxDriver(obj.selectProfile("Selenium"));
+//		}
+//		else{
+//			obj.debugLogging("Driver is already initialised .. \n Performing op", "Info");
+//		}
 		locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
-
+	//WebDriver driver = driverGetter.driver;
 	@Test(description="Adding VM to given Location and Host",priority=8)
 	@Parameters({"IP", "VMName"})
 	public void addVM(String IP,String VMName) throws InterruptedException, IOException, ParserConfigurationException, SAXException, MyException {
@@ -48,84 +55,85 @@ public class total {
 
 		logClass.startTestCase("Adding VM to given Location and Host");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		if(!obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.properties", "AddHostHostName:"))){
-			driver.navigate().refresh();
+		if(!obj.checkPresenceOfLocationOrHostOrVM(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"))){
+			getDriver().navigate().refresh();
 			//Host host = new Host();
 			//host.addHost();
 			System.out.println("Adding Host");
-			obj.goToSDMCliURL(driver);
+			obj.goToSDMCliURL(getDriver());
 			logClass.info("Added Host as host was not there beforehand.");
 		}
 		
 		
 		//
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
 		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
-		obj.chooseTab(driver, "Virtual Machines");
+		obj.chooseTab(getDriver(), "Virtual Machines");
 		
-		driver.findElement(By.xpath(locator.getProperty("NewVM"))).click();
+		getDriver().findElement(By.xpath(locator.getProperty("NewVM"))).click();
 		logClass.info("Clicked on - Add new VM");
 		Thread.sleep(750);
 
-		if(driver.findElement(By.id(locator.getProperty("MEDeploy"))).isEnabled()){
-			driver.findElement(By.id(locator.getProperty("MEDeploy"))).click();
+		if(getDriver().findElement(By.id(locator.getProperty("MEDeploy"))).isEnabled()){
+			getDriver().findElement(By.id(locator.getProperty("MEDeploy"))).click();
 			System.out.println("Clicked");
-			obj.confirmDialogBox(driver);
+			obj.confirmDialogBox(getDriver());
 		}
 		
-		driver.findElement(By.xpath(locator.getProperty("VMName"))).clear();
+		getDriver().findElement(By.xpath(locator.getProperty("VMName"))).clear();
 		//driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys(obj._readFromFile("input.properties", "VMName"));
-		driver.findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
+		getDriver().findElement(By.xpath(locator.getProperty("VMName"))).sendKeys("test"+shortVMName);
 		logClass.info("Given Name");
 		Thread.sleep(250);
 
-		obj.errorBox(driver,obj.checkError(driver));
+		obj.errorBox(getDriver(),obj.checkError(getDriver()));
 
-		driver.findElement(By.xpath(locator.getProperty("DataStore"))).click();
+		getDriver().findElement(By.xpath(locator.getProperty("DataStore"))).click();
 		Thread.sleep(250);
-		obj.errorBox(driver,obj.checkError(driver));
+		obj.errorBox(getDriver(),obj.checkError(getDriver()));
 
-		obj.boundListSelect(driver, "data", obj.selBoundList(driver));
+		obj.boundListSelect(getDriver(), "data", obj.selBoundList(getDriver()));
 		Thread.sleep(2500);
 		//
 		//1 - File Path; 3 - SW Library; 4 - URL
 				switch(_SWLib){
 				case _default:
-					driver.findElement(By.xpath(locator.getProperty("OVAFilePath"))).click();
+					getDriver().findElement(By.xpath(locator.getProperty("OVAFilePath"))).click();
 					logClass.info("Choosen From File");
 
-					driver.findElement(By.xpath(locator.getProperty("FilePathField"))).clear();
-					driver.findElement(By.xpath(locator.getProperty("FilePathField"))).sendKeys(obj.readFromFile("input.properties", "SMFilePath"));
-					driver.findElement(By.xpath(locator.getProperty("FilePathSubmit"))).click();
+					getDriver().findElement(By.xpath(locator.getProperty("FilePathField"))).clear();
+					getDriver().findElement(By.xpath(locator.getProperty("FilePathField"))).sendKeys(obj.readFromFile("input.properties", "SMFilePath"));
+					getDriver().findElement(By.xpath(locator.getProperty("FilePathSubmit"))).click();
 					logClass.info("File Path Given");
 					Thread.sleep(2500);
 					break;
 				case _URL:
-					driver.findElement(By.xpath(locator.getProperty("OVAURL"))).click();
+					getDriver().findElement(By.xpath(locator.getProperty("OVAURL"))).click();
 					logClass.info("Choosen From URL");
 
-					driver.findElement(By.xpath(locator.getProperty("URLInput"))).clear();
-					driver.findElement(By.xpath(locator.getProperty("URLInput"))).sendKeys("http://148.147.214.158/alternate_source/SM-7.0.0.0.700007-e55-01.ova");
-					driver.findElement(By.xpath(locator.getProperty("URLSubmit"))).click();
+					getDriver().findElement(By.xpath(locator.getProperty("URLInput"))).clear();
+					getDriver().findElement(By.xpath(locator.getProperty("URLInput"))).sendKeys("http://148.147.214.158/alternate_source/SM-7.0.0.0.700007-e55-01.ova");
+					getDriver().findElement(By.xpath(locator.getProperty("URLSubmit"))).click();
 					Thread.sleep(450);
 					break;
 				case _SWLib:
-					driver.findElement(By.xpath(locator.getProperty("OVASWLib"))).click();
+					getDriver().findElement(By.xpath(locator.getProperty("OVASWLib"))).click();
 					logClass.info("Choosen From Software Library");
 
 					//driver.findElement(By.xpath(locator.getProperty("SWLibSelect"))).click();
-					obj.clickComboSDMCli(driver, "File Name:");
-					obj.boundListSelect(driver,VMName, obj.selBoundList(driver));
+					obj.clickComboSDMCli(getDriver(), "File Name:");
+					obj.boundListSelect(getDriver(),VMName, obj.selBoundList(getDriver()));
 					break;
 				}
 		
-		obj.selectFP(driver, shortVMName);
+		Thread.sleep(7500);
+		obj.selectFP(getDriver(), shortVMName);
 		
-		_Check = obj.checkError(driver);
-		String err = obj.errorBox(driver,obj.checkError(driver));
+		_Check = obj.checkError(getDriver());
+		String err = obj.errorBox(getDriver(),obj.checkError(getDriver()));
 
 		//driver.findElement(By.xpath(locator.getProperty("SortColumns"))).click();
 		//obj.checkFailureOfHostCapacity(driver);
@@ -141,22 +149,22 @@ public class total {
 			throw new MyException(err);
 		}
 		
-		obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), driver,IP,"test"+shortVMName);
+		obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), getDriver(),IP,"test"+shortVMName);
 
-		obj.deployButtonClickForVM(driver);
+		obj.deployButtonClickForVM(getDriver());
 		Thread.sleep(450);
-		obj.findEULAAcceptButton(driver);
+		obj.findEULAAcceptButton(getDriver());
 		logClass.info("Accepted EULA");
 	
 		Thread.sleep(7000);
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
-		obj.chooseTab(driver, "Virtual Machines");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
+		obj.chooseTab(getDriver(), "Virtual Machines");
 		Thread.sleep(1500);
 		
-		obj.findVMForHost(driver, "test"+shortVMName);
+		obj.findVMForHost(getDriver(), "test"+shortVMName);
 		Thread.sleep(4500);
-		obj.chooseLink(driver, "test"+shortVMName,"VM","Status Details");
-		obj.checkSuccessOrFailure(driver, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
+		obj.chooseLink(getDriver(), "test"+shortVMName,"VM","Status Details");
+		obj.checkSuccessOrFailure(getDriver(), By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 
 		Thread.sleep(5000);
 		System.out.println("Completed adding VM "+shortVMName+" with IP "+IP);
@@ -171,33 +179,26 @@ public class total {
 
 		logClass.startTestCase("Editing VM to given Location and Host");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
+		obj.debugLogging("Starting to edit VM .. "+VMName, "Info");
+		String shortVMName = obj.shortVMName(VMName);
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName175"));
-
-		obj.chooseTab(driver, "Virtual Machines");
-
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1500);
+		obj.findVMForHost(getDriver(), "test"+shortVMName);
+		Thread.sleep(900);
 		
-		driver.findElement(By.xpath(locator.getProperty("EditVM"))).click();
-		logClass.info("Clicked on - Edit VM");
+		obj.clickButtonxPath(getDriver(), locator.getProperty("EditVM"));
 		Thread.sleep(750);
+		obj.editVMchooseFPorFQDN(getDriver(), "FQDN");
+		getDriver().findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
-		obj.editVMchooseFPorFQDN(driver, "FQDN");
-		driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
+		obj.editVM(getDriver(),IP,"test"+shortVMName+"edited");
+		obj.clickButtonxPath(getDriver(), locator.getProperty("VMEditSave"));
+		//getDriver().findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
-		obj.editVM(driver,obj.readFromFile("input.properties", "IP"),"edited");
-		
-		/*driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("VMEditIP"))).sendKeys(IP);
-
-		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("VMEditFQDN"))).sendKeys(shortVMName+"edited");*/
-
-		obj.checkFocus(driver, By.xpath(locator.getProperty("VMEditSave")));
-		driver.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
-
-		obj.errorBox(driver, obj.checkError(driver));
+		obj.errorBox(getDriver(), obj.checkError(getDriver()));
 		logClass.endTestCase("Edited VM Successfully");
 	}
 
@@ -208,21 +209,28 @@ public class total {
 
 		Thread.sleep(5000);
 		logClass.startTestCase("Stop VM to given Location and Host");
-
-		obj.goToSDMCliURL(driver);
+		String shortVMName = obj.shortVMName(VMName);
+		obj.goToSDMCliURL(getDriver());
 		
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName175"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		obj.chooseTab(driver, "Virtual Machines");
-
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1500);
+		obj.findVMForHost(getDriver(),"test"+shortVMName);
 		
 		Thread.sleep(1500);
 
-		driver.findElement(By.xpath(locator.getProperty("StopVM"))).click();
+		//obj.checkFocus(driver, By.xpath(locator.getProperty("StopVM")));
 
-		obj.confirmDialogBox(driver);
+		obj.clickButtonxPath(getDriver(), locator.getProperty("StopVM"));
+		//getDriver().findElement(By.xpath(locator.getProperty("StopVM"))).click();
 
+		obj.confirmDialogBox(getDriver());
+		
+//		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//		obj.chooseTab(getDriver(), "Virtual Machines");
 		logClass.endTestCase("Stopped VM successfully");
 		Thread.sleep(60000);
 	}
@@ -231,131 +239,144 @@ public class total {
 	@Test(description="Starting VM to given Location and Host",priority=11)
 	@Parameters({"IP", "VMName"})
 	public void StartVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
-
+		String shortVMName = obj.shortVMName(VMName);
 		Thread.sleep(5000);
 		logClass.startTestCase("Start VM to given Location and Host");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName175"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		obj.chooseTab(driver, "Virtual Machines");
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1500);
+		obj.findVMForHost(getDriver(),"test"+shortVMName);
 
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
+		//obj.checkFocus(driver, By.xpath(locator.getProperty("VMStart")));
 
-		driver.findElement(By.xpath(locator.getProperty("VMStart"))).click();
+		obj.clickButtonxPath(getDriver(), locator.getProperty("VMStart"));
+		//getDriver().findElement(By.xpath(locator.getProperty("VMStart"))).click();
 
-		obj.confirmDialogBox(driver);
-
+		obj.confirmDialogBox(getDriver());
+		
+//		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
+//
+//		obj.chooseTab(getDriver(), "Virtual Machines");
 		logClass.endTestCase("Started VM successfully");
-		Thread.sleep(60000);
+		Thread.sleep(90000);
 	}
 
 
 	@Test(description="Refreshing VM to given Location and Host",priority=12)
 	@Parameters({"IP", "VMName"})
 	public void RefreshVM(String IP,String VMName) throws InterruptedException, IOException, MyException{
-
+		String shortVMName = obj.shortVMName(VMName);
 		Thread.sleep(5000);
 		logClass.startTestCase("Refresh VM to given Location and Host");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName175"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		obj.chooseTab(driver, "Virtual Machines");
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1500);
+		obj.findVMForHost(getDriver(),"test"+shortVMName);
 
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
-
-		obj.findMoreActionsButton(driver);
+		//driver.findElement(By.xpath(locator.getProperty("VMMoreAction"))).click();
+		
+		obj.findMoreActionsButton(getDriver());
 		Thread.sleep(500);
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
+		obj.clickButtonxPath(getDriver(), locator.getProperty("VMReEstConn"));
+		//getDriver().findElement(By.xpath(locator.getProperty("VMReEstConn"))).click();
 
 		Thread.sleep(500);
 		
-		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnUN")));
+		obj.waitForPresenceOfElement(getDriver(), By.xpath(locator.getProperty("VMReEstConnUN")));
 		
-		driver.switchTo().activeElement();
-
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConnUN"))).sendKeys(obj.readFromFile("input.properties", "CustomerName"));
-
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConnPw"))).sendKeys(obj.readFromFile("input.properties", "CustPwd"));
-
-		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("VMReEstConnConf")));
+		getDriver().switchTo().activeElement();
 		
+		obj.refreshVMValues(getDriver(), shortVMName, "inputsm.properties");
+		Thread.sleep(750);
+		obj.waitForPresenceOfElement(getDriver(), By.xpath(locator.getProperty("VMReEstConnConf")));
 		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
-
-		Thread.sleep(5000);
-		//driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"VM","Status Details");
-		obj.StatusCheck(driver, "VM Trust Establishment Completed",50);
-
-		obj.waitForPresenceOfElement(driver, By.xpath(locator.getProperty("RefreshVM")));
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator.getProperty("RefreshVM"))));
-
-		if(driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
-			driver.findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
-		//Added
-		Thread.sleep(5000);
+		obj.clickButtonxPath(getDriver(), locator.getProperty("VMReEstConnConf"));
+		//getDriver().findElement(By.xpath(locator.getProperty("VMReEstConnConf"))).click();
 		
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "VMName221"),"VM","Status Details");
+		Thread.sleep(1000);
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
+
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1500);
+		obj.findVMForHost(getDriver(),"test"+shortVMName);
+		obj.chooseLink(getDriver(), "test"+shortVMName,"VM","Status Details");
+		obj.checkSuccessOrFailure(getDriver(), By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
+		obj.waitForPresenceOfElement(getDriver(), By.xpath(locator.getProperty("RefreshVM")));
+		Thread.sleep(1500);
+		if(getDriver().findElement(By.xpath(locator.getProperty("RefreshVM"))).isEnabled())
+			getDriver().findElement(By.xpath(locator.getProperty("RefreshVM"))).click();
+		Thread.sleep(5000);
+		obj.chooseLink(getDriver(), "test"+shortVMName,"VM","Status Details");
+		obj.checkSuccessOrFailure(getDriver(), By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 		
-		System.out.println(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "VM Refresh Completed"));
-		obj.StatusCheck(driver, "VM Refresh Completed", 20);
-		// Uptill Now
 		Thread.sleep(2500);
-		//obj.StatusCheck(driver, "VM Refresh Completed", 50);
 		logClass.endTestCase("VM refreshed Successfully");
 	}
 
 
-	@Test(description="Restarting VM to given Location and Host",priority=13)
-	@Parameters({"IP", "VMName"})
-	public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
-
-		logClass.startTestCase("Restart VM to given Location and Host");
-
-		obj.goToSDMCliURL(driver);
-
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName175"));
-
-		obj.chooseTab(driver, "Virtual Machines");
-
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
-
-		driver.findElement(By.xpath(locator.getProperty("VMRestart"))).click();
-
-		obj.confirmDialogBox(driver);
-
-		logClass.endTestCase("Restarted VM successfully");
-		Thread.sleep(100000);
-	}
+//	@Test(description="Restarting VM to given Location and Host",priority=13)
+//	@Parameters({"IP", "VMName"})
+//	public void RestartVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
+//		String shortVMName = obj.shortVMName(VMName);
+//		logClass.startTestCase("Restart VM to given Location and Host");
+//
+//		obj.goToSDMCliURL(getDriver());
+//
+//		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "HostName175"));
+//
+//		obj.chooseTab(getDriver(), "Virtual Machines");
+//
+//		obj.findVMForHost(getDriver(), obj.readFromFile("input.properties", "VMName221"));
+//
+//		getDriver().findElement(By.xpath(locator.getProperty("VMRestart"))).click();
+//
+//		obj.confirmDialogBox(getDriver());
+//
+//		logClass.endTestCase("Restarted VM successfully");
+//		Thread.sleep(100000);
+//	}
 
 
 	@Test(description="Deleting VM to given Location and Host",priority=14)
 	@Parameters({"IP", "VMName"})
 	public void DeleteVM(String IP,String VMName) throws IOException, InterruptedException, MyException{
-
+		String shortVMName = obj.shortVMName(VMName);
 		logClass.startTestCase("Delete VM to given Location and Host");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "HostName"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
-		obj.chooseTab(driver, "Virtual Machines");
+		//driver.findElement(By.xpath(locator.getProperty("VM-Tab"))).click();
+		obj.chooseTab(getDriver(), "Virtual Machines");
+		Thread.sleep(1550);
+		obj.findVMForHost(getDriver(), "test"+shortVMName);
 
-		obj.findVMForHost(driver, obj.readFromFile("input.properties", "VMName221"));
+		//obj.checkFocus(driver, By.xpath(locator.getProperty("VMDelete")));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("VMDelete"));
+		//getDriver().findElement(By.xpath(locator.getProperty("VMDelete"))).click();
 
-		driver.findElement(By.xpath(locator.getProperty("VMDelete"))).click();
-
-		obj.confirmDialogBox(driver);
+		obj.confirmDialogBox(getDriver());
 
 		logClass.endTestCase("Deleted VM successfully");
 		
-		driver.quit();
+		//obj.maintainedList(driver, "combobox-1238-inputEl");
+		//getDriver().quit();
+		
+		obj.makeIPWhiteBlackList(IP,"WhiteList");
+		
+		//driver.quit();
 	}
 
 

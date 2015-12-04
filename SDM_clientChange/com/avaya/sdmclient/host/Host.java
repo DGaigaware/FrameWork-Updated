@@ -19,10 +19,9 @@ import org.testng.annotations.Test;
 import com.avaya.sdmclient.*;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.location.Location;
-public class Host {
+import com.avaya.sdmclient.location.driverGetter;
+public class Host extends Location {
 	Settings obj = new Settings();
-
-	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 	Properties locator = null;
 	@BeforeClass(alwaysRun=true)
 	public void setup() throws IOException, InterruptedException
@@ -30,85 +29,86 @@ public class Host {
 		locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
+	//WebDriver driver = driverGetter.driver;
 	@Test(description="Adding Host to given Location",priority=3)
 	public void addHost() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Adding Host to given Location");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		if(!obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.properties", "AddLocationName:"))){
-			driver.navigate().refresh();
+		if(!obj.checkPresenceOfLocationOrHostOrVM(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"))){
+			getDriver().navigate().refresh();
 			obj.debugLogging("Adding Location as location was not already added ...", "Info");
 			obj.debugLogging("Pausing the current thread .. ", "Info");
 			Location loc = new Location();
 			loc.addLocation();
 			obj.debugLogging("Location added successfully. Now resuming the current thread .. ", "Info");
-			obj.goToSDMCliURL(driver);
+			obj.goToSDMCliURL(getDriver());
 		}
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
-		obj.chooseTab(driver, "Hosts");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.chooseTab(getDriver(), "Hosts");
 		obj.debugLogging("Navigated to Host tab.", "Info");
 
-		obj.clickButtonxPath(driver, locator.getProperty("New-Host"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("New-Host"));
 		obj.debugLogging("Adding new host .. ", "Info");
 		Thread.sleep(250);			
 	
-		obj.findIDandFillValues(driver, "input.properties", "AddHost");
+		obj.findIDandFillValues(getDriver(), "input.properties", "AddHost");
 		Thread.sleep(250);
 		obj.debugLogging("Filled values .. ", "Info");
 	
-		obj.clickButtonxPath(driver, locator.getProperty("SaveHost"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("SaveHost"));
 		Thread.sleep(1250);
 		
-		obj.confirmDialogBox(driver);
+		obj.confirmDialogBox(getDriver());
 		
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
-		obj.chooseTab(driver, "Hosts");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.chooseTab(getDriver(), "Hosts");
 		obj.debugLogging("Navigated to Host tab.", "Info");
 		
-		obj.refreshItems(driver, "AddHost");
+		obj.refreshItems(getDriver(), "AddHost");
 		Thread.sleep(1500);
 		
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "AddHostHostName:"), "Host", "Status Details");
-		obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
+		obj.chooseLink(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"), "Host", "Status Details");
+		obj.waitForPresenceOfElement(getDriver(), By.id(locator.getProperty("vmDeployStatus")));
 		
-		obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"),"Info");
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+		obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), getDriver(), 50, "Host Create/Update Completed"),"Info");
+		obj.StatusCheck(getDriver(), "Host Create/Update Completed", 20);
 		
 		//Adding second host
 		
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
 
-		obj.chooseTab(driver, "Hosts");
+		obj.chooseTab(getDriver(), "Hosts");
 		obj.debugLogging("Navigated to Host tab.", "Info");
 
-		obj.clickButtonxPath(driver, locator.getProperty("New-Host"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("New-Host"));
 		obj.debugLogging("Adding new host .. ", "Info");
 		Thread.sleep(250);			
 	
-		obj.findIDandFillValues(driver, "input.properties", "AddHost1");
+		obj.findIDandFillValues(getDriver(), "input.properties", "AddHost1");
 		Thread.sleep(250);
 		obj.debugLogging("Filled values .. ", "Info");
 		
-		obj.clickButtonxPath(driver, locator.getProperty("SaveHost"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("SaveHost"));
 		Thread.sleep(1250);
 		
-		obj.confirmDialogBox(driver);
+		obj.confirmDialogBox(getDriver());
 		
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
-		obj.chooseTab(driver, "Hosts");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.chooseTab(getDriver(), "Hosts");
 		obj.debugLogging("Navigated to Host tab.", "Info");
 		
-		obj.refreshItems(driver, "AddHost");
+		obj.refreshItems(getDriver(), "AddHost");
 		Thread.sleep(1500);
 		
-		obj.chooseLink(driver, obj.readFromFile("input.properties", "AddHost1HostName:"), "Host", "Status Details");
-		obj.waitForPresenceOfElement(driver, By.id(locator.getProperty("vmDeployStatus")));
+		obj.chooseLink(getDriver(), obj.readFromFile("input.properties", "AddHost1HostName:"), "Host", "Status Details");
+		obj.waitForPresenceOfElement(getDriver(), By.id(locator.getProperty("vmDeployStatus")));
 		
-		obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), driver, 50, "Host Create/Update Completed"),"Info");
-		obj.StatusCheck(driver, "Host Create/Update Completed", 20);
+		obj.debugLogging(obj.fluentWait(By.id(locator.getProperty("vmDeployStatus")), getDriver(), 50, "Host Create/Update Completed"),"Info");
+		obj.StatusCheck(getDriver(), "Host Create/Update Completed", 20);
 
 		obj.debugLogging("Hosts added successfully .. ", "Info");
 		logClass.endTestCase("Added Host Successfully");
@@ -119,35 +119,40 @@ public class Host {
 
 		logClass.startTestCase("Editing Host to given Location");
 		
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
-		obj.chooseTab(driver, "Hosts");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.chooseTab(getDriver(), "Hosts");
 
 		logClass.info("In 'Host' Tab");
 
-		obj.findHostInGrid(driver, obj.readFromFile("input.properties", "AddHostHostName:"));
+		obj.findHostInGrid(getDriver(), obj.readFromFile("input.properties", "AddHostHostName:"));
 
 		Thread.sleep(1250);
 		
-		obj.clickButtonxPath(driver, locator.getProperty("EditHost"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("EditHost"));
 		//drive.findElement(By.xpath(locator.getProperty("EditHost"))).click();
 		//driver.findElement(By.xpath(locator.getProperty("HostSelectDD"))).click();
 
 //		obj.selectLocforEditHost(drive);
 //		Thread.sleep(250);
 
-		obj.findIDandFillValues(driver, "input.properties", "EditHost");
+		obj.findIDandFillValues(getDriver(), "input.properties", "EditHost");
 		Thread.sleep(250);
 		
-		obj.checkFocus(driver, By.xpath(locator.getProperty("SaveHostEdit")));
+		obj.checkFocus(getDriver(), By.xpath(locator.getProperty("SaveHostEdit")));
 
-		driver.findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
+		getDriver().findElement(By.xpath(locator.getProperty("SaveHostEdit"))).click();
 
-		obj.errorBox(driver, obj.checkError(driver));
+		obj.errorBox(getDriver(), obj.checkError(getDriver()));
 		Thread.sleep(2500);
 		
-		obj.refreshItems(driver, "EditHost");
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.chooseTab(getDriver(), "Hosts");
+		Thread.sleep(1250);
+		logClass.info("In 'Host' Tab");
+		
+		obj.refreshItems(getDriver(), "EditHost");
 
 		logClass.endTestCase("Edited Host Successfully");
 
@@ -158,20 +163,20 @@ public class Host {
 	public void deleteHost() throws IOException, InterruptedException, MyException{
 		logClass.startTestCase("Deleting Host to given Location");
 
-		obj.goToSDMCliURL(driver);
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.findLocationOrHost(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
 
-		obj.findHostInGrid(driver, obj.readFromFile("input.properties", "AddHost1HostName:"));
+		obj.findHostInGrid(getDriver(), obj.readFromFile("input.properties", "AddHost1HostName:"));
 
-		obj.checkFocus(driver, By.xpath(locator.getProperty("HostDelete")));
+		obj.checkFocus(getDriver(), By.xpath(locator.getProperty("HostDelete")));
 
-		driver.findElement(By.xpath(locator.getProperty("HostDelete"))).click();
+		getDriver().findElement(By.xpath(locator.getProperty("HostDelete"))).click();
 
-		obj.confirmDialogBox(driver);
+		obj.confirmDialogBox(getDriver());
 
 		logClass.endTestCase("Deleted Host");
-		driver.quit();
+		//driver.quit();
 	}
 
 }
