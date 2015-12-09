@@ -12,7 +12,7 @@
     </packages> 
   -->
       <classes>
-		<class name="com.avaya.sdmclient.vcenter.VCEdit" />
+		 <!--<class name="com.avaya.sdmclient.vcenter.VCEdit" />  -->
         <class name="com.avaya.sdmclient.runnerdemo.sdmSMGRConcurrent" />
       </classes> 
       

@@ -37,6 +37,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -1319,11 +1320,16 @@ public class Settings {
 		loginToSite(driver);*/
 		
 		driver.switchTo().defaultContent();
+		//driver.findElement(By.id("naviframe_close_bar")).click();
 		WebElement e = driver.findElement(By.id(locator.getProperty("NavIframe")));
 		
 		//System.out.println("Ans"+eee.findElement(By.linkText("Solution Deployment Manager")).getText());
-
-		e.findElement(By.linkText("Solution Deployment Manager")).click();
+//		if(e.getAttribute("title").equals("Hide navigation tree"))
+//			debugLogging("Tree is already visible .. ", "Info");
+//		else
+//			e.findElement(By.linkText(locator.getProperty("SDMLink"))).click();
+		//e.findElement(By.linkText("Solution Deployment Manager")).click();
+		e.findElement(By.linkText(locator.getProperty("SDMLink"))).click();
 		Thread.sleep(1500);
 		driver.switchTo().frame(locator.getProperty("IFrame"));
 	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
@@ -1335,7 +1341,7 @@ public class Settings {
 	}
 	
 	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
-		System.out.println(driver.findElement(toLocate).getCssValue("opacity"));
+		System.out.println("Opacity of: "+driver.findElement(toLocate).getText()+" "+driver.findElement(toLocate).getCssValue("opacity"));
 		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
 			{
 				debugLogging("Something went wrong. Check Screenshot", "Info");
@@ -1349,13 +1355,13 @@ public class Settings {
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
 		
 		/*System.out.println("Before");
 		System.out.println(elem2.size());*/
 		
 		List<String> buttons = new ArrayList<>();
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			//System.out.println(e.getText());
 			if(e.getAttribute("id").contains("btnEl") && driver.findElement(By.id(e.getAttribute("id"))).getText().equals("Accept"))
 			{
@@ -1464,10 +1470,10 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"confighostgrid\").querySelectorAll('[id^=\"button-\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		for(WebElement ee : elem2)
+		for(WebElement ee : elements)
 			{
 				if(ee.getText().equals("More Actions"))
 				{	//System.out.println(ee.getAttribute("id"));
@@ -1482,10 +1488,10 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"hostEditForm\").querySelectorAll('[id^=\"combobox\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		driver.findElement(By.id(elem2.get(0).getAttribute("id").concat("-inputEl"))).click();
+		driver.findElement(By.id(elements.get(0).getAttribute("id").concat("-inputEl"))).click();
 		//boundListSelect(driver, toBeSelected, selBoundList(driver));
 	}
 	
@@ -1493,10 +1499,10 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"VMEditForm\").querySelectorAll('[id^=\"radiofield\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().contains(chooseOption))
 			{
 				System.out.println("Changing: "+e.getText());
@@ -1509,12 +1515,12 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"menuitem\"]');return nl;";
 		
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elements.size());
 		
 		if(linkText!=null && !linkText.isEmpty())
 		{
-			for(WebElement e : elem2){
+			for(WebElement e : elements){
 				if(e.getText().equals(linkText))
 				{
 					//System.out.println("Changing: "+e.getText());
@@ -1533,10 +1539,10 @@ public class Settings {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.getElementById(\"VMEditForm-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
 		
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elements.size());
 		
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().equals("VM IP:")){
 				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
@@ -1544,7 +1550,7 @@ public class Settings {
 				break;
 			}
 		}
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().equals("VM FQDN:")){
 				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
@@ -1978,6 +1984,48 @@ public class Settings {
 		}
 		else{
 			System.out.println("Please give a valid input.\nValid input are: 'Info' and 'Error': "+logMessage);
+		}
+	}
+	
+	public void checker(WebDriver driver,String vmOrHostorVC,String rowName,int columnNumber,String valueForCheck) throws MyException, InterruptedException, IOException{
+		String id = "";
+		if(vmOrHostorVC.equals("VM")){
+			id = locator.getProperty("VMGrid");
+		}
+		else if(vmOrHostorVC.equals("Host")){
+			id = locator.getProperty("HostInGrid");
+		}
+		else if(vmOrHostorVC.equals("VC")){
+			id = locator.getProperty("VCenterInGrid");
+		}
+		else{
+			throw new MyException("Please verify input: Only allowed inputs are 'VM' or 'Host'");
+		}
+		
+		Thread.sleep(500);
+		WebElement table = driver.findElement(By.id(id));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
+		String rowID = "";
+		
+		for(WebElement e : cells)
+		{	
+			if(e.getText().contains(rowName))
+				{
+					rowID = e.getAttribute("id");
+					System.out.println("Row ID: "+rowID);
+				}
+		}
+		
+		String columnID = ".//*[@id='"+rowID+"']/td["+columnNumber+"]/div";
+		WebElement el = driver.findElement(By.xpath(columnID));
+		if(el.getText().equals(valueForCheck)){
+			Assert.assertEquals(valueForCheck, el.getText());
+			debugLogging("Asserted value "+valueForCheck, "Info");
+		}
+		else{
+			debugLogging("Assretion failed .. ", "Error");
+			debugLogging("Found value: "+el.getText(), "Error");
+			takeScreenShotForDriver(driver);
 		}
 	}
 	

@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -18,11 +19,15 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 public class driverSDMClient {
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, InterruptedException, MyException {
 		//System.out.println("Before invoked\n\n");
 		
 		//files createXML = new files();
 		//createXML.main();
+		files o = new files();
+		List<String> files = o.listFileNames();
+		o.generateXML(files, "148.147.162.221");
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 	 	GregorianCalendar gcalendar = new GregorianCalendar();
 	 	String opDirectory = System.getProperty("user.dir")+"\\testruns_programmatically_SDMClient\\"+dateFormat.format(new java.util.Date())+File.separator +"SDMClient"+"_"+gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"\\";

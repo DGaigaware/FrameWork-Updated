@@ -1,10 +1,12 @@
 SM
+SecureAccessLinkGateway
 CMM
 US
 BSM
-SecureAccessLinkGateway
 MediaServer
 AAM
 AES
 EDP
-CM
+CM-Simplex
+CM-Duplex
+WebLM

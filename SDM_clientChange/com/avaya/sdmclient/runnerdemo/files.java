@@ -12,7 +12,7 @@ public class files {
 
 	
 	public static List<String> listFileNames(){
-		File folder = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\");
+		File folder = new File("C:\\Program Files\\Avaya\\AvayaSDMClient\\Default_Artifacts\\");
 		File[] listOfFiles = folder.listFiles();
 		List<String> filenames = new ArrayList<>();
 

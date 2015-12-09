@@ -40613,3 +40613,1586 @@ BSM configuration that supports up to 1,000 devices. This deployment will need 2
 2015-11-26 23:26:08,756 INFO  [Logger] Reference Input : US-7.0.0.0.0.12-e55-01_OVF10.ova 
 2015-11-26 23:26:08,756 INFO  [Logger] *************************Started Testing****************************** 
 2015-11-26 23:26:08,756 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-08 22:32:45,147 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:32:45,181 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-12-08 22:32:51,207 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:32:59,534 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:32:59,534 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-08 22:33:02,549 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:33:18,388 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-08 22:33:18,423 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:33:18,489 INFO  [Logger] Clicked on : New 
+2015-12-08 22:33:18,742 INFO  [Logger] Adding new Location ..  
+2015-12-08 22:33:19,082 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-08 22:33:19,533 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-08 22:33:19,757 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-08 22:33:19,923 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-08 22:33:20,145 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-08 22:33:20,326 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-08 22:33:20,490 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-08 22:33:20,656 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-08 22:33:20,795 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-08 22:33:20,938 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-08 22:33:21,086 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-08 22:33:21,222 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-08 22:33:21,374 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-08 22:33:21,652 INFO  [Logger] Filled values ..  
+2015-12-08 22:33:22,257 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-08 22:33:22,290 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:33:22,332 INFO  [Logger] Clicked on : Save 
+2015-12-08 22:33:22,510 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-08 22:33:34,677 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-12-08 22:33:58,704 INFO  [Logger] Location added successfully ..  
+2015-12-08 22:33:58,890 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-08 22:33:58,927 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:33:58,976 INFO  [Logger] Clicked on : New 
+2015-12-08 22:33:59,183 INFO  [Logger] Adding new Location ..  
+2015-12-08 22:33:59,308 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-08 22:33:59,478 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-08 22:33:59,642 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-08 22:33:59,778 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-08 22:33:59,931 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-08 22:34:00,096 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-08 22:34:00,251 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-08 22:34:00,402 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-08 22:34:00,535 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-08 22:34:00,668 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-08 22:34:00,801 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-08 22:34:00,936 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-08 22:34:01,081 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-08 22:34:01,359 INFO  [Logger] Filled values ..  
+2015-12-08 22:34:01,541 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-08 22:34:01,578 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:34:01,621 INFO  [Logger] Clicked on : Save 
+2015-12-08 22:34:02,254 INFO  [Logger] Location added successfully ..  
+2015-12-08 22:34:14,009 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-08 22:34:14,010 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:34:14,010 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-08 22:34:26,987 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:34:26,987 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-08 22:34:41,518 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:34:41,518 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-08 22:34:55,466 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:34:55,466 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-08 22:35:11,376 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,408 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,430 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,452 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,475 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,516 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:35:11,532 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:11,533 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:11,533 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-08 22:35:24,997 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:24,997 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:24,997 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:24,997 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-08 22:35:34,065 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:39,065 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:39,065 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-08 22:35:41,068 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:46,070 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:46,070 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-08 22:35:48,085 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:35:53,086 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:53,086 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-08 22:35:55,089 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:35:55,089 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-08 22:35:55,089 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:36:07,368 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-12-08 22:36:07,369 INFO  [Logger] InnerThread: Choosen OVA CMM-07.0.0.0.441-e55-0.ova 
+2015-12-08 22:36:07,371 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-12-08 22:36:07,371 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-12-08 22:36:07,371 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:36:07,371 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-12-08 22:36:11,060 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:36:23,025 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-08 22:36:28,194 INFO  [Logger] Entries on VM tree : 4 
+2015-12-08 22:36:28,536 ERROR [Logger] Couldn't Find entry in Tree: 148.147.162.175 
+2015-12-08 22:36:28,536 ERROR [Logger] Either location name or host name is null or location or host does not exist .. 
+2015-12-08 22:40:07,067 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:40:07,068 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-12-08 22:40:11,129 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:40:26,908 INFO  [Logger] Clicked on: Map vCenter 
+2015-12-08 22:40:27,299 INFO  [Logger] Clicked on 'Map vCenter'  
+2015-12-08 22:40:41,761 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:40:41,762 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-08 22:40:44,624 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:41:00,597 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-08 22:41:00,638 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:41:00,765 INFO  [Logger] Clicked on : New 
+2015-12-08 22:41:01,055 INFO  [Logger] Adding new Location ..  
+2015-12-08 22:41:01,264 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-08 22:41:01,472 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-08 22:41:01,645 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-08 22:41:01,778 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-08 22:41:01,922 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-08 22:41:02,083 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-08 22:41:02,240 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-08 22:41:02,393 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-08 22:41:02,539 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-08 22:41:02,739 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-08 22:41:02,901 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-08 22:41:03,044 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-08 22:41:03,179 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-08 22:41:03,458 INFO  [Logger] Filled values ..  
+2015-12-08 22:41:03,619 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-08 22:41:03,660 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:41:03,708 INFO  [Logger] Clicked on : Save 
+2015-12-08 22:41:03,886 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-08 22:41:04,336 INFO  [Logger] Location added successfully ..  
+2015-12-08 22:41:04,652 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-08 22:41:04,695 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:41:04,735 INFO  [Logger] Clicked on : New 
+2015-12-08 22:41:04,901 INFO  [Logger] Adding new Location ..  
+2015-12-08 22:41:05,028 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-08 22:41:05,198 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-08 22:41:05,349 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-08 22:41:05,485 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-08 22:41:05,628 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-08 22:41:05,787 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-08 22:41:05,936 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-08 22:41:06,074 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-08 22:41:06,202 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-08 22:41:06,329 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-08 22:41:06,456 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-08 22:41:06,584 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-08 22:41:06,705 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-08 22:41:06,982 INFO  [Logger] Filled values ..  
+2015-12-08 22:41:07,159 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-08 22:41:07,191 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:41:07,238 INFO  [Logger] Clicked on : Save 
+2015-12-08 22:41:07,882 INFO  [Logger] Location added successfully ..  
+2015-12-08 22:41:22,004 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-08 22:41:22,006 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:41:22,006 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-08 22:41:35,309 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:41:35,309 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-08 22:41:48,330 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:41:48,330 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-08 22:42:01,865 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:42:01,865 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-08 22:42:16,579 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,598 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,618 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,637 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,655 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,675 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:42:16,679 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:42:16,679 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:42:16,679 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-08 22:42:30,009 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:42:30,009 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:42:30,009 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:42:30,009 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-08 22:42:43,475 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:42:48,475 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:42:48,475 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-08 22:43:01,757 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:43:06,758 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:43:06,758 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-08 22:43:20,545 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:43:25,547 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:43:25,547 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-08 22:43:39,010 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:43:39,010 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-08 22:43:39,010 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:44:02,731 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-12-08 22:44:02,735 INFO  [Logger] InnerThread: Choosen OVA US-7.0.0.0.0.12-e55-01_OVF10.ova 
+2015-12-08 22:44:02,736 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-12-08 22:44:02,736 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-12-08 22:44:02,736 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:44:02,736 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-12-08 22:44:07,177 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:47:33,019 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:47:33,019 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-12-08 22:47:39,687 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:47:40,186 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:47:40,186 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-08 22:47:43,773 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:48:00,251 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-08 22:48:00,289 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:48:00,357 INFO  [Logger] Clicked on : New 
+2015-12-08 22:48:00,605 INFO  [Logger] Adding new Location ..  
+2015-12-08 22:48:00,818 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-08 22:48:01,170 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-08 22:48:01,361 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-08 22:48:01,525 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-08 22:48:01,715 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-08 22:48:02,221 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-08 22:48:02,396 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-08 22:48:02,551 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-08 22:48:02,701 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-08 22:48:02,835 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-08 22:48:03,013 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-08 22:48:03,167 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-08 22:48:03,304 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-08 22:48:03,583 INFO  [Logger] Filled values ..  
+2015-12-08 22:48:03,754 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-08 22:48:03,809 INFO  [Logger] Is element enabled: true 
+2015-12-08 22:48:03,854 INFO  [Logger] Clicked on : Save 
+2015-12-08 22:48:04,059 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-08 22:48:04,510 INFO  [Logger] Location added successfully ..  
+2015-12-08 22:48:15,038 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:48:15,039 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-08 22:48:28,302 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:48:28,303 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-08 22:48:41,530 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:48:41,530 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-08 22:48:54,588 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:48:54,589 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-08 22:49:08,317 INFO  [Logger] /swlibrary/swLib/local/CM000000616/CM-Simplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,336 INFO  [Logger] /swlibrary/swLib/local/SM000000033/BSM-7.0.0.0.700007-e55-02_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,354 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,372 INFO  [Logger] /swlibrary/swLib/local/US000000054/US-7.0.0.0.0.12-e55-01_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,388 INFO  [Logger] /swlibrary/swLib/local/CMM000000998/CMM_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,407 INFO  [Logger] /swlibrary/swLib/local/CM000000617/CM-Duplex_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-08 22:49:08,411 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-08 22:49:08,411 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-08 22:49:08,411 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-08 22:50:46,594 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:53:12,548 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:56:30,257 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:57:12,180 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 22:58:22,723 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 23:02:46,030 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 23:05:51,994 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-08 23:06:09,218 INFO  [Logger] Tree is already visible ..  
+2015-12-08 23:08:37,646 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 12:42:02,288 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:02,300 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:42:04,917 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:04,917 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:42:07,021 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:07,021 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:42:08,561 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:08,562 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:42:11,371 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:11,371 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:42:14,455 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:14,455 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:42:17,634 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:17,634 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 12:42:20,724 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:20,724 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 12:42:23,826 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:23,826 INFO  [Logger]                              Deleting Host to given Location                             
+2015-12-09 12:42:26,974 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:26,974 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:42:30,063 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:30,063 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:42:33,208 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:33,209 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:42:36,299 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:42:36,299 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:36,299 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 12:42:39,421 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:39,421 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 12:42:47,514 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:47,514 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-09 12:42:47,514 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:42:50,612 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:42:55,612 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:42:55,612 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-09 12:42:58,726 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:43:03,726 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:03,726 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-09 12:43:06,570 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:43:06,570 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:06,570 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-09 12:43:07,918 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:07,918 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:43:11,032 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:11,032 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:43:14,134 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:14,134 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:43:17,231 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 12:43:17,231 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:17,231 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 12:43:20,303 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:43:20,303 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 12:45:40,553 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:40,554 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:45:47,039 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:47,039 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:45:48,125 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:48,126 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:45:49,857 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:49,858 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:45:51,304 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:51,304 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:45:52,612 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:52,612 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:45:54,278 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:54,279 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 12:45:55,463 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:55,463 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 12:45:56,703 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:56,703 INFO  [Logger]                              Deleting Host to given Location                             
+2015-12-09 12:45:57,975 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:57,975 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:45:59,135 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:45:59,135 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:46:00,495 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:00,495 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:46:01,764 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:46:01,764 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:01,764 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 12:46:02,984 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:02,984 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 12:46:09,295 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:09,295 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-09 12:46:09,295 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:46:11,058 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:46:16,058 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:16,058 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-09 12:46:17,883 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:46:22,883 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:22,883 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-09 12:46:24,324 INFO  [Logger] Reference Input : AES-7.0.0.0.0.13.20150629-e50-00.ova 
+2015-12-09 12:46:24,324 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:24,324 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-09 12:46:25,525 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:25,525 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 12:46:31,516 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:31,516 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 12:46:37,550 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:37,550 INFO  [Logger]                              Delete Location on SDM                             
+2015-12-09 12:46:39,117 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 12:46:39,118 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:39,118 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 12:46:40,907 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:40,908 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 12:46:48,185 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 12:46:48,185 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-09 12:46:48,185 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 12:46:50,060 INFO  [Logger] Reference Input : BSM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 13:54:37,381 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:54:37,381 INFO  [Logger]                              Editing vCenter to given Location                             
+2015-12-09 13:54:43,293 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 13:54:51,029 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:54:51,029 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 13:54:54,342 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 13:55:11,394 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 13:55:11,464 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:55:11,511 INFO  [Logger] Clicked on : New 
+2015-12-09 13:55:11,790 INFO  [Logger] Adding new Location ..  
+2015-12-09 13:55:12,073 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 13:55:12,669 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:55:12,847 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 13:55:13,016 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 13:55:13,205 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 13:55:13,389 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 13:55:13,592 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 13:55:14,066 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 13:55:14,303 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 13:55:14,496 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 13:55:14,652 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 13:55:14,815 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 13:55:14,979 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 13:55:15,273 INFO  [Logger] Filled values ..  
+2015-12-09 13:55:15,558 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 13:55:15,597 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:55:15,647 INFO  [Logger] Clicked on : Save 
+2015-12-09 13:55:16,961 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 13:55:17,414 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:55:17,414 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 13:55:31,077 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:55:31,077 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 13:55:51,521 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 13:55:52,061 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:55:52,159 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 13:55:52,803 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 13:55:52,835 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:55:52,878 INFO  [Logger] Clicked on : Delete 
+2015-12-09 13:55:53,197 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-12-09 13:55:53,919 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-12-09 13:55:54,167 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:55:54,534 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 13:55:54,946 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 13:55:54,946 INFO  [Logger] Location deleted successfully ..  
+2015-12-09 13:55:54,946 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-12-09 13:55:54,947 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:55:54,947 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 13:56:08,801 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:56:08,801 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 13:56:24,643 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:56:28,969 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 13:56:29,082 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 13:56:29,082 ERROR [Logger] Either location name or host name is null or location or host does not exist .. 
+2015-12-09 13:56:32,411 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 13:56:32,415 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 13:56:32,415 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:56:32,415 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 13:57:09,303 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:57:09,304 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 13:57:13,568 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 13:57:29,794 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 13:57:29,834 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:57:29,886 INFO  [Logger] Clicked on : New 
+2015-12-09 13:57:30,156 INFO  [Logger] Adding new Location ..  
+2015-12-09 13:57:30,419 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 13:57:30,624 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:57:30,849 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 13:57:31,028 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 13:57:31,207 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 13:57:31,418 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 13:57:31,614 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 13:57:31,804 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 13:57:31,968 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 13:57:32,133 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 13:57:32,279 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 13:57:32,419 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 13:57:32,552 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 13:57:32,830 INFO  [Logger] Filled values ..  
+2015-12-09 13:57:33,004 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 13:57:33,041 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:57:33,094 INFO  [Logger] Clicked on : Save 
+2015-12-09 13:57:33,259 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 13:57:33,709 INFO  [Logger] Location added successfully ..  
+2015-12-09 13:57:34,199 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 13:57:34,235 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:57:34,276 INFO  [Logger] Clicked on : New 
+2015-12-09 13:57:34,456 INFO  [Logger] Adding new Location ..  
+2015-12-09 13:57:34,585 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 13:57:34,769 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 13:57:34,913 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 13:57:35,054 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 13:57:35,213 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 13:57:35,380 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 13:57:35,548 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 13:57:35,698 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 13:57:35,918 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 13:57:36,103 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 13:57:36,405 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 13:57:36,556 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 13:57:36,697 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 13:57:36,977 INFO  [Logger] Filled values ..  
+2015-12-09 13:57:37,161 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 13:57:37,207 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:57:37,250 INFO  [Logger] Clicked on : Save 
+2015-12-09 13:57:37,882 INFO  [Logger] Location added successfully ..  
+2015-12-09 13:57:49,480 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 13:57:49,483 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:57:49,483 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 13:58:02,890 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:58:02,890 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 13:58:22,479 INFO  [Logger] Entries on VM tree : 4 
+2015-12-09 13:58:22,905 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:58:23,022 INFO  [Logger] Entries on VM tree : 4 
+2015-12-09 13:58:23,999 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 13:58:24,040 INFO  [Logger] Is element enabled: true 
+2015-12-09 13:58:24,093 INFO  [Logger] Clicked on : Delete 
+2015-12-09 13:58:24,461 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-12-09 13:58:25,224 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-12-09 13:58:25,493 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:58:25,796 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 13:58:26,038 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 13:58:26,039 INFO  [Logger] Location deleted successfully ..  
+2015-12-09 13:58:26,039 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-12-09 13:58:26,040 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:58:26,040 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 13:58:39,407 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:58:39,407 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 13:58:55,234 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 13:58:59,129 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 13:58:59,334 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 13:58:59,334 ERROR [Logger] Either location name or host name is null or location or host does not exist .. 
+2015-12-09 13:59:01,077 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 13:59:01,082 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 13:59:01,082 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:59:01,082 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 13:59:48,889 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 13:59:48,890 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 13:59:52,695 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:00:09,010 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:00:09,051 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:00:09,110 INFO  [Logger] Clicked on : New 
+2015-12-09 14:00:09,386 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:00:09,531 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 14:00:09,775 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:00:09,982 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 14:00:10,345 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 14:00:10,564 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 14:00:10,852 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 14:00:11,094 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 14:00:11,280 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 14:00:11,422 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 14:00:11,611 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 14:00:11,755 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 14:00:11,919 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 14:00:12,049 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 14:00:12,331 INFO  [Logger] Filled values ..  
+2015-12-09 14:00:12,545 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:00:12,585 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:00:12,633 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:00:12,807 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 14:00:13,258 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:00:13,806 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:00:13,848 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:00:13,895 INFO  [Logger] Clicked on : New 
+2015-12-09 14:00:14,076 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:00:14,210 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 14:00:14,383 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 14:00:14,688 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 14:00:14,990 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 14:00:15,286 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 14:00:15,607 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 14:00:15,787 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 14:00:15,950 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 14:00:16,089 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 14:00:16,234 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 14:00:16,365 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 14:00:16,498 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 14:00:16,649 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 14:00:16,929 INFO  [Logger] Filled values ..  
+2015-12-09 14:00:17,120 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:00:17,153 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:00:17,196 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:00:17,863 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:00:29,559 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 14:00:29,561 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:00:29,561 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 14:00:43,220 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:00:43,220 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 14:01:02,900 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:01:03,278 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:01:03,361 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:01:03,933 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 14:01:03,968 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:01:04,008 INFO  [Logger] Clicked on : Delete 
+2015-12-09 14:01:04,382 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-12-09 14:01:05,032 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-12-09 14:01:05,349 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:01:05,730 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 14:01:05,971 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 14:01:05,971 INFO  [Logger] Location deleted successfully ..  
+2015-12-09 14:01:05,971 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-12-09 14:01:05,972 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:01:05,973 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 14:01:19,628 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:01:19,628 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 14:01:35,411 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:01:39,728 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 14:01:39,956 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 14:01:39,956 ERROR [Logger] Either location name or host name is null or location or host does not exist .. 
+2015-12-09 14:01:42,240 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 14:01:42,250 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:01:42,250 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:01:42,250 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 14:01:56,308 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:01:56,308 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:01:56,308 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:01:56,308 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 14:02:38,861 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:02:38,861 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 14:02:42,540 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:02:58,101 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:02:58,139 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:02:58,212 INFO  [Logger] Clicked on : New 
+2015-12-09 14:02:58,459 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:02:58,726 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 14:02:59,087 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:02:59,263 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 14:02:59,416 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 14:02:59,626 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 14:02:59,831 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 14:03:00,085 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 14:03:00,262 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 14:03:00,399 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 14:03:00,546 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 14:03:00,687 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 14:03:00,837 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 14:03:01,006 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 14:03:01,284 INFO  [Logger] Filled values ..  
+2015-12-09 14:03:01,457 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:03:01,494 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:03:01,544 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:03:01,721 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 14:03:02,172 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:03:02,717 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:03:02,751 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:03:02,792 INFO  [Logger] Clicked on : New 
+2015-12-09 14:03:02,971 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:03:03,102 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 14:03:03,273 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 14:03:03,421 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 14:03:03,560 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 14:03:03,720 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 14:03:03,886 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 14:03:04,046 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 14:03:04,221 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 14:03:04,357 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 14:03:04,495 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 14:03:04,632 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 14:03:04,761 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 14:03:04,986 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 14:03:05,270 INFO  [Logger] Filled values ..  
+2015-12-09 14:03:05,577 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:03:05,622 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:03:05,667 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:03:06,314 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:03:17,898 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 14:03:17,900 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:03:17,900 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 14:03:31,637 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:03:31,637 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 14:03:57,525 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:03:57,526 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 14:04:01,285 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:04:16,818 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:04:16,902 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:04:16,983 INFO  [Logger] Clicked on : New 
+2015-12-09 14:04:17,262 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:04:17,471 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 14:04:17,686 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:04:17,853 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 14:04:18,004 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 14:04:18,166 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 14:04:18,368 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 14:04:18,595 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 14:04:18,770 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 14:04:18,913 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 14:04:19,088 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 14:04:19,236 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 14:04:19,397 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 14:04:19,559 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 14:04:19,842 INFO  [Logger] Filled values ..  
+2015-12-09 14:04:20,015 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:04:20,052 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:04:20,099 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:04:20,266 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 14:04:20,716 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:04:21,202 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:04:21,236 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:04:21,279 INFO  [Logger] Clicked on : New 
+2015-12-09 14:04:21,453 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:04:21,609 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 14:04:21,789 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 14:04:21,963 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 14:04:22,117 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 14:04:23,576 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 14:04:23,846 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 14:04:24,085 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 14:04:24,405 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 14:04:24,548 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 14:04:24,693 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 14:04:24,831 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 14:04:24,967 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 14:04:25,110 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 14:04:25,393 INFO  [Logger] Filled values ..  
+2015-12-09 14:04:25,586 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:04:25,626 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:04:25,668 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:04:26,337 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:04:37,933 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 14:04:37,935 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:04:37,935 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 14:04:53,665 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:04:57,421 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:04:57,978 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 14:04:58,014 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:04:58,055 INFO  [Logger] Clicked on : Edit 
+2015-12-09 14:04:58,654 INFO  [Logger] Read from file input.properties for EditLocationAddress:: Tower-12 
+2015-12-09 14:04:59,017 INFO  [Logger] Read from file input.properties for EditLocationAvayaSold-To#:: null 
+2015-12-09 14:04:59,295 INFO  [Logger] Read from file input.properties for EditLocationCity:: Hyderabad 
+2015-12-09 14:04:59,492 INFO  [Logger] Read from file input.properties for EditLocationState/Province/Region:: Telangana 
+2015-12-09 14:04:59,685 INFO  [Logger] Read from file input.properties for EditLocationZip/PostalCode:: 500078 
+2015-12-09 14:04:59,929 INFO  [Logger] Read from file input.properties for EditLocationCountry:: India 
+2015-12-09 14:05:00,099 INFO  [Logger] Read from file input.properties for EditLocationDefaultGateway:: null 
+2015-12-09 14:05:00,278 INFO  [Logger] Read from file input.properties for EditLocationDNSSearchList:: null 
+2015-12-09 14:05:00,444 INFO  [Logger] Read from file input.properties for EditLocationDNSServer1:: null 
+2015-12-09 14:05:00,587 INFO  [Logger] Read from file input.properties for EditLocationDNSServer2:: null 
+2015-12-09 14:05:00,733 INFO  [Logger] Read from file input.properties for EditLocationNetMask:: null 
+2015-12-09 14:05:00,885 INFO  [Logger] Read from file input.properties for EditLocationNtpServer:: null 
+2015-12-09 14:05:01,486 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:05:01,524 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:05:01,588 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:05:02,532 ERROR [Logger] Action being performed: Location Saved Successfully 
+2015-12-09 14:05:14,792 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-12-09 14:05:14,913 INFO  [Logger] Location edited successfully ..  
+2015-12-09 14:05:14,913 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-12-09 14:05:14,915 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:05:14,915 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 14:05:34,247 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:05:34,766 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:05:34,966 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:05:35,542 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 14:05:35,578 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:05:35,629 INFO  [Logger] Clicked on : Delete 
+2015-12-09 14:05:35,998 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-12-09 14:05:36,595 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-12-09 14:05:36,829 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:05:37,052 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 14:05:37,262 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 14:05:37,262 INFO  [Logger] Location deleted successfully ..  
+2015-12-09 14:05:37,262 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-12-09 14:05:37,263 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:05:37,263 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 14:05:52,887 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:05:56,390 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 14:05:56,482 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 14:05:58,674 INFO  [Logger] Adding Location as location was not already added ... 
+2015-12-09 14:05:58,675 INFO  [Logger] Pausing the current thread ..  
+2015-12-09 14:05:58,675 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:05:58,675 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 14:06:01,209 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:06:17,340 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:06:17,373 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:06:17,420 INFO  [Logger] Clicked on : New 
+2015-12-09 14:06:17,632 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:06:17,767 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 14:06:17,967 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:06:18,126 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 14:06:18,289 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 14:06:18,452 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 14:06:18,627 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 14:06:18,792 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 14:06:18,970 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 14:06:19,123 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 14:06:19,259 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 14:06:19,402 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 14:06:19,535 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 14:06:19,670 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 14:06:19,949 INFO  [Logger] Filled values ..  
+2015-12-09 14:06:20,141 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:06:20,182 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:06:20,226 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:06:20,397 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 14:06:20,847 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:06:21,295 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:06:21,330 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:06:21,374 INFO  [Logger] Clicked on : New 
+2015-12-09 14:06:21,547 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:06:21,701 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 14:06:21,864 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 14:06:22,009 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 14:06:22,149 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 14:06:22,299 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 14:06:22,472 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 14:06:22,627 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 14:06:22,776 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 14:06:22,912 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 14:06:23,056 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 14:06:23,209 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 14:06:23,341 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 14:06:23,486 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 14:06:23,764 INFO  [Logger] Filled values ..  
+2015-12-09 14:06:23,926 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:06:23,959 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:06:24,005 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:06:24,625 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:06:36,225 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 14:06:36,226 INFO  [Logger] Location added successfully. Now resuming the current thread ..  
+2015-12-09 14:06:51,773 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:06:55,331 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 14:06:58,327 INFO  [Logger] Navigated to Host tab. 
+2015-12-09 14:06:58,514 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-12-09 14:06:58,552 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:06:58,599 INFO  [Logger] Clicked on : Add 
+2015-12-09 14:06:58,829 INFO  [Logger] Adding new host ..  
+2015-12-09 14:06:59,225 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:06:59,559 INFO  [Logger] Read from file input.properties for AddHostHostFQDNorIP:: 148.147.162.175 
+2015-12-09 14:06:59,752 INFO  [Logger] Read from file input.properties for AddHostUserName:: root 
+2015-12-09 14:06:59,927 INFO  [Logger] Read from file input.properties for AddHostPassword:: root1234 
+2015-12-09 14:07:00,226 INFO  [Logger] Filled values ..  
+2015-12-09 14:07:00,451 INFO  [Logger] Opacity of button Save :  is: 1.0 
+2015-12-09 14:07:00,493 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:07:00,578 INFO  [Logger] Clicked on : Save   
+2015-12-09 14:07:02,495 INFO  [Logger] Page refreshed successfully.. 
+2015-12-09 14:07:03,995 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:07:39,775 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM test-vm-geeta6 in local inventory :;Discovering VMs: Add VM test-vm-geeta6 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM test-vm-geeta6 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 14:07:39,982 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Discovering VMs
+Discovering VMs: Retreive Host Credentials
+Discovering VMs: Retreive VM information from host
+Discovering VMs: Add VM sidtsmgr3 in local inventory
+Discovering VMs: Add VM sidtsmgr3 in Inventory
+Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory
+Discovering VMs: Add VM test-vm-geeta6 in local inventory
+Discovering VMs: Add VM test-vm-geeta6 in Inventory
+Error Code-SMGR_VM_1003:: Failed to add VM test-vm-geeta6 in Inventory
+Complete
+Host Create/Update
+Host Create/Update
+Host Create/Update Completed 
+2015-12-09 14:07:40,720 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM sidtsmgr3 in local inventory :;Discovering VMs: Add VM sidtsmgr3 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM sidtsmgr3 in Inventory :;Discovering VMs: Add VM test-vm-geeta6 in local inventory :;Discovering VMs: Add VM test-vm-geeta6 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM test-vm-geeta6 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 14:07:41,315 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:07:41,427 INFO  [Logger] Entries on VM tree : 4 
+2015-12-09 14:07:43,512 INFO  [Logger] Navigated to Host tab. 
+2015-12-09 14:07:43,692 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-12-09 14:07:43,732 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:07:43,776 INFO  [Logger] Clicked on : Add 
+2015-12-09 14:07:43,987 INFO  [Logger] Adding new host ..  
+2015-12-09 14:07:44,377 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-12-09 14:07:44,571 INFO  [Logger] Read from file input.properties for AddHost1HostFQDNorIP:: 148.147.162.196 
+2015-12-09 14:07:44,753 INFO  [Logger] Read from file input.properties for AddHost1UserName:: root 
+2015-12-09 14:07:44,916 INFO  [Logger] Read from file input.properties for AddHost1Password:: Avaya1234$ 
+2015-12-09 14:07:45,220 INFO  [Logger] Filled values ..  
+2015-12-09 14:07:45,537 INFO  [Logger] Opacity of button Save :  is: 1.0 
+2015-12-09 14:07:45,580 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:07:45,704 INFO  [Logger] Clicked on : Save   
+2015-12-09 14:07:48,008 INFO  [Logger] Page refreshed successfully.. 
+2015-12-09 14:07:49,508 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-12-09 14:08:25,582 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 14:08:25,763 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Discovering VMs
+Discovering VMs: Retreive Host Credentials
+Discovering VMs: Retreive VM information from host
+Discovering VMs: Add VM pdev55vm2 in local inventory
+Discovering VMs: Add VM pdev55vm2 in Inventory
+Error Code-SMGR_VM_1003:: Failed to add VM pdev55vm2 in Inventory
+Complete
+Host Create/Update
+Host Create/Update
+Host Create/Update Completed 
+2015-12-09 14:08:26,214 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Discovering VMs :;Discovering VMs: Retreive Host Credentials :;Discovering VMs: Retreive VM information from host :;Discovering VMs: Add VM pdev55vm2 in local inventory :;Discovering VMs: Add VM pdev55vm2 in Inventory :;Error Code-SMGR_VM_1003:: Failed to add VM pdev55vm2 in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 14:08:26,771 INFO  [Logger] Hosts added successfully ..  
+2015-12-09 14:08:26,771 INFO  [Logger] *************************End of test caseAdded Host Successfully******************************
+
+ 
+2015-12-09 14:08:26,772 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:08:26,772 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 14:08:42,849 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:08:46,744 INFO  [Logger] Entries on VM tree : 8 
+2015-12-09 14:08:50,019 INFO  [Logger] In 'Host' Tab 
+2015-12-09 14:08:50,019 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:08:50,103 INFO  [Logger] Entries on VM tree : 8 
+2015-12-09 14:08:52,845 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 14:08:52,884 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:08:52,936 INFO  [Logger] Clicked on : Edit 
+2015-12-09 14:09:05,649 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 14:09:05,674 INFO  [Logger] /swlibrary/swLib/local/FU_OT1449649888964/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 14:09:05,680 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:09:05,680 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:09:05,680 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 14:09:21,234 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:09:24,820 INFO  [Logger] Entries on VM tree : 8 
+2015-12-09 14:09:25,289 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:09:25,387 INFO  [Logger] Entries on VM tree : 8 
+2015-12-09 14:09:28,414 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:09:28,451 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:09:28,501 INFO  [Logger] Clicked on : New 
+2015-12-09 14:09:30,561 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:09:30,654 INFO  [Logger] Clicked on: testLoc 
+2015-12-09 14:09:31,542 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 14:09:31,612 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-12-09 14:09:38,359 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-12-09 14:09:41,171 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 14:09:41,221 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:09:41,266 INFO  [Logger] Clicked on :  
+2015-12-09 14:09:44,131 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-12-09 14:09:51,860 INFO  [Logger] Selected value for: Select OVAs: SM-7.0.0.0.700007-e55-02.ova SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:09:55,145 INFO  [Logger] Selected footprint: Profile 1 
+2015-12-09 14:09:55,215 INFO  [Logger] Clicked on: SM 7.0 Profile 1 Max Devices 2,500
+SM configuration that supports up to 2,500 devices. This deployment will need 3 vCPUs and 4GB memory. 
+2015-12-09 14:09:55,556 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 14:09:55,605 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:09:55,664 INFO  [Logger] Clicked on :  
+2015-12-09 14:09:58,252 INFO  [Logger] Given Name 
+2015-12-09 14:10:21,714 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:10:21,714 INFO  [Logger] Choosen OVF: (-) SM-7.0.0.0.700007_OVF10.ovf 
+2015-12-09 14:10:21,802 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-12-09 14:10:22,604 INFO  [Logger] Filled hostname for VM 1 testSM 
+2015-12-09 14:10:23,158 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-12-09 14:10:23,158 INFO  [Logger] Default field 2 
+2015-12-09 14:10:23,219 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-12-09 14:10:23,317 INFO  [Logger] 'IP' type field 3 
+2015-12-09 14:10:23,318 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-12-09 14:10:24,178 INFO  [Logger] 'IP' type field 4 
+2015-12-09 14:10:24,179 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-12-09 14:10:25,253 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-12-09 14:10:25,254 INFO  [Logger] Default field 5 
+2015-12-09 14:10:25,297 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-12-09 14:10:25,617 INFO  [Logger] Input ID from OVF is : timezone Input ID found on UI: timezone-inputEl 
+2015-12-09 14:10:25,617 INFO  [Logger] Combobox type field 6 
+2015-12-09 14:10:26,122 INFO  [Logger] Read from file inputsm.properties for timezone: Asia/Kolkata 
+2015-12-09 14:10:29,006 INFO  [Logger] Clicked on: Asia/Kolkata 
+2015-12-09 14:10:32,269 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-12-09 14:10:32,269 INFO  [Logger] Default field 7 
+2015-12-09 14:10:32,319 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-12-09 14:10:32,768 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-12-09 14:10:32,768 INFO  [Logger] Default field 8 
+2015-12-09 14:10:32,834 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-12-09 14:10:33,148 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-12-09 14:10:33,148 INFO  [Logger] 'Password' type field 9 
+2015-12-09 14:10:33,191 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-12-09 14:10:33,467 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-12-09 14:10:33,618 INFO  [Logger] 'IP' type field 10 
+2015-12-09 14:10:33,618 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-12-09 14:10:35,337 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-12-09 14:10:35,337 INFO  [Logger] 'Password' type field 11 
+2015-12-09 14:10:35,413 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-12-09 14:10:35,840 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-12-09 14:10:36,825 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-12-09 14:10:36,826 INFO  [Logger] Default field 12 
+2015-12-09 14:10:37,084 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-12-09 14:10:37,084 INFO  [Logger] Default field 13 
+2015-12-09 14:10:37,348 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-12-09 14:10:37,348 INFO  [Logger] Default field 14 
+2015-12-09 14:10:37,739 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-12-09 14:10:37,739 INFO  [Logger] Default field 15 
+2015-12-09 14:10:39,941 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 14:10:40,354 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 14:10:40,774 INFO  [Logger] Opacity of button Deploy :  is: 1.0 
+2015-12-09 14:10:40,835 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:10:40,899 INFO  [Logger] Clicked on : Deploy   
+2015-12-09 14:10:42,928 INFO  [Logger] Accepted EULA ..  
+2015-12-09 14:10:42,928 INFO  [Logger] Accepted EULA 
+2015-12-09 14:10:56,621 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-12-09 14:10:56,621 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 14:10:56,623 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-12-09 14:10:56,623 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-12-09 14:10:56,623 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:10:56,623 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-12-09 14:11:01,486 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:11:10,029 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:11:10,029 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:11:10,029 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:11:10,029 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 14:11:12,034 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 14:59:19,763 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:59:19,763 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 14:59:23,014 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 14:59:38,595 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:59:38,632 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:59:38,721 INFO  [Logger] Clicked on : New 
+2015-12-09 14:59:38,955 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:59:39,237 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 14:59:39,547 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 14:59:39,707 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 14:59:39,851 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 14:59:40,014 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 14:59:40,190 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 14:59:40,414 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 14:59:40,604 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 14:59:40,759 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 14:59:40,898 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 14:59:41,043 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 14:59:41,218 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 14:59:41,366 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 14:59:41,645 INFO  [Logger] Filled values ..  
+2015-12-09 14:59:41,800 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:59:41,835 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:59:41,879 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:59:42,057 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 14:59:42,507 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:59:42,832 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 14:59:42,865 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:59:42,987 INFO  [Logger] Clicked on : New 
+2015-12-09 14:59:43,165 INFO  [Logger] Adding new Location ..  
+2015-12-09 14:59:43,288 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 14:59:43,461 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 14:59:43,605 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 14:59:43,750 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 14:59:43,896 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 14:59:44,063 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 14:59:44,214 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 14:59:44,356 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 14:59:44,484 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 14:59:44,613 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 14:59:44,745 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 14:59:44,874 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 14:59:45,004 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 14:59:45,297 INFO  [Logger] Filled values ..  
+2015-12-09 14:59:45,546 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 14:59:45,641 INFO  [Logger] Is element enabled: true 
+2015-12-09 14:59:45,685 INFO  [Logger] Clicked on : Save 
+2015-12-09 14:59:46,309 INFO  [Logger] Location added successfully ..  
+2015-12-09 14:59:57,905 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 14:59:57,929 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 14:59:57,929 INFO  [Logger]                              Edit Location on SDM                             
+2015-12-09 15:00:13,408 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:00:16,744 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 15:00:17,570 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 15:00:17,607 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:00:17,649 INFO  [Logger] Clicked on : Edit 
+2015-12-09 15:00:18,070 INFO  [Logger] Read from file input.properties for EditLocationAddress:: Tower-12 
+2015-12-09 15:00:18,266 INFO  [Logger] Read from file input.properties for EditLocationAvayaSold-To#:: null 
+2015-12-09 15:00:18,424 INFO  [Logger] Read from file input.properties for EditLocationCity:: Hyderabad 
+2015-12-09 15:00:18,635 INFO  [Logger] Read from file input.properties for EditLocationState/Province/Region:: Telangana 
+2015-12-09 15:00:18,848 INFO  [Logger] Read from file input.properties for EditLocationZip/PostalCode:: 500078 
+2015-12-09 15:00:19,032 INFO  [Logger] Read from file input.properties for EditLocationCountry:: India 
+2015-12-09 15:00:19,198 INFO  [Logger] Read from file input.properties for EditLocationDefaultGateway:: null 
+2015-12-09 15:00:19,364 INFO  [Logger] Read from file input.properties for EditLocationDNSSearchList:: null 
+2015-12-09 15:00:19,524 INFO  [Logger] Read from file input.properties for EditLocationDNSServer1:: null 
+2015-12-09 15:00:19,692 INFO  [Logger] Read from file input.properties for EditLocationDNSServer2:: null 
+2015-12-09 15:00:19,847 INFO  [Logger] Read from file input.properties for EditLocationNetMask:: null 
+2015-12-09 15:00:19,991 INFO  [Logger] Read from file input.properties for EditLocationNtpServer:: null 
+2015-12-09 15:00:20,223 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 15:00:20,257 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:00:20,317 INFO  [Logger] Clicked on : Save 
+2015-12-09 15:00:21,251 ERROR [Logger] Action being performed: Location Saved Successfully 
+2015-12-09 15:00:33,376 INFO  [Logger] Confirmation: Location Saved Successfully 
+2015-12-09 15:00:33,492 INFO  [Logger] Location edited successfully ..  
+2015-12-09 15:00:33,492 INFO  [Logger] *************************End of test caseEdited Location******************************
+
+ 
+2015-12-09 15:00:33,493 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:00:33,493 INFO  [Logger]                              Delete Location on SMGR SDM                             
+2015-12-09 15:00:52,315 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 15:00:52,790 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:00:52,873 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 15:00:53,519 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 15:00:53,551 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:00:53,590 INFO  [Logger] Clicked on : Delete 
+2015-12-09 15:00:53,903 ERROR [Logger] Action being performed: Are you sure you want to delete location(s) ? 
+2015-12-09 15:00:54,701 INFO  [Logger] Confirmation: Location Deleted Successfully 
+2015-12-09 15:00:54,938 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:00:55,131 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 15:00:55,412 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 15:00:55,412 INFO  [Logger] Location deleted successfully ..  
+2015-12-09 15:00:55,412 INFO  [Logger] *************************End of test caseDeleted Location******************************
+
+ 
+2015-12-09 15:00:55,413 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:00:55,413 INFO  [Logger]                              Adding Host to given Location                             
+2015-12-09 15:01:10,852 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:01:14,210 INFO  [Logger] Entries on VM tree : 2 
+2015-12-09 15:01:14,296 ERROR [Logger] Couldn't Find entry in Tree: testLoc 
+2015-12-09 15:01:16,319 INFO  [Logger] Adding Location as location was not already added ... 
+2015-12-09 15:01:16,319 INFO  [Logger] Pausing the current thread ..  
+2015-12-09 15:01:16,319 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:01:16,319 INFO  [Logger]                              Add a new Location on SDM                             
+2015-12-09 15:01:18,824 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 15:01:34,388 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 15:01:34,419 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:01:34,465 INFO  [Logger] Clicked on : New 
+2015-12-09 15:01:34,646 INFO  [Logger] Adding new Location ..  
+2015-12-09 15:01:34,770 INFO  [Logger] Read from file input.properties for AddLocationAddress:: Tower-11 
+2015-12-09 15:01:34,931 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:01:35,107 INFO  [Logger] Read from file input.properties for AddLocationAvayaSold-To#:: null 
+2015-12-09 15:01:35,245 INFO  [Logger] Read from file input.properties for AddLocationCity:: Pune 
+2015-12-09 15:01:35,404 INFO  [Logger] Read from file input.properties for AddLocationState/Province/Region:: Maharashtra 
+2015-12-09 15:01:35,571 INFO  [Logger] Read from file input.properties for AddLocationZip/PostalCode:: 411028 
+2015-12-09 15:01:35,729 INFO  [Logger] Read from file input.properties for AddLocationCountry:: India 
+2015-12-09 15:01:35,875 INFO  [Logger] Read from file input.properties for AddLocationDefaultGateway:: null 
+2015-12-09 15:01:36,035 INFO  [Logger] Read from file input.properties for AddLocationDNSSearchList:: null 
+2015-12-09 15:01:36,175 INFO  [Logger] Read from file input.properties for AddLocationDNSServer1:: null 
+2015-12-09 15:01:36,312 INFO  [Logger] Read from file input.properties for AddLocationDNSServer2:: null 
+2015-12-09 15:01:36,454 INFO  [Logger] Read from file input.properties for AddLocationNetMask:: null 
+2015-12-09 15:01:36,586 INFO  [Logger] Read from file input.properties for AddLocationNtpServer:: null 
+2015-12-09 15:01:36,864 INFO  [Logger] Filled values ..  
+2015-12-09 15:01:37,041 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 15:01:37,079 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:01:37,122 INFO  [Logger] Clicked on : Save 
+2015-12-09 15:01:37,288 INFO  [Logger] Checking if any errors are occurring or not ..  
+2015-12-09 15:01:37,738 INFO  [Logger] Location added successfully ..  
+2015-12-09 15:01:38,338 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 15:01:38,371 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:01:38,410 INFO  [Logger] Clicked on : New 
+2015-12-09 15:01:38,577 INFO  [Logger] Adding new Location ..  
+2015-12-09 15:01:38,704 INFO  [Logger] Read from file input.properties for AddLocation1Address:: Tower-11 
+2015-12-09 15:01:38,860 INFO  [Logger] Read from file input.properties for AddLocation1Name:: Pune 
+2015-12-09 15:01:39,022 INFO  [Logger] Read from file input.properties for AddLocation1AvayaSold-To#:: null 
+2015-12-09 15:01:39,158 INFO  [Logger] Read from file input.properties for AddLocation1City:: Pune 
+2015-12-09 15:01:39,300 INFO  [Logger] Read from file input.properties for AddLocation1State/Province/Region:: Maharashtra 
+2015-12-09 15:01:39,463 INFO  [Logger] Read from file input.properties for AddLocation1Zip/PostalCode:: 411028 
+2015-12-09 15:01:39,615 INFO  [Logger] Read from file input.properties for AddLocation1Country:: India 
+2015-12-09 15:01:39,762 INFO  [Logger] Read from file input.properties for AddLocation1DefaultGateway:: null 
+2015-12-09 15:01:39,891 INFO  [Logger] Read from file input.properties for AddLocation1DNSSearchList:: null 
+2015-12-09 15:01:40,154 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer1:: null 
+2015-12-09 15:01:40,291 INFO  [Logger] Read from file input.properties for AddLocation1DNSServer2:: null 
+2015-12-09 15:01:40,418 INFO  [Logger] Read from file input.properties for AddLocation1NetMask:: null 
+2015-12-09 15:01:40,546 INFO  [Logger] Read from file input.properties for AddLocation1NtpServer:: null 
+2015-12-09 15:01:40,825 INFO  [Logger] Filled values ..  
+2015-12-09 15:01:41,009 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 15:01:41,045 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:01:41,086 INFO  [Logger] Clicked on : Save 
+2015-12-09 15:01:41,688 INFO  [Logger] Location added successfully ..  
+2015-12-09 15:01:53,248 INFO  [Logger] *************************End of test caseAdded a new Location******************************
+
+ 
+2015-12-09 15:01:53,248 INFO  [Logger] Location added successfully. Now resuming the current thread ..  
+2015-12-09 15:02:08,747 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:02:12,252 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 15:02:15,044 INFO  [Logger] Navigated to Host tab. 
+2015-12-09 15:02:15,227 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-12-09 15:02:15,265 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:02:15,311 INFO  [Logger] Clicked on : Add 
+2015-12-09 15:02:15,528 INFO  [Logger] Adding new host ..  
+2015-12-09 15:02:15,928 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:02:16,146 INFO  [Logger] Read from file input.properties for AddHostHostFQDNorIP:: 148.147.162.175 
+2015-12-09 15:02:16,335 INFO  [Logger] Read from file input.properties for AddHostUserName:: root 
+2015-12-09 15:02:16,501 INFO  [Logger] Read from file input.properties for AddHostPassword:: root1234 
+2015-12-09 15:02:16,795 INFO  [Logger] Filled values ..  
+2015-12-09 15:02:17,027 INFO  [Logger] Opacity of button Save :  is: 1.0 
+2015-12-09 15:02:17,069 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:02:17,153 INFO  [Logger] Clicked on : Save   
+2015-12-09 15:02:18,950 INFO  [Logger] Page refreshed successfully.. 
+2015-12-09 15:02:20,450 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:02:55,761 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 15:02:55,899 INFO  [Logger] Host Create/Update Status
+Validating Input
+Retrieve Host Details
+Update inventory
+Adding entry in Inventory
+Complete
+Host Create/Update
+Host Create/Update
+Host Create/Update Completed 
+2015-12-09 15:02:56,191 INFO  [Logger] Host Create/Update Status :;Validating Input :;Retrieve Host Details :;Update inventory :;Adding entry in Inventory :;Complete :;Host Create/Update :;Host Create/Update :;Host Create/Update Completed 
+2015-12-09 15:02:56,605 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:02:56,689 INFO  [Logger] Entries on VM tree : 3 
+2015-12-09 15:02:58,184 INFO  [Logger] Navigated to Host tab. 
+2015-12-09 15:02:58,386 INFO  [Logger] Opacity of button Add is: 1.0 
+2015-12-09 15:02:58,430 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:02:58,481 INFO  [Logger] Clicked on : Add 
+2015-12-09 15:02:58,703 INFO  [Logger] Adding new host ..  
+2015-12-09 15:02:59,150 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-12-09 15:02:59,364 INFO  [Logger] Read from file input.properties for AddHost1HostFQDNorIP:: 148.147.162.196 
+2015-12-09 15:02:59,585 INFO  [Logger] Read from file input.properties for AddHost1UserName:: root 
+2015-12-09 15:02:59,752 INFO  [Logger] Read from file input.properties for AddHost1Password:: Avaya1234$ 
+2015-12-09 15:03:00,059 INFO  [Logger] Filled values ..  
+2015-12-09 15:03:00,278 INFO  [Logger] Opacity of button Save :  is: 1.0 
+2015-12-09 15:03:00,319 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:03:00,408 INFO  [Logger] Clicked on : Save   
+2015-12-09 15:03:02,401 INFO  [Logger] Page refreshed successfully.. 
+2015-12-09 15:03:03,903 INFO  [Logger] Read from file input.properties for AddHost1HostName:: 148.147.162.196 
+2015-12-09 15:03:19,217 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:03:19,217 INFO  [Logger]                              Editing Host to given Location                             
+2015-12-09 15:03:34,656 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:03:38,181 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:03:41,516 INFO  [Logger] In 'Host' Tab 
+2015-12-09 15:03:41,516 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:03:41,611 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:03:44,218 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 15:03:44,257 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:03:44,301 INFO  [Logger] Clicked on : Edit 
+2015-12-09 15:03:57,330 INFO  [Logger] /swlibrary/swLib/local/SM000000032/SM-7.0.0.0.700007_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 15:03:57,355 INFO  [Logger] /swlibrary/swLib/local/FU_OT1449649888964/SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf is downloaded from Upstream.(pdev55vm2.smgrdev.avaya.com) 
+2015-12-09 15:03:57,359 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:03:57,359 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:03:57,359 INFO  [Logger]                              Adding VM to given Location and Host                             
+2015-12-09 15:04:12,933 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:04:16,554 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:04:16,992 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:04:17,067 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:04:19,745 INFO  [Logger] Opacity of button New is: 1.0 
+2015-12-09 15:04:19,782 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:04:19,837 INFO  [Logger] Clicked on : New 
+2015-12-09 15:04:21,823 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:04:21,928 INFO  [Logger] Clicked on: testLoc 
+2015-12-09 15:04:22,985 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:04:23,059 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-12-09 15:04:29,740 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-12-09 15:04:32,519 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:04:32,563 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:04:32,611 INFO  [Logger] Clicked on :  
+2015-12-09 15:04:35,417 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-12-09 15:04:43,145 INFO  [Logger] Selected value for: Select OVAs: SM-7.0.0.0.700007-e55-02.ova SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:04:46,442 INFO  [Logger] Selected footprint: Profile 1 
+2015-12-09 15:04:46,516 INFO  [Logger] Clicked on: SM 7.0 Profile 1 Max Devices 2,500
+SM configuration that supports up to 2,500 devices. This deployment will need 3 vCPUs and 4GB memory. 
+2015-12-09 15:04:51,333 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:04:51,374 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:04:51,418 INFO  [Logger] Clicked on :  
+2015-12-09 15:04:52,238 INFO  [Logger] Given Name 
+2015-12-09 15:05:15,710 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:05:15,710 INFO  [Logger] Choosen OVF: (-) SM-7.0.0.0.700007_OVF10.ovf 
+2015-12-09 15:05:15,794 INFO  [Logger] Filled IP 148.147.162.221 for VM 0 
+2015-12-09 15:05:16,916 INFO  [Logger] Filled hostname for VM 1 testSM 
+2015-12-09 15:05:17,405 INFO  [Logger] Input ID from OVF is : domain Input ID found on UI: domain-inputEl 
+2015-12-09 15:05:17,405 INFO  [Logger] Default field 2 
+2015-12-09 15:05:17,468 INFO  [Logger] Read from file inputsm.properties for domain: null 
+2015-12-09 15:05:17,497 INFO  [Logger] 'IP' type field 3 
+2015-12-09 15:05:17,497 INFO  [Logger] Read from file inputsm.properties for netmask0: 255.255.255.0 
+2015-12-09 15:05:18,314 INFO  [Logger] 'IP' type field 4 
+2015-12-09 15:05:18,314 INFO  [Logger] Read from file inputsm.properties for gateway: 148.147.162.1 
+2015-12-09 15:05:19,377 INFO  [Logger] Input ID from OVF is : dns Input ID found on UI: dns-inputEl 
+2015-12-09 15:05:19,377 INFO  [Logger] Default field 5 
+2015-12-09 15:05:19,427 INFO  [Logger] Read from file inputsm.properties for dns: 148.147.162.5 
+2015-12-09 15:05:19,743 INFO  [Logger] Input ID from OVF is : timezone Input ID found on UI: timezone-inputEl 
+2015-12-09 15:05:19,743 INFO  [Logger] Combobox type field 6 
+2015-12-09 15:05:20,302 INFO  [Logger] Read from file inputsm.properties for timezone: Asia/Kolkata 
+2015-12-09 15:05:23,022 INFO  [Logger] Clicked on: Asia/Kolkata 
+2015-12-09 15:05:25,637 INFO  [Logger] Input ID from OVF is : ntpservers Input ID found on UI: ntpservers-inputEl 
+2015-12-09 15:05:25,637 INFO  [Logger] Default field 7 
+2015-12-09 15:05:25,688 INFO  [Logger] Read from file inputsm.properties for ntpservers: null 
+2015-12-09 15:05:25,982 INFO  [Logger] Input ID from OVF is : CUSTLOGIN Input ID found on UI: CUSTLOGIN-inputEl 
+2015-12-09 15:05:25,982 INFO  [Logger] Default field 8 
+2015-12-09 15:05:26,189 INFO  [Logger] Read from file inputsm.properties for CUSTLOGIN: cust 
+2015-12-09 15:05:26,729 INFO  [Logger] Input ID from OVF is : CUSTPWD Input ID found on UI: CUSTPWD-inputEl 
+2015-12-09 15:05:26,729 INFO  [Logger] 'Password' type field 9 
+2015-12-09 15:05:26,787 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-12-09 15:05:26,975 INFO  [Logger] Read from file inputsm.properties for CUSTPWD: cust01 
+2015-12-09 15:05:27,100 INFO  [Logger] 'IP' type field 10 
+2015-12-09 15:05:27,101 INFO  [Logger] Read from file inputsm.properties for smgr_ip: 148.147.162.180 
+2015-12-09 15:05:28,258 INFO  [Logger] Input ID from OVF is : enrollment_pw Input ID found on UI: enrollment_pw-inputEl 
+2015-12-09 15:05:28,258 INFO  [Logger] 'Password' type field 11 
+2015-12-09 15:05:28,318 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-12-09 15:05:28,615 INFO  [Logger] Read from file inputsm.properties for enrollment_pw: 123456 
+2015-12-09 15:05:29,284 INFO  [Logger] Input ID from OVF is : Public_Key Input ID found on UI:  
+2015-12-09 15:05:29,284 INFO  [Logger] Default field 12 
+2015-12-09 15:05:29,759 INFO  [Logger] Input ID from OVF is : Public_Key_GR Input ID found on UI:  
+2015-12-09 15:05:29,759 INFO  [Logger] Default field 13 
+2015-12-09 15:05:30,120 INFO  [Logger] Input ID from OVF is : Public_Key_Client Input ID found on UI:  
+2015-12-09 15:05:30,121 INFO  [Logger] Default field 14 
+2015-12-09 15:05:30,409 INFO  [Logger] Input ID from OVF is : ASG_Key Input ID found on UI:  
+2015-12-09 15:05:30,410 INFO  [Logger] Default field 15 
+2015-12-09 15:05:32,186 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 15:05:33,187 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 15:05:33,515 INFO  [Logger] Opacity of button Deploy :  is: 1.0 
+2015-12-09 15:05:33,566 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:05:33,628 INFO  [Logger] Clicked on : Deploy   
+2015-12-09 15:05:34,200 INFO  [Logger] Starting to edit VM SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:05:34,201 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:05:34,201 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:05:34,201 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 15:05:49,806 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:05:53,095 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:05:57,313 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:06:00,500 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 15:06:00,538 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:06:00,584 INFO  [Logger] Clicked on : Edit 
+2015-12-09 15:06:00,956 INFO  [Logger] Clicked on - Edit VM 
+2015-12-09 15:06:04,664 INFO  [Logger] Opacity of button Save is: 1.0 
+2015-12-09 15:06:04,702 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:06:04,746 INFO  [Logger] Clicked on : Save 
+2015-12-09 15:06:16,561 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-12-09 15:06:16,561 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:06:21,571 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:06:21,571 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-09 15:06:48,417 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:06:53,427 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:06:53,427 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-09 15:07:09,034 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:07:12,823 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:07:16,914 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:07:18,447 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-12-09 15:07:18,483 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:07:18,527 INFO  [Logger] Clicked on : Start 
+2015-12-09 15:07:18,800 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-12-09 15:07:19,418 INFO  [Logger] Confirmation:  
+2015-12-09 15:07:19,753 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-12-09 15:08:49,834 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:08:54,837 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:08:54,837 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-09 15:09:10,385 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:09:13,833 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:09:18,458 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:09:21,084 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-12-09 15:09:21,085 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:09:21,085 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-09 15:09:21,085 INFO  [Logger] Reference Input : SM-7.0.0.0.700007-e55-02.ova 
+2015-12-09 15:09:36,605 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:09:40,035 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:09:44,303 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:09:45,866 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 15:09:45,904 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:09:45,955 INFO  [Logger] Clicked on : Delete 
+2015-12-09 15:09:57,810 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-12-09 15:10:21,427 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-12-09 15:10:23,772 INFO  [Logger] Changed properties file successfully ..  
+2015-12-09 15:10:23,772 INFO  [Logger] 148.147.162.221 IP is made WhiteList 
+2015-12-09 15:10:32,356 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-12-09 15:10:32,357 INFO  [Logger] InnerThread: Choosen OVA SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:10:32,358 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-12-09 15:10:32,358 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-12-09 15:10:32,358 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:10:32,358 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-12-09 15:10:36,207 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 15:10:48,102 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:10:51,393 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:10:54,360 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-12-09 15:10:54,606 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-12-09 15:10:54,606 INFO  [Logger] 148.147.162.225 IP is available 
+2015-12-09 15:10:54,607 INFO  [Logger] Changed properties file successfully ..  
+2015-12-09 15:10:54,607 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-12-09 15:10:54,608 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-12-09 15:10:54,608 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-12-09 15:10:54,608 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:10:54,633 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-12-09 15:10:55,761 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-12-09 15:11:07,678 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:11:10,652 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 15:11:22,567 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:11:25,965 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:11:26,381 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:11:26,451 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:11:29,996 INFO  [Logger] Clicked on - Add new VM 
+2015-12-09 15:11:31,371 INFO  [Logger] Read from file input.properties for AddLocationName:: testLoc 
+2015-12-09 15:11:31,437 INFO  [Logger] Clicked on: testLoc 
+2015-12-09 15:11:32,294 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:11:32,362 INFO  [Logger] Clicked on: 148.147.162.175 
+2015-12-09 15:11:39,010 INFO  [Logger] Clicked on: datastore1 (46) 
+2015-12-09 15:11:41,785 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:11:41,824 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:11:41,869 INFO  [Logger] Clicked on :  
+2015-12-09 15:11:44,656 INFO  [Logger] Selected value for: Select Software Library: SMGR_DEFAULT_LOCAL SMGR_DEFAULT_LOCAL 
+2015-12-09 15:11:52,374 INFO  [Logger] Selected value for: Select OVAs: SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:11:55,174 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:11:55,225 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:11:55,269 INFO  [Logger] Clicked on :  
+2015-12-09 15:11:56,112 INFO  [Logger] Given Name 
+2015-12-09 15:12:19,462 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:12:19,462 INFO  [Logger] Choosen OVF: (-) SecureAccessLinkGateway-2.5.1.0-vApp-e55-08_OVF10.ovf 
+2015-12-09 15:12:19,782 INFO  [Logger] Input ID from OVF is : BuildID Input ID found on UI:  
+2015-12-09 15:12:19,782 INFO  [Logger] Default field 0 
+2015-12-09 15:12:20,035 INFO  [Logger] Input ID from OVF is : vamitimezone Input ID found on UI: vamitimezone-inputEl 
+2015-12-09 15:12:20,035 INFO  [Logger] Combobox type field 1 
+2015-12-09 15:12:20,270 INFO  [Logger] Read from file inputsm.properties for vamitimezone: Asia/Calcutta 
+2015-12-09 15:12:20,487 INFO  [Logger] Clicked on: Asia/Calcutta 
+2015-12-09 15:12:20,894 INFO  [Logger] Input ID from OVF is : vami.hostname Input ID found on UI: vami.hostname-inputEl 
+2015-12-09 15:12:20,894 INFO  [Logger] Default field 2 
+2015-12-09 15:12:20,948 INFO  [Logger] Read from file inputsm.properties for vami.hostname: test.smgrdev.avaya.com 
+2015-12-09 15:12:21,282 INFO  [Logger] Input ID from OVF is : ADS_COMPONENT_TO_INSTALL Input ID found on UI:  
+2015-12-09 15:12:21,282 INFO  [Logger] Default field 3 
+2015-12-09 15:12:21,536 INFO  [Logger] Input ID from OVF is : AUTOUPGRADE_CUST_SELECT Input ID found on UI: AUTOUPGRADE_CUST_SELECT-inputEl 
+2015-12-09 15:12:21,537 INFO  [Logger] Combobox type field 4 
+2015-12-09 15:12:21,717 INFO  [Logger] Read from file inputsm.properties for AUTOUPGRADE_CUST_SELECT: Yes 
+2015-12-09 15:12:21,771 INFO  [Logger] Clicked on: Yes 
+2015-12-09 15:12:22,099 INFO  [Logger] Input ID from OVF is : SMTP_HOST Input ID found on UI: SMTP_HOST-inputEl 
+2015-12-09 15:12:22,099 INFO  [Logger] Default field 5 
+2015-12-09 15:12:22,149 INFO  [Logger] Read from file inputsm.properties for SMTP_HOST: sal.smgrdev.avaya.com 
+2015-12-09 15:12:22,638 INFO  [Logger] Input ID from OVF is : SMTP_PORT Input ID found on UI: SMTP_PORT-inputEl 
+2015-12-09 15:12:22,638 INFO  [Logger] Default field 6 
+2015-12-09 15:12:22,690 INFO  [Logger] Read from file inputsm.properties for SMTP_PORT: 25 
+2015-12-09 15:12:23,005 INFO  [Logger] Input ID from OVF is : SMTP_ADMIN_EMAIL Input ID found on UI: SMTP_ADMIN_EMAIL-inputEl 
+2015-12-09 15:12:23,005 INFO  [Logger] Default field 7 
+2015-12-09 15:12:23,059 INFO  [Logger] Read from file inputsm.properties for SMTP_ADMIN_EMAIL: bshingala@avaya.com 
+2015-12-09 15:12:23,490 INFO  [Logger] Input ID from OVF is : SMTP_USER_NAME Input ID found on UI: SMTP_USER_NAME-inputEl 
+2015-12-09 15:12:23,491 INFO  [Logger] Default field 8 
+2015-12-09 15:12:23,544 INFO  [Logger] Read from file inputsm.properties for SMTP_USER_NAME: cust 
+2015-12-09 15:12:23,879 INFO  [Logger] Input ID from OVF is : SMTP_PASSWORD Input ID found on UI: SMTP_PASSWORD-inputEl 
+2015-12-09 15:12:23,879 INFO  [Logger] 'Password' type field 9 
+2015-12-09 15:12:23,928 INFO  [Logger] Read from file inputsm.properties for SMTP_PASSWORD: Avaya123$ 
+2015-12-09 15:12:24,035 INFO  [Logger] Read from file inputsm.properties for SMTP_PASSWORD: Avaya123$ 
+2015-12-09 15:12:24,489 INFO  [Logger] Input ID from OVF is : SMTP_SECONDARY_EMAIL Input ID found on UI: SMTP_SECONDARY_EMAIL-inputEl 
+2015-12-09 15:12:24,489 INFO  [Logger] Default field 10 
+2015-12-09 15:12:24,540 INFO  [Logger] Read from file inputsm.properties for SMTP_SECONDARY_EMAIL: null 
+2015-12-09 15:12:24,849 INFO  [Logger] Input ID from OVF is : GATEWAY_SOLUTION_ELEMENTID Input ID found on UI: GATEWAY_SOLUTION_ELEMENTID-inputEl 
+2015-12-09 15:12:24,849 INFO  [Logger] Default field 11 
+2015-12-09 15:12:24,928 INFO  [Logger] Read from file inputsm.properties for GATEWAY_SOLUTION_ELEMENTID: (000)777-9999 
+2015-12-09 15:12:25,404 INFO  [Logger] Input ID from OVF is : SPIRIT_ALARMID Input ID found on UI: SPIRIT_ALARMID-inputEl 
+2015-12-09 15:12:25,404 INFO  [Logger] Default field 12 
+2015-12-09 15:12:25,463 INFO  [Logger] Read from file inputsm.properties for SPIRIT_ALARMID: 1000000000 
+2015-12-09 15:12:25,879 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER-inputEl 
+2015-12-09 15:12:25,879 INFO  [Logger] Default field 13 
+2015-12-09 15:12:25,948 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_IDENTIFIER: Enterprise-production 
+2015-12-09 15:12:26,654 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_URL Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_URL-inputEl 
+2015-12-09 15:12:26,654 INFO  [Logger] Default field 14 
+2015-12-09 15:12:26,722 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_URL: secure.alarming.avaya.com 
+2015-12-09 15:12:27,092 INFO  [Logger] Input ID from OVF is : PRIMARY_AVAYA_ENTERPRISE_PORT Input ID found on UI: PRIMARY_AVAYA_ENTERPRISE_PORT-inputEl 
+2015-12-09 15:12:27,092 INFO  [Logger] Default field 15 
+2015-12-09 15:12:27,153 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AVAYA_ENTERPRISE_PORT: 443 
+2015-12-09 15:12:27,585 INFO  [Logger] Input ID from OVF is : PRIMARY_AXEDA_ENTERPRISE_URL Input ID found on UI: PRIMARY_AXEDA_ENTERPRISE_URL-inputEl 
+2015-12-09 15:12:27,585 INFO  [Logger] Default field 16 
+2015-12-09 15:12:27,865 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AXEDA_ENTERPRISE_URL: remote.sal.avaya.com 
+2015-12-09 15:12:28,281 INFO  [Logger] Input ID from OVF is : PRIMARY_AXEDA_ENTERPRISE_PORT Input ID found on UI: PRIMARY_AXEDA_ENTERPRISE_PORT-inputEl 
+2015-12-09 15:12:28,281 INFO  [Logger] Default field 17 
+2015-12-09 15:12:28,343 INFO  [Logger] Read from file inputsm.properties for PRIMARY_AXEDA_ENTERPRISE_PORT: 443 
+2015-12-09 15:12:28,803 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_TYPE Input ID found on UI: CUSTOMER_PROXY_TYPE-inputEl 
+2015-12-09 15:12:28,803 INFO  [Logger] Combobox type field 18 
+2015-12-09 15:12:29,009 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_TYPE: None 
+2015-12-09 15:12:29,060 INFO  [Logger] Clicked on: None 
+2015-12-09 15:12:29,427 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_HOSTNAME Input ID found on UI: CUSTOMER_PROXY_HOSTNAME-inputEl 
+2015-12-09 15:12:29,427 INFO  [Logger] Default field 19 
+2015-12-09 15:12:29,479 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_HOSTNAME: null 
+2015-12-09 15:12:29,775 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_PORT Input ID found on UI: CUSTOMER_PROXY_PORT-inputEl 
+2015-12-09 15:12:29,775 INFO  [Logger] Default field 20 
+2015-12-09 15:12:29,828 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PORT: null 
+2015-12-09 15:12:30,110 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_USER Input ID found on UI: CUSTOMER_PROXY_USER-inputEl 
+2015-12-09 15:12:30,110 INFO  [Logger] Default field 21 
+2015-12-09 15:12:30,159 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_USER: null 
+2015-12-09 15:12:30,434 INFO  [Logger] Input ID from OVF is : CUSTOMER_PROXY_PASSWORD Input ID found on UI: CUSTOMER_PROXY_PASSWORD-inputEl 
+2015-12-09 15:12:30,434 INFO  [Logger] 'Password' type field 22 
+2015-12-09 15:12:30,484 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PASSWORD: null 
+2015-12-09 15:12:30,563 INFO  [Logger] Read from file inputsm.properties for CUSTOMER_PROXY_PASSWORD: null 
+2015-12-09 15:12:30,830 INFO  [Logger] Input ID from OVF is : POLICY_SERVER_HOSTNAME Input ID found on UI: POLICY_SERVER_HOSTNAME-inputEl 
+2015-12-09 15:12:30,830 INFO  [Logger] Default field 23 
+2015-12-09 15:12:30,880 INFO  [Logger] Read from file inputsm.properties for POLICY_SERVER_HOSTNAME: null 
+2015-12-09 15:12:31,149 INFO  [Logger] Input ID from OVF is : POLICY_SERVER_PORT Input ID found on UI: POLICY_SERVER_PORT-inputEl 
+2015-12-09 15:12:31,149 INFO  [Logger] Default field 24 
+2015-12-09 15:12:31,201 INFO  [Logger] Read from file inputsm.properties for POLICY_SERVER_PORT: null 
+2015-12-09 15:12:31,472 INFO  [Logger] Input ID from OVF is : SNMP_SERVER_HOSTNAME Input ID found on UI: SNMP_SERVER_HOSTNAME-inputEl 
+2015-12-09 15:12:31,472 INFO  [Logger] Default field 25 
+2015-12-09 15:12:31,514 INFO  [Logger] Read from file inputsm.properties for SNMP_SERVER_HOSTNAME: 127.0.0.1 
+2015-12-09 15:12:31,897 INFO  [Logger] Input ID from OVF is : SNMP_SERVER_PORT Input ID found on UI: SNMP_SERVER_PORT-inputEl 
+2015-12-09 15:12:31,897 INFO  [Logger] Default field 26 
+2015-12-09 15:12:31,950 INFO  [Logger] Read from file inputsm.properties for SNMP_SERVER_PORT: 705 
+2015-12-09 15:12:32,304 INFO  [Logger] Input ID from OVF is : AVAYA_TECH_ASSIGNED_ROLE Input ID found on UI: AVAYA_TECH_ASSIGNED_ROLE-inputEl 
+2015-12-09 15:12:32,304 INFO  [Logger] Combobox type field 27 
+2015-12-09 15:12:32,610 INFO  [Logger] Read from file inputsm.properties for AVAYA_TECH_ASSIGNED_ROLE: Administrator 
+2015-12-09 15:12:32,671 INFO  [Logger] Clicked on: Administrator 
+2015-12-09 15:12:33,062 INFO  [Logger] Input ID from OVF is : gateway Input ID found on UI: vami.gateway.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-12-09 15:12:33,062 INFO  [Logger] Default field 28 
+2015-12-09 15:12:33,111 INFO  [Logger] Read from file inputsm.properties for vami.gateway.Secure_Access_Link_Gateway_Virtual_Appliance: 148.147.162.1 
+2015-12-09 15:12:33,536 INFO  [Logger] Input ID from OVF is : DNS Input ID found on UI: vami.DNS.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-12-09 15:12:33,536 INFO  [Logger] Default field 29 
+2015-12-09 15:12:33,755 INFO  [Logger] Read from file inputsm.properties for vami.DNS.Secure_Access_Link_Gateway_Virtual_Appliance: 148.147.162.5 
+2015-12-09 15:12:34,133 INFO  [Logger] Input ID from OVF is : ip0 Input ID found on UI: vami.ip0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-12-09 15:12:34,133 INFO  [Logger] IP as textbox.Not as foue parts ..  
+2015-12-09 15:12:34,380 INFO  [Logger] Filled IP 148.147.162.225 for ID: vami.ip0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-12-09 15:12:34,680 INFO  [Logger] Input ID from OVF is : netmask0 Input ID found on UI: vami.netmask0.Secure_Access_Link_Gateway_Virtual_Appliance-inputEl 
+2015-12-09 15:12:34,680 INFO  [Logger] Default field 31 
+2015-12-09 15:12:34,802 INFO  [Logger] Read from file inputsm.properties for vami.netmask0.Secure_Access_Link_Gateway_Virtual_Appliance: 255.255.255.0 
+2015-12-09 15:12:35,201 INFO  [Logger] Input ID from OVF is : ip1 Input ID found on UI:  
+2015-12-09 15:12:35,202 INFO  [Logger] Default field 32 
+2015-12-09 15:12:35,619 INFO  [Logger] Input ID from OVF is : netmask1 Input ID found on UI:  
+2015-12-09 15:12:35,619 INFO  [Logger] Default field 33 
+2015-12-09 15:12:37,863 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 15:12:38,224 INFO  [Logger] Clicked on: VM Network 
+2015-12-09 15:12:38,828 INFO  [Logger] Opacity of button Deploy :  is: 1.0 
+2015-12-09 15:12:38,884 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:12:38,970 INFO  [Logger] Clicked on : Deploy   
+2015-12-09 15:12:41,469 INFO  [Logger] Accepted EULA ..  
+2015-12-09 15:12:41,469 INFO  [Logger] Accepted EULA 
+2015-12-09 15:19:29,860 INFO  [Logger] Task completed successfully..  
+2015-12-09 15:19:30,161 INFO  [Logger] VM Deploy Status :;Download/Extract OVA :;Deployment :;Create Host Network task :;Check Resource before VMDK upload :;Prepare OVA file task :;Create Environment File :;Create VM and upload VMDK files task :;Create Environment ISO :;Attach Environment ISO to VM :;Ready to reconfigure VM :;Starting VM :;Running Sanity test :;Detach Environment ISO from VM :;READY_TO_UPDATE_SERVICES_PORT_VM_TASK :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy :;VM Deploy Completed 
+2015-12-09 15:19:30,311 INFO  [Logger] Total time taken in seconds is less than: 222 
+2015-12-09 15:19:35,312 INFO  [Logger] Completed adding VM SecureAccessLinkGateway with IP 148.147.162.225 
+2015-12-09 15:19:35,313 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:19:35,313 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:19:35,313 INFO  [Logger]                              Editing VM to given Location and Host                             
+2015-12-09 15:19:50,802 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:19:54,320 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:19:59,085 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:20:00,999 INFO  [Logger] Opacity of button Edit is: 1.0 
+2015-12-09 15:20:01,039 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:20:01,085 INFO  [Logger] Clicked on : Edit 
+2015-12-09 15:20:01,415 INFO  [Logger] Clicked on - Edit VM 
+2015-12-09 15:20:03,826 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:20:03,866 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:20:03,916 INFO  [Logger] Clicked on :  
+2015-12-09 15:20:17,437 INFO  [Logger] *************************End of test caseEdited VM Successfully******************************
+
+ 
+2015-12-09 15:20:17,438 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:20:22,439 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:20:22,439 INFO  [Logger]                              Stop VM to given Location and Host                             
+2015-12-09 15:20:37,875 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:20:41,435 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:20:46,188 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:20:49,514 INFO  [Logger] Opacity of button Stop is: 1.0 
+2015-12-09 15:20:49,551 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:20:49,594 INFO  [Logger] Clicked on : Stop 
+2015-12-09 15:20:49,956 ERROR [Logger] Action being performed: Are you sure you want to stop vm(s) ? 
+2015-12-09 15:20:50,549 INFO  [Logger] Confirmation:  
+2015-12-09 15:21:02,157 INFO  [Logger] *************************End of test caseStopped VM successfully******************************
+
+ 
+2015-12-09 15:22:02,161 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:22:07,162 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:22:07,162 INFO  [Logger]                              Start VM to given Location and Host                             
+2015-12-09 15:22:22,594 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:22:25,969 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:22:30,615 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:22:32,561 INFO  [Logger] Opacity of button Start is: 1.0 
+2015-12-09 15:22:32,598 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:22:32,641 INFO  [Logger] Clicked on : Start 
+2015-12-09 15:22:33,000 ERROR [Logger] Action being performed: Are you sure you want to start vm(s) ? 
+2015-12-09 15:22:33,591 INFO  [Logger] Confirmation:  
+2015-12-09 15:22:45,229 INFO  [Logger] *************************End of test caseStarted VM successfully******************************
+
+ 
+2015-12-09 15:24:15,233 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:24:20,234 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:24:20,234 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-09 15:24:35,708 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:24:39,013 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:24:43,667 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:24:46,264 INFO  [Logger] Opacity of button Re-establish Connection is: 1.0 
+2015-12-09 15:24:46,304 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:24:46,343 INFO  [Logger] Clicked on : Re-establish Connection 
+2015-12-09 15:24:47,007 INFO  [Logger] Read from file inputsm.properties for UName: admin 
+2015-12-09 15:24:47,008 INFO  [Logger] Read from file inputsm.properties for SALPWD: admin01 
+2015-12-09 15:24:48,476 INFO  [Logger] Opacity of button  is: 1.0 
+2015-12-09 15:24:48,514 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:24:48,555 INFO  [Logger] Clicked on :  
+2015-12-09 15:25:25,556 ERROR [Logger] Task failed ..  
+2015-12-09 15:25:25,556 INFO  [Logger] Failed test. Check screenshot for the same. 
+2015-12-09 15:25:25,684 ERROR [Logger] VM Trust Establishment Status :;CDRom Attach :;Invoke Refresh Plugin :;VM Trust Establishment :;VM Trust Establishment :;VM Trust Establishment failed 
+2015-12-09 15:25:25,818 ERROR [Logger] Somthing went wrong. Check Screenshot. 
+2015-12-09 15:25:26,013 INFO  [Logger] Total time taken in seconds is less than: 24 
+2015-12-09 15:25:26,014 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:25:31,015 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:25:31,015 INFO  [Logger]                              Refresh VM to given Location and Host                             
+2015-12-09 15:25:46,492 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:25:49,876 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:25:54,577 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:25:57,022 INFO  [Logger] Opacity of button Refresh VM is: 1.0 
+2015-12-09 15:25:57,083 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:25:57,153 INFO  [Logger] Clicked on : Refresh VM 
+2015-12-09 15:26:38,276 INFO  [Logger] Task completed successfully..  
+2015-12-09 15:26:38,410 INFO  [Logger] VM Refresh Status :;VM Refresh :;Retrieve host credentials :;Retrieve VM information :;Updating VM information in SDM Inventory :;Updating VM information in Inventory :;VM Refresh :;VM Refresh :;VM Refresh Completed 
+2015-12-09 15:26:38,580 INFO  [Logger] Total time taken in seconds is less than: 18 
+2015-12-09 15:26:39,080 INFO  [Logger] *************************End of test caseVM refreshed Successfully******************************
+
+ 
+2015-12-09 15:26:39,080 INFO  [Logger] Reference Input : SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova 
+2015-12-09 15:26:39,080 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:26:39,080 INFO  [Logger]                              Delete VM to given Location and Host                             
+2015-12-09 15:26:54,575 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:26:57,982 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:27:02,436 INFO  [Logger] Entries on VM tree : 10 
+2015-12-09 15:27:04,343 INFO  [Logger] Opacity of button Delete is: 1.0 
+2015-12-09 15:27:04,379 INFO  [Logger] Is element enabled: true 
+2015-12-09 15:27:04,425 INFO  [Logger] Clicked on : Delete 
+2015-12-09 15:27:04,757 ERROR [Logger] Action being performed: Delete will power off the vm(s) and delete from host.Are you sure you want to delete vm(s) ? 
+2015-12-09 15:27:05,378 INFO  [Logger] Confirmation:  
+2015-12-09 15:27:16,997 INFO  [Logger] *************************End of test caseDeleted VM successfully******************************
+
+ 
+2015-12-09 15:27:18,072 INFO  [Logger] Changed properties file successfully ..  
+2015-12-09 15:27:18,072 INFO  [Logger] 148.147.162.225 IP is made WhiteList 
+2015-12-09 15:27:25,547 INFO  [Logger] InnerThread: Incremented Count in File 
+2015-12-09 15:27:25,548 INFO  [Logger] InnerThread: Choosen OVA  
+2015-12-09 15:27:25,549 INFO  [Logger] IPs available for Installations: 148.147.162.221 
+2015-12-09 15:27:25,549 INFO  [Logger] IPs available for Installations: 148.147.162.225 
+2015-12-09 15:27:25,549 INFO  [Logger] *************************Started Testing****************************** 
+2015-12-09 15:27:25,549 INFO  [Logger]                              InnerThread: Finding Available IP for Next VM                             
+2015-12-09 15:27:31,329 INFO  [Logger] Logged in successfully to SMGR: https://pdev55vm2.smgrdev.avaya.com 
+2015-12-09 15:27:43,915 INFO  [Logger] Read from file input.properties for AddHostHostName:: 148.147.162.175 
+2015-12-09 15:27:47,283 INFO  [Logger] Entries on VM tree : 9 
+2015-12-09 15:27:50,011 INFO  [Logger] InnerThread: Checking if IP is assigned to any VM or not. 
+2015-12-09 15:27:50,245 INFO  [Logger] Checking whether IP is already in use or not.. 
+2015-12-09 15:27:50,246 INFO  [Logger] 148.147.162.225 IP is available 
+2015-12-09 15:27:50,247 INFO  [Logger] Changed properties file successfully ..  
+2015-12-09 15:27:50,247 INFO  [Logger] 148.147.162.225 IP is made BlackList 
+2015-12-09 15:27:50,247 INFO  [Logger] IP is BlackListed as it will be used to install next VM 
+2015-12-09 15:27:50,247 INFO  [Logger] InnerThread: Choosen WhiteListed IP 148.147.162.225 
+2015-12-09 15:27:50,248 INFO  [Logger] InnerThread: Changed XML File Successfully 
+2015-12-09 15:27:51,307 INFO  [Logger] InnerThread: Closing current instance of Browser and starting execution of test with changed XML 
+2015-12-09 15:27:51,611 INFO  [Logger] InnerThread: Test Started 
+2015-12-09 15:27:51,611 INFO  [Logger] Thread-4 22 Start 

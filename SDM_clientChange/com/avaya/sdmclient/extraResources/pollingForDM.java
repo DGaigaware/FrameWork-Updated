@@ -46,6 +46,7 @@ public class pollingForDM {
 					if(s.contains(su1) || s.contains(su2)){
 						System.out.println("Info: "+s);
 						//throw new MyException("Passed .. ");
+						sb = true;
 					}
 
 				}

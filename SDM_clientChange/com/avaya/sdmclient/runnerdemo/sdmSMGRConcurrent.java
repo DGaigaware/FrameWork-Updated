@@ -54,8 +54,9 @@ public class sdmSMGRConcurrent {
 			obj.debugLogging("Checking if any errors are occurring or not .. ", "Info");
 
 			// Confirm the dialogue box. Please see method declaration for more info .. 
-			obj.confirmDialogBox(drive);
+			//obj.confirmDialogBox(drive);
 			Thread.sleep(450);
+			//obj.checker(drive, "Location", locator.getProperty(""), 1, locator.getProperty(""));
 			obj.debugLogging("Location added successfully .. ", "Info");
 			//obj.refreshItems(drive, "AddLocation");
 			
@@ -399,7 +400,7 @@ public class sdmSMGRConcurrent {
 			Thread.sleep(2500);
 			// Select footprint related to each element
 			obj.selectFP(drive, shortVMName);
-			
+			Thread.sleep(4500);
 			//Uptill here
 			
 			//Next Page
