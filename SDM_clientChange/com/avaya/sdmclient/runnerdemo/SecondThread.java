@@ -1,26 +1,23 @@
 package com.avaya.sdmclient.runnerdemo;
 
 	import java.io.FileInputStream;
-	import java.io.IOException;
-	import java.util.List;
-	import java.util.Properties;
+import java.io.IOException;
+import java.util.Properties;
 
-	import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.ParserConfigurationException;
 
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.JavascriptExecutor;
-	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.firefox.FirefoxDriver;
-	import org.testng.annotations.BeforeClass;
-	import org.testng.annotations.Parameters;
-	import org.testng.annotations.Test;
-	import org.xml.sax.SAXException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
-	import com.avaya.sdmclient.Settings;
-	import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.Settings;
+import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
-import com.avaya.sdmclient.vm.VM;
 
 	public class SecondThread {
 		

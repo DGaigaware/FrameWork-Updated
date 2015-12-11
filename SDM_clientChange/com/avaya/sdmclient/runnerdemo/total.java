@@ -32,7 +32,7 @@ public class total {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	
-	/*@Test(description="Adding Location",priority=0)
+	@Test(description="Adding Location",priority=0)
 	public void addLocation() throws IOException, InterruptedException, MyException {
 
 		logClass.startTestCase("Add a new Location on SDM");
@@ -59,7 +59,7 @@ public class total {
 
 
 	@Test(description="Editing Location",priority=1)
-	public void editLocation() throws IOException, InterruptedException{
+	public void editLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Edit Location on SDM");
 
@@ -88,7 +88,7 @@ public class total {
 
 
 	@Test(description="Deleting Location",priority=2)
-	public void deleteLocation() throws IOException, InterruptedException{
+	public void deleteLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Delete Location on SDM");
 
@@ -105,9 +105,9 @@ public class total {
 		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Deleted Location");
-	}*/
+	}
 
-/*
+
 	@Test(description="Adding Host to given Location",priority=3)
 	public void addHost() throws IOException, InterruptedException, MyException{
 
@@ -115,7 +115,7 @@ public class total {
 
 		obj.goToSDMCliURL(driver);
 
-		if(obj.checkLocationOrHost(driver, obj.readFromFile("input.properties", "AddLocationName:"))){
+		if(obj.checkPresenceOfLocationOrHostOrVM(driver, obj.readFromFile("input.properties", "AddLocationName:"))){
 			//driver.navigate().refresh();
 			obj.goToSDMCliURL(driver);
 			//addLocation();
@@ -192,7 +192,7 @@ public class total {
 
 	@Test(description="Deleting Host to given Location",priority=5)
 
-	public void deleteHost() throws IOException, InterruptedException{
+	public void deleteHost() throws IOException, InterruptedException, MyException{
 		logClass.startTestCase("Deleting Host to given Location");
 
 		obj.goToSDMCliURL(driver);
@@ -208,7 +208,7 @@ public class total {
 		obj.confirmDialogBox(driver);
 
 		logClass.endTestCase("Deleted Host");
-	}*/
+	}
 
 	@Test(description="Adding VM to given Location and Host",priority=8)
 
