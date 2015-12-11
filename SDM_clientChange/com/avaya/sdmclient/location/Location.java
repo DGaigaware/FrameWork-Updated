@@ -21,115 +21,116 @@ import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 
 public class Location {
-	Settings obj = new Settings();
-	WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
+	static Settings obj = new Settings();
+	private static WebDriver driver = new FirefoxDriver(obj.selectProfile("Selenium"));
 	Properties locator = null;
 	@BeforeClass(alwaysRun=true)
 	public void setup() throws IOException, InterruptedException
 	{
+		
 		locator=new Properties();
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
-	@Test(description="Adding Location")
-	public void _AddLocation() throws IOException, InterruptedException, MyException {
-
-		driver.manage().timeouts().implicitlyWait(4500, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
-
+	//WebDriver driver = driverGetter.driver;
+	//Add location
+	@Test(description="Adding Location",priority=0)
+	public void addLocation() throws IOException, InterruptedException, MyException {
+		
 		logClass.startTestCase("Add a new Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSDMCliURL(getDriver());
 
-		driver.findElement(By.xpath(locator.getProperty("LocationAdd"))).click();
-		logClass.info("Adding new Location");
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationAdd"));
+		obj.debugLogging("Adding new Location .. ", "Info");
 
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationName"))).sendKeys(obj.readFromFile("input.txt", "NewLocation"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationAddress"))).sendKeys(obj.readFromFile("input.txt", "FAddress"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCity"))).sendKeys(obj.readFromFile("input.txt", "FCity"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationState"))).sendKeys(obj.readFromFile("input.txt", "FState"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationZIP"))).sendKeys(obj.readFromFile("input.txt", "FZIP"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCountry"))).sendKeys(obj.readFromFile("input.txt", "FCountry"));
-
+		// Find all ID and fill values for Location
+		obj.findIDandFillValues(getDriver(), "input.properties", "AddLocation");
 		Thread.sleep(250);
-		driver.findElement(By.xpath(locator.getProperty("LocationSave"))).click();
-		logClass.info("Saved New Location");
+		obj.debugLogging("Filled values .. ", "Info");
+		
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationSave"));
+		obj.debugLogging("Checking if any errors are occurring or not .. ", "Info");
 
-		obj.errorBox(driver, obj.checkError(driver));
+		//obj.confirmDialogBox(driver);
+		Thread.sleep(450);
+		obj.debugLogging("Location added successfully .. ", "Info");
+		//obj.refreshItems(drive, "AddLocation");
+		
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationAdd"));
+		obj.debugLogging("Adding new Location .. ", "Info");
+
+		// Find all ID and fill values for Location
+		obj.findIDandFillValues(getDriver(), "input.properties", "AddLocation1");
+		Thread.sleep(250);
+		obj.debugLogging("Filled values .. ", "Info");
+		
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationSave"));
+		Thread.sleep(450);
+		obj.debugLogging("Location added successfully .. ", "Info");
+
+		obj.errorBox(getDriver(), obj.checkError(getDriver()));
 		logClass.endTestCase("Added a new Location");
 
 	}
 
-
+	// Edit location	
 	@Test(description="Editing Location",priority=1)
-	public void _EditLocation() throws IOException, InterruptedException, MyException{
+	public void editLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Edit Location on SDM");
+		obj.goToSDMCliURL(getDriver());
+		
+		obj.findLocationInGrid(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationEdit"));
+		
+		// Find all ID and then fill values for editing location
+		obj.findIDandFillValues(getDriver(), "input.properties", "EditLocation");
+		obj.waitForPresenceOfElement(getDriver(), By.xpath(locator.getProperty("LocationSaveEdit")));
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
-
-		obj.findLocationInGrid(driver, "testLoc");
-
-		driver.findElement(By.xpath(locator.getProperty("LocationEdit"))).click();
-
-		driver.findElement(By.xpath(locator.getProperty("LocationAddressEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationAddressEdit"))).sendKeys(obj.readFromFile("input.txt", "NewAddress"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCityEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCityEdit"))).sendKeys(obj.readFromFile("input.txt", "NewCity"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationStateEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationStateEdit"))).sendKeys(obj.readFromFile("input.txt", "NewState"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationZIPEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationZIPEdit"))).sendKeys(obj.readFromFile("input.txt", "NewZIP"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).clear();
-		driver.findElement(By.xpath(locator.getProperty("LocationCountryEdit"))).sendKeys(obj.readFromFile("input.txt", "NewCountry"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
-		driver.findElement(By.xpath(locator.getProperty("LocationSaveEdit"))).click();
-
-		driver.switchTo().activeElement();
-		driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
-		logClass.info("Saved Location");
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationSaveEdit"));
+		Thread.sleep(450);
+		obj.confirmDialogBox(getDriver());
+		obj.debugLogging("Location edited successfully .. ", "Info");
 
 		logClass.endTestCase("Edited Location");
 	}
 
-
+	// Delete location
 	@Test(description="Deleting Location",priority=2)
-	public void _DeleteLocation() throws IOException, InterruptedException, MyException{
+	public void deleteLocation() throws IOException, InterruptedException, MyException{
 
 		logClass.startTestCase("Delete Location on SDM");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
-		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		obj.goToSDMCliURL(getDriver());
 
-		obj.findLocationOrHost(driver, "VM Management");
+		obj.findLocationOrHost(getDriver(), "VM Management");
+		obj.findLocationInGrid(getDriver(), obj.readFromFile("input.properties", "AddLocation1Name:"));
 
-		obj.findLocationInGrid(driver, obj.readFromFile("input.txt", "Location"));
-
-		driver.findElement(By.xpath(locator.getProperty("LocationDelete"))).click();
-
-		obj.confirmDialogBox(driver);
+		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationDelete"));
+		Thread.sleep(450);
+		obj.confirmDialogBox(getDriver());
+		Thread.sleep(2500);
+		//check whether location is present or not
+		if(!obj.checkPresenceOfLocationOrHostOrVM(getDriver(), obj.readFromFile("input.properties", "AddLocation1Name:")))
+			obj.debugLogging("Location deleted successfully .. ", "Info");
+		else
+			obj.debugLogging("Error occurred while deleting location.\nPlease Check screenshot.", "Error");
 
 		logClass.endTestCase("Deleted Location");
+		//driver.quit();
+	}
+	/**
+	 * @return the driver
+	 */
+	public static WebDriver getDriver() {
+		return driver;
+	}
+	/**
+	 * @param driver the driver to set
+	 */
+	public static void setDriver(WebDriver driver) {
+		Location.driver = driver;
 	}
 
+	
 }

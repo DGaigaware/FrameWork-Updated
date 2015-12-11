@@ -417,7 +417,7 @@ public class sdmSMGRConcurrent {
 
 			obj.deployButtonClickForVM(drive);
 			Thread.sleep(450);
-			obj.findButton(drive);
+			obj.findEULAAcceptButton(drive);
 			logClass.info("Accepted EULA");
 			
 			//Adding code to get the same page as before

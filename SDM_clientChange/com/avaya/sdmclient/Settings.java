@@ -37,6 +37,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -64,7 +65,8 @@ public class Settings {
 		driver.manage().window().maximize();
 		driver.get(locator.getProperty("SDMCliURL"));
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
-		logClass.info("Clicked on VM management");
+		debugLogging("Clicked on VM Management", "Info");
+		//logClass.info("Clicked on VM management");
 		driver.manage().timeouts().implicitlyWait(11500, TimeUnit.MILLISECONDS);
 	}
 	
@@ -87,8 +89,9 @@ public class Settings {
 		String failureImageFileName=workingDirectory+ File.separator+"Screenshots"+File.separator+"Screenshots"+ dateFormat.format(new java.util.Date())+File.separator +gcalendar.get(Calendar.HOUR)+gcalendar.get(Calendar.MINUTE)+"_"+gcalendar.getTimeInMillis()+".png";
 		File failureImageFile=new File(failureImageFileName);
 		FileUtils.moveFile(imageFile, failureImageFile);
-		logClass.error("Something went wrong :(");
-		logClass.info("Check Screenshot for the same");
+		debugLogging("Somthing went wrong. Check Screenshot.", "Error");
+//		logClass.error("Something went wrong :(");
+//		logClass.info("Check Screenshot for the same");
 	}
 
 	//Read inputs from file (Firstly it was only from text file,then added code to take input from properties file)
@@ -114,7 +117,8 @@ public class Settings {
 		pr.load(new FileReader(file));
 		
 		String output = pr.getProperty(findProperty);
-		System.out.println("Read from file "+fileName +" for "+findProperty+": "+output);
+		debugLogging("Read from file "+fileName +" for "+findProperty+": "+output, "Info");
+		//System.out.println("Read from file "+fileName +" for "+findProperty+": "+output);
 		return output;
 	}
 	
@@ -190,7 +194,7 @@ public class Settings {
 		float opacity = 0;
 		String script2 = "var nl = document.getElementById(\"frmVMdeployment\").querySelectorAll('[id^=\"panel-\"]');return nl;";
 		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		//System.out.println(elem2.size());
 		
 		String scr = "var nl = document.getElementById(\""+elem2.get(elem2.size()-1).getAttribute("id").replace("-targetEl", "")+"\").querySelectorAll('[id^=\"button-\"]'); return nl;";
 		ArrayList<WebElement> ele = (ArrayList<WebElement>) js.executeScript(scr);
@@ -221,7 +225,8 @@ public class Settings {
 		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
 		List<String> tm = new ArrayList<>();
 		boolean b = true;
-		System.out.println("Entries on Left Tree: "+cells.size());
+		debugLogging("Entries on VM tree : "+cells.size(), "Info");
+		//System.out.println("Entries on Left Tree: "+cells.size());
 
 		for(WebElement e : cells)
 		{
@@ -233,7 +238,8 @@ public class Settings {
 		}
 
 		if(!tm.contains(input)){
-			System.out.println("Couldn't Find Location or host in Tree: "+input);
+			debugLogging("Couldn't Find entry in Tree: "+input, "Error");
+			//System.out.println("Couldn't Find Location or host in Tree: "+input);
 			b=false;
 		}
 
@@ -261,8 +267,9 @@ public class Settings {
 		}
 		
 		else{
-			System.out.println("Please check whether location name is null or location is present or not.");
-			logClass.error("Error occurred: Either location name or host name is null or location or host does not exist ..");
+			debugLogging("Either location name or host name is null or location or host does not exist ..", "Error");
+//			System.out.println("Please check whether location name is null or location is present or not.");
+//			logClass.error("Error occurred: Either location name or host name is null or location or host does not exist ..");
 			throw new MyException("Error occurred: Either location name or host name is null or location or host does not exist ..");
 		}
 	}
@@ -284,13 +291,14 @@ public class Settings {
 				if(e.getText().trim().contains(locationName))
 				{
 					e.click();
-					System.out.println("Clicked on "+locationName);
+					//System.out.println("Clicked on "+locationName);
 				}
 			}
 		}
 		else{
-			System.out.println("Please check whether location name is null or location is present or not.");
-			logClass.error("Error occurred: Either location name is null or location does not exist ..");
+			debugLogging("Either location name is null or location does not exist ..", "Error");
+//			System.out.println("Please check whether location name is null or location is present or not.");
+//			logClass.error("Error occurred: Either location name is null or location does not exist ..");
 			throw new MyException("Error occurred: Either location name is null or location does not exist ..");
 		}
 	}
@@ -311,8 +319,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether host name is null or host is present or not.");
-			logClass.error("Error occurred: Either host name is null or host does not exist ..");
+			debugLogging("Either host name is null or host does not exist ..", "Error");
+//			System.out.println("Please check whether host name is null or host is present or not.");
+//			logClass.error("Error occurred: Either host name is null or host does not exist ..");
 			throw new MyException("Error occurred: Either host name is null or host does not exist ..");
 		}
 	}
@@ -333,8 +342,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether VM name is null or VM is present or not.");
-			logClass.error("Error occurred: Either VM name is null or VM does not exist ..");
+			debugLogging("Either VM name is null or VM does not exist ..", "Error");
+//			System.out.println("Please check whether VM name is null or VM is present or not.");
+//			logClass.error("Error occurred: Either VM name is null or VM does not exist ..");
 			throw new MyException("Error occurred: Either VM name is null or VM does not exist ..");
 		}
 	}
@@ -355,8 +365,9 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Please check whether VCenter is null or VCenter is present or not.");
-			logClass.error("Error occurred: Either VCenter is null or VCenter does not exist ..");
+			debugLogging("Either VCenter is null or VCenter does not exist ..", "Error");
+//			System.out.println("Please check whether VCenter is null or VCenter is present or not.");
+//			logClass.error("Error occurred: Either VCenter is null or VCenter does not exist ..");
 			throw new MyException("Error occurred: Either VCenter is null or VCenter does not exist ..");
 		}
 	}
@@ -374,8 +385,9 @@ public class Settings {
 			if(e.getText().contains(toBeSelected))
 			{
 				//System.out.println("Selected : "+e.getText());
+				debugLogging("Clicked on: "+e.getText(), "Info");
 				e.click();
-				System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
+				//System.out.println("Clicked on: "+e.getText()+e.getAttribute("id"));
 			}
 		}
 	}
@@ -410,8 +422,9 @@ public class Settings {
 
 		for(int i=0;i<count;i++)
 		{
-			System.out.println("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
-			logClass.error("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
+			debugLogging("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"), "Error");
+//			System.out.println("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
+//			logClass.error("Reason For Failure : "+tempcellsRow.get(index[i]).getText().toString().replaceAll("[\r\n]+", " :"));
 		}
 	}
 
@@ -454,6 +467,7 @@ public class Settings {
 		}
 	}
 
+	// Check whether errorbox is present or not
 	public boolean checkError(WebDriver driver){
 		boolean b = false;
 		try{
@@ -466,6 +480,7 @@ public class Settings {
 		return b;
 	}
 
+	// Handle error box and take screenshot
 	public String errorBox(WebDriver driver,boolean check) throws IOException, MyException{
 		String errMsg = "";
 		if(check)
@@ -474,12 +489,13 @@ public class Settings {
 				if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
 				{
 					driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText();
-					logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
-					logClass.error("Error : Check the Log and Screenshot for the same.");
-					System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					debugLogging(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Error");
+					//logClass.error(driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					//logClass.error("Error : Check the Log and Screenshot for the same.");
+					debugLogging("Error : Check the Log and Screenshot for the same.", "Error");
+					//System.out.println("Error Message : "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					errMsg = driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText()+"\nCheck Screenshot for the same.\n";
 					takeScreenShotForDriver(driver);
-					logClass.info("Screenshot taken");
 
 					driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
 					System.out.println("Confirmed");
@@ -502,23 +518,27 @@ public class Settings {
 		return a.get(a.size()-1).getAttribute("id");
 	}
 
+	// To check whether to go forward in execution or not
 	public void exec(boolean in) {
 		if(in == true) {
 			return;
 		}
-		System.out.println("Can not Execute Further. Check the Log for the same.");
-		logClass.error("Check Log and Screenshot for the same.");
+		debugLogging("Can not execute further. Check screnshot for the same.", "Error");
+//		System.out.println("Can not Execute Further. Check the Log for the same.");
+//		logClass.error("Check Log and Screenshot for the same.");
 		
 		//System.exit(0);
 	}
 
+	// Confirm the dialogue box
 	public void confirmDialogBox(WebDriver driver) throws IOException{
 		driver.switchTo().activeElement();
 
 		try{
 			if(driver.findElement(By.id(locator.getProperty("DialogueBox"))).isDisplayed())
 				{
-					logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+					debugLogging("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Error");
+					//logClass.info("Action being performed: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 					//System.out.println("Action being performed: "+driver.findElement(By.xpath(locator.getProperty(".//*[@id='messagebox-1001-displayfield-inputEl']")).getText());
 				}
 		}
@@ -538,7 +558,8 @@ public class Settings {
 			driver.switchTo().activeElement();
 			Thread.sleep(450);
 			//System.out.println(driver.switchTo().activeElement().getText());
-			logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
+			debugLogging("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText(), "Info");
+			//logClass.info("Confirmation: "+driver.findElement(By.id(locator.getProperty("DialogueBoxText"))).getText());
 			driver.findElement(By.xpath(locator.getProperty("ConfButton"))).click();
 			//System.out.println("Confirmed");
 		}
@@ -566,6 +587,7 @@ public class Settings {
 		return ans;
 	}
 
+	// Click on combo box and select a value from dropdown
 	public void comboClick(WebDriver driver, String selCombo,String input) throws IOException, InterruptedException{
 		String cmbid = comboID(driver, selCombo);
 		
@@ -582,16 +604,18 @@ public class Settings {
 			//System.out.println(e.getText()+ "\n Test \n");
 			if(e.getText().equals(input))
 			{
-				System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
+				debugLogging("Selected value for: "+selCombo+" "+input+" "+e.getText(), "Info");
+				//System.out.println("Selected value for: "+selCombo+" "+input+" "+e.getText());
 				e.click();
 			}
 		}
 		//boundListSelect(driver, input, selBoundList(driver));
 	}
 	
+	//Find ID of combo box
 	public String comboID(WebDriver driver,String select){
 		String returnID = "";
-		String sc1 = "var nl = document.getElementById(\"confignewvm\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
+		String sc1 = "var nl = document.getElementById(\"VMdepfrmDynPart-body\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
 		
 		JavascriptExecutor exec = (JavascriptExecutor) driver;
 		List<WebElement> allPanels = (List<WebElement>) exec.executeScript(sc1);
@@ -603,7 +627,7 @@ public class Settings {
 				//System.out.println(e.getText());
 				//System.out.println(e.getAttribute("id"));
 				returnID = e.getAttribute("id").replace("labelEl", "inputEl");
-				System.out.println(returnID);
+				//System.out.println("ID for selected ComboBox '"+select+"' is: "+returnID);
 			}
 		}
 		return returnID;
@@ -615,7 +639,8 @@ public class Settings {
 		//Thread.sleep(45000);
 		//_closeWindow(driver);
 		wait.until(ExpectedConditions.textToBePresentInElement(locator, Test));
-		logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+		debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Info");
+		//logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 		return driver.findElement(locator).getText();
 	}
 
@@ -630,7 +655,8 @@ public class Settings {
 		driver.findElement(By.linkText(locator.getProperty("Status Details"))).click();
 		*/
 		chooseLink(driver, VMName,vmOrHost,linkText);
-		logClass.info("Checking Status Details");
+		debugLogging("Checking status details ...", "Info");
+		//logClass.info("Checking Status Details");
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("vmDeployStatus"))));
 		driver.switchTo().activeElement();
@@ -638,6 +664,7 @@ public class Settings {
 		return fluentWait(locatorTo, driver, time, Test);
 	}
 	
+	//Choose link for particular VM or host ('Status Details')
 	public void chooseLink(WebDriver driver,String Name,String vmOrHost,String linkText) throws IOException, InterruptedException, MyException{
 		setup();
 		String id = "";
@@ -670,6 +697,7 @@ public class Settings {
 		//el.findElement(By.className("deployinprogress")).click();
 	}
 
+	// Maintain a list of OVA names in a seperate file
 	public void maintainedList(WebDriver driver,String ID) throws IOException, InterruptedException{
 		driver.findElement(By.id(ID)).click();
 		driver.findElement(By.id(ID)).sendKeys("random");
@@ -710,6 +738,7 @@ public class Settings {
 		
 	}
 	
+	// 
 	public void StatusCheck(WebDriver driver,String toBeChecked,int time) throws IOException, InterruptedException{
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -733,6 +762,7 @@ public class Settings {
 
 	}
 
+	// Close the window which is opened for status checking
 	public void closeWindow(WebDriver driver){
 		List<WebElement> elem = driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).findElement(By.id(("vmDeployStatus_header"))).findElement(By.id(("vmDeployStatus_header-innerCt"))).findElement(By.id(("vmDeployStatus_header-targetEl"))).findElements(By.tagName("div"));
 		//System.out.println(_elem.size());
@@ -745,6 +775,7 @@ public class Settings {
 		}
 	}
 	
+	// Reference panel for below operations
 	public List<String> getViewFrame(WebDriver driver,String input){
 		List<String> types = new ArrayList<>();
 		List<String> ret = new ArrayList<>();
@@ -803,6 +834,7 @@ public class Settings {
 		return ret;
 	}
 	
+	// Find ID and fill values in one go for every panel
 	public void findIDandFillValues(WebDriver driver,String filename,String input) throws IOException, InterruptedException{
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -851,6 +883,7 @@ public class Settings {
 		//System.out.println("After");
 	}
 	
+	// Refresh page by small button in paging toolbar of the page in SDM
 	public void refreshItems(WebDriver driver,String methodBy){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -880,10 +913,11 @@ public class Settings {
 		
 		waitForPresenceOfElement(driver, By.id(buttons.get(buttons.size()-1)));
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Refreshed page successfully.");
-			
+		//System.out.println("Refreshed page successfully.");
+		debugLogging("Page refreshed successfully..", "Info");
 	}
 
+	// OVF parsing logic for VM deployment
 		public void FillValues(String fileName,String filePath,WebDriver driver,String IP,String hostName) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -952,39 +986,39 @@ public class Settings {
 					Node attr = nlmap.get(i).item(j);
 					//System.out.println(_nlmap.get(i).toString());
 					if(attr.getNodeName().contains("vmw:qualifiers")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:password")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("boolean")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 					
 					else if(attr.getNodeValue().contains("ValueMap")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName()+ " = \"" + attr.getNodeValue() + "\"");
 						op[i][1] = "ValueMap";//attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 
 					else if(attr.getNodeName().contains("ovf:key")){
-						System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
+						//System.out.println(" " + i + " "+ j +attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
 						op[i][0] = attr.getNodeValue();
-						System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
+						//System.out.println("1st: "+op[i][1]+ " "+ op[i][0]);
 					}
 				}
 			}
 			
-			for(int i=0;i<op.length;i++)
-				System.out.println(op[i][0]);
+//			for(int i=0;i<op.length;i++)
+//				System.out.println(op[i][0]);
 			
 			//for(int i=0;i<nl.getLength()-5;i++)			// As last 5 Fields are not Visible in UI
 
@@ -992,69 +1026,77 @@ public class Settings {
 			{
 				//System.out.println(op[i][0]);
 				if(op[i][1]!=null && op[i][1].equals("Ip") && op[i][0].equals("ip0")){
-					System.out.println("Filled IP "+IP+" for VM " + i);
+					//System.out.println("Filled IP "+IP+" for VM " + i);
+					debugLogging("Filled IP "+IP+" for VM " + i, "Info");
 					AutoFillIP(driver, op[i][0],IP,fileName);
 				}
 				
 				else if(op[i][1]==null && op[i][0].equals("ip0")){
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println(id+" IP as textbox ..");
+					//System.out.println(id+" IP as textbox ..");
+					debugLogging("IP as textbox.Not as foue parts .. ", "Info");
 					driver.findElement(By.id(id)).clear();
 					driver.findElement(By.id(id)).sendKeys(IP);
-					System.out.println("Filled IP "+IP+" for ID: "+id);
+					//System.out.println("Filled IP "+IP+" for ID: "+id);
+					debugLogging("Filled IP "+IP+" for ID: "+id, "Info");
 				}
 				
 				else if(op[i][0].equalsIgnoreCase("hostname")){
-					System.out.println("Filled hostname for VM "+i + " "+hostName);
+					//System.out.println("Filled hostname for VM "+i + " "+hostName);
+					debugLogging("Filled hostname for VM "+i + " "+hostName, "Info");
 					autoFillhostnameforVM(driver, op[i][0], hostName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("Ip"))
 				{
 					//String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Going to IP " + i);
+					//System.out.println("Going to IP " + i);
+					debugLogging("'IP' type field " + i, "Info");
 					AutoFillIP(driver, op[i][0],readFromFile(fileName, op[i][0]),fileName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("true"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Password " + i);
+					//System.out.println("Password " + i);
 					//AutoFillPasswd(driver, op[i][0],fileName);
+					debugLogging("'Password' type field "+i, "Info");
 					autoFillPasswdforVM(driver, id, fileName);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("boolean"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("CheckBox " + i);
+					//System.out.println("CheckBox " + i);
 					//AutoFillCheckBox(driver, op[i][0]);
+					debugLogging("'Checkbox type field '"+i, "Info");
 					autoFillCheckBoxforVM(driver, id);
 				}
 				
 				else if(op[i][1]!=null && op[i][1].equals("ValueMap"))
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Combo " + i);
+					//System.out.println("Combo " + i);
 					//AutoFillCombo(driver, op[i][0],fileName);
+					debugLogging("Combobox type field "+i, "Info");
 					autoFillComboforVM(driver, id, fileName);
 				}
 				
 				else
 				{
 					String id = findIDandFillValuesForVM(driver, fileName, op[i][0]);
-					System.out.println("Default " + i);
+					//System.out.println("Default " + i);
 					//AutoFill(driver, op[i][0],fileName);
 					//System.out.println("a");
+					debugLogging("Default field "+i, "Info");
 					autoFilltextforVM(driver, id, fileName);
 					//System.out.println("b");
 				}
-				System.out.println("Loop: \n");
+				//System.out.println("Loop: \n");
 			}
 
 			//driver.findElement(By.xpath(locator.getProperty("NetWorkSelect"))).click();
 			selNetworkTabForVMinstallation(driver);
-			logClass.info("Selecting NetWorks");
 
 			for(int i=0;i<nlLabelNet.getLength();i++)
 			{
@@ -1064,6 +1106,7 @@ public class Settings {
 			System.out.println("Filled Values");
 		}
 		
+		// Fill default text box values for VM deployment
 		public void AutoFill(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
@@ -1108,7 +1151,7 @@ public class Settings {
 			}*/
 			returnID  = "ipfs"+id;
 			//driver.findElement(By.id("ipfs"+id));
-			System.out.println("Final ID: "+returnID);
+			System.out.println("Final ID for IP filling: "+returnID);
 
 			//System.out.println("Test");
 			List<WebElement> tempcellsCols = driver.findElement(By.id((returnID))).findElements(By.xpath(".//*[local-name(.)='td']"));
@@ -1124,6 +1167,7 @@ public class Settings {
 			//System.out.println("After Fill IP");
 		}
 
+		//Fill Combobox for VM deployment
 		public void AutoFillCombo(WebDriver driver,String input,String fileName) throws IOException, InterruptedException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
@@ -1148,6 +1192,7 @@ public class Settings {
 			boundListSelect(driver, readFromFile(fileName, input.toUpperCase()), selBoundList(driver));
 		}
 
+		// Fill password for VM deployment
 		public void AutoFillPasswd(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID1 = "";
@@ -1168,6 +1213,7 @@ public class Settings {
 			driver.findElement(By.id(("conf"+returnID1))).sendKeys(readFromFile(fileName, input));
 		}
 		
+		// Fill check box for VM deployment
 		public void AutoFillCheckBox(WebDriver driver,String input) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID1 = "";
@@ -1192,7 +1238,7 @@ public class Settings {
 	public void check(WebDriver driver,List<String> inputIP){
 
 		WebElement table = driver.findElement(By.id(locator.getProperty("VCVMList")));
-		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty(".//*[local-name(.)='td']")));
+		List<WebElement> cells = table.findElements(By.xpath(locator.getProperty("Column")));
 		System.out.println(cells.size()+"\n\n");
 		for(int i=0;i<inputIP.size();i++)
 		{
@@ -1208,21 +1254,25 @@ public class Settings {
 		}
 	}
 	
+	// Calculate short vm name from OVA name
 	public String shortVMName(String input){
 		String refInput = "";
 		
 		if(input.contains("-")){
 		    	refInput = input.substring(0, input.indexOf("-"));
-		    	System.out.println("RefInput: "+refInput);
+		    	//System.out.println("RefInput: "+refInput);
+		    	debugLogging("Reference Input : "+input, "Info");
 		}
 		else if(input.contains("_")){
 		    	refInput = input.substring(0, input.indexOf("_"));
-		    	System.out.println("RefInput: "+refInput);
+		    	//System.out.println("RefInput: "+refInput);
+		    	debugLogging("Reference Input : "+input, "Info");
 		}
 		 
 		return refInput;
 	}
 	
+	// choose OVF from a folder for different OVAs
 	public String chooseOVF(String input){
 		String returnStr = "";
 		String fPath = System.getProperty("user.dir")+"\\Third Party\\OVFs\\";
@@ -1247,7 +1297,8 @@ public class Settings {
 		    		if(s.substring(0,s.indexOf("-")).equalsIgnoreCase(refInput))
 		    		{
 		    			returnStr = s;
-		    			System.out.println("Choosen OVF: (-) "+returnStr);
+		    			//System.out.println("Choosen OVF: (-) "+returnStr);
+		    			debugLogging("Choosen OVF: (-) "+returnStr, "Info");
 		    		}
 		    	}
 		    	else if(s.contains("_")){
@@ -1255,12 +1306,14 @@ public class Settings {
 		    		{
 		    			returnStr = s;
 		    			System.out.println("Choosen OVF: (_) "+returnStr);
+		    			debugLogging("Choosen OVF: (_) "+returnStr, "Info");
 		    		}
 		    	}
 		    }
 		return fPath+returnStr;
 	}
 	
+	// Login to SMGR
 	public void loginToSite(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		driver.manage().window().maximize();
@@ -1268,66 +1321,72 @@ public class Settings {
 		//driver.get("https://pdev55vm2.smgrdev.avaya.com");
 		driver.get(locator.getProperty("SMGRURL"));
 		
-		driver.findElement(By.id("IDToken1")).sendKeys("admin");
-	    driver.findElement(By.id("IDToken2")).sendKeys("Avaya123$");
-	    driver.findElement(By.xpath(".//*[@id='SubmitButton']")).click();
-	    logClass.info("Logged in Successfully");
+		driver.findElement(By.id("IDToken1")).sendKeys(locator.getProperty("UserName"));
+	    driver.findElement(By.id("IDToken2")).sendKeys(locator.getProperty("PassWord"));
+	    driver.findElement(By.xpath(locator.getProperty("Submit"))).click();
+	    debugLogging("Logged in successfully to SMGR: "+locator.getProperty("SMGRURL"), "Info");
+	    //logClass.info("Logged in Successfully");
 	    
-	    driver.findElement(By.xpath(".//*[@id='Services_SoftwareManagement']/a")).click();
-	    
-	    driver.switchTo().frame("iframe0");
-	    
-	    driver.findElement(By.xpath(".//*[@id='vmMgmtId-textEl']")).click();
-		logClass.info("Clicked on VM management");
+	    driver.findElement(By.xpath(locator.getProperty("SDM"))).click();
+	    driver.switchTo().frame(locator.getProperty("IFrame"));
+	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
 		
 	}
 	
-	public void goHome(WebDriver driver) throws InterruptedException{
+	// Refresh the page and again click on VM mgmt
+	public void goHome(WebDriver driver) throws InterruptedException, IOException{
 		Thread.sleep(1000);
-		
+		setup();
 		/*driver.navigate().refresh();
 		logOut(driver);
 		loginToSite(driver);*/
 		
 		driver.switchTo().defaultContent();
-		WebElement e = driver.findElement(By.id("navIframe"));
+		//driver.findElement(By.id("naviframe_close_bar")).click();
+		WebElement e = driver.findElement(By.id(locator.getProperty("NavIframe")));
 		
 		//System.out.println("Ans"+eee.findElement(By.linkText("Solution Deployment Manager")).getText());
-
-		e.findElement(By.linkText("Solution Deployment Manager")).click();
+//		if(e.getAttribute("title").equals("Hide navigation tree"))
+//			debugLogging("Tree is already visible .. ", "Info");
+//		else
+//			e.findElement(By.linkText(locator.getProperty("SDMLink"))).click();
+		//e.findElement(By.linkText("Solution Deployment Manager")).click();
+		e.findElement(By.linkText(locator.getProperty("SDMLink"))).click();
 		Thread.sleep(1500);
-		
-		driver.switchTo().frame("iframe0");
-	    
-	    driver.findElement(By.xpath(".//*[@id='vmMgmtId-textEl']")).click();
-		logClass.info("Clicked on VM management");
+		driver.switchTo().frame(locator.getProperty("IFrame"));
+	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
 	}
 	
-	public void logOut(WebDriver driver){
-		driver.findElement(By.xpath(".//*[@id='logoff']")).click();
+	// Logout from SMGR
+	public void logOut(WebDriver driver) throws IOException, InterruptedException{
+		setup();
+		driver.findElement(By.xpath(locator.getProperty("LogOff"))).click();
 	}
 	
+	// Check focus of a button
 	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
-		System.out.println(driver.findElement(toLocate).getCssValue("opacity"));
+		System.out.println("Opacity of: "+driver.findElement(toLocate).getText()+" "+driver.findElement(toLocate).getCssValue("opacity"));
 		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
 			{
-				logClass.error("Something went wrong. Check Screenshot");
+				debugLogging("Something went wrong. Check Screenshot", "Info");
+				//logClass.error("Something went wrong. Check Screenshot");
 				//System.out.println("Something went wrong. Check Screenshot");
 				takeScreenShotForDriver(driver);
 			}
 	}
 	
-	public void findButton(WebDriver driver) throws InterruptedException{
+	// Find and click on EULA accept button
+	public void findEULAAcceptButton(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script2 = "var nl = document.getElementById(\"EulaAgreementWindow\").querySelectorAll('[id^=\"button\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
 		
 		/*System.out.println("Before");
 		System.out.println(elem2.size());*/
 		
 		List<String> buttons = new ArrayList<>();
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			//System.out.println(e.getText());
 			if(e.getAttribute("id").contains("btnEl") && driver.findElement(By.id(e.getAttribute("id"))).getText().equals("Accept"))
 			{
@@ -1340,10 +1399,11 @@ public class Settings {
 		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
 		Thread.sleep(750);
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Clicked");
-		logClass.info("Accepted EULA ,clicked.");
+		debugLogging("Accepted EULA .. ", "Info");
+		
 	}
 	
+	// Find all ID and fill values accordingly for any OVA deployment
 	public String findIDandFillValuesForVM(WebDriver driver,String filename,String inputIDfromOVF){
 		List<String> IDs = new ArrayList<>();
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1370,6 +1430,7 @@ public class Settings {
 					break;
 				}
 		}
+		debugLogging("Input ID from OVF is : "+inputIDfromOVF+" Input ID found on UI: "+returnID, "Info");
 		return returnID;
 	}
 	
@@ -1404,6 +1465,7 @@ public class Settings {
 		driver.findElement(By.id(id)).click();
 	}
 	
+	// Make ip black or white list
 	public void makeIPWhiteBlackList(String IP,String list) throws FileNotFoundException, IOException{
 		Properties pr=new Properties();
 		pr.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\Input Files\\black-whitelistedIP.properties"));
@@ -1416,29 +1478,31 @@ public class Settings {
         pr.store(out, "Changed TimeStamp: ");
         out.close();
         
-        System.out.println("Done Changing Properties File.");
-		logClass.info(IP+ " IP is made " + list );
-		System.out.println(IP + " IP is made " + list );
+        debugLogging("Changed properties file successfully .. ", "Info");
+        debugLogging(IP+ " IP is made " + list , "Info");
 	}
 	
+	// Select footprint for any OVA, if footprint is not available then it will skip that .. 
 	public void selectFP(WebDriver driver,String shortvmname) throws IOException, InterruptedException{
 		if(driver.findElement(By.xpath(locator.getProperty("FootPrint"))).getAttribute("disabled")==null)
 		{
 			driver.findElement(By.xpath(locator.getProperty("FootPrint"))).click();
 			Thread.sleep(450);
-			System.out.println(locator.getProperty("FP"+shortvmname));
+			debugLogging("Selected footprint: "+locator.getProperty("FP"+shortvmname), "Info");
+			//System.out.println(locator.getProperty("FP"+shortvmname));
 			boundListSelect(driver, locator.getProperty("FP"+shortvmname), selBoundList(driver));
 		}
 	}
 	
+	// to find MoreActions Button
 	public void findMoreActionsButton(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"confighostgrid\").querySelectorAll('[id^=\"button-\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		for(WebElement ee : elem2)
+		for(WebElement ee : elements)
 			{
 				if(ee.getText().equals("More Actions"))
 				{	//System.out.println(ee.getAttribute("id"));
@@ -1449,25 +1513,27 @@ public class Settings {
 			}
 	}
 	
+	// Select location for edit host
 	public void selectLocforEditHost(WebDriver driver) throws IOException, InterruptedException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"hostEditForm\").querySelectorAll('[id^=\"combobox\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		driver.findElement(By.id(elem2.get(0).getAttribute("id").concat("-inputEl"))).click();
+		driver.findElement(By.id(elements.get(0).getAttribute("id").concat("-inputEl"))).click();
 		//boundListSelect(driver, toBeSelected, selBoundList(driver));
 	}
 	
+	// Click on radio button for edit VM
 	public void editVMchooseFPorFQDN(WebDriver driver,String chooseOption){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
 		String script2 = "var nl = document.getElementById(\"VMEditForm\").querySelectorAll('[id^=\"radiofield\"]');return nl;";
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(script2);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(script2);
+		System.out.println(elements.size());
 		
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().contains(chooseOption))
 			{
 				System.out.println("Changing: "+e.getText());
@@ -1476,19 +1542,21 @@ public class Settings {
 		}
 	}
 	
+	// Click on any link from left menu
 	public void clickLinksOnLeftMenu(WebDriver driver,String linkText) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"menuitem\"]');return nl;";
 		
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elements.size());
 		
 		if(linkText!=null && !linkText.isEmpty())
 		{
-			for(WebElement e : elem2){
+			for(WebElement e : elements){
 				if(e.getText().equals(linkText))
 				{
 					//System.out.println("Changing: "+e.getText());
+					debugLogging("Clicked on: "+linkText, "Info");
 					e.click();
 					break;
 				}
@@ -1499,24 +1567,25 @@ public class Settings {
 		}
 	}
 	
+	// Fill values for edit VM
 	public void editVM(WebDriver driver,String IP,String FQDN){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.getElementById(\"VMEditForm-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
 		
-		ArrayList<WebElement> elem2 = (ArrayList<WebElement>) js.executeScript(sc);
-		System.out.println(elem2.size());
+		ArrayList<WebElement> elements = (ArrayList<WebElement>) js.executeScript(sc);
+		System.out.println(elements.size());
 		
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().equals("VM IP:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(IP);
 				break;
 			}
 		}
-		for(WebElement e : elem2){
+		for(WebElement e : elements){
 			if(e.getText().equals("VM FQDN:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).clear();
 				driver.findElement(By.id(e.getAttribute("id")+"-inputEl")).sendKeys(FQDN);
 				break;
@@ -1524,6 +1593,7 @@ public class Settings {
 		}
 	}
 
+	// Chek for success or failure i.e. deployment is failed or succeeded .. 
 	@SuppressWarnings("deprecation")
 	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int timeOutForException,boolean b,int noOfTimeOut,int counter,String linkText) throws MyException, IOException{
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(timeOutForException, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
@@ -1536,23 +1606,24 @@ public class Settings {
 				try{
 					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
-					System.out.println("SuccessTest");
+					//System.out.println("SuccessTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "Completed"));
-					System.out.println("SuccessTest Passed");
-					System.out.println("Task Completed Successfully..");
-					logClass.info("Task Completed Successfully..");
-					logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					//System.out.println("SuccessTest Passed");
+					debugLogging("Task completed successfully.. ", "Info");
+					//System.out.println("Task Completed Successfully..");
+					//logClass.info("Task Completed Successfully..");
+					debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Info");
+					//logClass.info(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					//check = true;
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
+					debugLogging("Total time taken in seconds is less than: "+(counter+1)*timeOutForException, "Info");
+					//System.out.println("Total time taken in seconds is less than: "+(counter+1)*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
 				
-				
-				
 				catch(Exception e){
 					//closeWindow(driver);
-					System.out.println("Testing for Completion or failure..");
+					//System.out.println("Testing for Completion or failure..");
 					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=false;
 					counter++;
@@ -1565,20 +1636,22 @@ public class Settings {
 				try{
 					//chooseLink(driver, vmName,"VM",linkText);
 					driver.switchTo().activeElement();
-					System.out.println("FailureTest");
+					//System.out.println("FailureTest");
 					wait.until(ExpectedConditions.textToBePresentInElement(locator, "failed"));
-					System.out.println("FailedTest");
-					System.out.println("Task Failed..");
-					logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
-					logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
+					debugLogging("Task failed .. ", "Error");
+					debugLogging("Failed test. Check screenshot for the same.", "Info");
+					//logClass.info("Failed test due to some issue .. Check Scrrenshot for the same.");
+					debugLogging(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"), "Error");
+					//logClass.error(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					check = true;
 					takeScreenShotForDriver(driver);
 					closeWindow(driver);
-					System.out.println("Total time taken in seconds: "+counter*timeOutForException);
+					debugLogging("Total time taken in seconds is less than: "+(counter+1)*timeOutForException, "Info");
+					//System.out.println("Total time taken in seconds: "+counter*timeOutForException);
 					counter = noOfTimeOut+1;
 				}
 				catch(Exception e){
-					System.out.println("Testing for failure or Completion..");
+					//System.out.println("Testing for failure or Completion..");
 					//System.out.println(driver.findElement(locator).getText().replaceAll("[\r\n]+", " :;"));
 					b=true;
 					counter++;
@@ -1588,13 +1661,14 @@ public class Settings {
 			}
 		}
 		else{
-			System.out.println("Timed out..");
+			//System.out.println("Timed out..");
+			debugLogging("Operation timed out .. ", "Error");
 			takeScreenShotForDriver(driver);
 			throw new MyException("Operation Timed out... ");
 		}
 		
 		if(check){
-			System.out.println("Completed task (failed).. ");
+			//System.out.println("Completed task (failed).. ");
 			throw new MyException("Test case failed .. Check screenshot for the same.");
 			//o = System.out.toString();println("Passed");
 		}
@@ -1605,6 +1679,7 @@ public class Settings {
 		
 	}
 	
+	// Click on sdm client from sdm client
 	public void clickComboSDMCli(WebDriver driver,String label){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"combobox\"]');return nl;";
@@ -1613,9 +1688,9 @@ public class Settings {
 		String tempID = "";
 		
 		for(WebElement e : elem2){
-			System.out.println(e.getAttribute("id")+" "+e.getText());
+			//System.out.println(e.getAttribute("id")+" "+e.getText());
 			if(e.getText().equals(label)){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				tempID = e.getAttribute("id").concat("-inputEl");
 				driver.findElement(By.id(tempID)).click();
 				break;
@@ -1623,6 +1698,7 @@ public class Settings {
 		}
 	}
 	
+	// default values for refresh VM and fill that values
 	public void refreshVMValues(WebDriver driver,String shortVMname,String inputFileName) throws IOException{
 		String uName = "";
 		String pwd = "";
@@ -1696,6 +1772,7 @@ public class Settings {
 
 	}
 	
+	// While updating VM, Find id of text box for file path
 	public void updateVMFilePath(WebDriver driver,String filePath){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.getElementById(\"panelselectOVALocalUpdateVM-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
@@ -1704,9 +1781,9 @@ public class Settings {
 		String tempID = "";
 		
 		for(WebElement e : elem2){
-			System.out.println(e.getAttribute("id")+" "+e.getText());
+			//System.out.println(e.getAttribute("id")+" "+e.getText());
 			if(e.getText().equals("Select bin file from Local SDM Client:")){
-				System.out.println(e.getAttribute("id"));
+				//System.out.println(e.getAttribute("id"));
 				tempID = e.getAttribute("id").concat("-inputEl");
 				break;
 			}
@@ -1716,6 +1793,7 @@ public class Settings {
 		driver.findElement(By.id(tempID)).sendKeys(filePath);;
 	}
 	
+	// Find EULA button
 	public void findButtonUpdate(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1739,10 +1817,11 @@ public class Settings {
 		waitForPresenceOfElement(driver, By.id(buttons.get(0)));
 		Thread.sleep(750);
 		driver.findElement(By.id(buttons.get(buttons.size()-1))).click();
-		System.out.println("Clicked");
+		//System.out.println("Clicked");
 		logClass.info("Accepted EULA ,clicked.");
 	}
 	
+	// Choose ovf file from sdm client
 	public String chooseOVFFromSDMClient(String vmname) throws MyException{
 		String returnStr = "";
 		File folder = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\");
@@ -1762,7 +1841,8 @@ public class Settings {
 
 		for(String s : dirNames){
 			if(shortVMName(s).equalsIgnoreCase(vmname)){
-				System.out.println("Choosen Folder for OVF: "+s);
+				debugLogging("Choosen folder for OVF: "+s, "Info");
+				//System.out.println("Choosen Folder for OVF: "+s);
 				folderName = s;
 				break;
 			}
@@ -1775,7 +1855,8 @@ public class Settings {
 			for (int i = 0; i < retOVF.length; i++) {
 				if (retOVF[i].isFile()) {
 					returnOVFPath = retOVF[i].getAbsolutePath();
-					System.out.println("Choosen OVF is: "+returnOVFPath);
+					debugLogging("Choosen OVF is: "+returnOVFPath, "Info");
+					//System.out.println("Choosen OVF is: "+returnOVFPath);
 				}
 			}
 		}   
@@ -1797,6 +1878,7 @@ public class Settings {
 		System.out.println("AVP Host can be updated...");
 	}
 	
+	// Find button by it's name and click on it
 	public WebElement findButtonByName(WebDriver driver,String staticIdFrom,String buttonName) throws MyException{
 		WebElement returnEle = null;
 		
@@ -1807,7 +1889,8 @@ public class Settings {
 		if(!elements.isEmpty()){
 			for(WebElement e : elements){
 				if(e.getText().equals(buttonName)){
-					System.out.println(e.getAttribute("id"));
+					//System.out.println(e.getAttribute("id"));
+					debugLogging("Button ID: "+e.getAttribute("id")+" for button: "+e.getText(), "Info");
 					returnEle = e;
 					break;
 				}
@@ -1820,13 +1903,16 @@ public class Settings {
 		return returnEle;
 	}
 	
+	// To reload mgmt tree
 	public void autoReloadVMMgmtTree(WebDriver driver) throws InterruptedException, IOException{
 		//autoLoadCheckBox-inputEl
-		driver.findElement(By.id("autoLoadCheckBox-inputEl")).click();
+		setup();
+		driver.findElement(By.id(locator.getProperty("AutoLoadVMTree"))).click();
 		Thread.sleep(1000);
 		confirmDialogBox(driver);
 	}
 	
+	// Find combo box by it's name for graphs
 	public void findComboBoxForGraphs(WebDriver driver,String staticIdFrom,String eleText) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script = "var nl = document.getElementById(\""+staticIdFrom+"\").querySelectorAll('[id^=\"combobox\"]');return nl;";
@@ -1836,7 +1922,7 @@ public class Settings {
 		if(!elements.isEmpty()){
 			for(WebElement e : elements){
 				if(e.getText().replace("*", "").equals(eleText)){
-					System.out.println(e.getAttribute("id"));
+					//System.out.println(e.getAttribute("id"));
 					returnEleID = e.getAttribute("id");
 					break;
 				}
@@ -1850,11 +1936,18 @@ public class Settings {
 		//return returnEleID;
 	}
 	
+	// Click the button by it's xPath
 	public void clickButtonxPath(WebDriver driver,String buttonxPath) throws IOException, MyException{
 		float opacity = Float.parseFloat(driver.findElement(By.xpath(buttonxPath)).getCssValue("opacity"));
-		if(opacity==1){
-			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
-			System.out.println(driver.findElement(By.xpath(buttonxPath)).isEnabled());
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(buttonxPath)));
+		
+		if(opacity==1 && driver.findElement(By.xpath(buttonxPath)).isEnabled()){
+//			System.out.println("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText()+" is: "+opacity);
+//			System.out.println("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled());
+			debugLogging("Opacity of button "+driver.findElement(By.xpath(buttonxPath)).getText().replaceAll("[\r\n]+", " :")+" is: "+opacity, "Info");
+			debugLogging("Is element enabled: "+driver.findElement(By.xpath(buttonxPath)).isEnabled(), "Info");
+			debugLogging("Clicked on : "+driver.findElement(By.xpath(buttonxPath)).getText().replaceAll("[\r\n]+", " "), "Info");
 			driver.findElement(By.xpath(buttonxPath)).click();
 		}
 		else{
@@ -1863,7 +1956,7 @@ public class Settings {
 		}
 	}
 	
-	public Object checkCompletion(WebDriver driver,String vmName,int counter,int noOfTimeOut,int timeOutForException) throws MyException, IOException, InterruptedException{
+	/*public Object checkCompletion(WebDriver driver,String vmName,int counter,int noOfTimeOut,int timeOutForException) throws MyException, IOException, InterruptedException{
 		Thread.sleep((timeOutForException*noOfTimeOut)/2);
 		
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
@@ -1922,7 +2015,64 @@ public class Settings {
 		}
 		
 		return o;
-	}
+	}*/
 
+	// To print messages in log file as well as on console..
+	public void debugLogging(String logMessage,String infoOrError){
+		System.out.println(logMessage);
+		if(infoOrError.equals("Info")){
+			logClass.info(logMessage);
+		}
+		else if(infoOrError.equals("Error")){
+			logClass.error(logMessage);
+		}
+		else{
+			System.out.println("Please give a valid input.\nValid input are: 'Info' and 'Error': "+logMessage);
+		}
+	}
+	
+	// Assert any field, pass column number and value. It will assert that value with actual value which is on that column
+	public void checker(WebDriver driver,String vmOrHostorVC,String rowName,int columnNumber,String valueForCheck) throws MyException, InterruptedException, IOException{
+		String id = "";
+		if(vmOrHostorVC.equals("VM")){
+			id = locator.getProperty("VMGrid");
+		}
+		else if(vmOrHostorVC.equals("Host")){
+			id = locator.getProperty("HostInGrid");
+		}
+		else if(vmOrHostorVC.equals("VC")){
+			id = locator.getProperty("VCenterInGrid");
+		}
+		else{
+			throw new MyException("Please verify input: Only allowed inputs are 'VM' or 'Host'");
+		}
+		
+		Thread.sleep(500);
+		WebElement table = driver.findElement(By.id(id));
+		List<WebElement> cells = table.findElements(By.xpath((locator.getProperty("Row"))));
+		String rowID = "";
+		
+		for(WebElement e : cells)
+		{	
+			if(e.getText().contains(rowName))
+				{
+					rowID = e.getAttribute("id");
+					System.out.println("Row ID: "+rowID);
+				}
+		}
+		
+		String columnID = ".//*[@id='"+rowID+"']/td["+columnNumber+"]/div";
+		WebElement el = driver.findElement(By.xpath(columnID));
+		if(el.getText().equals(valueForCheck)){
+			Assert.assertEquals(valueForCheck, el.getText());
+			debugLogging("Asserted value "+valueForCheck, "Info");
+		}
+		else{
+			debugLogging("Assretion failed .. ", "Error");
+			debugLogging("Found value: "+el.getText(), "Error");
+			takeScreenShotForDriver(driver);
+		}
+	}
+	
 }
 

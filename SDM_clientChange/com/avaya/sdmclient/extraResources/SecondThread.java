@@ -1,23 +1,23 @@
-package com.avaya.sdmclient.runnerdemo;
+package com.avaya.sdmclient.extraResources;
 
 	import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
+	import java.io.IOException;
+	import java.util.Properties;
 
-import javax.xml.parsers.ParserConfigurationException;
+	import javax.xml.parsers.ParserConfigurationException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-import org.xml.sax.SAXException;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.JavascriptExecutor;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+	import org.testng.annotations.BeforeClass;
+	import org.testng.annotations.Parameters;
+	import org.testng.annotations.Test;
+	import org.xml.sax.SAXException;
 
-import com.avaya.sdmclient.Settings;
-import com.avaya.sdmclient.logClass;
-import com.avaya.sdmclient.extraResources.MyException;
+	import com.avaya.sdmclient.Settings;
+	import com.avaya.sdmclient.logClass;
+	import com.avaya.sdmclient.runnerdemo.settingsForConcThreads;
 
 	public class SecondThread {
 		
@@ -115,7 +115,7 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 			obj.deployButtonClickForVM(driverC);
 			Thread.sleep(450);
-			obj.findButton(driverC);
+			obj.findEULAAcceptButton(driverC);
 			logClass.info("Accepted EULA");
 			//Adding Code
 			Thread.sleep(4500);
