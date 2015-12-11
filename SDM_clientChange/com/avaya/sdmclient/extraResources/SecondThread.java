@@ -1,8 +1,7 @@
-package com.avaya.sdmclient.runnerdemo;
+package com.avaya.sdmclient.extraResources;
 
 	import java.io.FileInputStream;
 	import java.io.IOException;
-	import java.util.List;
 	import java.util.Properties;
 
 	import javax.xml.parsers.ParserConfigurationException;
@@ -10,7 +9,6 @@ package com.avaya.sdmclient.runnerdemo;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
 	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.firefox.FirefoxDriver;
 	import org.testng.annotations.BeforeClass;
 	import org.testng.annotations.Parameters;
@@ -19,8 +17,7 @@ package com.avaya.sdmclient.runnerdemo;
 
 	import com.avaya.sdmclient.Settings;
 	import com.avaya.sdmclient.logClass;
-import com.avaya.sdmclient.extraResources.MyException;
-import com.avaya.sdmclient.vm.VM;
+	import com.avaya.sdmclient.runnerdemo.settingsForConcThreads;
 
 	public class SecondThread {
 		

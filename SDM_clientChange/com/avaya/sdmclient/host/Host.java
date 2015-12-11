@@ -2,24 +2,13 @@ package com.avaya.sdmclient.host;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 import com.avaya.sdmclient.*;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.location.Location;
-import com.avaya.sdmclient.location.driverGetter;
 public class Host extends Location {
 	Settings obj = new Settings();
 	Properties locator = null;

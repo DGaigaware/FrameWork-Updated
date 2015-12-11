@@ -1,11 +1,10 @@
 package com.avaya.sdmclient.runnerdemo;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,7 +22,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
 import org.xml.sax.SAXException;
@@ -34,6 +32,34 @@ import com.avaya.sdmclient.extraResources.MyException;
 
 public class settingsForConcThreads {
 	
+	// Ping the ip (or run any command)
+	public static void runSystemCommand(String command) {
+
+	    try {
+	        Process p = Runtime.getRuntime().exec(command);
+	        BufferedReader inputStream = new BufferedReader(
+	                new InputStreamReader(p.getInputStream()));
+	        StringBuilder str = new StringBuilder();
+	        String s = "";
+	        // reading output stream of the command
+	        while ((s = inputStream.readLine()) != null) {
+	            System.out.println(s);
+	            str.append(s);
+	            
+	        }
+	        
+	        if(str.toString().contains("unreachable")){
+
+	        	System.out.println("IP is not pingable..");
+
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	// Create temporary xml for ova and then invoke it 
 	public String createTempXMl(String testName,String IP) throws ParserConfigurationException, SAXException, IOException{
 		Settings obj = new Settings();
 		File file = new File(System.getProperty("user.dir")+"\\Third Party\\tempXMLs\\"+"temp.xml");
@@ -84,6 +110,7 @@ public class settingsForConcThreads {
 		return file1.getName();
 	}
 	
+	// Find available IP for VM deployment
 	public static String findAvailableIP(WebDriver driver, By by) throws IOException, InterruptedException, MyException{
 		Settings obj = new Settings();
 		Properties locator=new Properties();
@@ -203,10 +230,10 @@ public class settingsForConcThreads {
 			System.out.println(s);
 		System.out.println("Selected IP : "+returnIP);
 
-		/*for(String s : IPwhitelist){
+		for(String s : IPwhitelist){
 				runSystemCommand("ping "+s);
 			}
-
+/*
 			if(runSystemCommand("ping "+IPwhitelist.get(0)))
 				returnIP = IPwhitelist.get(0);*/
 		return returnIP;
@@ -239,7 +266,7 @@ public class settingsForConcThreads {
 	}
 	
 	
-	 
+	 // Choose next OVA for deployment
 	 public String chooseNextOVA(List<String> inputFromBoundlist) throws IOException{
 		 	//Settings obj = new Settings();
 			String testOVA = "";
@@ -269,6 +296,7 @@ public class settingsForConcThreads {
 			return testOVA;
 	 }
 	 
+	 // Find OVA name from ovanames.txt
 	 public List<String> readOVAs() throws IOException{
 		 File f = new File(System.getProperty("user.dir")+"\\Third Party\\Input Files\\ovanames.txt");
 		// File f = new File("C:\\Users\\bshingala\\Desktop\\FrameWork Updated-17082015\\Third Party\\Input Files\\ovanames.txt");
@@ -276,6 +304,7 @@ public class settingsForConcThreads {
 		 return lines;
 	 }
 	 
+	 // Run new instance for another deployment
 	 public void runThread(WebDriver driver) throws ParserConfigurationException, SAXException, IOException, InterruptedException, MyException{
 		 Settings obj = new Settings();
 		 Properties locator=new Properties();

@@ -87,7 +87,7 @@ public void LoggingServiceTimeInterval() throws Exception{
 	action.ClickButton(locator.getProperty("Commit"));
 	action.VerifyStringValue(locator.getProperty("Integer_value_is_out_of_range"));
 	action.ClickButton(locator.getProperty("Done"));
-}@Test(description="Verify that the errror message should display when Directory path for harvested files is empty",priority=4)
+}@Test(description="Verify that the errror message should display when Directory path for harvested generateXMLForSDMClient is empty",priority=4)
 public void LoggingServiceDirPathEmpty() throws Exception{
 	action.ClickButton(locator.getProperty("Edit"));
 	action.WaitForTitle(locator.getProperty("Edit_Profile"));

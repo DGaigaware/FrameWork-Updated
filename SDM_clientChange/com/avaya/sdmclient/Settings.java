@@ -467,6 +467,7 @@ public class Settings {
 		}
 	}
 
+	// Check whether errorbox is present or not
 	public boolean checkError(WebDriver driver){
 		boolean b = false;
 		try{
@@ -479,6 +480,7 @@ public class Settings {
 		return b;
 	}
 
+	// Handle error box and take screenshot
 	public String errorBox(WebDriver driver,boolean check) throws IOException, MyException{
 		String errMsg = "";
 		if(check)
@@ -516,6 +518,7 @@ public class Settings {
 		return a.get(a.size()-1).getAttribute("id");
 	}
 
+	// To check whether to go forward in execution or not
 	public void exec(boolean in) {
 		if(in == true) {
 			return;
@@ -527,6 +530,7 @@ public class Settings {
 		//System.exit(0);
 	}
 
+	// Confirm the dialogue box
 	public void confirmDialogBox(WebDriver driver) throws IOException{
 		driver.switchTo().activeElement();
 
@@ -583,6 +587,7 @@ public class Settings {
 		return ans;
 	}
 
+	// Click on combo box and select a value from dropdown
 	public void comboClick(WebDriver driver, String selCombo,String input) throws IOException, InterruptedException{
 		String cmbid = comboID(driver, selCombo);
 		
@@ -607,6 +612,7 @@ public class Settings {
 		//boundListSelect(driver, input, selBoundList(driver));
 	}
 	
+	//Find ID of combo box
 	public String comboID(WebDriver driver,String select){
 		String returnID = "";
 		String sc1 = "var nl = document.getElementById(\"VMdepfrmDynPart-body\").querySelectorAll('[id^=\"combobox\"]'); return nl;";
@@ -658,6 +664,7 @@ public class Settings {
 		return fluentWait(locatorTo, driver, time, Test);
 	}
 	
+	//Choose link for particular VM or host ('Status Details')
 	public void chooseLink(WebDriver driver,String Name,String vmOrHost,String linkText) throws IOException, InterruptedException, MyException{
 		setup();
 		String id = "";
@@ -690,6 +697,7 @@ public class Settings {
 		//el.findElement(By.className("deployinprogress")).click();
 	}
 
+	// Maintain a list of OVA names in a seperate file
 	public void maintainedList(WebDriver driver,String ID) throws IOException, InterruptedException{
 		driver.findElement(By.id(ID)).click();
 		driver.findElement(By.id(ID)).sendKeys("random");
@@ -730,6 +738,7 @@ public class Settings {
 		
 	}
 	
+	// 
 	public void StatusCheck(WebDriver driver,String toBeChecked,int time) throws IOException, InterruptedException{
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -753,6 +762,7 @@ public class Settings {
 
 	}
 
+	// Close the window which is opened for status checking
 	public void closeWindow(WebDriver driver){
 		List<WebElement> elem = driver.findElement(By.id(locator.getProperty("vmDeployStatus"))).findElement(By.id(("vmDeployStatus_header"))).findElement(By.id(("vmDeployStatus_header-innerCt"))).findElement(By.id(("vmDeployStatus_header-targetEl"))).findElements(By.tagName("div"));
 		//System.out.println(_elem.size());
@@ -765,6 +775,7 @@ public class Settings {
 		}
 	}
 	
+	// Reference panel for below operations
 	public List<String> getViewFrame(WebDriver driver,String input){
 		List<String> types = new ArrayList<>();
 		List<String> ret = new ArrayList<>();
@@ -823,6 +834,7 @@ public class Settings {
 		return ret;
 	}
 	
+	// Find ID and fill values in one go for every panel
 	public void findIDandFillValues(WebDriver driver,String filename,String input) throws IOException, InterruptedException{
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -871,6 +883,7 @@ public class Settings {
 		//System.out.println("After");
 	}
 	
+	// Refresh page by small button in paging toolbar of the page in SDM
 	public void refreshItems(WebDriver driver,String methodBy){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -904,6 +917,7 @@ public class Settings {
 		debugLogging("Page refreshed successfully..", "Info");
 	}
 
+	// OVF parsing logic for VM deployment
 		public void FillValues(String fileName,String filePath,WebDriver driver,String IP,String hostName) throws IOException, ParserConfigurationException, SAXException, InterruptedException{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -1092,6 +1106,7 @@ public class Settings {
 			System.out.println("Filled Values");
 		}
 		
+		// Fill default text box values for VM deployment
 		public void AutoFill(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
@@ -1152,6 +1167,7 @@ public class Settings {
 			//System.out.println("After Fill IP");
 		}
 
+		//Fill Combobox for VM deployment
 		public void AutoFillCombo(WebDriver driver,String input,String fileName) throws IOException, InterruptedException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID = "";
@@ -1176,6 +1192,7 @@ public class Settings {
 			boundListSelect(driver, readFromFile(fileName, input.toUpperCase()), selBoundList(driver));
 		}
 
+		// Fill password for VM deployment
 		public void AutoFillPasswd(WebDriver driver,String input,String fileName) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID1 = "";
@@ -1196,6 +1213,7 @@ public class Settings {
 			driver.findElement(By.id(("conf"+returnID1))).sendKeys(readFromFile(fileName, input));
 		}
 		
+		// Fill check box for VM deployment
 		public void AutoFillCheckBox(WebDriver driver,String input) throws IOException{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			String returnID1 = "";
@@ -1236,6 +1254,7 @@ public class Settings {
 		}
 	}
 	
+	// Calculate short vm name from OVA name
 	public String shortVMName(String input){
 		String refInput = "";
 		
@@ -1253,6 +1272,7 @@ public class Settings {
 		return refInput;
 	}
 	
+	// choose OVF from a folder for different OVAs
 	public String chooseOVF(String input){
 		String returnStr = "";
 		String fPath = System.getProperty("user.dir")+"\\Third Party\\OVFs\\";
@@ -1293,6 +1313,7 @@ public class Settings {
 		return fPath+returnStr;
 	}
 	
+	// Login to SMGR
 	public void loginToSite(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		driver.manage().window().maximize();
@@ -1312,6 +1333,7 @@ public class Settings {
 		
 	}
 	
+	// Refresh the page and again click on VM mgmt
 	public void goHome(WebDriver driver) throws InterruptedException, IOException{
 		Thread.sleep(1000);
 		setup();
@@ -1335,11 +1357,13 @@ public class Settings {
 	    driver.findElement(By.xpath(locator.getProperty("VMMgmt"))).click();
 	}
 	
+	// Logout from SMGR
 	public void logOut(WebDriver driver) throws IOException, InterruptedException{
 		setup();
 		driver.findElement(By.xpath(locator.getProperty("LogOff"))).click();
 	}
 	
+	// Check focus of a button
 	public void checkFocus(WebDriver driver, By toLocate) throws IOException{
 		System.out.println("Opacity of: "+driver.findElement(toLocate).getText()+" "+driver.findElement(toLocate).getCssValue("opacity"));
 		if(Float.parseFloat((driver.findElement(toLocate).getCssValue("opacity")))!=1)
@@ -1351,6 +1375,7 @@ public class Settings {
 			}
 	}
 	
+	// Find and click on EULA accept button
 	public void findEULAAcceptButton(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1378,6 +1403,7 @@ public class Settings {
 		
 	}
 	
+	// Find all ID and fill values accordingly for any OVA deployment
 	public String findIDandFillValuesForVM(WebDriver driver,String filename,String inputIDfromOVF){
 		List<String> IDs = new ArrayList<>();
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1439,6 +1465,7 @@ public class Settings {
 		driver.findElement(By.id(id)).click();
 	}
 	
+	// Make ip black or white list
 	public void makeIPWhiteBlackList(String IP,String list) throws FileNotFoundException, IOException{
 		Properties pr=new Properties();
 		pr.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\Input Files\\black-whitelistedIP.properties"));
@@ -1455,6 +1482,7 @@ public class Settings {
         debugLogging(IP+ " IP is made " + list , "Info");
 	}
 	
+	// Select footprint for any OVA, if footprint is not available then it will skip that .. 
 	public void selectFP(WebDriver driver,String shortvmname) throws IOException, InterruptedException{
 		if(driver.findElement(By.xpath(locator.getProperty("FootPrint"))).getAttribute("disabled")==null)
 		{
@@ -1466,6 +1494,7 @@ public class Settings {
 		}
 	}
 	
+	// to find MoreActions Button
 	public void findMoreActionsButton(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -1484,6 +1513,7 @@ public class Settings {
 			}
 	}
 	
+	// Select location for edit host
 	public void selectLocforEditHost(WebDriver driver) throws IOException, InterruptedException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -1495,6 +1525,7 @@ public class Settings {
 		//boundListSelect(driver, toBeSelected, selBoundList(driver));
 	}
 	
+	// Click on radio button for edit VM
 	public void editVMchooseFPorFQDN(WebDriver driver,String chooseOption){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
@@ -1511,6 +1542,7 @@ public class Settings {
 		}
 	}
 	
+	// Click on any link from left menu
 	public void clickLinksOnLeftMenu(WebDriver driver,String linkText) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"menuitem\"]');return nl;";
@@ -1535,6 +1567,7 @@ public class Settings {
 		}
 	}
 	
+	// Fill values for edit VM
 	public void editVM(WebDriver driver,String IP,String FQDN){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.getElementById(\"VMEditForm-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
@@ -1560,6 +1593,7 @@ public class Settings {
 		}
 	}
 
+	// Chek for success or failure i.e. deployment is failed or succeeded .. 
 	@SuppressWarnings("deprecation")
 	public Object checkSuccessOrFailure(WebDriver driver,By locator,String vmName,int timeOutForException,boolean b,int noOfTimeOut,int counter,String linkText) throws MyException, IOException{
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(timeOutForException, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS);
@@ -1645,6 +1679,7 @@ public class Settings {
 		
 	}
 	
+	// Click on sdm client from sdm client
 	public void clickComboSDMCli(WebDriver driver,String label){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.querySelectorAll('[id^=\"combobox\"]');return nl;";
@@ -1663,6 +1698,7 @@ public class Settings {
 		}
 	}
 	
+	// default values for refresh VM and fill that values
 	public void refreshVMValues(WebDriver driver,String shortVMname,String inputFileName) throws IOException{
 		String uName = "";
 		String pwd = "";
@@ -1736,6 +1772,7 @@ public class Settings {
 
 	}
 	
+	// While updating VM, Find id of text box for file path
 	public void updateVMFilePath(WebDriver driver,String filePath){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String sc = "var nl = document.getElementById(\"panelselectOVALocalUpdateVM-body\").querySelectorAll('[id^=\"textfield\"]');return nl;";
@@ -1756,6 +1793,7 @@ public class Settings {
 		driver.findElement(By.id(tempID)).sendKeys(filePath);;
 	}
 	
+	// Find EULA button
 	public void findButtonUpdate(WebDriver driver) throws InterruptedException{
 		//EulaAgreementWindoweulaAgreementVMUpdatePanel
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1783,6 +1821,7 @@ public class Settings {
 		logClass.info("Accepted EULA ,clicked.");
 	}
 	
+	// Choose ovf file from sdm client
 	public String chooseOVFFromSDMClient(String vmname) throws MyException{
 		String returnStr = "";
 		File folder = new File("C:\\Program Files\\Avaya\\SDMClient\\Default_Artifacts\\");
@@ -1839,6 +1878,7 @@ public class Settings {
 		System.out.println("AVP Host can be updated...");
 	}
 	
+	// Find button by it's name and click on it
 	public WebElement findButtonByName(WebDriver driver,String staticIdFrom,String buttonName) throws MyException{
 		WebElement returnEle = null;
 		
@@ -1863,6 +1903,7 @@ public class Settings {
 		return returnEle;
 	}
 	
+	// To reload mgmt tree
 	public void autoReloadVMMgmtTree(WebDriver driver) throws InterruptedException, IOException{
 		//autoLoadCheckBox-inputEl
 		setup();
@@ -1871,6 +1912,7 @@ public class Settings {
 		confirmDialogBox(driver);
 	}
 	
+	// Find combo box by it's name for graphs
 	public void findComboBoxForGraphs(WebDriver driver,String staticIdFrom,String eleText) throws MyException{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		String script = "var nl = document.getElementById(\""+staticIdFrom+"\").querySelectorAll('[id^=\"combobox\"]');return nl;";
@@ -1894,6 +1936,7 @@ public class Settings {
 		//return returnEleID;
 	}
 	
+	// Click the button by it's xPath
 	public void clickButtonxPath(WebDriver driver,String buttonxPath) throws IOException, MyException{
 		float opacity = Float.parseFloat(driver.findElement(By.xpath(buttonxPath)).getCssValue("opacity"));
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -1913,7 +1956,7 @@ public class Settings {
 		}
 	}
 	
-	public Object checkCompletion(WebDriver driver,String vmName,int counter,int noOfTimeOut,int timeOutForException) throws MyException, IOException, InterruptedException{
+	/*public Object checkCompletion(WebDriver driver,String vmName,int counter,int noOfTimeOut,int timeOutForException) throws MyException, IOException, InterruptedException{
 		Thread.sleep((timeOutForException*noOfTimeOut)/2);
 		
 		WebElement table = driver.findElement(By.id(locator.getProperty("VMGrid")));
@@ -1972,8 +2015,9 @@ public class Settings {
 		}
 		
 		return o;
-	}
+	}*/
 
+	// To print messages in log file as well as on console..
 	public void debugLogging(String logMessage,String infoOrError){
 		System.out.println(logMessage);
 		if(infoOrError.equals("Info")){
@@ -1987,6 +2031,7 @@ public class Settings {
 		}
 	}
 	
+	// Assert any field, pass column number and value. It will assert that value with actual value which is on that column
 	public void checker(WebDriver driver,String vmOrHostorVC,String rowName,int columnNumber,String valueForCheck) throws MyException, InterruptedException, IOException{
 		String id = "";
 		if(vmOrHostorVC.equals("VM")){

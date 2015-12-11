@@ -23,9 +23,9 @@ public class driverSDMClient {
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, InterruptedException, MyException {
 		//System.out.println("Before invoked\n\n");
 		
-		//files createXML = new files();
+		//generateXMLForSDMClient createXML = new generateXMLForSDMClient();
 		//createXML.main();
-		files o = new files();
+		generateXMLForSDMClient o = new generateXMLForSDMClient();
 		List<String> files = o.listFileNames();
 		o.generateXML(files, "148.147.162.221");
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");

@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-public class files {
+public class generateXMLForSDMClient {
 
 	
 	public static List<String> listFileNames(){

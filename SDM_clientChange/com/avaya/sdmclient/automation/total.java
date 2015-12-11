@@ -22,7 +22,6 @@ import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
 import com.avaya.sdmclient.host.Host;
 import com.avaya.sdmclient.location.Location;
-import com.avaya.sdmclient.location.driverGetter;
 
 public class total extends Location {
 	Settings obj = new Settings();

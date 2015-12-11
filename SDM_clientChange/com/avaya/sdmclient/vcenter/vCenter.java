@@ -50,7 +50,7 @@ public class vCenter {
 
 		logClass.startTestCase("Adding vCenter to given Location");
 
-		driver.get("https://localhost/vm-mgmt-ui/pages/dashboardClient.html");
+		driver.get(locator.getProperty("SDMCliURL"));
 		driver.findElement(By.xpath(locator.getProperty("VM-Management"))).click();
 		logClass.info("Clicked on VM management");
 
@@ -76,7 +76,7 @@ public class vCenter {
 
 		obj.errorBox(driver,obj.checkError(driver));
 		Thread.sleep(9000);
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+/*		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("VCVMList"))));
 
 		obj.check(driver,inputIP);
@@ -95,7 +95,7 @@ public class vCenter {
 
 		obj.confirmDialogBox(driver);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locator.getProperty("refreshVMTreeId"))));
-		driver.findElement(By.id(locator.getProperty("refreshVMTreeId"))).click();
+		driver.findElement(By.id(locator.getProperty("refreshVMTreeId"))).click();*/
 
 		logClass.endTestCase("Added vCenter Succesfully");
 

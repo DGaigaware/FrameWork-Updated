@@ -32,6 +32,7 @@ public class Location {
 		locator.load(new FileInputStream(System.getProperty("user.dir") + "\\Third Party\\objectRepository\\xprev.properties"));
 	}
 	//WebDriver driver = driverGetter.driver;
+	//Add location
 	@Test(description="Adding Location",priority=0)
 	public void addLocation() throws IOException, InterruptedException, MyException {
 		
@@ -42,6 +43,7 @@ public class Location {
 		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationAdd"));
 		obj.debugLogging("Adding new Location .. ", "Info");
 
+		// Find all ID and fill values for Location
 		obj.findIDandFillValues(getDriver(), "input.properties", "AddLocation");
 		Thread.sleep(250);
 		obj.debugLogging("Filled values .. ", "Info");
@@ -57,6 +59,7 @@ public class Location {
 		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationAdd"));
 		obj.debugLogging("Adding new Location .. ", "Info");
 
+		// Find all ID and fill values for Location
 		obj.findIDandFillValues(getDriver(), "input.properties", "AddLocation1");
 		Thread.sleep(250);
 		obj.debugLogging("Filled values .. ", "Info");
@@ -70,7 +73,7 @@ public class Location {
 
 	}
 
-
+	// Edit location	
 	@Test(description="Editing Location",priority=1)
 	public void editLocation() throws IOException, InterruptedException, MyException{
 
@@ -80,6 +83,7 @@ public class Location {
 		obj.findLocationInGrid(getDriver(), obj.readFromFile("input.properties", "AddLocationName:"));
 		obj.clickButtonxPath(getDriver(), locator.getProperty("LocationEdit"));
 		
+		// Find all ID and then fill values for editing location
 		obj.findIDandFillValues(getDriver(), "input.properties", "EditLocation");
 		obj.waitForPresenceOfElement(getDriver(), By.xpath(locator.getProperty("LocationSaveEdit")));
 
@@ -91,7 +95,7 @@ public class Location {
 		logClass.endTestCase("Edited Location");
 	}
 
-
+	// Delete location
 	@Test(description="Deleting Location",priority=2)
 	public void deleteLocation() throws IOException, InterruptedException, MyException{
 
@@ -106,6 +110,7 @@ public class Location {
 		Thread.sleep(450);
 		obj.confirmDialogBox(getDriver());
 		Thread.sleep(2500);
+		//check whether location is present or not
 		if(!obj.checkPresenceOfLocationOrHostOrVM(getDriver(), obj.readFromFile("input.properties", "AddLocation1Name:")))
 			obj.debugLogging("Location deleted successfully .. ", "Info");
 		else

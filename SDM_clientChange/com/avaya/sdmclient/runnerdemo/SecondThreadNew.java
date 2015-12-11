@@ -1,26 +1,22 @@
 package com.avaya.sdmclient.runnerdemo;
 
-	import java.io.FileInputStream;
-	import java.io.IOException;
-	import java.util.List;
-	import java.util.Properties;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
-	import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.ParserConfigurationException;
 
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.JavascriptExecutor;
-	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.firefox.FirefoxDriver;
-	import org.testng.annotations.BeforeClass;
-	import org.testng.annotations.Parameters;
-	import org.testng.annotations.Test;
-	import org.xml.sax.SAXException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
-	import com.avaya.sdmclient.Settings;
-	import com.avaya.sdmclient.logClass;
+import com.avaya.sdmclient.Settings;
+import com.avaya.sdmclient.logClass;
 import com.avaya.sdmclient.extraResources.MyException;
-import com.avaya.sdmclient.vm.VM;
 
 	public class SecondThreadNew {
 		
@@ -47,6 +43,7 @@ import com.avaya.sdmclient.vm.VM;
 			//obj.goHome(drive);
 			obj.loginToSite(driverC);
 
+			// Check whether location or host is present or not
 			if(!obj.checkPresenceOfLocationOrHostOrVM(driverC, obj.readFromFile("input.properties", "AddHostHostName:"))){
 				//AddHost();
 				System.out.println("Adding Host");
@@ -54,8 +51,10 @@ import com.avaya.sdmclient.vm.VM;
 				logClass.info("Added Host as Location was not there beforehand.");
 			}
 
+			// Find location or host
 			obj.findLocationOrHost(driverC, obj.readFromFile("input.properties", "AddHostHostName:"));
 
+			// Choose Tab by it's name
 			obj.chooseTab(driverC, "Virtual Machines");
 
 			driverC.findElement(By.xpath(locator.getProperty("NewVM"))).click();
@@ -86,6 +85,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.comboClick(driverC, "Select OVAs:", VMName);
 			Thread.sleep(2500);
 			obj.selectFP(driverC, shortVMName);
+			Thread.sleep(4500);
 			
 			//Uptill here
 			
@@ -96,19 +96,23 @@ import com.avaya.sdmclient.vm.VM;
 			logClass.info("Given Name");
 			Thread.sleep(250);
 
+			// Check for error 
 			_Check = obj.checkError(driverC);
 			String err = obj.errorBox(driverC,obj.checkError(driverC));
 
+			// If error occurs then interrupt thread
 			if(_Check){
 				System.out.println("Error:");
 				Thread.currentThread().interrupt();
 			}
 
+			// If thread is interrupted then stop execution
 			if(Thread.currentThread().isInterrupted()){
 				System.out.println("Cannot Execute Further");
 				throw new MyException(err);
 			}
 
+			// Fill all values related to VM
 			obj.FillValues("inputsm.properties", obj.chooseOVF(VMName), driverC,IP,"test"+shortVMName);
 
 			obj.clickButtonxPath(driverC, locator.getProperty("Deploy"));
@@ -120,6 +124,7 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(9000);
 
 			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
+			// Check for deployment is successful or not .. 
 			obj.checkSuccessOrFailure(driverC, By.id(locator.getProperty("vmDeployStatus")), "test"+shortVMName, 6, true, 250,0, "Status Details");
 
 			Thread.sleep(5000);
@@ -146,6 +151,7 @@ import com.avaya.sdmclient.vm.VM;
 
 			obj.chooseTab(driverC, "Virtual Machines");
 			Thread.sleep(1500);
+			// Find VM and click on it ..
 			obj.findVMForHost(driverC, "test"+shortVMName);
 			obj.clickButtonxPath(driverC, locator.getProperty("EditVM"));
 			//driverC.findElement(By.xpath(locator.getProperty("EditVM"))).click();
@@ -153,16 +159,18 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(750);
 
 			//driver.findElement(By.xpath(locator.getProperty("EditIPFQDNVM"))).click();
-			
+			// Edit VM
 			obj.editVMchooseFPorFQDN(driverC, "FQDN");
 			obj.clickButtonxPath(driverC, locator.getProperty("EditIPFQDNVMButton"));
 			//driverC.findElement(By.xpath(locator.getProperty("EditIPFQDNVMButton"))).click();
 
+			// Fill values for edit VM
 			obj.editVM(driverC,IP,"test"+shortVMName+"edited");
 
 			obj.checkFocus(driverC, By.xpath(locator.getProperty("VMEditSave")));
 			driverC.findElement(By.xpath(locator.getProperty("VMEditSave"))).click();
 
+			// Check whether error occurred or not 
 			obj.errorBox(driverC, obj.checkError(driverC));
 			logClass.endTestCase("Edited VM Successfully");
 		}
@@ -245,6 +253,7 @@ import com.avaya.sdmclient.vm.VM;
 			Thread.sleep(1500);
 			obj.findVMForHost(driverC,"test"+shortVMName);
 			
+			// Find more actions button
 			obj.findMoreActionsButton(driverC);
 			Thread.sleep(500);
 			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConn"));
@@ -252,6 +261,8 @@ import com.avaya.sdmclient.vm.VM;
 			
 			obj.waitForPresenceOfElement(driverC, By.xpath(locator.getProperty("VMReEstConnUN")));
 			driverC.switchTo().activeElement();
+			
+			// Fill values for trust establishment
 			obj.refreshVMValues(driverC, shortVMName, "inputsm.properties");
 			Thread.sleep(750);
 			
@@ -260,6 +271,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.clickButtonxPath(driverC, locator.getProperty("VMReEstConnConf"));
 			Thread.sleep(1000);
 			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
+			//check for success or failure
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+shortVMName, 6, true,10,0,"Status Details");
 			
 			logClass.endTestCase("Trust Established with VM Successfully");
@@ -286,6 +298,7 @@ import com.avaya.sdmclient.vm.VM;
 			obj.clickButtonxPath(driverC, locator.getProperty("RefreshVM"));
 			Thread.sleep(5000);
 			obj.chooseLink(driverC, "test"+shortVMName,"VM","Status Details");
+			//check for success or failure
 			obj.checkSuccessOrFailure(driverC, By.id("vmDeployStatus"),"test"+ shortVMName, 6, true,10,0,"Status Details");		
 			
 			Thread.sleep(500);

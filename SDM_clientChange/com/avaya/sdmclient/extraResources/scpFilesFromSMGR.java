@@ -121,7 +121,7 @@ public class scpFilesFromSMGR {
         forSFTP = session.openChannel("sftp");
 		forSFTP.connect();
 		c = (ChannelSftp) forSFTP;
-        //for(String s : files)
+        //for(String s : generateXMLForSDMClient)
         for(int i=0;i<files.size();i++)
         {
         	System.out.println(files.get(i));
