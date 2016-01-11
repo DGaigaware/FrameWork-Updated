@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [Suite1]">
+  <parameter name="IP" value="148.147.162.225"/>
+  <parameter name="VMName" value="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova"/>
+  <test name="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova(failed)">
+    <parameter name="IP" value="148.147.162.225"/>
+    <parameter name="VMName" value="SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova"/>
+    <classes>
+      <class name="com.avaya.sdmclient.runnerdemo.SecondThread2">
+        <methods>
+          <include name="setup"/>
+          <include name="EditVM" invocation-numbers="0"/>
+          <include name="DeleteVM" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.avaya.sdmclient.runnerdemo.SecondThread2 -->
+    </classes>
+  </test> <!-- SecureAccessLinkGateway-2.5.1.0-vApp-e55-08.ova(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

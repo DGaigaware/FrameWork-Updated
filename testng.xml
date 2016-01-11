@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Suite" parallel="false" preserve-order="true">
 <!--groups>
    <run>
@@ -7,6 +8,17 @@
    </run>
 </groups-->
 
+  <!-- < test name="Test">
+    <classes>
+      <class name="com.avaya.sdmclient.runnerdemo.cHost2608"/>
+      <class name="com.avaya.sdmclient.host.Host"/>
+      <class name="com.avaya.sdmclient.runnerdemo.total"/>
+      <class name="com.avaya.sdmclient.vm.VM"/>
+      <class name="com.avaya.sdmclient.vcenter.vCenter"/>
+      <class name="com.avaya.sdmclient.runnerdemo.CH12608"/>
+      <class name="com.avaya.sdmclient.location.Location"/>
+    </classes>
+  </test> -->
   
  <test name="SPM" preserve-order="true" thread-count="1">
     <packages>
@@ -143,6 +155,38 @@
     </packages> 
   </test> 
   
+  <test name="LocationOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.sdmclient.location.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="HostOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.sdmclient.host.*">
+      <include name="Host" />
+    </package>  
+    </packages> 
+  </test>
+  
+  <test name="VMOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.sdmclient.vm.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="VCenterOperations" preserve-order="true" thread-count="1">
+    <packages>
+      <package name="com.avaya.sdmclient.vcenter.*"/> 
+    </packages> 
+  </test>
+  
+  <test name="testsample">
+               <classes>
+                      <class name="com.avaya.sdmclient.runnerdemo.*">
+                       </class>
+               </classes>
+ </test>
  <!--test name="Geo_Configure" preserve-order="true" thread-count="1">
     <packages>
       <package name="com.avaya.smgr.geo.configure.*"/> 
@@ -162,3 +206,4 @@
   </test--> 
 
 </suite> <!-- Suite -->
+

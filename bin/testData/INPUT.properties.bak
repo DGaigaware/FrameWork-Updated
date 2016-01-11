@@ -1,0 +1,180 @@
+###########System Credentials###############################
+UserId=admin
+Password=Avaya123$
+NewPassword=Admin123$
+###########Agent Management##################################
+DataRetention.Value=121
+###########Max Time Waiting time#############################
+MAX_TIME=60
+number=10
+number1=5
+###########Single Digit numeric input value###################
+SingleDigitValue=5
+###########Two Digit numeric Input value######################
+TwoDigitValue=60
+seventeen=17
+##########Value as 10 digit numeric##########################
+Tenthvalue=10
+###########Three Digit numeric Input value####################
+ThreeDigitValue=600
+##########Four Digit numeric input value######################
+FourDigitValue=6000
+##########Set the value as True###############################
+TrueValue=true
+##########Set the value as false###############################
+FalseValue=false
+#########RTS##################
+Name=acm
+UpdatedName=administrators1
+Uname=admins
+CopyGroup=Copy of administrator1
+Ip=148.147.162.131
+Mask=255.255.255.0
+SHA=SHA
+port=10163
+gls.user=gls10@avaya.com
+Role.user=roles7@avaya.com
+#######BackUp#################
+BackupName=aaBackup12
+BackupName1=XcaBackup12
+LocakBackup=TodayBackup1
+ScheduledBackup=ScheduleBackup12
+PEM.jobname=aScheduleJob112
+PEM.jobname=aScheduleJob222
+PEM.jobname1=aScheduleJob332
+Logging=Logging12
+RemoteBackup=RemoteBackup12
+PEM.Loginname=backup1@avaya.com
+######UPM####################Import####################################
+############################Below login only for import##############
+FName=ramesh
+LName=babu
+Loginname=Ajohn@avaya.com
+Loginname1=babu44@avaya.com
+#######Tenant Management##############################################
+TName=Tenant3
+site1=site1
+site2=site2
+UpdateSite=AVAYA
+Dept1=Dept1
+Dept2=Dept2
+UpdateDept=ECS
+team1=team1
+team2=team3
+UpdatTeam=SMGR
+UpdateTname=SMGRTenant4
+Tenant.Login=tenent6@avaya.com
+Tenant.RoleName=System Administrator
+User.Loginname=babu1@avaya.com
+DuplicateUser.Loginname=Duplicate1@avaya.com
+TPassword=TPassword123
+##############################UPR#######################################
+Danish=Danish
+Danishtime=(-7:0)Pacific Time (US & Canada); Tijuana
+UPR.Name=TenantUPR1
+extension=10006
+extension2=10007
+Sipdomain=smgrdev.avaya.com
+
+##############################Temporary Constants ######################
+Medium=Medium
+Voice=Voice
+Buildinfo=Build No. - 7.0.0.5.12967-7.0.5.506
+uprcmsm=auprcmsm1
+uprsm=auprsm1
+uprcmsm1=auprcmsm2
+uprcmsm2=auprcmsm3
+uprcmsm3=Duplicateupr
+Uprsec=Uprsec
+Ip1=148.147.162.52
+Ip2=192.168.56.23
+Compassword=Avaya@1234
+Korean=Korean
+Ktime=(-12:0)International Date Line West
+SM_Pune=sm4
+Pune=pune
+cm29=cm65
+1408_DEFAULT_CM_6_3=1408_DEFAULT_CM_6_3
+Template=1408_DEFAULT_CM_6_3
+Blank=Blank
+upr1=upr1
+upr4=upr4
+upr5=upr5
+Avaya=Avaya
+Mumbai=Mumbai
+Developement=Developement
+SMGR=SMGR
+Design=Design
+Automation=Automation
+Maruti12=Maruti12
+Goa=Goa
+Delhi=Delhi
+Production=Production
+Line=Line
+HR=HR
+PI=PI
+site1=site1
+Site2=Site2
+Site3=Site3
+Sit1=Noyda
+Sit2=KLP
+Dept=Testing
+Team=Automation
+Dept1=Dept1
+team1=team1
+TUpr=TUpr
+TName2=Company
+TName1=xxxxxx
+TenantName=Tenant Name
+Tenantlastname=gs
+Tenantfirstname=satish
+Tenantlogin=gls@avaya.com
+Tenantlogin1=glsp@avaya.com
+Tenantpass=Sat1234sh
+Tenantcnfpass=Sat1234sh
+Newpass=Satu@123sh
+UserLastname=aaaaaaa
+UserFirstname=aaaaaa
+UserLoginname=aaaaaaab@avaya.com
+UsersLastname=aaaaaaabc
+UsersFirstname=sssp
+UsersLoginname=aaaacbebh5@avaya.com
+UsersLoginname1=aaaar36@avaya.com
+UsersLoginname2=sr124@avaya.com
+UsersLoginname3=srpl24@avaya.com
+UsersLoginname4=drs234@avaya.com
+UsersLoginname41=drs2334@avaya.com
+UserlocalLogname=localadd@avaya.com
+UsersLastname1=Simple
+UsersLoginname5=aaaaaaaa@ac.com
+UsersLoginname6=aaabce@ac.com
+UsersLoginname7=aaaccf@avaya.com
+UserLogname=aaassigncmsm@avaya.com
+UserLogname1=aasigncmsm@avaya.com
+UsersLoginname12=aaaagprl@avaya.com
+UsersLoginnameWS=work@avaya.com
+Clastname=abc1
+Cfirstname=xyz1
+Addname2=Mumbai
+Addname1=Goa
+Adname3=Delhi
+Groupname=assigngroup
+#############Login Temporary constants ################
+use1=admd
+pass1=Admin123
+use2=admin
+use3=Admin12
+pass2=Avaya123$
+Lable=Lable
+SearchLastname=aaaa
+SearchFirstname=aaaa
+SearchLoginname=aaace@ac.com
+Displayname=aaaa, aaaa
+Falsename=adsszcvdb
+
+############### Geo Configuration ##############
+FQDN=pdev55vm2.smgrdev.avaya.com
+IPadd=148.147.162.180
+ReplicationLoginname=asreplica@avaya.com
+SecReplicaLogname=secondaryreplc@avaya.com
+

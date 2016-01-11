@@ -1,0 +1,14 @@
+ip0 148.147.162.180
+netmask 255.255.255.0
+gateway 148.147.162.1
+dns 148.147.162.5
+hostname pde55vm2
+DefaultSearchList optional
+ntpservers optional
+timezone Asia/Kolkata
+smgrVFQDNHostname grsmgr
+smgrVFQDNDomain devavayacom
+username.prefix admin
+authprotocol.password Avaya123$
+privprotocol.password Avaya123$
+

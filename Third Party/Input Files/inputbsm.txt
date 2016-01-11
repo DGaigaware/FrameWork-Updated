@@ -1,0 +1,16 @@
+VMName225 testBSM225
+ip0 148.147.162.225
+hostname testBSM225
+domain testbsm225.smgrdev.avaya.com
+netmask0 255.255.255.0
+gateway 148.147.162.1
+dns 8.8.8.8
+timezone Asia/Kolkata
+TIMEZONE Asia/Kolkata
+ntpservers abcd
+CUSTLOGIN dadmin
+CUSTPWD dadmin01
+smgr_ip 148.147.162.35
+enrollment_pw 123456
+LSPIP 148.147.162.224
+BSMOVFPath C:\\Users\\bshingala\\Downloads\\BSM-7.0.0.0.700007-e55-01_EXTRACT\\BSM-7.0.0.0.700007_OVF10.ovf

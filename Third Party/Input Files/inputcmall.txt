@@ -1,0 +1,16 @@
+Path C:\\Users\\bshingala\\Desktop\\CM-Simplex_OVF10.ovf
+ip0 148.147.162.221
+netmask0 255.255.255.0
+gateway 148.147.162.1
+oobdevice 
+ip1
+netmask1
+hostname cm221
+ntpservers 
+dns 
+searchlist
+weblmip 8.8.8.8
+msg_login admin
+msg_password Avaya123$
+cm_login admin
+cm_password Avaya123$

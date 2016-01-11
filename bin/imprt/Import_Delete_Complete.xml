@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><tns:deleteUsers xmlns:tns="http://xml.avaya.com/schema/bulkdelete" xmlns:ns2="http://xml.avaya.com/schema/import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.avaya.com/schema/bulkdelete UserProfileSchemaDefinitionForBulkDelete.xsd">
+<tns:deleteType>permanent</tns:deleteType>
+<tns:user>
+<tns:loginName>xmlmerge@avaya.com</tns:loginName>
+</tns:user>
+</tns:deleteUsers>

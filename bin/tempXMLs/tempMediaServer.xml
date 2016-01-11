@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="10">
+<test name="MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova">
+   
+<parameter name="IP" value="148.147.162.225"/>
+<parameter name="VMName" value="MediaServer_7.7.0.226_A10_2015.07.02_OVF10.ova"/>
+      
+    <!-- <packages>
+      <package name="com.avaya.smgr.Scheduler.*"/> 
+    </packages> 
+  -->
+      <classes>
+         <class name="com.avaya.sdmclient.runnerdemo.c1" />
+      </classes> 
+      
+   </test>
+</suite>
